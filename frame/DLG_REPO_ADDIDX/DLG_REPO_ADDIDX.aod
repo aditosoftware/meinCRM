@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>DLG_REPO_ADDIDX</name>
+  <icon></icon>
+  <description>Dialog-Repo: Index +</description>
+  <comment>@type public
+@status released
+@desc [Dialog-Repo: Index +]
+
+@module Standard
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <list>
+      <name>INDEXCOLUMNS</name>
+      <template>%aditoprj%/template/Template_List/Template_List.aod</template>
+      <valueProcess>%aditoprj%/frame/DLG_REPO_ADDIDX/children/indexcolumns/valueProcess.js</valueProcess>
+      <contentProcess>%aditoprj%/frame/DLG_REPO_ADDIDX/children/indexcolumns/contentProcess.js</contentProcess>
+      <onValidation>%aditoprj%/frame/DLG_REPO_ADDIDX/children/indexcolumns/onValidation.js</onValidation>
+      <searchableModes>none</searchableModes>
+      <x v="25" />
+      <y v="95" />
+      <width v="310" />
+      <height v="200" />
+      <enabledProcess>%aditoprj%/frame/DLG_REPO_ADDIDX/children/indexcolumns/enabledProcess.js</enabledProcess>
+      <tabOrder v="1" />
+      <labelText>Im Index enthaltene Spalten</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="2" />
+    </list>
+    <edit>
+      <name>INDEXNAME</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <searchableModes>none</searchableModes>
+      <x v="25" />
+      <y v="40" />
+      <width v="310" />
+      <tabOrder v="0" />
+      <labelText>Indexname</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="2" />
+      <labelAnchor v="0" />
+    </edit>
+    <checkBox>
+      <name>ISUNIQUE</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <valueTrue>Y</valueTrue>
+      <valueFalse>N</valueFalse>
+      <searchableModes>none</searchableModes>
+      <x v="25" />
+      <y v="305" />
+      <labelText>Eindeutiger Index</labelText>
+      <labelOrientation v="4" />
+      <labelAnchor v="0" />
+      <tabOrder v="2" />
+    </checkBox>
+  </children>
+  <tableView>
+    <headerFont name="" style="0" size="12" />
+    <font name="Arial" style="0" size="12" />
+  </tableView>
+  <width v="865" />
+  <height v="570" />
+</frame>

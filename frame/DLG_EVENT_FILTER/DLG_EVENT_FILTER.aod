@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>DLG_EVENT_FILTER</name>
+  <alias>AO_DATEN</alias>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <checkBox>
+      <name>cancelled</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <valueTrue></valueTrue>
+      <valueFalse></valueFalse>
+      <x v="240" />
+      <y v="85" />
+      <labelText>abgesagt</labelText>
+      <labelOrientation v="4" />
+      <labelDistance v="5" />
+      <tabOrder v="6" />
+    </checkBox>
+    <checkBox>
+      <name>tentative</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <valueTrue></valueTrue>
+      <valueFalse></valueFalse>
+      <x v="155" />
+      <y v="85" />
+      <labelText>vorläufig</labelText>
+      <labelOrientation v="4" />
+      <labelDistance v="5" />
+      <tabOrder v="5" />
+    </checkBox>
+    <checkBox>
+      <name>confirmed</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <valueProcess></valueProcess>
+      <valueTrue></valueTrue>
+      <valueFalse></valueFalse>
+      <x v="70" />
+      <y v="85" />
+      <labelText>bestätigt</labelText>
+      <labelOrientation v="4" />
+      <labelDistance v="5" />
+      <tabOrder v="4" />
+    </checkBox>
+    <comboBox>
+      <name>relation_id</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/DLG_EVENT_FILTER/children/relation_id/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <x v="70" />
+      <y v="5" />
+      <width v="240" />
+      <tabOrder v="0" />
+      <maximumRowCount v="20" />
+      <emptyElementEnabled v="false" />
+      <labelText>Mitarbeiter</labelText>
+      <labelDistance v="65" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <edit>
+      <name>edt_von</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <dataType v="93" />
+      <outputFormat>dd.MM.yyyy</outputFormat>
+      <inputFormat>dd.MM.yyyy</inputFormat>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <calendarSupport v="true" />
+      <x v="70" />
+      <y v="55" />
+      <width v="95" />
+      <tabOrder v="2" />
+      <labelText>von</labelText>
+      <labelDistance v="25" />
+      <toolTip>zu erledigende Aufgaben im Zeitraum von</toolTip>
+    </edit>
+    <edit>
+      <name>edt_bis</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <dataType v="93" />
+      <outputFormat>dd.MM.yyyy</outputFormat>
+      <inputFormat>dd.MM.yyyy</inputFormat>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <calendarSupport v="true" />
+      <x v="215" />
+      <y v="55" />
+      <width v="95" />
+      <tabOrder v="3" />
+      <labelText>bis</labelText>
+      <labelDistance v="25" />
+      <toolTip>zu erledigende Aufgaben im Zeitraum bis</toolTip>
+    </edit>
+    <comboBox>
+      <name>category</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/DLG_EVENT_FILTER/children/category/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <x v="70" />
+      <y v="30" />
+      <width v="240" />
+      <tabOrder v="1" />
+      <maximumRowCount v="20" />
+      <labelText>Kategorie</labelText>
+      <labelDistance v="65" />
+      <labelAnchor v="0" />
+    </comboBox>
+  </children>
+  <tableView />
+</frame>

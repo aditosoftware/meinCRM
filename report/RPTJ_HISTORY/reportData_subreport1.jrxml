@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportData_subreport1" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ef856315-0a65-4ee1-a571-094812fe2aff">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="beschreibung" class="java.lang.String"/>
+	<parameter name="status" class="java.lang.String"/>
+	<parameter name="betreff" class="java.lang.String"/>
+	<parameter name="zuständig" class="java.lang.String"/>
+	<field name="STATUS" class="java.lang.String"/>
+	<field name="SUBJECT" class="java.lang.String"/>
+	<field name="RESPONSIBLE" class="java.lang.String"/>
+	<field name="INFOTEXT" class="java.lang.String"/>
+	<field name="CREATEDBY" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<printWhenExpression><![CDATA[$F{SUBJECT} != null]]></printWhenExpression>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="15" uuid="ae72f850-cda2-4307-8227-93bf43b8f0d0"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{betreff}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="0" width="206" height="15" uuid="668c98fa-0206-462f-8565-98bc5319cdb2"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{beschreibung}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="341" y="0" width="100" height="15" uuid="582d1e62-f2c4-4699-bfdb-046038483c60"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="15" uuid="84b852af-25f0-4a79-9166-9f32afbab56e"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{zuständig}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="18" width="555" height="1" uuid="2982a8ff-79d2-445a-b24b-28538180f905"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<printWhenExpression><![CDATA[$F{SUBJECT} != null]]></printWhenExpression>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1" y="1" width="100" height="15" uuid="90f819c7-6bcd-4f4f-95c7-b93de6929ba2"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SUBJECT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="118" y="0" width="206" height="15" uuid="d478b6e0-f4f3-4ec6-851c-735d42255265"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{INFOTEXT}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="341" y="0" width="100" height="15" uuid="640f0a6a-ee1e-422c-9518-5dab24d8f234"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{STATUS}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="455" y="0" width="100" height="15" uuid="8f4f3f25-5965-431f-a70b-8cadc6c836ec"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RESPONSIBLE}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="4">
+			<printWhenExpression><![CDATA[$F{SUBJECT} != null]]></printWhenExpression>
+			<line>
+				<reportElement x="1" y="0" width="554" height="1" uuid="21dee81d-de31-49f9-afc8-4e32fe6d9583"/>
+				<graphicElement>
+					<pen lineWidth="0.75" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,1 @@
+a.sqlDelete("AOSYS_COLUMNREPOSITORY", " COLUMNID = '" + a.valueof("$local.idvalue") + "'");

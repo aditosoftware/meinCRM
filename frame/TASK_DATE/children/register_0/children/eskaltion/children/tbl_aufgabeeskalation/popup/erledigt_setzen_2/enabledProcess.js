@@ -1,0 +1,1 @@
+a.rs( a.valueof("$comp.tbl_AufgabeEskalation") != "" && a.hasvar("$image.editableToDo") && a.valueofObj("$image.editableToDo") );

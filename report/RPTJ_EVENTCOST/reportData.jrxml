@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e7a916c8-3f9a-497d-84bb-3909b15271ea">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="standard" fontName="Segoe UI" fontSize="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+	<parameter name="myAddr" class="java.lang.String"/>
+	<parameter name="adito.image.myLogo" class="java.lang.String"/>
+	<parameter name="adito.datasource.subdata" class="java.lang.Object"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\v.siemon\\Documents\\AditoProjects\\Ref2014\\report\\RPTJ_EVENTCOST\\"]]></defaultValueExpression>
+	</parameter>
+	<field name="EVENTPARTICIPANTID" class="java.lang.String"/>
+	<field name="LASTNAME" class="java.lang.String"/>
+	<field name="FIRSTNAME" class="java.lang.String"/>
+	<field name="DISCOUNTPART" class="java.lang.String"/>
+	<field name="CHARGEPART" class="java.lang.String"/>
+	<field name="EVENTPARTICIPANT.EPFUNCTION" class="java.lang.String"/>
+	<field name="EVENT.TITLE" class="java.lang.String"/>
+	<field name="EVENTNUMBER" class="java.lang.String"/>
+	<field name="EVENTID" class="java.lang.String"/>
+	<field name="SUMCOSTS" class="java.lang.String"/>
+	<variable name="chargePartDouble" class="java.lang.Double">
+		<variableExpression><![CDATA[( $F{CHARGEPART} != null && $F{CHARGEPART} != "" ? Double.parseDouble($F{CHARGEPART}) : 0.00 )]]></variableExpression>
+	</variable>
+	<variable name="discountPartDouble" class="java.lang.Double">
+		<variableExpression><![CDATA[($F{DISCOUNTPART}!=null && $F{DISCOUNTPART}!="" ? Double.parseDouble($F{DISCOUNTPART}) : 0.00)]]></variableExpression>
+	</variable>
+	<variable name="gebührMitRabatt" class="java.lang.Double">
+		<variableExpression><![CDATA[$V{chargePartDouble}]]></variableExpression>
+	</variable>
+	<variable name="totalCharge" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$V{gebührMitRabatt}]]></variableExpression>
+	</variable>
+	<variable name="countParticipants" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{EVENTPARTICIPANTID}]]></variableExpression>
+	</variable>
+	<variable name="average" class="java.lang.Double">
+		<variableExpression><![CDATA[$V{totalCharge} /$V{countParticipants}]]></variableExpression>
+	</variable>
+	<variable name="sumCostsDouble" class="java.lang.Double" resetType="None" incrementType="Group" incrementGroup="eventid">
+		<variableExpression><![CDATA[(($F{SUMCOSTS}!=null&&$F{SUMCOSTS}!="")? Double.parseDouble($F{SUMCOSTS}): 0.00)]]></variableExpression>
+	</variable>
+	<variable name="averageCosts" class="java.lang.Double">
+		<variableExpression><![CDATA[$V{sumCostsDouble}/$V{countParticipants}]]></variableExpression>
+	</variable>
+	<variable name="gesKost" class="java.lang.String" resetType="None">
+		<variableExpression><![CDATA[$R{Gesamtkosten}]]></variableExpression>
+	</variable>
+	<group name="eventid">
+		<groupExpression><![CDATA[$F{EVENTID}]]></groupExpression>
+		<groupHeader>
+			<band height="137">
+				<textField>
+					<reportElement style="standard" x="10" y="0" width="100" height="20" uuid="c43c74f7-e85e-4e9f-84d2-cf637eb585cc"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EVENT.TITLE}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="standard" x="312" y="28" width="122" height="20" uuid="4e1118cc-44d2-44ba-9cd7-6572dac53429"/>
+					<textFieldExpression><![CDATA[$R{Gesamtgebühr}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="standard" x="312" y="47" width="122" height="20" uuid="283c5b1e-1213-4882-b5e3-ea9d26689faf"/>
+					<textFieldExpression><![CDATA[$R{Anzahl Teilnehmer}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="standard" x="312" y="67" width="122" height="20" uuid="faa3dc04-bd5b-4d6b-bd51-a0dc27105508"/>
+					<textFieldExpression><![CDATA[$R{Durchschnittliche Gebühr}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="standard" x="312" y="87" width="122" height="20" uuid="07d876d8-e3ad-4880-b8e5-a72160da55ac"/>
+					<textFieldExpression><![CDATA[$R{Durchschnittliche Kosten}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="standard" x="547" y="28" width="8" height="16" uuid="84d2ee4b-84b7-416d-a822-d809bd217303"/>
+					<textElement textAlignment="Right"/>
+					<text><![CDATA[€]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="standard" x="547" y="67" width="8" height="16" uuid="4baa7592-1522-406b-815f-b3cc1dbdb990"/>
+					<textElement textAlignment="Right"/>
+					<text><![CDATA[€]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="standard" x="547" y="87" width="8" height="16" uuid="25a1d718-4ba2-4c0e-92e8-33b2e54c1fe4"/>
+					<textElement textAlignment="Right"/>
+					<text><![CDATA[€]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="standard" positionType="FixRelativeToBottom" x="10" y="117" width="100" height="17" uuid="8d5e98a4-a56a-4c5c-a052-96caa16e699f"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{Vorname}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="standard" positionType="FixRelativeToBottom" x="180" y="117" width="100" height="17" uuid="f7c9765f-a924-4477-bffc-b46766b3ca63"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{Nachname}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="standard" positionType="FixRelativeToBottom" x="381" y="117" width="100" height="17" uuid="d7d929f3-d071-4ab3-adac-0076eaa06ce1"/>
+					<textElement textAlignment="Right">
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{Gebühr}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="standard" positionType="FixRelativeToBottom" x="497" y="117" width="58" height="17" uuid="14050a18-5446-4c58-9d85-a2e8feef6d86"/>
+					<textElement textAlignment="Right">
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{Rabatt}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="standard" x="312" y="0" width="100" height="20" uuid="7883347a-a1e9-4c16-aec1-caac28ba7a0e"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{Kurs-Nr.}+":"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="standard" x="434" y="0" width="100" height="20" uuid="46ce4799-59df-4399-99da-8b807683a657"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EVENTNUMBER}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="10" y="133" width="545" height="1" uuid="0fc007f4-77f8-4af5-8415-e9aab26239a6"/>
+				</line>
+				<subreport>
+					<reportElement x="10" y="28" width="200" height="82" uuid="9df16bd3-f68a-4de5-b987-49a11d19515b"/>
+					<subreportParameter name="gesamtkosten">
+						<subreportParameterExpression><![CDATA[$V{gesKost}]]></subreportParameterExpression>
+					</subreportParameter>
+					<dataSourceExpression><![CDATA[$P{adito.datasource.subdata}]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportData_subreport1.jasper"]]></subreportExpression>
+				</subreport>
+				<frame>
+					<reportElement stretchType="RelativeToBandHeight" x="10" y="20" width="200" height="90" uuid="ac895a7a-0456-4c0e-ba51-5d4124550cc8"/>
+					<box>
+						<pen lineWidth="1.0"/>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+				</frame>
+				<textField evaluationTime="Group" evaluationGroup="eventid" pattern="#,##0.00">
+					<reportElement style="standard" x="447" y="28" width="100" height="19" uuid="755d670c-2809-4904-8234-b42a8ff4484c"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA[$V{totalCharge}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="eventid" pattern="#,##0">
+					<reportElement style="standard" x="447" y="48" width="100" height="19" uuid="cfdc2cde-49bc-469e-9729-ac6df264dc80"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA[$V{countParticipants}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="eventid" pattern="#,##0.00">
+					<reportElement style="standard" x="447" y="67" width="100" height="20" uuid="959045ed-53a2-4188-9e88-8e4d7de0ec93"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA[$V{average}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="eventid" pattern="#,##0.00">
+					<reportElement style="standard" x="447" y="87" width="100" height="20" uuid="bc3959e7-0e79-47a4-891d-d320b7716898"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA[$V{averageCosts}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="119" splitType="Stretch">
+			<image>
+				<reportElement x="221" y="0" width="113" height="60" uuid="ecb74eaf-1117-44a1-bc7c-9dc53336dc4b"/>
+				<imageExpression><![CDATA[$P{adito.image.myLogo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="standard" x="0" y="68" width="555" height="20" forecolor="#999999" backcolor="#FFFFFF" uuid="1717301a-f451-4a7a-9ba5-28a0e0304340"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{myAddr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="standard" x="10" y="94" width="100" height="20" forecolor="#999999" uuid="f937be6f-4763-4d65-8f5e-d9e50db4e7d2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Kostenplan}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="0" y="68" width="555" height="20" forecolor="#999999" uuid="742f4013-b8a9-4323-b05b-a0815441a278"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</frame>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="14">
+			<textField>
+				<reportElement style="standard" x="10" y="0" width="154" height="12" uuid="a3109951-9e24-45de-bc91-6989955ddac2"/>
+				<textFieldExpression><![CDATA[$F{FIRSTNAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="standard" x="180" y="0" width="170" height="12" uuid="e5b3b97b-2a3e-48a6-9c72-28055f84a2a4"/>
+				<textFieldExpression><![CDATA[$F{LASTNAME}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="397" y="0" width="76" height="12" uuid="d92ca2d9-cea0-43d8-9d38-57f18222f58b"/>
+				<textElement textAlignment="Right">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{chargePartDouble}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="497" y="0" width="50" height="12" uuid="fcba8ed1-d367-470c-a262-8b4ab5ce10e0"/>
+				<textElement textAlignment="Right">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{discountPartDouble}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="standard" x="473" y="0" width="8" height="12" uuid="99f819f6-2525-4bdc-b1ed-7db5a4d1ea0a"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[€]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="547" y="0" width="10" height="12" uuid="61f88bec-af8f-4f59-af37-65ea3e6a64ce"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[ %]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="17" splitType="Stretch">
+			<textField>
+				<reportElement style="standard" x="465" y="0" width="67" height="14" uuid="d8a43c45-42b7-4a56-abba-83832abe4843"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$R{Seite}+" "+$V{PAGE_NUMBER}+" "+$R{von}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="standard" x="531" y="0" width="24" height="14" uuid="3f97d78b-b88e-474f-8eb8-920696bdc499"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement style="standard" x="390" y="0" width="76" height="14" uuid="d83bc701-62cc-4e2b-832d-c5c3b2bd895f"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

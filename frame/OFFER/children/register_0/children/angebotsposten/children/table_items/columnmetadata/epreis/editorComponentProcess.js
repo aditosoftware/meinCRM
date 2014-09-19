@@ -1,0 +1,1 @@
+a.rs("$comp.item_price");

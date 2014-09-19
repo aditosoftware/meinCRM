@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>QUICKINSERT</name>
+  <title>Schnelleingabe</title>
+  <alias>AO_DATEN</alias>
+  <whereClause></whereClause>
+  <idStrategy v="5" />
+  <beforeStart>%aditoprj%/frame/QUICKINSERT/beforeStart.js</beforeStart>
+  <afterStart>%aditoprj%/frame/QUICKINSERT/afterStart.js</afterStart>
+  <beforeSave>%aditoprj%/frame/QUICKINSERT/beforeSave.js</beforeSave>
+  <afterSave>%aditoprj%/frame/QUICKINSERT/afterSave.js</afterSave>
+  <afterDelete>%aditoprj%/frame/QUICKINSERT/afterDelete.js</afterDelete>
+  <beforeCancel>%aditoprj%/frame/QUICKINSERT/beforeCancel.js</beforeCancel>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <register>
+      <name>Register_theme</name>
+      <x v="0" />
+      <y v="310" />
+      <width v="1080" />
+      <height v="290" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <visibleProcess>%aditoprj%/frame/QUICKINSERT/children/register_theme/visibleProcess.js</visibleProcess>
+      <tabOrder v="28" />
+      <children>
+        <registerTab>
+          <name>themes</name>
+          <caption>Themen</caption>
+          <children>
+            <button>
+              <name>btn_suchezurueck</name>
+              <onClick>%aditoprj%/frame/QUICKINSERT/children/register_theme/children/themes/children/btn_suchezurueck/onClick.js</onClick>
+              <x v="285" />
+              <y v="10" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="1" />
+              <enabledProcess>%aditoprj%/frame/QUICKINSERT/children/register_theme/children/themes/children/btn_suchezurueck/enabledProcess.js</enabledProcess>
+              <tabOrder v="2" />
+              <imageData>%aditoprj%/frame/QUICKINSERT/children/register_theme/children/themes/children/btn_suchezurueck/imageData.png</imageData>
+            </button>
+            <button>
+              <name>btn_suche</name>
+              <onClick></onClick>
+              <x v="265" />
+              <y v="10" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="1" />
+              <enabledProcess>%aditoprj%/frame/QUICKINSERT/children/register_theme/children/themes/children/btn_suche/enabledProcess.js</enabledProcess>
+              <tabOrder v="1" />
+              <imageData>%aditoprj%/frame/QUICKINSERT/children/register_theme/children/themes/children/btn_suche/imageData.png</imageData>
+            </button>
+            <edit>
+              <name>edt_Suche</name>
+              <onValidation>%aditoprj%/frame/QUICKINSERT/children/register_theme/children/themes/children/edt_suche/onValidation.js</onValidation>
+              <x v="30" />
+              <y v="10" />
+              <width v="235" />
+              <horizontalAnchor v="1" />
+              <font name="Verdana" style="0" size="11" />
+              <tabOrder v="0" />
+            </edit>
+            <memo>
+              <name>memo_theme</name>
+              <x v="635" />
+              <y v="5" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="3" />
+              <labelFont name="" style="0" size="11" />
+            </memo>
+            <button>
+              <name>btnAddThema</name>
+              <onClick>%aditoprj%/frame/QUICKINSERT/children/register_theme/children/themes/children/btnaddthema/onClick.js</onClick>
+              <x v="310" />
+              <y v="50" />
+              <width v="25" />
+              <height v="25" />
+              <font name="" style="0" size="11" />
+              <enabledProcess>%aditoprj%/frame/QUICKINSERT/children/register_theme/children/themes/children/btnaddthema/enabledProcess.js</enabledProcess>
+              <tabOrder v="2" />
+              <imageData>%aditoprj%/frame/QUICKINSERT/children/register_theme/children/themes/children/btnaddthema/imageData.png</imageData>
+            </button>
+            <tree>
+              <name>treeThemen</name>
+              <contentProcess>%aditoprj%/frame/QUICKINSERT/children/register_theme/children/themes/children/treethemen/contentProcess.js</contentProcess>
+              <onDoubleClick>%aditoprj%/frame/QUICKINSERT/children/register_theme/children/themes/children/treethemen/onDoubleClick.js</onDoubleClick>
+              <alwaysEditable v="true" />
+              <singleSelection v="true" />
+              <singleSelectionProcess></singleSelectionProcess>
+              <x v="30" />
+              <y v="50" />
+              <width v="275" />
+              <height v="150" />
+              <verticalAnchor v="6" />
+              <font name="Verdana" style="0" size="11" />
+              <tabOrder v="1" />
+              <popup>
+                <menuItem>
+                  <name>Baum_oeffnen</name>
+                  <caption>Baum öffnen</caption>
+                  <onClick>%aditoprj%/frame/QUICKINSERT/children/register_theme/children/themes/children/treethemen/popup/baum_oeffnen/onClick.js</onClick>
+                  <enabledProcess></enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>Baum_schliessen</name>
+                  <caption>Baum schließen</caption>
+                  <onClick>%aditoprj%/frame/QUICKINSERT/children/register_theme/children/themes/children/treethemen/popup/baum_schliessen/onClick.js</onClick>
+                  <enabledProcess></enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+              <labelText>Themenauswahl</labelText>
+              <labelFont name="" style="0" size="11" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+            </tree>
+            <table>
+              <name>tblThemen</name>
+              <rowCreate>%aditoprj%/frame/QUICKINSERT/children/register_theme/children/themes/children/tblthemen/rowCreate.js</rowCreate>
+              <rowUpdate></rowUpdate>
+              <rowDelete></rowDelete>
+              <displayContentProcess>%aditoprj%/frame/QUICKINSERT/children/register_theme/children/themes/children/tblthemen/displayContentProcess.js</displayContentProcess>
+              <idContentProcess></idContentProcess>
+              <contentProcessType v="1" />
+              <x v="345" />
+              <y v="50" />
+              <width v="710" />
+              <height v="150" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <font name="Verdana" style="0" size="11" />
+              <headerFont name="" style="0" size="11" />
+              <utilizeRowId v="true" />
+              <grantArrangeColumns v="true" />
+              <labelFont name="" style="0" size="11" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Thema</name>
+                  <columnName>Thema</columnName>
+                  <width v="250" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Bemerkung</name>
+                  <columnName>Bemerkung</columnName>
+                  <width v="203" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/QUICKINSERT/children/register_theme/children/themes/children/tblthemen/columnmetadata/bemerkung/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+    <register>
+      <name>Register_dub</name>
+      <x v="0" />
+      <y v="310" />
+      <width v="1080" />
+      <height v="290" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <visible v="false" />
+      <visibleProcess>%aditoprj%/frame/QUICKINSERT/children/register_dub/visibleProcess.js</visibleProcess>
+      <tabOrder v="-1" />
+      <children>
+        <registerTab>
+          <name>Dubletten</name>
+          <caption>Dubletten</caption>
+          <children>
+            <button>
+              <name>btn_abbrechen</name>
+              <onClick>%aditoprj%/frame/QUICKINSERT/children/register_dub/children/dubletten/children/btn_abbrechen/onClick.js</onClick>
+              <x v="795" />
+              <y v="125" />
+              <width v="175" />
+              <height v="25" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="4" />
+              <caption>Abbrechen</caption>
+              <font name="" style="0" size="11" />
+              <backgroundColor v="0xffdee7f7" />
+              <tabOrder v="3" />
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+            </button>
+            <button>
+              <name>btn_verwendenORGPERS</name>
+              <onClick>%aditoprj%/frame/QUICKINSERT/children/register_dub/children/dubletten/children/btn_verwendenorgpers/onClick.js</onClick>
+              <x v="795" />
+              <y v="90" />
+              <width v="175" />
+              <height v="25" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="4" />
+              <caption></caption>
+              <captionProcess>%aditoprj%/frame/QUICKINSERT/children/register_dub/children/dubletten/children/btn_verwendenorgpers/captionProcess.js</captionProcess>
+              <font name="" style="0" size="11" />
+              <backgroundColor v="0xffdee7f7" />
+              <enabledProcess>%aditoprj%/frame/QUICKINSERT/children/register_dub/children/dubletten/children/btn_verwendenorgpers/enabledProcess.js</enabledProcess>
+              <tabOrder v="0" />
+              <labelFont name="" style="0" size="11" />
+            </button>
+            <button>
+              <name>btn_speichern</name>
+              <comment></comment>
+              <onClick>%aditoprj%/frame/QUICKINSERT/children/register_dub/children/dubletten/children/btn_speichern/onClick.js</onClick>
+              <x v="795" />
+              <y v="55" />
+              <width v="175" />
+              <height v="25" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="4" />
+              <caption>Trotzdem übernehmen</caption>
+              <font name="" style="0" size="11" />
+              <backgroundColor v="0xffdee7f7" />
+              <tabOrder v="0" />
+              <labelFont name="" style="0" size="11" />
+            </button>
+            <table>
+              <name>tbl_dublettenORG</name>
+              <onDoubleClick>%aditoprj%/frame/QUICKINSERT/children/register_dub/children/dubletten/children/tbl_dublettenorg/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/QUICKINSERT/children/register_dub/children/dubletten/children/tbl_dublettenorg/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="15" />
+              <y v="55" />
+              <width v="770" />
+              <height v="130" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="4" />
+              <font name="Verdana" style="0" size="11" />
+              <headerFont name="" style="0" size="11" />
+              <utilizeRowId v="true" />
+              <grantArrangeColumns v="true" />
+              <labelText>Mögliche Dubletten Organisation</labelText>
+              <labelFont name="" style="0" size="11" />
+              <labelOrientation v="1" />
+              <labelDistance v="5" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>orgname_dubORG</name>
+                  <columnName>Organisation</columnName>
+                  <width v="320" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>country_dubORG</name>
+                  <columnName>Land</columnName>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>zip_dubORG</name>
+                  <columnName>PLZ</columnName>
+                  <width v="56" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>city_dubORG</name>
+                  <columnName>Ort</columnName>
+                  <width v="116" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>address_dubORG</name>
+                  <columnName>Strasse</columnName>
+                  <width v="130" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>status_dubORG</name>
+                  <columnName>Status</columnName>
+                  <width v="50" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+            <table>
+              <name>tbl_dublettenPERS</name>
+              <onDoubleClick>%aditoprj%/frame/QUICKINSERT/children/register_dub/children/dubletten/children/tbl_dublettenpers/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/QUICKINSERT/children/register_dub/children/dubletten/children/tbl_dublettenpers/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="15" />
+              <y v="215" />
+              <width v="770" />
+              <height v="45" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <font name="Verdana" style="0" size="11" />
+              <headerFont name="" style="0" size="11" />
+              <utilizeRowId v="true" />
+              <grantArrangeColumns v="true" />
+              <labelText>Mögliche Dubletten Person</labelText>
+              <labelFont name="" style="0" size="11" />
+              <labelOrientation v="1" />
+              <labelDistance v="5" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>orgname_dubPERS</name>
+                  <columnName>Organisation</columnName>
+                  <width v="170" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>person_dubPERS</name>
+                  <columnName>Person</columnName>
+                  <width v="150" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>country_dubPERS</name>
+                  <columnName>Land</columnName>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>zip_dubPERS</name>
+                  <columnName>PLZ</columnName>
+                  <width v="56" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>city_dubPERS</name>
+                  <columnName>Ort</columnName>
+                  <width v="116" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>address_dubPERS</name>
+                  <columnName>Strasse</columnName>
+                  <width v="130" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>status_dubPERS</name>
+                  <columnName>Status</columnName>
+                  <width v="50" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+            <checkBox>
+              <name>DUP_CHECK</name>
+              <presetNew>%aditoprj%/frame/QUICKINSERT/children/register_dub/children/dubletten/children/dup_check/presetNew.js</presetNew>
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="800" />
+              <y v="20" />
+              <verticalAnchor v="5" />
+              <visible v="false" />
+              <labelText>DUP_CHECK_DONE</labelText>
+              <labelFont name="" style="0" size="11" />
+              <labelOrientation v="4" />
+              <tabOrder v="4" />
+            </checkBox>
+            <label>
+              <name>lbl_dubletten</name>
+              <valueProcess>%aditoprj%/frame/QUICKINSERT/children/register_dub/children/dubletten/children/lbl_dubletten/valueProcess.js</valueProcess>
+              <x v="15" />
+              <y v="10" />
+              <width v="320" />
+              <height v="20" />
+              <font name="Verdana" style="1" size="11" />
+              <fontColor v="0xffffffff" />
+              <backgroundColor v="0xffff3333" />
+            </label>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+    <comboBox>
+      <name>projektart</name>
+      <contentProcess>%aditoprj%/frame/QUICKINSERT/children/projektart/contentProcess.js</contentProcess>
+      <searchableModes>none</searchableModes>
+      <mandatoryInput v="false" />
+      <mandatoryInputProcess>%aditoprj%/frame/QUICKINSERT/children/projektart/mandatoryInputProcess.js</mandatoryInputProcess>
+      <x v="100" />
+      <y v="270" />
+      <width v="250" />
+      <font name="Verdana" style="0" size="11" />
+      <enabled v="false" />
+      <enabledProcess>%aditoprj%/frame/QUICKINSERT/children/projektart/enabledProcess.js</enabledProcess>
+      <tabOrder v="10" />
+      <staticContent />
+      <maximumRowCount v="20" />
+      <labelText>Projektart</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>subject</name>
+      <dataType v="12" />
+      <precision v="254" />
+      <contentProcess>%aditoprj%/frame/QUICKINSERT/children/subject/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <mandatoryInput v="false" />
+      <x v="810" />
+      <y v="10" />
+      <width v="250" />
+      <horizontalAnchor v="1" />
+      <font name="Verdana" style="0" size="11" />
+      <visibleProcess>%aditoprj%/frame/QUICKINSERT/children/subject/visibleProcess.js</visibleProcess>
+      <utilizeRowId v="false" />
+      <tabOrder v="24" />
+      <editable v="true" />
+      <maximumRowCount v="30" />
+      <labelText>Betrifft</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>medium</name>
+      <dataType v="4" />
+      <valueProcess>%aditoprj%/frame/QUICKINSERT/children/medium/valueProcess.js</valueProcess>
+      <contentProcess>%aditoprj%/frame/QUICKINSERT/children/medium/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <mandatoryInput v="true" />
+      <x v="810" />
+      <y v="35" />
+      <width v="155" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="25" />
+      <staticContent />
+      <maximumRowCount v="20" />
+      <labelText>Medium</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>direction</name>
+      <dataType v="1" />
+      <precision v="1" />
+      <valueProcess>%aditoprj%/frame/QUICKINSERT/children/direction/valueProcess.js</valueProcess>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <mandatoryInput v="true" />
+      <x v="975" />
+      <y v="35" />
+      <width v="85" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="26" />
+      <staticContent>
+        <entry>
+          <key>ausgehend</key>
+          <value>o</value>
+        </entry>
+        <entry>
+          <key>eingehend</key>
+          <value>i</value>
+        </entry>
+      </staticContent>
+      <labelText>Richtung</labelText>
+      <labelVisible v="false" />
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>branche</name>
+      <dataType v="12" />
+      <precision v="50" />
+      <valueProcess>%aditoprj%/frame/QUICKINSERT/children/branche/valueProcess.js</valueProcess>
+      <contentProcess>%aditoprj%/frame/QUICKINSERT/children/branche/contentProcess.js</contentProcess>
+      <searchableModes>none</searchableModes>
+      <readOnlyProcess>%aditoprj%/frame/QUICKINSERT/children/branche/readOnlyProcess.js</readOnlyProcess>
+      <mandatoryInput v="false" />
+      <x v="455" />
+      <y v="35" />
+      <width v="250" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="14" />
+      <staticContent />
+      <maximumRowCount v="20" />
+      <labelText>Branche</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>zielgruppe</name>
+      <dataType v="12" />
+      <precision v="50" />
+      <valueProcess>%aditoprj%/frame/QUICKINSERT/children/zielgruppe/valueProcess.js</valueProcess>
+      <presetNew>%aditoprj%/frame/QUICKINSERT/children/zielgruppe/presetNew.js</presetNew>
+      <contentProcess>%aditoprj%/frame/QUICKINSERT/children/zielgruppe/contentProcess.js</contentProcess>
+      <searchableModes>none</searchableModes>
+      <readOnlyProcess>%aditoprj%/frame/QUICKINSERT/children/zielgruppe/readOnlyProcess.js</readOnlyProcess>
+      <mandatoryInput v="false" />
+      <mandatoryInputProcess>%aditoprj%/frame/QUICKINSERT/children/zielgruppe/mandatoryInputProcess.js</mandatoryInputProcess>
+      <x v="455" />
+      <y v="60" />
+      <width v="250" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="15" />
+      <staticContent />
+      <maximumRowCount v="20" />
+      <labelText>Zielgruppe</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <checkBox>
+      <name>opportunity</name>
+      <valueProcess>%aditoprj%/frame/QUICKINSERT/children/opportunity/valueProcess.js</valueProcess>
+      <readOnlyProcess>%aditoprj%/frame/QUICKINSERT/children/opportunity/readOnlyProcess.js</readOnlyProcess>
+      <x v="100" />
+      <y v="225" />
+      <width v="15" />
+      <labelText>Vertriebsprojekt anlegen</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelOrientation v="4" />
+      <labelDistance v="5" />
+      <tabOrder v="12" />
+    </checkBox>
+    <comboBox>
+      <name>salesmanager</name>
+      <contentProcess>%aditoprj%/frame/QUICKINSERT/children/salesmanager/contentProcess.js</contentProcess>
+      <searchableModes>none</searchableModes>
+      <mandatoryInput v="false" />
+      <mandatoryInputProcess>%aditoprj%/frame/QUICKINSERT/children/salesmanager/mandatoryInputProcess.js</mandatoryInputProcess>
+      <x v="100" />
+      <y v="245" />
+      <width v="250" />
+      <font name="Verdana" style="0" size="11" />
+      <enabled v="false" />
+      <enabledProcess>%aditoprj%/frame/QUICKINSERT/children/salesmanager/enabledProcess.js</enabledProcess>
+      <tabOrder v="11" />
+      <staticContent />
+      <maximumRowCount v="20" />
+      <labelText>Salesman.</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>source</name>
+      <dataType v="12" />
+      <precision v="50" />
+      <contentProcess>%aditoprj%/frame/QUICKINSERT/children/source/contentProcess.js</contentProcess>
+      <searchableModes>none</searchableModes>
+      <mandatoryInput v="false" />
+      <x v="455" />
+      <y v="10" />
+      <width v="250" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="13" />
+      <staticContent />
+      <maximumRowCount v="20" />
+      <labelText>Herkunft</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>department</name>
+      <precision v="50" />
+      <valueProcess>%aditoprj%/frame/QUICKINSERT/children/department/valueProcess.js</valueProcess>
+      <contentProcess>%aditoprj%/frame/QUICKINSERT/children/department/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <onValidationProcess>%aditoprj%/frame/QUICKINSERT/children/department/onValidationProcess.js</onValidationProcess>
+      <searchableModes>none</searchableModes>
+      <readOnlyProcess>%aditoprj%/frame/QUICKINSERT/children/department/readOnlyProcess.js</readOnlyProcess>
+      <x v="455" />
+      <y v="270" />
+      <width v="250" />
+      <font name="Verdana" style="0" size="11" />
+      <enabledProcess></enabledProcess>
+      <utilizeRowId v="false" />
+      <tabOrder v="23" />
+      <editable v="true" />
+      <staticContent />
+      <labelText>Abteilung</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>language</name>
+      <dataType v="4" />
+      <precision v="10" />
+      <valueProcess>%aditoprj%/frame/QUICKINSERT/children/language/valueProcess.js</valueProcess>
+      <contentProcess>%aditoprj%/frame/QUICKINSERT/children/language/contentProcess.js</contentProcess>
+      <searchableModes>none</searchableModes>
+      <mandatoryInput v="true" />
+      <x v="455" />
+      <y v="220" />
+      <width v="250" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="21" />
+      <staticContent>
+        <entry>
+          <key>ausgehend</key>
+          <value>o</value>
+        </entry>
+        <entry>
+          <key>eingehend</key>
+          <value>i</value>
+        </entry>
+      </staticContent>
+      <labelText>Sprache</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>funktion</name>
+      <dataType v="12" />
+      <precision v="50" />
+      <valueProcess>%aditoprj%/frame/QUICKINSERT/children/funktion/valueProcess.js</valueProcess>
+      <contentProcess>%aditoprj%/frame/QUICKINSERT/children/funktion/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <readOnlyProcess>%aditoprj%/frame/QUICKINSERT/children/funktion/readOnlyProcess.js</readOnlyProcess>
+      <x v="455" />
+      <y v="245" />
+      <width v="250" />
+      <font name="Verdana" style="0" size="11" />
+      <utilizeRowId v="false" />
+      <tabOrder v="22" />
+      <staticContent />
+      <labelText>Funktion</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <edit>
+      <name>firstname</name>
+      <precision v="50" />
+      <alwaysEditable v="false" />
+      <searchableModes>none</searchableModes>
+      <x v="95" />
+      <y v="90" />
+      <width v="250" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="3" />
+      <labelText>Vorname</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+      <labelAnchor v="0" />
+    </edit>
+    <comboBox>
+      <name>title</name>
+      <precision v="30" />
+      <contentProcess>%aditoprj%/frame/QUICKINSERT/children/title/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <x v="235" />
+      <y v="65" />
+      <width v="110" />
+      <font name="Verdana" style="0" size="11" />
+      <utilizeRowId v="false" />
+      <tabOrder v="2" />
+      <staticContent />
+      <labelText>Titel</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="35" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>salutation</name>
+      <precision v="30" />
+      <valueProcess>%aditoprj%/frame/QUICKINSERT/children/salutation/valueProcess.js</valueProcess>
+      <contentProcess>%aditoprj%/frame/QUICKINSERT/children/salutation/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <mandatoryInput v="false" />
+      <x v="95" />
+      <y v="65" />
+      <width v="100" />
+      <font name="Verdana" style="0" size="11" />
+      <utilizeRowId v="false" />
+      <tabOrder v="1" />
+      <staticContent />
+      <labelText>Anrede</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>country</name>
+      <dataType v="1" />
+      <precision v="2" />
+      <valueProcess>%aditoprj%/frame/QUICKINSERT/children/country/valueProcess.js</valueProcess>
+      <contentProcess>%aditoprj%/frame/QUICKINSERT/children/country/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <onValidationProcess></onValidationProcess>
+      <searchableModes>none</searchableModes>
+      <mandatoryInput v="true" />
+      <x v="95" />
+      <y v="190" />
+      <width v="250" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="9" />
+      <staticContent />
+      <labelText>Land</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <edit>
+      <name>city</name>
+      <dataType v="12" />
+      <precision v="50" />
+      <valueProcess></valueProcess>
+      <presetNew></presetNew>
+      <onValidation>%aditoprj%/frame/QUICKINSERT/children/city/onValidation.js</onValidation>
+      <searchableModes>none</searchableModes>
+      <mandatoryInput v="false" />
+      <mandatoryInputProcess>%aditoprj%/frame/QUICKINSERT/children/city/mandatoryInputProcess.js</mandatoryInputProcess>
+      <x v="145" />
+      <y v="165" />
+      <width v="200" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="8" />
+      <labelVisible v="false" />
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="90" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>zip</name>
+      <dataType v="12" />
+      <precision v="50" />
+      <valueProcess></valueProcess>
+      <onValidation>%aditoprj%/frame/QUICKINSERT/children/zip/onValidation.js</onValidation>
+      <searchableModes>none</searchableModes>
+      <mandatoryInput v="false" />
+      <mandatoryInputProcess>%aditoprj%/frame/QUICKINSERT/children/zip/mandatoryInputProcess.js</mandatoryInputProcess>
+      <x v="95" />
+      <y v="165" />
+      <width v="45" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="7" />
+      <labelText>PLZ / Ort</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>buildingno</name>
+      <dataType v="12" />
+      <precision v="50" />
+      <valueProcess></valueProcess>
+      <searchableModes>none</searchableModes>
+      <x v="320" />
+      <y v="140" />
+      <width v="25" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="6" />
+      <labelText>Nr.</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="10" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>address</name>
+      <dataType v="12" />
+      <precision v="50" />
+      <valueProcess></valueProcess>
+      <searchableModes>none</searchableModes>
+      <mandatoryInput v="false" />
+      <mandatoryInputProcess>%aditoprj%/frame/QUICKINSERT/children/address/mandatoryInputProcess.js</mandatoryInputProcess>
+      <x v="95" />
+      <y v="140" />
+      <width v="200" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="5" />
+      <labelText>Strasse</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>lastname</name>
+      <precision v="50" />
+      <mandatoryInput v="false" />
+      <mandatoryInputProcess>%aditoprj%/frame/QUICKINSERT/children/lastname/mandatoryInputProcess.js</mandatoryInputProcess>
+      <x v="95" />
+      <y v="115" />
+      <width v="250" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="4" />
+      <labelText>Nachname</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+    </edit>
+    <edit>
+      <name>mobil</name>
+      <precision v="255" />
+      <valueProcess>%aditoprj%/frame/QUICKINSERT/children/mobil/valueProcess.js</valueProcess>
+      <onValidation>%aditoprj%/frame/QUICKINSERT/children/mobil/onValidation.js</onValidation>
+      <readOnlyProcess>%aditoprj%/frame/QUICKINSERT/children/mobil/readOnlyProcess.js</readOnlyProcess>
+      <x v="455" />
+      <y v="140" />
+      <width v="250" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="18" />
+      <labelText>Mobil</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+    </edit>
+    <edit>
+      <name>fax</name>
+      <precision v="255" />
+      <valueProcess></valueProcess>
+      <onValidation>%aditoprj%/frame/QUICKINSERT/children/fax/onValidation.js</onValidation>
+      <x v="455" />
+      <y v="165" />
+      <width v="250" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="19" />
+      <labelText>Fax</labelText>
+      <labelVisible v="true" />
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+    </edit>
+    <edit>
+      <name>url</name>
+      <precision v="255" />
+      <valueProcess></valueProcess>
+      <onValidation>%aditoprj%/frame/QUICKINSERT/children/url/onValidation.js</onValidation>
+      <x v="455" />
+      <y v="190" />
+      <width v="250" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="20" />
+      <labelText>Internet</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+    </edit>
+    <edit>
+      <name>telefon</name>
+      <precision v="255" />
+      <valueProcess></valueProcess>
+      <onValidation>%aditoprj%/frame/QUICKINSERT/children/telefon/onValidation.js</onValidation>
+      <x v="455" />
+      <y v="90" />
+      <width v="250" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="16" />
+      <labelText>Telefon</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+    </edit>
+    <edit>
+      <name>email</name>
+      <precision v="255" />
+      <valueProcess></valueProcess>
+      <onValidation>%aditoprj%/frame/QUICKINSERT/children/email/onValidation.js</onValidation>
+      <x v="455" />
+      <y v="115" />
+      <width v="250" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="17" />
+      <labelText>Email</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+    </edit>
+    <memo>
+      <name>info</name>
+      <x v="735" />
+      <y v="85" />
+      <width v="325" />
+      <height v="200" />
+      <horizontalAnchor v="1" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="27" />
+      <labelText>Bemerkung</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelOrientation v="1" />
+      <labelDistance v="5" />
+    </memo>
+    <memo>
+      <name>orgname</name>
+      <dataType v="12" />
+      <precision v="250" />
+      <mandatoryInput v="false" />
+      <mandatoryInputProcess>%aditoprj%/frame/QUICKINSERT/children/orgname/mandatoryInputProcess.js</mandatoryInputProcess>
+      <x v="95" />
+      <y v="10" />
+      <width v="250" />
+      <height v="50" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="0" />
+      <labelText>Firma</labelText>
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="75" />
+    </memo>
+  </children>
+  <tableView />
+  <width v="1080" />
+</frame>

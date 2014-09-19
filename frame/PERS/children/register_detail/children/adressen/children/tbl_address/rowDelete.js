@@ -1,0 +1,1 @@
+a.sqlDelete("ADDRESS", "ADDRESSID = '" + a.valueof("$local.idvalue") + "'");

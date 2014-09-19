@@ -1,0 +1,1 @@
+a.sqlDelete("TABLEACCESS", "TABLEACCESSID = '" + a.valueof("$local.idvalue") + "'");

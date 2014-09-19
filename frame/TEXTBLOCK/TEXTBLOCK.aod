@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>TEXTBLOCK</name>
+  <title>Textbaustein</title>
+  <icon>%aditoprj%/frame/TEXTBLOCK/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/TEXTBLOCK/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type  public
+@status released
+@desc [fame Textbaustein]
+
+@module Marketing
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <linkInformation>
+    <linkInformation>
+      <name>9d4a0f35-14e0-4909-bf81-0e6d45f4e701</name>
+      <tableName>TEXTBLOCK</tableName>
+      <primaryKey>TEXTBLOCKID</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+  </linkInformation>
+  <whereClause>%aditoprj%/frame/TEXTBLOCK/whereClause.js</whereClause>
+  <idStrategy v="4" />
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showSaveCancel v="false" />
+        <showCreate v="true" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="true" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <databaseColumns>
+    <column>
+      <name>TEXTBLOCK_TEXTBLOCKID</name>
+      <tableName>TEXTBLOCK</tableName>
+      <columnName>TEXTBLOCKID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/TEXTBLOCK/databasecolumns/textblock_textblockid/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>TEXTBLOCK_AOTYPE</name>
+      <tableName>TEXTBLOCK</tableName>
+      <columnName>AOTYPE</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+    </column>
+    <column>
+      <name>TEXTBLOCK_DATE_NEW</name>
+      <tableName>TEXTBLOCK</tableName>
+      <columnName>DATE_NEW</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+      <presetNew>%aditoprj%/frame/TEXTBLOCK/databasecolumns/textblock_date_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>TEXTBLOCK_DATE_EDIT</name>
+      <tableName>TEXTBLOCK</tableName>
+      <columnName>DATE_EDIT</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+      <presetChange>%aditoprj%/frame/TEXTBLOCK/databasecolumns/textblock_date_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>TEXTBLOCK_USER_NEW</name>
+      <tableName>TEXTBLOCK</tableName>
+      <columnName>USER_NEW</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+      <presetNew>%aditoprj%/frame/TEXTBLOCK/databasecolumns/textblock_user_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>TEXTBLOCK_USER_EDIT</name>
+      <tableName>TEXTBLOCK</tableName>
+      <columnName>USER_EDIT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+      <presetChange>%aditoprj%/frame/TEXTBLOCK/databasecolumns/textblock_user_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>TEXTBLOCK_LONG_TEXT</name>
+      <tableName>TEXTBLOCK</tableName>
+      <columnName>LONG_TEXT</columnName>
+      <dataTypeName>CLOB</dataTypeName>
+      <dataType v="2005" />
+      <precision v="2147483647" />
+      <scale>0</scale>
+    </column>
+    <column>
+      <name>TEXTBLOCK_LANG</name>
+      <tableName>TEXTBLOCK</tableName>
+      <columnName>LANG</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/TEXTBLOCK/databasecolumns/textblock_lang/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>TEXTBLOCK_SHORTTEXT</name>
+      <tableName>TEXTBLOCK</tableName>
+      <columnName>SHORTTEXT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="250" />
+    </column>
+  </databaseColumns>
+  <children>
+    <comboBox>
+      <name>LANG</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>TEXTBLOCK</tableName>
+      <columnName>LANG</columnName>
+      <dataType v="4" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/TEXTBLOCK/children/lang/presetNew.js</presetNew>
+      <contentProcess>%aditoprj%/frame/TEXTBLOCK/children/lang/contentProcess.js</contentProcess>
+      <x v="180" />
+      <y v="30" />
+      <width v="140" />
+      <tabOrder v="1" />
+      <staticContent />
+      <maximumRowCount v="20" />
+      <emptyElementEnabled v="false" />
+      <labelText>Sprache</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="2" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <label>
+      <name>lblCreatedEdited</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <valueProcess>%aditoprj%/frame/TEXTBLOCK/children/lblcreatededited/valueProcess.js</valueProcess>
+      <x v="20" />
+      <y v="565" />
+      <width v="830" />
+      <height v="15" />
+      <verticalAnchor v="5" />
+      <font name="Verdana" style="0" size="9" />
+      <labelAnchor v="0" />
+    </label>
+    <register>
+      <name>Register_0</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <y v="60" />
+      <width v="850" />
+      <height v="505" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <children>
+        <registerTab>
+          <name>Text</name>
+          <caption>Text</caption>
+          <children>
+            <memo>
+              <name>LONG</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <tableName>TEXTBLOCK</tableName>
+              <columnName>LONG_TEXT</columnName>
+              <dataType v="2005" />
+              <precision v="-1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="810" />
+              <height v="435" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <labelText>Lang</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="2" />
+            </memo>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Admin</name>
+          <comment>Kommentar von Admin</comment>
+          <caption>Admin</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/TEXTBLOCK/children/register_0/children/admin/visibleProcess.js</visibleProcess>
+          <toolTip>Tooltip von Admin</toolTip>
+          <children>
+            <edit>
+              <name>AOTYPE</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>TEXTBLOCK</tableName>
+              <columnName>AOTYPE</columnName>
+              <dataType v="4" />
+              <precision v="10" />
+              <searchableModes>mask</searchableModes>
+              <x v="125" />
+              <y v="95" />
+              <tabOrder v="6" />
+              <labelText>AOTYPE</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>DATE_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>TEXTBLOCK</tableName>
+              <columnName>DATE_EDIT</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetChange>%aditoprj%/frame/TEXTBLOCK/children/register_0/children/admin/children/date_edit/presetChange.js</presetChange>
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <inputFormat>dd.MM.yyyy</inputFormat>
+              <searchableModes>none</searchableModes>
+              <readOnly v="true" />
+              <x v="470" />
+              <y v="75" />
+              <tabOrder v="1" />
+              <labelText>DATE_EDIT</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>DATE_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>TEXTBLOCK</tableName>
+              <columnName>DATE_NEW</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetNew>%aditoprj%/frame/TEXTBLOCK/children/register_0/children/admin/children/date_new/presetNew.js</presetNew>
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <inputFormat>dd.MM.yyyy</inputFormat>
+              <searchableModes>none</searchableModes>
+              <readOnly v="true" />
+              <x v="470" />
+              <y v="50" />
+              <tabOrder v="2" />
+              <labelText>DATE_NEW</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>idcolumn</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>TEXTBLOCK</tableName>
+              <columnName>TEXTBLOCKID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <presetNew>%aditoprj%/frame/TEXTBLOCK/children/register_0/children/admin/children/idcolumn/presetNew.js</presetNew>
+              <onDoubleClick>%aditoprj%/frame/TEXTBLOCK/children/register_0/children/admin/children/idcolumn/onDoubleClick.js</onDoubleClick>
+              <searchableModes>none</searchableModes>
+              <readOnly v="true" />
+              <x v="125" />
+              <y v="70" />
+              <tabOrder v="3" />
+              <labelText>IdCOLUMN</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>TEXTBLOCKID</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>TEXTBLOCK</tableName>
+              <columnName>TEXTBLOCKID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <presetNew>%aditoprj%/frame/TEXTBLOCK/children/register_0/children/admin/children/textblockid/presetNew.js</presetNew>
+              <onDoubleClick>%aditoprj%/frame/TEXTBLOCK/children/register_0/children/admin/children/textblockid/onDoubleClick.js</onDoubleClick>
+              <searchableModes>none</searchableModes>
+              <x v="125" />
+              <y v="45" />
+              <width v="255" />
+              <labelText>TEXTBLOCKID</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>USER_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>TEXTBLOCK</tableName>
+              <columnName>USER_EDIT</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <presetChange>%aditoprj%/frame/TEXTBLOCK/children/register_0/children/admin/children/user_edit/presetChange.js</presetChange>
+              <searchableModes>none</searchableModes>
+              <readOnly v="true" />
+              <x v="470" />
+              <y v="130" />
+              <tabOrder v="4" />
+              <labelText>USER_EDIT</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>USER_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>TEXTBLOCK</tableName>
+              <columnName>USER_NEW</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <presetNew>%aditoprj%/frame/TEXTBLOCK/children/register_0/children/admin/children/user_new/presetNew.js</presetNew>
+              <searchableModes>none</searchableModes>
+              <readOnly v="true" />
+              <x v="470" />
+              <y v="105" />
+              <tabOrder v="5" />
+              <labelText>USER_NEW</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+    <comboBox>
+      <name>SHORT</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>TEXTBLOCK</tableName>
+      <columnName>SHORTTEXT</columnName>
+      <dataType v="12" />
+      <precision v="250" />
+      <contentProcess>%aditoprj%/frame/TEXTBLOCK/children/short/contentProcess.js</contentProcess>
+      <x v="325" />
+      <y v="30" />
+      <width v="505" />
+      <horizontalAnchor v="3" />
+      <enabledProcess>%aditoprj%/frame/TEXTBLOCK/children/short/enabledProcess.js</enabledProcess>
+      <tabOrder v="2" />
+      <editable v="true" />
+      <maximumRowCount v="20" />
+      <labelText>Kurzbeschreibung</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="2" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>TYPE</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>TEXTBLOCK</tableName>
+      <columnName>AOTYPE</columnName>
+      <dataType v="4" />
+      <precision v="10" />
+      <contentProcess>%aditoprj%/frame/TEXTBLOCK/children/type/contentProcess.js</contentProcess>
+      <x v="20" />
+      <y v="30" />
+      <width v="155" />
+      <tabOrder v="3" />
+      <staticContent>
+        <entry>
+          <key>Angebot Kopf</key>
+          <value>10</value>
+        </entry>
+        <entry>
+          <key>Angebot Fuss</key>
+          <value>11</value>
+        </entry>
+        <entry>
+          <key>Auftrag Kopf</key>
+          <value>20</value>
+        </entry>
+        <entry>
+          <key>Auftrag Fuss</key>
+          <value>21</value>
+        </entry>
+      </staticContent>
+      <maximumRowCount v="20" />
+      <labelText>Texttyp</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="2" />
+      <labelAnchor v="0" />
+    </comboBox>
+  </children>
+  <tableView>
+    <tableViewProperties>
+      <columnProperty>
+        <name>subselect</name>
+        <label>Texttyp</label>
+        <width v="187" />
+        <subSelect>%aditoprj%/frame/TEXTBLOCK/tableview/tableviewproperties/subselect/subSelect.js</subSelect>
+      </columnProperty>
+      <columnProperty>
+        <name>TEXTBLOCK_SHORTTEXT</name>
+        <tableName>TEXTBLOCK</tableName>
+        <columnName>SHORTTEXT</columnName>
+        <label>Kurzbezeichnung</label>
+        <width v="170" />
+      </columnProperty>
+      <columnProperty>
+        <name>subselect_2</name>
+        <label>Sprache</label>
+        <width v="168" />
+        <subSelect>%aditoprj%/frame/TEXTBLOCK/tableview/tableviewproperties/subselect_2/subSelect.js</subSelect>
+      </columnProperty>
+    </tableViewProperties>
+  </tableView>
+  <width v="850" />
+  <height v="580" />
+</frame>

@@ -1,0 +1,1 @@
+a.sqlDelete("SPCOMPETITION", " SPCOMPETITIONID = '" + a.valueof("$local.idvalue") + "'");

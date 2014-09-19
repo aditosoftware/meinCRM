@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Ticketliste" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e7a916c8-3f9a-497d-84bb-3909b15271ea">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="myAddr" class="java.lang.String"/>
+	<parameter name="adito.image.myLogo" class="java.lang.String"/>
+	<field name="SUPPORTTICKETID" class="java.lang.String"/>
+	<field name="TICKETCODE" class="java.lang.String"/>
+	<field name="TITLE" class="java.lang.String"/>
+	<field name="ENTRYDATE" class="java.lang.String"/>
+	<field name="TARGETDATE" class="java.lang.String"/>
+	<field name="PRIORITY" class="java.lang.String"/>
+	<field name="STATUS" class="java.lang.String"/>
+	<field name="ORG" class="java.lang.String"/>
+	<field name="DURATION" class="java.lang.String"/>
+	<field name="HISTCOUNT" class="java.lang.String"/>
+	<group name="RPTJ_TICKETLIST.ORG">
+		<groupExpression><![CDATA[$F{ORG}]]></groupExpression>
+		<groupHeader>
+			<band height="15">
+				<textField>
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="555" height="10" uuid="8ba316d5-de69-4b1e-97ed-e273c378da0d"/>
+					<textElement>
+						<font fontName="Verdana" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{Firma}+": "+$F{ORG}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="14">
+				<line>
+					<reportElement x="0" y="8" width="555" height="1" uuid="c0cb5a39-ee25-41b3-a7dd-cae45f686e6a"/>
+					<graphicElement>
+						<pen lineWidth="0.75" lineStyle="Double"/>
+					</graphicElement>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="197" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="101" width="555" height="20" uuid="fe3a4d25-b281-478f-9d51-adbb5beb55b9"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="101" width="555" height="20" forecolor="#999999" uuid="0e738efe-c1e7-4822-8a62-4d014ba41476"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{myAddr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="126" width="114" height="20" forecolor="#999999" uuid="9ce8e3ad-78bc-40eb-835c-e7d76386d0d4"/>
+				<textElement>
+					<font fontName="Verdana" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Ticketliste}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="164" width="100" height="10" uuid="948eed82-c2b0-48ce-a484-e27516ff2a96"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Ticketcode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="181" width="100" height="10" uuid="dc5a0dc1-1f6f-43c4-a14a-e350ed85bf1a"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Tickettitel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="112" y="164" width="100" height="10" uuid="e389f5bc-38d3-4d65-920e-e3e98b1ff350"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Ticketeingang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="163" width="75" height="10" uuid="157aa991-b6a2-48a4-b54c-4476727e1adf"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Priorität}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="297" y="164" width="108" height="10" uuid="0fe43e59-a588-4a34-857d-a3066b0ed918"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="163" width="63" height="10" uuid="e5c14ac0-1eae-4a9d-9b26-6e45dd35d57e"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Dauer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="492" y="163" width="63" height="10" uuid="398c51f9-eeb0-44fc-8b3b-6bc2081b1255"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Beiträge}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-1" y="196" width="556" height="1" uuid="73842180-b5e8-4121-8265-a82921e90b57"/>
+			</line>
+			<image scaleImage="RetainShape" hAlign="Center">
+				<reportElement x="184" y="21" width="168" height="46" uuid="8e9eb81f-d178-48d4-921d-06ad9632c13b"/>
+				<imageExpression><![CDATA[$P{adito.image.myLogo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="492" y="179" width="63" height="10" uuid="603a2f4b-f716-4dcc-9f3d-cc814b61a9a6"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["("+$R{Anzahl}+")"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<textField>
+				<reportElement x="-1" y="3" width="100" height="10" uuid="382f041a-adf4-43b7-8f53-6194b7fdb662"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TICKETCODE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="3" width="100" height="10" uuid="2e919fd5-bb01-4255-b966-ae2e30eb0a7b"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ENTRYDATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="3" width="75" height="10" uuid="6fcc5e49-430e-4e05-b96d-34e241e3b961"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PRIORITY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="297" y="4" width="108" height="10" uuid="da478f2e-7f36-4919-983e-8ab3aeb2dfc6"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{STATUS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="3" width="63" height="10" uuid="687b30f2-af88-43d4-9e9b-a393bf44e01a"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DURATION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="492" y="4" width="63" height="10" uuid="19442db7-41fa-4b92-9615-a63d51413581"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HISTCOUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="13">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="10" uuid="fa4250ca-1a4d-4051-b978-d20ff8e50410"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TITLE}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="7">
+			<line>
+				<reportElement x="0" y="4" width="555" height="1" uuid="322a781f-091b-473b-aba4-e02a27934a7a"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="43" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="10" width="555" height="1" forecolor="#999999" uuid="12d26dcf-7a74-46cd-bf83-1c2b2a79b263"/>
+			</line>
+			<textField>
+				<reportElement x="472" y="23" width="60" height="17" forecolor="#999999" uuid="60bbbbbb-4846-4cf7-9812-1985b1f6faaf"/>
+				<textElement textAlignment="Right">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Seite}+" "+$V{PAGE_NUMBER}+" "+$R{von}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="531" y="23" width="21" height="17" forecolor="#999999" uuid="abe0c741-1b27-4aba-bdec-156c4c960557"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="384" y="23" width="95" height="17" forecolor="#999999" uuid="cde53c45-7705-4846-9abf-e99fc5fb5428"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+</jasperReport>

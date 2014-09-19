@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportData_subreport1" pageWidth="200" pageHeight="802" columnWidth="200" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="65da6912-abcf-40ed-a854-750d851fe857">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="zzglUMST" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="VAT" class="java.lang.String"/>
+	<field name="WERT" class="java.lang.Double"/>
+	<sortField name="VAT" order="Descending"/>
+	<variable name="WERT_1" class="java.lang.Double" resetType="Group" resetGroup="VAT" calculation="Sum">
+		<variableExpression><![CDATA[$F{WERT}]]></variableExpression>
+	</variable>
+	<group name="VAT">
+		<groupExpression><![CDATA[$F{VAT}]]></groupExpression>
+		<groupHeader>
+			<band height="15">
+				<textField>
+					<reportElement x="0" y="0" width="117" height="15" uuid="050d8ed3-fb65-47cd-affd-3334e499ad35"/>
+					<textElement>
+						<font fontName="Segoe UI" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{zzglUMST} + " ( " + $F{VAT} + " %) "]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="VAT" pattern="#,##0.00;-#,##0.00">
+					<reportElement x="117" y="0" width="80" height="15" uuid="6bba70aa-7399-45b7-805a-1590fbe07209"/>
+					<textElement textAlignment="Right">
+						<font fontName="Segoe UI" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{WERT_1}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+</jasperReport>

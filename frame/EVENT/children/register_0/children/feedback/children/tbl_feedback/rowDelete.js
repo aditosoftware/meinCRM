@@ -1,0 +1,1 @@
+a.sqlDelete("FEEDBACK", " FEEDBACKID = '" + a.valueof("$local.idvalue") + "'");

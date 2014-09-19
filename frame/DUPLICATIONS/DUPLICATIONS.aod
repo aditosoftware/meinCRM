@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>DUPLICATIONS</name>
+  <title>Dubletten</title>
+  <icon>%aditoprj%/frame/DUPLICATIONS/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/DUPLICATIONS/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@modul ADITO-Standard</comment>
+  <alias>AO_DATEN</alias>
+  <onHelp>%aditoprj%/frame/DUPLICATIONS/onHelp.js</onHelp>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showSaveCancel v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <customComponents>
+          <rcCommandButton>
+            <name>getOrgDuplicats</name>
+            <title>Firmen-Dubletten aktualisieren</title>
+            <toolTip>Firmen-Dubletten neu berechnen</toolTip>
+            <imageData>%aditoprj%/frame/DUPLICATIONS/ribbon/ribbontasks/task_edit/customcomponents/getorgduplicats/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/DUPLICATIONS/ribbon/ribbontasks/task_edit/customcomponents/getorgduplicats/onClick.js</onClick>
+          </rcCommandButton>
+          <rcCommandButton>
+            <name>getPersDupplicats</name>
+            <title>Personen-Dubletten aktalisieren</title>
+            <toolTip>Personen-Dubletten neu berechnen</toolTip>
+            <imageData>%aditoprj%/frame/DUPLICATIONS/ribbon/ribbontasks/task_edit/customcomponents/getpersdupplicats/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/DUPLICATIONS/ribbon/ribbontasks/task_edit/customcomponents/getpersdupplicats/onClick.js</onClick>
+          </rcCommandButton>
+        </customComponents>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <register>
+      <name>Register_0</name>
+      <x v="0" />
+      <y v="0" />
+      <width v="850" />
+      <height v="590" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <children>
+        <registerTab>
+          <name>Firma</name>
+          <caption>&amp;amp;Firmendubletten</caption>
+          <children>
+            <table>
+              <name>tbl_org</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/DUPLICATIONS/children/register_0/children/firma/children/tbl_org/onDoubleClick.js</onDoubleClick>
+              <alwaysEditable v="true" />
+              <displayContentProcess>%aditoprj%/frame/DUPLICATIONS/children/register_0/children/firma/children/tbl_org/displayContentProcess.js</displayContentProcess>
+              <x v="10" />
+              <y v="10" />
+              <width v="830" />
+              <height v="540" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <grantArrangeColumns v="false" />
+              <labelText>Mögliche Dubletten</labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Anzahl</name>
+                  <columnName>Count</columnName>
+                  <width v="40" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Info</name>
+                  <columnName>Info</columnName>
+                  <width v="151" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Person</name>
+          <caption>&amp;amp;Persondubletten</caption>
+          <children>
+            <table>
+              <name>tbl_pers</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/DUPLICATIONS/children/register_0/children/person/children/tbl_pers/onDoubleClick.js</onDoubleClick>
+              <alwaysEditable v="true" />
+              <displayContentProcess>%aditoprj%/frame/DUPLICATIONS/children/register_0/children/person/children/tbl_pers/displayContentProcess.js</displayContentProcess>
+              <x v="10" />
+              <y v="10" />
+              <width v="830" />
+              <height v="540" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <grantArrangeColumns v="false" />
+              <labelText>Mögliche Dubletten</labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Anzahl</name>
+                  <columnName>Count</columnName>
+                  <width v="40" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Info</name>
+                  <columnName>Info</columnName>
+                  <width v="151" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+  </children>
+  <tableView />
+  <width v="850" />
+  <height v="586" />
+</frame>

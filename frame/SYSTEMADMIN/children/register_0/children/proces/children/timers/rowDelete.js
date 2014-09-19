@@ -1,0 +1,1 @@
+a.sqlDelete("AOSYS_TIMER", " TIMERID = '" + a.valueof("$local.idvalue") + "'");

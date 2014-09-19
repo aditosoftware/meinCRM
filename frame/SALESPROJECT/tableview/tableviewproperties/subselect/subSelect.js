@@ -1,0 +1,1 @@
+a.rs("select orgname from org join relation on (org.orgid = relation.org_id ) where salesproject.relation_id = relation.relationid");

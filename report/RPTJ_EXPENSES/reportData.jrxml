@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" resourceBundle="localizationdemo" uuid="e7a916c8-3f9a-497d-84bb-3909b15271ea">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="New Dataset 1" uuid="d96bbaab-3092-4f35-9601-34e0ec6ecb12"/>
+	<parameter name="myAddr" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\v.siemon\\Documents\\AditoProjects\\Ref2014\\report\\RPTJ_EXPENSES\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="adito.datasource.subdata" class="java.lang.Object"/>
+	<parameter name="adito.image.myLogo" class="java.lang.String"/>
+	<field name="expensesid" class="java.lang.String"/>
+	<field name="expmonth" class="java.lang.String"/>
+	<field name="expyear" class="java.lang.String"/>
+	<field name="entrydate" class="java.lang.String"/>
+	<field name="starttime" class="java.lang.String"/>
+	<field name="endtime" class="java.lang.String"/>
+	<field name="kmfee" class="java.lang.String"/>
+	<field name="dayfee" class="java.lang.String"/>
+	<field name="km" class="java.lang.String"/>
+	<field name="org" class="java.lang.String"/>
+	<field name="login" class="java.lang.String"/>
+	<variable name="kmFeeDouble" class="java.lang.Double">
+		<variableExpression><![CDATA[Double.parseDouble($F{kmfee})]]></variableExpression>
+	</variable>
+	<variable name="sumKMGeldDouble" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$V{kmFeeDouble}]]></variableExpression>
+	</variable>
+	<variable name="dayFeeDouble" class="java.lang.Double">
+		<variableExpression><![CDATA[Double.parseDouble($F{dayfee})]]></variableExpression>
+	</variable>
+	<variable name="sumTagesGeldDouble" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$V{dayFeeDouble}]]></variableExpression>
+	</variable>
+	<variable name="sumBelegeDouble" class="java.lang.Double"/>
+	<variable name="gesSumme" class="java.lang.Double">
+		<variableExpression><![CDATA[$V{sumBelegeDouble} +  $V{sumKMGeldDouble} +  $V{sumTagesGeldDouble}]]></variableExpression>
+	</variable>
+	<variable name="belege" class="java.lang.String">
+		<variableExpression><![CDATA[$R{Belege}]]></variableExpression>
+	</variable>
+	<variable name="datum" class="java.lang.String">
+		<variableExpression><![CDATA[$R{Datum}]]></variableExpression>
+	</variable>
+	<variable name="beschreibung" class="java.lang.String">
+		<variableExpression><![CDATA[$R{Beschreibung}]]></variableExpression>
+	</variable>
+	<variable name="bemerkung" class="java.lang.String">
+		<variableExpression><![CDATA[$R{Bemerkung}]]></variableExpression>
+	</variable>
+	<variable name="betrag" class="java.lang.String">
+		<variableExpression><![CDATA[$R{Betrag}]]></variableExpression>
+	</variable>
+	<variable name="nr" class="java.lang.String">
+		<variableExpression><![CDATA[$R{Nr}]]></variableExpression>
+	</variable>
+	<group name="expenses_id">
+		<groupExpression><![CDATA[$F{expensesid}]]></groupExpression>
+		<groupHeader>
+			<band height="67">
+				<textField>
+					<reportElement x="0" y="0" width="56" height="13" uuid="261eb8a9-ee0c-4e3a-bcc3-bd2ded1e87b8"/>
+					<textElement>
+						<font fontName="Segoe UI" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{Mitarbeiter} + ":"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="56" y="0" width="100" height="13" uuid="1af92564-5ef5-4662-b718-1efe217ed3c7"/>
+					<textElement>
+						<font fontName="Segoe UI" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{login}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="290" y="0" width="40" height="13" uuid="aa2ea777-c237-4b5e-b18a-9b254fa5e780"/>
+					<textElement>
+						<font fontName="Segoe UI" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{für den Monat}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="330" y="0" width="17" height="13" uuid="fe3e04e1-e5ec-425c-a22a-a2adcfc02ff2"/>
+					<textElement textAlignment="Right">
+						<font fontName="Segoe UI" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{expmonth}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="358" y="0" width="46" height="13" uuid="13b54189-d673-4bfd-b376-99bb34d9cc9c"/>
+					<textElement>
+						<font fontName="Segoe UI" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{expyear}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="35" width="100" height="13" uuid="b46a4083-0162-4a5e-96a9-3de3f2f115ab"/>
+					<textElement>
+						<font fontName="Segoe UI" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{Reisekosten}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="54" width="100" height="13" uuid="4e17a2e3-e347-4725-bc1f-eb281ab15c89"/>
+					<textElement>
+						<font fontName="Segoe UI" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{Datum}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="100" y="54" width="100" height="13" uuid="75ff1478-8e6f-409c-9beb-47b55c4cfad6"/>
+					<textElement>
+						<font fontName="Segoe UI" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{Dauer} + ", " + $R{Art}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="358" y="54" width="74" height="13" uuid="bd5975ec-2c9d-4895-909e-3a013d2711e2"/>
+					<textElement textAlignment="Right">
+						<font fontName="Segoe UI" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{Tagesgeld}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="501" y="54" width="54" height="13" uuid="ddcbd1c2-9f19-409f-b5aa-b89ccbb9e3ee"/>
+					<textElement textAlignment="Right">
+						<font fontName="Segoe UI" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{Kilometergeld}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="350" y="0" width="8" height="13" uuid="b536b717-14d0-4565-8b6f-563fd778c7ce"/>
+					<textElement>
+						<font fontName="Segoe UI" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[/]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="458" y="54" width="19" height="13" uuid="9f9d4b16-5339-47e4-ace8-acee549d71f5"/>
+					<textElement>
+						<font fontName="Segoe UI" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[km]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="43">
+				<subreport>
+					<reportElement x="0" y="0" width="555" height="26" uuid="b1249a07-bc76-4a6b-abe5-14730dce64a7"/>
+					<subreportParameter name="betrag">
+						<subreportParameterExpression><![CDATA[$V{betrag}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="nr">
+						<subreportParameterExpression><![CDATA[$V{nr}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="bemerkung">
+						<subreportParameterExpression><![CDATA[$V{bemerkung}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="beschreibung">
+						<subreportParameterExpression><![CDATA[$V{beschreibung}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="belege">
+						<subreportParameterExpression><![CDATA[$V{belege}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="datum">
+						<subreportParameterExpression><![CDATA[$V{datum}]]></subreportParameterExpression>
+					</subreportParameter>
+					<dataSourceExpression><![CDATA[$P{adito.datasource.subdata}]]></dataSourceExpression>
+					<returnValue subreportVariable="sumAmount" toVariable="sumBelegeDouble"/>
+					<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "reportData_subreport1.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+			<band height="93">
+				<textField>
+					<reportElement positionType="FixRelativeToBottom" x="377" y="72" width="100" height="13" uuid="992ec10e-184c-45f7-9528-4b3403f1eff3"/>
+					<textElement>
+						<font fontName="Segoe UI" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{Gesamtsumme}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="491" y="67" width="64" height="1" uuid="deea44c1-01d7-48be-aa4f-5d3b4fd41d8a"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<textField>
+					<reportElement positionType="FixRelativeToBottom" x="377" y="47" width="100" height="13" uuid="54199ec5-792e-4715-85cd-00aa527a62ab"/>
+					<textElement>
+						<font fontName="Segoe UI" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{Summe Belege}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement positionType="FixRelativeToBottom" x="377" y="7" width="100" height="13" uuid="fdd397f5-336f-45cc-9454-b1058627e7c9"/>
+					<textElement>
+						<font fontName="Segoe UI" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{Summe} +" " + $R{Kilometergeld}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement positionType="FixRelativeToBottom" x="377" y="27" width="100" height="13" uuid="92c267e4-133f-4953-a575-e0dc64b59ed2"/>
+					<textElement>
+						<font fontName="Segoe UI" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{Summe Tagesgeld}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="expenses_id">
+					<reportElement positionType="FixRelativeToBottom" x="477" y="7" width="78" height="13" uuid="fd4bcd62-5424-43e8-862b-4a4f772984ee"/>
+					<textElement textAlignment="Right">
+						<font fontName="Segoe UI" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{sumKMGeldDouble} + " €"]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="expenses_id">
+					<reportElement positionType="FixRelativeToBottom" x="477" y="27" width="78" height="13" uuid="88fa9751-04e0-4cac-8c71-50aaf52830c6"/>
+					<textElement textAlignment="Right">
+						<font fontName="Segoe UI" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{sumTagesGeldDouble} + " €"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="477" y="47" width="78" height="13" uuid="30b51406-14ca-478d-8ca1-be3cab762242"/>
+					<textElement textAlignment="Right">
+						<font fontName="Segoe UI" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{sumBelegeDouble} + " €"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="477" y="72" width="78" height="13" uuid="35233c3f-4085-4248-b330-064a1f0671f4"/>
+					<textElement textAlignment="Right">
+						<font fontName="Segoe UI" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{sumBelegeDouble} + $V{sumKMGeldDouble} + $V{sumTagesGeldDouble} + " €"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="123" splitType="Stretch">
+			<image scaleImage="RetainShape" hAlign="Center">
+				<reportElement x="197" y="0" width="161" height="44" uuid="8e56e55e-c68d-425e-b7dc-ecad86d61f7d"/>
+				<imageExpression><![CDATA[$P{adito.image.myLogo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="0" y="59" width="555" height="20" forecolor="#000000" uuid="b1d172a1-4ce8-45c9-981b-c9fd45517346"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{myAddr}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="0" y="59" width="555" height="20" uuid="4891641b-0e66-401b-9071-02238eae5604"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+			</frame>
+			<textField>
+				<reportElement x="0" y="92" width="555" height="20" forecolor="#666666" uuid="1d28a8f4-07cd-4bea-b824-2fdae9c83e68"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Reisekosten- und Spesenvorschlag}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="13" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="0" width="26" height="12" uuid="8be1f204-47cd-4307-84f9-054a7150c2da"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{von}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="176" y="0" width="24" height="12" uuid="cf529ab3-211e-49e2-a362-fea1cce6c684"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{bis}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="126" y="0" width="50" height="12" uuid="653a85f9-3e3c-4235-b198-8718271f33c6"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{starttime}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="200" y="0" width="44" height="12" uuid="ea259918-2ea7-4704-aeae-9e4bfea3694d"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{endtime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="244" y="0" width="100" height="12" uuid="b70c706e-688e-4d16-82e8-fd5d830caf4a"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{org}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="12" uuid="e004ade3-0d6a-4e83-81d2-eae1076d2089"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{entrydate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="501" y="0" width="54" height="12" uuid="91c647b9-8350-4e5a-8ad3-9e66441d8c8b"/>
+				<textElement textAlignment="Right">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kmfee}  + " €"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="458" y="0" width="41" height="12" uuid="a916ecd2-57c8-4978-bf01-77c600a7323b"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{km}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="358" y="0" width="74" height="12" uuid="f5164fa2-3673-4b4c-a30f-3e32444153c6"/>
+				<textElement textAlignment="Right">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dayfee} + " €"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

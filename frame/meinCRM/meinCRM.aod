@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>meinCRM</name>
+  <title>Info meinCRM</title>
+  <icon>%aditoprj%/frame/meincrm/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/meincrm/iconInactive.png</iconInactive>
+  <description></description>
+  <initialWorkingMode v="4" />
+  <currentContentProcess>%aditoprj%/frame/meincrm/currentContentProcess.js</currentContentProcess>
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <customComponents>
+          <rcCommandButton>
+            <name>NoautoStart</name>
+            <title>Beim Start Seite nicht mehr öffnen</title>
+            <imageData>%aditoprj%/frame/meinCRM/ribbon/ribbontasks/task_edit/customcomponents/noautostart/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/meincrm/ribbon/ribbontasks/task_edit/customcomponents/noautostart/onClick.js</onClick>
+            <visibleProcess>%aditoprj%/frame/meincrm/ribbon/ribbontasks/task_edit/customcomponents/noautostart/visibleProcess.js</visibleProcess>
+          </rcCommandButton>
+          <rcCommandButton>
+            <name>autoStart</name>
+            <title>Beim Start Seite öffnen</title>
+            <imageData>%aditoprj%/frame/meinCRM/ribbon/ribbontasks/task_edit/customcomponents/autostart/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/meincrm/ribbon/ribbontasks/task_edit/customcomponents/autostart/onClick.js</onClick>
+            <visibleProcess>%aditoprj%/frame/meincrm/ribbon/ribbontasks/task_edit/customcomponents/autostart/visibleProcess.js</visibleProcess>
+          </rcCommandButton>
+        </customComponents>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <dataVisualisation>
+      <name>browser</name>
+      <valueProcess>%aditoprj%/frame/meincrm/children/browser/valueProcess.js</valueProcess>
+      <width v="110" />
+      <height v="100" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <dataVisualisationSub>
+        <browser>
+          <name>0a798796-f487-4f06-b041-d2e2cf753791</name>
+          <browserType v="2" />
+          <javascriptEnabled v="true" />
+          <onLocationChange></onLocationChange>
+          <onOpenWindow>%aditoprj%/frame/meincrm/children/browser/datavisualisationsub/onOpenWindow.js</onOpenWindow>
+          <onCloseWindow></onCloseWindow>
+          <onTitleChange>%aditoprj%/frame/meincrm/children/browser/datavisualisationsub/onTitleChange.js</onTitleChange>
+          <onStatusChange></onStatusChange>
+          <onProgressChange></onProgressChange>
+        </browser>
+      </dataVisualisationSub>
+    </dataVisualisation>
+  </children>
+  <tableView />
+</frame>

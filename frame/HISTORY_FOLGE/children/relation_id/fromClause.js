@@ -1,0 +1,1 @@
+a.rs("relation join pers on (pers.persid = relation.pers_id) join employee on (relation.relationid = employee.relation_id)");

@@ -1,0 +1,1 @@
+a.updateTableCell("$comp.Tabelle_hlink", a.decodeFirst(a.valueof("$comp.Tabelle_hlink")), 2, "", "");

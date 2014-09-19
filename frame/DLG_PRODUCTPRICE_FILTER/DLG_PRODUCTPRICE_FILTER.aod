@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>DLG_PRODUCTPRICE_FILTER</name>
+  <icon></icon>
+  <description></description>
+  <alias>AO_DATEN</alias>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <comboBox>
+      <name>cmb_currency</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/DLG_PRODUCTPRICE_FILTER/children/cmb_currency/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <x v="90" />
+      <y v="105" />
+      <width v="210" />
+      <tabOrder v="6" />
+      <labelText>Währung</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>cmb_groupcode</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/DLG_PRODUCTPRICE_FILTER/children/cmb_groupcode/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <x v="90" />
+      <y v="5" />
+      <width v="210" />
+      <tabOrder v="0" />
+      <labelText>Warengruppe</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>cmb_pricelist</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/DLG_PRODUCTPRICE_FILTER/children/cmb_pricelist/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <x v="90" />
+      <y v="30" />
+      <width v="210" />
+      <tabOrder v="1" />
+      <labelText>Preisliste</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <edit>
+      <name>edt_fromquantity</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <dataType v="4" />
+      <alwaysEditable v="true" />
+      <calendarSupport v="true" />
+      <x v="90" />
+      <y v="80" />
+      <width v="90" />
+      <tabOrder v="4" />
+      <labelText>Anzahl von</labelText>
+      <labelDistance v="80" />
+    </edit>
+    <edit>
+      <name>edt_toquantity</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <dataType v="4" />
+      <alwaysEditable v="true" />
+      <calendarSupport v="true" />
+      <x v="210" />
+      <y v="80" />
+      <width v="90" />
+      <tabOrder v="5" />
+      <labelText>bis</labelText>
+      <labelDistance v="25" />
+    </edit>
+    <edit>
+      <name>edt_validfrom</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <dataType v="93" />
+      <outputFormat>dd.MM.yyyy</outputFormat>
+      <inputFormat>dd.MM.yyyy</inputFormat>
+      <alwaysEditable v="true" />
+      <calendarSupport v="true" />
+      <x v="90" />
+      <y v="55" />
+      <width v="90" />
+      <tabOrder v="2" />
+      <labelText>gültig von</labelText>
+      <labelDistance v="80" />
+    </edit>
+    <edit>
+      <name>edt_validuntil</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <dataType v="93" />
+      <outputFormat>dd.MM.yyyy</outputFormat>
+      <inputFormat>dd.MM.yyyy</inputFormat>
+      <alwaysEditable v="true" />
+      <calendarSupport v="true" />
+      <x v="210" />
+      <y v="55" />
+      <width v="90" />
+      <tabOrder v="3" />
+      <labelText>bis</labelText>
+      <labelDistance v="25" />
+    </edit>
+  </children>
+  <tableView>
+    <headerFont name="" style="0" size="12" />
+    <font name="Arial" style="0" size="12" />
+  </tableView>
+  <width v="850" />
+  <height v="580" />
+</frame>

@@ -1,0 +1,1 @@
+a.rs(a.sql("select count(*) from SERVICEITEM where SERVICEORDER_ID = '" + a.valueof("$comp.idcolumn") + "'") > 0)

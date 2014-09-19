@@ -1,0 +1,1070 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>BANKACCOUNT</name>
+  <title>Bankdaten</title>
+  <icon>%aditoprj%/frame/BANKACCOUNT/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/BANKACCOUNT/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type public
+@status released
+@desc [Frame für Bankdaten]
+
+@module Sales
+@since 3.1
+
+@revision 1.0 PK 08/2010</comment>
+  <alias>AO_DATEN</alias>
+  <linkInformation>
+    <linkInformation>
+      <name>4a5fa117-7eb1-4c20-83c0-c3f170bc9041</name>
+      <tableName>BANKACCOUNT</tableName>
+      <primaryKey>BANKACCOUNTID</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+  </linkInformation>
+  <whereClause>%aditoprj%/frame/BANKACCOUNT/whereClause.js</whereClause>
+  <beforeStart>%aditoprj%/frame/BANKACCOUNT/beforeStart.js</beforeStart>
+  <afterStart>%aditoprj%/frame/BANKACCOUNT/afterStart.js</afterStart>
+  <beforeSave>%aditoprj%/frame/BANKACCOUNT/beforeSave.js</beforeSave>
+  <afterSave>%aditoprj%/frame/BANKACCOUNT/afterSave.js</afterSave>
+  <beforeDelete>%aditoprj%/frame/BANKACCOUNT/beforeDelete.js</beforeDelete>
+  <afterDelete>%aditoprj%/frame/BANKACCOUNT/afterDelete.js</afterDelete>
+  <afterCancel>%aditoprj%/frame/BANKACCOUNT/afterCancel.js</afterCancel>
+  <currentContentProcess>%aditoprj%/frame/BANKACCOUNT/currentContentProcess.js</currentContentProcess>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <databaseColumns>
+    <column>
+      <name>BANKACCOUNT_BANKACCOUNTID</name>
+      <tableName>BANKACCOUNT</tableName>
+      <columnName>BANKACCOUNTID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+    </column>
+    <column>
+      <name>BANKACCOUNT_RELATION_ID</name>
+      <tableName>BANKACCOUNT</tableName>
+      <columnName>RELATION_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/BANKACCOUNT/databasecolumns/bankaccount_relation_id/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>BANKACCOUNT_DATE_NEW</name>
+      <tableName>BANKACCOUNT</tableName>
+      <columnName>DATE_NEW</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="26" />
+      <scale>6</scale>
+      <presetNew>%aditoprj%/frame/BANKACCOUNT/databasecolumns/bankaccount_date_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>BANKACCOUNT_DATE_EDIT</name>
+      <tableName>BANKACCOUNT</tableName>
+      <columnName>DATE_EDIT</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="26" />
+      <scale>6</scale>
+      <presetChange>%aditoprj%/frame/BANKACCOUNT/databasecolumns/bankaccount_date_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>BANKACCOUNT_USER_NEW</name>
+      <tableName>BANKACCOUNT</tableName>
+      <columnName>USER_NEW</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="30" />
+      <presetNew>%aditoprj%/frame/BANKACCOUNT/databasecolumns/bankaccount_user_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>BANKACCOUNT_USER_EDIT</name>
+      <tableName>BANKACCOUNT</tableName>
+      <columnName>USER_EDIT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="30" />
+      <presetChange>%aditoprj%/frame/BANKACCOUNT/databasecolumns/bankaccount_user_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>BANKACCOUNT_BACOUNTRY</name>
+      <tableName>BANKACCOUNT</tableName>
+      <columnName>BACOUNTRY</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="2" />
+    </column>
+    <column>
+      <name>BANKACCOUNT_BATYPE</name>
+      <tableName>BANKACCOUNT</tableName>
+      <columnName>BATYPE</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+    </column>
+    <column>
+      <name>BANKACCOUNT_IBAN</name>
+      <tableName>BANKACCOUNT</tableName>
+      <columnName>IBAN</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="40" />
+    </column>
+    <column>
+      <name>BANKACCOUNT_SWIFTCODE</name>
+      <tableName>BANKACCOUNT</tableName>
+      <columnName>SWIFTCODE</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="11" />
+    </column>
+    <column>
+      <name>BANKACCOUNT_ROUTINGCODE</name>
+      <tableName>BANKACCOUNT</tableName>
+      <columnName>ROUTINGCODE</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="11" />
+    </column>
+    <column>
+      <name>BANKACCOUNT_BANUMBER</name>
+      <tableName>BANKACCOUNT</tableName>
+      <columnName>BANUMBER</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="40" />
+    </column>
+    <column>
+      <name>BANKACCOUNT_BACITY</name>
+      <tableName>BANKACCOUNT</tableName>
+      <columnName>BACITY</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+    </column>
+    <column>
+      <name>BANKACCOUNT_BAZIP</name>
+      <tableName>BANKACCOUNT</tableName>
+      <columnName>BAZIP</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="10" />
+    </column>
+    <column>
+      <name>BANKACCOUNT_BANKNAME</name>
+      <tableName>BANKACCOUNT</tableName>
+      <columnName>BANKNAME</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="60" />
+    </column>
+    <column>
+      <name>BANKACCOUNT_BAHOLDER</name>
+      <tableName>BANKACCOUNT</tableName>
+      <columnName>BAHOLDER</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="80" />
+    </column>
+    <column>
+      <name>BANKACCOUNT_BACURRENCY</name>
+      <tableName>BANKACCOUNT</tableName>
+      <columnName>BACURRENCY</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="3" />
+    </column>
+  </databaseColumns>
+  <blobDatabaseColumns>
+    <blobColumn>
+      <name>BANKACCOUNT_DOCUMENT</name>
+      <tableName>BANKACCOUNT</tableName>
+      <columnName>DOCUMENT</columnName>
+      <rowIdProcess></rowIdProcess>
+    </blobColumn>
+  </blobDatabaseColumns>
+  <children>
+    <label>
+      <name>lblCreatedEdited</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <valueProcess>%aditoprj%/frame/BANKACCOUNT/children/lblcreatededited/valueProcess.js</valueProcess>
+      <x v="20" />
+      <y v="565" />
+      <width v="830" />
+      <height v="15" />
+      <verticalAnchor v="5" />
+      <font name="Verdana" style="0" size="9" />
+      <backgroundColor v="0x00000000" />
+      <labelAnchor v="0" />
+    </label>
+    <register>
+      <name>reg_0</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <y v="165" />
+      <width v="850" />
+      <height v="400" />
+      <tabOrder v="1" />
+      <children>
+        <registerTab>
+          <name>Details</name>
+          <caption>Details</caption>
+          <children>
+            <edit>
+              <name>BACITY</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BANKACCOUNT</tableName>
+              <columnName>BACITY</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <x v="185" />
+              <y v="205" />
+              <width v="200" />
+              <tabOrder v="7" />
+              <labelText>Ort</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <comboBox>
+              <name>BACOUNTRY</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <tableName>BANKACCOUNT</tableName>
+              <columnName>BACOUNTRY</columnName>
+              <dataType v="1" />
+              <precision v="2" />
+              <contentProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/details/children/bacountry/contentProcess.js</contentProcess>
+              <x v="185" />
+              <y v="20" />
+              <width v="200" />
+              <utilizeRowId v="false" />
+              <tabOrder v="0" />
+              <labelText>Land</labelText>
+              <labelDistance v="80" />
+            </comboBox>
+            <comboBox>
+              <name>BACURRENCY</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <tableName>BANKACCOUNT</tableName>
+              <columnName>BACURRENCY</columnName>
+              <dataType v="1" />
+              <precision v="3" />
+              <contentProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/details/children/bacurrency/contentProcess.js</contentProcess>
+              <x v="185" />
+              <y v="45" />
+              <width v="200" />
+              <utilizeRowId v="false" />
+              <tabOrder v="1" />
+              <labelText>Währung</labelText>
+              <labelDistance v="80" />
+            </comboBox>
+            <edit>
+              <name>BAHOLDER</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BANKACCOUNT</tableName>
+              <columnName>BAHOLDER</columnName>
+              <dataType v="12" />
+              <precision v="80" />
+              <x v="185" />
+              <y v="280" />
+              <width v="200" />
+              <tabOrder v="10" />
+              <labelText>Kontoinhaber</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>BANKNAME</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BANKACCOUNT</tableName>
+              <columnName>BANKNAME</columnName>
+              <dataType v="12" />
+              <precision v="60" />
+              <x v="185" />
+              <y v="255" />
+              <width v="200" />
+              <tabOrder v="9" />
+              <labelText>Bankname</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>BANUMBER</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BANKACCOUNT</tableName>
+              <columnName>BANUMBER</columnName>
+              <dataType v="12" />
+              <precision v="40" />
+              <x v="185" />
+              <y v="180" />
+              <width v="200" />
+              <tabOrder v="6" />
+              <labelText>Konto-Nr.</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <comboBox>
+              <name>BATYPE</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <tableName>BANKACCOUNT</tableName>
+              <columnName>BATYPE</columnName>
+              <dataType v="4" />
+              <precision v="10" />
+              <contentProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/details/children/batype/contentProcess.js</contentProcess>
+              <x v="185" />
+              <y v="70" />
+              <width v="200" />
+              <tabOrder v="2" />
+              <labelText>Kontoart</labelText>
+              <labelDistance v="80" />
+            </comboBox>
+            <edit>
+              <name>BAZIP</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BANKACCOUNT</tableName>
+              <columnName>BAZIP</columnName>
+              <dataType v="12" />
+              <precision v="10" />
+              <x v="185" />
+              <y v="230" />
+              <width v="200" />
+              <tabOrder v="8" />
+              <labelText>PLZ</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>IBAN</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BANKACCOUNT</tableName>
+              <columnName>IBAN</columnName>
+              <dataType v="12" />
+              <precision v="40" />
+              <x v="185" />
+              <y v="105" />
+              <width v="200" />
+              <tabOrder v="3" />
+              <labelText>IBAN</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>ROUTINGCODE</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BANKACCOUNT</tableName>
+              <columnName>ROUTINGCODE</columnName>
+              <dataType v="12" />
+              <precision v="11" />
+              <x v="185" />
+              <y v="155" />
+              <width v="200" />
+              <tabOrder v="5" />
+              <labelText>BLZ</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>SWIFTCODE</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BANKACCOUNT</tableName>
+              <columnName>SWIFTCODE</columnName>
+              <dataType v="12" />
+              <precision v="11" />
+              <x v="185" />
+              <y v="130" />
+              <width v="200" />
+              <tabOrder v="4" />
+              <labelText>Swiftcode</labelText>
+              <labelDistance v="80" />
+            </edit>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Attribute</name>
+          <caption>Attribute</caption>
+          <children>
+            <comboBox>
+              <name>attributelist1</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/attributelist1/contentProcess.js</contentProcess>
+              <onValidationProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/attributelist1/onValidationProcess.js</onValidationProcess>
+              <searchableModes>none</searchableModes>
+              <x v="480" />
+              <y v="5" />
+              <width v="50" />
+              <visible v="false" />
+              <tabOrder v="1" />
+              <maximumRowCount v="20" />
+              <labelText>Attribut</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+              <toolTip>Die Zahlen in Klammern bezeichnen, wie oft
+das Attribut mindestens vorkommen muss
+und maximal vorkommen darf.</toolTip>
+            </comboBox>
+            <comboBox>
+              <name>attributelist2</name>
+              <contentProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/attributelist2/contentProcess.js</contentProcess>
+              <onValidationProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/attributelist2/onValidationProcess.js</onValidationProcess>
+              <searchableModes>none</searchableModes>
+              <x v="480" />
+              <y v="5" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="3" />
+              <labelText>Attribut/Wert</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>cbx_attrvalue</name>
+              <contentProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/cbx_attrvalue/contentProcess.js</contentProcess>
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_ID</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/cbx_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/cbx_attrvalue/searchFields.js</searchFields>
+              <x v="480" />
+              <y v="5" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="6" />
+              <staticContent />
+              <maximumRowCount v="30" />
+              <labelText>Eigenschaft</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <checkBox>
+              <name>chk_attrvalue</name>
+              <valueTrue>Y</valueTrue>
+              <valueFalse>N</valueFalse>
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_CHAR</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/chk_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/chk_attrvalue/searchFields.js</searchFields>
+              <x v="480" />
+              <y v="5" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <tabOrder v="2" />
+            </checkBox>
+            <table>
+              <name>classification</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/classification/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/classification/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/classification/rowDelete.js</rowDelete>
+              <displayContentProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/classification/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/classification/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="595" />
+              <height v="325" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <utilizeRowFontColor v="true" />
+              <utilizeRowBackgroundColor v="true" />
+              <tabOrder v="0" />
+              <labelText>Attribute</labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>1_Attribut</name>
+                  <columnName>1. Attribut</columnName>
+                  <width v="200" />
+                  <dataType v="1" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/classification/columnmetadata/1_attribut/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>2_Attribut</name>
+                  <columnName>2. Attribut</columnName>
+                  <width v="201" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/classification/columnmetadata/2_attribut/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Wert</name>
+                  <columnName>Wert</columnName>
+                  <width v="146" />
+                  <dataType v="1" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/classification/columnmetadata/wert/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+            <edit>
+              <name>date_attrvalue</name>
+              <dataType v="93" />
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <inputFormat>dd.MM.yyyy</inputFormat>
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_DATE</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/date_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/date_attrvalue/searchFields.js</searchFields>
+              <calendarSupport v="true" />
+              <x v="480" />
+              <y v="5" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="7" />
+              <labelText>Wert</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>float_attrvalue</name>
+              <dataType v="6" />
+              <outputFormat>#,##0.00</outputFormat>
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_DOUBLE</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/float_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/float_attrvalue/searchFields.js</searchFields>
+              <x v="480" />
+              <y v="5" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="5" />
+              <labelText>Wert</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>int_attrvalue</name>
+              <dataType v="4" />
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_INT</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/int_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/int_attrvalue/searchFields.js</searchFields>
+              <x v="480" />
+              <y v="5" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <labelText>Wert</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>string_attrvalue</name>
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_CHAR</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/string_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/attribute/children/string_attrvalue/searchFields.js</searchFields>
+              <x v="480" />
+              <y v="5" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="4" />
+              <labelText>Wert</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Dokumente</name>
+          <caption>D&amp;amp;okumente</caption>
+          <children>
+            <documentFolder>
+              <name>Dokumentenmappe</name>
+              <template>%aditoprj%/template/Template_Document/Template_Document.aod</template>
+              <tableName>BANKACCOUNT</tableName>
+              <columnName>DOCUMENT</columnName>
+              <x v="20" />
+              <y v="25" />
+              <width v="785" />
+              <height v="325" />
+              <verticalAnchor v="6" />
+              <tabOrder v="0" />
+              <labelText>Dokumente</labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+            </documentFolder>
+          </children>
+          <valueProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/dokumente/valueProcess.js</valueProcess>
+        </registerTab>
+        <registerTab>
+          <name>Rechte</name>
+          <caption>Rechte</caption>
+          <children>
+            <checkBox>
+              <name>cbx_right_del</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="95" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="3" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_edit</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="75" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="2" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_grant</name>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="115" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_read</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="55" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="4" />
+            </checkBox>
+            <comboBox>
+              <name>cmb_rights_roles</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/rechte/children/cmb_rights_roles/contentProcess.js</contentProcess>
+              <searchLinkTableName>TABLEACCESS</searchLinkTableName>
+              <searchLinkCondition>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/rechte/children/cmb_rights_roles/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="30" />
+              <width v="40" />
+              <visible v="false" />
+              <tabOrder v="5" />
+              <emptyElementEnabled v="false" />
+              <labelText>Rolle</labelText>
+              <labelVisible v="false" />
+            </comboBox>
+            <table>
+              <name>tbl_rights</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/rechte/children/tbl_rights/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/rechte/children/tbl_rights/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/rechte/children/tbl_rights/rowDelete.js</rowDelete>
+              <grantRowCreateProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/rechte/children/tbl_rights/grantRowCreateProcess.js</grantRowCreateProcess>
+              <grantRowUpdateProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/rechte/children/tbl_rights/grantRowUpdateProcess.js</grantRowUpdateProcess>
+              <grantRowDeleteProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/rechte/children/tbl_rights/grantRowDeleteProcess.js</grantRowDeleteProcess>
+              <displayContentProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/rechte/children/tbl_rights/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/rechte/children/tbl_rights/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <singleSelection v="true" />
+              <x v="20" />
+              <y v="25" />
+              <width v="630" />
+              <height v="325" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <tabOrder v="1" />
+              <labelText>Rechte auf den angezeigten Datensatz</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Rolle</name>
+                  <columnName>Rolle</columnName>
+                  <width v="205" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/rechte/children/tbl_rights/columnmetadata/rolle/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Lesen</name>
+                  <columnName>Lesen</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/rechte/children/tbl_rights/columnmetadata/lesen/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Aendern</name>
+                  <columnName>Ändern</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/rechte/children/tbl_rights/columnmetadata/aendern/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Loeschen</name>
+                  <columnName>Löschen</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/rechte/children/tbl_rights/columnmetadata/loeschen/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Rechte_vergeben</name>
+                  <columnName>Rechte vergeben</columnName>
+                  <width v="116" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/rechte/children/tbl_rights/columnmetadata/rechte_vergeben/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Admin</name>
+          <caption>Admin</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/admin/visibleProcess.js</visibleProcess>
+          <children>
+            <edit>
+              <name>BANKACCOUNTID</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BANKACCOUNT</tableName>
+              <columnName>BANKACCOUNTID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <x v="170" />
+              <y v="25" />
+              <width v="225" />
+              <tabOrder v="0" />
+              <labelText>BANKACCOUNTID</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>DATE_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BANKACCOUNT</tableName>
+              <columnName>DATE_EDIT</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetChange>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/admin/children/date_edit/presetChange.js</presetChange>
+              <x v="170" />
+              <y v="105" />
+              <tabOrder v="3" />
+              <labelText>DATE_EDIT</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>DATE_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BANKACCOUNT</tableName>
+              <columnName>DATE_NEW</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetNew>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/admin/children/date_new/presetNew.js</presetNew>
+              <x v="170" />
+              <y v="80" />
+              <tabOrder v="2" />
+              <labelText>DATE_NEW</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>idcolumn</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BANKACCOUNT</tableName>
+              <columnName>BANKACCOUNTID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <x v="170" />
+              <y v="50" />
+              <width v="225" />
+              <tabOrder v="1" />
+              <labelText>idcolumn</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>SearchDATE</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="91" />
+              <searchLinkCondition>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/admin/children/searchdate/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/admin/children/searchdate/searchFields.js</searchFields>
+              <calendarSupport v="true" />
+              <x v="510" />
+              <y v="15" />
+              <visible v="false" />
+              <tabOrder v="8" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SearchFLOAT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="6" />
+              <inputFormat>0.00</inputFormat>
+              <searchLinkCondition>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/admin/children/searchfloat/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/admin/children/searchfloat/searchFields.js</searchFields>
+              <x v="510" />
+              <y v="75" />
+              <visible v="false" />
+              <tabOrder v="10" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SearchINTEGER</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="4" />
+              <inputFormat>0</inputFormat>
+              <searchLinkCondition>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/admin/children/searchinteger/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/admin/children/searchinteger/searchFields.js</searchFields>
+              <x v="510" />
+              <y v="55" />
+              <visible v="false" />
+              <tabOrder v="7" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SearchVARCHAR</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <searchLinkCondition>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/admin/children/searchvarchar/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/admin/children/searchvarchar/searchFields.js</searchFields>
+              <x v="510" />
+              <y v="35" />
+              <visible v="false" />
+              <tabOrder v="9" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <comboBox>
+              <name>SerachCombo</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/admin/children/serachcombo/contentProcess.js</contentProcess>
+              <searchLinkCondition>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/admin/children/serachcombo/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/admin/children/serachcombo/searchFields.js</searchFields>
+              <x v="510" />
+              <y v="100" />
+              <visible v="false" />
+              <tabOrder v="6" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>USER_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BANKACCOUNT</tableName>
+              <columnName>USER_EDIT</columnName>
+              <dataType v="12" />
+              <precision v="30" />
+              <presetChange>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/admin/children/user_edit/presetChange.js</presetChange>
+              <x v="370" />
+              <y v="105" />
+              <tabOrder v="5" />
+              <labelText>USER_EDIT</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>USER_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BANKACCOUNT</tableName>
+              <columnName>USER_NEW</columnName>
+              <dataType v="12" />
+              <precision v="30" />
+              <presetNew>%aditoprj%/frame/BANKACCOUNT/children/reg_0/children/admin/children/user_new/presetNew.js</presetNew>
+              <x v="370" />
+              <y v="80" />
+              <tabOrder v="4" />
+              <labelText>USER_NEW</labelText>
+              <labelDistance v="80" />
+            </edit>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+    <lookup>
+      <name>RELATION_ID</name>
+      <template>%aditoprj%/template/Template_Lookup/Template_Lookup.aod</template>
+      <tableName>BANKACCOUNT</tableName>
+      <columnName>RELATION_ID</columnName>
+      <dataType v="1" />
+      <presetNew>%aditoprj%/frame/BANKACCOUNT/children/relation_id/presetNew.js</presetNew>
+      <onDoubleClick>%aditoprj%/frame/BANKACCOUNT/children/relation_id/onDoubleClick.js</onDoubleClick>
+      <selectClause>%aditoprj%/frame/BANKACCOUNT/children/relation_id/selectClause.js</selectClause>
+      <fromClause>%aditoprj%/frame/BANKACCOUNT/children/relation_id/fromClause.js</fromClause>
+      <whereClause>%aditoprj%/frame/BANKACCOUNT/children/relation_id/whereClause.js</whereClause>
+      <x v="140" />
+      <y v="25" />
+      <width v="250" />
+      <height v="20" />
+      <popupWidth v="649" />
+      <popupHeight v="385" />
+      <tabOrder v="0" />
+      <labelText>Person / Firma</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+      <toolTipProcess>%aditoprj%/frame/BANKACCOUNT/children/relation_id/toolTipProcess.js</toolTipProcess>
+      <columnProperties>
+        <lookupColumnMetaData>
+          <name>KundenNr</name>
+          <columnName>Kunden-Nr.</columnName>
+          <searchable v="true" />
+          <width v="69" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>Firma</name>
+          <columnName>Firma</columnName>
+          <searchable v="true" />
+          <width v="182" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>PLZ</name>
+          <columnName>PLZ</columnName>
+          <searchable v="true" />
+          <width v="42" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>Ort</name>
+          <columnName>Ort</columnName>
+          <searchable v="true" />
+          <width v="65" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>Titel</name>
+          <columnName>Titel</columnName>
+          <searchable v="true" />
+          <width v="38" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>Vorname</name>
+          <columnName>Vorname</columnName>
+          <searchable v="true" />
+          <width v="79" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>Nachname</name>
+          <columnName>Nachname</columnName>
+          <searchable v="true" />
+          <width v="75" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>Funktion</name>
+          <columnName>Funktion</columnName>
+          <searchable v="true" />
+          <width v="75" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+      </columnProperties>
+    </lookup>
+  </children>
+  <tableView />
+  <width v="850" />
+  <height v="580" />
+</frame>

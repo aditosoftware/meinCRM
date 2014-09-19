@@ -1,0 +1,1 @@
+a.rs(Number(a.valueof("$comp.stockcount")) < Number(a.valueof("$comp.MINSTOCK")))

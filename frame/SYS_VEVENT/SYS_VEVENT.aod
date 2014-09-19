@@ -1,0 +1,1463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>SYS_VEVENT</name>
+  <title>Termin</title>
+  <icon>%aditoprj%/frame/SYS_VEVENT/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/SYS_VEVENT/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type  public
+@status released
+@desc [Frame zur erstellung eines Termins]
+
+@module Standart
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <beforeStart>%aditoprj%/frame/SYS_VEVENT/beforeStart.js</beforeStart>
+  <afterStart>%aditoprj%/frame/SYS_VEVENT/afterStart.js</afterStart>
+  <beforeSave>%aditoprj%/frame/SYS_VEVENT/beforeSave.js</beforeSave>
+  <afterSave>%aditoprj%/frame/SYS_VEVENT/afterSave.js</afterSave>
+  <beforeDelete>%aditoprj%/frame/SYS_VEVENT/beforeDelete.js</beforeDelete>
+  <afterDelete>%aditoprj%/frame/SYS_VEVENT/afterDelete.js</afterDelete>
+  <beforeCancel>%aditoprj%/frame/SYS_VEVENT/beforeCancel.js</beforeCancel>
+  <afterCancel></afterCancel>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <customComponents>
+          <rcCommandButton>
+            <name>Calender</name>
+            <title>Planung</title>
+            <toolTip>Öffnet den Kalender in Planungsansicht</toolTip>
+            <imageData>%aditoprj%/frame/SYS_VEVENT/ribbon/ribbontasks/task_edit/customcomponents/calender/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/SYS_VEVENT/ribbon/ribbontasks/task_edit/customcomponents/calender/onClick.js</onClick>
+          </rcCommandButton>
+        </customComponents>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <register>
+      <name>Register_0</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <width v="845" />
+      <height v="565" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <tabOrder v="0" />
+      <children>
+        <registerTab>
+          <name>Allgemein</name>
+          <caption>Allgemein</caption>
+          <children>
+            <table>
+              <name>links</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/links/onDoubleClick.js</onDoubleClick>
+              <rowCreate>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/links/rowCreate.js</rowCreate>
+              <rowDelete>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/links/rowDelete.js</rowDelete>
+              <displayContentProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/links/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="660" />
+              <y v="395" />
+              <width v="180" />
+              <height v="110" />
+              <horizontalAnchor v="2" />
+              <utilizeRowId v="true" />
+              <tabOrder v="17" />
+              <labelFont name="" style="0" size="11" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Verknuepfungen</name>
+                  <columnName>Verknüpfungen</columnName>
+                  <width v="164" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/links/columnmetadata/verknuepfungen/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+            <radioButton>
+              <name>grouptype</name>
+              <template>%aditoprj%/template/Template_Radiobutton/Template_Radiobutton.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/grouptype/valueProcess.js</valueProcess>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <readOnlyProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/grouptype/readOnlyProcess.js</readOnlyProcess>
+              <x v="660" />
+              <y v="300" />
+              <width v="180" />
+              <height v="70" />
+              <horizontalAnchor v="2" />
+              <font name="" style="0" size="11" />
+              <backgroundColor v="0x00000000" />
+              <enabledProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/grouptype/enabledProcess.js</enabledProcess>
+              <caption>Gruppenart</caption>
+              <tabOrder v="16" />
+              <staticContent>
+                <entry>
+                  <key>Mehrere Einzeltermine</key>
+                  <value>multi</value>
+                </entry>
+                <entry>
+                  <key>Ein Gruppentermin</key>
+                  <value>single</value>
+                </entry>
+              </staticContent>
+            </radioButton>
+            <table>
+              <name>tblUsers</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/tblusers/onDoubleClick.js</onDoubleClick>
+              <alwaysEditable v="false" />
+              <separateSavable v="true" />
+              <displayContentProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/tblusers/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="660" />
+              <y v="90" />
+              <width v="180" />
+              <height v="210" />
+              <horizontalAnchor v="2" />
+              <utilizeRowId v="true" />
+              <utilizeRowFontColor v="true" />
+              <grantArrangeColumns v="false" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Column</name>
+                  <editable v="false" />
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>417ab8bd-7f5c-4107-9eb4-a5ed345e311a</name>
+                  <caption>Verantwortlichen setzen</caption>
+                  <onClick>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/tblusers/popup/417ab8bd-7f5c-4107-9eb4-a5ed345e311a/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/tblusers/popup/417ab8bd-7f5c-4107-9eb4-a5ed345e311a/enabledProcess.js</enabledProcess>
+                  <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/tblusers/popup/417ab8bd-7f5c-4107-9eb4-a5ed345e311a/visibleProcess.js</visibleProcess>
+                </menuItem>
+              </popup>
+            </table>
+            <button>
+              <name>btn_del</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/btn_del/onClick.js</onClick>
+              <x v="630" />
+              <y v="120" />
+              <width v="25" />
+              <horizontalAnchor v="2" />
+              <enabledProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/btn_del/enabledProcess.js</enabledProcess>
+              <imageData>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/btn_del/imageData.png</imageData>
+            </button>
+            <button>
+              <name>btn_add</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/btn_add/onClick.js</onClick>
+              <x v="630" />
+              <y v="90" />
+              <width v="25" />
+              <horizontalAnchor v="2" />
+              <enabledProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/btn_add/enabledProcess.js</enabledProcess>
+              <imageData>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/btn_add/imageData.png</imageData>
+            </button>
+            <tree>
+              <name>treeThemen</name>
+              <template>%aditoprj%/template/Template_Tree/Template_Tree.aod</template>
+              <contentProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/treethemen/contentProcess.js</contentProcess>
+              <onDoubleClick>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/treethemen/onDoubleClick.js</onDoubleClick>
+              <readOnlyProcess></readOnlyProcess>
+              <x v="465" />
+              <y v="90" />
+              <width v="160" />
+              <height v="420" />
+              <horizontalAnchor v="3" />
+              <tabOrder v="14" />
+              <popup>
+                <menuItem>
+                  <name>8bb52658-8473-4bce-a54d-b860dbaf8304</name>
+                  <caption>Baum schließen</caption>
+                  <onClick>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/treethemen/popup/8bb52658-8473-4bce-a54d-b860dbaf8304/onClick.js</onClick>
+                </menuItem>
+                <menuItem>
+                  <name>7b8b5f1b-29ce-4770-8a3d-55c287b758fc</name>
+                  <caption>Baum öffnen</caption>
+                  <onClick>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/treethemen/popup/7b8b5f1b-29ce-4770-8a3d-55c287b758fc/onClick.js</onClick>
+                </menuItem>
+              </popup>
+              <labelText>Mitarbeiter</labelText>
+              <labelOrientation v="1" />
+              <toolTip></toolTip>
+            </tree>
+            <button>
+              <name>btn_suchezurueck</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/btn_suchezurueck/onClick.js</onClick>
+              <x v="600" />
+              <y v="35" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <enabledProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/btn_suchezurueck/enabledProcess.js</enabledProcess>
+              <tabOrder v="13" />
+              <imageData>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/btn_suchezurueck/imageData.png</imageData>
+            </button>
+            <button>
+              <name>btn_suche</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick></onClick>
+              <x v="580" />
+              <y v="35" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <enabledProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/btn_suche/enabledProcess.js</enabledProcess>
+              <tabOrder v="12" />
+              <imageData>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/btn_suche/imageData.png</imageData>
+            </button>
+            <edit>
+              <name>edt_Suche</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <onValidation>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/edt_suche/onValidation.js</onValidation>
+              <x v="465" />
+              <y v="35" />
+              <width v="115" />
+              <horizontalAnchor v="3" />
+              <tabOrder v="11" />
+            </edit>
+            <list>
+              <name>categories</name>
+              <template>%aditoprj%/template/Template_List/Template_List.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/categories/valueProcess.js</valueProcess>
+              <contentProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/categories/contentProcess.js</contentProcess>
+              <searchableModes>none</searchableModes>
+              <x v="90" />
+              <y v="425" />
+              <width v="345" />
+              <height v="85" />
+              <utilizeRowId v="false" />
+              <tabOrder v="10" />
+              <staticContent />
+              <labelText>Kategorien</labelText>
+              <labelDistance v="80" />
+            </list>
+            <checkBox>
+              <name>classification</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/classification/valueProcess.js</valueProcess>
+              <valueTrue>PRIVATE</valueTrue>
+              <valueFalse>PUBLIC</valueFalse>
+              <searchableModes>none</searchableModes>
+              <readOnlyProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/classification/readOnlyProcess.js</readOnlyProcess>
+              <x v="420" />
+              <y v="90" />
+              <height v="15" />
+              <enabledProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/classification/enabledProcess.js</enabledProcess>
+              <labelText>privat</labelText>
+              <labelDistance v="65" />
+              <labelAnchor v="0" />
+              <tabOrder v="7" />
+            </checkBox>
+            <comboBox>
+              <name>Cmb_SelectLink</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/cmb_selectlink/contentProcess.js</contentProcess>
+              <x v="625" />
+              <y v="235" />
+              <width v="45" />
+              <visible v="false" />
+              <tabOrder v="18" />
+              <emptyElementEnabled v="false" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <label>
+              <name>created</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <dataType v="93" />
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/created/valueProcess.js</valueProcess>
+              <outputFormat>dd.MM.yyyy HH:mm</outputFormat>
+              <x v="90" />
+              <y v="515" />
+              <width v="110" />
+              <fontColor v="0xff8a9ccc" />
+              <labelText>Erzeugt:</labelText>
+              <labelFontColor v="0xff8a9ccc" />
+              <labelDistance v="80" />
+            </label>
+            <label>
+              <name>createdby</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/createdby/valueProcess.js</valueProcess>
+              <x v="200" />
+              <y v="515" />
+              <width v="410" />
+              <fontColor v="0xff8a9ccc" />
+              <labelFontColor v="0xff8a9ccc" />
+            </label>
+            <edit>
+              <name>end_date</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="93" />
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/end_date/valueProcess.js</valueProcess>
+              <outputFormat>EE dd.MM.yyyy HH:mm</outputFormat>
+              <inputFormat>dd.MM.yyyy HH:mm</inputFormat>
+              <searchableModes>none</searchableModes>
+              <keyboardSupport v="true" />
+              <calendarSupport v="true" />
+              <clockSupport v="true" />
+              <x v="90" />
+              <y v="85" />
+              <width v="175" />
+              <tabOrder v="4" />
+              <labelText>Endet um</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <label>
+              <name>errortext</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/errortext/valueProcess.js</valueProcess>
+              <x v="90" />
+              <y v="150" />
+              <width v="345" />
+              <height v="15" />
+              <backgroundColor v="0xffffffcc" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/errortext/visibleProcess.js</visibleProcess>
+            </label>
+            <checkBox>
+              <name>hasreminder</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/hasreminder/valueProcess.js</valueProcess>
+              <valueTrue>true</valueTrue>
+              <valueFalse>false</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="15" />
+              <y v="115" />
+              <width v="15" />
+              <height v="15" />
+              <labelText></labelText>
+              <labelAnchor v="0" />
+              <tabOrder v="5" />
+            </checkBox>
+            <label>
+              <name>overlappingtext</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/overlappingtext/valueProcess.js</valueProcess>
+              <onDoubleClick>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/overlappingtext/onDoubleClick.js</onDoubleClick>
+              <x v="90" />
+              <y v="135" />
+              <width v="345" />
+              <height v="15" />
+              <backgroundColor v="0xffffffcc" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/overlappingtext/visibleProcess.js</visibleProcess>
+              <labelText>Kollision</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+              <toolTipProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/overlappingtext/toolTipProcess.js</toolTipProcess>
+            </label>
+            <edit>
+              <name>place</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/place/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="90" />
+              <y v="35" />
+              <width v="345" />
+              <tabOrder v="1" />
+              <labelText>Ort</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>reminder_date</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="93" />
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/reminder_date/valueProcess.js</valueProcess>
+              <outputFormat>EE dd.MM.yyyy HH:mm</outputFormat>
+              <inputFormat>dd.MM.yyyy HH:mm</inputFormat>
+              <searchableModes>none</searchableModes>
+              <readOnlyProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/reminder_date/readOnlyProcess.js</readOnlyProcess>
+              <keyboardSupport v="true" />
+              <calendarSupport v="true" />
+              <clockSupport v="true" />
+              <x v="110" />
+              <y v="110" />
+              <width v="155" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/reminder_date/visibleProcess.js</visibleProcess>
+              <tabOrder v="6" />
+              <labelText>Erinnerung</labelText>
+              <labelDistance v="60" />
+              <labelAnchor v="0" />
+            </edit>
+            <comboBox>
+              <name>reminder_duration</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <dataType v="4" />
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/reminder_duration/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <readOnlyProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/reminder_duration/readOnlyProcess.js</readOnlyProcess>
+              <x v="110" />
+              <y v="110" />
+              <width v="155" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/reminder_duration/visibleProcess.js</visibleProcess>
+              <tabOrder v="15" />
+              <staticContent>
+                <entry>
+                  <key>0 Minuten</key>
+                  <value>0</value>
+                </entry>
+                <entry>
+                  <key>1 Minute</key>
+                  <value>-60000</value>
+                </entry>
+                <entry>
+                  <key>5 Minuten</key>
+                  <value>-300000</value>
+                </entry>
+                <entry>
+                  <key>10 Minuten</key>
+                  <value>-600000</value>
+                </entry>
+                <entry>
+                  <key>15 Minuten</key>
+                  <value>-900000</value>
+                </entry>
+                <entry>
+                  <key>30 Minuten</key>
+                  <value>-1800000</value>
+                </entry>
+                <entry>
+                  <key>1 Stunde</key>
+                  <value>-3600000</value>
+                </entry>
+                <entry>
+                  <key>2 Stunden</key>
+                  <value>-7200000</value>
+                </entry>
+                <entry>
+                  <key>3 Stunden</key>
+                  <value>-10800000</value>
+                </entry>
+                <entry>
+                  <key>4 Stunden</key>
+                  <value>-14400000</value>
+                </entry>
+                <entry>
+                  <key>5 Stunden</key>
+                  <value>-18000000</value>
+                </entry>
+                <entry>
+                  <key>6 Stunden</key>
+                  <value>-21600000</value>
+                </entry>
+                <entry>
+                  <key>7 Stunden</key>
+                  <value>-25200000</value>
+                </entry>
+                <entry>
+                  <key>8 Stunden</key>
+                  <value>-28800000</value>
+                </entry>
+                <entry>
+                  <key>9 Stunden</key>
+                  <value>-32400000</value>
+                </entry>
+                <entry>
+                  <key>10 Stunden</key>
+                  <value>-36000000</value>
+                </entry>
+                <entry>
+                  <key>11 Stunden</key>
+                  <value>-39600000</value>
+                </entry>
+                <entry>
+                  <key>0,5 Tag</key>
+                  <value>-43200000</value>
+                </entry>
+                <entry>
+                  <key>1 Tag</key>
+                  <value>-86400000</value>
+                </entry>
+                <entry>
+                  <key>2 Tage</key>
+                  <value>-172800000</value>
+                </entry>
+                <entry>
+                  <key>7 Tage</key>
+                  <value>-604800000</value>
+                </entry>
+              </staticContent>
+              <emptyElementEnabled v="false" />
+              <labelText>Erinnerung</labelText>
+              <labelDistance v="60" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>start_date</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="93" />
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/start_date/valueProcess.js</valueProcess>
+              <outputFormat>EE dd.MM.yyyy HH:mm</outputFormat>
+              <inputFormat>dd.MM.yyyy HH:mm</inputFormat>
+              <searchableModes>none</searchableModes>
+              <keyboardSupport v="true" />
+              <calendarSupport v="true" />
+              <clockSupport v="true" />
+              <x v="90" />
+              <y v="60" />
+              <width v="175" />
+              <tabOrder v="2" />
+              <labelText>Beginnt um</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <comboBox>
+              <name>status</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/status/valueProcess.js</valueProcess>
+              <presetNew>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/status/presetNew.js</presetNew>
+              <contentProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/status/contentProcess.js</contentProcess>
+              <searchableModes>none</searchableModes>
+              <x v="315" />
+              <y v="60" />
+              <width v="120" />
+              <tabOrder v="3" />
+              <emptyElementEnabled v="false" />
+              <labelText>Status</labelText>
+              <labelDistance v="40" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>subject</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/subject/valueProcess.js</valueProcess>
+              <contentProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/subject/contentProcess.js</contentProcess>
+              <searchableModes>none</searchableModes>
+              <x v="90" />
+              <y v="10" />
+              <width v="345" />
+              <utilizeRowId v="false" />
+              <tabOrder v="0" />
+              <editable v="true" />
+              <emptyElementEnabled v="false" />
+              <labelText>Betreff</labelText>
+              <labelDistance v="80" />
+            </comboBox>
+            <memo>
+              <name>text</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/text/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="90" />
+              <y v="165" />
+              <width v="345" />
+              <height v="250" />
+              <tabOrder v="9" />
+              <labelText>Text</labelText>
+              <labelDistance v="80" />
+            </memo>
+            <checkBox>
+              <name>transparency</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/allgemein/children/transparency/valueProcess.js</valueProcess>
+              <valueTrue>TRANSPARENT</valueTrue>
+              <valueFalse>OPAQUE</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="420" />
+              <y v="110" />
+              <labelText>transparent</labelText>
+              <labelDistance v="65" />
+              <labelAnchor v="0" />
+              <tabOrder v="8" />
+            </checkBox>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Serie</name>
+          <caption>Serie</caption>
+          <enabledProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/enabledProcess.js</enabledProcess>
+          <children>
+            <edit>
+              <name>rec_daily_days</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_daily_days/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="245" />
+              <y v="85" />
+              <width v="55" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_daily_days/visibleProcess.js</visibleProcess>
+              <tabOrder v="5" />
+            </edit>
+            <radioButton>
+              <name>rec_dailytype</name>
+              <template>%aditoprj%/template/Template_Radiobutton/Template_Radiobutton.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_dailytype/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="130" />
+              <y v="20" />
+              <width v="95" />
+              <height v="135" />
+              <fontColor v="0xff000000" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_dailytype/visibleProcess.js</visibleProcess>
+              <caption>Täglich</caption>
+              <tabOrder v="4" />
+              <staticContent>
+                <entry>
+                  <key>Jeden/Alle</key>
+                  <value>Alle # Tage</value>
+                </entry>
+              </staticContent>
+            </radioButton>
+            <radioButton>
+              <name>rec_end</name>
+              <template>%aditoprj%/template/Template_Radiobutton/Template_Radiobutton.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_end/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="15" />
+              <y v="185" />
+              <width v="210" />
+              <height v="100" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_end/visibleProcess.js</visibleProcess>
+              <caption>Serienende</caption>
+              <staticContent>
+                <entry>
+                  <key>Kein Enddatum</key>
+                  <value>Kein Enddatum</value>
+                </entry>
+                <entry>
+                  <key>Endet nach Anzahl Terminen</key>
+                  <value>Endet nach Anzahl Terminen</value>
+                </entry>
+                <entry>
+                  <key>Endet am</key>
+                  <value>Endet am</value>
+                </entry>
+              </staticContent>
+            </radioButton>
+            <edit>
+              <name>rec_end_count</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_end_count/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="235" />
+              <y v="235" />
+              <width v="55" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_end_count/visibleProcess.js</visibleProcess>
+              <tabOrder v="1" />
+            </edit>
+            <edit>
+              <name>rec_end_date</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="93" />
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_end_date/valueProcess.js</valueProcess>
+              <outputFormat>EE dd.MM.yyyy</outputFormat>
+              <inputFormat>dd.MM.yyyy</inputFormat>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <keyboardSupport v="true" />
+              <calendarSupport v="true" />
+              <x v="235" />
+              <y v="260" />
+              <width v="155" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_end_date/visibleProcess.js</visibleProcess>
+              <tabOrder v="2" />
+            </edit>
+            <radioButton>
+              <name>rec_month</name>
+              <template>%aditoprj%/template/Template_Radiobutton/Template_Radiobutton.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_month/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="130" />
+              <y v="20" />
+              <width v="95" />
+              <height v="135" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_month/visibleProcess.js</visibleProcess>
+              <caption>Monatlich</caption>
+              <tabOrder v="14" />
+              <staticContent>
+                <entry>
+                  <key>Am </key>
+                  <value>Am #. jedes #. Monat</value>
+                </entry>
+                <entry>
+                  <key>Am</key>
+                  <value>Am #. # jeden #. Monat</value>
+                </entry>
+              </staticContent>
+            </radioButton>
+            <comboBox>
+              <name>rec_monthly_day</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_monthly_day/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="235" />
+              <y v="55" />
+              <width v="108" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_monthly_day/visibleProcess.js</visibleProcess>
+              <utilizeRowId v="false" />
+              <tabOrder v="19" />
+              <staticContent>
+                <entry>
+                  <key>1.</key>
+                  <value>1</value>
+                </entry>
+                <entry>
+                  <key>2.</key>
+                  <value>2</value>
+                </entry>
+                <entry>
+                  <key>3.</key>
+                  <value>3</value>
+                </entry>
+                <entry>
+                  <key>4.</key>
+                  <value>4</value>
+                </entry>
+                <entry>
+                  <key>5.</key>
+                  <value>5</value>
+                </entry>
+                <entry>
+                  <key>6.</key>
+                  <value>6</value>
+                </entry>
+                <entry>
+                  <key>7.</key>
+                  <value>7</value>
+                </entry>
+                <entry>
+                  <key>8.</key>
+                  <value>8</value>
+                </entry>
+                <entry>
+                  <key>9.</key>
+                  <value>9</value>
+                </entry>
+                <entry>
+                  <key>10.</key>
+                  <value>10</value>
+                </entry>
+                <entry>
+                  <key>11.</key>
+                  <value>11</value>
+                </entry>
+                <entry>
+                  <key>12.</key>
+                  <value>12</value>
+                </entry>
+                <entry>
+                  <key>13.</key>
+                  <value>13</value>
+                </entry>
+                <entry>
+                  <key>14.</key>
+                  <value>14</value>
+                </entry>
+                <entry>
+                  <key>15.</key>
+                  <value>15</value>
+                </entry>
+                <entry>
+                  <key>16.</key>
+                  <value>16</value>
+                </entry>
+                <entry>
+                  <key>17.</key>
+                  <value>17</value>
+                </entry>
+                <entry>
+                  <key>18.</key>
+                  <value>18</value>
+                </entry>
+                <entry>
+                  <key>19.</key>
+                  <value>19</value>
+                </entry>
+                <entry>
+                  <key>20.</key>
+                  <value>20</value>
+                </entry>
+                <entry>
+                  <key>21.</key>
+                  <value>21</value>
+                </entry>
+                <entry>
+                  <key>22.</key>
+                  <value>22</value>
+                </entry>
+                <entry>
+                  <key>23.</key>
+                  <value>23</value>
+                </entry>
+                <entry>
+                  <key>24.</key>
+                  <value>24</value>
+                </entry>
+                <entry>
+                  <key>25.</key>
+                  <value>25</value>
+                </entry>
+                <entry>
+                  <key>26.</key>
+                  <value>26</value>
+                </entry>
+                <entry>
+                  <key>27.</key>
+                  <value>27</value>
+                </entry>
+                <entry>
+                  <key>28.</key>
+                  <value>28</value>
+                </entry>
+                <entry>
+                  <key>29.</key>
+                  <value>29</value>
+                </entry>
+                <entry>
+                  <key>30.</key>
+                  <value>30</value>
+                </entry>
+                <entry>
+                  <key>31.</key>
+                  <value>31</value>
+                </entry>
+                <entry>
+                  <key>vorletzten</key>
+                  <value>-1</value>
+                </entry>
+                <entry>
+                  <key>letzten</key>
+                  <value>-2</value>
+                </entry>
+              </staticContent>
+              <emptyElementEnabled v="false" />
+            </comboBox>
+            <comboBox>
+              <name>rec_monthly_day2</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_monthly_day2/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="235" />
+              <y v="110" />
+              <width v="108" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_monthly_day2/visibleProcess.js</visibleProcess>
+              <utilizeRowId v="false" />
+              <tabOrder v="20" />
+              <staticContent>
+                <entry>
+                  <key>1.</key>
+                  <value>1</value>
+                </entry>
+                <entry>
+                  <key>2.</key>
+                  <value>2</value>
+                </entry>
+                <entry>
+                  <key>3.</key>
+                  <value>3</value>
+                </entry>
+                <entry>
+                  <key>4.</key>
+                  <value>4</value>
+                </entry>
+                <entry>
+                  <key>letzten</key>
+                  <value>-1</value>
+                </entry>
+              </staticContent>
+              <emptyElementEnabled v="false" />
+            </comboBox>
+            <edit>
+              <name>rec_monthly_interval</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_monthly_interval/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="425" />
+              <y v="55" />
+              <width v="55" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_monthly_interval/visibleProcess.js</visibleProcess>
+              <tabOrder v="15" />
+            </edit>
+            <edit>
+              <name>rec_monthly_interval2</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_monthly_interval2/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="515" />
+              <y v="110" />
+              <width v="55" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_monthly_interval2/visibleProcess.js</visibleProcess>
+              <tabOrder v="16" />
+            </edit>
+            <comboBox>
+              <name>rec_monthly_weekday2</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_monthly_weekday2/valueProcess.js</valueProcess>
+              <contentProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_monthly_weekday2/contentProcess.js</contentProcess>
+              <searchableModes>none</searchableModes>
+              <x v="355" />
+              <y v="110" />
+              <width v="84" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_monthly_weekday2/visibleProcess.js</visibleProcess>
+              <tabOrder v="18" />
+              <staticContent />
+              <emptyElementEnabled v="false" />
+            </comboBox>
+            <radioButton>
+              <name>rec_type</name>
+              <template>%aditoprj%/template/Template_Radiobutton/Template_Radiobutton.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_type/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="15" />
+              <y v="20" />
+              <width v="105" />
+              <height v="135" />
+              <caption>Serienmuster</caption>
+              <tabOrder v="3" />
+              <staticContent>
+                <entry>
+                  <key>Keine</key>
+                  <value>Keine</value>
+                </entry>
+                <entry>
+                  <key>Täglich</key>
+                  <value>Täglich</value>
+                </entry>
+                <entry>
+                  <key>Wöchentlich</key>
+                  <value>Wöchentlich</value>
+                </entry>
+                <entry>
+                  <key>Monatlich</key>
+                  <value>Monatlich</value>
+                </entry>
+                <entry>
+                  <key>Jährlich</key>
+                  <value>Jährlich</value>
+                </entry>
+              </staticContent>
+            </radioButton>
+            <checkBox>
+              <name>rec_weekly_di</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_weekly_di/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="265" />
+              <y v="70" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_weekly_di/visibleProcess.js</visibleProcess>
+              <labelText>Dienstag</labelText>
+              <labelOrientation v="4" />
+              <labelAnchor v="0" />
+              <tabOrder v="9" />
+            </checkBox>
+            <checkBox>
+              <name>rec_weekly_do</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_weekly_do/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="430" />
+              <y v="70" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_weekly_do/visibleProcess.js</visibleProcess>
+              <labelText>Donnerstag</labelText>
+              <labelOrientation v="4" />
+              <labelAnchor v="0" />
+              <tabOrder v="10" />
+            </checkBox>
+            <checkBox>
+              <name>rec_weekly_fr</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_weekly_fr/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="160" />
+              <y v="100" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_weekly_fr/visibleProcess.js</visibleProcess>
+              <labelText>Freitag</labelText>
+              <labelOrientation v="4" />
+              <labelAnchor v="0" />
+              <tabOrder v="8" />
+            </checkBox>
+            <edit>
+              <name>rec_weekly_intervall</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_weekly_intervall/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="215" />
+              <y v="40" />
+              <width v="55" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_weekly_intervall/visibleProcess.js</visibleProcess>
+              <tabOrder v="6" />
+              <labelText>Jede/Alle</labelText>
+              <labelDistance v="60" />
+              <labelAnchor v="0" />
+            </edit>
+            <label>
+              <name>rec_weekly_lable</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <x v="355" />
+              <y v="40" />
+              <width v="25" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_weekly_lable/visibleProcess.js</visibleProcess>
+              <labelText>Woche(n) am</labelText>
+              <labelAnchor v="0" />
+            </label>
+            <checkBox>
+              <name>rec_weekly_mi</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_weekly_mi/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="350" />
+              <y v="70" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_weekly_mi/visibleProcess.js</visibleProcess>
+              <labelText>Mittwoch</labelText>
+              <labelOrientation v="4" />
+              <labelAnchor v="0" />
+              <tabOrder v="12" />
+            </checkBox>
+            <checkBox>
+              <name>rec_weekly_mo</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_weekly_mo/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="160" />
+              <y v="70" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_weekly_mo/visibleProcess.js</visibleProcess>
+              <labelText>Montag</labelText>
+              <labelOrientation v="4" />
+              <labelAnchor v="0" />
+              <tabOrder v="7" />
+            </checkBox>
+            <checkBox>
+              <name>rec_weekly_sa</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_weekly_sa/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="265" />
+              <y v="100" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_weekly_sa/visibleProcess.js</visibleProcess>
+              <labelText>Samstag</labelText>
+              <labelOrientation v="4" />
+              <labelAnchor v="0" />
+              <tabOrder v="13" />
+            </checkBox>
+            <checkBox>
+              <name>rec_weekly_so</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_weekly_so/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="350" />
+              <y v="100" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_weekly_so/visibleProcess.js</visibleProcess>
+              <labelText>Sonntag</labelText>
+              <labelOrientation v="4" />
+              <labelAnchor v="0" />
+              <tabOrder v="11" />
+            </checkBox>
+            <radioButton>
+              <name>rec_yearly</name>
+              <template>%aditoprj%/template/Template_Radiobutton/Template_Radiobutton.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_yearly/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="130" />
+              <y v="20" />
+              <width v="95" />
+              <height v="135" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_yearly/visibleProcess.js</visibleProcess>
+              <caption>Jährlich</caption>
+              <tabOrder v="17" />
+              <staticContent>
+                <entry>
+                  <key>Jeden</key>
+                  <value>Jeden # #</value>
+                </entry>
+                <entry>
+                  <key>Am</key>
+                  <value>Am #. # im #</value>
+                </entry>
+              </staticContent>
+            </radioButton>
+            <comboBox>
+              <name>rec_yearly_day</name>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_yearly_day/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="235" />
+              <y v="55" />
+              <width v="108" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_yearly_day/visibleProcess.js</visibleProcess>
+              <utilizeRowId v="false" />
+              <tabOrder v="21" />
+              <staticContent>
+                <entry>
+                  <key>1.</key>
+                  <value>1</value>
+                </entry>
+                <entry>
+                  <key>2.</key>
+                  <value>2</value>
+                </entry>
+                <entry>
+                  <key>3.</key>
+                  <value>3</value>
+                </entry>
+                <entry>
+                  <key>4.</key>
+                  <value>4</value>
+                </entry>
+                <entry>
+                  <key>5.</key>
+                  <value>5</value>
+                </entry>
+                <entry>
+                  <key>6.</key>
+                  <value>6</value>
+                </entry>
+                <entry>
+                  <key>7.</key>
+                  <value>7</value>
+                </entry>
+                <entry>
+                  <key>8.</key>
+                  <value>8</value>
+                </entry>
+                <entry>
+                  <key>9.</key>
+                  <value>9</value>
+                </entry>
+                <entry>
+                  <key>10.</key>
+                  <value>10</value>
+                </entry>
+                <entry>
+                  <key>11.</key>
+                  <value>11</value>
+                </entry>
+                <entry>
+                  <key>12.</key>
+                  <value>12</value>
+                </entry>
+                <entry>
+                  <key>13.</key>
+                  <value>13</value>
+                </entry>
+                <entry>
+                  <key>14.</key>
+                  <value>14</value>
+                </entry>
+                <entry>
+                  <key>15.</key>
+                  <value>15</value>
+                </entry>
+                <entry>
+                  <key>16.</key>
+                  <value>16</value>
+                </entry>
+                <entry>
+                  <key>17.</key>
+                  <value>17</value>
+                </entry>
+                <entry>
+                  <key>18.</key>
+                  <value>18</value>
+                </entry>
+                <entry>
+                  <key>19.</key>
+                  <value>19</value>
+                </entry>
+                <entry>
+                  <key>20.</key>
+                  <value>20</value>
+                </entry>
+                <entry>
+                  <key>21.</key>
+                  <value>21</value>
+                </entry>
+                <entry>
+                  <key>22.</key>
+                  <value>22</value>
+                </entry>
+                <entry>
+                  <key>23.</key>
+                  <value>23</value>
+                </entry>
+                <entry>
+                  <key>24.</key>
+                  <value>24</value>
+                </entry>
+                <entry>
+                  <key>25.</key>
+                  <value>25</value>
+                </entry>
+                <entry>
+                  <key>26.</key>
+                  <value>26</value>
+                </entry>
+                <entry>
+                  <key>27.</key>
+                  <value>27</value>
+                </entry>
+                <entry>
+                  <key>28.</key>
+                  <value>28</value>
+                </entry>
+                <entry>
+                  <key>29.</key>
+                  <value>29</value>
+                </entry>
+                <entry>
+                  <key>30.</key>
+                  <value>30</value>
+                </entry>
+                <entry>
+                  <key>31.</key>
+                  <value>31</value>
+                </entry>
+                <entry>
+                  <key>letzten</key>
+                  <value>-1</value>
+                </entry>
+                <entry>
+                  <key>vorletzten</key>
+                  <value>-2</value>
+                </entry>
+              </staticContent>
+              <emptyElementEnabled v="false" />
+            </comboBox>
+            <comboBox>
+              <name>rec_yearly_day2</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_yearly_day2/valueProcess.js</valueProcess>
+              <contentProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_yearly_day2/contentProcess.js</contentProcess>
+              <searchableModes>none</searchableModes>
+              <x v="345" />
+              <y v="110" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_yearly_day2/visibleProcess.js</visibleProcess>
+              <tabOrder v="24" />
+              <staticContent />
+              <emptyElementEnabled v="false" />
+            </comboBox>
+            <comboBox>
+              <name>rec_yearly_month</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_yearly_month/valueProcess.js</valueProcess>
+              <contentProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_yearly_month/contentProcess.js</contentProcess>
+              <searchableModes>none</searchableModes>
+              <x v="345" />
+              <y v="55" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_yearly_month/visibleProcess.js</visibleProcess>
+              <tabOrder v="22" />
+              <staticContent />
+              <emptyElementEnabled v="false" />
+            </comboBox>
+            <comboBox>
+              <name>rec_yearly_month2</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_yearly_month2/valueProcess.js</valueProcess>
+              <contentProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_yearly_month2/contentProcess.js</contentProcess>
+              <searchableModes>none</searchableModes>
+              <x v="480" />
+              <y v="110" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_yearly_month2/visibleProcess.js</visibleProcess>
+              <tabOrder v="25" />
+              <staticContent />
+              <emptyElementEnabled v="false" />
+            </comboBox>
+            <comboBox>
+              <name>rec_yearly_number2</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_yearly_number2/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="235" />
+              <y v="110" />
+              <width v="108" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_yearly_number2/visibleProcess.js</visibleProcess>
+              <tabOrder v="23" />
+              <staticContent>
+                <entry>
+                  <key>1.</key>
+                  <value>1</value>
+                </entry>
+                <entry>
+                  <key>2.</key>
+                  <value>2</value>
+                </entry>
+                <entry>
+                  <key>3.</key>
+                  <value>3</value>
+                </entry>
+                <entry>
+                  <key>4.</key>
+                  <value>4</value>
+                </entry>
+                <entry>
+                  <key>letzten</key>
+                  <value>-1</value>
+                </entry>
+              </staticContent>
+              <emptyElementEnabled v="false" />
+            </comboBox>
+            <radioButton>
+              <name>rec_week</name>
+              <template>%aditoprj%/template/Template_Radiobutton/Template_Radiobutton.aod</template>
+              <x v="130" />
+              <y v="20" />
+              <width v="500" />
+              <height v="135" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/rec_week/visibleProcess.js</visibleProcess>
+              <caption>Wöchentlich</caption>
+            </radioButton>
+            <rectangleDecorator>
+              <name>Rechteck</name>
+              <template>%aditoprj%/template/Template_Rechteck/Template_Rechteck.aod</template>
+              <x v="10" />
+              <y v="10" />
+              <width v="620" />
+              <height v="155" />
+              <color v="0xffcccccc" />
+              <visible v="false" />
+            </rectangleDecorator>
+            <rectangleDecorator>
+              <name>Rechteck2</name>
+              <template>%aditoprj%/template/Template_Rechteck/Template_Rechteck.aod</template>
+              <x v="10" />
+              <y v="180" />
+              <width v="620" />
+              <height v="110" />
+              <color v="0xffcccccc" />
+              <visible v="false" />
+            </rectangleDecorator>
+            <label>
+              <name>lbl_monthly_01</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/lbl_monthly_01/valueProcess.js</valueProcess>
+              <x v="345" />
+              <y v="55" />
+              <width v="84" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/lbl_monthly_01/visibleProcess.js</visibleProcess>
+            </label>
+            <label>
+              <name>lbl_monthly_02</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/lbl_monthly_02/valueProcess.js</valueProcess>
+              <x v="485" />
+              <y v="55" />
+              <width v="90" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/lbl_monthly_02/visibleProcess.js</visibleProcess>
+            </label>
+            <label>
+              <name>lbl_monthly_03</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/lbl_monthly_03/valueProcess.js</valueProcess>
+              <x v="445" />
+              <y v="110" />
+              <width v="60" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/lbl_monthly_03/visibleProcess.js</visibleProcess>
+            </label>
+            <label>
+              <name>lbl_monthly_04</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/lbl_monthly_04/valueProcess.js</valueProcess>
+              <x v="575" />
+              <y v="110" />
+              <width v="55" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/lbl_monthly_04/visibleProcess.js</visibleProcess>
+            </label>
+            <label>
+              <name>lbl_daily01</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/lbl_daily01/valueProcess.js</valueProcess>
+              <x v="310" />
+              <y v="85" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/lbl_daily01/visibleProcess.js</visibleProcess>
+            </label>
+            <label>
+              <name>lbl_yearly_01</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/lbl_yearly_01/valueProcess.js</valueProcess>
+              <x v="455" />
+              <y v="110" />
+              <width v="24" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VEVENT/children/register_0/children/serie/children/lbl_yearly_01/visibleProcess.js</visibleProcess>
+            </label>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+  </children>
+  <tableView />
+  <width v="850" />
+  <height v="580" />
+</frame>

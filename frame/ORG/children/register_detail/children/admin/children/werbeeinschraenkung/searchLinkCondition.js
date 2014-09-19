@@ -1,0 +1,1 @@
+a.rs("RELATION.RELATIONID in ( select RELATION_ID from COMMRESTRICTION where " + a.valueof("$local.condition") + ")");

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Kontaktpersonen" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c659b407-943a-4427-8fa5-032bff204ff4">
+	<property name="ireport.zoom" value="1.2100000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="PERSNAMECOMPLETE" class="java.lang.String"/>
+	<field name="PERSFUNCTION" class="java.lang.String"/>
+	<field name="PERSDEPARTMENT" class="java.lang.String"/>
+	<field name="PERSCOMM" class="java.lang.String"/>
+	<field name="CLIENTID" class="java.lang.String"/>
+	<field name="ORG_ID" class="java.lang.String"/>
+	<field name="RELATION_ID" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="140" height="15" uuid="5e253d39-db27-482d-9fc1-6511cff6c7a8"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PERSNAMECOMPLETE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="158" y="1" width="92" height="15" uuid="6b032215-a39c-46ef-8811-542ced76351f"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PERSFUNCTION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="1" width="94" height="15" uuid="1e10ba50-60fa-4e98-80c8-85d35436a530"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PERSDEPARTMENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="391" y="0" width="164" height="15" uuid="9ba2f575-5e56-4eb8-9918-060822edbe4e"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PERSCOMM}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="6">
+			<line>
+				<reportElement x="0" y="2" width="555" height="1" uuid="632ccf1b-5e1c-49b6-9332-e9992b53e878"/>
+				<graphicElement>
+					<pen lineWidth="0.75" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

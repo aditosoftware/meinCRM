@@ -1,0 +1,1 @@
+a.setTableColumnVisibility("$comp.tbl_subAttr", 4, false );

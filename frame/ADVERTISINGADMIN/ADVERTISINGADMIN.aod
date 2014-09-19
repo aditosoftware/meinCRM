@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>ADVERTISINGADMIN</name>
+  <title>Werbemittel</title>
+  <icon>%aditoprj%/frame/ADVERTISINGADMIN/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/ADVERTISINGADMIN/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type  public
+@status released
+@desc [Frame für Werbemittel ]
+
+@module Marketing
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <afterStart>%aditoprj%/frame/ADVERTISINGADMIN/afterStart.js</afterStart>
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showSaveCancel v="false" />
+        <showCreate v="true" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <customComponents>
+          <rcCommandButton>
+            <name>Serienbrief</name>
+            <title>Serienbrief</title>
+            <toolTip>Serienbrief an alle selektierten Datensätze</toolTip>
+            <imageData>%aditoprj%/frame/ADVERTISINGADMIN/ribbon/ribbontasks/task_edit/customcomponents/serienbrief/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/ADVERTISINGADMIN/ribbon/ribbontasks/task_edit/customcomponents/serienbrief/onClick.js</onClick>
+            <ribbonElementPriority>LOW</ribbonElementPriority>
+          </rcCommandButton>
+          <rcCommandButton>
+            <name>Status_setzen</name>
+            <title>Status setzen</title>
+            <toolTip>ein einmal gesetzter Status für den Werbemittelversand kann nicht mehr geändert werden</toolTip>
+            <imageData>%aditoprj%/frame/ADVERTISINGADMIN/ribbon/ribbontasks/task_edit/customcomponents/status_setzen/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/ADVERTISINGADMIN/ribbon/ribbontasks/task_edit/customcomponents/status_setzen/onClick.js</onClick>
+            <enabledProcess>%aditoprj%/frame/ADVERTISINGADMIN/ribbon/ribbontasks/task_edit/customcomponents/status_setzen/enabledProcess.js</enabledProcess>
+            <ribbonElementPriority>LOW</ribbonElementPriority>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+        </customComponents>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <comboBox>
+      <name>cmbTYPE</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/ADVERTISINGADMIN/children/cmbtype/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <searchLinkTableName>ADVERTISINGSHIPMENT</searchLinkTableName>
+      <searchLinkColumnName>SHIPREASON</searchLinkColumnName>
+      <searchLinkCondition>%aditoprj%/frame/ADVERTISINGADMIN/children/cmbtype/searchLinkCondition.js</searchLinkCondition>
+      <searchableModes>mask</searchableModes>
+      <x v="710" />
+      <y v="365" />
+      <width v="105" />
+      <horizontalAnchor v="2" />
+      <verticalAnchor v="5" />
+      <tabOrder v="1" />
+      <staticContent />
+      <labelText>Versandstatus</labelText>
+      <labelDistance v="85" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <edit>
+      <name>edt_bis</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <dataType v="93" />
+      <outputFormat>dd.MM.yyyy</outputFormat>
+      <inputFormat>dd.MM.yyyy</inputFormat>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <keyboardSupport v="true" />
+      <calendarSupport v="true" />
+      <x v="710" />
+      <y v="425" />
+      <width v="105" />
+      <horizontalAnchor v="2" />
+      <verticalAnchor v="5" />
+      <tabOrder v="3" />
+      <labelText>Datum bis</labelText>
+      <labelDistance v="85" />
+      <toolTip>zu erledigende Aufgaben im Zeitraum bis</toolTip>
+    </edit>
+    <edit>
+      <name>edt_von</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <dataType v="93" />
+      <outputFormat>dd.MM.yyyy</outputFormat>
+      <inputFormat>dd.MM.yyyy</inputFormat>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <keyboardSupport v="true" />
+      <calendarSupport v="true" />
+      <x v="710" />
+      <y v="395" />
+      <width v="105" />
+      <horizontalAnchor v="2" />
+      <verticalAnchor v="5" />
+      <tabOrder v="2" />
+      <labelText>Datum von</labelText>
+      <labelDistance v="85" />
+      <toolTip>zu erledigende Aufgaben im Zeitraum von</toolTip>
+    </edit>
+    <rectangleDecorator>
+      <name>Filter</name>
+      <template>%aditoprj%/template/Template_Rechteck/Template_Rechteck.aod</template>
+      <x v="325" />
+      <y v="330" />
+      <width v="500" />
+      <height v="145" />
+      <horizontalAnchor v="2" />
+      <verticalAnchor v="5" />
+      <color v="0xffcccccc" />
+      <caption>Filter</caption>
+      <captionFont name="" style="0" size="9" />
+      <captionColor v="0xff5d667c" />
+    </rectangleDecorator>
+    <table>
+      <name>tblAdvertisingShipments</name>
+      <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+      <onDoubleClick>%aditoprj%/frame/ADVERTISINGADMIN/children/tbladvertisingshipments/onDoubleClick.js</onDoubleClick>
+      <displayContentProcess>%aditoprj%/frame/ADVERTISINGADMIN/children/tbladvertisingshipments/displayContentProcess.js</displayContentProcess>
+      <contentProcessType v="1" />
+      <x v="20" />
+      <y v="40" />
+      <width v="810" />
+      <height v="245" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <utilizeRowId v="true" />
+      <grantArrangeColumns v="true" />
+      <labelText>Versendung</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="2" />
+      <columnMetaData>
+        <columnMetaData>
+          <name>Empfaenger</name>
+          <columnName>Empfänger</columnName>
+          <width v="147" />
+        </columnMetaData>
+        <columnMetaData>
+          <name>Anlass</name>
+          <columnName>Anlass</columnName>
+          <width v="111" />
+        </columnMetaData>
+        <columnMetaData>
+          <name>erstellt</name>
+          <columnName>erstellt</columnName>
+          <width v="71" />
+          <dataType v="93" />
+          <outputFormat>dd.MM.yyyy</outputFormat>
+        </columnMetaData>
+        <columnMetaData>
+          <name>Artikel</name>
+          <columnName>Artikel</columnName>
+          <width v="80" />
+        </columnMetaData>
+        <columnMetaData>
+          <name>Anzahl</name>
+          <columnName>Anzahl</columnName>
+          <width v="47" />
+          <alignment v="0" />
+        </columnMetaData>
+        <columnMetaData>
+          <name>Veranlasser</name>
+          <columnName>Veranlasser</columnName>
+          <width v="92" />
+        </columnMetaData>
+        <columnMetaData>
+          <name>Versender</name>
+          <columnName>Versender</columnName>
+          <width v="105" />
+        </columnMetaData>
+        <columnMetaData>
+          <name>versendet</name>
+          <columnName>versendet</columnName>
+          <width v="73" />
+          <dataType v="93" />
+          <outputFormat>dd.MM.yyyy</outputFormat>
+        </columnMetaData>
+        <columnMetaData>
+          <name>Status</name>
+          <columnName>Status</columnName>
+          <width v="58" />
+          <dataType v="12" />
+        </columnMetaData>
+      </columnMetaData>
+    </table>
+    <table>
+      <name>tblFilterRecipients</name>
+      <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+      <onDoubleClick>%aditoprj%/frame/ADVERTISINGADMIN/children/tblfilterrecipients/onDoubleClick.js</onDoubleClick>
+      <displayContentProcess>%aditoprj%/frame/ADVERTISINGADMIN/children/tblfilterrecipients/displayContentProcess.js</displayContentProcess>
+      <singleSelection v="true" />
+      <x v="335" />
+      <y v="365" />
+      <width v="275" />
+      <height v="105" />
+      <horizontalAnchor v="2" />
+      <verticalAnchor v="5" />
+      <utilizeRowId v="true" />
+      <tabOrder v="0" />
+      <labelText>Empfänger</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="2" />
+      <columnMetaData>
+        <columnMetaData>
+          <name>Kontaktperson</name>
+          <columnName>Kontaktperson</columnName>
+          <width v="195" />
+        </columnMetaData>
+        <columnMetaData>
+          <name>Anzahl_2</name>
+          <columnName>Anzahl</columnName>
+          <width v="57" />
+          <alignment v="0" />
+        </columnMetaData>
+      </columnMetaData>
+    </table>
+  </children>
+  <tableView />
+  <width v="850" />
+  <height v="580" />
+</frame>

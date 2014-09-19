@@ -1,0 +1,1 @@
+a.rs(a.sql("select count(*) from ORDERITEM where SALESORDER_ID = '" + a.valueof("$comp.idcolumn") + "'") > 0)

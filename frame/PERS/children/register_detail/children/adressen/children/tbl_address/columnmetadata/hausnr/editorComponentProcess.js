@@ -1,0 +1,1 @@
+if( a.valueof("$comp.relationid") == a.valueofObj("$local.rowdata")[3] )	a.rs("$comp.BUILDINGNO");

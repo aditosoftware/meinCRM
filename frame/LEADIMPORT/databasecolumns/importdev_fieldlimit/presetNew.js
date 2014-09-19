@@ -1,0 +1,1 @@
+if ( a.valueof("$image.FromID") == "") 	a.rs('"')

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Umsatz WG Y" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e7a916c8-3f9a-497d-84bb-3909b15271ea">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="myAddr" class="java.lang.String"/>
+	<parameter name="adito.image.myLogo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="YEAR" class="java.lang.String"/>
+	<field name="AMOUNT" class="java.lang.String"/>
+	<field name="GROUPCODEID" class="java.lang.String"/>
+	<sortField name="YEAR" order="Descending"/>
+	<sortField name="GROUPCODEID"/>
+	<group name="YEAR">
+		<groupExpression><![CDATA[$F{YEAR}]]></groupExpression>
+		<groupFooter>
+			<band height="188">
+				<bar3DChart>
+					<chart>
+						<reportElement x="41" y="0" width="484" height="178" isPrintWhenDetailOverflows="true" uuid="e4fdaf61-0377-42c1-9da1-c10442a13af9"/>
+						<chartTitle color="#0033CC">
+							<font fontName="Segoe UI" size="10" isBold="true"/>
+							<titleExpression><![CDATA[$F{YEAR}]]></titleExpression>
+						</chartTitle>
+						<chartSubtitle/>
+						<chartLegend position="Right"/>
+					</chart>
+					<categoryDataset>
+						<dataset resetType="Group" resetGroup="YEAR"/>
+						<categorySeries>
+							<seriesExpression><![CDATA[$F{GROUPCODEID}]]></seriesExpression>
+							<categoryExpression><![CDATA[$F{GROUPCODEID}]]></categoryExpression>
+							<valueExpression><![CDATA[Double.parseDouble($F{AMOUNT})]]></valueExpression>
+						</categorySeries>
+					</categoryDataset>
+					<bar3DPlot isShowLabels="false">
+						<plot/>
+						<itemLabel/>
+						<categoryAxisFormat>
+							<axisFormat verticalTickLabels="false"/>
+						</categoryAxisFormat>
+						<valueAxisLabelExpression><![CDATA["Werte in €"]]></valueAxisLabelExpression>
+						<valueAxisFormat>
+							<axisFormat verticalTickLabels="false">
+								<labelFont>
+									<font fontName="Segoe UI" isBold="true"/>
+								</labelFont>
+							</axisFormat>
+						</valueAxisFormat>
+					</bar3DPlot>
+				</bar3DChart>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="118">
+			<image scaleImage="RetainShape" hAlign="Center">
+				<reportElement x="183" y="0" width="172" height="48" uuid="d7192cb5-1573-4884-9034-f2283d3058dc"/>
+				<imageExpression><![CDATA[$P{adito.image.myLogo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="0" y="59" width="555" height="20" forecolor="#666666" uuid="1acf5d4e-112e-4979-ba69-218230749c71"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{myAddr}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="0" y="59" width="555" height="20" uuid="bee7e968-e60a-49ab-9be4-eeaee1af18e4"/>
+				<box>
+					<pen lineWidth="0.75" lineColor="#666666"/>
+					<topPen lineWidth="0.75" lineColor="#666666"/>
+					<leftPen lineWidth="0.75" lineColor="#666666"/>
+					<bottomPen lineWidth="0.75" lineColor="#666666"/>
+					<rightPen lineWidth="0.75" lineColor="#666666"/>
+				</box>
+			</frame>
+			<textField>
+				<reportElement x="0" y="93" width="307" height="20" forecolor="#666666" uuid="726ab4b5-c05c-4c26-a4d2-949c78609334"/>
+				<textElement>
+					<font fontName="Segoe UI" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Umsatz nach Warengruppen über Jahre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="39">
+			<line>
+				<reportElement x="0" y="12" width="555" height="1" forecolor="#666666" uuid="c410606e-889c-41c7-a13f-75188345a77f"/>
+			</line>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="355" y="18" width="100" height="20" forecolor="#666666" uuid="90400b73-4cb3-4ba1-ad72-7dec5baa31c2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="18" width="59" height="20" forecolor="#666666" uuid="5fe26fb4-7f9c-41aa-98e0-02c05e75bfac"/>
+				<textElement textAlignment="Right">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Seite}+" "+$V{PAGE_NUMBER}+" "+$R{von}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="514" y="18" width="40" height="20" forecolor="#666666" uuid="411fc997-2f67-4a58-b2e9-6efb4d98679f"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

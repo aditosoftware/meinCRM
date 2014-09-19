@@ -1,0 +1,1 @@
+a.rs("CUSTOMERCODE, ORGNAME");

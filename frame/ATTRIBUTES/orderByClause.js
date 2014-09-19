@@ -1,0 +1,1 @@
+a.rs("ATTR_ID, ATTRSORT");

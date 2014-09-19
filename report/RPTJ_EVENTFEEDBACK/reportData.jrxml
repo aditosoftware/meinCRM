@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Eventfeedback" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e7a916c8-3f9a-497d-84bb-3909b15271ea">
+	<property name="ireport.zoom" value="1.2100000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="myAddr" class="java.lang.String"/>
+	<parameter name="adito.image.myLogo" class="java.lang.String"/>
+	<field name="QUESTIONTEXT" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="191" splitType="Stretch">
+			<staticText>
+				<reportElement x="23" y="109" width="264" height="31" uuid="932153bd-70bc-4c22-b4dd-b855be7323b7"/>
+				<textElement>
+					<font fontName="Segoe UI" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<image scaleImage="RetainShape" hAlign="Center">
+				<reportElement x="183" y="0" width="175" height="50" uuid="4e93864b-ff0d-49ac-866c-13a905494a13"/>
+				<imageExpression><![CDATA[$P{adito.image.myLogo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="23" y="67" width="522" height="20" forecolor="#666666" uuid="024e7398-a26d-482b-a6bb-cd624a205a9f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{myAddr}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="23" y="67" width="522" height="20" uuid="04923388-e534-4af6-8cb0-ba7dffe5836b"/>
+				<box>
+					<pen lineWidth="0.75" lineColor="#666666"/>
+					<topPen lineWidth="0.75" lineColor="#666666"/>
+					<leftPen lineWidth="0.75" lineColor="#666666"/>
+					<bottomPen lineWidth="0.75" lineColor="#666666"/>
+					<rightPen lineWidth="0.75" lineColor="#666666"/>
+				</box>
+			</frame>
+			<textField>
+				<reportElement x="23" y="140" width="523" height="33" uuid="beff0bb0-23d3-4272-ad69-322645bc2579"/>
+				<textElement>
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Wir sind ständig dabei, unser Angebot zu verbessern. Bitte helfen Sie uns dabei, indem Sie diesen Feedbackbogen ausgefüllt am Ende der Veranstaltung abgeben. Vielen Dank!}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="22" y="109" width="265" height="31" uuid="f582de95-cb09-401c-ad6a-6cd2b0893439"/>
+				<textElement>
+					<font fontName="Segoe UI" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Ihre Meinung ist uns wichtig!}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="392" y="18" width="14" height="15" uuid="71c6212b-122b-4134-a046-e0598b2f6a0e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="412" y="18" width="14" height="15" uuid="f4471bd9-854c-4a57-89ac-faf6033a8bfd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="432" y="18" width="14" height="15" uuid="96e33ee2-d033-4a01-8763-f7af8a7161c3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="18" width="14" height="15" uuid="94e7de10-74cd-45b3-bfbd-5a3952b3fc47"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="471" y="18" width="14" height="15" uuid="041c990a-d86e-4a5a-821c-af3b922543f7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="492" y="18" width="14" height="15" uuid="a58350d7-6667-4695-b9ba-612df77665db"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<line>
+				<reportElement x="23" y="36" width="522" height="1" uuid="b579040d-8929-486d-ba9a-452e7450aa1a"/>
+			</line>
+			<textField>
+				<reportElement x="23" y="2" width="100" height="15" uuid="4177a3eb-2ec1-4c8f-9e3b-5746ec1f4761"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Frage}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="392" y="3" width="114" height="15" uuid="9ddae50c-7e2b-4dae-ae93-32108678a0a5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Schulnoten}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="23" y="4" width="335" height="15" uuid="b34dd2f3-e08f-4e2e-b046-b74815d5bcf7"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{QUESTIONTEXT}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="392" y="4" width="14" height="15" uuid="7cad795a-54db-4bf9-8bef-db8b7bba436e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="412" y="4" width="14" height="15" uuid="bed1892c-4c19-4e61-980c-417d2f45c56d"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="432" y="4" width="14" height="15" uuid="916808d4-de7b-46c5-bbf3-aa5c620771ac"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="451" y="4" width="14" height="15" uuid="b6892480-f78f-45f9-9f1b-36a147c570fd"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="471" y="4" width="14" height="15" uuid="22b44167-6615-49a1-8250-fda8a0ff8e01"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="492" y="4" width="14" height="15" uuid="0184a0be-4033-44f4-b141-94f2c367be65"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="37" splitType="Stretch">
+			<line>
+				<reportElement x="23" y="7" width="522" height="1" uuid="d353b5ef-ef72-491d-9520-4f54ac727639"/>
+				<graphicElement>
+					<pen lineColor="#666666"/>
+				</graphicElement>
+			</line>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="379" y="19" width="77" height="15" forecolor="#666666" uuid="0c2e7574-156f-43fc-ad8f-504b36c9ed54"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="456" y="19" width="50" height="15" forecolor="#666666" uuid="6e67a1c9-b662-46c8-aa00-ce0b819dbd02"/>
+				<textElement textAlignment="Right">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Seite}+" "+$V{PAGE_NUMBER}+" "+$R{von}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="506" y="19" width="40" height="15" forecolor="#666666" uuid="7127fe20-4d28-4247-be6e-6a4bfa536b15"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="124">
+			<line>
+				<reportElement x="23" y="49" width="522" height="1" uuid="29c728bd-2246-4676-aa03-e442cad09a31"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="23" y="69" width="522" height="1" uuid="475ec360-4e9a-463e-adc1-eade94fd3a52"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="23" y="90" width="522" height="1" uuid="1d7e32fd-7aed-42b4-bfba-eb2f78af9350"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="23" y="109" width="522" height="1" uuid="091e2ef7-7fb7-4d3c-afc1-d4919419f913"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="23" y="12" width="391" height="20" uuid="ea7d2fc7-1737-4098-959e-826769d1749c"/>
+				<textElement>
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Welche Themen haben Sie vermisst?}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

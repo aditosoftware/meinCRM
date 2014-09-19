@@ -1,0 +1,1 @@
+a.rq("select year(entrydate) from history group by year(entrydate)");

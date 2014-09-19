@@ -1,0 +1,1 @@
+if ( a.valueof("$sys.workingmode") == a.FRAMEMODE_NEW )	a.closeCurrentTopImage();

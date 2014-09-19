@@ -1,0 +1,1 @@
+a.rq("select PRODUCTID, PRODUCTNAME from PRODUCT where GROUPCODEID = 5"); // Ersatzteile

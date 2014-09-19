@@ -1,0 +1,1 @@
+a.rs( a.hasvar("$image.UJUmsatzTree") && a.valueofObj("$image.UJUmsatzTree")[""] != undefined )

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>DLG_CHOOSE_PERS_FORHISTORY</name>
+  <icon></icon>
+  <description></description>
+  <alias>AO_DATEN</alias>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <table>
+      <name>tbl_pers</name>
+      <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+      <displayContentProcess>%aditoprj%/frame/DLG_CHOOSE_PERS_FORHISTORY/children/tbl_pers/displayContentProcess.js</displayContentProcess>
+      <width v="585" />
+      <height v="220" />
+      <verticalAnchor v="6" />
+      <utilizeRowId v="true" />
+      <tabOrder v="0" />
+      <columnMetaData>
+        <columnMetaData>
+          <name>Firma</name>
+          <columnName>Firma</columnName>
+          <width v="150" />
+          <editable v="true" />
+          <editorComponentProcess>%aditoprj%/frame/DLG_CHOOSE_PERS_FORHISTORY/children/tbl_pers/columnmetadata/firma/editorComponentProcess.js</editorComponentProcess>
+        </columnMetaData>
+        <columnMetaData>
+          <name>Person</name>
+          <columnName>Person</columnName>
+          <width v="188" />
+          <editable v="true" />
+          <editorComponentProcess>%aditoprj%/frame/DLG_CHOOSE_PERS_FORHISTORY/children/tbl_pers/columnmetadata/person/editorComponentProcess.js</editorComponentProcess>
+        </columnMetaData>
+      </columnMetaData>
+    </table>
+  </children>
+  <tableView>
+    <headerFont name="" style="0" size="12" />
+    <font name="Arial" style="0" size="12" />
+  </tableView>
+  <width v="850" />
+  <height v="580" />
+</frame>

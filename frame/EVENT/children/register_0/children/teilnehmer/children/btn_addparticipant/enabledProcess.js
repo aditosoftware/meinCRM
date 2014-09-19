@@ -1,0 +1,1 @@
+a.rs(a.valueof("$comp.lup_relation") != '' && a.valueof("$comp.EVENTSTATUS") < 3);

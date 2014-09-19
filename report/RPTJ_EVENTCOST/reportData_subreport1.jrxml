@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportData_subreport1" pageWidth="250" pageHeight="802" columnWidth="250" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="96a2b9cb-f7e3-4fd2-8a2a-472c7907b279">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="gesamtkosten" class="java.lang.String"/>
+	<field name="costtype" class="java.lang.String"/>
+	<field name="costvalue" class="java.lang.String"/>
+	<variable name="sumCosts" class="java.lang.Float" calculation="Sum">
+		<variableExpression><![CDATA[Float.parseFloat($F{costvalue})]]></variableExpression>
+	</variable>
+	<variable name="vcostvalue" class="java.lang.Float">
+		<variableExpression><![CDATA[Float.parseFloat($F{costvalue})]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="7" y="0" width="100" height="15" uuid="e0960a0e-e582-4564-bf97-9e76366eb414"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{costtype}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="107" y="0" width="56" height="15" uuid="a4fbb914-21b0-4858-9294-4c5cf0a1c7b9"/>
+				<textElement textAlignment="Right">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{vcostvalue}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="163" y="0" width="11" height="15" uuid="741ed164-a9a1-49d1-9f76-3bc02d574744"/>
+				<textElement textAlignment="Right">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[€]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<summary>
+		<band height="21" splitType="Stretch">
+			<textField evaluationTime="Report" pattern="#,##0.00">
+				<reportElement x="107" y="6" width="56" height="15" uuid="4e720ec1-4eb0-457a-b8b2-8acf5c8a6ae9"/>
+				<textElement textAlignment="Right">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{sumCosts}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="7" y="2" width="183" height="1" uuid="feb8c837-639a-4d23-a9ae-6ad2e5c03169"/>
+			</line>
+			<textField>
+				<reportElement x="7" y="6" width="100" height="15" uuid="f032e5c3-af2c-49be-b0bb-11d833787af3"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{gesamtkosten}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="163" y="6" width="11" height="15" uuid="c291ccf9-9be1-4ca5-85d8-ddcf37fbffb9"/>
+				<textElement textAlignment="Right">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[€]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

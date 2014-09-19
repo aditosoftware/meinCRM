@@ -1,0 +1,1 @@
+a.sqlDelete("ATTROBJECT", " ATTROBJECTID = '" + a.valueof("$local.idvalue") + "'");

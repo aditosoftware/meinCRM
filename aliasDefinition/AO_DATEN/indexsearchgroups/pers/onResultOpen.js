@@ -1,0 +1,1 @@
+a.openFrame( "PERS", "RELATIONID = '" + a.valueof("$local.idvalue") + "'", false, a.FRAMEMODE_SHOW );

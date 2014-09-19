@@ -1,0 +1,1 @@
+a.imagevar("$image.closecurrentframe", "false");

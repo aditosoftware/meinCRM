@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportData_subreport2" pageWidth="555" pageHeight="572" orientation="Landscape" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="31a89afa-1fc2-414a-8829-ecbbb33f1170">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="stichwort" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="RELATION_ID" class="java.lang.String"/>
+	<field name="ENTRYDATUM" class="java.lang.String"/>
+	<field name="BETREFF" class="java.lang.String"/>
+	<field name="INFO" class="java.lang.String"/>
+	<field name="MEDIUM" class="java.lang.String"/>
+	<field name="DIRECTION" class="java.lang.String"/>
+	<field name="HISTORY_ID" class="java.lang.String"/>
+	<field name="RELATIONID" class="java.lang.String"/>
+	<field name="PERS_ID" class="java.lang.String"/>
+	<field name="PERSID" class="java.lang.String"/>
+	<field name="FIRSTNAMELASTNAME" class="java.lang.String"/>
+	<variable name="InOut" class="java.lang.String">
+		<variableExpression><![CDATA[$F{MEDIUM} + " " + (($F{DIRECTION}.equals("o"))? ">" : "<")]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<printWhenExpression><![CDATA[$F{MEDIUM} != null]]></printWhenExpression>
+			<textField isBlankWhenNull="true">
+				<reportElement x="220" y="0" width="60" height="15" uuid="d832f879-a635-4e18-9437-060fa4f6bff3"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{stichwort} + ": "]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="153" y="0" width="61" height="15" isRemoveLineWhenBlank="true" uuid="a4002206-c81b-4da8-8470-15bfe9ebb067"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{InOut}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="100" height="15" uuid="d083a91a-95e6-4b77-8a02-06c595255b2f"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BETREFF}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="69" height="15" uuid="ded92bdb-626a-4bd7-b328-f4e9e9c29ed1"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ENTRYDATUM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="69" y="0" width="83" height="15" uuid="8ab80458-5ae9-4a86-8d6f-3675ce62f7be"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FIRSTNAMELASTNAME}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="19">
+			<printWhenExpression><![CDATA[$F{MEDIUM} != null]]></printWhenExpression>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="380" height="15" uuid="8555793d-596f-4563-8c81-48e6d0ede230"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{INFO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

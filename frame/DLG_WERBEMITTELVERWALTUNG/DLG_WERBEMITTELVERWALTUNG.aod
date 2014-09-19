@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>DLG_WERBEMITTELVERWALTUNG</name>
+  <icon></icon>
+  <description>Dialog zum setzen des Status im Frame Werbemittelverwaltung</description>
+  <comment>@type public
+@status released
+@desc [Dialog zum setzen des Status im Frame Werbemittelverwaltung]
+
+@module Marketing
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <comboBox>
+      <name>Cmb_Status</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/DLG_WERBEMITTELVERWALTUNG/children/cmb_status/contentProcess.js</contentProcess>
+      <searchableModes>none</searchableModes>
+      <x v="5" />
+      <y v="120" />
+      <width v="250" />
+      <tabOrder v="2" />
+      <emptyElementEnabled v="false" />
+      <labelText>Status</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="2" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>Cmb_Versender</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <dataType v="1" />
+      <valueProcess>%aditoprj%/frame/DLG_WERBEMITTELVERWALTUNG/children/cmb_versender/valueProcess.js</valueProcess>
+      <contentProcess>%aditoprj%/frame/DLG_WERBEMITTELVERWALTUNG/children/cmb_versender/contentProcess.js</contentProcess>
+      <searchableModes>none</searchableModes>
+      <x v="5" />
+      <y v="30" />
+      <width v="250" />
+      <tabOrder v="0" />
+      <emptyElementEnabled v="false" />
+      <labelText>Versender</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="2" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <edit>
+      <name>Edt_Datum</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <dataType v="93" />
+      <valueProcess>%aditoprj%/frame/DLG_WERBEMITTELVERWALTUNG/children/edt_datum/valueProcess.js</valueProcess>
+      <outputFormat>dd.MM.yyyy</outputFormat>
+      <inputFormat>dd.MM.yyyy</inputFormat>
+      <searchableModes>none</searchableModes>
+      <calendarSupport v="true" />
+      <x v="5" />
+      <y v="75" />
+      <width v="250" />
+      <tabOrder v="1" />
+      <labelText>Datum</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="2" />
+      <labelAnchor v="0" />
+    </edit>
+  </children>
+  <tableView>
+    <headerFont name="" style="0" size="11" />
+    <font name="Verdana" style="0" size="11" />
+  </tableView>
+  <width v="865" />
+</frame>

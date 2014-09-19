@@ -1,0 +1,1 @@
+a.rq("select distinct APPLICATION from MACHINE");

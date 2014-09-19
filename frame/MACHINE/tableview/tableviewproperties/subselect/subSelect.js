@@ -1,0 +1,1 @@
+a.rs("select PRODUCTNAME from PRODUCT where PRODUCTID = MACHINE.PRODUCT_ID");

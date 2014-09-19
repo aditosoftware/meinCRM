@@ -1,0 +1,1 @@
+a.rs(a.valueofObj("$image.evaluation")[1] - a.valueofObj("$image.evaluation")[2])

@@ -1,0 +1,1 @@
+a.rs(a.valueof("$comp.OFFERCODE") + "-" + a.valueof("$comp.VERSNR"))

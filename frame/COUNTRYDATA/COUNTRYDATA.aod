@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>COUNTRYDATA</name>
+  <title>Länderdaten</title>
+  <icon>%aditoprj%/frame/COUNTRYDATA/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/COUNTRYDATA/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type  public
+@status released
+@desc [Frame für die Verwaltung der Länderdaten]
+
+@module Administration
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <linkInformation>
+    <linkInformation>
+      <name>86526ac4-8606-49a7-a7d1-69e2485b4e7b</name>
+      <tableName>COUNTRYINFO</tableName>
+      <primaryKey>ISO2</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+  </linkInformation>
+  <idStrategy v="4" />
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showSaveCancel v="false" />
+        <showCreate v="true" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="true" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <databaseColumns>
+    <column>
+      <name>COUNTRYINFO_ISO2</name>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>ISO2</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="2" />
+    </column>
+    <column>
+      <name>COUNTRYINFO_ISO3</name>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>ISO3</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="3" />
+    </column>
+    <column>
+      <name>COUNTRYINFO_NAME_DE</name>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>NAME_DE</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="100" />
+    </column>
+    <column>
+      <name>COUNTRYINFO_CURRENCYCODE</name>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>CURRENCYCODE</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="3" />
+    </column>
+    <column>
+      <name>COUNTRYINFO_CURRENCYNAME_DE</name>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>CURRENCYNAME_DE</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="50" />
+    </column>
+    <column>
+      <name>COUNTRYINFO_DIALPREFIX</name>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>DIALPREFIX</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="5" />
+    </column>
+    <column>
+      <name>COUNTRYINFO_ADDRFORMAT</name>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>ADDRFORMAT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="250" />
+    </column>
+    <column>
+      <name>COUNTRYINFO_DEFAULTLANGUAGE</name>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>DEFAULTLANGUAGE</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="5" />
+    </column>
+    <column>
+      <name>COUNTRYINFO_EUMEMBER</name>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>EUMEMBER</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="1" />
+    </column>
+    <column>
+      <name>COUNTRYINFO_EUROZONE</name>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>EUROZONE</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="1" />
+    </column>
+    <column>
+      <name>COUNTRYINFO_POBOXNAME</name>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>POBOXNAME</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="30" />
+    </column>
+    <column>
+      <name>COUNTRYINFO_ZIP_EXISTS</name>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>ZIP_EXISTS</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="1" />
+      <scale>0</scale>
+      <presetNew>%aditoprj%/frame/COUNTRYDATA/databasecolumns/countryinfo_zip_exists/presetNew.js</presetNew>
+    </column>
+  </databaseColumns>
+  <children>
+    <edit>
+      <name>ADDRFORMAT</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>ADDRFORMAT</columnName>
+      <precision v="250" />
+      <x v="115" />
+      <y v="235" />
+      <width v="490" />
+      <tabOrder v="10" />
+      <labelText>Addr.format</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+      <toolTip>on = orgname (Name der Organisation)
+hs = header salutaion (Anrede im Briefkopf)
+ls = lettersalutation (Briefanrede)
+sa = salutation (Anrede)
+ti = title (Titel)
+dp = department (Abteilung)
+fn = firstname (Vorname)
+mn = middlename (Mittelname)
+ln = lastname (Nachname)
+al = addressline (Straße)
+bn = building number (Hausnummer)
+zc = zipcode (PLZ)
+ci = city (Ort)
+di = district (Landkreis)
+rg = region (Region)
+st = state(Staat)
+cc = countrycode (Ländercode)
+cn = countryname (Länderbezeichnung)</toolTip>
+    </edit>
+    <button>
+      <name>btnAssignFlag</name>
+      <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+      <onClick>%aditoprj%/frame/COUNTRYDATA/children/btnassignflag/onClick.js</onClick>
+      <x v="350" />
+      <y v="85" />
+      <height v="20" />
+      <caption>Flagge</caption>
+      <tabOrder v="2" />
+    </button>
+    <button>
+      <name>btnFmtTest</name>
+      <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+      <onClick>%aditoprj%/frame/COUNTRYDATA/children/btnfmttest/onClick.js</onClick>
+      <x v="605" />
+      <y v="235" />
+      <width v="50" />
+      <height v="20" />
+      <caption>Test!</caption>
+      <tabOrder v="11" />
+    </button>
+    <edit>
+      <name>CURRENCYCODE</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>CURRENCYCODE</columnName>
+      <dataType v="1" />
+      <precision v="3" />
+      <x v="115" />
+      <y v="145" />
+      <width v="40" />
+      <tabOrder v="4" />
+      <labelText>Währung</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>CURRENCYNAME_DE</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>CURRENCYNAME_DE</columnName>
+      <precision v="50" />
+      <x v="250" />
+      <y v="145" />
+      <width v="95" />
+      <tabOrder v="5" />
+      <labelText>Währung DE</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+    <comboBox>
+      <name>DEFAULTLANGUAGE</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>DEFAULTLANGUAGE</columnName>
+      <precision v="5" />
+      <contentProcess>%aditoprj%/frame/COUNTRYDATA/children/defaultlanguage/contentProcess.js</contentProcess>
+      <x v="115" />
+      <y v="265" />
+      <width v="230" />
+      <tabOrder v="12" />
+      <labelText>Sprache</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <edit>
+      <name>DIALPREFIX</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>DIALPREFIX</columnName>
+      <dataType v="1" />
+      <precision v="5" />
+      <x v="115" />
+      <y v="205" />
+      <width v="75" />
+      <tabOrder v="9" />
+      <labelText>Tel-Vorwahl</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+    <checkBox>
+      <name>EUMEMBER</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>EUMEMBER</columnName>
+      <dataType v="1" />
+      <valueTrue>Y</valueTrue>
+      <valueFalse>N</valueFalse>
+      <x v="365" />
+      <y v="150" />
+      <labelText>EU-Member</labelText>
+      <labelOrientation v="4" />
+      <tabOrder v="6" />
+    </checkBox>
+    <checkBox>
+      <name>EUROZONE</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>EUROZONE</columnName>
+      <dataType v="1" />
+      <valueTrue>Y</valueTrue>
+      <valueFalse>N</valueFalse>
+      <x v="365" />
+      <y v="180" />
+      <labelText>EUROZONE-Member</labelText>
+      <labelOrientation v="4" />
+      <tabOrder v="8" />
+    </checkBox>
+    <staticPicture>
+      <name>flagIcon</name>
+      <template>%aditoprj%/template/Template_Bild/Template_Bild.aod</template>
+      <imageProcess>%aditoprj%/frame/COUNTRYDATA/children/flagicon/imageProcess.js</imageProcess>
+      <stretched v="true" />
+      <x v="315" />
+      <y v="85" />
+      <width v="30" />
+      <height v="20" />
+    </staticPicture>
+    <edit>
+      <name>ISO2</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>ISO2</columnName>
+      <dataType v="1" />
+      <precision v="2" />
+      <mandatoryInput v="true" />
+      <x v="115" />
+      <y v="85" />
+      <width v="40" />
+      <tabOrder v="0" />
+      <labelText>ISO2</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>ISO3</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>ISO3</columnName>
+      <dataType v="1" />
+      <precision v="3" />
+      <x v="190" />
+      <y v="85" />
+      <width v="50" />
+      <tabOrder v="1" />
+      <labelText>ISO3</labelText>
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>NAME_DE</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>NAME_DE</columnName>
+      <precision v="100" />
+      <x v="115" />
+      <y v="115" />
+      <width v="230" />
+      <tabOrder v="3" />
+      <labelText>Name DE</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>POBOXNAME</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>POBOXNAME</columnName>
+      <precision v="30" />
+      <x v="115" />
+      <y v="175" />
+      <width v="230" />
+      <tabOrder v="7" />
+      <labelText>POBox Name</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+    <checkBox>
+      <name>Checkbox</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <tableName>COUNTRYINFO</tableName>
+      <columnName>ZIP_EXISTS</columnName>
+      <dataType v="1" />
+      <valueTrue>Y</valueTrue>
+      <valueFalse>N</valueFalse>
+      <mandatoryInput v="false" />
+      <x v="365" />
+      <y v="210" />
+      <labelText>PLZ vorhanden</labelText>
+      <labelOrientation v="4" />
+      <labelAlignment v="2" />
+    </checkBox>
+  </children>
+  <tableView>
+    <tableViewProperties>
+      <columnProperty>
+        <name>subselect</name>
+        <label>ISO2</label>
+        <subSelect>%aditoprj%/frame/COUNTRYDATA/tableview/tableviewproperties/subselect/subSelect.js</subSelect>
+      </columnProperty>
+      <columnProperty>
+        <name>COUNTRYINFO_ISO3</name>
+        <tableName>COUNTRYINFO</tableName>
+        <columnName>ISO3</columnName>
+      </columnProperty>
+      <columnProperty>
+        <name>COUNTRYINFO_NAME_DE</name>
+        <tableName>COUNTRYINFO</tableName>
+        <columnName>NAME_DE</columnName>
+        <label>Land</label>
+        <width v="174" />
+      </columnProperty>
+      <columnProperty>
+        <name>COUNTRYINFO_DEFAULTLANGUAGE</name>
+        <tableName>COUNTRYINFO</tableName>
+        <columnName>DEFAULTLANGUAGE</columnName>
+        <label>Sprachkürzel</label>
+        <width v="84" />
+      </columnProperty>
+      <columnProperty>
+        <name>COUNTRYINFO_CURRENCYCODE</name>
+        <tableName>COUNTRYINFO</tableName>
+        <columnName>CURRENCYCODE</columnName>
+        <label>Währung</label>
+      </columnProperty>
+      <columnProperty>
+        <name>COUNTRYINFO_DIALPREFIX</name>
+        <tableName>COUNTRYINFO</tableName>
+        <columnName>DIALPREFIX</columnName>
+        <label>Tel-Vorwahl</label>
+      </columnProperty>
+      <columnProperty>
+        <name>COUNTRYINFO_EUMEMBER</name>
+        <tableName>COUNTRYINFO</tableName>
+        <columnName>EUMEMBER</columnName>
+      </columnProperty>
+      <columnProperty>
+        <name>COUNTRYINFO_EUROZONE</name>
+        <tableName>COUNTRYINFO</tableName>
+        <columnName>EUROZONE</columnName>
+      </columnProperty>
+    </tableViewProperties>
+  </tableView>
+  <width v="850" />
+  <height v="580" />
+</frame>

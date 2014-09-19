@@ -1,0 +1,1 @@
+a.sqlDelete("SPSOURCES", " SPSOURCESID = '" + a.valueof("$local.idvalue") + "'");

@@ -1,0 +1,1 @@
+a.rs(a.valueof("$comp.STATUS") == 5 || a.valueof("$comp.STATUS") == 6 );

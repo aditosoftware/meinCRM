@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.5" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>_____SYSTEM_CALENDAR_RIBBON</name>
+  <calendarRibbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_CALENDAR</name>
+        <showViews v="true" />
+        <showAux v="true" />
+        <icon>CALENDAR_24</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>[no text: 00000000]</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </calendarRibbon>
+</application>

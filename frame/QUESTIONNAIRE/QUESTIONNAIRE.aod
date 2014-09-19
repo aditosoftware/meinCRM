@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>QUESTIONNAIRE</name>
+  <title>Interviewdefinition</title>
+  <icon>%aditoprj%/frame/QUESTIONNAIRE/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/QUESTIONNAIRE/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type public
+@status released
+@desc [Frame zur Anlage von Interviews]
+
+@module Marketing
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <linkInformation>
+    <linkInformation>
+      <name>a6e5c423-1ce8-4cc7-9d10-d90dfb52eb41</name>
+      <tableName>QUESTIONNAIRE</tableName>
+      <primaryKey>QUESTIONNAIREID</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+  </linkInformation>
+  <whereClause>%aditoprj%/frame/QUESTIONNAIRE/whereClause.js</whereClause>
+  <idStrategy v="4" />
+  <beforeStart>%aditoprj%/frame/QUESTIONNAIRE/beforeStart.js</beforeStart>
+  <beforeDelete>%aditoprj%/frame/QUESTIONNAIRE/beforeDelete.js</beforeDelete>
+  <grantDelete v="false" />
+  <grantDeleteProcess>%aditoprj%/frame/QUESTIONNAIRE/grantDeleteProcess.js</grantDeleteProcess>
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showSaveCancel v="false" />
+        <showCreate v="true" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="true" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <databaseColumns>
+    <column>
+      <name>QUESTIONNAIRE_QUESTIONNAIREID</name>
+      <tableName>QUESTIONNAIRE</tableName>
+      <columnName>QUESTIONNAIREID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/QUESTIONNAIRE/databasecolumns/questionnaire_questionnaireid/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>QUESTIONNAIRE_TITLE</name>
+      <tableName>QUESTIONNAIRE</tableName>
+      <columnName>TITLE</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="128" />
+    </column>
+    <column>
+      <name>QUESTIONNAIRE_DESCRIPTION</name>
+      <tableName>QUESTIONNAIRE</tableName>
+      <columnName>DESCRIPTION</columnName>
+      <dataTypeName>CLOB</dataTypeName>
+      <dataType v="2005" />
+      <precision v="2147483647" />
+      <scale>0</scale>
+    </column>
+    <column>
+      <name>QUESTIONNAIRE_DATE_NEW</name>
+      <tableName>QUESTIONNAIRE</tableName>
+      <columnName>DATE_NEW</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+      <presetNew>%aditoprj%/frame/QUESTIONNAIRE/databasecolumns/questionnaire_date_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>QUESTIONNAIRE_DATE_EDIT</name>
+      <tableName>QUESTIONNAIRE</tableName>
+      <columnName>DATE_EDIT</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+      <presetChange>%aditoprj%/frame/QUESTIONNAIRE/databasecolumns/questionnaire_date_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>QUESTIONNAIRE_USER_NEW</name>
+      <tableName>QUESTIONNAIRE</tableName>
+      <columnName>USER_NEW</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="50" />
+      <presetNew>%aditoprj%/frame/QUESTIONNAIRE/databasecolumns/questionnaire_user_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>QUESTIONNAIRE_USER_EDIT</name>
+      <tableName>QUESTIONNAIRE</tableName>
+      <columnName>USER_EDIT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="50" />
+      <presetChange>%aditoprj%/frame/QUESTIONNAIRE/databasecolumns/questionnaire_user_edit/presetChange.js</presetChange>
+    </column>
+  </databaseColumns>
+  <children>
+    <memo>
+      <name>edt_questionnaire_description</name>
+      <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+      <tableName>QUESTIONNAIRE</tableName>
+      <columnName>DESCRIPTION</columnName>
+      <dataType v="2005" />
+      <precision v="-1" />
+      <x v="120" />
+      <y v="45" />
+      <width v="710" />
+      <height v="90" />
+      <horizontalAnchor v="3" />
+      <tabOrder v="1" />
+      <labelText>Beschreibung</labelText>
+      <labelDistance v="100" />
+    </memo>
+    <edit>
+      <name>edt_questionnaire_title</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>QUESTIONNAIRE</tableName>
+      <columnName>TITLE</columnName>
+      <precision v="128" />
+      <x v="120" />
+      <y v="20" />
+      <width v="710" />
+      <horizontalAnchor v="3" />
+      <tabOrder v="0" />
+      <labelText>Name</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+    <label>
+      <name>lblCreatedEdited</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <valueProcess>%aditoprj%/frame/QUESTIONNAIRE/children/lblcreatededited/valueProcess.js</valueProcess>
+      <x v="20" />
+      <y v="565" />
+      <width v="830" />
+      <height v="15" />
+      <verticalAnchor v="5" />
+      <font name="Verdana" style="0" size="9" />
+      <labelAnchor v="0" />
+    </label>
+    <register>
+      <name>Register_0</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <y v="165" />
+      <width v="850" />
+      <height v="400" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <tabOrder v="2" />
+      <children>
+        <registerTab>
+          <name>questions</name>
+          <caption>&amp;amp;Fragen</caption>
+          <children>
+            <button>
+              <name>AButton_down</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/abutton_down/onClick.js</onClick>
+              <x v="805" />
+              <y v="225" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <font name="" style="1" size="11" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/abutton_down/enabledProcess.js</enabledProcess>
+              <tabOrder v="5" />
+              <imageData>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/abutton_down/imageData.png</imageData>
+              <labelVisible v="false" />
+            </button>
+            <button>
+              <name>AButton_up</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/abutton_up/onClick.js</onClick>
+              <x v="805" />
+              <y v="205" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <font name="" style="1" size="11" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/abutton_up/enabledProcess.js</enabledProcess>
+              <tabOrder v="4" />
+              <imageData>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/abutton_up/imageData.png</imageData>
+              <labelVisible v="false" />
+            </button>
+            <button>
+              <name>Button_0</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/button_0/onClick.js</onClick>
+              <x v="20" />
+              <y v="345" />
+              <width v="255" />
+              <height v="20" />
+              <verticalAnchor v="5" />
+              <caption>Interview prüfen</caption>
+              <enabledProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/button_0/enabledProcess.js</enabledProcess>
+              <tabOrder v="6" />
+              <imageData>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/button_0/imageData.png</imageData>
+            </button>
+            <comboBox>
+              <name>cbxComponent</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/cbxcomponent/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <searchLinkTableName>RELATION</searchLinkTableName>
+              <searchLinkColumnName>RELTITLE</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/cbxcomponent/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>mask</searchableModes>
+              <x v="610" />
+              <y v="5" />
+              <width v="70" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <staticContent />
+              <emptyElementEnabled v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>cbxTargetQuestionCode</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <dataType v="1" />
+              <contentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/cbxtargetquestioncode/contentProcess.js</contentProcess>
+              <searchableModes>none</searchableModes>
+              <x v="690" />
+              <y v="185" />
+              <width v="70" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <editable v="true" />
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>edt_AnswerText</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <searchableModes>none</searchableModes>
+              <x v="610" />
+              <y v="185" />
+              <width v="70" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>edtHinttext</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="535" />
+              <y v="5" />
+              <width v="70" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelText>Hilfstext</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="65" />
+            </edit>
+            <edit>
+              <name>edtQuestionCode</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="460" />
+              <y v="5" />
+              <width v="70" />
+              <visible v="false" />
+              <labelDistance v="65" />
+            </edit>
+            <edit>
+              <name>edtQuestionText</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="685" />
+              <y v="5" />
+              <width v="70" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelText>Frage</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="65" />
+            </edit>
+            <label>
+              <name>Label_calculation_Answer</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/label_calculation_answer/valueProcess.js</valueProcess>
+              <x v="355" />
+              <y v="185" />
+              <visible v="false" />
+              <labelVisible v="false" />
+            </label>
+            <label>
+              <name>Label_calculation_Question</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/label_calculation_question/valueProcess.js</valueProcess>
+              <x v="350" />
+              <y v="5" />
+              <visible v="false" />
+              <labelVisible v="false" />
+            </label>
+            <button>
+              <name>QButton_down</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/qbutton_down/onClick.js</onClick>
+              <x v="805" />
+              <y v="45" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <font name="" style="1" size="11" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/qbutton_down/enabledProcess.js</enabledProcess>
+              <tabOrder v="2" />
+              <imageData>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/qbutton_down/imageData.png</imageData>
+              <labelVisible v="false" />
+            </button>
+            <button>
+              <name>QButton_up</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/qbutton_up/onClick.js</onClick>
+              <x v="805" />
+              <y v="25" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <font name="" style="1" size="11" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/qbutton_up/enabledProcess.js</enabledProcess>
+              <tabOrder v="1" />
+              <imageData>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/qbutton_up/imageData.png</imageData>
+              <labelVisible v="false" />
+            </button>
+            <table>
+              <name>tblAnswer</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/tblanswer/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/tblanswer/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/tblanswer/rowDelete.js</rowDelete>
+              <separateSavable v="true" />
+              <displayContentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/tblanswer/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/tblanswer/idContentProcess.js</idContentProcess>
+              <contentProcessType v="0" />
+              <x v="20" />
+              <y v="205" />
+              <width v="785" />
+              <height v="135" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <enabledProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/tblanswer/enabledProcess.js</enabledProcess>
+              <utilizeRowId v="true" />
+              <tabOrder v="3" />
+              <grantArrangeColumns v="true" />
+              <labelText>Antworten</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Antwort</name>
+                  <columnName>Antwort</columnName>
+                  <width v="686" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/tblanswer/columnmetadata/antwort/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Zielcode</name>
+                  <columnName>Zielcode</columnName>
+                  <width v="74" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/tblanswer/columnmetadata/zielcode/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+            <table>
+              <name>tblQuestion</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/tblquestion/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/tblquestion/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/tblquestion/rowDelete.js</rowDelete>
+              <separateSavable v="true" />
+              <displayContentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/tblquestion/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/tblquestion/idContentProcess.js</idContentProcess>
+              <contentProcessType v="0" />
+              <x v="20" />
+              <y v="25" />
+              <width v="785" />
+              <height v="155" />
+              <horizontalAnchor v="3" />
+              <utilizeRowId v="true" />
+              <tabOrder v="0" />
+              <grantArrangeColumns v="true" />
+              <labelText>Fragen</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Code</name>
+                  <columnName>Code</columnName>
+                  <width v="67" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Typ</name>
+                  <columnName>Typ</columnName>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/tblquestion/columnmetadata/typ/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Frage</name>
+                  <columnName>Frage</columnName>
+                  <width v="267" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/tblquestion/columnmetadata/frage/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Hinweistext</name>
+                  <columnName>Hinweistext</columnName>
+                  <width v="277" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/questions/children/tblquestion/columnmetadata/hinweistext/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Frageauswertung</name>
+          <caption>Frageauswertung</caption>
+          <children>
+            <button>
+              <name>btn_openPers</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/frageauswertung/children/btn_openpers/onClick.js</onClick>
+              <x v="740" />
+              <y v="80" />
+              <width v="100" />
+              <height v="25" />
+              <caption>öffne Personen</caption>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/frageauswertung/children/btn_openpers/enabledProcess.js</enabledProcess>
+              <tabOrder v="2" />
+            </button>
+            <comboBox>
+              <name>cmb_answer</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/frageauswertung/children/cmb_answer/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <x v="90" />
+              <y v="50" />
+              <width v="640" />
+              <tabOrder v="1" />
+              <labelText>Antwort</labelText>
+              <labelDistance v="50" />
+            </comboBox>
+            <comboBox>
+              <name>cmb_question</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/frageauswertung/children/cmb_question/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <x v="90" />
+              <y v="20" />
+              <width v="640" />
+              <tabOrder v="0" />
+              <labelText>Frage</labelText>
+              <labelDistance v="50" />
+            </comboBox>
+            <table>
+              <name>tbl_pers</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <displayContentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/frageauswertung/children/tbl_pers/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="0" />
+              <x v="90" />
+              <y v="80" />
+              <width v="640" />
+              <height v="275" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <tabOrder v="-1" />
+              <labelText>Treffer</labelText>
+              <labelDistance v="50" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Anrede</name>
+                  <columnName>Anrede</columnName>
+                  <width v="60" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Vorname</name>
+                  <columnName>Vorname</columnName>
+                  <width v="97" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Nachname</name>
+                  <columnName>Nachname</columnName>
+                  <width v="137" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Firma</name>
+                  <columnName>Firma</columnName>
+                  <width v="313" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Rechte</name>
+          <caption>&amp;amp;Rechte</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/rechte/visibleProcess.js</visibleProcess>
+          <children>
+            <checkBox>
+              <name>cbx_right_del</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="95" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_edit</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="75" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="2" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_grant</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="115" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="1" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_read</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="55" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="3" />
+            </checkBox>
+            <comboBox>
+              <name>cmb_rights_roles</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/rechte/children/cmb_rights_roles/contentProcess.js</contentProcess>
+              <searchLinkTableName>TABLEACCESS</searchLinkTableName>
+              <searchLinkColumnName>ROLEID</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/rechte/children/cmb_rights_roles/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="30" />
+              <width v="40" />
+              <visible v="false" />
+              <tabOrder v="4" />
+              <emptyElementEnabled v="false" />
+              <labelText>Rolle</labelText>
+              <labelVisible v="false" />
+            </comboBox>
+            <table>
+              <name>tbl_rights</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/rechte/children/tbl_rights/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/rechte/children/tbl_rights/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/rechte/children/tbl_rights/rowDelete.js</rowDelete>
+              <grantRowCreateProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/rechte/children/tbl_rights/grantRowCreateProcess.js</grantRowCreateProcess>
+              <grantRowUpdateProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/rechte/children/tbl_rights/grantRowUpdateProcess.js</grantRowUpdateProcess>
+              <grantRowDeleteProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/rechte/children/tbl_rights/grantRowDeleteProcess.js</grantRowDeleteProcess>
+              <separateSavable v="false" />
+              <displayContentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/rechte/children/tbl_rights/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/rechte/children/tbl_rights/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <singleSelection v="true" />
+              <x v="20" />
+              <y v="30" />
+              <width v="630" />
+              <height v="325" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <tabOrder v="0" />
+              <labelText>Rechte auf den angezeigten Datensatz</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Rolle</name>
+                  <columnName>Rolle</columnName>
+                  <width v="205" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/rechte/children/tbl_rights/columnmetadata/rolle/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Lesen</name>
+                  <columnName>Lesen</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/rechte/children/tbl_rights/columnmetadata/lesen/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Aendern</name>
+                  <columnName>Ändern</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/rechte/children/tbl_rights/columnmetadata/aendern/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Loeschen</name>
+                  <columnName>Löschen</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/rechte/children/tbl_rights/columnmetadata/loeschen/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Rechte_vergeben</name>
+                  <columnName>Rechte vergeben</columnName>
+                  <width v="116" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/rechte/children/tbl_rights/columnmetadata/rechte_vergeben/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>admin</name>
+          <caption>Admin</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/admin/visibleProcess.js</visibleProcess>
+          <children>
+            <edit>
+              <name>DATE_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>QUESTIONNAIRE</tableName>
+              <columnName>DATE_EDIT</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetChange>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/admin/children/date_edit/presetChange.js</presetChange>
+              <searchableModes>mask</searchableModes>
+              <x v="140" />
+              <y v="195" />
+              <width v="140" />
+              <tabOrder v="3" />
+              <labelText>DATE_EDIT</labelText>
+              <labelDistance v="100" />
+            </edit>
+            <edit>
+              <name>DATE_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>QUESTIONNAIRE</tableName>
+              <columnName>DATE_NEW</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetNew>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/admin/children/date_new/presetNew.js</presetNew>
+              <searchableModes>mask</searchableModes>
+              <x v="140" />
+              <y v="170" />
+              <width v="140" />
+              <tabOrder v="2" />
+              <labelText>DATE_NEW</labelText>
+              <labelDistance v="100" />
+            </edit>
+            <edit>
+              <name>Edit_0</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <valueProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/admin/children/edit_0/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="140" />
+              <y v="110" />
+              <width v="250" />
+              <tabOrder v="1" />
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>idcolumn</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>QUESTIONNAIRE</tableName>
+              <columnName>QUESTIONNAIREID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <presetNew>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/admin/children/idcolumn/presetNew.js</presetNew>
+              <searchableModes>mask</searchableModes>
+              <x v="140" />
+              <y v="5" />
+              <width v="250" />
+              <tabOrder v="0" />
+              <labelText>IDCOLuMN</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <label>
+              <name>QUESTIONID</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/admin/children/questionid/valueProcess.js</valueProcess>
+              <onDoubleClick>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/admin/children/questionid/onDoubleClick.js</onDoubleClick>
+              <x v="140" />
+              <y v="55" />
+              <width v="250" />
+              <labelText>QUESTIONID</labelText>
+              <labelDistance v="80" />
+            </label>
+            <label>
+              <name>QUESTIONNAIREID</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <tableName>QUESTIONNAIRE</tableName>
+              <columnName>QUESTIONNAIREID</columnName>
+              <dataType v="1" />
+              <presetNew>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/admin/children/questionnaireid/presetNew.js</presetNew>
+              <onDoubleClick>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/admin/children/questionnaireid/onDoubleClick.js</onDoubleClick>
+              <x v="140" />
+              <y v="30" />
+              <width v="250" />
+              <labelText>QUESTIONNAIREID</labelText>
+              <labelDistance v="80" />
+            </label>
+            <label>
+              <name>TARGETQUESTION_ID</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/admin/children/targetquestion_id/valueProcess.js</valueProcess>
+              <onDoubleClick>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/admin/children/targetquestion_id/onDoubleClick.js</onDoubleClick>
+              <x v="140" />
+              <y v="80" />
+              <width v="250" />
+              <labelText>TARGETQUESTION_ID</labelText>
+              <labelDistance v="80" />
+            </label>
+            <edit>
+              <name>USER_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>QUESTIONNAIRE</tableName>
+              <columnName>USER_EDIT</columnName>
+              <precision v="50" />
+              <presetChange>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/admin/children/user_edit/presetChange.js</presetChange>
+              <searchableModes>mask</searchableModes>
+              <x v="140" />
+              <y v="250" />
+              <width v="140" />
+              <tabOrder v="5" />
+              <labelText>USER_EDIT</labelText>
+              <labelDistance v="100" />
+            </edit>
+            <edit>
+              <name>USER_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>QUESTIONNAIRE</tableName>
+              <columnName>USER_NEW</columnName>
+              <precision v="50" />
+              <presetNew>%aditoprj%/frame/QUESTIONNAIRE/children/register_0/children/admin/children/user_new/presetNew.js</presetNew>
+              <searchableModes>mask</searchableModes>
+              <x v="140" />
+              <y v="225" />
+              <width v="140" />
+              <tabOrder v="4" />
+              <labelText>USER_NEW</labelText>
+              <labelDistance v="100" />
+            </edit>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+  </children>
+  <tableView>
+    <tableViewProperties>
+      <columnProperty>
+        <name>QUESTIONNAIRE_TITLE</name>
+        <tableName>QUESTIONNAIRE</tableName>
+        <columnName>TITLE</columnName>
+        <label>Titel</label>
+        <width v="184" />
+      </columnProperty>
+      <columnProperty>
+        <name>QUESTIONNAIRE_DESCRIPTION</name>
+        <tableName>QUESTIONNAIRE</tableName>
+        <columnName>DESCRIPTION</columnName>
+        <label>Beschreibung</label>
+        <width v="403" />
+      </columnProperty>
+    </tableViewProperties>
+  </tableView>
+  <width v="850" />
+  <height v="580" />
+</frame>

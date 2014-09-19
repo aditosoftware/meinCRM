@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>THEMENBAUM</name>
+  <title>Themenbaum</title>
+  <icon>%aditoprj%/frame/THEMENBAUM/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/THEMENBAUM/iconInactive.png</iconInactive>
+  <description></description>
+  <alias>AO_DATEN</alias>
+  <afterStart>%aditoprj%/frame/THEMENBAUM/afterStart.js</afterStart>
+  <onRefresh>%aditoprj%/frame/THEMENBAUM/onRefresh.js</onRefresh>
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <checkBox>
+      <name>REMINDER_GROUP</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <dataType v="12" />
+      <valueProcess></valueProcess>
+      <valueTrue></valueTrue>
+      <viewValueTrue></viewValueTrue>
+      <valueFalse></valueFalse>
+      <viewValueFalse></viewValueFalse>
+      <onValidation>%aditoprj%/frame/THEMENBAUM/children/reminder_group/onValidation.js</onValidation>
+      <x v="630" />
+      <y v="280" />
+      <width v="20" />
+      <height v="20" />
+      <visibleProcess>%aditoprj%/frame/THEMENBAUM/children/reminder_group/visibleProcess.js</visibleProcess>
+      <enabled v="false" />
+      <enabledProcess>%aditoprj%/frame/THEMENBAUM/children/reminder_group/enabledProcess.js</enabledProcess>
+      <labelText>Gruppenaufgabe</labelText>
+      <labelVisible v="true" />
+      <labelOrientation v="1" />
+      <labelDistance v="5" />
+      <tabOrder v="11" />
+    </checkBox>
+    <edit>
+      <name>edt_Suche</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <precision v="100" />
+      <onValidation>%aditoprj%/frame/THEMENBAUM/children/edt_suche/onValidation.js</onValidation>
+      <x v="15" />
+      <y v="30" />
+      <width v="235" />
+      <horizontalAnchor v="1" />
+      <tabOrder v="1" />
+    </edit>
+    <button>
+      <name>btn_suche</name>
+      <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+      <onClick></onClick>
+      <x v="250" />
+      <y v="30" />
+      <width v="20" />
+      <height v="20" />
+      <horizontalAnchor v="1" />
+      <enabledProcess>%aditoprj%/frame/THEMENBAUM/children/btn_suche/enabledProcess.js</enabledProcess>
+      <tabOrder v="2" />
+      <imageData>%aditoprj%/frame/THEMENBAUM/children/btn_suche/imageData.png</imageData>
+    </button>
+    <button>
+      <name>btn_suchezurueck</name>
+      <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+      <onClick>%aditoprj%/frame/THEMENBAUM/children/btn_suchezurueck/onClick.js</onClick>
+      <x v="270" />
+      <y v="30" />
+      <width v="20" />
+      <height v="20" />
+      <horizontalAnchor v="1" />
+      <enabledProcess>%aditoprj%/frame/THEMENBAUM/children/btn_suchezurueck/enabledProcess.js</enabledProcess>
+      <tabOrder v="3" />
+      <imageData>%aditoprj%/frame/THEMENBAUM/children/btn_suchezurueck/imageData.png</imageData>
+    </button>
+    <list>
+      <name>REMINDER_ROLES</name>
+      <template>%aditoprj%/template/Template_List/Template_List.aod</template>
+      <dataType v="12" />
+      <valueProcess></valueProcess>
+      <contentProcess>%aditoprj%/frame/THEMENBAUM/children/reminder_roles/contentProcess.js</contentProcess>
+      <onValidation>%aditoprj%/frame/THEMENBAUM/children/reminder_roles/onValidation.js</onValidation>
+      <searchableModes>mask</searchableModes>
+      <x v="530" />
+      <y v="375" />
+      <width v="310" />
+      <height v="180" />
+      <verticalAnchor v="6" />
+      <visibleProcess>%aditoprj%/frame/THEMENBAUM/children/reminder_roles/visibleProcess.js</visibleProcess>
+      <enabled v="false" />
+      <enabledProcess>%aditoprj%/frame/THEMENBAUM/children/reminder_roles/enabledProcess.js</enabledProcess>
+      <tabOrder v="14" />
+      <labelText>Rollen</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="2" />
+    </list>
+    <checkBox>
+      <name>REMINDER</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <dataType v="12" />
+      <valueProcess></valueProcess>
+      <valueTrue></valueTrue>
+      <valueFalse></valueFalse>
+      <viewValueFalse></viewValueFalse>
+      <onValidation>%aditoprj%/frame/THEMENBAUM/children/reminder/onValidation.js</onValidation>
+      <x v="530" />
+      <y v="280" />
+      <visibleProcess>%aditoprj%/frame/THEMENBAUM/children/reminder/visibleProcess.js</visibleProcess>
+      <enabled v="false" />
+      <enabledProcess>%aditoprj%/frame/THEMENBAUM/children/reminder/enabledProcess.js</enabledProcess>
+      <labelText>Reminder</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="5" />
+      <tabOrder v="10" />
+    </checkBox>
+    <memo>
+      <name>DESCRIPTION</name>
+      <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+      <onValidation>%aditoprj%/frame/THEMENBAUM/children/description/onValidation.js</onValidation>
+      <x v="530" />
+      <y v="150" />
+      <width v="310" />
+      <height v="95" />
+      <enabled v="false" />
+      <enabledProcess>%aditoprj%/frame/THEMENBAUM/children/description/enabledProcess.js</enabledProcess>
+      <tabOrder v="9" />
+      <labelText>Beschreibung</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="5" />
+    </memo>
+    <edit>
+      <name>THEME</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <valueProcess>&#xD;
+</valueProcess>
+      <onValidation>%aditoprj%/frame/THEMENBAUM/children/theme/onValidation.js</onValidation>
+      <x v="530" />
+      <y v="110" />
+      <width v="310" />
+      <enabled v="false" />
+      <enabledProcess>%aditoprj%/frame/THEMENBAUM/children/theme/enabledProcess.js</enabledProcess>
+      <tabOrder v="8" />
+      <labelText>Bezeichnung</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="5" />
+      <labelAnchor v="0" />
+    </edit>
+    <checkBox>
+      <name>ISACTIVE</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <dataType v="1" />
+      <valueProcess>%aditoprj%/frame/THEMENBAUM/children/isactive/valueProcess.js</valueProcess>
+      <valueTrue></valueTrue>
+      <valueFalse></valueFalse>
+      <onValidation>%aditoprj%/frame/THEMENBAUM/children/isactive/onValidation.js</onValidation>
+      <x v="530" />
+      <y v="70" />
+      <enabled v="false" />
+      <enabledProcess>%aditoprj%/frame/THEMENBAUM/children/isactive/enabledProcess.js</enabledProcess>
+      <labelText>Aktiv</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="5" />
+      <labelAnchor v="0" />
+      <tabOrder v="7" />
+    </checkBox>
+    <comboBox>
+      <name>REMINDER_SUBJECT</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <valueProcess></valueProcess>
+      <contentProcess>%aditoprj%/frame/THEMENBAUM/children/reminder_subject/contentProcess.js</contentProcess>
+      <onValidationProcess>%aditoprj%/frame/THEMENBAUM/children/reminder_subject/onValidationProcess.js</onValidationProcess>
+      <searchableModes>none</searchableModes>
+      <x v="530" />
+      <y v="330" />
+      <width v="310" />
+      <visible v="true" />
+      <visibleProcess>%aditoprj%/frame/THEMENBAUM/children/reminder_subject/visibleProcess.js</visibleProcess>
+      <enabled v="false" />
+      <enabledProcess>%aditoprj%/frame/THEMENBAUM/children/reminder_subject/enabledProcess.js</enabledProcess>
+      <utilizeRowId v="false" />
+      <tabOrder v="13" />
+      <editable v="true" />
+      <emptyElementEnabled v="true" />
+      <labelText>Betreff</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="5" />
+    </comboBox>
+    <checkBox>
+      <name>REMINDER_SILENT</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <dataType v="12" />
+      <valueProcess></valueProcess>
+      <valueTrue></valueTrue>
+      <viewValueTrue></viewValueTrue>
+      <valueFalse></valueFalse>
+      <viewValueFalse></viewValueFalse>
+      <onValidation>%aditoprj%/frame/THEMENBAUM/children/reminder_silent/onValidation.js</onValidation>
+      <x v="765" />
+      <y v="280" />
+      <width v="20" />
+      <height v="20" />
+      <visibleProcess>%aditoprj%/frame/THEMENBAUM/children/reminder_silent/visibleProcess.js</visibleProcess>
+      <enabled v="false" />
+      <enabledProcess>%aditoprj%/frame/THEMENBAUM/children/reminder_silent/enabledProcess.js</enabledProcess>
+      <labelText>ohne Dialog</labelText>
+      <labelVisible v="true" />
+      <labelOrientation v="1" />
+      <labelDistance v="5" />
+      <tabOrder v="12" />
+    </checkBox>
+    <button>
+      <name>Button_down</name>
+      <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+      <onClick>%aditoprj%/frame/THEMENBAUM/children/button_down/onClick.js</onClick>
+      <x v="460" />
+      <y v="75" />
+      <width v="20" />
+      <height v="20" />
+      <font name="" style="1" size="" />
+      <enabled v="false" />
+      <enabledProcess>%aditoprj%/frame/THEMENBAUM/children/button_down/enabledProcess.js</enabledProcess>
+      <tabOrder v="6" />
+      <imageData>%aditoprj%/frame/THEMENBAUM/children/button_down/imageData.png</imageData>
+      <labelVisible v="false" />
+    </button>
+    <button>
+      <name>Button_up</name>
+      <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+      <onClick>%aditoprj%/frame/THEMENBAUM/children/button_up/onClick.js</onClick>
+      <x v="460" />
+      <y v="55" />
+      <width v="20" />
+      <height v="20" />
+      <font name="" style="1" size="" />
+      <enabled v="false" />
+      <enabledProcess>%aditoprj%/frame/THEMENBAUM/children/button_up/enabledProcess.js</enabledProcess>
+      <tabOrder v="5" />
+      <imageData>%aditoprj%/frame/THEMENBAUM/children/button_up/imageData.png</imageData>
+      <labelVisible v="false" />
+    </button>
+    <tree>
+      <name>treeThemen</name>
+      <template>%aditoprj%/template/Template_Tree/Template_Tree.aod</template>
+      <contentProcess>%aditoprj%/frame/THEMENBAUM/children/treethemen/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <singleSelection v="true" />
+      <singleSelectionProcess></singleSelectionProcess>
+      <x v="15" />
+      <y v="55" />
+      <width v="445" />
+      <height v="500" />
+      <verticalAnchor v="6" />
+      <enabled v="true" />
+      <enabledProcess></enabledProcess>
+      <tabOrder v="4" />
+      <popup>
+        <menuItem>
+          <name>Neues_Thema</name>
+          <caption>Neues Thema</caption>
+          <onClick>%aditoprj%/frame/THEMENBAUM/children/treethemen/popup/neues_thema/onClick.js</onClick>
+          <enabledProcess>%aditoprj%/frame/THEMENBAUM/children/treethemen/popup/neues_thema/enabledProcess.js</enabledProcess>
+          <visibleProcess></visibleProcess>
+          <isSeparator v="false" />
+        </menuItem>
+        <menuItem>
+          <name>Thema_loeschen</name>
+          <caption>Thema löschen</caption>
+          <onClick>%aditoprj%/frame/THEMENBAUM/children/treethemen/popup/thema_loeschen/onClick.js</onClick>
+          <enabledProcess>%aditoprj%/frame/THEMENBAUM/children/treethemen/popup/thema_loeschen/enabledProcess.js</enabledProcess>
+          <visibleProcess></visibleProcess>
+          <isSeparator v="false" />
+        </menuItem>
+        <menuItem>
+          <name>MenuItem</name>
+          <caption></caption>
+          <onClick></onClick>
+          <enabledProcess></enabledProcess>
+          <visibleProcess></visibleProcess>
+          <isSeparator v="true" />
+        </menuItem>
+        <menuItem>
+          <name>Thema_einfuegen</name>
+          <caption>Thema einfügen</caption>
+          <onClick>%aditoprj%/frame/THEMENBAUM/children/treethemen/popup/thema_einfuegen/onClick.js</onClick>
+          <enabledProcess>%aditoprj%/frame/THEMENBAUM/children/treethemen/popup/thema_einfuegen/enabledProcess.js</enabledProcess>
+          <visibleProcess></visibleProcess>
+          <isSeparator v="false" />
+        </menuItem>
+        <menuItem>
+          <name>Thema_ausschneiden</name>
+          <caption>Thema ausschneiden</caption>
+          <onClick>%aditoprj%/frame/THEMENBAUM/children/treethemen/popup/thema_ausschneiden/onClick.js</onClick>
+          <enabledProcess>%aditoprj%/frame/THEMENBAUM/children/treethemen/popup/thema_ausschneiden/enabledProcess.js</enabledProcess>
+          <visibleProcess></visibleProcess>
+          <isSeparator v="false" />
+        </menuItem>
+        <menuItem>
+          <name>MenuItem_2</name>
+          <caption></caption>
+          <onClick></onClick>
+          <enabledProcess></enabledProcess>
+          <visibleProcess></visibleProcess>
+          <isSeparator v="true" />
+        </menuItem>
+        <menuItem>
+          <name>Baum_oeffnen</name>
+          <caption>Baum öffnen</caption>
+          <onClick>%aditoprj%/frame/THEMENBAUM/children/treethemen/popup/baum_oeffnen/onClick.js</onClick>
+          <enabledProcess>%aditoprj%/frame/THEMENBAUM/children/treethemen/popup/baum_oeffnen/enabledProcess.js</enabledProcess>
+          <visibleProcess></visibleProcess>
+          <isSeparator v="false" />
+        </menuItem>
+        <menuItem>
+          <name>Baum_schliessen</name>
+          <caption>Baum schließen</caption>
+          <onClick>%aditoprj%/frame/THEMENBAUM/children/treethemen/popup/baum_schliessen/onClick.js</onClick>
+          <enabledProcess>%aditoprj%/frame/THEMENBAUM/children/treethemen/popup/baum_schliessen/enabledProcess.js</enabledProcess>
+          <visibleProcess></visibleProcess>
+          <isSeparator v="false" />
+        </menuItem>
+      </popup>
+    </tree>
+    <comboBox>
+      <name>cmb_ThemenTyp</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <valueProcess></valueProcess>
+      <presetNew></presetNew>
+      <contentProcess>%aditoprj%/frame/THEMENBAUM/children/cmb_thementyp/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <x v="15" />
+      <y v="5" />
+      <width v="275" />
+      <tabOrder v="0" />
+      <emptyElementEnabled v="false" />
+      <labelText></labelText>
+      <labelVisible v="false" />
+      <labelDistance v="50" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <button>
+      <name>btn_Speichern</name>
+      <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+      <onClick>%aditoprj%/frame/THEMENBAUM/children/btn_speichern/onClick.js</onClick>
+      <x v="695" />
+      <y v="55" />
+      <width v="140" />
+      <height v="30" />
+      <horizontalAnchor v="1" />
+      <verticalAnchor v="4" />
+      <caption>Speichern</caption>
+      <visible v="true" />
+      <enabled v="false" />
+      <enabledProcess>%aditoprj%/frame/THEMENBAUM/children/btn_speichern/enabledProcess.js</enabledProcess>
+      <tabOrder v="15" />
+    </button>
+  </children>
+  <tableView />
+  <width v="850" />
+</frame>

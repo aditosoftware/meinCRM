@@ -1,0 +1,3433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>ORG</name>
+  <title>Firma</title>
+  <icon>%aditoprj%/frame/ORG/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/ORG/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type public
+@status released
+@desc [Frame für die Verwaltung der Firmen]
+
+@module Standard
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <linkInformation>
+    <linkInformation>
+      <name>feeb791e-615c-4061-ae4b-4a39af48421f</name>
+      <tableName>RELATION</tableName>
+      <primaryKey>RELATIONID</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+    <linkInformation>
+      <name>1b2d3513-6e5e-484e-9f74-fbca71a6c23a</name>
+      <tableName>ADDRESS</tableName>
+      <primaryKey>ADDRESSID</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+    <linkInformation>
+      <name>7b1c2385-584e-43fd-8716-0145def71dc8</name>
+      <tableName>ORG</tableName>
+      <primaryKey>ORGID</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+  </linkInformation>
+  <whereClause>%aditoprj%/frame/ORG/whereClause.js</whereClause>
+  <orderByClause>%aditoprj%/frame/ORG/orderByClause.js</orderByClause>
+  <idStrategy v="4" />
+  <beforeStart>%aditoprj%/frame/ORG/beforeStart.js</beforeStart>
+  <afterStart>%aditoprj%/frame/ORG/afterStart.js</afterStart>
+  <onClose>%aditoprj%/frame/ORG/onClose.js</onClose>
+  <beforeSave>%aditoprj%/frame/ORG/beforeSave.js</beforeSave>
+  <afterSave>%aditoprj%/frame/ORG/afterSave.js</afterSave>
+  <beforeDelete>%aditoprj%/frame/ORG/beforeDelete.js</beforeDelete>
+  <afterDelete>%aditoprj%/frame/ORG/afterDelete.js</afterDelete>
+  <beforeCancel>%aditoprj%/frame/ORG/beforeCancel.js</beforeCancel>
+  <afterCancel>%aditoprj%/frame/ORG/afterCancel.js</afterCancel>
+  <afterEdit>%aditoprj%/frame/ORG/afterEdit.js</afterEdit>
+  <currentContentProcess>%aditoprj%/frame/ORG/currentContentProcess.js</currentContentProcess>
+  <grantCreateProcess>%aditoprj%/frame/ORG/grantCreateProcess.js</grantCreateProcess>
+  <grantUpdateProcess>%aditoprj%/frame/ORG/grantUpdateProcess.js</grantUpdateProcess>
+  <grantDeleteProcess>%aditoprj%/frame/ORG/grantDeleteProcess.js</grantDeleteProcess>
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <customComponents>
+          <rcCommandButton>
+            <name>Serienaktion</name>
+            <title>Serienaktion</title>
+            <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/imageData.png</imageData>
+            <enabledProcess>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/enabledProcess.js</enabledProcess>
+            <ribbonElementPriority>TOP</ribbonElementPriority>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+            <commandButtonKind>ACTION_AND_POPUP_MAIN_ACTION</commandButtonKind>
+            <popupStyle>MENU</popupStyle>
+            <items>
+              <rcCommandButton>
+                <name>Serienbrief</name>
+                <title>Serienbrief</title>
+                <toolTip>Serienbrief an alle selektierten Datensätze</toolTip>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/serienbrief/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/serienbrief/onClick.js</onClick>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>Export</name>
+                <title>Export</title>
+                <toolTip>Export aller selektierten Datensätze</toolTip>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/export/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/export/onClick.js</onClick>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>Historie</name>
+                <title>Historie</title>
+                <toolTip>neue Historie für alle selektierten Datensätze</toolTip>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/historie/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/historie/onClick.js</onClick>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>zu_Serienmail</name>
+                <title>zu Serienmail</title>
+                <toolTip>Die aktuelle Selektion einem Serien-E-Mail hinzufügen</toolTip>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/zu_serienmail/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/zu_serienmail/onClick.js</onClick>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>aus_Serienmail</name>
+                <title>aus Serienmail</title>
+                <toolTip>Die aktuelle Selektion aus einer Serien-E-Mail löschen</toolTip>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/aus_serienmail/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/aus_serienmail/onClick.js</onClick>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>zu_Verteiler</name>
+                <title>zu Verteiler</title>
+                <toolTip>Die aktuelle Selektion einem Verteiler hinzufügen</toolTip>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/zu_verteiler/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/zu_verteiler/onClick.js</onClick>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>aus_Verteiler</name>
+                <title>aus Verteiler</title>
+                <toolTip>Die aktuelle Selektion aus einem Verteiler löschen</toolTip>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/aus_verteiler/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/aus_verteiler/onClick.js</onClick>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>zu_Kampagne</name>
+                <title>zu Kampagne</title>
+                <toolTip>Die aktuelle Selektion einer Kampagne hinzufügen</toolTip>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/zu_kampagne/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/zu_kampagne/onClick.js</onClick>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>aus_Kampagne</name>
+                <title>aus Kampagne</title>
+                <toolTip>Diesen Datensatz aus der markierten Kampagne entfernen</toolTip>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/aus_kampagne/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/aus_kampagne/onClick.js</onClick>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>Attribute_eintragen</name>
+                <title>Attribute eintragen</title>
+                <toolTip>fügt ein Attribut bei alle selektierten Datensätze ein</toolTip>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/attribute_eintragen/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/attribute_eintragen/onClick.js</onClick>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>Attribute_loeschen</name>
+                <title>Attribute löschen</title>
+                <toolTip>löscht ein Attribut bei alle selektierten Datensätze</toolTip>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/attribute_loeschen/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/attribute_loeschen/onClick.js</onClick>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>oeffne_alle_Personen</name>
+                <title>öffne alle Personen</title>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/oeffne_alle_personen/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/oeffne_alle_personen/onClick.js</onClick>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>GoogleMaps_Route</name>
+                <title>GoogleMaps Route</title>
+                <toolTip>Routenplanung</toolTip>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/googlemaps_route/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/serienaktion/items/googlemaps_route/onClick.js</onClick>
+                <enabled v="false" />
+              </rcCommandButton>
+            </items>
+          </rcCommandButton>
+          <rcSeparator>
+            <name>Separator</name>
+          </rcSeparator>
+          <rcCommandButton>
+            <name>Reports</name>
+            <title>Reports</title>
+            <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/reports/imageData.png</imageData>
+            <enabledProcess>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/reports/enabledProcess.js</enabledProcess>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+            <commandButtonKind>ACTION_AND_POPUP_MAIN_ACTION</commandButtonKind>
+            <popupStyle>MENU</popupStyle>
+            <items>
+              <rcCommandButton>
+                <name>Firmenliste</name>
+                <title>Firmenliste</title>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/reports/items/firmenliste/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/reports/items/firmenliste/onClick.js</onClick>
+                <enabledProcess>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/reports/items/firmenliste/enabledProcess.js</enabledProcess>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>Bonitaet_und_Risiko</name>
+                <title>Bonität und Risiko</title>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/reports/items/bonitaet_und_risiko/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/reports/items/bonitaet_und_risiko/onClick.js</onClick>
+                <enabledProcess>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_search/customcomponents/reports/items/bonitaet_und_risiko/enabledProcess.js</enabledProcess>
+              </rcCommandButton>
+            </items>
+          </rcCommandButton>
+        </customComponents>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showSaveCancel v="false" />
+        <showCreate v="true" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <customComponents>
+          <rcCommandButton>
+            <name>Neueintrag</name>
+            <title>Neueintrag</title>
+            <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/neueintrag/imageData.png</imageData>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+            <commandButtonKind>ACTION_AND_POPUP_MAIN_ACTION</commandButtonKind>
+            <popupStyle>MENU</popupStyle>
+            <items>
+              <rcCommandButton>
+                <name>neue_Aufgabe</name>
+                <title>neue Aufgabe</title>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/neueintrag/items/neue_aufgabe/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/neueintrag/items/neue_aufgabe/onClick.js</onClick>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>neuer_Termin</name>
+                <title>neuer Termin</title>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/neueintrag/items/neuer_termin/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/neueintrag/items/neuer_termin/onClick.js</onClick>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>neue_Person</name>
+                <title>neue Person</title>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/neueintrag/items/neue_person/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/neueintrag/items/neue_person/onClick.js</onClick>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>neue_Historie</name>
+                <title>neue Historie</title>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/neueintrag/items/neue_historie/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/neueintrag/items/neue_historie/onClick.js</onClick>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>neues_Modul</name>
+                <title>neues Modul</title>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/neueintrag/items/neues_modul/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/neueintrag/items/neues_modul/onClick.js</onClick>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>einer_Kampagne_hinzufuegen</name>
+                <title>einer Kampagne hinzufügen</title>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/neueintrag/items/einer_kampagne_hinzufuegen/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/neueintrag/items/einer_kampagne_hinzufuegen/onClick.js</onClick>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>einem_Verteiler_hinzufuegen</name>
+                <title>einem Verteiler hinzufügen</title>
+                <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/neueintrag/items/einem_verteiler_hinzufuegen/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/neueintrag/items/einem_verteiler_hinzufuegen/onClick.js</onClick>
+              </rcCommandButton>
+            </items>
+          </rcCommandButton>
+          <rcSeparator>
+            <name>Separator_2</name>
+          </rcSeparator>
+          <rcCommandButton>
+            <name>Einzelbrief</name>
+            <title>Einzelbrief</title>
+            <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/einzelbrief/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/einzelbrief/onClick.js</onClick>
+            <ribbonElementPriority>LOW</ribbonElementPriority>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+          <rcCommandButton>
+            <name>Landkarte</name>
+            <title>Landkarte</title>
+            <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/landkarte/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/landkarte/onClick.js</onClick>
+            <ribbonElementPriority>LOW</ribbonElementPriority>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+          <rcCommandButton>
+            <name>Kundenstammblatt</name>
+            <title>Kundenstammblatt</title>
+            <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/kundenstammblatt/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/kundenstammblatt/onClick.js</onClick>
+            <ribbonElementPriority>LOW</ribbonElementPriority>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+          <rcCommandButton>
+            <name>Umkreissuche</name>
+            <title>Umkreissuche</title>
+            <toolTip>maximal 50km</toolTip>
+            <imageData>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/umkreissuche/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/ORG/ribbon/ribbontasks/task_view/customcomponents/umkreissuche/onClick.js</onClick>
+            <ribbonElementPriority>LOW</ribbonElementPriority>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+        </customComponents>
+        <toolTip>Anzeige</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="true" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <databaseColumns>
+    <column>
+      <name>ORG_ORGID</name>
+      <tableName>ORG</tableName>
+      <columnName>ORGID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/ORG/databasecolumns/org_orgid/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>RELATION_RELATIONID</name>
+      <tableName>RELATION</tableName>
+      <columnName>RELATIONID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/ORG/databasecolumns/relation_relationid/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>ORG_DATE_NEW</name>
+      <tableName>ORG</tableName>
+      <columnName>DATE_NEW</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+      <presetNew>%aditoprj%/frame/ORG/databasecolumns/org_date_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>ORG_DATE_EDIT</name>
+      <tableName>ORG</tableName>
+      <columnName>DATE_EDIT</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+      <presetNew>%aditoprj%/frame/ORG/databasecolumns/org_date_edit/presetNew.js</presetNew>
+      <presetChange>%aditoprj%/frame/ORG/databasecolumns/org_date_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>ORG_USER_NEW</name>
+      <tableName>ORG</tableName>
+      <columnName>USER_NEW</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+      <presetNew>%aditoprj%/frame/ORG/databasecolumns/org_user_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>ORG_USER_EDIT</name>
+      <tableName>ORG</tableName>
+      <columnName>USER_EDIT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+      <presetNew>%aditoprj%/frame/ORG/databasecolumns/org_user_edit/presetNew.js</presetNew>
+      <presetChange>%aditoprj%/frame/ORG/databasecolumns/org_user_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>RELATION_ORG_ID</name>
+      <tableName>RELATION</tableName>
+      <columnName>ORG_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <valueProcess>%aditoprj%/frame/ORG/databasecolumns/relation_org_id/valueProcess.js</valueProcess>
+    </column>
+    <column>
+      <name>RELATION_STATUS</name>
+      <tableName>RELATION</tableName>
+      <columnName>STATUS</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/ORG/databasecolumns/relation_status/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>RELATION_LANG</name>
+      <tableName>RELATION</tableName>
+      <columnName>LANG</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/ORG/databasecolumns/relation_lang/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>ORG_CUSTOMERCODE</name>
+      <tableName>ORG</tableName>
+      <columnName>CUSTOMERCODE</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+    </column>
+    <column>
+      <name>ORG_ORGNAME</name>
+      <tableName>ORG</tableName>
+      <columnName>ORGNAME</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="250" />
+    </column>
+    <column>
+      <name>RELATION_DATE_NEW</name>
+      <tableName>RELATION</tableName>
+      <columnName>DATE_NEW</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+      <presetNew>%aditoprj%/frame/ORG/databasecolumns/relation_date_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>RELATION_USER_NEW</name>
+      <tableName>RELATION</tableName>
+      <columnName>USER_NEW</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+      <presetNew>%aditoprj%/frame/ORG/databasecolumns/relation_user_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>RELATION_USER_EDIT</name>
+      <tableName>RELATION</tableName>
+      <columnName>USER_EDIT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+      <presetChange>%aditoprj%/frame/ORG/databasecolumns/relation_user_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>RELATION_DATE_EDIT</name>
+      <tableName>RELATION</tableName>
+      <columnName>DATE_EDIT</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+      <presetChange>%aditoprj%/frame/ORG/databasecolumns/relation_date_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>ORG_LEGALFORM</name>
+      <tableName>ORG</tableName>
+      <columnName>LEGALFORM</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+    </column>
+    <column>
+      <name>RELATION_LETTERSALUTATION</name>
+      <tableName>RELATION</tableName>
+      <columnName>LETTERSALUTATION</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="100" />
+    </column>
+    <column>
+      <name>RELATION_SOURCE</name>
+      <tableName>RELATION</tableName>
+      <columnName>SOURCE</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+      <scale>0</scale>
+      <presetNew>%aditoprj%/frame/ORG/databasecolumns/relation_source/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>ORG_ORGINFO</name>
+      <tableName>ORG</tableName>
+      <columnName>ORGINFO</columnName>
+      <dataTypeName>CLOB</dataTypeName>
+      <dataType v="2005" />
+      <precision v="2147483647" />
+      <scale>0</scale>
+    </column>
+    <column>
+      <name>ADDRESS_ADDRESSID</name>
+      <tableName>ADDRESS</tableName>
+      <columnName>ADDRESSID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <valueProcess>%aditoprj%/frame/ORG/databasecolumns/address_addressid/valueProcess.js</valueProcess>
+    </column>
+    <column>
+      <name>RELATION_ADDRESS_ID</name>
+      <tableName>RELATION</tableName>
+      <columnName>ADDRESS_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+    </column>
+    <column>
+      <name>ADDRESS_COUNTRY</name>
+      <tableName>ADDRESS</tableName>
+      <columnName>COUNTRY</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="2" />
+    </column>
+    <column>
+      <name>ADDRESS_ZIP</name>
+      <tableName>ADDRESS</tableName>
+      <columnName>ZIP</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+    </column>
+    <column>
+      <name>ORG_SALESAREA</name>
+      <tableName>ORG</tableName>
+      <columnName>SALESAREA</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+      <valueProcess>%aditoprj%/frame/ORG/databasecolumns/org_salesarea/valueProcess.js</valueProcess>
+    </column>
+    <column>
+      <name>ADDRESS_CITY</name>
+      <tableName>ADDRESS</tableName>
+      <columnName>CITY</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+    </column>
+    <column>
+      <name>ORG_VATID</name>
+      <tableName>ORG</tableName>
+      <columnName>VATID</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="30" />
+      <scale>0</scale>
+    </column>
+    <column>
+      <name>ORG_TAXID</name>
+      <tableName>ORG</tableName>
+      <columnName>TAXID</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="30" />
+      <scale>0</scale>
+    </column>
+  </databaseColumns>
+  <blobDatabaseColumns>
+    <blobColumn>
+      <name>RELATION_DOCUMENT</name>
+      <tableName>RELATION</tableName>
+      <columnName>DOCUMENT</columnName>
+      <rowIdProcess></rowIdProcess>
+    </blobColumn>
+  </blobDatabaseColumns>
+  <children>
+    <register>
+      <name>Register_detail</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <y v="165" />
+      <width v="850" />
+      <height v="400" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/visibleProcess.js</visibleProcess>
+      <tabOrder v="11" />
+      <children>
+        <registerTab>
+          <name>Personen</name>
+          <caption>&amp;amp;Personen</caption>
+          <children>
+            <button>
+              <name>btn_resetHistoryFilter</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/ORG/children/register_detail/children/personen/children/btn_resethistoryfilter/onClick.js</onClick>
+              <x v="735" />
+              <y v="355" />
+              <width v="90" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <caption>zurücksetzen</caption>
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/children/personen/children/btn_resethistoryfilter/visibleProcess.js</visibleProcess>
+              <enabledProcess>%aditoprj%/frame/ORG/children/register_detail/children/personen/children/btn_resethistoryfilter/enabledProcess.js</enabledProcess>
+              <tabOrder v="1" />
+            </button>
+            <button>
+              <name>btn_setHistoryFilter</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/ORG/children/register_detail/children/personen/children/btn_sethistoryfilter/onClick.js</onClick>
+              <x v="640" />
+              <y v="355" />
+              <width v="90" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <caption>Filter setzen</caption>
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/children/personen/children/btn_sethistoryfilter/visibleProcess.js</visibleProcess>
+              <tabOrder v="0" />
+              <labelText>Filter</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="35" />
+              <labelAnchor v="0" />
+            </button>
+            <label>
+              <name>Label_history_filter</name>
+              <valueProcess>%aditoprj%/frame/ORG/children/register_detail/children/personen/children/label_history_filter/valueProcess.js</valueProcess>
+              <x v="20" />
+              <y v="170" />
+              <width v="330" />
+              <font name="Verdana" style="0" size="11" />
+              <backgroundColor v="0x00000000" />
+              <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/children/personen/children/label_history_filter/visibleProcess.js</visibleProcess>
+              <labelFont name="" style="0" size="11" />
+              <labelAnchor v="0" />
+            </label>
+            <table>
+              <name>Table_history</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/ORG/children/register_detail/children/personen/children/table_history/onDoubleClick.js</onDoubleClick>
+              <separateSavable v="false" />
+              <displayContentProcess>%aditoprj%/frame/ORG/children/register_detail/children/personen/children/table_history/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <singleSelection v="true" />
+              <x v="20" />
+              <y v="190" />
+              <width v="805" />
+              <height v="160" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <grantArrangeColumns v="true" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>I</name>
+                  <columnName>I</columnName>
+                  <width v="20" />
+                  <dataType v="12" />
+                  <rendererType v="3" />
+                  <rendererDataProcess>%aditoprj%/frame/ORG/children/register_detail/children/personen/children/table_history/columnmetadata/i/rendererDataProcess.js</rendererDataProcess>
+                  <rendererCachingType v="3" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Datum</name>
+                  <columnName>Datum</columnName>
+                  <width v="80" />
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Medium</name>
+                  <columnName>Medium</columnName>
+                  <width v="90" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Betrifft</name>
+                  <columnName>Betrifft</columnName>
+                  <width v="180" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Mitarbeiter</name>
+                  <columnName>Mitarbeiter</columnName>
+                  <width v="140" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Themenbaum</name>
+                  <columnName>Themen</columnName>
+                  <width v="200" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Info</name>
+                  <columnName>Info</columnName>
+                  <width v="75" />
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>Dokumente_oeffnen</name>
+                  <caption>Dokumente öffnen</caption>
+                  <onClick>%aditoprj%/frame/ORG/children/register_detail/children/personen/children/table_history/popup/dokumente_oeffnen/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/ORG/children/register_detail/children/personen/children/table_history/popup/dokumente_oeffnen/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>Email_oeffnen</name>
+                  <caption>E-Mail öffnen</caption>
+                  <onClick>%aditoprj%/frame/ORG/children/register_detail/children/personen/children/table_history/popup/email_oeffnen/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/ORG/children/register_detail/children/personen/children/table_history/popup/email_oeffnen/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+            </table>
+            <table>
+              <name>Table_pers</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/ORG/children/register_detail/children/personen/children/table_pers/onDoubleClick.js</onDoubleClick>
+              <separateSavable v="false" />
+              <displayContentProcess>%aditoprj%/frame/ORG/children/register_detail/children/personen/children/table_pers/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="0" />
+              <singleSelection v="true" />
+              <x v="20" />
+              <y v="25" />
+              <width v="805" />
+              <height v="135" />
+              <horizontalAnchor v="3" />
+              <utilizeRowId v="true" />
+              <utilizeRowFontColor v="true" />
+              <grantArrangeColumns v="true" />
+              <labelText>Personen</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Anrede</name>
+                  <columnName>Anrede</columnName>
+                  <width v="50" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Titel</name>
+                  <columnName>Titel</columnName>
+                  <width v="71" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Vorname</name>
+                  <columnName>Vorname</columnName>
+                  <width v="104" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Nachname</name>
+                  <columnName>Nachname</columnName>
+                  <width v="136" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Abteilung</name>
+                  <columnName>Abteilung</columnName>
+                  <width v="129" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Funktion</name>
+                  <columnName>Funktion</columnName>
+                  <width v="122" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Position</name>
+                  <columnName>Position</columnName>
+                  <width v="167" />
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>in_Zwischenablage_uebernehmen</name>
+                  <caption>in Zwischenablage übernehmen</caption>
+                  <onClick>%aditoprj%/frame/ORG/children/register_detail/children/personen/children/table_pers/popup/in_zwischenablage_uebernehmen/onClick.js</onClick>
+                  <enabledProcess></enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Adressen</name>
+          <caption>A&amp;amp;dressen</caption>
+          <children>
+            <edit>
+              <name>ADDRESS</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <userKeystrokeAssignment>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/address/userKeystrokeAssignment.js</userKeystrokeAssignment>
+              <onUserKeystroke>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/address/onUserKeystroke.js</onUserKeystroke>
+              <searchLinkTableName>ADDRESS</searchLinkTableName>
+              <searchLinkColumnName>ADDRESS</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/address/searchLinkCondition.js</searchLinkCondition>
+              <x v="205" />
+              <y v="5" />
+              <width v="60" />
+              <visible v="false" />
+              <labelText>Straße</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>ADDRESSADDITION</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <userKeystrokeAssignment>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/addressaddition/userKeystrokeAssignment.js</userKeystrokeAssignment>
+              <onUserKeystroke>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/addressaddition/onUserKeystroke.js</onUserKeystroke>
+              <searchLinkTableName>ADDRESS</searchLinkTableName>
+              <searchLinkColumnName>ADDRESSADDITION</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/addressaddition/searchLinkCondition.js</searchLinkCondition>
+              <x v="355" />
+              <y v="5" />
+              <width v="60" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelText>Adresszusatz</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>ADDRIDENTIFIER</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <valueProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/addridentifier/valueProcess.js</valueProcess>
+              <userKeystrokeAssignment>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/addridentifier/userKeystrokeAssignment.js</userKeystrokeAssignment>
+              <onUserKeystroke>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/addridentifier/onUserKeystroke.js</onUserKeystroke>
+              <searchLinkTableName>ADDRESS</searchLinkTableName>
+              <searchLinkColumnName>ADDRIDENTIFIER</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/addridentifier/searchLinkCondition.js</searchLinkCondition>
+              <x v="125" />
+              <y v="5" />
+              <width v="60" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelText>Bezeichung</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>BUILDINGNO</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <userKeystrokeAssignment>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/buildingno/userKeystrokeAssignment.js</userKeystrokeAssignment>
+              <onUserKeystroke>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/buildingno/onUserKeystroke.js</onUserKeystroke>
+              <searchLinkTableName>ADDRESS</searchLinkTableName>
+              <searchLinkColumnName>BUILDINGNO</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/buildingno/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>mask</searchableModes>
+              <x v="295" />
+              <y v="5" />
+              <width v="60" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelText>Nr.</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="10" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>CITY</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <onValidation>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/city/onValidation.js</onValidation>
+              <userKeystrokeAssignment>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/city/userKeystrokeAssignment.js</userKeystrokeAssignment>
+              <onUserKeystroke>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/city/onUserKeystroke.js</onUserKeystroke>
+              <searchLinkTableName>ADDRESS</searchLinkTableName>
+              <searchLinkColumnName>CITY</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/city/searchLinkCondition.js</searchLinkCondition>
+              <x v="445" />
+              <y v="5" />
+              <width v="60" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelText>Ort</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </edit>
+            <comboBox>
+              <name>cmb_addrselect</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/cmb_addrselect/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <userKeystrokeAssignment>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/cmb_addrselect/userKeystrokeAssignment.js</userKeystrokeAssignment>
+              <onUserKeystroke>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/cmb_addrselect/onUserKeystroke.js</onUserKeystroke>
+              <searchLinkTableName>ADDRESS</searchLinkTableName>
+              <searchLinkColumnName>ADDR_TYPE</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/cmb_addrselect/searchLinkCondition.js</searchLinkCondition>
+              <x v="20" />
+              <y v="5" />
+              <width v="60" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <emptyElementEnabled v="false" />
+              <labelText>Adresstyp</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>COUNTRY</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <dataType v="1" />
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/country/contentProcess.js</contentProcess>
+              <userKeystrokeAssignment>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/country/userKeystrokeAssignment.js</userKeystrokeAssignment>
+              <onUserKeystroke>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/country/onUserKeystroke.js</onUserKeystroke>
+              <searchLinkTableName>ADDRESS</searchLinkTableName>
+              <searchLinkColumnName>COUNTRY</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/country/searchLinkCondition.js</searchLinkCondition>
+              <x v="745" />
+              <y v="5" />
+              <width v="60" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <staticContent />
+              <labelText>Land</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>DISTRICT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <userKeystrokeAssignment>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/district/userKeystrokeAssignment.js</userKeystrokeAssignment>
+              <onUserKeystroke>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/district/onUserKeystroke.js</onUserKeystroke>
+              <searchLinkTableName>ADDRESS</searchLinkTableName>
+              <searchLinkColumnName>DISTRICT</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/district/searchLinkCondition.js</searchLinkCondition>
+              <x v="520" />
+              <y v="5" />
+              <width v="60" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelText>Distrikt</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>REGION</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <userKeystrokeAssignment>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/region/userKeystrokeAssignment.js</userKeystrokeAssignment>
+              <onUserKeystroke>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/region/onUserKeystroke.js</onUserKeystroke>
+              <searchLinkTableName>ADDRESS</searchLinkTableName>
+              <searchLinkColumnName>REGION</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/region/searchLinkCondition.js</searchLinkCondition>
+              <x v="605" />
+              <y v="5" />
+              <width v="60" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelText>Region</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>STATE</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <userKeystrokeAssignment>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/state/userKeystrokeAssignment.js</userKeystrokeAssignment>
+              <onUserKeystroke>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/state/onUserKeystroke.js</onUserKeystroke>
+              <searchLinkTableName>ADDRESS</searchLinkTableName>
+              <searchLinkColumnName>STATE</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/state/searchLinkCondition.js</searchLinkCondition>
+              <x v="670" />
+              <y v="5" />
+              <width v="60" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelText>Staat</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <table>
+              <name>tbl_ADDRESS</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/rowDelete.js</rowDelete>
+              <grantRowDeleteProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/grantRowDeleteProcess.js</grantRowDeleteProcess>
+              <separateSavable v="false" />
+              <displayContentProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <singleSelection v="true" />
+              <x v="20" />
+              <y v="25" />
+              <width v="805" />
+              <height v="325" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <utilizeRowBackgroundColor v="true" />
+              <tabOrder v="0" />
+              <grantArrangeColumns v="true" />
+              <toolTip>gelb hinterlegt bedeutet Standard</toolTip>
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Type</name>
+                  <columnName>Type</columnName>
+                  <width v="109" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/columnmetadata/type/editorComponentProcess.js</editorComponentProcess>
+                  <mandatoryInputProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/columnmetadata/type/mandatoryInputProcess.js</mandatoryInputProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Bezeichnung</name>
+                  <columnName>Bezeichnung</columnName>
+                  <width v="81" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/columnmetadata/bezeichnung/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Strasse</name>
+                  <columnName>Straße</columnName>
+                  <width v="97" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/columnmetadata/strasse/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Hausnr</name>
+                  <columnName>Hausnr.</columnName>
+                  <width v="58" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/columnmetadata/hausnr/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Zusatz</name>
+                  <columnName>Zusatz</columnName>
+                  <width v="49" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/columnmetadata/zusatz/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>PLZ</name>
+                  <columnName>PLZ</columnName>
+                  <width v="42" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/columnmetadata/plz/editorComponentProcess.js</editorComponentProcess>
+                  <mandatoryInputProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/columnmetadata/plz/mandatoryInputProcess.js</mandatoryInputProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Ort</name>
+                  <columnName>Ort</columnName>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/columnmetadata/ort/editorComponentProcess.js</editorComponentProcess>
+                  <mandatoryInputProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/columnmetadata/ort/mandatoryInputProcess.js</mandatoryInputProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Landkreis</name>
+                  <columnName>Landkreis</columnName>
+                  <width v="86" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/columnmetadata/landkreis/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Bezirk</name>
+                  <columnName>Bezirk</columnName>
+                  <width v="65" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/columnmetadata/bezirk/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Staat</name>
+                  <columnName>Staat</columnName>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/columnmetadata/staat/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Land</name>
+                  <columnName>Land</columnName>
+                  <width v="38" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/columnmetadata/land/editorComponentProcess.js</editorComponentProcess>
+                  <mandatoryInputProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/columnmetadata/land/mandatoryInputProcess.js</mandatoryInputProcess>
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>Standard_setzen</name>
+                  <caption>Standard setzen</caption>
+                  <onClick>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/popup/standard_setzen/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/tbl_address/popup/standard_setzen/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+            </table>
+            <edit>
+              <name>ZIP</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <onValidation>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/zip/onValidation.js</onValidation>
+              <userKeystrokeAssignment>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/zip/userKeystrokeAssignment.js</userKeystrokeAssignment>
+              <onUserKeystroke>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/zip/onUserKeystroke.js</onUserKeystroke>
+              <searchLinkTableName>ADDRESS</searchLinkTableName>
+              <searchLinkColumnName>ZIP</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/adressen/children/zip/searchLinkCondition.js</searchLinkCondition>
+              <x v="385" />
+              <y v="5" />
+              <width v="60" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelText>PLZ</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Attribute</name>
+          <caption>&amp;amp;Eigenschaften</caption>
+          <children>
+            <comboBox>
+              <name>attributelist1</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/attributelist1/contentProcess.js</contentProcess>
+              <onValidationProcess>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/attributelist1/onValidationProcess.js</onValidationProcess>
+              <searchableModes>none</searchableModes>
+              <x v="500" />
+              <y v="5" />
+              <width v="50" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <maximumRowCount v="20" />
+              <labelText>Attribut</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+              <toolTip>Die Zahlen in Klammern bezeichnen, wie oft
+das Attribut mindestens vorkommen muss
+und maximal vorkommen darf.</toolTip>
+            </comboBox>
+            <comboBox>
+              <name>attributelist2</name>
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/attributelist2/contentProcess.js</contentProcess>
+              <onValidationProcess>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/attributelist2/onValidationProcess.js</onValidationProcess>
+              <searchableModes>none</searchableModes>
+              <x v="500" />
+              <y v="5" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelText>Attribut/Wert</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>cbx_attrvalue</name>
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/cbx_attrvalue/contentProcess.js</contentProcess>
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_ID</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/cbx_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/cbx_attrvalue/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="5" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <staticContent />
+              <maximumRowCount v="30" />
+              <labelText>Eigenschaft</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <checkBox>
+              <name>chk_attrvalue</name>
+              <valueTrue>Y</valueTrue>
+              <valueFalse>N</valueFalse>
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_CHAR</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/chk_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/chk_attrvalue/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="5" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <tabOrder v="-1" />
+            </checkBox>
+            <table>
+              <name>classification</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/classification/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/classification/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/classification/rowDelete.js</rowDelete>
+              <grantRowDeleteProcess>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/classification/grantRowDeleteProcess.js</grantRowDeleteProcess>
+              <separateSavable v="false" />
+              <displayContentProcess>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/classification/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/classification/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="595" />
+              <height v="325" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <utilizeRowFontColor v="true" />
+              <utilizeRowBackgroundColor v="true" />
+              <tabOrder v="0" />
+              <labelText>Attribute</labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>1_Attribut</name>
+                  <columnName>1. Attribut</columnName>
+                  <width v="200" />
+                  <dataType v="1" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/classification/columnmetadata/1_attribut/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>2_Attribut</name>
+                  <columnName>2. Attribut</columnName>
+                  <width v="201" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/classification/columnmetadata/2_attribut/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Wert</name>
+                  <columnName>Wert</columnName>
+                  <actionProcess></actionProcess>
+                  <width v="168" />
+                  <dataType v="1" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/classification/columnmetadata/wert/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+            <edit>
+              <name>date_attrvalue</name>
+              <dataType v="93" />
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <inputFormat>dd.MM.yyyy</inputFormat>
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_DATE</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/date_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/date_attrvalue/searchFields.js</searchFields>
+              <calendarSupport v="true" />
+              <x v="500" />
+              <y v="5" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelText>Wert</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>float_attrvalue</name>
+              <dataType v="6" />
+              <outputFormat>#,##0.00</outputFormat>
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_DOUBLE</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/float_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/float_attrvalue/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="5" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelText>Wert</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>int_attrvalue</name>
+              <dataType v="4" />
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_INT</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/int_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/int_attrvalue/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="5" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelText>Wert</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <comboBox>
+              <name>LANG</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <tableName>RELATION</tableName>
+              <columnName>LANG</columnName>
+              <dataType v="4" />
+              <precision v="10" />
+              <presetNew>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/lang/presetNew.js</presetNew>
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/lang/contentProcess.js</contentProcess>
+              <mandatoryInput v="true" />
+              <x v="630" />
+              <y v="105" />
+              <width v="200" />
+              <horizontalAnchor v="2" />
+              <tabOrder v="3" />
+              <emptyElementEnabled v="false" />
+              <labelText>Sprache</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>LEGALFORM</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <tableName>ORG</tableName>
+              <columnName>LEGALFORM</columnName>
+              <dataType v="4" />
+              <precision v="10" />
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/legalform/contentProcess.js</contentProcess>
+              <mandatoryInput v="false" />
+              <x v="630" />
+              <y v="185" />
+              <width v="200" />
+              <horizontalAnchor v="2" />
+              <tabOrder v="5" />
+              <labelText>Gesellschaftsform</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>LETTERSALUTATION</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>RELATION</tableName>
+              <columnName>LETTERSALUTATION</columnName>
+              <dataType v="12" />
+              <precision v="100" />
+              <searchableModes>mask</searchableModes>
+              <x v="630" />
+              <y v="145" />
+              <width v="200" />
+              <horizontalAnchor v="2" />
+              <tabOrder v="4" />
+              <labelText>abweichende Briefanrede</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <labelAnchor v="0" />
+            </edit>
+            <comboBox>
+              <name>SOURCE</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <tableName>RELATION</tableName>
+              <columnName>SOURCE</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <presetNew></presetNew>
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/source/contentProcess.js</contentProcess>
+              <readOnly v="false" />
+              <x v="630" />
+              <y v="25" />
+              <width v="200" />
+              <horizontalAnchor v="2" />
+              <enabledProcess></enabledProcess>
+              <utilizeRowId v="true" />
+              <tabOrder v="1" />
+              <editable v="true" />
+              <labelText>Herkunft</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>STATUS</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <tableName>RELATION</tableName>
+              <columnName>STATUS</columnName>
+              <dataType v="4" />
+              <precision v="10" />
+              <presetNew>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/status/presetNew.js</presetNew>
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/status/contentProcess.js</contentProcess>
+              <x v="630" />
+              <y v="65" />
+              <width v="200" />
+              <horizontalAnchor v="2" />
+              <tabOrder v="2" />
+              <labelText>Status</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>string_attrvalue</name>
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_CHAR</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/string_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/ORG/children/register_detail/children/attribute/children/string_attrvalue/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="5" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelText>Wert</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>TAXCODE</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>ORG</tableName>
+              <columnName>TAXID</columnName>
+              <dataType v="12" />
+              <precision v="30" />
+              <searchableModes>mask</searchableModes>
+              <x v="630" />
+              <y v="265" />
+              <width v="200" />
+              <horizontalAnchor v="2" />
+              <tabOrder v="7" />
+              <labelText>Steuernummer</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>VATCODE</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>ORG</tableName>
+              <columnName>VATID</columnName>
+              <dataType v="12" />
+              <precision v="30" />
+              <searchableModes>mask</searchableModes>
+              <x v="630" />
+              <y v="225" />
+              <width v="200" />
+              <horizontalAnchor v="2" />
+              <tabOrder v="6" />
+              <labelText>Umsatzsteuernummer</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <labelAnchor v="0" />
+            </edit>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>360</name>
+          <caption>&amp;amp;360°</caption>
+          <children>
+            <list>
+              <name>Liste_modul</name>
+              <template>%aditoprj%/template/Template_List/Template_List.aod</template>
+              <valueProcess>%aditoprj%/frame/ORG/children/register_detail/children/360/children/liste_modul/valueProcess.js</valueProcess>
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/360/children/liste_modul/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <x v="735" />
+              <y v="135" />
+              <width v="110" />
+              <height v="215" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="6" />
+              <tabOrder v="1" />
+              <staticContent />
+              <labelText>Auswahl</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+            </list>
+            <list>
+              <name>Liste_year</name>
+              <template>%aditoprj%/template/Template_List/Template_List.aod</template>
+              <valueProcess>%aditoprj%/frame/ORG/children/register_detail/children/360/children/liste_year/valueProcess.js</valueProcess>
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/360/children/liste_year/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <x v="735" />
+              <y v="40" />
+              <width v="110" />
+              <height v="70" />
+              <horizontalAnchor v="2" />
+              <utilizeRowId v="false" />
+              <tabOrder v="0" />
+              <labelText>Jahr</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+            </list>
+            <table>
+              <name>Tabelle_modul</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/ORG/children/register_detail/children/360/children/tabelle_modul/onDoubleClick.js</onDoubleClick>
+              <separateSavable v="false" />
+              <displayContentProcess>%aditoprj%/frame/ORG/children/register_detail/children/360/children/tabelle_modul/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="700" />
+              <height v="325" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <grantArrangeColumns v="true" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>I_2</name>
+                  <columnName>I</columnName>
+                  <width v="21" />
+                  <dataType v="12" />
+                  <rendererType v="3" />
+                  <rendererDataProcess>%aditoprj%/frame/ORG/children/register_detail/children/360/children/tabelle_modul/columnmetadata/i_2/rendererDataProcess.js</rendererDataProcess>
+                  <rendererCachingType v="3" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Modul</name>
+                  <columnName>Modul</columnName>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Kategorie</name>
+                  <columnName>Kategorie</columnName>
+                  <width v="110" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Code</name>
+                  <columnName>Code</columnName>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Status</name>
+                  <columnName>Status</columnName>
+                  <width v="82" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>erstellt</name>
+                  <columnName>erstellt</columnName>
+                  <width v="88" />
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Info_2</name>
+                  <columnName>Info</columnName>
+                  <width v="227" />
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>neu_hinzufuegen</name>
+                  <caption>neu hinzufügen</caption>
+                  <onClick>%aditoprj%/frame/ORG/children/register_detail/children/360/children/tabelle_modul/popup/neu_hinzufuegen/onClick.js</onClick>
+                  <enabledProcess></enabledProcess>
+                  <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/children/360/children/tabelle_modul/popup/neu_hinzufuegen/visibleProcess.js</visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>aus_dem_markierten_Verteiler_entfernen</name>
+                  <caption>aus dem markierten Verteiler entfernen</caption>
+                  <onClick>%aditoprj%/frame/ORG/children/register_detail/children/360/children/tabelle_modul/popup/aus_dem_markierten_verteiler_entfernen/onClick.js</onClick>
+                  <enabledProcess></enabledProcess>
+                  <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/children/360/children/tabelle_modul/popup/aus_dem_markierten_verteiler_entfernen/visibleProcess.js</visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>Stufe_fuer_markierte_Kampagnen_setzen</name>
+                  <caption>Stufe für markierte Kampagnen setzen</caption>
+                  <onClick>%aditoprj%/frame/ORG/children/register_detail/children/360/children/tabelle_modul/popup/stufe_fuer_markierte_kampagnen_setzen/onClick.js</onClick>
+                  <enabledProcess></enabledProcess>
+                  <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/children/360/children/tabelle_modul/popup/stufe_fuer_markierte_kampagnen_setzen/visibleProcess.js</visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>aus_der_markierten_Kampagne_entfernen</name>
+                  <caption>aus der markierten Kampagne entfernen</caption>
+                  <onClick>%aditoprj%/frame/ORG/children/register_detail/children/360/children/tabelle_modul/popup/aus_der_markierten_kampagne_entfernen/onClick.js</onClick>
+                  <enabledProcess></enabledProcess>
+                  <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/children/360/children/tabelle_modul/popup/aus_der_markierten_kampagne_entfernen/visibleProcess.js</visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Konzernstruktur</name>
+          <caption>&amp;amp;Beziehungen</caption>
+          <children>
+            <comboBox>
+              <name>cmbRelationType</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/cmbrelationtype/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <onValidationProcess>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/cmbrelationtype/onValidationProcess.js</onValidationProcess>
+              <searchableModes>none</searchableModes>
+              <x v="20" />
+              <y v="15" />
+              <width v="205" />
+              <tabOrder v="0" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <button>
+              <name>cmd_insertclassification_0</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/cmd_insertclassification_0/onClick.js</onClick>
+              <x v="555" />
+              <y v="15" />
+              <width v="20" />
+              <height v="20" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/cmd_insertclassification_0/visibleProcess.js</visibleProcess>
+              <enabledProcess>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/cmd_insertclassification_0/enabledProcess.js</enabledProcess>
+              <tabOrder v="2" />
+              <imageData>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/cmd_insertclassification_0/imageData.png</imageData>
+              <labelAnchor v="0" />
+              <toolTip>Hinzufügen</toolTip>
+            </button>
+            <lookup>
+              <name>lupTarget</name>
+              <template>%aditoprj%/template/Template_Lookup/Template_Lookup.aod</template>
+              <alwaysEditable v="true" />
+              <onValidation>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/luptarget/onValidation.js</onValidation>
+              <selectClause>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/luptarget/selectClause.js</selectClause>
+              <fromClause>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/luptarget/fromClause.js</fromClause>
+              <whereClause>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/luptarget/whereClause.js</whereClause>
+              <x v="230" />
+              <y v="15" />
+              <width v="320" />
+              <height v="20" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/luptarget/visibleProcess.js</visibleProcess>
+              <enabledProcess>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/luptarget/enabledProcess.js</enabledProcess>
+              <popupWidth v="594" />
+              <popupHeight v="385" />
+              <tabOrder v="1" />
+              <labelText>Partner</labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <labelDistance v="5" />
+              <labelAnchor v="0" />
+              <columnProperties>
+                <lookupColumnMetaData>
+                  <name>Organisation</name>
+                  <columnName>Organisation</columnName>
+                  <searchable v="true" />
+                  <width v="133" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Nachname</name>
+                  <columnName>Nachname</columnName>
+                  <searchable v="true" />
+                  <width v="96" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Vorname</name>
+                  <columnName>Vorname</columnName>
+                  <searchable v="true" />
+                  <width v="102" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>PLZ</name>
+                  <columnName>PLZ</columnName>
+                  <searchable v="true" />
+                  <width v="37" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Ort</name>
+                  <columnName>Ort</columnName>
+                  <searchable v="true" />
+                  <width v="93" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Funktion</name>
+                  <columnName>Funktion</columnName>
+                  <searchable v="true" />
+                  <width v="89" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+              </columnProperties>
+            </lookup>
+            <memo>
+              <name>ObjRelInfo</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <valueProcess>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/objrelinfo/valueProcess.js</valueProcess>
+              <x v="585" />
+              <y v="40" />
+              <width v="175" />
+              <height v="310" />
+              <verticalAnchor v="6" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/objrelinfo/visibleProcess.js</visibleProcess>
+              <tabOrder v="3" />
+              <labelText>Beschreibung der Beziehung</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="6" />
+            </memo>
+            <tree>
+              <name>relTree</name>
+              <template>%aditoprj%/template/Template_Tree/Template_Tree.aod</template>
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/reltree/contentProcess.js</contentProcess>
+              <onDoubleClick>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/reltree/onDoubleClick.js</onDoubleClick>
+              <alwaysEditable v="true" />
+              <singleSelection v="true" />
+              <singleSelectionProcess></singleSelectionProcess>
+              <x v="20" />
+              <y v="40" />
+              <width v="555" />
+              <height v="310" />
+              <verticalAnchor v="6" />
+              <tabOrder v="-1" />
+              <popup>
+                <menuItem>
+                  <name>Objekt_oeffnen</name>
+                  <caption>Objekt öffnen</caption>
+                  <onClick>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/reltree/popup/objekt_oeffnen/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/reltree/popup/objekt_oeffnen/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>Beschreibung_speichern</name>
+                  <caption>Beschreibung speichern</caption>
+                  <onClick>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/reltree/popup/beschreibung_speichern/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/reltree/popup/beschreibung_speichern/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>Eintrag_Loeschen</name>
+                  <caption>Eintrag Löschen</caption>
+                  <onClick>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/reltree/popup/eintrag_loeschen/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/ORG/children/register_detail/children/konzernstruktur/children/reltree/popup/eintrag_loeschen/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+              <labelText>Strukturansicht</labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+            </tree>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Allgemein</name>
+          <caption>A&amp;amp;llgemein</caption>
+          <children>
+            <button>
+              <name>Button_Merge</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/ORG/children/register_detail/children/allgemein/children/button_merge/onClick.js</onClick>
+              <x v="695" />
+              <y v="280" />
+              <width v="125" />
+              <height v="20" />
+              <caption>Zusammenführen</caption>
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/children/allgemein/children/button_merge/visibleProcess.js</visibleProcess>
+              <enabledProcess>%aditoprj%/frame/ORG/children/register_detail/children/allgemein/children/button_merge/enabledProcess.js</enabledProcess>
+              <tabOrder v="8" />
+              <labelVisible v="false" />
+              <toolTip>Alle Daten der ausgewählten Firma (Quelle) werden zu der aktuellen Firma übertragen.
+Die ausgewählten Firma (Quelle) wird gelöscht !!</toolTip>
+            </button>
+            <comboBox>
+              <name>cmb_dp_category</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/allgemein/children/cmb_dp_category/contentProcess.js</contentProcess>
+              <searchLinkTableName>ADVERTISINGSHIPMENT</searchLinkTableName>
+              <searchLinkColumnName>SHIPREASON</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/allgemein/children/cmb_dp_category/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>none</searchableModes>
+              <x v="550" />
+              <y v="5" />
+              <width v="70" />
+              <visible v="false" />
+              <tabOrder v="3" />
+              <staticContent />
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <documentFolder>
+              <name>Dokumentenmappe</name>
+              <template>%aditoprj%/template/Template_Document/Template_Document.aod</template>
+              <tableName>RELATION</tableName>
+              <columnName>DOCUMENT</columnName>
+              <x v="20" />
+              <y v="225" />
+              <width v="315" />
+              <height v="125" />
+              <verticalAnchor v="6" />
+              <tabOrder v="1" />
+              <labelText>Dokumente</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+            </documentFolder>
+            <memo>
+              <name>memo_dp_reason</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <x v="625" />
+              <y v="5" />
+              <visible v="false" />
+              <tabOrder v="4" />
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+            </memo>
+            <lookup>
+              <name>Merge_RELATION_ID</name>
+              <template>%aditoprj%/template/Template_Lookup/Template_Lookup.aod</template>
+              <presetNew>%aditoprj%/frame/ORG/children/register_detail/children/allgemein/children/merge_relation_id/presetNew.js</presetNew>
+              <onDoubleClick>%aditoprj%/frame/ORG/children/register_detail/children/allgemein/children/merge_relation_id/onDoubleClick.js</onDoubleClick>
+              <alwaysEditable v="true" />
+              <selectClause>%aditoprj%/frame/ORG/children/register_detail/children/allgemein/children/merge_relation_id/selectClause.js</selectClause>
+              <fromClause>%aditoprj%/frame/ORG/children/register_detail/children/allgemein/children/merge_relation_id/fromClause.js</fromClause>
+              <whereClause>%aditoprj%/frame/ORG/children/register_detail/children/allgemein/children/merge_relation_id/whereClause.js</whereClause>
+              <x v="425" />
+              <y v="260" />
+              <width v="395" />
+              <height v="20" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/children/allgemein/children/merge_relation_id/visibleProcess.js</visibleProcess>
+              <enabledProcess>%aditoprj%/frame/ORG/children/register_detail/children/allgemein/children/merge_relation_id/enabledProcess.js</enabledProcess>
+              <popupWidth v="594" />
+              <popupHeight v="385" />
+              <tabOrder v="7" />
+              <labelText>Quelle</labelText>
+              <labelDistance v="60" />
+              <labelAnchor v="0" />
+              <columnProperties>
+                <lookupColumnMetaData>
+                  <name>KundenNr</name>
+                  <columnName>KundenNr.</columnName>
+                  <searchable v="true" />
+                  <width v="71" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Organisation</name>
+                  <columnName>Organisation</columnName>
+                  <searchable v="true" />
+                  <width v="271" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Land</name>
+                  <columnName>Land</columnName>
+                  <searchable v="true" />
+                  <width v="39" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>PLZ</name>
+                  <columnName>PLZ</columnName>
+                  <searchable v="true" />
+                  <width v="45" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Ort</name>
+                  <columnName>Ort</columnName>
+                  <searchable v="true" />
+                  <width v="116" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+              </columnProperties>
+            </lookup>
+            <memo>
+              <name>orginfo</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <tableName>ORG</tableName>
+              <columnName>ORGINFO</columnName>
+              <dataType v="2005" />
+              <precision v="-1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="315" />
+              <height v="175" />
+              <tabOrder v="0" />
+              <labelText>Information</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+            </memo>
+            <table>
+              <name>tbl_commrestriction</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/ORG/children/register_detail/children/allgemein/children/tbl_commrestriction/rowCreate.js</rowCreate>
+              <rowDelete>%aditoprj%/frame/ORG/children/register_detail/children/allgemein/children/tbl_commrestriction/rowDelete.js</rowDelete>
+              <separateSavable v="false" />
+              <displayContentProcess>%aditoprj%/frame/ORG/children/register_detail/children/allgemein/children/tbl_commrestriction/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/ORG/children/register_detail/children/allgemein/children/tbl_commrestriction/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <x v="365" />
+              <y v="25" />
+              <width v="455" />
+              <height v="175" />
+              <horizontalAnchor v="3" />
+              <utilizeRowId v="true" />
+              <tabOrder v="2" />
+              <labelText>Werbeeinschränkung</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Medium_2</name>
+                  <columnName>Medium</columnName>
+                  <width v="125" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/allgemein/children/tbl_commrestriction/columnmetadata/medium_2/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Beginn</name>
+                  <columnName>Beginn</columnName>
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Mitarbeiter_2</name>
+                  <columnName>Mitarbeiter</columnName>
+                  <width v="95" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Grund</name>
+                  <columnName>Grund</columnName>
+                  <width v="135" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/allgemein/children/tbl_commrestriction/columnmetadata/grund/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Umsatz</name>
+          <caption>Umsatz</caption>
+          <visible v="true" />
+          <enabled v="true" />
+          <children>
+            <treeTable>
+              <name>tbl_umsatz</name>
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/umsatz/children/tbl_umsatz/contentProcess.js</contentProcess>
+              <showHeader v="true" />
+              <x v="10" />
+              <y v="20" />
+              <width v="830" />
+              <height v="325" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <headerFont name="" style="0" size="12" />
+            </treeTable>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Aufgaben</name>
+          <caption>A&amp;amp;T</caption>
+          <children>
+            <button>
+              <name>btn_resetTEFilter</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/ORG/children/register_detail/children/aufgaben/children/btn_resettefilter/onClick.js</onClick>
+              <x v="735" />
+              <y v="355" />
+              <width v="90" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <caption>zurücksetzen</caption>
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/children/aufgaben/children/btn_resettefilter/visibleProcess.js</visibleProcess>
+              <tabOrder v="0" />
+            </button>
+            <button>
+              <name>btn_setTEFilter</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/ORG/children/register_detail/children/aufgaben/children/btn_settefilter/onClick.js</onClick>
+              <x v="640" />
+              <y v="355" />
+              <width v="90" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <caption>Filter setzen</caption>
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/children/aufgaben/children/btn_settefilter/visibleProcess.js</visibleProcess>
+              <tabOrder v="1" />
+              <labelText>Filter</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="35" />
+              <labelAnchor v="0" />
+            </button>
+            <table>
+              <name>tbl_Aufgabe</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/ORG/children/register_detail/children/aufgaben/children/tbl_aufgabe/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/ORG/children/register_detail/children/aufgaben/children/tbl_aufgabe/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="805" />
+              <height v="120" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <utilizeRowFontColor v="true" />
+              <utilizeRowBackgroundColor v="true" />
+              <grantArrangeColumns v="true" />
+              <labelText>Aufgaben</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>I_3</name>
+                  <columnName>I</columnName>
+                  <width v="19" />
+                  <rendererType v="3" />
+                  <rendererDataProcess>%aditoprj%/frame/ORG/children/register_detail/children/aufgaben/children/tbl_aufgabe/columnmetadata/i_3/rendererDataProcess.js</rendererDataProcess>
+                  <rendererCachingType v="3" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>faellig_am</name>
+                  <columnName>fällig am</columnName>
+                  <width v="90" />
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Status_2</name>
+                  <columnName>Status</columnName>
+                  <width v="108" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Betreff</name>
+                  <columnName>Betreff</columnName>
+                  <width v="174" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>erstellt_2</name>
+                  <columnName>erstellt</columnName>
+                  <width v="85" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>zustaendig</name>
+                  <columnName>zuständig</columnName>
+                  <width v="155" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Beschreibung</name>
+                  <columnName>Beschreibung</columnName>
+                  <width v="150" />
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>Erledigt_setzen</name>
+                  <caption>Erledigt setzen</caption>
+                  <onClick>%aditoprj%/frame/ORG/children/register_detail/children/aufgaben/children/tbl_aufgabe/popup/erledigt_setzen/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/ORG/children/register_detail/children/aufgaben/children/tbl_aufgabe/popup/erledigt_setzen/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>Weitergeben</name>
+                  <caption>Weitergeben</caption>
+                  <onClick>%aditoprj%/frame/ORG/children/register_detail/children/aufgaben/children/tbl_aufgabe/popup/weitergeben/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/ORG/children/register_detail/children/aufgaben/children/tbl_aufgabe/popup/weitergeben/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>Verschieben</name>
+                  <caption>Verschieben</caption>
+                  <onClick>%aditoprj%/frame/ORG/children/register_detail/children/aufgaben/children/tbl_aufgabe/popup/verschieben/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/ORG/children/register_detail/children/aufgaben/children/tbl_aufgabe/popup/verschieben/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+            </table>
+            <table>
+              <name>tbl_Termine</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/ORG/children/register_detail/children/aufgaben/children/tbl_termine/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/ORG/children/register_detail/children/aufgaben/children/tbl_termine/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="180" />
+              <width v="805" />
+              <height v="175" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="5" />
+              <utilizeRowId v="true" />
+              <utilizeRowFontColor v="true" />
+              <utilizeRowBackgroundColor v="true" />
+              <grantArrangeColumns v="true" />
+              <labelText>Termine</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>I_4</name>
+                  <columnName>I</columnName>
+                  <width v="20" />
+                  <rendererType v="3" />
+                  <rendererDataProcess>%aditoprj%/frame/ORG/children/register_detail/children/aufgaben/children/tbl_termine/columnmetadata/i_4/rendererDataProcess.js</rendererDataProcess>
+                  <rendererCachingType v="3" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>beginnt_um</name>
+                  <columnName>beginnt um</columnName>
+                  <width v="109" />
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy HH:mm</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>endet_um</name>
+                  <columnName>endet um</columnName>
+                  <width v="112" />
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy HH:mm</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Betreff_2</name>
+                  <columnName>Betreff</columnName>
+                  <width v="151" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>erstellt_3</name>
+                  <columnName>erstellt</columnName>
+                  <width v="85" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>zustaendig_2</name>
+                  <columnName>zuständig</columnName>
+                  <width v="155" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Beschreibung_2</name>
+                  <columnName>Beschreibung</columnName>
+                  <width v="150" />
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>Historie_eintragen</name>
+                  <caption>Historie eintragen</caption>
+                  <onClick>%aditoprj%/frame/ORG/children/register_detail/children/aufgaben/children/tbl_termine/popup/historie_eintragen/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/ORG/children/register_detail/children/aufgaben/children/tbl_termine/popup/historie_eintragen/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+            </table>
+          </children>
+          <valueProcess>%aditoprj%/frame/ORG/children/register_detail/children/aufgaben/valueProcess.js</valueProcess>
+        </registerTab>
+        <registerTab>
+          <name>Dublette</name>
+          <caption>&amp;amp;Dubletten</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/children/dublette/visibleProcess.js</visibleProcess>
+          <children>
+            <button>
+              <name>Button_Merge_Dub</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/ORG/children/register_detail/children/dublette/children/button_merge_dub/onClick.js</onClick>
+              <x v="690" />
+              <y v="355" />
+              <width v="140" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <caption>Zusammenführen</caption>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/ORG/children/register_detail/children/dublette/children/button_merge_dub/enabledProcess.js</enabledProcess>
+              <tabOrder v="0" />
+              <labelVisible v="false" />
+              <toolTip>Hiermit werden alle Daten der markierten Firma zu der aktuellen Firma übertragen 
+und danach die markierte Firma gelöscht !</toolTip>
+            </button>
+            <table>
+              <name>tbl_dubletten_org</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/ORG/children/register_detail/children/dublette/children/tbl_dubletten_org/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/ORG/children/register_detail/children/dublette/children/tbl_dubletten_org/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <singleSelection v="true" />
+              <x v="20" />
+              <y v="25" />
+              <width v="810" />
+              <height v="325" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/children/dublette/children/tbl_dubletten_org/visibleProcess.js</visibleProcess>
+              <utilizeRowId v="true" />
+              <grantArrangeColumns v="true" />
+              <labelText>mögliche Dublette</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Organisation</name>
+                  <columnName>Organisation</columnName>
+                  <width v="278" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>country</name>
+                  <columnName>Land</columnName>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>PLZ_2</name>
+                  <columnName>PLZ</columnName>
+                  <width v="57" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Ort_2</name>
+                  <columnName>Ort</columnName>
+                  <width v="145" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Strasse_2</name>
+                  <columnName>Strasse</columnName>
+                  <width v="100" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Status_3</name>
+                  <columnName>Status</columnName>
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>9acca17c-a15d-4d9d-9fdf-86ac485995c4</name>
+                  <caption>keine Dublette</caption>
+                  <onClick>%aditoprj%/frame/ORG/children/register_detail/children/dublette/children/tbl_dubletten_org/popup/9acca17c-a15d-4d9d-9fdf-86ac485995c4/onClick.js</onClick>
+                  <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/children/dublette/children/tbl_dubletten_org/popup/9acca17c-a15d-4d9d-9fdf-86ac485995c4/visibleProcess.js</visibleProcess>
+                </menuItem>
+              </popup>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Rechte</name>
+          <caption>&amp;amp;Rechte</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/children/rechte/visibleProcess.js</visibleProcess>
+          <children>
+            <checkBox>
+              <name>cbx_right_del</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="90" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="2" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_edit</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="70" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="1" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_grant</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="110" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="3" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_read</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="50" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+            </checkBox>
+            <comboBox>
+              <name>cmb_rights_roles</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/rechte/children/cmb_rights_roles/contentProcess.js</contentProcess>
+              <searchLinkTableName>TABLEACCESS</searchLinkTableName>
+              <searchLinkColumnName>ROLEID</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/rechte/children/cmb_rights_roles/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="25" />
+              <width v="40" />
+              <visible v="false" />
+              <tabOrder v="4" />
+              <emptyElementEnabled v="false" />
+              <labelText>Rolle</labelText>
+              <labelVisible v="false" />
+            </comboBox>
+            <label>
+              <name>Label_calculation</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/ORG/children/register_detail/children/rechte/children/label_calculation/valueProcess.js</valueProcess>
+              <x v="655" />
+              <y v="130" />
+              <backgroundColor v="0x00000000" />
+              <visible v="false" />
+              <labelVisible v="false" />
+            </label>
+            <table>
+              <name>tbl_rights</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/ORG/children/register_detail/children/rechte/children/tbl_rights/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/ORG/children/register_detail/children/rechte/children/tbl_rights/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/ORG/children/register_detail/children/rechte/children/tbl_rights/rowDelete.js</rowDelete>
+              <grantRowCreateProcess>%aditoprj%/frame/ORG/children/register_detail/children/rechte/children/tbl_rights/grantRowCreateProcess.js</grantRowCreateProcess>
+              <grantRowUpdateProcess>%aditoprj%/frame/ORG/children/register_detail/children/rechte/children/tbl_rights/grantRowUpdateProcess.js</grantRowUpdateProcess>
+              <grantRowDeleteProcess>%aditoprj%/frame/ORG/children/register_detail/children/rechte/children/tbl_rights/grantRowDeleteProcess.js</grantRowDeleteProcess>
+              <separateSavable v="false" />
+              <displayContentProcess>%aditoprj%/frame/ORG/children/register_detail/children/rechte/children/tbl_rights/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/ORG/children/register_detail/children/rechte/children/tbl_rights/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <singleSelection v="true" />
+              <x v="20" />
+              <y v="25" />
+              <width v="630" />
+              <height v="325" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <tabOrder v="0" />
+              <labelText>Rechte auf den angezeigten Datensatz</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Rolle</name>
+                  <columnName>Rolle</columnName>
+                  <width v="205" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/rechte/children/tbl_rights/columnmetadata/rolle/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Lesen</name>
+                  <columnName>Lesen</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/rechte/children/tbl_rights/columnmetadata/lesen/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Aendern</name>
+                  <columnName>Ändern</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/rechte/children/tbl_rights/columnmetadata/aendern/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Loeschen</name>
+                  <columnName>Löschen</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/rechte/children/tbl_rights/columnmetadata/loeschen/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Rechte_vergeben</name>
+                  <columnName>Rechte vergeben</columnName>
+                  <width v="116" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ORG/children/register_detail/children/rechte/children/tbl_rights/columnmetadata/rechte_vergeben/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Log</name>
+          <caption>Log</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/children/log/visibleProcess.js</visibleProcess>
+          <children>
+            <table>
+              <name>tbl_loghist</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <displayContentProcess>%aditoprj%/frame/ORG/children/register_detail/children/log/children/tbl_loghist/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="805" />
+              <height v="325" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <showTooltip v="false" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Datum_2</name>
+                  <columnName>Datum</columnName>
+                  <width v="116" />
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy HH:mm</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>von</name>
+                  <columnName>von</columnName>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Beschreibung_der_Aenderung</name>
+                  <columnName>Beschreibung der Änderung</columnName>
+                  <width v="586" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Admin</name>
+          <caption>Admin</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/ORG/children/register_detail/children/admin/visibleProcess.js</visibleProcess>
+          <children>
+            <edit>
+              <name>ADDRESS_ID</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>RELATION</tableName>
+              <columnName>ADDRESS_ID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <onDoubleClick>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/address_id/onDoubleClick.js</onDoubleClick>
+              <searchableModes>none</searchableModes>
+              <x v="520" />
+              <y v="10" />
+              <width v="250" />
+              <tabOrder v="10" />
+              <labelText>ADDRESS_ID</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>ADDRESSID</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>ADDRESS</tableName>
+              <columnName>ADDRESSID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <valueProcess>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/addressid/valueProcess.js</valueProcess>
+              <searchableModes>mask</searchableModes>
+              <x v="520" />
+              <y v="35" />
+              <width v="250" />
+              <tabOrder v="9" />
+              <labelText>ADDRESSID</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>DATE_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>ORG</tableName>
+              <columnName>DATE_EDIT</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetNew>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/date_edit/presetNew.js</presetNew>
+              <presetChange>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/date_edit/presetChange.js</presetChange>
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <searchableModes>mask</searchableModes>
+              <x v="160" />
+              <y v="270" />
+              <width v="105" />
+              <tabOrder v="2" />
+              <labelText>DATE_EDIT</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>date_edit_rel</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>RELATION</tableName>
+              <columnName>DATE_EDIT</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetChange>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/date_edit_rel/presetChange.js</presetChange>
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <searchableModes>mask</searchableModes>
+              <x v="365" />
+              <y v="270" />
+              <width v="105" />
+              <tabOrder v="6" />
+              <labelText>date_edit</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>DATE_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>ORG</tableName>
+              <columnName>DATE_NEW</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetNew>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/date_new/presetNew.js</presetNew>
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <searchableModes>mask</searchableModes>
+              <x v="160" />
+              <y v="245" />
+              <width v="105" />
+              <tabOrder v="1" />
+              <labelText>DATE_NEW</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>date_new_rel</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>RELATION</tableName>
+              <columnName>DATE_NEW</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetNew>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/date_new_rel/presetNew.js</presetNew>
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <searchableModes>mask</searchableModes>
+              <x v="365" />
+              <y v="245" />
+              <width v="105" />
+              <tabOrder v="5" />
+              <labelText>date_new</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>idcolumn</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>RELATION</tableName>
+              <columnName>RELATIONID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <presetNew>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/idcolumn/presetNew.js</presetNew>
+              <onDoubleClick>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/idcolumn/onDoubleClick.js</onDoubleClick>
+              <searchableModes>mask</searchableModes>
+              <x v="160" />
+              <y v="35" />
+              <width v="250" />
+              <tabOrder v="0" />
+              <labelText>idcolumn</labelText>
+              <labelDistance v="130" />
+              <labelAnchor v="0" />
+            </edit>
+            <label>
+              <name>Label_comm_dec</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/label_comm_dec/valueProcess.js</valueProcess>
+              <onDoubleClick>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/label_comm_dec/onDoubleClick.js</onDoubleClick>
+              <x v="160" />
+              <y v="210" />
+              <width v="250" />
+              <labelText>Label__comm__dec</labelText>
+              <labelDistance v="130" />
+              <labelAnchor v="0" />
+            </label>
+            <label>
+              <name>Label_history_dec</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/label_history_dec/valueProcess.js</valueProcess>
+              <onDoubleClick>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/label_history_dec/onDoubleClick.js</onDoubleClick>
+              <x v="160" />
+              <y v="160" />
+              <width v="250" />
+              <labelText>Label__history__dec</labelText>
+              <labelDistance v="130" />
+              <labelAnchor v="0" />
+            </label>
+            <label>
+              <name>Label_Histtoryof</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/label_histtoryof/valueProcess.js</valueProcess>
+              <x v="160" />
+              <y v="185" />
+              <width v="250" />
+              <labelText>Label_Histtoryof</labelText>
+              <labelDistance v="130" />
+            </label>
+            <label>
+              <name>Label_pers_dec</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/label_pers_dec/valueProcess.js</valueProcess>
+              <onDoubleClick>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/label_pers_dec/onDoubleClick.js</onDoubleClick>
+              <x v="160" />
+              <y v="135" />
+              <width v="250" />
+              <labelText>Label__pers__dec</labelText>
+              <labelDistance v="130" />
+              <labelAnchor v="0" />
+            </label>
+            <label>
+              <name>Label_relpers_dec</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/label_relpers_dec/valueProcess.js</valueProcess>
+              <onDoubleClick>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/label_relpers_dec/onDoubleClick.js</onDoubleClick>
+              <x v="160" />
+              <y v="110" />
+              <width v="250" />
+              <labelText>Label__relpers__dec</labelText>
+              <labelDistance v="130" />
+              <labelAnchor v="0" />
+            </label>
+            <label>
+              <name>org_id</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <tableName>RELATION</tableName>
+              <columnName>ORG_ID</columnName>
+              <dataType v="1" />
+              <valueProcess>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/org_id/valueProcess.js</valueProcess>
+              <onDoubleClick>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/org_id/onDoubleClick.js</onDoubleClick>
+              <x v="160" />
+              <y v="85" />
+              <width v="250" />
+              <labelText>ORG_ID</labelText>
+              <labelDistance v="130" />
+              <labelAnchor v="0" />
+            </label>
+            <label>
+              <name>orgid</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <tableName>ORG</tableName>
+              <columnName>ORGID</columnName>
+              <dataType v="1" />
+              <presetNew>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/orgid/presetNew.js</presetNew>
+              <onDoubleClick>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/orgid/onDoubleClick.js</onDoubleClick>
+              <x v="160" />
+              <y v="10" />
+              <width v="250" />
+              <labelText>ORGID</labelText>
+              <labelDistance v="130" />
+              <labelAnchor v="0" />
+            </label>
+            <label>
+              <name>relationid</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <tableName>RELATION</tableName>
+              <columnName>RELATIONID</columnName>
+              <dataType v="1" />
+              <presetNew>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/relationid/presetNew.js</presetNew>
+              <onDoubleClick>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/relationid/onDoubleClick.js</onDoubleClick>
+              <x v="160" />
+              <y v="60" />
+              <width v="250" />
+              <labelText>RELATIONID</labelText>
+              <labelDistance v="130" />
+              <labelAnchor v="0" />
+            </label>
+            <edit>
+              <name>search_hist_date</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="93" />
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <inputFormat>dd.MM.yyyy</inputFormat>
+              <searchLinkTableName>HISTORY</searchLinkTableName>
+              <searchLinkColumnName>ENTRYDATE</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/search_hist_date/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <calendarSupport v="true" />
+              <searchInInterval v="true" />
+              <x v="700" />
+              <y v="110" />
+              <width v="95" />
+              <visible v="false" />
+              <tabOrder v="11" />
+              <labelText>Historien Datum</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </edit>
+            <comboBox>
+              <name>search_hist_empl</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/search_hist_empl/contentProcess.js</contentProcess>
+              <searchLinkTableName>HISTORY</searchLinkTableName>
+              <searchLinkColumnName>RELATION_ID</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/search_hist_empl/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <x v="700" />
+              <y v="205" />
+              <width v="95" />
+              <visible v="false" />
+              <tabOrder v="14" />
+              <labelText>Historien Mitarbeiter</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>search_hist_info</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <searchLinkTableName>HISTORY</searchLinkTableName>
+              <searchLinkColumnName>INFO</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/search_hist_info/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <x v="700" />
+              <y v="185" />
+              <width v="95" />
+              <visible v="false" />
+              <tabOrder v="12" />
+              <labelText>Historien Info</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </edit>
+            <comboBox>
+              <name>search_hist_medium</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/search_hist_medium/contentProcess.js</contentProcess>
+              <searchLinkTableName>HISTORY</searchLinkTableName>
+              <searchLinkColumnName>MEDIUM</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/search_hist_medium/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <x v="700" />
+              <y v="130" />
+              <width v="95" />
+              <visible v="false" />
+              <tabOrder v="15" />
+              <labelText>Historien Medium</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>search_hist_subject</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/search_hist_subject/contentProcess.js</contentProcess>
+              <searchLinkTableName>HISTORY</searchLinkTableName>
+              <searchLinkColumnName>SUBJECT</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/search_hist_subject/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <x v="700" />
+              <y v="165" />
+              <width v="95" />
+              <visible v="false" />
+              <tabOrder v="16" />
+              <editable v="true" />
+              <labelText>Historien Betreff</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>SearchDATE</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="91" />
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/searchdate/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/searchdate/searchFields.js</searchFields>
+              <calendarSupport v="true" />
+              <searchInInterval v="true" />
+              <x v="700" />
+              <y v="235" />
+              <width v="95" />
+              <visible v="false" />
+              <tabOrder v="17" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SearchFLOAT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="6" />
+              <inputFormat>0.00</inputFormat>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/searchfloat/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/searchfloat/searchFields.js</searchFields>
+              <x v="700" />
+              <y v="295" />
+              <width v="95" />
+              <visible v="false" />
+              <tabOrder v="20" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SearchINTEGER</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="4" />
+              <inputFormat>0</inputFormat>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/searchinteger/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/searchinteger/searchFields.js</searchFields>
+              <x v="700" />
+              <y v="275" />
+              <width v="95" />
+              <visible v="false" />
+              <tabOrder v="19" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SearchVARCHAR</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/searchvarchar/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/searchvarchar/searchFields.js</searchFields>
+              <x v="700" />
+              <y v="255" />
+              <width v="95" />
+              <visible v="false" />
+              <tabOrder v="18" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <comboBox>
+              <name>SerachCombo</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/serachcombo/contentProcess.js</contentProcess>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/serachcombo/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/serachcombo/searchFields.js</searchFields>
+              <x v="700" />
+              <y v="320" />
+              <width v="95" />
+              <visible v="false" />
+              <tabOrder v="21" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>USER_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>ORG</tableName>
+              <columnName>USER_EDIT</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <presetNew>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/user_edit/presetNew.js</presetNew>
+              <presetChange>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/user_edit/presetChange.js</presetChange>
+              <searchableModes>mask</searchableModes>
+              <x v="160" />
+              <y v="325" />
+              <width v="105" />
+              <tabOrder v="4" />
+              <labelText>USER_EDIT</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>user_edit_rel</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>RELATION</tableName>
+              <columnName>USER_EDIT</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <presetChange>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/user_edit_rel/presetChange.js</presetChange>
+              <searchableModes>mask</searchableModes>
+              <x v="365" />
+              <y v="325" />
+              <width v="105" />
+              <tabOrder v="8" />
+              <labelText>user_edit</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>USER_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>ORG</tableName>
+              <columnName>USER_NEW</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <presetNew>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/user_new/presetNew.js</presetNew>
+              <searchableModes>mask</searchableModes>
+              <x v="160" />
+              <y v="300" />
+              <width v="105" />
+              <tabOrder v="3" />
+              <labelText>USER_NEW</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>user_new_rel</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>RELATION</tableName>
+              <columnName>USER_NEW</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <presetNew>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/user_new_rel/presetNew.js</presetNew>
+              <searchableModes>mask</searchableModes>
+              <x v="365" />
+              <y v="300" />
+              <width v="105" />
+              <tabOrder v="7" />
+              <labelText>user_new</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <comboBox>
+              <name>Werbeeinschraenkung</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/werbeeinschraenkung/contentProcess.js</contentProcess>
+              <searchLinkTableName>COMMRESTRICTION</searchLinkTableName>
+              <searchLinkColumnName>MEDIUM</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ORG/children/register_detail/children/admin/children/werbeeinschraenkung/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <x v="700" />
+              <y v="340" />
+              <width v="95" />
+              <visible v="false" />
+              <tabOrder v="22" />
+              <labelText>Werbeeinschränkung</labelText>
+              <labelVisible v="false" />
+            </comboBox>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+    <register>
+      <name>Register_dub</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <y v="165" />
+      <width v="850" />
+      <height v="400" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <visible v="false" />
+      <visibleProcess>%aditoprj%/frame/ORG/children/register_dub/visibleProcess.js</visibleProcess>
+      <tabOrder v="12" />
+      <children>
+        <registerTab>
+          <name>Dubletten</name>
+          <caption>Dubletten</caption>
+          <children>
+            <button>
+              <name>btn_abbrechen</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/ORG/children/register_dub/children/dubletten/children/btn_abbrechen/onClick.js</onClick>
+              <x v="365" />
+              <y v="330" />
+              <width v="165" />
+              <height v="25" />
+              <verticalAnchor v="5" />
+              <caption>Abbrechen</caption>
+              <tabOrder v="2" />
+              <labelVisible v="false" />
+            </button>
+            <button>
+              <name>btn_speichern</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/ORG/children/register_dub/children/dubletten/children/btn_speichern/onClick.js</onClick>
+              <x v="15" />
+              <y v="330" />
+              <width v="165" />
+              <height v="25" />
+              <verticalAnchor v="5" />
+              <caption>Trotzdem übernehmen</caption>
+              <tabOrder v="0" />
+            </button>
+            <button>
+              <name>btn_verwerfen</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/ORG/children/register_dub/children/dubletten/children/btn_verwerfen/onClick.js</onClick>
+              <x v="190" />
+              <y v="330" />
+              <width v="165" />
+              <height v="25" />
+              <verticalAnchor v="5" />
+              <caption>Markierten verwenden</caption>
+              <enabledProcess>%aditoprj%/frame/ORG/children/register_dub/children/dubletten/children/btn_verwerfen/enabledProcess.js</enabledProcess>
+              <tabOrder v="1" />
+            </button>
+            <checkBox>
+              <name>DUP_CHECK</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <presetNew>%aditoprj%/frame/ORG/children/register_dub/children/dubletten/children/dup_check/presetNew.js</presetNew>
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="570" />
+              <y v="340" />
+              <verticalAnchor v="5" />
+              <visible v="false" />
+              <labelText>DUP_CHECK_DONE</labelText>
+              <labelOrientation v="4" />
+              <tabOrder v="3" />
+            </checkBox>
+            <label>
+              <name>lbl_dubletten</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/ORG/children/register_dub/children/dubletten/children/lbl_dubletten/valueProcess.js</valueProcess>
+              <x v="15" />
+              <y v="15" />
+              <width v="280" />
+              <height v="20" />
+              <font name="Verdana" style="1" size="11" />
+              <fontColor v="0xffffffff" />
+              <backgroundColor v="0xffff3333" />
+            </label>
+            <table>
+              <name>tbl_dubletten</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/ORG/children/register_dub/children/dubletten/children/tbl_dubletten/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/ORG/children/register_dub/children/dubletten/children/tbl_dubletten/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="15" />
+              <y v="65" />
+              <width v="770" />
+              <height v="260" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <grantArrangeColumns v="true" />
+              <labelText>Mögliche Dubletten</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="5" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Organisation_2</name>
+                  <columnName>Organisation</columnName>
+                  <width v="250" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>country</name>
+                  <columnName>Land</columnName>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>PLZ_3</name>
+                  <columnName>PLZ</columnName>
+                  <width v="57" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Ort_3</name>
+                  <columnName>Ort</columnName>
+                  <width v="142" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Strasse_3</name>
+                  <columnName>Strasse</columnName>
+                  <width v="150" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>status</name>
+                  <columnName>Status</columnName>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+    <memo>
+      <name>orgname</name>
+      <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+      <tableName>ORG</tableName>
+      <columnName>ORGNAME</columnName>
+      <dataType v="12" />
+      <precision v="250" />
+      <mandatoryInput v="true" />
+      <mandatoryInputProcess></mandatoryInputProcess>
+      <x v="120" />
+      <y v="20" />
+      <width v="250" />
+      <height v="70" />
+      <visible v="false" />
+      <visibleProcess>%aditoprj%/frame/ORG/children/orgname/visibleProcess.js</visibleProcess>
+      <tabOrder v="0" />
+      <labelText>Name</labelText>
+      <labelDistance v="100" />
+    </memo>
+    <edit>
+      <name>customercode</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>ORG</tableName>
+      <columnName>CUSTOMERCODE</columnName>
+      <dataType v="12" />
+      <precision v="50" />
+      <x v="120" />
+      <y v="95" />
+      <width v="250" />
+      <visible v="false" />
+      <visibleProcess>%aditoprj%/frame/ORG/children/customercode/visibleProcess.js</visibleProcess>
+      <enabledProcess>%aditoprj%/frame/ORG/children/customercode/enabledProcess.js</enabledProcess>
+      <tabOrder v="1" />
+      <labelText>Kunden-Nr.</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+    <comboBox>
+      <name>SALESAREA</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>ORG</tableName>
+      <columnName>SALESAREA</columnName>
+      <dataType v="4" />
+      <precision v="10" />
+      <valueProcess>%aditoprj%/frame/ORG/children/salesarea/valueProcess.js</valueProcess>
+      <contentProcess>%aditoprj%/frame/ORG/children/salesarea/contentProcess.js</contentProcess>
+      <x v="120" />
+      <y v="120" />
+      <width v="250" />
+      <visible v="false" />
+      <visibleProcess>%aditoprj%/frame/ORG/children/salesarea/visibleProcess.js</visibleProcess>
+      <tabOrder v="2" />
+      <labelText>Gebiet</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <table>
+      <name>Table_comm</name>
+      <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+      <rowCreate>%aditoprj%/frame/ORG/children/table_comm/rowCreate.js</rowCreate>
+      <rowUpdate>%aditoprj%/frame/ORG/children/table_comm/rowUpdate.js</rowUpdate>
+      <rowDelete>%aditoprj%/frame/ORG/children/table_comm/rowDelete.js</rowDelete>
+      <displayContentProcess>%aditoprj%/frame/ORG/children/table_comm/displayContentProcess.js</displayContentProcess>
+      <idContentProcess>%aditoprj%/frame/ORG/children/table_comm/idContentProcess.js</idContentProcess>
+      <contentProcessType v="1" />
+      <singleSelection v="true" />
+      <x v="575" />
+      <y v="20" />
+      <width v="250" />
+      <height v="125" />
+      <horizontalAnchor v="2" />
+      <showHeader v="false" />
+      <utilizeRowId v="true" />
+      <utilizeRowFontColor v="false" />
+      <utilizeRowBackgroundColor v="true" />
+      <tabOrder v="3" />
+      <showTooltip v="false" />
+      <labelText>Kommunikation</labelText>
+      <labelVisible v="false" />
+      <labelOrientation v="1" />
+      <labelDistance v="2" />
+      <toolTip>gelb hinterlegt bedeutet Standard</toolTip>
+      <columnMetaData>
+        <columnMetaData>
+          <name>Medium_3</name>
+          <columnName>Medium</columnName>
+          <width v="97" />
+          <editable v="true" />
+          <editorComponentProcess>%aditoprj%/frame/ORG/children/table_comm/columnmetadata/medium_3/editorComponentProcess.js</editorComponentProcess>
+        </columnMetaData>
+        <columnMetaData>
+          <name>Nummer__Adresse</name>
+          <columnName>Nummer / Adresse</columnName>
+          <actionProcess>%aditoprj%/frame/ORG/children/table_comm/columnmetadata/nummer__adresse/actionProcess.js</actionProcess>
+          <width v="131" />
+          <editable v="true" />
+          <editorComponentProcess>%aditoprj%/frame/ORG/children/table_comm/columnmetadata/nummer__adresse/editorComponentProcess.js</editorComponentProcess>
+        </columnMetaData>
+      </columnMetaData>
+      <popup>
+        <menuItem>
+          <name>als_Standardtelefon_setzen</name>
+          <caption>als Standardtelefon setzen</caption>
+          <onClick>%aditoprj%/frame/ORG/children/table_comm/popup/als_standardtelefon_setzen/onClick.js</onClick>
+          <enabledProcess>%aditoprj%/frame/ORG/children/table_comm/popup/als_standardtelefon_setzen/enabledProcess.js</enabledProcess>
+          <visibleProcess></visibleProcess>
+          <isSeparator v="false" />
+        </menuItem>
+        <menuItem>
+          <name>als_Standardemail_setzen</name>
+          <caption>als Standard-E-Mail setzen</caption>
+          <onClick>%aditoprj%/frame/ORG/children/table_comm/popup/als_standardemail_setzen/onClick.js</onClick>
+          <enabledProcess>%aditoprj%/frame/ORG/children/table_comm/popup/als_standardemail_setzen/enabledProcess.js</enabledProcess>
+          <visibleProcess></visibleProcess>
+          <isSeparator v="false" />
+        </menuItem>
+        <menuItem>
+          <name>Standard_aufheben</name>
+          <caption>Standard aufheben</caption>
+          <onClick>%aditoprj%/frame/ORG/children/table_comm/popup/standard_aufheben/onClick.js</onClick>
+          <enabledProcess>%aditoprj%/frame/ORG/children/table_comm/popup/standard_aufheben/enabledProcess.js</enabledProcess>
+          <visibleProcess></visibleProcess>
+          <isSeparator v="false" />
+        </menuItem>
+        <menuItem>
+          <name>dacdecba-e419-4634-9567-0bb07051a05d</name>
+          <caption>Kopieren</caption>
+          <onClick>%aditoprj%/frame/ORG/children/table_comm/popup/dacdecba-e419-4634-9567-0bb07051a05d/onClick.js</onClick>
+        </menuItem>
+      </popup>
+    </table>
+    <comboBox>
+      <name>Edit_medium</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <dataType v="4" />
+      <contentProcess>%aditoprj%/frame/ORG/children/edit_medium/contentProcess.js</contentProcess>
+      <onValidationProcess>%aditoprj%/frame/ORG/children/edit_medium/onValidationProcess.js</onValidationProcess>
+      <searchLinkTableName>COMM</searchLinkTableName>
+      <searchLinkColumnName>MEDIUM_ID</searchLinkColumnName>
+      <searchLinkCondition>%aditoprj%/frame/ORG/children/edit_medium/searchLinkCondition.js</searchLinkCondition>
+      <searchableModes>table</searchableModes>
+      <x v="710" />
+      <width v="40" />
+      <visible v="false" />
+      <tabOrder v="-1" />
+      <staticContent />
+      <labelText>Komm.-Medium</labelText>
+      <labelVisible v="false" />
+    </comboBox>
+    <edit>
+      <name>Edit_addr</name>
+      <onValidation>%aditoprj%/frame/ORG/children/edit_addr/onValidation.js</onValidation>
+      <searchLinkTableName>COMM</searchLinkTableName>
+      <searchLinkColumnName>ADDR</searchLinkColumnName>
+      <searchLinkCondition>%aditoprj%/frame/ORG/children/edit_addr/searchLinkCondition.js</searchLinkCondition>
+      <searchableModes>table</searchableModes>
+      <x v="710" />
+      <y v="0" />
+      <width v="40" />
+      <font name="Verdana" style="0" size="11" />
+      <visible v="false" />
+      <enabled v="false" />
+      <tabOrder v="-1" />
+      <labelText>Komm.-Adresse</labelText>
+      <labelVisible v="false" />
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+    <staticPicture>
+      <name>Flagge</name>
+      <template>%aditoprj%/template/Template_Bild/Template_Bild.aod</template>
+      <imageProcess>%aditoprj%/frame/ORG/children/flagge/imageProcess.js</imageProcess>
+      <stretched v="true" />
+      <x v="20" />
+      <y v="0" />
+      <width v="25" />
+      <height v="15" />
+      <visibleProcess>%aditoprj%/frame/ORG/children/flagge/visibleProcess.js</visibleProcess>
+    </staticPicture>
+    <label>
+      <name>Label_comm</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <valueProcess>%aditoprj%/frame/ORG/children/label_comm/valueProcess.js</valueProcess>
+      <x v="575" />
+      <y v="0" />
+      <width v="275" />
+      <horizontalAnchor v="2" />
+      <font name="Verdana" style="0" size="11" />
+      <backgroundColor v="0x00000000" />
+      <labelFont name="" style="0" size="11" />
+      <labelAnchor v="0" />
+    </label>
+    <label>
+      <name>Label_orgaddress</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <valueProcess>%aditoprj%/frame/ORG/children/label_orgaddress/valueProcess.js</valueProcess>
+      <x v="20" />
+      <y v="60" />
+      <width v="350" />
+      <height v="105" />
+      <visibleProcess>%aditoprj%/frame/ORG/children/label_orgaddress/visibleProcess.js</visibleProcess>
+      <labelVisible v="false" />
+      <labelDistance v="55" />
+    </label>
+    <label>
+      <name>Label_orgname</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <valueProcess>%aditoprj%/frame/ORG/children/label_orgname/valueProcess.js</valueProcess>
+      <x v="20" />
+      <y v="20" />
+      <width v="350" />
+      <height v="40" />
+      <font name="" style="1" size="" />
+      <visibleProcess>%aditoprj%/frame/ORG/children/label_orgname/visibleProcess.js</visibleProcess>
+    </label>
+    <label>
+      <name>lbl_commrestriction</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <valueProcess>%aditoprj%/frame/ORG/children/lbl_commrestriction/valueProcess.js</valueProcess>
+      <alignment v="4" />
+      <x v="385" />
+      <y v="145" />
+      <width v="440" />
+      <horizontalAnchor v="3" />
+      <font name="Verdana" style="0" size="11" />
+      <fontColor v="0xffff0000" />
+      <backgroundColor v="0x00000000" />
+    </label>
+    <label>
+      <name>lbl_Kennzahlen</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <valueProcess>%aditoprj%/frame/ORG/children/lbl_kennzahlen/valueProcess.js</valueProcess>
+      <x v="405" />
+      <y v="10" />
+      <width v="165" />
+      <height v="135" />
+      <backgroundColor v="0x00000000" />
+    </label>
+    <label>
+      <name>lblCreatedEdited</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <valueProcess>%aditoprj%/frame/ORG/children/lblcreatededited/valueProcess.js</valueProcess>
+      <x v="20" />
+      <y v="565" />
+      <width v="830" />
+      <height v="15" />
+      <verticalAnchor v="5" />
+      <font name="Verdana" style="0" size="9" />
+      <backgroundColor v="0x00000000" />
+      <labelAnchor v="0" />
+    </label>
+  </children>
+  <tableView>
+    <tableViewProperties>
+      <columnProperty>
+        <name>ORG_CUSTOMERCODE</name>
+        <tableName>ORG</tableName>
+        <columnName>CUSTOMERCODE</columnName>
+        <label>Kunden-Nr.</label>
+      </columnProperty>
+      <columnProperty>
+        <name>ORG_ORGNAME</name>
+        <tableName>ORG</tableName>
+        <columnName>ORGNAME</columnName>
+        <label>Firma</label>
+        <width v="249" />
+      </columnProperty>
+      <columnProperty>
+        <name>subselect</name>
+        <label>Strasse</label>
+        <width v="144" />
+        <subSelect>%aditoprj%/frame/ORG/tableview/tableviewproperties/subselect/subSelect.js</subSelect>
+      </columnProperty>
+      <columnProperty>
+        <name>ADDRESS_COUNTRY</name>
+        <tableName>ADDRESS</tableName>
+        <columnName>COUNTRY</columnName>
+        <label>Land</label>
+        <width v="40" />
+      </columnProperty>
+      <columnProperty>
+        <name>ADDRESS_ZIP</name>
+        <tableName>ADDRESS</tableName>
+        <columnName>ZIP</columnName>
+        <label>PLZ</label>
+      </columnProperty>
+      <columnProperty>
+        <name>ADDRESS_CITY</name>
+        <tableName>ADDRESS</tableName>
+        <columnName>CITY</columnName>
+        <label>Ort</label>
+        <width v="166" />
+      </columnProperty>
+      <columnProperty>
+        <name>subselect_2</name>
+        <label>Gebiet</label>
+        <width v="136" />
+        <subSelect>%aditoprj%/frame/ORG/tableview/tableviewproperties/subselect_2/subSelect.js</subSelect>
+      </columnProperty>
+    </tableViewProperties>
+  </tableView>
+  <width v="850" />
+  <height v="580" />
+</frame>

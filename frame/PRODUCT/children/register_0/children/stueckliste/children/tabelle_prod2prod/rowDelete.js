@@ -1,0 +1,1 @@
+a.sqlDelete("PROD2PROD", "PROD2PRODID = '" + a.valueof("$local.idvalue") + "'");

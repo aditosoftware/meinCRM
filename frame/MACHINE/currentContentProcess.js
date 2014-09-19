@@ -1,0 +1,1 @@
+a.rs("Maschine SNR " + a.valueof("$comp.SERIALNUMBER"));

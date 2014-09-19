@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.0.3" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>Template_Farbkomponente</name>
+  <templateSub>
+    <colorComponent />
+  </templateSub>
+</template>

@@ -1,0 +1,2528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>SALESORDER</name>
+  <title>Beleg</title>
+  <icon>%aditoprj%/frame/SALESORDER/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/SALESORDER/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type public
+@status released
+@desc [Angebotsframe]
+
+@module Sales
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <linkInformation>
+    <linkInformation>
+      <name>4ac0b433-797d-4b26-8a5b-634ed2228ad0</name>
+      <tableName>SALESORDER</tableName>
+      <primaryKey>SALESORDERID</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+  </linkInformation>
+  <whereClause>%aditoprj%/frame/SALESORDER/whereClause.js</whereClause>
+  <orderByClause>%aditoprj%/frame/SALESORDER/orderByClause.js</orderByClause>
+  <idStrategy v="4" />
+  <beforeStart>%aditoprj%/frame/SALESORDER/beforeStart.js</beforeStart>
+  <afterStart>%aditoprj%/frame/SALESORDER/afterStart.js</afterStart>
+  <beforeSave>%aditoprj%/frame/SALESORDER/beforeSave.js</beforeSave>
+  <afterSave>%aditoprj%/frame/SALESORDER/afterSave.js</afterSave>
+  <beforeDelete>%aditoprj%/frame/SALESORDER/beforeDelete.js</beforeDelete>
+  <afterDelete>%aditoprj%/frame/SALESORDER/afterDelete.js</afterDelete>
+  <beforeCancel>%aditoprj%/frame/SALESORDER/beforeCancel.js</beforeCancel>
+  <afterCancel>%aditoprj%/frame/SALESORDER/afterCancel.js</afterCancel>
+  <afterEdit>%aditoprj%/frame/SALESORDER/afterEdit.js</afterEdit>
+  <currentContentProcess>%aditoprj%/frame/SALESORDER/currentContentProcess.js</currentContentProcess>
+  <grantCreateProcess>%aditoprj%/frame/SALESORDER/grantCreateProcess.js</grantCreateProcess>
+  <grantUpdateProcess>%aditoprj%/frame/SALESORDER/grantUpdateProcess.js</grantUpdateProcess>
+  <grantDeleteProcess>%aditoprj%/frame/SALESORDER/grantDeleteProcess.js</grantDeleteProcess>
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <customComponents>
+          <rcCommandButton>
+            <name>Belegliste</name>
+            <title>Belegliste</title>
+            <imageData>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_search/customcomponents/belegliste/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_search/customcomponents/belegliste/onClick.js</onClick>
+            <enabledProcess>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_search/customcomponents/belegliste/enabledProcess.js</enabledProcess>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+        </customComponents>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showSaveCancel v="false" />
+        <showCreate v="true" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <customComponents>
+          <rcCommandButton>
+            <name>Neue_Aufgabe</name>
+            <title>Neue Aufgabe</title>
+            <imageData>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_view/customcomponents/neue_aufgabe/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_view/customcomponents/neue_aufgabe/onClick.js</onClick>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+          <rcCommandButton>
+            <name>Versendet_setzen</name>
+            <title>Versendet setzen</title>
+            <toolTip>nur aktiv wenn Posten eingetragen sind und &amp;apos;geprüft&amp;apos; gesetzt ist</toolTip>
+            <imageData>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_view/customcomponents/versendet_setzen/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_view/customcomponents/versendet_setzen/onClick.js</onClick>
+            <enabledProcess>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_view/customcomponents/versendet_setzen/enabledProcess.js</enabledProcess>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+          <rcSeparator>
+            <name>Separator</name>
+          </rcSeparator>
+          <rcCommandButton>
+            <name>Drucke_Beleg</name>
+            <title>Drucke Beleg</title>
+            <imageData>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_view/customcomponents/drucke_beleg/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_view/customcomponents/drucke_beleg/onClick.js</onClick>
+            <enabledProcess>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_view/customcomponents/drucke_beleg/enabledProcess.js</enabledProcess>
+          </rcCommandButton>
+          <rcCommandButton>
+            <name>Drucke_Mahnung</name>
+            <title>Drucke Mahnung</title>
+            <toolTip>Positionen&amp;gt;0, offen&amp;gt;0, versendet, nicht wertberichtigt, nicht storniert</toolTip>
+            <imageData>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_view/customcomponents/drucke_mahnung/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_view/customcomponents/drucke_mahnung/onClick.js</onClick>
+            <enabledProcess>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_view/customcomponents/drucke_mahnung/enabledProcess.js</enabledProcess>
+          </rcCommandButton>
+          <rcCommandButton>
+            <name>in_Lieferschein_uebertragen</name>
+            <title>in Lieferschein übertragen</title>
+            <imageData>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_view/customcomponents/in_lieferschein_uebertragen/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_view/customcomponents/in_lieferschein_uebertragen/onClick.js</onClick>
+            <enabledProcess>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_view/customcomponents/in_lieferschein_uebertragen/enabledProcess.js</enabledProcess>
+          </rcCommandButton>
+          <rcCommandButton>
+            <name>in_Rechnung_uebertragen</name>
+            <title>in Rechnung übertragen</title>
+            <imageData>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_view/customcomponents/in_rechnung_uebertragen/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_view/customcomponents/in_rechnung_uebertragen/onClick.js</onClick>
+            <enabledProcess>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_view/customcomponents/in_rechnung_uebertragen/enabledProcess.js</enabledProcess>
+          </rcCommandButton>
+          <rcCommandButton>
+            <name>Stornieren</name>
+            <title>Stornieren</title>
+            <imageData>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_view/customcomponents/stornieren/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_view/customcomponents/stornieren/onClick.js</onClick>
+            <enabledProcess>%aditoprj%/frame/SALESORDER/ribbon/ribbontasks/task_view/customcomponents/stornieren/enabledProcess.js</enabledProcess>
+          </rcCommandButton>
+        </customComponents>
+        <toolTip>Anzeige</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="true" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <databaseColumns>
+    <column>
+      <name>SALESORDER_SALESORDERID</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>SALESORDERID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_salesorderid/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_ORDERDATE</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>ORDERDATE</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_orderdate/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_SENT</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>SENT</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="1" />
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_sent/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_ORDERCODE</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>ORDERCODE</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_ordercode/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_CURRENCY</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>CURRENCY</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="5" />
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_currency/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_PAYMENTTERMS</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>PAYMENTTERMS</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+      <valueProcess></valueProcess>
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_paymentterms/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_REMARK</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>REMARK</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="1000" />
+    </column>
+    <column>
+      <name>SALESORDER_HEADER_SHORT</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>HEADER_SHORT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="200" />
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_header_short/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_HEADER</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>HEADER</columnName>
+      <dataTypeName>CLOB</dataTypeName>
+      <dataType v="2005" />
+      <precision v="2147483647" />
+      <scale>0</scale>
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_header/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_FOOTER_SHORT</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>FOOTER_SHORT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="200" />
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_footer_short/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_FOOTER</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>FOOTER</columnName>
+      <dataTypeName>CLOB</dataTypeName>
+      <dataType v="2005" />
+      <precision v="2147483647" />
+      <scale>0</scale>
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_footer/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_DATE_NEW</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>DATE_NEW</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_date_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_DATE_EDIT</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>DATE_EDIT</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+      <presetChange>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_date_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>SALESORDER_USER_NEW</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>USER_NEW</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="30" />
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_user_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_USER_EDIT</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>USER_EDIT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="30" />
+      <presetChange>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_user_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>SALESORDER_PAYED</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>PAYED</columnName>
+      <dataTypeName>NUMERIC</dataTypeName>
+      <dataType v="2" />
+      <precision v="14" />
+      <scale>2</scale>
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_payed/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_PAYDATE</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>PAYDATE</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+    </column>
+    <column>
+      <name>SALESORDER_REMINDERDATE</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>REMINDERDATE</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+    </column>
+    <column>
+      <name>SALESORDER_ADJUSTMENT</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>ADJUSTMENT</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="1" />
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_adjustment/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_CANCELLED</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>CANCELLED</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="1" />
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_cancelled/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_REMINDERSTEP</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>REMINDERSTEP</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="1" />
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_reminderstep/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_LANGUAGE</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>LANGUAGE</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_language/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_REMINDERTEXT</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>REMINDERTEXT</columnName>
+      <dataTypeName>CLOB</dataTypeName>
+      <dataType v="2005" />
+      <precision v="2147483647" />
+      <scale>0</scale>
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_remindertext/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_REMINDERTEXT_SHORT</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>REMINDERTEXT_SHORT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="200" />
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_remindertext_short/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_RELATION_ID</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>RELATION_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_relation_id/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_NET</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>NET</columnName>
+      <dataTypeName>NUMERIC</dataTypeName>
+      <dataType v="2" />
+      <precision v="14" />
+      <scale>2</scale>
+      <valueProcess>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_net/valueProcess.js</valueProcess>
+    </column>
+    <column>
+      <name>SALESORDER_ORDERTYPE</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>ORDERTYPE</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_ordertype/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_VAT</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>VAT</columnName>
+      <dataTypeName>NUMERIC</dataTypeName>
+      <dataType v="2" />
+      <precision v="14" />
+      <scale>2</scale>
+      <valueProcess>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_vat/valueProcess.js</valueProcess>
+    </column>
+    <column>
+      <name>SALESORDER_PROJECT_ID</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>PROJECT_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_project_id/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_OFFER_ID</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>OFFER_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_offer_id/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_SALESORDER_ID</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>SALESORDER_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_salesorder_id/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_ADDRESS_INVOICE</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>ADDRESS_INVOICE</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="250" />
+      <valueProcess></valueProcess>
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_address_invoice/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_ADDRESS_DELIVERY</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>ADDRESS_DELIVERY</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="250" />
+      <valueProcess></valueProcess>
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_address_delivery/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>SALESORDER_DELIVERYTERMS</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>DELIVERYTERMS</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+      <valueProcess></valueProcess>
+      <presetNew>%aditoprj%/frame/SALESORDER/databasecolumns/salesorder_deliveryterms/presetNew.js</presetNew>
+    </column>
+  </databaseColumns>
+  <blobDatabaseColumns>
+    <blobColumn>
+      <name>SALESORDER_Documents</name>
+      <tableName>SALESORDER</tableName>
+      <columnName>Documents</columnName>
+      <rowIdProcess></rowIdProcess>
+    </blobColumn>
+  </blobDatabaseColumns>
+  <children>
+    <checkBox>
+      <name>ADJUSTMENT</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <tableName>SALESORDER</tableName>
+      <columnName>ADJUSTMENT</columnName>
+      <dataType v="1" />
+      <presetNew>%aditoprj%/frame/SALESORDER/children/adjustment/presetNew.js</presetNew>
+      <valueTrue>Y</valueTrue>
+      <valueFalse>N</valueFalse>
+      <x v="740" />
+      <y v="45" />
+      <horizontalAnchor v="2" />
+      <labelText>Wertber.</labelText>
+      <labelOrientation v="4" />
+      <labelDistance v="5" />
+      <tabOrder v="15" />
+    </checkBox>
+    <checkBox>
+      <name>CANCELLED</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <tableName>SALESORDER</tableName>
+      <columnName>CANCELLED</columnName>
+      <dataType v="1" />
+      <presetNew>%aditoprj%/frame/SALESORDER/children/cancelled/presetNew.js</presetNew>
+      <valueTrue>Y</valueTrue>
+      <valueFalse>N</valueFalse>
+      <x v="740" />
+      <y v="70" />
+      <horizontalAnchor v="2" />
+      <labelText>Storno</labelText>
+      <labelOrientation v="4" />
+      <labelDistance v="5" />
+      <tabOrder v="16" />
+    </checkBox>
+    <comboBox>
+      <name>CURRENCY</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>SALESORDER</tableName>
+      <columnName>CURRENCY</columnName>
+      <dataType v="1" />
+      <precision v="5" />
+      <presetNew>%aditoprj%/frame/SALESORDER/children/currency/presetNew.js</presetNew>
+      <contentProcess>%aditoprj%/frame/SALESORDER/children/currency/contentProcess.js</contentProcess>
+      <readOnlyProcess>%aditoprj%/frame/SALESORDER/children/currency/readOnlyProcess.js</readOnlyProcess>
+      <x v="635" />
+      <y v="20" />
+      <width v="90" />
+      <horizontalAnchor v="2" />
+      <utilizeRowId v="false" />
+      <tabOrder v="9" />
+      <staticContent />
+      <emptyElementEnabled v="false" />
+      <labelText>Währung</labelText>
+      <labelDistance v="55" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>LANGUAGE</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>SALESORDER</tableName>
+      <columnName>LANGUAGE</columnName>
+      <dataType v="4" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/SALESORDER/children/language/presetNew.js</presetNew>
+      <contentProcess>%aditoprj%/frame/SALESORDER/children/language/contentProcess.js</contentProcess>
+      <readOnlyProcess>%aditoprj%/frame/SALESORDER/children/language/readOnlyProcess.js</readOnlyProcess>
+      <mandatoryInput v="true" />
+      <x v="290" />
+      <y v="70" />
+      <width v="105" />
+      <horizontalAnchor v="2" />
+      <tabOrder v="3" />
+      <staticContent />
+      <emptyElementEnabled v="false" />
+      <labelText>Sprache</labelText>
+      <labelDistance v="30" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <label>
+      <name>lblCreatedEdited</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <valueProcess>%aditoprj%/frame/SALESORDER/children/lblcreatededited/valueProcess.js</valueProcess>
+      <x v="20" />
+      <y v="565" />
+      <width v="830" />
+      <height v="15" />
+      <verticalAnchor v="5" />
+      <font name="Verdana" style="0" size="9" />
+      <labelAnchor v="0" />
+    </label>
+    <edit>
+      <name>NET</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>SALESORDER</tableName>
+      <columnName>NET</columnName>
+      <dataType v="2" />
+      <precision v="14" />
+      <valueProcess>%aditoprj%/frame/SALESORDER/children/net/valueProcess.js</valueProcess>
+      <outputFormat>#,##0.00</outputFormat>
+      <readOnly v="true" />
+      <alignment v="4" />
+      <x v="495" />
+      <y v="45" />
+      <width v="80" />
+      <horizontalAnchor v="2" />
+      <tabOrder v="5" />
+      <selectTextOnFocus v="true" />
+      <labelText>Betrag netto</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>offen</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <dataType v="6" />
+      <valueProcess>%aditoprj%/frame/SALESORDER/children/offen/valueProcess.js</valueProcess>
+      <outputFormat>#,##0.00</outputFormat>
+      <searchableModes>none</searchableModes>
+      <readOnly v="true" />
+      <alignment v="4" />
+      <x v="740" />
+      <y v="120" />
+      <width v="90" />
+      <horizontalAnchor v="2" />
+      <font name="" style="1" size="" />
+      <fontColor v="0xff009900" />
+      <fontColorProcess>%aditoprj%/frame/SALESORDER/children/offen/fontColorProcess.js</fontColorProcess>
+      <visible v="false" />
+      <visibleProcess>%aditoprj%/frame/SALESORDER/children/offen/visibleProcess.js</visibleProcess>
+      <tabOrder v="17" />
+      <selectTextOnFocus v="true" />
+      <labelText>offen</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="2" />
+      <labelAlignment v="0" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>ORDERCODE</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>SALESORDER</tableName>
+      <columnName>ORDERCODE</columnName>
+      <dataType v="4" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/SALESORDER/children/ordercode/presetNew.js</presetNew>
+      <readOnly v="true" />
+      <alignment v="0" />
+      <x v="495" />
+      <y v="20" />
+      <width v="80" />
+      <horizontalAnchor v="2" />
+      <tabOrder v="4" />
+      <selectTextOnFocus v="true" />
+      <labelText>Beleg-Nr</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>ORDERDATE</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>SALESORDER</tableName>
+      <columnName>ORDERDATE</columnName>
+      <dataType v="93" />
+      <precision v="26" />
+      <presetNew>%aditoprj%/frame/SALESORDER/children/orderdate/presetNew.js</presetNew>
+      <outputFormat>dd.MM.yyyy</outputFormat>
+      <inputFormat>dd.MM.yyyy</inputFormat>
+      <readOnlyProcess>%aditoprj%/frame/SALESORDER/children/orderdate/readOnlyProcess.js</readOnlyProcess>
+      <mandatoryInput v="true" />
+      <calendarSupport v="true" />
+      <x v="120" />
+      <y v="70" />
+      <width v="115" />
+      <tabOrder v="2" />
+      <selectTextOnFocus v="true" />
+      <labelText>Datum</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+    <comboBox>
+      <name>ORDERTYPE</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>SALESORDER</tableName>
+      <columnName>ORDERTYPE</columnName>
+      <dataType v="4" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/SALESORDER/children/ordertype/presetNew.js</presetNew>
+      <contentProcess>%aditoprj%/frame/SALESORDER/children/ordertype/contentProcess.js</contentProcess>
+      <readOnlyProcess>%aditoprj%/frame/SALESORDER/children/ordertype/readOnlyProcess.js</readOnlyProcess>
+      <mandatoryInput v="true" />
+      <x v="120" />
+      <y v="20" />
+      <width v="275" />
+      <horizontalAnchor v="3" />
+      <tabOrder v="0" />
+      <staticContent />
+      <emptyElementEnabled v="false" />
+      <labelText>Belegtyp</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <edit>
+      <name>PAYDATE</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>SALESORDER</tableName>
+      <columnName>PAYDATE</columnName>
+      <dataType v="93" />
+      <precision v="26" />
+      <outputFormat>dd.MM.yyyy</outputFormat>
+      <inputFormat>dd.MM.yyyy</inputFormat>
+      <searchableModes>none</searchableModes>
+      <calendarSupport v="true" />
+      <alignment v="4" />
+      <x v="635" />
+      <y v="70" />
+      <width v="90" />
+      <horizontalAnchor v="2" />
+      <visibleProcess>%aditoprj%/frame/SALESORDER/children/paydate/visibleProcess.js</visibleProcess>
+      <tabOrder v="11" />
+      <selectTextOnFocus v="true" />
+      <labelText>Eingang</labelText>
+      <labelDistance v="55" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>PAYED</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>SALESORDER</tableName>
+      <columnName>PAYED</columnName>
+      <dataType v="2" />
+      <precision v="14" />
+      <presetNew>%aditoprj%/frame/SALESORDER/children/payed/presetNew.js</presetNew>
+      <outputFormat>#,##0.00</outputFormat>
+      <alignment v="4" />
+      <x v="495" />
+      <y v="120" />
+      <width v="80" />
+      <horizontalAnchor v="2" />
+      <visibleProcess>%aditoprj%/frame/SALESORDER/children/payed/visibleProcess.js</visibleProcess>
+      <tabOrder v="8" />
+      <selectTextOnFocus v="true" />
+      <labelText>Bezahlt</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+    <register>
+      <name>Register_0</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <y v="165" />
+      <width v="850" />
+      <height v="400" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <tabOrder v="18" />
+      <children>
+        <registerTab>
+          <name>Angebotsposten</name>
+          <caption>Beleg&amp;amp;posten</caption>
+          <children>
+            <lookup>
+              <name>PRODUCT_ID</name>
+              <template>%aditoprj%/template/Template_Lookup/Template_Lookup.aod</template>
+              <dataType v="1" />
+              <onValidation>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/product_id/onValidation.js</onValidation>
+              <selectClause>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/product_id/selectClause.js</selectClause>
+              <fromClause>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/product_id/fromClause.js</fromClause>
+              <whereClause>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/product_id/whereClause.js</whereClause>
+              <x v="195" />
+              <y v="5" />
+              <width v="295" />
+              <height v="20" />
+              <visible v="false" />
+              <popupWidth v="400" />
+              <popupHeight v="500" />
+              <utilizeRowBackgroundColor v="false" />
+              <utilizeRowFontColor v="false" />
+              <tabOrder v="0" />
+              <labelText>Artikel</labelText>
+              <labelDistance v="85" />
+              <labelAnchor v="0" />
+              <columnProperties>
+                <lookupColumnMetaData>
+                  <name>Warengruppe</name>
+                  <columnName>Warengruppe</columnName>
+                  <width v="100" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>ArtikelNr</name>
+                  <columnName>Artikel-Nr.</columnName>
+                  <searchable v="true" />
+                  <width v="100" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Artikelname</name>
+                  <columnName>Artikelname</columnName>
+                  <searchable v="true" />
+                  <width v="100" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+              </columnProperties>
+            </lookup>
+            <button>
+              <name>Button_down</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/button_down/onClick.js</onClick>
+              <x v="825" />
+              <y v="45" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <font name="" style="1" size="11" />
+              <visibleProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/button_down/visibleProcess.js</visibleProcess>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/button_down/enabledProcess.js</enabledProcess>
+              <tabOrder v="1" />
+              <imageData>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/button_down/imageData.png</imageData>
+              <labelVisible v="false" />
+            </button>
+            <button>
+              <name>Button_up</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/button_up/onClick.js</onClick>
+              <x v="825" />
+              <y v="25" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <font name="" style="1" size="11" />
+              <visibleProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/button_up/visibleProcess.js</visibleProcess>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/button_up/enabledProcess.js</enabledProcess>
+              <tabOrder v="2" />
+              <imageData>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/button_up/imageData.png</imageData>
+              <labelVisible v="false" />
+            </button>
+            <edit>
+              <name>item_discount</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="6" />
+              <outputFormat>#,##0.00 &amp;apos;%&amp;apos;</outputFormat>
+              <inputFormat>#,##0.00 &amp;apos;%&amp;apos;</inputFormat>
+              <onValidation>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/item_discount/onValidation.js</onValidation>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <alignment v="4" />
+              <x v="620" />
+              <y v="5" />
+              <visible v="false" />
+              <tabOrder v="7" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>item_price</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="6" />
+              <outputFormat>#,##0.00</outputFormat>
+              <inputFormat>#,##0.00</inputFormat>
+              <onValidation>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/item_price/onValidation.js</onValidation>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <alignment v="4" />
+              <x v="520" />
+              <y v="5" />
+              <visible v="false" />
+              <tabOrder v="6" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>item_quantity</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="4" />
+              <outputFormat>#0</outputFormat>
+              <inputFormat>#0</inputFormat>
+              <onValidation>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/item_quantity/onValidation.js</onValidation>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <alignment v="4" />
+              <x v="420" />
+              <y v="5" />
+              <visible v="false" />
+              <tabOrder v="3" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <label>
+              <name>Label_calculation</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/label_calculation/valueProcess.js</valueProcess>
+              <x v="95" />
+              <y v="5" />
+              <visible v="false" />
+              <labelVisible v="false" />
+            </label>
+            <table>
+              <name>Table_Items</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/table_items/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/table_items/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/table_items/rowDelete.js</rowDelete>
+              <grantRowCreateProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/table_items/grantRowCreateProcess.js</grantRowCreateProcess>
+              <grantRowUpdateProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/table_items/grantRowUpdateProcess.js</grantRowUpdateProcess>
+              <grantRowDeleteProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/table_items/grantRowDeleteProcess.js</grantRowDeleteProcess>
+              <separateSavable v="false" />
+              <displayContentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/table_items/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/table_items/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="800" />
+              <height v="335" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <tabOrder v="0" />
+              <grantArrangeColumns v="true" />
+              <labelText>Belegposten</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Pos</name>
+                  <columnName>Pos</columnName>
+                  <width v="45" />
+                  <dataType v="4" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Produktname</name>
+                  <columnName>Produktname</columnName>
+                  <width v="250" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/table_items/columnmetadata/produktname/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Menge</name>
+                  <columnName>Menge</columnName>
+                  <width v="50" />
+                  <alignment v="0" />
+                  <dataType v="4" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/table_items/columnmetadata/menge/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Einheit</name>
+                  <columnName>Einheit</columnName>
+                  <width v="60" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>EPreis</name>
+                  <columnName>E-Preis</columnName>
+                  <width v="65" />
+                  <alignment v="4" />
+                  <dataType v="6" />
+                  <outputFormat>#,##0.00</outputFormat>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/table_items/columnmetadata/epreis/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Rabatt</name>
+                  <columnName>Rabatt</columnName>
+                  <width v="55" />
+                  <alignment v="4" />
+                  <dataType v="6" />
+                  <outputFormat>#,##0.00 &amp;apos;%&amp;apos;</outputFormat>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/angebotsposten/children/table_items/columnmetadata/rabatt/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Summe</name>
+                  <columnName>Summe</columnName>
+                  <width v="70" />
+                  <alignment v="4" />
+                  <dataType v="6" />
+                  <outputFormat>#,##0.00</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>UMST</name>
+                  <columnName>UMST</columnName>
+                  <width v="55" />
+                  <alignment v="4" />
+                  <dataType v="6" />
+                  <outputFormat>0.00 &amp;apos;%&amp;apos;</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Beschreibung</name>
+                  <columnName>Beschreibung</columnName>
+                  <width v="200" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Attribute</name>
+          <caption>&amp;amp;Eigenschaften</caption>
+          <children>
+            <comboBox>
+              <name>attributelist1</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/attributelist1/contentProcess.js</contentProcess>
+              <onValidationProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/attributelist1/onValidationProcess.js</onValidationProcess>
+              <searchableModes>none</searchableModes>
+              <x v="390" />
+              <y v="5" />
+              <width v="50" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <maximumRowCount v="20" />
+              <labelText>Attribut</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+              <toolTip>Die Zahlen in Klammern bezeichnen, wie oft
+das Attribut mindestens vorkommen muss
+und maximal vorkommen darf.</toolTip>
+            </comboBox>
+            <comboBox>
+              <name>attributelist2</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/attributelist2/contentProcess.js</contentProcess>
+              <onValidationProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/attributelist2/onValidationProcess.js</onValidationProcess>
+              <searchableModes>none</searchableModes>
+              <x v="445" />
+              <y v="5" />
+              <width v="50" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelText>Attribut/Wert</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>cbx_attrvalue</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/cbx_attrvalue/contentProcess.js</contentProcess>
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_ID</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/cbx_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/cbx_attrvalue/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="5" />
+              <width v="50" />
+              <visible v="false" />
+              <tabOrder v="1" />
+              <staticContent />
+              <maximumRowCount v="30" />
+              <labelText>Eigenschaft</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <checkBox>
+              <name>chk_attrvalue</name>
+              <valueTrue>Y</valueTrue>
+              <valueFalse>N</valueFalse>
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_CHAR</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/chk_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/chk_attrvalue/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="5" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <tabOrder v="3" />
+            </checkBox>
+            <table>
+              <name>classification</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/classification/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/classification/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/classification/rowDelete.js</rowDelete>
+              <grantRowDeleteProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/classification/grantRowDeleteProcess.js</grantRowDeleteProcess>
+              <separateSavable v="false" />
+              <displayContentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/classification/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/classification/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="595" />
+              <height v="335" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <utilizeRowFontColor v="true" />
+              <utilizeRowBackgroundColor v="true" />
+              <tabOrder v="0" />
+              <labelText>Attribute</labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>1_Attribut</name>
+                  <columnName>1. Attribut</columnName>
+                  <width v="200" />
+                  <dataType v="1" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/classification/columnmetadata/1_attribut/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>2_Attribut</name>
+                  <columnName>2. Attribut</columnName>
+                  <width v="201" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/classification/columnmetadata/2_attribut/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Wert</name>
+                  <columnName>Wert</columnName>
+                  <width v="168" />
+                  <dataType v="1" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/classification/columnmetadata/wert/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+            <edit>
+              <name>date_attrvalue</name>
+              <dataType v="93" />
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <inputFormat>dd.MM.yyyy</inputFormat>
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_DATE</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/date_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/date_attrvalue/searchFields.js</searchFields>
+              <calendarSupport v="true" />
+              <x v="500" />
+              <y v="5" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="5" />
+              <labelText>Wert</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>float_attrvalue</name>
+              <dataType v="6" />
+              <outputFormat>#,##0.00</outputFormat>
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_DOUBLE</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/float_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/float_attrvalue/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="5" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="2" />
+              <labelText>Wert</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>int_attrvalue</name>
+              <dataType v="4" />
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_INT</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/int_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/int_attrvalue/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="5" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="4" />
+              <labelText>Wert</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>string_attrvalue</name>
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_CHAR</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/string_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/SALESORDER/children/register_0/children/attribute/children/string_attrvalue/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="5" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <labelText>Wert</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Klassifikation</name>
+          <caption>&amp;amp;Klassifikation</caption>
+          <children>
+            <memo>
+              <name>ADDRESS_DELIVERY</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>ADDRESS_DELIVERY</columnName>
+              <dataType v="12" />
+              <precision v="250" />
+              <presetNew>%aditoprj%/frame/SALESORDER/children/register_0/children/klassifikation/children/address_delivery/presetNew.js</presetNew>
+              <readOnlyProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/klassifikation/children/address_delivery/readOnlyProcess.js</readOnlyProcess>
+              <x v="515" />
+              <y v="170" />
+              <width v="305" />
+              <height v="90" />
+              <tabOrder v="6" />
+              <labelText>Liefer-Adresse</labelText>
+              <labelDistance v="90" />
+            </memo>
+            <memo>
+              <name>ADDRESS_INVOICE</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>ADDRESS_INVOICE</columnName>
+              <dataType v="12" />
+              <precision v="250" />
+              <presetNew>%aditoprj%/frame/SALESORDER/children/register_0/children/klassifikation/children/address_invoice/presetNew.js</presetNew>
+              <readOnlyProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/klassifikation/children/address_invoice/readOnlyProcess.js</readOnlyProcess>
+              <x v="515" />
+              <y v="35" />
+              <width v="305" />
+              <height v="90" />
+              <tabOrder v="4" />
+              <labelText>Rechn.-Adresse</labelText>
+              <labelDistance v="90" />
+            </memo>
+            <comboBox>
+              <name>cmb_address_delivery</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/klassifikation/children/cmb_address_delivery/contentProcess.js</contentProcess>
+              <onValidationProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/klassifikation/children/cmb_address_delivery/onValidationProcess.js</onValidationProcess>
+              <readOnlyProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/klassifikation/children/cmb_address_delivery/readOnlyProcess.js</readOnlyProcess>
+              <x v="515" />
+              <y v="145" />
+              <width v="305" />
+              <tabOrder v="5" />
+              <labelText>Adresstyp</labelText>
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>cmb_address_invoice</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/klassifikation/children/cmb_address_invoice/contentProcess.js</contentProcess>
+              <onValidationProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/klassifikation/children/cmb_address_invoice/onValidationProcess.js</onValidationProcess>
+              <readOnlyProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/klassifikation/children/cmb_address_invoice/readOnlyProcess.js</readOnlyProcess>
+              <x v="515" />
+              <y v="10" />
+              <width v="305" />
+              <tabOrder v="3" />
+              <labelText>Adresstyp</labelText>
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>DELIVERYTERMS</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>DELIVERYTERMS</columnName>
+              <dataType v="4" />
+              <precision v="10" />
+              <valueProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/klassifikation/children/deliveryterms/valueProcess.js</valueProcess>
+              <presetNew>%aditoprj%/frame/SALESORDER/children/register_0/children/klassifikation/children/deliveryterms/presetNew.js</presetNew>
+              <contentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/klassifikation/children/deliveryterms/contentProcess.js</contentProcess>
+              <readOnlyProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/klassifikation/children/deliveryterms/readOnlyProcess.js</readOnlyProcess>
+              <x v="120" />
+              <y v="35" />
+              <width v="275" />
+              <tabOrder v="1" />
+              <staticContent />
+              <emptyElementEnabled v="false" />
+              <labelText>Lieferbed.</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>PAYMENTTERMS</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>PAYMENTTERMS</columnName>
+              <dataType v="4" />
+              <precision v="10" />
+              <valueProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/klassifikation/children/paymentterms/valueProcess.js</valueProcess>
+              <presetNew>%aditoprj%/frame/SALESORDER/children/register_0/children/klassifikation/children/paymentterms/presetNew.js</presetNew>
+              <contentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/klassifikation/children/paymentterms/contentProcess.js</contentProcess>
+              <readOnlyProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/klassifikation/children/paymentterms/readOnlyProcess.js</readOnlyProcess>
+              <x v="120" />
+              <y v="10" />
+              <width v="275" />
+              <tabOrder v="0" />
+              <staticContent />
+              <emptyElementEnabled v="false" />
+              <labelText>Zahlungsbed.</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <memo>
+              <name>REMARK</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>REMARK</columnName>
+              <dataType v="12" />
+              <precision v="1000" />
+              <x v="120" />
+              <y v="60" />
+              <width v="275" />
+              <height v="255" />
+              <verticalAnchor v="6" />
+              <tabOrder v="2" />
+              <selectTextOnFocus v="true" />
+              <labelText>Bemerkung</labelText>
+              <labelDistance v="80" />
+            </memo>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Texte</name>
+          <caption>&amp;amp;Texte</caption>
+          <children>
+            <button>
+              <name>btn_insertFooter</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SALESORDER/children/register_0/children/texte/children/btn_insertfooter/onClick.js</onClick>
+              <x v="760" />
+              <y v="25" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <enabledProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/texte/children/btn_insertfooter/enabledProcess.js</enabledProcess>
+              <tabOrder v="4" />
+              <imageData>%aditoprj%/frame/SALESORDER/children/register_0/children/texte/children/btn_insertfooter/imageData.png</imageData>
+              <labelAnchor v="0" />
+              <toolTip>Text eintragen</toolTip>
+            </button>
+            <button>
+              <name>btn_insertHeader</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SALESORDER/children/register_0/children/texte/children/btn_insertheader/onClick.js</onClick>
+              <x v="350" />
+              <y v="25" />
+              <width v="20" />
+              <height v="20" />
+              <enabledProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/texte/children/btn_insertheader/enabledProcess.js</enabledProcess>
+              <tabOrder v="1" />
+              <imageData>%aditoprj%/frame/SALESORDER/children/register_0/children/texte/children/btn_insertheader/imageData.png</imageData>
+              <labelAnchor v="0" />
+              <toolTip>Text eintragen</toolTip>
+            </button>
+            <button>
+              <name>btn_insertRemindertext</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SALESORDER/children/register_0/children/texte/children/btn_insertremindertext/onClick.js</onClick>
+              <x v="760" />
+              <y v="180" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <enabledProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/texte/children/btn_insertremindertext/enabledProcess.js</enabledProcess>
+              <tabOrder v="7" />
+              <imageData>%aditoprj%/frame/SALESORDER/children/register_0/children/texte/children/btn_insertremindertext/imageData.png</imageData>
+              <labelAnchor v="0" />
+              <toolTip>Text eintragen</toolTip>
+            </button>
+            <memo>
+              <name>FOOTER</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>FOOTER</columnName>
+              <dataType v="2005" />
+              <precision v="-1" />
+              <presetNew>%aditoprj%/frame/SALESORDER/children/register_0/children/texte/children/footer/presetNew.js</presetNew>
+              <readOnlyProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/texte/children/footer/readOnlyProcess.js</readOnlyProcess>
+              <x v="430" />
+              <y v="50" />
+              <width v="350" />
+              <height v="120" />
+              <horizontalAnchor v="3" />
+              <tabOrder v="5" />
+              <labelText>Fusstext</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </memo>
+            <comboBox>
+              <name>FOOTER_SHORT</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>FOOTER_SHORT</columnName>
+              <dataType v="12" />
+              <precision v="200" />
+              <presetNew>%aditoprj%/frame/SALESORDER/children/register_0/children/texte/children/footer_short/presetNew.js</presetNew>
+              <contentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/texte/children/footer_short/contentProcess.js</contentProcess>
+              <x v="510" />
+              <y v="25" />
+              <width v="245" />
+              <horizontalAnchor v="3" />
+              <utilizeRowId v="false" />
+              <tabOrder v="3" />
+              <staticContent />
+              <emptyElementEnabled v="false" />
+              <labelText>Fusstext kurz</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <memo>
+              <name>HEADER</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>HEADER</columnName>
+              <dataType v="2005" />
+              <precision v="-1" />
+              <presetNew>%aditoprj%/frame/SALESORDER/children/register_0/children/texte/children/header/presetNew.js</presetNew>
+              <readOnlyProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/texte/children/header/readOnlyProcess.js</readOnlyProcess>
+              <x v="20" />
+              <y v="50" />
+              <width v="350" />
+              <height v="300" />
+              <verticalAnchor v="6" />
+              <tabOrder v="2" />
+              <labelText>Kopftext</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </memo>
+            <comboBox>
+              <name>HEADER_SHORT</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>HEADER_SHORT</columnName>
+              <dataType v="12" />
+              <precision v="200" />
+              <presetNew>%aditoprj%/frame/SALESORDER/children/register_0/children/texte/children/header_short/presetNew.js</presetNew>
+              <contentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/texte/children/header_short/contentProcess.js</contentProcess>
+              <x v="100" />
+              <y v="25" />
+              <width v="245" />
+              <utilizeRowId v="false" />
+              <tabOrder v="0" />
+              <staticContent />
+              <emptyElementEnabled v="false" />
+              <labelText>Kopftext kurz</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <memo>
+              <name>REMINDERTEXT</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>REMINDERTEXT</columnName>
+              <dataType v="2005" />
+              <precision v="-1" />
+              <presetNew>%aditoprj%/frame/SALESORDER/children/register_0/children/texte/children/remindertext/presetNew.js</presetNew>
+              <x v="430" />
+              <y v="205" />
+              <width v="350" />
+              <height v="145" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <tabOrder v="8" />
+              <labelText>Fusstext</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </memo>
+            <comboBox>
+              <name>REMINDERTEXT_SHORT</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>REMINDERTEXT_SHORT</columnName>
+              <dataType v="12" />
+              <precision v="200" />
+              <presetNew>%aditoprj%/frame/SALESORDER/children/register_0/children/texte/children/remindertext_short/presetNew.js</presetNew>
+              <contentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/texte/children/remindertext_short/contentProcess.js</contentProcess>
+              <x v="510" />
+              <y v="180" />
+              <width v="245" />
+              <horizontalAnchor v="3" />
+              <tabOrder v="6" />
+              <staticContent />
+              <emptyElementEnabled v="false" />
+              <labelText>Mahntext kurz</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Links</name>
+          <caption>&amp;amp;Links</caption>
+          <children>
+            <lookup>
+              <name>OFFER_ID</name>
+              <template>%aditoprj%/template/Template_Lookup/Template_Lookup.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>OFFER_ID</columnName>
+              <dataType v="1" />
+              <presetNew>%aditoprj%/frame/SALESORDER/children/register_0/children/links/children/offer_id/presetNew.js</presetNew>
+              <onDoubleClick>%aditoprj%/frame/SALESORDER/children/register_0/children/links/children/offer_id/onDoubleClick.js</onDoubleClick>
+              <readOnlyProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/links/children/offer_id/readOnlyProcess.js</readOnlyProcess>
+              <selectClause>%aditoprj%/frame/SALESORDER/children/register_0/children/links/children/offer_id/selectClause.js</selectClause>
+              <fromClause>%aditoprj%/frame/SALESORDER/children/register_0/children/links/children/offer_id/fromClause.js</fromClause>
+              <x v="120" />
+              <y v="340" />
+              <width v="265" />
+              <height v="20" />
+              <verticalAnchor v="5" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/links/children/offer_id/visibleProcess.js</visibleProcess>
+              <tabOrder v="2" />
+              <labelText>Angebot</labelText>
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+              <columnProperties>
+                <lookupColumnMetaData>
+                  <name>AngebotsNr</name>
+                  <columnName>Angebots-Nr.</columnName>
+                  <searchable v="true" />
+                  <width v="102" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Adresse</name>
+                  <columnName>Adresse</columnName>
+                  <searchable v="true" />
+                  <width v="262" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+              </columnProperties>
+            </lookup>
+            <lookup>
+              <name>PROJECT_ID</name>
+              <template>%aditoprj%/template/Template_Lookup/Template_Lookup.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>PROJECT_ID</columnName>
+              <dataType v="1" />
+              <presetNew>%aditoprj%/frame/SALESORDER/children/register_0/children/links/children/project_id/presetNew.js</presetNew>
+              <onDoubleClick>%aditoprj%/frame/SALESORDER/children/register_0/children/links/children/project_id/onDoubleClick.js</onDoubleClick>
+              <readOnlyProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/links/children/project_id/readOnlyProcess.js</readOnlyProcess>
+              <selectClause>%aditoprj%/frame/SALESORDER/children/register_0/children/links/children/project_id/selectClause.js</selectClause>
+              <fromClause>%aditoprj%/frame/SALESORDER/children/register_0/children/links/children/project_id/fromClause.js</fromClause>
+              <x v="120" />
+              <y v="315" />
+              <width v="265" />
+              <height v="20" />
+              <verticalAnchor v="5" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/links/children/project_id/visibleProcess.js</visibleProcess>
+              <tabOrder v="0" />
+              <labelText>Vertriebsprojekt</labelText>
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+              <columnProperties>
+                <lookupColumnMetaData>
+                  <name>ProjektNr</name>
+                  <columnName>Projekt-Nr</columnName>
+                  <searchable v="true" />
+                  <width v="102" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Projektname</name>
+                  <columnName>Projektname</columnName>
+                  <searchable v="true" />
+                  <width v="262" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+              </columnProperties>
+            </lookup>
+            <table>
+              <name>tbl_subforms</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/SALESORDER/children/register_0/children/links/children/tbl_subforms/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/links/children/tbl_subforms/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="810" />
+              <height v="280" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Kategorie</name>
+                  <columnName>Kategorie</columnName>
+                  <width v="118" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Datum</name>
+                  <columnName>Datum</columnName>
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Code</name>
+                  <columnName>Code</columnName>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Status</name>
+                  <columnName>Status</columnName>
+                  <dataType v="12" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Info</name>
+                  <columnName>Info</columnName>
+                  <width v="442" />
+                  <dataType v="12" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+          <valueProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/links/valueProcess.js</valueProcess>
+        </registerTab>
+        <registerTab>
+          <name>Aufgaben</name>
+          <caption>&amp;amp;Aufgaben</caption>
+          <children>
+            <button>
+              <name>btn_resetTEFilter</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SALESORDER/children/register_0/children/aufgaben/children/btn_resettefilter/onClick.js</onClick>
+              <x v="735" />
+              <y v="355" />
+              <width v="90" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <caption>zurücksetzen</caption>
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/aufgaben/children/btn_resettefilter/visibleProcess.js</visibleProcess>
+              <tabOrder v="1" />
+            </button>
+            <button>
+              <name>btn_setTEFilter</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SALESORDER/children/register_0/children/aufgaben/children/btn_settefilter/onClick.js</onClick>
+              <x v="640" />
+              <y v="355" />
+              <width v="90" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <caption>Filter setzen</caption>
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/aufgaben/children/btn_settefilter/visibleProcess.js</visibleProcess>
+              <tabOrder v="0" />
+              <labelText>Filter</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="35" />
+              <labelAnchor v="0" />
+            </button>
+            <table>
+              <name>tbl_Aufgabe</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/SALESORDER/children/register_0/children/aufgaben/children/tbl_aufgabe/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/aufgaben/children/tbl_aufgabe/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="805" />
+              <height v="325" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <utilizeRowFontColor v="true" />
+              <utilizeRowBackgroundColor v="true" />
+              <grantArrangeColumns v="true" />
+              <labelText>Aufgaben</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>I</name>
+                  <columnName>I</columnName>
+                  <width v="19" />
+                  <rendererType v="3" />
+                  <rendererDataProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/aufgaben/children/tbl_aufgabe/columnmetadata/i/rendererDataProcess.js</rendererDataProcess>
+                  <rendererCachingType v="3" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>faellig_am</name>
+                  <columnName>fällig am</columnName>
+                  <width v="90" />
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Status_2</name>
+                  <columnName>Status</columnName>
+                  <width v="108" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Betreff</name>
+                  <columnName>Betreff</columnName>
+                  <width v="174" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>erstellt</name>
+                  <columnName>erstellt</columnName>
+                  <width v="85" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>zustaendig</name>
+                  <columnName>zuständig</columnName>
+                  <width v="155" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Beschreibung_2</name>
+                  <columnName>Beschreibung</columnName>
+                  <width v="150" />
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>Erledigt_setzen</name>
+                  <caption>Erledigt setzen</caption>
+                  <onClick>%aditoprj%/frame/SALESORDER/children/register_0/children/aufgaben/children/tbl_aufgabe/popup/erledigt_setzen/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/aufgaben/children/tbl_aufgabe/popup/erledigt_setzen/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>Weitergeben</name>
+                  <caption>Weitergeben</caption>
+                  <onClick>%aditoprj%/frame/SALESORDER/children/register_0/children/aufgaben/children/tbl_aufgabe/popup/weitergeben/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/aufgaben/children/tbl_aufgabe/popup/weitergeben/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>Verschieben</name>
+                  <caption>Verschieben</caption>
+                  <onClick>%aditoprj%/frame/SALESORDER/children/register_0/children/aufgaben/children/tbl_aufgabe/popup/verschieben/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/aufgaben/children/tbl_aufgabe/popup/verschieben/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+            </table>
+          </children>
+          <valueProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/aufgaben/valueProcess.js</valueProcess>
+        </registerTab>
+        <registerTab>
+          <name>Dokumente</name>
+          <caption>D&amp;amp;okumente</caption>
+          <children>
+            <documentFolder>
+              <name>Dokumentenmappe</name>
+              <template>%aditoprj%/template/Template_Document/Template_Document.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>Documents</columnName>
+              <x v="20" />
+              <y v="25" />
+              <width v="805" />
+              <height v="325" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <tabOrder v="0" />
+              <labelText>zum Angebot gehörende Dokumente</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+            </documentFolder>
+          </children>
+          <valueProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/dokumente/valueProcess.js</valueProcess>
+        </registerTab>
+        <registerTab>
+          <name>Rechte</name>
+          <caption>&amp;amp;Rechte</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/rechte/visibleProcess.js</visibleProcess>
+          <children>
+            <checkBox>
+              <name>cbx_right_del</name>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="90" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelOrientation v="4" />
+              <tabOrder v="3" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_edit</name>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="70" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelOrientation v="4" />
+              <tabOrder v="1" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_grant</name>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="110" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelOrientation v="4" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_read</name>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="50" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelOrientation v="4" />
+              <tabOrder v="2" />
+            </checkBox>
+            <comboBox>
+              <name>cmb_rights_roles</name>
+              <contentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/rechte/children/cmb_rights_roles/contentProcess.js</contentProcess>
+              <searchLinkTableName>TABLEACCESS</searchLinkTableName>
+              <searchLinkColumnName>ROLEID</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/SALESORDER/children/register_0/children/rechte/children/cmb_rights_roles/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="25" />
+              <width v="40" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="4" />
+              <emptyElementEnabled v="false" />
+              <labelText>Rolle</labelText>
+              <labelVisible v="false" />
+            </comboBox>
+            <label>
+              <name>Label_calculation_0</name>
+              <valueProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/rechte/children/label_calculation_0/valueProcess.js</valueProcess>
+              <x v="655" />
+              <y v="130" />
+              <backgroundColor v="0x00000000" />
+              <visible v="false" />
+              <labelVisible v="false" />
+            </label>
+            <table>
+              <name>tbl_rights</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/SALESORDER/children/register_0/children/rechte/children/tbl_rights/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/SALESORDER/children/register_0/children/rechte/children/tbl_rights/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/SALESORDER/children/register_0/children/rechte/children/tbl_rights/rowDelete.js</rowDelete>
+              <grantRowCreateProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/rechte/children/tbl_rights/grantRowCreateProcess.js</grantRowCreateProcess>
+              <grantRowUpdateProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/rechte/children/tbl_rights/grantRowUpdateProcess.js</grantRowUpdateProcess>
+              <grantRowDeleteProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/rechte/children/tbl_rights/grantRowDeleteProcess.js</grantRowDeleteProcess>
+              <separateSavable v="false" />
+              <displayContentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/rechte/children/tbl_rights/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/rechte/children/tbl_rights/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <singleSelection v="true" />
+              <x v="20" />
+              <y v="25" />
+              <width v="630" />
+              <height v="325" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <tabOrder v="0" />
+              <labelText>Rechte auf den angezeigten Datensatz</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Rolle</name>
+                  <columnName>Rolle</columnName>
+                  <width v="205" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/rechte/children/tbl_rights/columnmetadata/rolle/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Lesen</name>
+                  <columnName>Lesen</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/rechte/children/tbl_rights/columnmetadata/lesen/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Aendern</name>
+                  <columnName>Ändern</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/rechte/children/tbl_rights/columnmetadata/aendern/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Loeschen</name>
+                  <columnName>Löschen</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/rechte/children/tbl_rights/columnmetadata/loeschen/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Rechte_vergeben</name>
+                  <columnName>Rechte vergeben</columnName>
+                  <width v="116" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/rechte/children/tbl_rights/columnmetadata/rechte_vergeben/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Admin</name>
+          <caption>Admin</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/visibleProcess.js</visibleProcess>
+          <children>
+            <button>
+              <name>btn_0</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/btn_0/onClick.js</onClick>
+              <x v="290" />
+              <y v="125" />
+              <width v="100" />
+              <height v="25" />
+              <caption>versendet raus</caption>
+              <tabOrder v="5" />
+            </button>
+            <edit>
+              <name>DATE_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>DATE_EDIT</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetChange>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/date_edit/presetChange.js</presetChange>
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <inputFormat>dd.MM.yyyy</inputFormat>
+              <searchableModes>mask</searchableModes>
+              <readOnly v="true" />
+              <x v="140" />
+              <y v="150" />
+              <width v="140" />
+              <tabOrder v="6" />
+              <labelText>DATE_EDIT</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>DATE_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>DATE_NEW</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetNew>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/date_new/presetNew.js</presetNew>
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <inputFormat>dd.MM.yyyy</inputFormat>
+              <searchableModes>mask</searchableModes>
+              <readOnly v="true" />
+              <x v="140" />
+              <y v="125" />
+              <width v="140" />
+              <tabOrder v="4" />
+              <labelText>DATE_NEW</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>idcolumn</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>SALESORDERID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <presetNew>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/idcolumn/presetNew.js</presetNew>
+              <onDoubleClick>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/idcolumn/onDoubleClick.js</onDoubleClick>
+              <searchableModes>mask</searchableModes>
+              <readOnly v="true" />
+              <x v="140" />
+              <y v="50" />
+              <width v="250" />
+              <tabOrder v="1" />
+              <labelText>IDCOLUMN</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>relorgid</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <valueProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/relorgid/valueProcess.js</valueProcess>
+              <x v="140" />
+              <y v="75" />
+              <width v="250" />
+              <tabOrder v="2" />
+              <labelText>relorgid</labelText>
+              <labelDistance v="65" />
+            </edit>
+            <edit>
+              <name>SALESORDER_ID</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>SALESORDER_ID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <presetNew>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/salesorder_id/presetNew.js</presetNew>
+              <onDoubleClick>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/salesorder_id/onDoubleClick.js</onDoubleClick>
+              <searchableModes>mask</searchableModes>
+              <readOnly v="true" />
+              <x v="140" />
+              <y v="100" />
+              <width v="250" />
+              <tabOrder v="3" />
+              <labelText>SALESORDER_ID</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SALESORDERID</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>SALESORDERID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <presetNew>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/salesorderid/presetNew.js</presetNew>
+              <onDoubleClick>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/salesorderid/onDoubleClick.js</onDoubleClick>
+              <searchableModes>mask</searchableModes>
+              <readOnly v="true" />
+              <x v="140" />
+              <y v="25" />
+              <width v="250" />
+              <tabOrder v="0" />
+              <labelText>SALESORDERID</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SearchDATE</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="91" />
+              <searchLinkCondition>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/searchdate/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/searchdate/searchFields.js</searchFields>
+              <calendarSupport v="true" />
+              <x v="500" />
+              <y v="25" />
+              <visible v="false" />
+              <tabOrder v="9" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SearchFLOAT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="6" />
+              <inputFormat>0.00</inputFormat>
+              <searchLinkCondition>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/searchfloat/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/searchfloat/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="85" />
+              <visible v="false" />
+              <tabOrder v="10" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SearchINTEGER</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="4" />
+              <inputFormat>0</inputFormat>
+              <searchLinkCondition>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/searchinteger/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/searchinteger/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="65" />
+              <visible v="false" />
+              <tabOrder v="13" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SearchVARCHAR</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <searchLinkCondition>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/searchvarchar/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/searchvarchar/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="45" />
+              <visible v="false" />
+              <tabOrder v="12" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <comboBox>
+              <name>SerachCombo</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/serachcombo/contentProcess.js</contentProcess>
+              <searchLinkCondition>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/serachcombo/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/serachcombo/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="110" />
+              <visible v="false" />
+              <tabOrder v="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>USER_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>USER_EDIT</columnName>
+              <dataType v="12" />
+              <precision v="30" />
+              <presetChange>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/user_edit/presetChange.js</presetChange>
+              <searchableModes>mask</searchableModes>
+              <readOnly v="true" />
+              <x v="140" />
+              <y v="205" />
+              <width v="140" />
+              <tabOrder v="8" />
+              <labelText>USER_EDIT</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>USER_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>SALESORDER</tableName>
+              <columnName>USER_NEW</columnName>
+              <dataType v="12" />
+              <precision v="30" />
+              <presetNew>%aditoprj%/frame/SALESORDER/children/register_0/children/admin/children/user_new/presetNew.js</presetNew>
+              <searchableModes>mask</searchableModes>
+              <readOnly v="true" />
+              <x v="140" />
+              <y v="180" />
+              <width v="140" />
+              <tabOrder v="7" />
+              <labelText>USER_NEW</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+    <lookup>
+      <name>RELATION_ID</name>
+      <template>%aditoprj%/template/Template_Lookup/Template_Lookup.aod</template>
+      <tableName>SALESORDER</tableName>
+      <columnName>RELATION_ID</columnName>
+      <dataType v="1" />
+      <presetNew>%aditoprj%/frame/SALESORDER/children/relation_id/presetNew.js</presetNew>
+      <onDoubleClick>%aditoprj%/frame/SALESORDER/children/relation_id/onDoubleClick.js</onDoubleClick>
+      <onValidation>%aditoprj%/frame/SALESORDER/children/relation_id/onValidation.js</onValidation>
+      <readOnlyProcess>%aditoprj%/frame/SALESORDER/children/relation_id/readOnlyProcess.js</readOnlyProcess>
+      <mandatoryInput v="true" />
+      <selectClause>%aditoprj%/frame/SALESORDER/children/relation_id/selectClause.js</selectClause>
+      <fromClause>%aditoprj%/frame/SALESORDER/children/relation_id/fromClause.js</fromClause>
+      <whereClause>%aditoprj%/frame/SALESORDER/children/relation_id/whereClause.js</whereClause>
+      <x v="120" />
+      <y v="45" />
+      <width v="275" />
+      <height v="20" />
+      <horizontalAnchor v="3" />
+      <popupWidth v="649" />
+      <popupHeight v="385" />
+      <tabOrder v="1" />
+      <labelText>Person / Firma</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+      <toolTipProcess>%aditoprj%/frame/SALESORDER/children/relation_id/toolTipProcess.js</toolTipProcess>
+      <columnProperties>
+        <lookupColumnMetaData>
+          <name>KundenNr</name>
+          <columnName>Kunden-Nr.</columnName>
+          <searchable v="true" />
+          <width v="69" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>Firma</name>
+          <columnName>Firma</columnName>
+          <searchable v="true" />
+          <width v="182" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>PLZ</name>
+          <columnName>PLZ</columnName>
+          <searchable v="true" />
+          <width v="42" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>Ort</name>
+          <columnName>Ort</columnName>
+          <searchable v="true" />
+          <width v="65" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>Titel</name>
+          <columnName>Titel</columnName>
+          <searchable v="true" />
+          <width v="38" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>Vorname</name>
+          <columnName>Vorname</columnName>
+          <searchable v="true" />
+          <width v="79" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>Nachname</name>
+          <columnName>Nachname</columnName>
+          <searchable v="true" />
+          <width v="75" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>Funktion</name>
+          <columnName>Funktion</columnName>
+          <searchable v="true" />
+          <width v="75" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+      </columnProperties>
+    </lookup>
+    <edit>
+      <name>REMINDERDATE</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>SALESORDER</tableName>
+      <columnName>REMINDERDATE</columnName>
+      <dataType v="93" />
+      <precision v="26" />
+      <outputFormat>dd.MM.yyyy</outputFormat>
+      <inputFormat>dd.MM.yyyy</inputFormat>
+      <searchableModes>none</searchableModes>
+      <mandatoryInputProcess>%aditoprj%/frame/SALESORDER/children/reminderdate/mandatoryInputProcess.js</mandatoryInputProcess>
+      <calendarSupport v="true" />
+      <alignment v="4" />
+      <x v="635" />
+      <y v="95" />
+      <width v="90" />
+      <horizontalAnchor v="2" />
+      <visibleProcess>%aditoprj%/frame/SALESORDER/children/reminderdate/visibleProcess.js</visibleProcess>
+      <tabOrder v="12" />
+      <selectTextOnFocus v="true" />
+      <labelText>Mahndat.</labelText>
+      <labelDistance v="55" />
+      <labelAnchor v="0" />
+    </edit>
+    <comboBox>
+      <name>REMINDERSTEP</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>SALESORDER</tableName>
+      <columnName>REMINDERSTEP</columnName>
+      <dataType v="1" />
+      <precision v="1" />
+      <presetNew>%aditoprj%/frame/SALESORDER/children/reminderstep/presetNew.js</presetNew>
+      <mandatoryInputProcess>%aditoprj%/frame/SALESORDER/children/reminderstep/mandatoryInputProcess.js</mandatoryInputProcess>
+      <x v="635" />
+      <y v="120" />
+      <width v="90" />
+      <horizontalAnchor v="2" />
+      <visibleProcess>%aditoprj%/frame/SALESORDER/children/reminderstep/visibleProcess.js</visibleProcess>
+      <utilizeRowId v="false" />
+      <tabOrder v="13" />
+      <staticContent>
+        <entry>
+          <key>1</key>
+          <value>1</value>
+        </entry>
+        <entry>
+          <key>2</key>
+          <value>2</value>
+        </entry>
+      </staticContent>
+      <labelText>Mahnst.</labelText>
+      <labelDistance v="55" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <checkBox>
+      <name>SENT</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <tableName>SALESORDER</tableName>
+      <columnName>SENT</columnName>
+      <dataType v="1" />
+      <presetNew>%aditoprj%/frame/SALESORDER/children/sent/presetNew.js</presetNew>
+      <valueTrue>Y</valueTrue>
+      <valueFalse>N</valueFalse>
+      <readOnly v="true" />
+      <x v="740" />
+      <y v="20" />
+      <horizontalAnchor v="2" />
+      <labelText>versendet</labelText>
+      <labelOrientation v="4" />
+      <labelDistance v="5" />
+      <tabOrder v="14" />
+    </checkBox>
+    <edit>
+      <name>SUMME_brutto</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <dataType v="6" />
+      <valueProcess>%aditoprj%/frame/SALESORDER/children/summe_brutto/valueProcess.js</valueProcess>
+      <outputFormat>#,##0.00</outputFormat>
+      <searchableModes>none</searchableModes>
+      <readOnly v="true" />
+      <alignment v="4" />
+      <x v="495" />
+      <y v="95" />
+      <width v="80" />
+      <horizontalAnchor v="2" />
+      <tabOrder v="7" />
+      <selectTextOnFocus v="true" />
+      <labelText>Betrag brutto</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>SUMME_UMST</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>SALESORDER</tableName>
+      <columnName>VAT</columnName>
+      <dataType v="2" />
+      <precision v="14" />
+      <valueProcess>%aditoprj%/frame/SALESORDER/children/summe_umst/valueProcess.js</valueProcess>
+      <outputFormat>#,##0.00</outputFormat>
+      <searchableModes>none</searchableModes>
+      <readOnly v="true" />
+      <alignment v="4" />
+      <x v="495" />
+      <y v="70" />
+      <width v="80" />
+      <horizontalAnchor v="2" />
+      <tabOrder v="6" />
+      <selectTextOnFocus v="true" />
+      <labelText>Betrag MWST</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>zahlungsziel</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <dataType v="93" />
+      <valueProcess>%aditoprj%/frame/SALESORDER/children/zahlungsziel/valueProcess.js</valueProcess>
+      <outputFormat>dd.MM.yyyy</outputFormat>
+      <searchableModes>none</searchableModes>
+      <readOnly v="true" />
+      <alignment v="4" />
+      <x v="635" />
+      <y v="45" />
+      <width v="90" />
+      <horizontalAnchor v="2" />
+      <tabOrder v="10" />
+      <selectTextOnFocus v="true" />
+      <labelText>Zahlgziel</labelText>
+      <labelDistance v="55" />
+      <labelAnchor v="0" />
+    </edit>
+  </children>
+  <tableView>
+    <tableViewProperties>
+      <columnProperty>
+        <name>subselect</name>
+        <label>Belegtyp</label>
+        <width v="120" />
+        <subSelect>%aditoprj%/frame/SALESORDER/tableview/tableviewproperties/subselect/subSelect.js</subSelect>
+      </columnProperty>
+      <columnProperty>
+        <name>SALESORDER_ORDERCODE</name>
+        <tableName>SALESORDER</tableName>
+        <columnName>ORDERCODE</columnName>
+        <label>Nr.</label>
+        <width v="54" />
+      </columnProperty>
+      <columnProperty>
+        <name>subselect_2</name>
+        <label>Firma</label>
+        <subSelect>%aditoprj%/frame/SALESORDER/tableview/tableviewproperties/subselect_2/subSelect.js</subSelect>
+      </columnProperty>
+      <columnProperty>
+        <name>SALESORDER_ORDERDATE</name>
+        <tableName>SALESORDER</tableName>
+        <columnName>ORDERDATE</columnName>
+        <label>Datum</label>
+        <width v="82" />
+        <dataType v="93" />
+        <outputFormat>dd.MM.yyyy</outputFormat>
+      </columnProperty>
+      <columnProperty>
+        <name>subselect_3</name>
+        <label>Brutto</label>
+        <alignment v="4" />
+        <width v="90" />
+        <dataType v="6" />
+        <outputFormat>#,##0.00</outputFormat>
+        <subSelect>%aditoprj%/frame/SALESORDER/tableview/tableviewproperties/subselect_3/subSelect.js</subSelect>
+      </columnProperty>
+      <columnProperty>
+        <name>SALESORDER_CURRENCY</name>
+        <tableName>SALESORDER</tableName>
+        <columnName>CURRENCY</columnName>
+        <label>Währ.</label>
+        <width v="45" />
+      </columnProperty>
+      <columnProperty>
+        <name>subselect_4</name>
+        <label>bezahlt</label>
+        <alignment v="4" />
+        <width v="90" />
+        <dataType v="6" />
+        <outputFormat>#,##0.00</outputFormat>
+        <subSelect>%aditoprj%/frame/SALESORDER/tableview/tableviewproperties/subselect_4/subSelect.js</subSelect>
+      </columnProperty>
+      <columnProperty>
+        <name>subselect_5</name>
+        <label>offen</label>
+        <alignment v="4" />
+        <width v="90" />
+        <dataType v="6" />
+        <outputFormat>#,##0.00</outputFormat>
+        <subSelect>%aditoprj%/frame/SALESORDER/tableview/tableviewproperties/subselect_5/subSelect.js</subSelect>
+      </columnProperty>
+      <columnProperty>
+        <name>SALESORDER_SENT</name>
+        <tableName>SALESORDER</tableName>
+        <columnName>SENT</columnName>
+        <label>ges.</label>
+        <width v="33" />
+      </columnProperty>
+      <columnProperty>
+        <name>SALESORDER_ADJUSTMENT</name>
+        <tableName>SALESORDER</tableName>
+        <columnName>ADJUSTMENT</columnName>
+        <label>wb.</label>
+        <width v="28" />
+      </columnProperty>
+      <columnProperty>
+        <name>SALESORDER_CANCELLED</name>
+        <tableName>SALESORDER</tableName>
+        <columnName>CANCELLED</columnName>
+        <label>st.</label>
+        <width v="24" />
+      </columnProperty>
+      <columnProperty>
+        <name>SALESORDER_REMINDERSTEP</name>
+        <tableName>SALESORDER</tableName>
+        <columnName>REMINDERSTEP</columnName>
+        <label>MS</label>
+        <alignment v="0" />
+        <width v="29" />
+      </columnProperty>
+    </tableViewProperties>
+  </tableView>
+  <width v="850" />
+  <height v="580" />
+</frame>

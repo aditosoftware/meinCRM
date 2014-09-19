@@ -1,0 +1,17 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://adito/webservice" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="AditoEvents" targetNamespace="http://adito/webservice">
+    <wsdl:message name="EventMessage">
+        <wsdl:part name="MessageData" type="xs:string" />
+    </wsdl:message>
+    <wsdl:portType name="NotificationPortType" />
+    <wsdl:binding name="NotificationSoapBinding" type="tns:NotificationPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    </wsdl:binding>
+    <wsdl:service name="NotificationService">
+        <wsdl:port name="NotificationPort" binding="tns:NotificationSoapBinding">
+            <soap:address location="http://localhost:7940/NotificationService" />
+        </wsdl:port>
+    </wsdl:service>
+    <plnk:partnerLinkType name="listener">
+        <plnk:role name="listener" portType="tns:NotificationPortType" />
+    </plnk:partnerLinkType>
+</wsdl:definitions>

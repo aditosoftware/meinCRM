@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>QUESTIONNAIRELOG</name>
+  <title>Interview</title>
+  <icon>%aditoprj%/frame/QUESTIONNAIRELOG/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/QUESTIONNAIRELOG/iconInactive.png</iconInactive>
+  <description></description>
+  <alias>AO_DATEN</alias>
+  <linkInformation>
+    <linkInformation>
+      <name>87f68f72-8be1-4894-b9b5-7d3938b21820</name>
+      <tableName>QUESTIONNAIRELOG</tableName>
+      <primaryKey>QUESTIONNAIRELOGID</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+  </linkInformation>
+  <whereClause>%aditoprj%/frame/QUESTIONNAIRELOG/whereClause.js</whereClause>
+  <idStrategy v="4" />
+  <beforeStart>%aditoprj%/frame/QUESTIONNAIRELOG/beforeStart.js</beforeStart>
+  <afterStart>%aditoprj%/frame/QUESTIONNAIRELOG/afterStart.js</afterStart>
+  <beforeDelete>%aditoprj%/frame/QUESTIONNAIRELOG/beforeDelete.js</beforeDelete>
+  <afterDelete>%aditoprj%/frame/QUESTIONNAIRELOG/afterDelete.js</afterDelete>
+  <beforeCancel>%aditoprj%/frame/QUESTIONNAIRELOG/beforeCancel.js</beforeCancel>
+  <afterCancel>%aditoprj%/frame/QUESTIONNAIRELOG/afterCancel.js</afterCancel>
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <customComponents>
+          <rcCommandButton>
+            <name>Auswertungen</name>
+            <title>Auswertungen</title>
+            <imageData>%aditoprj%/frame/QUESTIONNAIRELOG/ribbon/ribbontasks/task_search/customcomponents/auswertungen/imageData.png</imageData>
+            <onClick></onClick>
+            <enabledProcess></enabledProcess>
+            <ribbonElementPriority>LOW</ribbonElementPriority>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+            <commandButtonKind>ACTION_AND_POPUP_MAIN_ACTION</commandButtonKind>
+            <popupStyle>MENU</popupStyle>
+            <items>
+              <rcCommandButton>
+                <name>Report</name>
+                <title>Report</title>
+                <toolTip>Nur 1 Fragebogen auswählen !</toolTip>
+                <imageData>%aditoprj%/frame/QUESTIONNAIRELOG/ribbon/ribbontasks/task_search/customcomponents/auswertungen/items/report/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/QUESTIONNAIRELOG/ribbon/ribbontasks/task_search/customcomponents/auswertungen/items/report/onClick.js</onClick>
+                <enabledProcess>%aditoprj%/frame/QUESTIONNAIRELOG/ribbon/ribbontasks/task_search/customcomponents/auswertungen/items/report/enabledProcess.js</enabledProcess>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>Export_Excel</name>
+                <title>Export Excel</title>
+                <imageData>%aditoprj%/frame/QUESTIONNAIRELOG/ribbon/ribbontasks/task_search/customcomponents/auswertungen/items/export_excel/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/QUESTIONNAIRELOG/ribbon/ribbontasks/task_search/customcomponents/auswertungen/items/export_excel/onClick.js</onClick>
+              </rcCommandButton>
+            </items>
+          </rcCommandButton>
+        </customComponents>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showSaveCancel v="false" />
+        <showCreate v="true" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="true" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <databaseColumns>
+    <column>
+      <name>QUESTIONNAIRELOG_QUESTIONNAIRELOGID</name>
+      <tableName>QUESTIONNAIRELOG</tableName>
+      <columnName>QUESTIONNAIRELOGID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/QUESTIONNAIRELOG/databasecolumns/questionnairelog_questionnairelogid/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>QUESTIONNAIRELOG_DATE_EDIT</name>
+      <tableName>QUESTIONNAIRELOG</tableName>
+      <columnName>DATE_EDIT</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="26" />
+      <scale>6</scale>
+      <presetChange>%aditoprj%/frame/QUESTIONNAIRELOG/databasecolumns/questionnairelog_date_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>QUESTIONNAIRELOG_USER_NEW</name>
+      <tableName>QUESTIONNAIRELOG</tableName>
+      <columnName>USER_NEW</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="30" />
+      <presetNew>%aditoprj%/frame/QUESTIONNAIRELOG/databasecolumns/questionnairelog_user_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>QUESTIONNAIRELOG_DATE_NEW</name>
+      <tableName>QUESTIONNAIRELOG</tableName>
+      <columnName>DATE_NEW</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="26" />
+      <scale>6</scale>
+      <presetNew>%aditoprj%/frame/QUESTIONNAIRELOG/databasecolumns/questionnairelog_date_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>QUESTIONNAIRELOG_USER_EDIT</name>
+      <tableName>QUESTIONNAIRELOG</tableName>
+      <columnName>USER_EDIT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="30" />
+      <presetChange>%aditoprj%/frame/QUESTIONNAIRELOG/databasecolumns/questionnairelog_user_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>QUESTIONNAIRELOG_RELATION_ID</name>
+      <tableName>QUESTIONNAIRELOG</tableName>
+      <columnName>RELATION_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/QUESTIONNAIRELOG/databasecolumns/questionnairelog_relation_id/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>QUESTIONNAIRELOG_QUESTIONNAIRE_ID</name>
+      <tableName>QUESTIONNAIRELOG</tableName>
+      <columnName>QUESTIONNAIRE_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+    </column>
+  </databaseColumns>
+  <children>
+    <edit>
+      <name>DATE_NEW_0</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>QUESTIONNAIRELOG</tableName>
+      <columnName>DATE_NEW</columnName>
+      <dataType v="93" />
+      <precision v="26" />
+      <presetNew>%aditoprj%/frame/QUESTIONNAIRELOG/children/date_new_0/presetNew.js</presetNew>
+      <outputFormat>dd.MM.yyyy</outputFormat>
+      <inputFormat>dd.MM.yyyy</inputFormat>
+      <readOnly v="true" />
+      <calendarSupport v="true" />
+      <x v="480" />
+      <y v="20" />
+      <width v="95" />
+      <tabOrder v="1" />
+      <labelText>Datum</labelText>
+      <labelDistance v="30" />
+    </edit>
+    <label>
+      <name>lblCreatedEdited</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <valueProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/lblcreatededited/valueProcess.js</valueProcess>
+      <x v="20" />
+      <y v="565" />
+      <width v="830" />
+      <height v="15" />
+      <verticalAnchor v="5" />
+      <font name="Verdana" style="0" size="9" />
+      <labelAnchor v="0" />
+    </label>
+    <comboBox>
+      <name>QUESTIONNAIRE_ID</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>QUESTIONNAIRELOG</tableName>
+      <columnName>QUESTIONNAIRE_ID</columnName>
+      <dataType v="1" />
+      <precision v="36" />
+      <contentProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/questionnaire_id/contentProcess.js</contentProcess>
+      <x v="120" />
+      <y v="20" />
+      <width v="315" />
+      <tabOrder v="0" />
+      <labelText>Fragebogen</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <register>
+      <name>reg_0</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <y v="90" />
+      <width v="850" />
+      <height v="475" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <tabOrder v="3" />
+      <children>
+        <registerTab>
+          <name>Befragung</name>
+          <caption>Befragung</caption>
+          <children>
+            <comboBox>
+              <name>answer_cmb</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <valueProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/befragung/children/answer_cmb/valueProcess.js</valueProcess>
+              <contentProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/befragung/children/answer_cmb/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="20" />
+              <y v="150" />
+              <width v="220" />
+              <height v="25" />
+              <visibleProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/befragung/children/answer_cmb/visibleProcess.js</visibleProcess>
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <list>
+              <name>answer_list</name>
+              <template>%aditoprj%/template/Template_List/Template_List.aod</template>
+              <valueProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/befragung/children/answer_list/valueProcess.js</valueProcess>
+              <contentProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/befragung/children/answer_list/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="20" />
+              <y v="150" />
+              <width v="220" />
+              <height v="170" />
+              <visibleProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/befragung/children/answer_list/visibleProcess.js</visibleProcess>
+              <tabOrder v="1" />
+            </list>
+            <memo>
+              <name>answer_memo</name>
+              <valueProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/befragung/children/answer_memo/valueProcess.js</valueProcess>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="20" />
+              <y v="150" />
+              <width v="220" />
+              <height v="170" />
+              <font name="Verdana" style="0" size="11" />
+              <backgroundColor v="0xfff7f8fb" />
+              <visibleProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/befragung/children/answer_memo/visibleProcess.js</visibleProcess>
+              <tabOrder v="3" />
+              <labelFont name="" style="0" size="11" />
+            </memo>
+            <radioButton>
+              <name>answer_rb</name>
+              <valueProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/befragung/children/answer_rb/valueProcess.js</valueProcess>
+              <contentProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/befragung/children/answer_rb/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="20" />
+              <y v="150" />
+              <width v="220" />
+              <height v="170" />
+              <font name="" style="0" size="11" />
+              <backgroundColor v="0xfff7f8fb" />
+              <visibleProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/befragung/children/answer_rb/visibleProcess.js</visibleProcess>
+              <caption>Antwortauswahl</caption>
+              <captionFont name="" style="0" size="11" />
+              <tabOrder v="2" />
+            </radioButton>
+            <button>
+              <name>btn_end_question</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/befragung/children/btn_end_question/onClick.js</onClick>
+              <x v="20" />
+              <y v="360" />
+              <width v="220" />
+              <height v="30" />
+              <caption>Befragung beenden</caption>
+              <tabOrder v="5" />
+              <labelVisible v="false" />
+            </button>
+            <button>
+              <name>btn_next_question</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/befragung/children/btn_next_question/onClick.js</onClick>
+              <x v="20" />
+              <y v="325" />
+              <width v="220" />
+              <height v="30" />
+              <caption>Nächste Frage</caption>
+              <enabledProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/befragung/children/btn_next_question/enabledProcess.js</enabledProcess>
+              <tabOrder v="4" />
+              <labelVisible v="false" />
+            </button>
+            <memo>
+              <name>memo_question</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <valueProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/befragung/children/memo_question/valueProcess.js</valueProcess>
+              <x v="20" />
+              <y v="25" />
+              <width v="220" />
+              <height v="95" />
+              <font name="" style="1" size="" />
+              <tabOrder v="0" />
+            </memo>
+            <table>
+              <name>tbl_questions</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <alwaysEditable v="true" />
+              <displayContentProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/befragung/children/tbl_questions/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="255" />
+              <y v="25" />
+              <width v="580" />
+              <height v="410" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <utilizeRowBackgroundColor v="true" />
+              <labelText>Fragen</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Nr</name>
+                  <columnName>Nr</columnName>
+                  <width v="42" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Frage</name>
+                  <columnName>Frage</columnName>
+                  <width v="293" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Antwort</name>
+                  <columnName>Antwort</columnName>
+                  <width v="210" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Admin</name>
+          <caption>Admin</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/visibleProcess.js</visibleProcess>
+          <children>
+            <button>
+              <name>btn_0</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/children/btn_0/onClick.js</onClick>
+              <x v="160" />
+              <y v="215" />
+              <width v="180" />
+              <height v="30" />
+              <caption>Test der Image-Variablen</caption>
+              <tabOrder v="7" />
+              <labelVisible v="false" />
+            </button>
+            <edit>
+              <name>DATE_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>QUESTIONNAIRELOG</tableName>
+              <columnName>DATE_EDIT</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetChange>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/children/date_edit/presetChange.js</presetChange>
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <searchableModes>mask</searchableModes>
+              <x v="160" />
+              <y v="90" />
+              <width v="140" />
+              <tabOrder v="3" />
+              <labelText>DATE_EDIT</labelText>
+              <labelDistance v="110" />
+            </edit>
+            <edit>
+              <name>DATE_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>QUESTIONNAIRELOG</tableName>
+              <columnName>DATE_NEW</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetNew>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/children/date_new/presetNew.js</presetNew>
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <searchableModes>mask</searchableModes>
+              <x v="160" />
+              <y v="65" />
+              <width v="140" />
+              <tabOrder v="2" />
+              <labelText>DATE_NEW</labelText>
+              <labelDistance v="110" />
+            </edit>
+            <edit>
+              <name>edt_campaignparticipant</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <valueProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/children/edt_campaignparticipant/valueProcess.js</valueProcess>
+              <x v="160" />
+              <y v="190" />
+              <width v="250" />
+              <tabOrder v="6" />
+              <labelText>campaignparticipant</labelText>
+              <labelDistance v="65" />
+            </edit>
+            <edit>
+              <name>idcolumn</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>QUESTIONNAIRELOG</tableName>
+              <columnName>QUESTIONNAIRELOGID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <presetNew>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/children/idcolumn/presetNew.js</presetNew>
+              <searchableModes>mask</searchableModes>
+              <x v="160" />
+              <y v="15" />
+              <width v="250" />
+              <tabOrder v="0" />
+              <labelText>idcolumn</labelText>
+              <labelDistance v="110" />
+            </edit>
+            <label>
+              <name>lbl_SetFirstRow</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/children/lbl_setfirstrow/valueProcess.js</valueProcess>
+              <x v="160" />
+              <y v="165" />
+              <width v="330" />
+              <labelDistance v="120" />
+              <labelAnchor v="0" />
+            </label>
+            <edit>
+              <name>QUESTIONNAIRELOGID</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>QUESTIONNAIRELOG</tableName>
+              <columnName>QUESTIONNAIRELOGID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <presetNew>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/children/questionnairelogid/presetNew.js</presetNew>
+              <searchableModes>mask</searchableModes>
+              <x v="160" />
+              <y v="40" />
+              <width v="250" />
+              <tabOrder v="1" />
+              <labelText>QUESTIONNAIRELOGID</labelText>
+              <labelDistance v="65" />
+            </edit>
+            <edit>
+              <name>SearchDATE</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="91" />
+              <searchLinkCondition>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/children/searchdate/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/children/searchdate/searchFields.js</searchFields>
+              <calendarSupport v="true" />
+              <x v="510" />
+              <y v="15" />
+              <visible v="false" />
+              <tabOrder v="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SearchFLOAT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="6" />
+              <inputFormat>0.00</inputFormat>
+              <searchLinkCondition>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/children/searchfloat/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/children/searchfloat/searchFields.js</searchFields>
+              <x v="510" />
+              <y v="75" />
+              <visible v="false" />
+              <tabOrder v="10" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SearchINTEGER</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="4" />
+              <inputFormat>0</inputFormat>
+              <searchLinkCondition>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/children/searchinteger/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/children/searchinteger/searchFields.js</searchFields>
+              <x v="510" />
+              <y v="55" />
+              <visible v="false" />
+              <tabOrder v="8" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SearchVARCHAR</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <searchLinkCondition>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/children/searchvarchar/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/children/searchvarchar/searchFields.js</searchFields>
+              <x v="510" />
+              <y v="35" />
+              <visible v="false" />
+              <tabOrder v="9" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <comboBox>
+              <name>SerachCombo</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/children/serachcombo/contentProcess.js</contentProcess>
+              <searchLinkCondition>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/children/serachcombo/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/children/serachcombo/searchFields.js</searchFields>
+              <x v="510" />
+              <y v="100" />
+              <visible v="false" />
+              <tabOrder v="12" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>USER_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>QUESTIONNAIRELOG</tableName>
+              <columnName>USER_EDIT</columnName>
+              <precision v="30" />
+              <presetChange>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/children/user_edit/presetChange.js</presetChange>
+              <searchableModes>mask</searchableModes>
+              <x v="160" />
+              <y v="140" />
+              <width v="140" />
+              <tabOrder v="5" />
+              <labelText>USER_EDIT</labelText>
+              <labelDistance v="110" />
+            </edit>
+            <edit>
+              <name>USER_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>QUESTIONNAIRELOG</tableName>
+              <columnName>USER_NEW</columnName>
+              <precision v="30" />
+              <presetNew>%aditoprj%/frame/QUESTIONNAIRELOG/children/reg_0/children/admin/children/user_new/presetNew.js</presetNew>
+              <searchableModes>mask</searchableModes>
+              <x v="160" />
+              <y v="115" />
+              <width v="140" />
+              <tabOrder v="4" />
+              <labelText>USER_NEW</labelText>
+              <labelDistance v="110" />
+            </edit>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+    <lookup>
+      <name>RELATION_ID</name>
+      <template>%aditoprj%/template/Template_Lookup/Template_Lookup.aod</template>
+      <tableName>QUESTIONNAIRELOG</tableName>
+      <columnName>RELATION_ID</columnName>
+      <dataType v="1" />
+      <presetNew>%aditoprj%/frame/QUESTIONNAIRELOG/children/relation_id/presetNew.js</presetNew>
+      <onDoubleClick>%aditoprj%/frame/QUESTIONNAIRELOG/children/relation_id/onDoubleClick.js</onDoubleClick>
+      <mandatoryInput v="true" />
+      <selectClause>%aditoprj%/frame/QUESTIONNAIRELOG/children/relation_id/selectClause.js</selectClause>
+      <fromClause>%aditoprj%/frame/QUESTIONNAIRELOG/children/relation_id/fromClause.js</fromClause>
+      <whereClause>%aditoprj%/frame/QUESTIONNAIRELOG/children/relation_id/whereClause.js</whereClause>
+      <x v="120" />
+      <y v="45" />
+      <width v="455" />
+      <height v="20" />
+      <popupWidth v="680" />
+      <tabOrder v="2" />
+      <labelText>Person / Firma</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+      <toolTipProcess>%aditoprj%/frame/QUESTIONNAIRELOG/children/relation_id/toolTipProcess.js</toolTipProcess>
+      <columnProperties>
+        <lookupColumnMetaData>
+          <name>Firmenname</name>
+          <columnName>Firmenname</columnName>
+          <searchable v="true" />
+          <width v="164" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>PLZ</name>
+          <columnName>PLZ</columnName>
+          <searchable v="true" />
+          <width v="56" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>Ort</name>
+          <columnName>Ort</columnName>
+          <searchable v="true" />
+          <width v="97" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>Titel</name>
+          <columnName>Titel</columnName>
+          <searchable v="true" />
+          <width v="53" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>Vorname</name>
+          <columnName>Vorname</columnName>
+          <searchable v="true" />
+          <width v="103" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>Nachname</name>
+          <columnName>Nachname</columnName>
+          <searchable v="true" />
+          <width v="103" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>Position</name>
+          <columnName>Position</columnName>
+          <searchable v="true" />
+          <width v="75" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+      </columnProperties>
+    </lookup>
+  </children>
+  <tableView>
+    <tableViewProperties>
+      <columnProperty>
+        <name>subselect</name>
+        <label>Fragebogen</label>
+        <width v="276" />
+        <subSelect>%aditoprj%/frame/QUESTIONNAIRELOG/tableview/tableviewproperties/subselect/subSelect.js</subSelect>
+      </columnProperty>
+      <columnProperty>
+        <name>QUESTIONNAIRELOG_DATE_NEW</name>
+        <tableName>QUESTIONNAIRELOG</tableName>
+        <columnName>DATE_NEW</columnName>
+        <label>Befragung</label>
+        <width v="112" />
+        <dataType v="93" />
+        <outputFormat>dd.MM.yyyy HH:mm</outputFormat>
+      </columnProperty>
+      <columnProperty>
+        <name>subselect_2</name>
+        <label>Teilnehmer</label>
+        <width v="397" />
+        <subSelect>%aditoprj%/frame/QUESTIONNAIRELOG/tableview/tableviewproperties/subselect_2/subSelect.js</subSelect>
+      </columnProperty>
+      <columnProperty>
+        <name>QUESTIONNAIRELOG_USER_NEW</name>
+        <tableName>QUESTIONNAIRELOG</tableName>
+        <columnName>USER_NEW</columnName>
+        <label>Fragesteller</label>
+      </columnProperty>
+    </tableViewProperties>
+  </tableView>
+  <width v="850" />
+  <height v="580" />
+</frame>

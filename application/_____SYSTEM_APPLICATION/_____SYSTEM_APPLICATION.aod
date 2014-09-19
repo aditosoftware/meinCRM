@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.5" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>_____SYSTEM_APPLICATION</name>
+  <entityNode name="_____SYSTEM_COMPANY" kind="200">
+    <node name="ADITO" kind="123" title="mein CRM">
+      <node name="Kontaktmanagement" kind="123" title="Kontaktmanagement">
+        <node name="TASK_DATE" kind="100" />
+        <node name="meinCRM" kind="100" />
+        <node name="PROJECT_Jeder" kind="159" />
+        <node name="calendar" kind="103" />
+        <node name="ORG" kind="100" />
+        <node name="PERS" kind="100" />
+        <node name="HISTORY" kind="100" />
+      </node>
+      <node name="Vertrieb" kind="123" title="">
+        <node name="PROJECT_Innendienst" kind="159" />
+        <node name="PROJECT_Aussendienst" kind="159" />
+        <node name="SALESPROJECT" kind="100" />
+        <node name="OFFER" kind="100" />
+        <node name="SALESORDER" kind="100" />
+        <node name="CONTRACT" kind="100" />
+        <node name="ANALYSES" kind="100" />
+      </node>
+    </node>
+    <node name="Marketing" kind="123" title="mein Marketing">
+      <node name="Group1" kind="123" title="">
+        <node name="CAMPAIGN" kind="100" />
+        <node name="DISTLIST" kind="100" />
+        <node name="BULKMAIL_DEFINITION" kind="100" />
+        <node name="EVENT" kind="100" />
+        <node name="ADVERTISINGADMIN" kind="100" />
+        <node name="PRODUCT" kind="100" />
+        <node name="PRODUCTPRICE" kind="100" />
+        <node name="QUESTIONNAIRELOG" kind="100" />
+        <node name="QUESTIONNAIRE" kind="100" />
+        <node name="LEADIMPORT" kind="100" />
+        <node name="DOCUMENT" kind="100" />
+        <node name="TEXTBLOCK" kind="100" />
+        <node name="THEMENBAUM" kind="100" />
+        <node name="PROJECT_Marketing" kind="159" />
+      </node>
+    </node>
+    <node name="Service" kind="123" title="mein Service">
+      <node name="Group2" kind="123" title="">
+        <node name="groupcalendar" kind="103" />
+        <node name="MACHINE" kind="100" />
+        <node name="SERVICEORDER" kind="100" />
+        <node name="COMPLAINT" kind="100" />
+        <node name="PROJECT_Service" kind="159" />
+      </node>
+    </node>
+    <node name="Administration" kind="123" title="meine Administration">
+      <node name="Group4" kind="123" title="">
+        <node name="EMPLOYEE" kind="100" />
+        <node name="ATTRIBUTES" kind="100" />
+        <node name="KEYWORD" kind="100" />
+        <node name="COUNTRYDATA" kind="100" />
+        <node name="LOCATIONDATA" kind="100" />
+        <node name="DUPLICATIONS" kind="100" />
+        <node name="SYSTEMADMIN" kind="100" />
+        <node name="SELECTION" kind="100" />
+        <node name="REPORT_ADMINISTRATION" kind="100" />
+        <node name="DBREPOSITORYADMIN" kind="100" />
+        <node name="PROJECT_Fachadministrator" kind="159" />
+      </node>
+    </node>
+  </entityNode>
+  <company>
+    <name>_____SYSTEM_COMPANY</name>
+    <title>Company</title>
+    <icon>%aditoprj%/application/_____SYSTEM_APPLICATION/company/icon.png</icon>
+    <description></description>
+    <backgroundImage></backgroundImage>
+    <stretched v="false" />
+    <backgroundColor v="0x00000000" />
+  </company>
+</application>

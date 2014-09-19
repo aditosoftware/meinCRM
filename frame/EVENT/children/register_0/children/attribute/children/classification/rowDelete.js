@@ -1,0 +1,1 @@
+a.sqlDelete("ATTRLINK", "ATTRLINKID = '" + a.valueof("$local.idvalue") + "'");

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>DLG_CHOOSE_QUARTAL</name>
+  <alias>AO_DATEN</alias>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>SEARCH_24</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="true" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>SEARCH_MASK_24</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_24</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="true" />
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_24</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <comboBox>
+      <name>quartal</name>
+      <dataType v="1" />
+      <contentProcess></contentProcess>
+      <mandatoryInput v="false" />
+      <x v="25" />
+      <y v="25" />
+      <width v="55" />
+      <staticContent>
+        <entry>
+          <key>1</key>
+          <value>1</value>
+        </entry>
+        <entry>
+          <key>2</key>
+          <value>2</value>
+        </entry>
+        <entry>
+          <key>3</key>
+          <value>3</value>
+        </entry>
+        <entry>
+          <key>4</key>
+          <value>4</value>
+        </entry>
+      </staticContent>
+    </comboBox>
+    <comboBox>
+      <name>year</name>
+      <contentProcess>%aditoprj%/frame/DLG_CHOOSE_QUARTAL/children/year/contentProcess.js</contentProcess>
+      <x v="105" />
+      <y v="25" />
+    </comboBox>
+  </children>
+  <tableView />
+</frame>

@@ -1,0 +1,1 @@
+a.rs(a.valueof("$comp.RELATION_ID") != '')

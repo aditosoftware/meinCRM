@@ -1,0 +1,1 @@
+if (a.hasvar("$image.relorgid")) a.rs(a.valueof("$image.relorgid"));

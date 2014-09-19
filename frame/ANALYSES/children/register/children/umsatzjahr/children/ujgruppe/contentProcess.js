@@ -1,0 +1,1 @@
+a.ro( a.valueofObj("$image.ujgroups"));

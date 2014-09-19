@@ -1,0 +1,1 @@
+a.rs("(select ORGNAME from ORG where ORGID = PRODUCT.ORG_ID)");

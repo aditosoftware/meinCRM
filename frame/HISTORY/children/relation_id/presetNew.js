@@ -1,0 +1,1 @@
+a.rq("select relationid from relation join employee on (relation.relationid = employee.relation_id) where login = '" + a.valueof("$sys.user") + "'");

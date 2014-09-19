@@ -1,0 +1,1 @@
+a.rs(a.valueof("$comp.cmbRelationType") != "" && a.valueof("$comp.lupTarget") != "") // && a.valueof("$comp.t") == "");

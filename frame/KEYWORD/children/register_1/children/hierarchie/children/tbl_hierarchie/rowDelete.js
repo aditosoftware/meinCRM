@@ -1,0 +1,1 @@
+a.sqlDelete("KEYWORD", "KEYWORDID = '" + a.valueof("$local.idvalue") + "'");

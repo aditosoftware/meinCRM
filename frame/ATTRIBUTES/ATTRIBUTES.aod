@@ -1,0 +1,1389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>ATTRIBUTES</name>
+  <title>Attribute</title>
+  <icon>%aditoprj%/frame/ATTRIBUTES/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/ATTRIBUTES/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type public
+@status released
+@desc [Frame zur Verwaltung der Atrribute]
+
+@module Administration
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <linkInformation>
+    <linkInformation>
+      <name>4ae7c4c0-f16f-4078-a8f2-7daf95da6b07</name>
+      <tableName>ATTR</tableName>
+      <primaryKey>ATTRID</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+  </linkInformation>
+  <whereClause>%aditoprj%/frame/ATTRIBUTES/whereClause.js</whereClause>
+  <orderByClause>%aditoprj%/frame/ATTRIBUTES/orderByClause.js</orderByClause>
+  <idStrategy v="4" />
+  <beforeStart>%aditoprj%/frame/ATTRIBUTES/beforeStart.js</beforeStart>
+  <afterStart>%aditoprj%/frame/ATTRIBUTES/afterStart.js</afterStart>
+  <afterSave>%aditoprj%/frame/ATTRIBUTES/afterSave.js</afterSave>
+  <beforeDelete>%aditoprj%/frame/ATTRIBUTES/beforeDelete.js</beforeDelete>
+  <afterDelete>%aditoprj%/frame/ATTRIBUTES/afterDelete.js</afterDelete>
+  <afterCancel>%aditoprj%/frame/ATTRIBUTES/afterCancel.js</afterCancel>
+  <beforeEdit></beforeEdit>
+  <afterEdit>%aditoprj%/frame/ATTRIBUTES/afterEdit.js</afterEdit>
+  <currentContentProcess>%aditoprj%/frame/ATTRIBUTES/currentContentProcess.js</currentContentProcess>
+  <grantCreateProcess>%aditoprj%/frame/ATTRIBUTES/grantCreateProcess.js</grantCreateProcess>
+  <grantUpdateProcess>%aditoprj%/frame/ATTRIBUTES/grantUpdateProcess.js</grantUpdateProcess>
+  <grantDeleteProcess>%aditoprj%/frame/ATTRIBUTES/grantDeleteProcess.js</grantDeleteProcess>
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showSaveCancel v="false" />
+        <showCreate v="true" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <customComponents>
+          <rcCommandButton>
+            <name>Neue_Aufgabe</name>
+            <title>Neue Aufgabe</title>
+            <imageData>%aditoprj%/frame/ATTRIBUTES/ribbon/ribbontasks/task_view/customcomponents/neue_aufgabe/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/ATTRIBUTES/ribbon/ribbontasks/task_view/customcomponents/neue_aufgabe/onClick.js</onClick>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+        </customComponents>
+        <toolTip>Anzeige</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="true" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <databaseColumns>
+    <column>
+      <name>ATTR_ATTRID</name>
+      <tableName>ATTR</tableName>
+      <columnName>ATTRID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/ATTRIBUTES/databasecolumns/attr_attrid/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>ATTR_ATTRNAME</name>
+      <tableName>ATTR</tableName>
+      <columnName>ATTRNAME</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="80" />
+    </column>
+    <column>
+      <name>ATTR_ATTRCOMPONENT</name>
+      <tableName>ATTR</tableName>
+      <columnName>ATTRCOMPONENT</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+    </column>
+    <column>
+      <name>ATTR_ATTRDATADEFINITION</name>
+      <tableName>ATTR</tableName>
+      <columnName>ATTRDATADEFINITION</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="80" />
+    </column>
+    <column>
+      <name>ATTR_DATE_NEW</name>
+      <tableName>ATTR</tableName>
+      <columnName>DATE_NEW</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+      <presetNew>%aditoprj%/frame/ATTRIBUTES/databasecolumns/attr_date_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>ATTR_DATE_EDIT</name>
+      <tableName>ATTR</tableName>
+      <columnName>DATE_EDIT</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+      <presetNew>%aditoprj%/frame/ATTRIBUTES/databasecolumns/attr_date_edit/presetNew.js</presetNew>
+      <presetChange>%aditoprj%/frame/ATTRIBUTES/databasecolumns/attr_date_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>ATTR_USER_NEW</name>
+      <tableName>ATTR</tableName>
+      <columnName>USER_NEW</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+      <presetNew>%aditoprj%/frame/ATTRIBUTES/databasecolumns/attr_user_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>ATTR_USER_EDIT</name>
+      <tableName>ATTR</tableName>
+      <columnName>USER_EDIT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+      <presetNew>%aditoprj%/frame/ATTRIBUTES/databasecolumns/attr_user_edit/presetNew.js</presetNew>
+      <presetChange>%aditoprj%/frame/ATTRIBUTES/databasecolumns/attr_user_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>ATTR_ATTR_ID</name>
+      <tableName>ATTR</tableName>
+      <columnName>ATTR_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+    </column>
+    <column>
+      <name>ATTR_ATTRSORT</name>
+      <tableName>ATTR</tableName>
+      <columnName>ATTRSORT</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+    </column>
+    <column>
+      <name>ATTR_ATTRDESCRIPTION</name>
+      <tableName>ATTR</tableName>
+      <columnName>ATTRDESCRIPTION</columnName>
+      <dataTypeName>CLOB</dataTypeName>
+      <dataType v="2005" />
+      <precision v="2147483647" />
+      <scale>0</scale>
+    </column>
+    <column>
+      <name>ATTR_ATTRVALUE1</name>
+      <tableName>ATTR</tableName>
+      <columnName>ATTRVALUE1</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/ATTRIBUTES/databasecolumns/attr_attrvalue1/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>ATTR_ATTRVALUE2</name>
+      <tableName>ATTR</tableName>
+      <columnName>ATTRVALUE2</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/ATTRIBUTES/databasecolumns/attr_attrvalue2/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>ATTR_AOACTIVE</name>
+      <tableName>ATTR</tableName>
+      <columnName>AOACTIVE</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/ATTRIBUTES/databasecolumns/attr_aoactive/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>ATTR_SQLIDCOLUMN</name>
+      <tableName>ATTR</tableName>
+      <columnName>SQLIDCOLUMN</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+    </column>
+    <column>
+      <name>ATTR_SQLSHOWCOLUMN</name>
+      <tableName>ATTR</tableName>
+      <columnName>SQLSHOWCOLUMN</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="250" />
+    </column>
+    <column>
+      <name>ATTR_SQLFROMDEF</name>
+      <tableName>ATTR</tableName>
+      <columnName>SQLFROMDEF</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="250" />
+    </column>
+    <column>
+      <name>ATTR_SQLWHERE</name>
+      <tableName>ATTR</tableName>
+      <columnName>SQLWHERE</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="250" />
+    </column>
+    <column>
+      <name>ATTR_SQLORDER</name>
+      <tableName>ATTR</tableName>
+      <columnName>SQLORDER</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="100" />
+    </column>
+  </databaseColumns>
+  <blobDatabaseColumns>
+    <blobColumn>
+      <name>ATTR_DOCUMENT</name>
+      <tableName>ATTR</tableName>
+      <columnName>DOCUMENT</columnName>
+      <rowIdProcess></rowIdProcess>
+    </blobColumn>
+  </blobDatabaseColumns>
+  <children>
+    <checkBox>
+      <name>AOACTIVE</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <tableName>ATTR</tableName>
+      <columnName>AOACTIVE</columnName>
+      <dataType v="4" />
+      <presetNew>%aditoprj%/frame/ATTRIBUTES/children/aoactive/presetNew.js</presetNew>
+      <valueTrue>1</valueTrue>
+      <valueFalse>0</valueFalse>
+      <x v="425" />
+      <y v="45" />
+      <labelText>Aktiv</labelText>
+      <labelOrientation v="4" />
+      <tabOrder v="4" />
+    </checkBox>
+    <comboBox>
+      <name>attrcomponent</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>ATTR</tableName>
+      <columnName>ATTRCOMPONENT</columnName>
+      <dataType v="4" />
+      <precision v="10" />
+      <contentProcess>%aditoprj%/frame/ATTRIBUTES/children/attrcomponent/contentProcess.js</contentProcess>
+      <mandatoryInput v="true" />
+      <x v="120" />
+      <y v="70" />
+      <width v="250" />
+      <enabledProcess>%aditoprj%/frame/ATTRIBUTES/children/attrcomponent/enabledProcess.js</enabledProcess>
+      <tabOrder v="1" />
+      <staticContent />
+      <labelText>Komponente</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <edit>
+      <name>attrdatadefinition</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>ATTR</tableName>
+      <columnName>ATTRDATADEFINITION</columnName>
+      <dataType v="12" />
+      <precision v="80" />
+      <x v="120" />
+      <y v="95" />
+      <width v="250" />
+      <enabledProcess>%aditoprj%/frame/ATTRIBUTES/children/attrdatadefinition/enabledProcess.js</enabledProcess>
+      <tabOrder v="2" />
+      <labelText>Validierung</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+      <toolTip>Geben Sie hier eine RegEx an.</toolTip>
+    </edit>
+    <memo>
+      <name>ATTRDESCRIPTION</name>
+      <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+      <tableName>ATTR</tableName>
+      <columnName>ATTRDESCRIPTION</columnName>
+      <dataType v="2005" />
+      <precision v="-1" />
+      <x v="425" />
+      <y v="85" />
+      <width v="400" />
+      <height v="55" />
+      <font name="Verdana" style="0" size="11" />
+      <tabOrder v="7" />
+      <labelText>Beschreibung</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="2" />
+    </memo>
+    <edit>
+      <name>attrname</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>ATTR</tableName>
+      <columnName>ATTRNAME</columnName>
+      <dataType v="12" />
+      <precision v="80" />
+      <mandatoryInput v="true" />
+      <x v="120" />
+      <y v="45" />
+      <width v="250" />
+      <backgroundColorProcess></backgroundColorProcess>
+      <tabOrder v="0" />
+      <labelText>Name</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>ATTRSORT</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>ATTR</tableName>
+      <columnName>ATTRSORT</columnName>
+      <dataType v="4" />
+      <precision v="10" />
+      <x v="120" />
+      <y v="120" />
+      <width v="250" />
+      <tabOrder v="3" />
+      <labelText>Sortierung</labelText>
+      <labelDistance v="100" />
+    </edit>
+    <colorComponent>
+      <name>ATTRVALUE1</name>
+      <template>%aditoprj%/template/Template_Farbkomponente/Template_Farbkomponente.aod</template>
+      <tableName>ATTR</tableName>
+      <columnName>ATTRVALUE1</columnName>
+      <dataType v="4" />
+      <presetNew>%aditoprj%/frame/ATTRIBUTES/children/attrvalue1/presetNew.js</presetNew>
+      <x v="590" />
+      <y v="45" />
+      <width v="20" />
+      <height v="20" />
+      <visibleProcess>%aditoprj%/frame/ATTRIBUTES/children/attrvalue1/visibleProcess.js</visibleProcess>
+      <tabOrder v="5" />
+      <labelText>Schrift</labelText>
+    </colorComponent>
+    <colorComponent>
+      <name>ATTRVALUE2</name>
+      <template>%aditoprj%/template/Template_Farbkomponente/Template_Farbkomponente.aod</template>
+      <tableName>ATTR</tableName>
+      <columnName>ATTRVALUE2</columnName>
+      <dataType v="4" />
+      <presetNew>%aditoprj%/frame/ATTRIBUTES/children/attrvalue2/presetNew.js</presetNew>
+      <x v="710" />
+      <y v="45" />
+      <width v="20" />
+      <height v="20" />
+      <visibleProcess>%aditoprj%/frame/ATTRIBUTES/children/attrvalue2/visibleProcess.js</visibleProcess>
+      <tabOrder v="6" />
+      <labelText>Hintergrund</labelText>
+    </colorComponent>
+    <label>
+      <name>lbl_CreatedEdited</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <valueProcess>%aditoprj%/frame/ATTRIBUTES/children/lbl_creatededited/valueProcess.js</valueProcess>
+      <x v="20" />
+      <y v="565" />
+      <width v="390" />
+      <height v="15" />
+      <verticalAnchor v="5" />
+      <font name="Verdana" style="0" size="10" />
+      <backgroundColor v="0x00000000" />
+      <labelFont name="" style="0" size="11" />
+      <labelAnchor v="0" />
+    </label>
+    <label>
+      <name>lbl_FirstAttr</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <valueProcess>%aditoprj%/frame/ATTRIBUTES/children/lbl_firstattr/valueProcess.js</valueProcess>
+      <onDoubleClick>%aditoprj%/frame/ATTRIBUTES/children/lbl_firstattr/onDoubleClick.js</onDoubleClick>
+      <x v="20" />
+      <y v="15" />
+      <width v="350" />
+      <font name="Verdana" style="1" size="12" />
+      <fontColor v="0xff5d667c" />
+      <backgroundColor v="0x00000000" />
+      <labelFont name="" style="0" size="11" />
+    </label>
+    <register>
+      <name>reg_Main</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <y v="165" />
+      <width v="850" />
+      <height v="400" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <tabOrder v="8" />
+      <children>
+        <registerTab>
+          <name>Hierarchie</name>
+          <caption>&amp;amp;Hierarchie</caption>
+          <visibleProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/hierarchie/visibleProcess.js</visibleProcess>
+          <children>
+            <button>
+              <name>Button_down</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/hierarchie/children/button_down/onClick.js</onClick>
+              <x v="780" />
+              <y v="45" />
+              <width v="20" />
+              <height v="20" />
+              <font name="" style="1" size="11" />
+              <backgroundColor v="0xffdee7f7" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/hierarchie/children/button_down/enabledProcess.js</enabledProcess>
+              <tabOrder v="6" />
+              <imageData>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/hierarchie/children/button_down/imageData.png</imageData>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+            </button>
+            <button>
+              <name>Button_up</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/hierarchie/children/button_up/onClick.js</onClick>
+              <x v="780" />
+              <y v="25" />
+              <width v="20" />
+              <height v="20" />
+              <font name="" style="1" size="11" />
+              <backgroundColor v="0xffdee7f7" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/hierarchie/children/button_up/enabledProcess.js</enabledProcess>
+              <tabOrder v="5" />
+              <imageData>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/hierarchie/children/button_up/imageData.png</imageData>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+            </button>
+            <label>
+              <name>Label_calculation</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/hierarchie/children/label_calculation/valueProcess.js</valueProcess>
+              <x v="355" />
+              <y v="0" />
+              <backgroundColor v="0x00000000" />
+              <visible v="false" />
+              <labelVisible v="false" />
+            </label>
+            <checkBox>
+              <name>subattractive</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="790" />
+              <y v="255" />
+              <backgroundColor v="0x00000000" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelFont name="" style="0" size="11" />
+              <labelOrientation v="4" />
+              <tabOrder v="4" />
+            </checkBox>
+            <comboBox>
+              <name>subattrcomponent</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/hierarchie/children/subattrcomponent/contentProcess.js</contentProcess>
+              <searchableModes>none</searchableModes>
+              <x v="790" />
+              <y v="195" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <backgroundColor v="0x00000000" />
+              <visible v="false" />
+              <tabOrder v="1" />
+              <staticContent />
+              <labelText>Komponente</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>subattrdatadefinition</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <searchableModes>none</searchableModes>
+              <x v="790" />
+              <y v="215" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <backgroundColor v="0x00000000" />
+              <visible v="false" />
+              <tabOrder v="2" />
+              <labelText>Validierung</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+              <toolTip>Geben Sie hier eine RegEx an.</toolTip>
+            </edit>
+            <edit>
+              <name>subattrname</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <searchableModes>none</searchableModes>
+              <x v="790" />
+              <y v="175" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <backgroundColor v="0x00000000" />
+              <visible v="false" />
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>subattrsort</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <searchableModes>none</searchableModes>
+              <x v="790" />
+              <y v="235" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <backgroundColor v="0x00000000" />
+              <visible v="false" />
+              <tabOrder v="3" />
+              <labelText>Validierung</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+              <toolTip>Geben Sie hier eine RegEx an.</toolTip>
+            </edit>
+            <table>
+              <name>tbl_subAttr</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/hierarchie/children/tbl_subattr/onDoubleClick.js</onDoubleClick>
+              <rowCreate>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/hierarchie/children/tbl_subattr/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/hierarchie/children/tbl_subattr/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/hierarchie/children/tbl_subattr/rowDelete.js</rowDelete>
+              <displayContentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/hierarchie/children/tbl_subattr/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/hierarchie/children/tbl_subattr/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="760" />
+              <height v="330" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <tabOrder v="0" />
+              <labelText>Untergeordnete Attribute</labelText>
+              <labelFont name="" style="0" size="11" />
+              <labelOrientation v="1" />
+              <labelDistance v="5" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Attribut</name>
+                  <columnName>Attribut</columnName>
+                  <width v="359" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/hierarchie/children/tbl_subattr/columnmetadata/attribut/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Komponente</name>
+                  <columnName>Komponente</columnName>
+                  <width v="184" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/hierarchie/children/tbl_subattr/columnmetadata/komponente/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Eingabevalidierung</name>
+                  <columnName>Eingabevalidierung</columnName>
+                  <width v="150" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/hierarchie/children/tbl_subattr/columnmetadata/eingabevalidierung/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Aktiv</name>
+                  <columnName>Aktiv</columnName>
+                  <width v="45" />
+                  <alignment v="0" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/hierarchie/children/tbl_subattr/columnmetadata/aktiv/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>ColumnMetadata</name>
+                  <width v="31" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>SQL</name>
+          <caption>&amp;amp;SQL</caption>
+          <visibleProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/sql/visibleProcess.js</visibleProcess>
+          <children>
+            <memo>
+              <name>SQLFROMDEF</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <tableName>ATTR</tableName>
+              <columnName>SQLFROMDEF</columnName>
+              <dataType v="12" />
+              <precision v="250" />
+              <searchableModes>mask</searchableModes>
+              <x v="105" />
+              <y v="75" />
+              <width v="480" />
+              <height v="125" />
+              <tabOrder v="2" />
+              <labelText>From-Definition</labelText>
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="100" />
+            </memo>
+            <edit>
+              <name>SQLIDCOLUMN</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>ATTR</tableName>
+              <columnName>SQLIDCOLUMN</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <searchableModes>mask</searchableModes>
+              <x v="105" />
+              <y v="25" />
+              <width v="480" />
+              <tabOrder v="0" />
+              <labelText>ID-Spalte</labelText>
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SQLORDER</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>ATTR</tableName>
+              <columnName>SQLORDER</columnName>
+              <dataType v="12" />
+              <precision v="100" />
+              <searchableModes>mask</searchableModes>
+              <x v="105" />
+              <y v="280" />
+              <width v="480" />
+              <tabOrder v="4" />
+              <labelText>Order-Spalten</labelText>
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SQLSHOWCOLUMN</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>ATTR</tableName>
+              <columnName>SQLSHOWCOLUMN</columnName>
+              <dataType v="12" />
+              <precision v="250" />
+              <searchableModes>mask</searchableModes>
+              <x v="105" />
+              <y v="50" />
+              <width v="480" />
+              <tabOrder v="1" />
+              <labelText>Anzeige-Spalte</labelText>
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </edit>
+            <memo>
+              <name>SQLWHERE</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <tableName>ATTR</tableName>
+              <columnName>SQLWHERE</columnName>
+              <dataType v="12" />
+              <precision v="250" />
+              <searchableModes>mask</searchableModes>
+              <x v="105" />
+              <y v="205" />
+              <width v="480" />
+              <height v="70" />
+              <tabOrder v="3" />
+              <labelText>Where-Definition</labelText>
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="100" />
+            </memo>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Verwendung</name>
+          <caption>&amp;amp;Verwendung</caption>
+          <enabledProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/verwendung/enabledProcess.js</enabledProcess>
+          <children>
+            <comboBox>
+              <name>cbx_Keyvalue</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/verwendung/children/cbx_keyvalue/contentProcess.js</contentProcess>
+              <searchableModes>none</searchableModes>
+              <x v="785" />
+              <y v="85" />
+              <width v="55" />
+              <visible v="false" />
+              <tabOrder v="3" />
+              <staticContent />
+              <labelVisible v="false" />
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>cbx_object</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <dataType v="4" />
+              <contentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/verwendung/children/cbx_object/contentProcess.js</contentProcess>
+              <searchLinkTableName>ATTROBJECT</searchLinkTableName>
+              <searchLinkColumnName>ATTROBJECT</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/verwendung/children/cbx_object/searchLinkCondition.js</searchLinkCondition>
+              <x v="785" />
+              <y v="25" />
+              <width v="55" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <staticContent />
+              <emptyElementEnabled v="false" />
+              <labelText>Verwendung-Frame</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>edt_maxcount</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <onValidation>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/verwendung/children/edt_maxcount/onValidation.js</onValidation>
+              <searchableModes>none</searchableModes>
+              <x v="785" />
+              <y v="65" />
+              <width v="55" />
+              <visible v="false" />
+              <tabOrder v="2" />
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>edt_mincount</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <onValidation>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/verwendung/children/edt_mincount/onValidation.js</onValidation>
+              <searchableModes>none</searchableModes>
+              <x v="785" />
+              <y v="45" />
+              <width v="55" />
+              <visible v="false" />
+              <tabOrder v="1" />
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </edit>
+            <table>
+              <name>tbl_objects</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/verwendung/children/tbl_objects/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/verwendung/children/tbl_objects/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/verwendung/children/tbl_objects/rowDelete.js</rowDelete>
+              <separateSavable v="false" />
+              <displayContentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/verwendung/children/tbl_objects/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/verwendung/children/tbl_objects/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="760" />
+              <height v="315" />
+              <utilizeRowId v="true" />
+              <tabOrder v="0" />
+              <grantArrangeColumns v="true" />
+              <labelText>Verwendung</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Frame</name>
+                  <columnName>Frame</columnName>
+                  <width v="303" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/verwendung/children/tbl_objects/columnmetadata/frame/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Min_Anzahl</name>
+                  <columnName>Min. Anzahl</columnName>
+                  <width v="131" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/verwendung/children/tbl_objects/columnmetadata/min_anzahl/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Max_Anzahl</name>
+                  <columnName>Max. Anzahl</columnName>
+                  <width v="131" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/verwendung/children/tbl_objects/columnmetadata/max_anzahl/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Type</name>
+                  <columnName>Type</columnName>
+                  <width v="173" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/verwendung/children/tbl_objects/columnmetadata/type/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Aufgaben</name>
+          <caption>&amp;amp;Aufgaben</caption>
+          <children>
+            <button>
+              <name>btn_resetTEFilter</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/aufgaben/children/btn_resettefilter/onClick.js</onClick>
+              <x v="735" />
+              <y v="355" />
+              <width v="90" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <caption>zurücksetzen</caption>
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/aufgaben/children/btn_resettefilter/visibleProcess.js</visibleProcess>
+              <tabOrder v="1" />
+            </button>
+            <button>
+              <name>btn_setTEFilter</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/aufgaben/children/btn_settefilter/onClick.js</onClick>
+              <x v="640" />
+              <y v="355" />
+              <width v="90" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <caption>Filter setzen</caption>
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/aufgaben/children/btn_settefilter/visibleProcess.js</visibleProcess>
+              <tabOrder v="0" />
+              <labelText>Filter</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="35" />
+              <labelAnchor v="0" />
+            </button>
+            <table>
+              <name>tbl_Aufgabe</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/aufgaben/children/tbl_aufgabe/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/aufgaben/children/tbl_aufgabe/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="805" />
+              <height v="325" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <utilizeRowFontColor v="true" />
+              <utilizeRowBackgroundColor v="true" />
+              <grantArrangeColumns v="true" />
+              <labelText>Aufgaben</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>I</name>
+                  <columnName>I</columnName>
+                  <width v="19" />
+                  <rendererType v="3" />
+                  <rendererDataProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/aufgaben/children/tbl_aufgabe/columnmetadata/i/rendererDataProcess.js</rendererDataProcess>
+                  <rendererCachingType v="3" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>faellig_am</name>
+                  <columnName>fällig am</columnName>
+                  <width v="90" />
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Status</name>
+                  <columnName>Status</columnName>
+                  <width v="108" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Betreff</name>
+                  <columnName>Betreff</columnName>
+                  <width v="174" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>erstellt</name>
+                  <columnName>erstellt</columnName>
+                  <width v="85" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>zustaendig</name>
+                  <columnName>zuständig</columnName>
+                  <width v="155" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Beschreibung</name>
+                  <columnName>Beschreibung</columnName>
+                  <width v="150" />
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>Erledigt_setzen</name>
+                  <caption>Erledigt setzen</caption>
+                  <onClick>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/aufgaben/children/tbl_aufgabe/popup/erledigt_setzen/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/aufgaben/children/tbl_aufgabe/popup/erledigt_setzen/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>Weitergeben</name>
+                  <caption>Weitergeben</caption>
+                  <onClick>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/aufgaben/children/tbl_aufgabe/popup/weitergeben/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/aufgaben/children/tbl_aufgabe/popup/weitergeben/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>Verschieben</name>
+                  <caption>Verschieben</caption>
+                  <onClick>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/aufgaben/children/tbl_aufgabe/popup/verschieben/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/aufgaben/children/tbl_aufgabe/popup/verschieben/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+            </table>
+          </children>
+          <valueProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/aufgaben/valueProcess.js</valueProcess>
+        </registerTab>
+        <registerTab>
+          <name>Dokumente</name>
+          <caption>D&amp;amp;okumente</caption>
+          <children>
+            <documentFolder>
+              <name>Dokumentenmappe</name>
+              <template>%aditoprj%/template/Template_Document/Template_Document.aod</template>
+              <tableName>ATTR</tableName>
+              <columnName>DOCUMENT</columnName>
+              <x v="20" />
+              <y v="25" />
+              <width v="805" />
+              <height v="325" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <tabOrder v="0" />
+              <labelText>Dokumente</labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+            </documentFolder>
+          </children>
+          <valueProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/dokumente/valueProcess.js</valueProcess>
+        </registerTab>
+        <registerTab>
+          <name>Rechte</name>
+          <caption>&amp;amp;Rechte</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/rechte/visibleProcess.js</visibleProcess>
+          <children>
+            <checkBox>
+              <name>cbx_right_del</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="90" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="3" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_edit</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="70" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="1" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_grant</name>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="110" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_read</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="50" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="2" />
+            </checkBox>
+            <comboBox>
+              <name>cmb_rights_roles</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/rechte/children/cmb_rights_roles/contentProcess.js</contentProcess>
+              <searchLinkTableName>TABLEACCESS</searchLinkTableName>
+              <searchLinkColumnName>ROLEID</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/rechte/children/cmb_rights_roles/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="25" />
+              <width v="40" />
+              <visible v="false" />
+              <tabOrder v="4" />
+              <emptyElementEnabled v="false" />
+              <labelText>Rolle</labelText>
+              <labelVisible v="false" />
+            </comboBox>
+            <label>
+              <name>Label_calculation_0</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/rechte/children/label_calculation_0/valueProcess.js</valueProcess>
+              <x v="655" />
+              <y v="130" />
+              <visible v="false" />
+              <labelVisible v="false" />
+            </label>
+            <table>
+              <name>tbl_rights</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/rechte/children/tbl_rights/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/rechte/children/tbl_rights/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/rechte/children/tbl_rights/rowDelete.js</rowDelete>
+              <grantRowCreateProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/rechte/children/tbl_rights/grantRowCreateProcess.js</grantRowCreateProcess>
+              <grantRowUpdateProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/rechte/children/tbl_rights/grantRowUpdateProcess.js</grantRowUpdateProcess>
+              <grantRowDeleteProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/rechte/children/tbl_rights/grantRowDeleteProcess.js</grantRowDeleteProcess>
+              <separateSavable v="false" />
+              <displayContentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/rechte/children/tbl_rights/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/rechte/children/tbl_rights/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <singleSelection v="true" />
+              <x v="20" />
+              <y v="25" />
+              <width v="630" />
+              <height v="325" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <tabOrder v="0" />
+              <labelText>Rechte auf den angezeigten Datensatz</labelText>
+              <labelFont name="" style="0" size="11" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Rolle</name>
+                  <columnName>Rolle</columnName>
+                  <width v="205" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/rechte/children/tbl_rights/columnmetadata/rolle/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Lesen</name>
+                  <columnName>Lesen</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/rechte/children/tbl_rights/columnmetadata/lesen/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Aendern</name>
+                  <columnName>Ändern</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/rechte/children/tbl_rights/columnmetadata/aendern/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Loeschen</name>
+                  <columnName>Löschen</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/rechte/children/tbl_rights/columnmetadata/loeschen/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Rechte_vergeben</name>
+                  <columnName>Rechte vergeben</columnName>
+                  <width v="116" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/rechte/children/tbl_rights/columnmetadata/rechte_vergeben/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Admin</name>
+          <caption>Admin</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/admin/visibleProcess.js</visibleProcess>
+          <children>
+            <edit>
+              <name>attr_decoded</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <valueProcess>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/admin/children/attr_decoded/valueProcess.js</valueProcess>
+              <onDoubleClick>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/admin/children/attr_decoded/onDoubleClick.js</onDoubleClick>
+              <searchableModes>none</searchableModes>
+              <x v="100" />
+              <y v="100" />
+              <width v="250" />
+              <height v="25" />
+              <tabOrder v="2" />
+              <labelText>attr_decoded</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <label>
+              <name>attr_id</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <tableName>ATTR</tableName>
+              <columnName>ATTR_ID</columnName>
+              <dataType v="1" />
+              <onDoubleClick>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/admin/children/attr_id/onDoubleClick.js</onDoubleClick>
+              <x v="100" />
+              <y v="70" />
+              <width v="250" />
+              <fontColor v="0xff0000ff" />
+              <labelText>ATTR_ID</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </label>
+            <edit>
+              <name>attrid</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>ATTR</tableName>
+              <columnName>ATTRID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <presetNew>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/admin/children/attrid/presetNew.js</presetNew>
+              <onDoubleClick>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/admin/children/attrid/onDoubleClick.js</onDoubleClick>
+              <searchableModes>mask</searchableModes>
+              <x v="100" />
+              <y v="40" />
+              <width v="250" />
+              <tabOrder v="1" />
+              <labelText>ATTRID</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>DATE_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>ATTR</tableName>
+              <columnName>DATE_EDIT</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetNew>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/admin/children/date_edit/presetNew.js</presetNew>
+              <presetChange>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/admin/children/date_edit/presetChange.js</presetChange>
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <searchableModes>mask</searchableModes>
+              <x v="100" />
+              <y v="165" />
+              <width v="140" />
+              <tabOrder v="4" />
+              <labelText>DATE_EDIT</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>DATE_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>ATTR</tableName>
+              <columnName>DATE_NEW</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetNew>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/admin/children/date_new/presetNew.js</presetNew>
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <searchableModes>mask</searchableModes>
+              <x v="100" />
+              <y v="140" />
+              <width v="140" />
+              <tabOrder v="3" />
+              <labelText>DATE_NEW</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>idcolumn</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>ATTR</tableName>
+              <columnName>ATTRID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <presetNew>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/admin/children/idcolumn/presetNew.js</presetNew>
+              <onDoubleClick>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/admin/children/idcolumn/onDoubleClick.js</onDoubleClick>
+              <searchableModes>mask</searchableModes>
+              <x v="100" />
+              <y v="15" />
+              <width v="250" />
+              <tabOrder v="0" />
+              <labelText>IDCOlUMN</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>USER_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>ATTR</tableName>
+              <columnName>USER_EDIT</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <presetNew>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/admin/children/user_edit/presetNew.js</presetNew>
+              <presetChange>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/admin/children/user_edit/presetChange.js</presetChange>
+              <searchableModes>mask</searchableModes>
+              <x v="100" />
+              <y v="215" />
+              <width v="140" />
+              <tabOrder v="6" />
+              <labelText>USER_EDIT</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>USER_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>ATTR</tableName>
+              <columnName>USER_NEW</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <presetNew>%aditoprj%/frame/ATTRIBUTES/children/reg_main/children/admin/children/user_new/presetNew.js</presetNew>
+              <searchableModes>mask</searchableModes>
+              <x v="100" />
+              <y v="190" />
+              <width v="140" />
+              <tabOrder v="5" />
+              <labelText>USER_NEW</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+  </children>
+  <tableView>
+    <tableViewProperties>
+      <columnProperty>
+        <name>ATTR_ATTRNAME</name>
+        <tableName>ATTR</tableName>
+        <columnName>ATTRNAME</columnName>
+        <label>Name</label>
+        <width v="146" />
+      </columnProperty>
+      <columnProperty>
+        <name>subselect</name>
+        <label>Komponente</label>
+        <width v="130" />
+        <subSelect>%aditoprj%/frame/ATTRIBUTES/tableview/tableviewproperties/subselect/subSelect.js</subSelect>
+      </columnProperty>
+      <columnProperty>
+        <name>ATTR_ATTRSORT</name>
+        <tableName>ATTR</tableName>
+        <columnName>ATTRSORT</columnName>
+        <label>Sortierung</label>
+        <alignment v="4" />
+      </columnProperty>
+      <columnProperty>
+        <name>ATTR_ATTRDESCRIPTION</name>
+        <tableName>ATTR</tableName>
+        <columnName>ATTRDESCRIPTION</columnName>
+        <label>Beschreibung</label>
+        <width v="174" />
+      </columnProperty>
+    </tableViewProperties>
+  </tableView>
+  <width v="850" />
+  <height v="580" />
+</frame>

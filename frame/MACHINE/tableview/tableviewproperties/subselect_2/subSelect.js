@@ -1,0 +1,1 @@
+a.rs("select ORGNAME from ORG join RELATION on (ORGID = ORG_ID) where RELATIONID = MACHINE.RELATION_ID")

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportData_subreport2" pageWidth="300" pageHeight="802" columnWidth="300" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c28f4cd7-a01f-4397-9c38-90df3a912cb3">
+	<property name="ireport.zoom" value="1.610510000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="RISIKO" class="java.lang.String"/>
+	<field name="ANZAHL" class="java.lang.String"/>
+	<sortField name="RISIKO"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="155" splitType="Stretch">
+			<pie3DChart>
+				<chart>
+					<reportElement x="0" y="-1" width="287" height="156" uuid="f1eff704-ee5e-4f78-8383-94e8de9983d7"/>
+					<chartTitle color="#0033FF">
+						<font fontName="Segoe UI" isBold="false"/>
+						<titleExpression><![CDATA[$R{Risiko}]]></titleExpression>
+					</chartTitle>
+					<chartSubtitle/>
+					<chartLegend position="Right"/>
+				</chart>
+				<pieDataset>
+					<keyExpression><![CDATA[$F{RISIKO} + " " + $F{ANZAHL}]]></keyExpression>
+					<valueExpression><![CDATA[Integer.parseInt($F{ANZAHL})]]></valueExpression>
+				</pieDataset>
+				<pie3DPlot isShowLabels="false">
+					<plot/>
+					<itemLabel/>
+				</pie3DPlot>
+			</pie3DChart>
+		</band>
+	</summary>
+</jasperReport>

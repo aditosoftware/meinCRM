@@ -1,0 +1,1 @@
+a.rd("$comp.Label_Person \n$comp.lbl_OrgName \n$comp.lbl_PersAdress");

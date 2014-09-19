@@ -1,0 +1,1 @@
+a.rq("select keyname2 from keyword where keytype = 0 order by keyname2");

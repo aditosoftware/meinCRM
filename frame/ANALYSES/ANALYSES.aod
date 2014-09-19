@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>ANALYSES</name>
+  <title>Auswertungen</title>
+  <icon>%aditoprj%/frame/ANALYSES/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/ANALYSES/iconInactive.png</iconInactive>
+  <alias>AO_DATEN</alias>
+  <afterStart>%aditoprj%/frame/ANALYSES/afterStart.js</afterStart>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>SEARCH_24</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="true" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>SEARCH_MASK_24</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_24</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="true" />
+        <showSaveCancel v="false" />
+        <showAux v="true" />
+        <icon>EDIT_24</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <customComponents>
+          <rcCommandButton>
+            <name>btn_UmsatzDruck</name>
+            <title>Ausdruck</title>
+            <imageData>%aditoprj%/frame/ANALYSES/ribbon/ribbontasks/task_edit/customcomponents/btn_umsatzdruck/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/ANALYSES/ribbon/ribbontasks/task_edit/customcomponents/btn_umsatzdruck/onClick.js</onClick>
+            <enabledProcess>%aditoprj%/frame/ANALYSES/ribbon/ribbontasks/task_edit/customcomponents/btn_umsatzdruck/enabledProcess.js</enabledProcess>
+            <visibleProcess>%aditoprj%/frame/ANALYSES/ribbon/ribbontasks/task_edit/customcomponents/btn_umsatzdruck/visibleProcess.js</visibleProcess>
+          </rcCommandButton>
+          <rcCommandButton>
+            <name>btn_UmsatzJahreDruck</name>
+            <title>Ausdruck</title>
+            <imageData>%aditoprj%/frame/ANALYSES/ribbon/ribbontasks/task_edit/customcomponents/btn_umsatzjahredruck/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/ANALYSES/ribbon/ribbontasks/task_edit/customcomponents/btn_umsatzjahredruck/onClick.js</onClick>
+            <enabledProcess>%aditoprj%/frame/ANALYSES/ribbon/ribbontasks/task_edit/customcomponents/btn_umsatzjahredruck/enabledProcess.js</enabledProcess>
+            <visibleProcess>%aditoprj%/frame/ANALYSES/ribbon/ribbontasks/task_edit/customcomponents/btn_umsatzjahredruck/visibleProcess.js</visibleProcess>
+          </rcCommandButton>
+        </customComponents>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <register>
+      <name>Register</name>
+      <x v="0" />
+      <y v="5" />
+      <width v="1100" />
+      <height v="595" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <visible v="true" />
+      <children>
+        <registerTab>
+          <name>project</name>
+          <caption>&amp;amp;Vertriebsprojekte</caption>
+          <visible v="true" />
+          <children>
+            <comboBox>
+              <name>Combobox_Status</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/analyses/children/register/children/project/children/combobox_status/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="890" />
+              <y v="315" />
+              <width v="170" />
+              <horizontalAnchor v="1" />
+              <tabOrder v="9" />
+              <staticContent />
+              <maximumRowCount v="20" />
+              <labelText>Status</labelText>
+              <labelDistance v="65" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>Combobox_Phase</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/analyses/children/register/children/project/children/combobox_phase/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="890" />
+              <y v="340" />
+              <width v="170" />
+              <horizontalAnchor v="1" />
+              <tabOrder v="6" />
+              <staticContent />
+              <maximumRowCount v="20" />
+              <labelText>Phase</labelText>
+              <labelDistance v="65" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>Combobox_Vol</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="890" />
+              <y v="365" />
+              <width v="50" />
+              <horizontalAnchor v="1" />
+              <tabOrder v="4" />
+              <staticContent>
+                <entry>
+                  <key>&amp;gt;</key>
+                  <value>&amp;gt;</value>
+                </entry>
+                <entry>
+                  <key>&amp;lt;</key>
+                  <value>&amp;lt;</value>
+                </entry>
+                <entry>
+                  <key>=</key>
+                  <value>=</value>
+                </entry>
+              </staticContent>
+              <labelText>Volumen</labelText>
+              <labelDistance v="65" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>Edit_Vol</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="955" />
+              <y v="365" />
+              <width v="105" />
+              <horizontalAnchor v="1" />
+              <labelDistance v="65" />
+            </edit>
+            <edit>
+              <name>Edit_von</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="93" />
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <inputFormat>dd.MM.yyyy</inputFormat>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <calendarSupport v="true" />
+              <x v="890" />
+              <y v="390" />
+              <width v="170" />
+              <horizontalAnchor v="1" />
+              <tabOrder v="5" />
+              <labelText>von (Start)</labelText>
+              <labelDistance v="65" />
+            </edit>
+            <dataVisualisation>
+              <name>DV_Sum_grob</name>
+              <comment>lll</comment>
+              <x v="20" />
+              <y v="25" />
+              <width v="675" />
+              <height v="260" />
+              <horizontalAnchor v="1" />
+              <dataVisualisationSub>
+                <chart>
+                  <chartValueProcess>%aditoprj%/frame/analyses/children/register/children/project/children/dv_sum_grob/datavisualisationsub/chartValueProcess.js</chartValueProcess>
+                  <diagramType v="1" />
+                  <threeDimensional v="true" />
+                  <showLabel v="true" />
+                  <showLegend v="false" />
+                  <rotate v="true" />
+                  <xLabelProcess></xLabelProcess>
+                  <yLabelProcess></yLabelProcess>
+                  <axisLabelSize v="12" />
+                  <yMaxProcess></yMaxProcess>
+                  <yMinProcess></yMinProcess>
+                  <yScaleProcess></yScaleProcess>
+                  <xShowAxis v="true" />
+                  <yShowAxis v="true" />
+                  <xShowGrid v="true" />
+                  <yShowGrid v="false" />
+                </chart>
+              </dataVisualisationSub>
+            </dataVisualisation>
+            <edit>
+              <name>Edit_bis</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="93" />
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <inputFormat>dd.MM.yyyy</inputFormat>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <calendarSupport v="true" />
+              <x v="890" />
+              <y v="415" />
+              <width v="170" />
+              <horizontalAnchor v="1" />
+              <tabOrder v="2" />
+              <labelText>bis (Start)</labelText>
+              <labelDistance v="65" />
+            </edit>
+            <comboBox>
+              <name>Combobox_ProjManager</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <dataType v="1" />
+              <contentProcess>%aditoprj%/frame/analyses/children/register/children/project/children/combobox_projmanager/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="890" />
+              <y v="440" />
+              <width v="170" />
+              <horizontalAnchor v="1" />
+              <tabOrder v="7" />
+              <staticContent />
+              <maximumRowCount v="20" />
+              <labelText>Proj.Leiter</labelText>
+              <labelDistance v="65" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <radioButton>
+              <name>rb_grob_fein</name>
+              <template>%aditoprj%/template/Template_Radiobutton/Template_Radiobutton.aod</template>
+              <valueProcess>%aditoprj%/frame/analyses/children/register/children/project/children/rb_grob_fein/valueProcess.js</valueProcess>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="810" />
+              <y v="25" />
+              <width v="190" />
+              <height v="100" />
+              <horizontalAnchor v="1" />
+              <caption></caption>
+              <tabOrder v="8" />
+              <staticContent>
+                <entry>
+                  <key>Anzahl  / Phase</key>
+                  <value>1</value>
+                </entry>
+                <entry>
+                  <key>T€ / Phase</key>
+                  <value>2</value>
+                </entry>
+                <entry>
+                  <key>Laufzeit (Monate)/ Phase</key>
+                  <value>3</value>
+                </entry>
+              </staticContent>
+            </radioButton>
+            <button>
+              <name>Button_0</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/analyses/children/register/children/project/children/button_0/onClick.js</onClick>
+              <x v="890" />
+              <y v="490" />
+              <width v="170" />
+              <height v="20" />
+              <horizontalAnchor v="1" />
+              <caption>zurücksetzen</caption>
+              <tabOrder v="3" />
+              <labelVisible v="false" />
+            </button>
+            <table>
+              <name>Tabelle_Salesproject</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/analyses/children/register/children/project/children/tabelle_salesproject/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/analyses/children/register/children/project/children/tabelle_salesproject/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <singleSelection v="true" />
+              <x v="20" />
+              <y v="305" />
+              <width v="775" />
+              <height v="245" />
+              <horizontalAnchor v="1" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <utilizeRowBackgroundColor v="true" />
+              <grantArrangeColumns v="true" />
+              <labelText>Anzahl:</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="5" />
+              <toolTip>Hintergrundfarbe: 
+  weiß: Risiko unbewertet
+  grün: Risiko gering
+  gelb: Risiko mittel
+  rot: Risiko groß</toolTip>
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Projekt</name>
+                  <columnName>Projekt</columnName>
+                  <width v="180" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Phase</name>
+                  <columnName>Phase</columnName>
+                  <width v="177" />
+                  <dataType v="12" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Status_4</name>
+                  <columnName>Status</columnName>
+                  <width v="93" />
+                  <dataType v="12" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>T</name>
+                  <columnName>T€</columnName>
+                  <width v="45" />
+                  <alignment v="4" />
+                  <dataType v="6" />
+                  <outputFormat>#,##0</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Start</name>
+                  <columnName>Start</columnName>
+                  <width v="74" />
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>inaktiv</name>
+                  <columnName>inaktiv</columnName>
+                  <width v="47" />
+                  <alignment v="0" />
+                  <dataType v="4" />
+                  <outputFormat>0</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>ProjLeiter</name>
+                  <columnName>Proj.Leiter</columnName>
+                  <width v="68" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+            <rectangleDecorator>
+              <name>Rechteck_1</name>
+              <template>%aditoprj%/template/Template_Rechteck/Template_Rechteck.aod</template>
+              <x v="810" />
+              <y v="295" />
+              <width v="270" />
+              <height v="225" />
+              <horizontalAnchor v="1" />
+              <color v="0xff5d667c" />
+              <caption>Filter</caption>
+              <captionColor v="0xff5d667c" />
+            </rectangleDecorator>
+            <label>
+              <name>Label_Count_Salesproject</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/analyses/children/register/children/project/children/label_count_salesproject/valueProcess.js</valueProcess>
+              <x v="70" />
+              <y v="285" />
+              <width v="80" />
+              <labelDistance v="120" />
+              <labelAnchor v="0" />
+            </label>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Forecast</name>
+          <caption>&amp;amp;Forecast</caption>
+          <visible v="true" />
+          <children>
+            <treeTable>
+              <name>tbl_forcast</name>
+              <contentProcess>%aditoprj%/frame/ANALYSES/children/register/children/forecast/children/tbl_forcast/contentProcess.js</contentProcess>
+              <showHeader v="true" />
+              <useTreeColumn v="true" />
+              <showTreeIcon v="true" />
+              <singleSelection v="true" />
+              <x v="20" />
+              <y v="25" />
+              <width v="925" />
+              <height v="495" />
+              <horizontalAnchor v="1" />
+              <verticalAnchor v="6" />
+              <headerFont name="" style="0" size="12" />
+              <popup>
+                <menuItem>
+                  <name>Popup</name>
+                  <caption>Projekt öffnen</caption>
+                  <onClick>%aditoprj%/frame/ANALYSES/children/register/children/forecast/children/tbl_forcast/popup/popup/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/ANALYSES/children/register/children/forecast/children/tbl_forcast/popup/popup/enabledProcess.js</enabledProcess>
+                </menuItem>
+              </popup>
+              <grantArrangeColumns v="false" />
+            </treeTable>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Umsatz</name>
+          <caption>Umsatz</caption>
+          <visible v="true" />
+          <enabled v="true" />
+          <children>
+            <list>
+              <name>Fields</name>
+              <template>%aditoprj%/template/Template_List/Template_List.aod</template>
+              <contentProcess>%aditoprj%/frame/ANALYSES/children/register/children/umsatz/children/fields/contentProcess.js</contentProcess>
+              <x v="20" />
+              <y v="180" />
+              <height v="145" />
+            </list>
+            <list>
+              <name>Gruppe</name>
+              <template>%aditoprj%/template/Template_List/Template_List.aod</template>
+              <contentProcess>%aditoprj%/frame/ANALYSES/children/register/children/umsatz/children/gruppe/contentProcess.js</contentProcess>
+              <onValidation>%aditoprj%/frame/ANALYSES/children/register/children/umsatz/children/gruppe/onValidation.js</onValidation>
+              <x v="20" />
+              <y v="25" />
+              <width v="100" />
+              <height v="140" />
+            </list>
+            <treeTable>
+              <name>tbl_umsatz</name>
+              <template>%aditoprj%/template/Template_TreeTable/Template_TreeTable.aod</template>
+              <contentProcess>%aditoprj%/frame/ANALYSES/children/register/children/umsatz/children/tbl_umsatz/contentProcess.js</contentProcess>
+              <showHeader v="true" />
+              <x v="130" />
+              <y v="25" />
+              <width v="955" />
+              <height v="525" />
+              <horizontalAnchor v="1" />
+              <verticalAnchor v="6" />
+              <popup>
+                <menuItem>
+                  <name>Popup</name>
+                  <caption>Firma öffnen</caption>
+                  <onClick>%aditoprj%/frame/ANALYSES/children/register/children/umsatz/children/tbl_umsatz/popup/popup/onClick.js</onClick>
+                </menuItem>
+              </popup>
+            </treeTable>
+          </children>
+          <onSelectionChange>%aditoprj%/frame/ANALYSES/children/register/children/umsatz/onSelectionChange.js</onSelectionChange>
+        </registerTab>
+        <registerTab>
+          <name>UmsatzJahr</name>
+          <caption>Umsatz Jahre</caption>
+          <visible v="true" />
+          <enabled v="true" />
+          <children>
+            <list>
+              <name>UJFields</name>
+              <template>%aditoprj%/template/Template_List/Template_List.aod</template>
+              <contentProcess>%aditoprj%/frame/ANALYSES/children/register/children/umsatzjahr/children/ujfields/contentProcess.js</contentProcess>
+              <x v="20" />
+              <y v="180" />
+              <height v="145" />
+            </list>
+            <list>
+              <name>UJGruppe</name>
+              <template>%aditoprj%/template/Template_List/Template_List.aod</template>
+              <contentProcess>%aditoprj%/frame/ANALYSES/children/register/children/umsatzjahr/children/ujgruppe/contentProcess.js</contentProcess>
+              <onValidation>%aditoprj%/frame/ANALYSES/children/register/children/umsatzjahr/children/ujgruppe/onValidation.js</onValidation>
+              <x v="20" />
+              <y v="25" />
+              <width v="100" />
+              <height v="140" />
+            </list>
+            <treeTable>
+              <name>tbl_ujumsatz</name>
+              <template>%aditoprj%/template/Template_TreeTable/Template_TreeTable.aod</template>
+              <contentProcess>%aditoprj%/frame/ANALYSES/children/register/children/umsatzjahr/children/tbl_ujumsatz/contentProcess.js</contentProcess>
+              <showHeader v="true" />
+              <x v="130" />
+              <y v="25" />
+              <width v="890" />
+              <height v="520" />
+              <horizontalAnchor v="1" />
+              <verticalAnchor v="6" />
+              <popup>
+                <menuItem>
+                  <name>Popup</name>
+                  <caption>Firma öffnen</caption>
+                  <onClick>%aditoprj%/frame/ANALYSES/children/register/children/umsatzjahr/children/tbl_ujumsatz/popup/popup/onClick.js</onClick>
+                </menuItem>
+              </popup>
+            </treeTable>
+          </children>
+          <onSelectionChange>%aditoprj%/frame/ANALYSES/children/register/children/umsatzjahr/onSelectionChange.js</onSelectionChange>
+        </registerTab>
+        <registerTab>
+          <name>Analysen</name>
+          <caption>Reports</caption>
+          <children>
+            <table>
+              <name>tbl_Report</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/ANALYSES/children/register/children/analysen/children/tbl_report/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/ANALYSES/children/register/children/analysen/children/tbl_report/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="825" />
+              <height v="510" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <grantArrangeColumns v="true" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Report</name>
+                  <columnName>Report</columnName>
+                  <width v="194" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Beschreibung_5</name>
+                  <columnName>Beschreibung</columnName>
+                  <width v="347" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Rubrik</name>
+                  <columnName>Rubrik</columnName>
+                  <width v="142" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+  </children>
+  <tableView />
+  <width v="1100" />
+</frame>

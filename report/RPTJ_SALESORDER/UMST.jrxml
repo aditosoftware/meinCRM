@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="UMST" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="3c210ce1-38c3-4477-b1a7-ccf465a2332d">
+	<property name="ireport.zoom" value="1.2100000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="zzglUmst" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="VAT" class="java.lang.String"/>
+	<field name="WERT" class="java.lang.Double"/>
+	<sortField name="VAT"/>
+	<variable name="WERT_1" class="java.lang.Double" resetType="Group" resetGroup="VAT" calculation="Sum">
+		<variableExpression><![CDATA[$F{WERT}]]></variableExpression>
+	</variable>
+	<group name="VAT">
+		<groupExpression><![CDATA[$F{VAT}]]></groupExpression>
+		<groupHeader>
+			<band height="18">
+				<textField evaluationTime="Group" evaluationGroup="VAT" pattern="#,##0.00;-#,##0.00">
+					<reportElement x="217" y="0" width="54" height="15" uuid="f0256bf8-4a37-4500-87f3-128745a1e2ce">
+						<printWhenExpression><![CDATA[$F{VAT} != "0.0"]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right">
+						<font fontName="Segoe UI" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{WERT_1}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="103" y="0" width="108" height="15" uuid="3d348b3c-02e2-48e4-b8bf-4aec0f800811"/>
+					<textElement>
+						<font fontName="Segoe UI" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{zzglUmst} + " " + $F{VAT} + " %"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+</jasperReport>

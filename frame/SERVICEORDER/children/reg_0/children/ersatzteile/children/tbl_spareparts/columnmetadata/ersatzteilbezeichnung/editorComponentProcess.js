@@ -1,0 +1,1 @@
+a.rs("$comp.sparepart_productid");

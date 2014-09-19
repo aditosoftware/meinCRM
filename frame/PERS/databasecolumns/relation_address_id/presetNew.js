@@ -1,0 +1,1 @@
+if ( a.valueof("$sys.superframe") == "ORG" )		a.rs( a.valueof("$image.STANDARDADDRESS") );

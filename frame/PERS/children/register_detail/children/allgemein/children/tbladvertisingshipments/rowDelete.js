@@ -1,0 +1,1 @@
+a.sqlDelete("ADVERTISINGSHIPMENT", " ADVERTISINGSHIPMENTID = '" + a.valueof("$local.idvalue") + "'");

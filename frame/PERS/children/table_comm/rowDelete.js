@@ -1,0 +1,1 @@
+a.sqlDelete("COMM", "COMMID = '" + a.valueof("$local.idvalue") + "'");

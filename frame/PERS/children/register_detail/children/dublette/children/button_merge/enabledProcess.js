@@ -1,0 +1,1 @@
+a.rs(a.valueof("$comp.tbl_dubletten_pers") != "" && a.valueof("$sys.workingmode") == a.FRAMEMODE_EDIT);

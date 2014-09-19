@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Personenliste" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e7a916c8-3f9a-497d-84bb-3909b15271ea">
+	<property name="ireport.zoom" value="1.2100000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="myAddr" class="java.lang.String"/>
+	<parameter name="adito.image.myLogo" class="java.lang.String"/>
+	<field name="RELATIONID" class="java.lang.String"/>
+	<field name="NAME" class="java.lang.String"/>
+	<field name="ORGNAME" class="java.lang.String"/>
+	<field name="RELPOSITION" class="java.lang.String"/>
+	<field name="RELTITLE" class="java.lang.String"/>
+	<field name="LANGUAGE" class="java.lang.String"/>
+	<field name="SOURCE" class="java.lang.String"/>
+	<field name="INFOKANAL" class="java.lang.String"/>
+	<field name="TEL" class="java.lang.String"/>
+	<field name="EMAIL" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="175" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="83" width="555" height="20" forecolor="#000000" uuid="e6f62852-2a43-453e-a19b-b26fb5ba9b8c"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="83" width="555" height="20" forecolor="#999999" uuid="518ed376-e832-439e-b53f-753a59bd048c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{myAddr}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="171" width="555" height="1" uuid="b1e15c3b-31e4-4bce-ac4e-fcb5845c8e29"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="116" width="137" height="20" forecolor="#999999" uuid="372afed0-0034-4ce5-9fa7-1b59d462d8c7"/>
+				<textElement>
+					<font fontName="Verdana" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Personenliste}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="145" width="189" height="10" uuid="a9f3f93d-0337-4b95-9007-200c64ba52f8"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Person}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="158" width="189" height="10" uuid="97d73234-9e52-417a-bb73-e9a5cb265cf4"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Firma}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="209" y="145" width="87" height="10" uuid="ca2cd865-8747-4dfb-a7cc-4162d5fbbacd"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Position}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="209" y="157" width="87" height="10" uuid="cbbc962f-0b6d-416b-a258-d7048c090478"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Funktion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="145" width="84" height="10" uuid="3c78ff68-2ff0-4e37-846b-439ab6a4de5e"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Telefon}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="157" width="84" height="10" uuid="85622efc-ae90-4ea6-9303-82c886f393a8"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="407" y="145" width="143" height="10" uuid="e98dd13f-a329-4bdf-9b68-6e7e7430e455"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{bevorzugter Infokanal}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="RetainShape" hAlign="Center">
+				<reportElement x="190" y="12" width="169" height="50" uuid="077259da-5d54-44c9-a7b0-298ab70a1825"/>
+				<imageExpression><![CDATA[$P{adito.image.myLogo}]]></imageExpression>
+			</image>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="12">
+			<textField>
+				<reportElement x="1" y="0" width="189" height="10" uuid="4bae1fcd-cf95-4eeb-b133-38548ca8d405"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="209" y="0" width="87" height="10" uuid="51eb243b-fd98-41dd-8ece-4f720b6ed68c"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RELPOSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="0" width="84" height="10" uuid="ba41081f-bb13-48d0-87d0-b20aa6c3db10"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TEL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="407" y="0" width="143" height="10" uuid="d689a7a1-4243-468c-be80-d9f4cfc77c5c"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{INFOKANAL}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="10">
+			<textField>
+				<reportElement x="209" y="0" width="87" height="10" uuid="4383afa4-7c73-4e2f-bae3-e4462a278aa1"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RELTITLE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="1" y="0" width="189" height="10" uuid="59b03c69-c807-4a95-9e76-29c2c7211068"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ORGNAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="0" width="84" height="10" uuid="f5b06dde-600c-4f6d-bc4c-91b479541884"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EMAIL}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="9">
+			<line>
+				<reportElement x="0" y="4" width="555" height="1" uuid="3fd86c4e-8e79-4935-bc05-251ec4a37294"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="28" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="395" y="15" width="88" height="10" forecolor="#999999" uuid="1c41b154-ca3b-4d15-93b2-1ea078b98f7e"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="483" y="15" width="53" height="10" forecolor="#999999" uuid="ea20ea65-442d-4d1b-b1b3-e519bb0e3862"/>
+				<textElement textAlignment="Right">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Seite}+" "+$V{PAGE_NUMBER}+" "+$R{von}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="536" y="15" width="14" height="10" forecolor="#999999" uuid="544b8bb3-05e9-4054-95ef-0be7aa84a5c9"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="8" width="555" height="1" forecolor="#999999" uuid="f96034a3-9fb8-49f9-ac8b-bb3379138b28"/>
+			</line>
+		</band>
+	</columnFooter>
+</jasperReport>

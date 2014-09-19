@@ -1,0 +1,1 @@
+if ( a.valueof("$comp.attrcomponent") != "1" )	a.rs("$comp.subattrcomponent");

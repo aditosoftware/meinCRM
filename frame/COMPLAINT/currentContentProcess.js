@@ -1,0 +1,1 @@
+a.rs("Reklamation-Nr. " + a.valueof("$comp.COMPLAINTNUMBER"));

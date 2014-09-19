@@ -1,0 +1,1 @@
+a.rs(eMath.addInt(a.sql("select max(PROJECTNUMBER) from SALESPROJECT"),"1"));

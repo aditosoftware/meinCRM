@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>DLG_TICKETTIME</name>
+  <icon></icon>
+  <description>Dialog für den ProjTicket Zeiterfassung</description>
+  <alias>AO_DATEN</alias>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <edit>
+      <name>TimeDate</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <dataType v="91" />
+      <outputFormat>dd.MM.yyyy</outputFormat>
+      <inputFormat>dd.MM.yyyy</inputFormat>
+      <calendarSupport v="true" />
+      <x v="90" />
+      <y v="10" />
+      <width v="205" />
+      <verticalAnchor v="5" />
+      <tabOrder v="0" />
+      <labelText>Datum</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+    <memo>
+      <name>TimeDescription</name>
+      <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+      <x v="90" />
+      <y v="85" />
+      <width v="205" />
+      <height v="110" />
+      <verticalAnchor v="5" />
+      <tabOrder v="3" />
+      <labelText>Beschreibung</labelText>
+      <labelDistance v="80" />
+    </memo>
+    <comboBox>
+      <name>TimeMA</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/DLG_TICKETTIME/children/timema/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <readOnlyProcess>%aditoprj%/frame/DLG_TICKETTIME/children/timema/readOnlyProcess.js</readOnlyProcess>
+      <x v="90" />
+      <y v="35" />
+      <width v="205" />
+      <verticalAnchor v="5" />
+      <tabOrder v="1" />
+      <labelText>Mitarbeiter</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <edit>
+      <name>TimeMin</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <x v="90" />
+      <y v="60" />
+      <verticalAnchor v="5" />
+      <tabOrder v="2" />
+      <labelText>Zeit</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+      <toolTip>Eingabe in Minuten oder Stunden (8:00)</toolTip>
+    </edit>
+  </children>
+  <tableView />
+</frame>

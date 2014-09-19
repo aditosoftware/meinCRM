@@ -1,0 +1,1 @@
+a.rs( a.valueof("$comp.tbl_dublettenORG") != "" || a.valueof("$comp.tbl_dublettenPERS") != "" );

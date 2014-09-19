@@ -1,0 +1,1 @@
+a.rs(a.decodeFirst(a.valueof("$comp.tbl_dubletten_org")) != '' && a.valueof("$sys.workingmode") == a.FRAMEMODE_EDIT )

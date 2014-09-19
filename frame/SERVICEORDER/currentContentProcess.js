@@ -1,0 +1,1 @@
+a.rs("Service-Auftrag " + a.valueof("$comp.SERVICEORDERCODE"));

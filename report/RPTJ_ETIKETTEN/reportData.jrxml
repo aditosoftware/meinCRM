@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" columnCount="3" pageWidth="620" pageHeight="874" columnWidth="199" leftMargin="9" rightMargin="12" topMargin="26" bottomMargin="15" uuid="e7a916c8-3f9a-497d-84bb-3909b15271ea">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="ORGNAME" class="java.lang.String"/>
+	<field name="NAME" class="java.lang.String"/>
+	<field name="DEPARTMENT" class="java.lang.String"/>
+	<field name="ADDRESS" class="java.lang.String"/>
+	<field name="BUILDINGNO" class="java.lang.String"/>
+	<field name="COUNTRY" class="java.lang.String"/>
+	<field name="ZIP" class="java.lang.String"/>
+	<field name="CITY" class="java.lang.String"/>
+	<detail>
+		<band height="105">
+			<textField isBlankWhenNull="true">
+				<reportElement x="10" y="78" width="184" height="14" uuid="b47696ca-2b53-4a56-a79d-6677615bb3d7"/>
+				<textElement>
+					<font fontName="Segoe UI" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{COUNTRY} + " - " + $F{ZIP} + " " + $F{CITY}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="10" y="44" width="184" height="17" uuid="f4f40f91-a501-47fd-8854-824196874574"/>
+				<textElement>
+					<font fontName="Segoe UI" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DEPARTMENT}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="10" y="28" width="184" height="16" uuid="04313338-9a46-406c-8dd4-be1f7b17e7ee"/>
+				<textElement>
+					<font fontName="Segoe UI" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NAME}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="10" y="61" width="184" height="17" uuid="76c03202-c0b2-4371-9bfe-cf1865451633"/>
+				<textElement>
+					<font fontName="Segoe UI" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ADDRESS} + " " + $F{BUILDINGNO}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="10" y="8" width="184" height="17" uuid="c5c1a319-ea78-45c9-874d-a88d971c23ca"/>
+				<textElement>
+					<font fontName="Segoe UI" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ORGNAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,1 @@
+a.rs(a.decodeMS( a.decodeFirst(a.valueof("$comp.tbl_forcast")) ).length == 4);

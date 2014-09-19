@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="2.0.7" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>_____PREFERENCES_DEFAULT</name>
+  <mailGlobalEnable v="true" />
+  <mailGlobalConcurrent v="10" />
+  <mailGlobalMailServer></mailGlobalMailServer>
+  <mailGlobalFrameMail>SYS_MAIL</mailGlobalFrameMail>
+  <mailGlobalUserServerEnabled v="true" />
+  <systemConnectionType v="1" />
+  <systemClientsPerThread v="1" />
+  <systemSnmpEnabled v="false" />
+  <jditoOptimization v="-1" />
+  <jditoUserAutostart>Admin</jditoUserAutostart>
+  <mailEnableUserDefault v="true" />
+  <mailDefaultMailserver>MailserverIMAP</mailDefaultMailserver>
+  <mailCheckerEnable v="false" />
+  <mailCheckerUserDefault v="false" />
+  <mailGlobalUserServerMinIntervall v="30000" />
+  <mailRepositoryType v="2" />
+  <mailRepositoryAlias>Mailrepository</mailRepositoryAlias>
+  <mailRepositoryDistincterAlias>AO_DATEN</mailRepositoryDistincterAlias>
+  <mailBridgeEnable v="false" />
+  <timerPreferencesAlias>AO_DATEN</timerPreferencesAlias>
+  <timerPreferencesTable>ASYS_TIMER</timerPreferencesTable>
+  <timerPreferencesTimeout v="5000" />
+  <reportInetConfigFile></reportInetConfigFile>
+  <licenseType v="1" />
+  <telephonyEnable v="false" />
+  <serverFarmTable></serverFarmTable>
+  <serverFarmTableClients></serverFarmTableClients>
+  <serverFarmTimeout v="5000" />
+  <serverFarmSelfCheckInterval v="300000" />
+  <calendarEnable v="true" />
+  <calendarType v="2" />
+  <calendarLinkerAlias>AO_DATEN</calendarLinkerAlias>
+  <calendarBackendType v="1" />
+  <calendarAlias>AO_DATEN</calendarAlias>
+  <calendarFrameTask>SYS_VTODO</calendarFrameTask>
+  <calendarFrameEvent>SYS_VEVENT</calendarFrameEvent>
+  <calendarSyncBackendType v="3" />
+  <calendarSyncScope>1|2</calendarSyncScope>
+  <calendarCategories>
+    <entry>
+      <key>Opportunity</key>
+      <value>-16738048</value>
+    </entry>
+    <entry>
+      <key>Projekt</key>
+      <value>-65281</value>
+    </entry>
+    <entry>
+      <key>Auftrag</key>
+      <value>-65536</value>
+    </entry>
+    <entry>
+      <key>Service</key>
+      <value>-256</value>
+    </entry>
+  </calendarCategories>
+  <calendarCategoriesEvent>
+    <entry>
+      <key>Service</key>
+      <value>-154</value>
+    </entry>
+    <entry>
+      <key>Auswärts</key>
+      <value>-39322</value>
+    </entry>
+    <entry>
+      <key>Messe</key>
+      <value>-6697729</value>
+    </entry>
+  </calendarCategoriesEvent>
+  <loggingPriority>Z</loggingPriority>
+  <loggingFileEnable v="false" />
+  <loggingFileloggerAppend v="false" />
+  <loggingTelnetAddress>localhost</loggingTelnetAddress>
+  <clientTitleText>meinCRM</clientTitleText>
+  <clientTempPath></clientTempPath>
+  <clientFramePreferences></clientFramePreferences>
+  <clientHelpProcess>clienthelp</clientHelpProcess>
+  <mailGlobalFrameMailBoxes>USERMAILS</mailGlobalFrameMailBoxes>
+  <clientSearchOptimizedForSpeed v="true" />
+  <clientSearchExcludeForIgnorecase v="true" />
+  <databaseAuditEnable v="true" />
+  <databaseAuditLoggerProcess>process_audit</databaseAuditLoggerProcess>
+  <databaseDBSyncConnectionType v="1" />
+  <databaseDBSyncTruncateOnCompleteSync v="false" />
+  <indexsearchEnabled v="true" />
+  <indexsearchFullIndexerEnabled v="true" />
+  <indexsearchFullIndexerInterval v="0" />
+  <indexsearchIncrementingIndexerEnabled v="true" />
+  <indexsearchIncrementingIndexerInterval v="15000" />
+  <webservicesServerEnabled v="false" />
+  <webservicesClientEnabled v="false" />
+  <webserverIsEnabled v="false" />
+  <workflowEventWsdl>%aditoprj%/preferences/_____PREFERENCES_DEFAULT/workflowEventWsdl.wsdl</workflowEventWsdl>
+</preferences>

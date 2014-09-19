@@ -1,0 +1,1 @@
+a.rs("(select sum(QUANTITY * PRICE)  from OFFERITEM where OFFERITEM.OFFER_ID = OFFER.OFFERID)")

@@ -1,0 +1,1 @@
+a.openLinkedFrame("PRODUCT", null, false, a.FRAMEMODE_SHOW, "$comp.lbl_partlist_prodid|PRODUCT.PRODUCTID");

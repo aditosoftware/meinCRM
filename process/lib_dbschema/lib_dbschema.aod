@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.2" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>lib_dbschema</name>
+  <process>%aditoprj%/process/lib_dbschema/process.js</process>
+  <title></title>
+  <icon></icon>
+  <description></description>
+  <comment>@type private
+@status released
+@desc [
+Bibliothek fuer die Arbeit mit dem Metadatenrepository zu den einzelnen Tabelle und Spalten.
+Enthaelt Funktionen zum Importieren und Exportieren von Tabellen aus dem Repository, XMl
+und einer ueber einen Alias angebundenen Datenbank.
+Derzeit noch nicht fertiggestellt sind die Datenbank-Imports für alle Sybase, Derby, DB2.
+Getestet wurde der Repository-Import aus MSSQL, Oracle, Interbase, PostgreSQL.
+      ]
+
+@module Standard
+@since 3.1
+@revision 1.0 AH 2010</comment>
+  <webserviceEnabled v="false" />
+  <typeForWebservice>HTTP</typeForWebservice>
+  <alias></alias>
+</process>

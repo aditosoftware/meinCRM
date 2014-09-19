@@ -1,0 +1,1 @@
+a.openFrame( "HISTORY", "HISTORYID = '" + a.valueof("$local.idvalue") + "'", false, a.FRAMEMODE_SHOW );

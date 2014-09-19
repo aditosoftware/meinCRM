@@ -1,0 +1,1 @@
+a.openLinkedFrame("PERS", null, false, a.FRAMEMODE_SHOW, "$comp.Llb_persrelationid_dec|RELATION.RELATIONID")

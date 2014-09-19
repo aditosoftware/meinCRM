@@ -1,0 +1,1 @@
+a.rs(eMath.addInt(a.sql("select max(COMPLAINTNUMBER) from COMPLAINT"),"1"));

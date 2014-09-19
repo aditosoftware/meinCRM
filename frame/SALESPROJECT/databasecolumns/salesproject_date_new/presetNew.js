@@ -1,0 +1,1 @@
+a.rs(a.dateToLong(a.longToDate(a.valueof("$sys.date"), "dd.MM.yyyy 00:00:00"), "dd.MM.yyyy"));

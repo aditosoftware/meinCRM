@@ -1,0 +1,1 @@
+a.rs( a.valueof("$image.ImportValues")  != "" && a.valueof("$comp.IMPORTDATE") == "" && a.valueof("$sys.workingmode")  == a.FRAMEMODE_SHOW );

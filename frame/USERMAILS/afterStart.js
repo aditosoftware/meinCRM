@@ -1,0 +1,2 @@
+a.globalvar("$global.MailClientRefresh", [ a.valueof("$sys.currentwindow"),a.valueof("$sys.currentimage")]);
+a.executeProcessTimer(a.valueof("$sys.clientuid") + "_MAILCHECK", "getMails", date.ONE_MINUTE, false, false, a.TIMERTYPE_CLIENT_RUN);

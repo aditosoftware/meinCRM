@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.2" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>open_task_date</name>
+  <process>%aditoprj%/process/open_task_date/process.js</process>
+  <title>my ADITO</title>
+  <icon>%aditoprj%/process/open_task_date/icon.png</icon>
+  <iconInactive>%aditoprj%/process/open_task_date/iconInactive.png</iconInactive>
+  <description></description>
+  <comment></comment>
+  <webserviceEnabled v="false" />
+  <typeForWebservice>HTTP</typeForWebservice>
+  <alias>AO_DATEN</alias>
+</process>

@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>TABLEADMIN</name>
+  <title>Tabellenverwaltung</title>
+  <icon>%aditoprj%/frame/TABLEADMIN/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/TABLEADMIN/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type public
+@status released
+@desc [Frame zur Verwaltung der Datenbanktabellen]
+
+@module ADITO-Standard
+@since 1.0</comment>
+  <alias>AO_DATEN</alias>
+  <linkInformation>
+    <linkInformation>
+      <name>fbc4a968-e120-44ed-b775-401a54fbd34b</name>
+      <tableName>AOSYS_TABLEREPOSITORY</tableName>
+      <primaryKey>TABLEID</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+  </linkInformation>
+  <beforeStart>%aditoprj%/frame/TABLEADMIN/beforeStart.js</beforeStart>
+  <afterSave>%aditoprj%/frame/TABLEADMIN/afterSave.js</afterSave>
+  <beforeDelete>%aditoprj%/frame/TABLEADMIN/beforeDelete.js</beforeDelete>
+  <afterDelete>%aditoprj%/frame/TABLEADMIN/afterDelete.js</afterDelete>
+  <afterCancel>%aditoprj%/frame/TABLEADMIN/afterCancel.js</afterCancel>
+  <currentContentProcess>%aditoprj%/frame/TABLEADMIN/currentContentProcess.js</currentContentProcess>
+  <grantCreate v="false" />
+  <grantDelete v="false" />
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <databaseColumns>
+    <column>
+      <name>AOSYS_TABLEREPOSITORY_TABLEID</name>
+      <tableName>AOSYS_TABLEREPOSITORY</tableName>
+      <columnName>TABLEID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+    </column>
+    <column>
+      <name>AOSYS_TABLEREPOSITORY_TABLENAME</name>
+      <tableName>AOSYS_TABLEREPOSITORY</tableName>
+      <columnName>TABLENAME</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="128" />
+    </column>
+    <column>
+      <name>AOSYS_TABLEREPOSITORY_LONGNAME</name>
+      <tableName>AOSYS_TABLEREPOSITORY</tableName>
+      <columnName>LONGNAME</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="255" />
+    </column>
+    <column>
+      <name>AOSYS_TABLEREPOSITORY_DESCRIPTION</name>
+      <tableName>AOSYS_TABLEREPOSITORY</tableName>
+      <columnName>DESCRIPTION</columnName>
+      <dataTypeName>CLOB</dataTypeName>
+      <dataType v="2005" />
+      <precision v="2147483647" />
+      <scale>0</scale>
+    </column>
+    <column>
+      <name>AOSYS_TABLEREPOSITORY_TABLETYPE</name>
+      <tableName>AOSYS_TABLEREPOSITORY</tableName>
+      <columnName>TABLETYPE</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="1" />
+    </column>
+    <column>
+      <name>AOSYS_TABLEREPOSITORY_AOMODULE</name>
+      <tableName>AOSYS_TABLEREPOSITORY</tableName>
+      <columnName>AOMODULE</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="20" />
+    </column>
+  </databaseColumns>
+  <children>
+    <comboBox>
+      <name>AOMODULE</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>AOSYS_TABLEREPOSITORY</tableName>
+      <columnName>AOMODULE</columnName>
+      <precision v="20" />
+      <contentProcess>%aditoprj%/frame/TABLEADMIN/children/aomodule/contentProcess.js</contentProcess>
+      <x v="120" />
+      <y v="70" />
+      <width v="215" />
+      <tabOrder v="2" />
+      <editable v="true" />
+      <staticContent />
+      <labelText>Modul</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <memo>
+      <name>DESCRIPTION</name>
+      <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+      <tableName>AOSYS_TABLEREPOSITORY</tableName>
+      <columnName>DESCRIPTION</columnName>
+      <dataType v="2005" />
+      <precision v="-1" />
+      <x v="345" />
+      <y v="20" />
+      <width v="315" />
+      <height v="70" />
+      <tabOrder v="3" />
+      <labelText>Beschreibung</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="2" />
+    </memo>
+    <edit>
+      <name>LONGNAME</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>AOSYS_TABLEREPOSITORY</tableName>
+      <columnName>LONGNAME</columnName>
+      <precision v="255" />
+      <x v="120" />
+      <y v="20" />
+      <width v="215" />
+      <tabOrder v="0" />
+      <labelText>Tabellenname</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+    <register>
+      <name>Register_0</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <y v="130" />
+      <width v="850" />
+      <height v="440" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <tabOrder v="5" />
+      <children>
+        <registerTab>
+          <name>cols</name>
+          <caption>Tabellenspalten</caption>
+          <children>
+            <button>
+              <name>btnCopyColumn</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/btncopycolumn/onClick.js</onClick>
+              <x v="690" />
+              <y v="5" />
+              <width v="20" />
+              <height v="20" />
+              <caption>C</caption>
+              <visible v="false" />
+              <tabOrder v="0" />
+              <toolTip>Kopiert eine Spaltendefiniton in andere Tabellen</toolTip>
+            </button>
+            <edit>
+              <name>COLUMNNAME</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <precision v="128" />
+              <onValidation>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/columnname/onValidation.js</onValidation>
+              <x v="185" />
+              <y v="5" />
+              <width v="55" />
+              <visible v="false" />
+              <tabOrder v="3" />
+              <labelText>DB-Spalte</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>COLUMNSIZE</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <precision v="10" />
+              <x v="465" />
+              <y v="5" />
+              <width v="45" />
+              <visible v="false" />
+              <tabOrder v="8" />
+              <labelText>Spaltenlänge</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </edit>
+            <checkBox>
+              <name>CONSTRAINTTYPE</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <valueTrue>p</valueTrue>
+              <valueFalse>N</valueFalse>
+              <x v="20" />
+              <y v="10" />
+              <visible v="false" />
+              <labelText>CONSTRAINTTYPE</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="40" />
+              <tabOrder v="10" />
+            </checkBox>
+            <checkBox>
+              <name>CUSTOMIZED</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <presetNew>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/customized/presetNew.js</presetNew>
+              <valueTrue>Y</valueTrue>
+              <valueFalse>N</valueFalse>
+              <x v="595" />
+              <y v="10" />
+              <visible v="false" />
+              <labelText>Customizing</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+              <tabOrder v="4" />
+            </checkBox>
+            <comboBox>
+              <name>DATATYPE</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <precision v="32" />
+              <onValidationProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/datatype/onValidationProcess.js</onValidationProcess>
+              <x v="320" />
+              <y v="5" />
+              <width v="65" />
+              <visible v="false" />
+              <tabOrder v="1" />
+              <staticContent>
+                <entry>
+                  <key>integer</key>
+                  <value>integer</value>
+                </entry>
+                <entry>
+                  <key>numeric</key>
+                  <value>numeric</value>
+                </entry>
+                <entry>
+                  <key>float</key>
+                  <value>float</value>
+                </entry>
+                <entry>
+                  <key>datetime</key>
+                  <value>datetime</value>
+                </entry>
+                <entry>
+                  <key>char</key>
+                  <value>char</value>
+                </entry>
+                <entry>
+                  <key>varchar</key>
+                  <value>varchar</value>
+                </entry>
+                <entry>
+                  <key>nchar</key>
+                  <value>nchar</value>
+                </entry>
+                <entry>
+                  <key>nvarchar</key>
+                  <value>nvarchar</value>
+                </entry>
+                <entry>
+                  <key>text</key>
+                  <value>text</value>
+                </entry>
+                <entry>
+                  <key>image</key>
+                  <value>image</value>
+                </entry>
+                <entry>
+                  <key>keyword</key>
+                  <value>keyword</value>
+                </entry>
+              </staticContent>
+              <maximumRowCount v="15" />
+              <emptyElementEnabled v="false" />
+              <labelText>Datentyp</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <memo>
+              <name>DESCRIPTION_Column</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <precision v="2147483647" />
+              <x v="635" />
+              <y v="5" />
+              <width v="50" />
+              <visible v="false" />
+              <tabOrder v="5" />
+              <labelText>Beschreibung</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="100" />
+            </memo>
+            <comboBox>
+              <name>KEYNAME</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <precision v="50" />
+              <contentProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/keyname/contentProcess.js</contentProcess>
+              <x v="395" />
+              <y v="5" />
+              <width v="60" />
+              <visible v="false" />
+              <tabOrder v="9" />
+              <maximumRowCount v="15" />
+              <labelText>Schlüsselname</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <checkBox>
+              <name>LOGGING</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <presetNew>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/logging/presetNew.js</presetNew>
+              <valueTrue>Y</valueTrue>
+              <valueFalse>N</valueFalse>
+              <x v="565" />
+              <y v="10" />
+              <visible v="false" />
+              <labelText>Logging</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <tabOrder v="6" />
+            </checkBox>
+            <edit>
+              <name>LONGNAME_COLUMN</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <precision v="255" />
+              <x v="135" />
+              <y v="5" />
+              <width v="45" />
+              <visible v="false" />
+              <tabOrder v="2" />
+              <labelText>Spaltenname</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </edit>
+            <checkBox>
+              <name>NULLABLE</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <presetNew>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/nullable/presetNew.js</presetNew>
+              <valueTrue>Y</valueTrue>
+              <valueFalse>N</valueFalse>
+              <x v="530" />
+              <y v="10" />
+              <visible v="false" />
+              <labelText>NULL erlaubt</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+              <tabOrder v="7" />
+            </checkBox>
+            <table>
+              <name>tblColumns</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/tblcolumns/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/tblcolumns/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/tblcolumns/rowDelete.js</rowDelete>
+              <displayContentProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/tblcolumns/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/tblcolumns/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="805" />
+              <height v="385" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <utilizeRowBackgroundColor v="true" />
+              <tabOrder v="11" />
+              <grantArrangeColumns v="true" />
+              <labelText>Spaltenliste der Tabelle</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>PK</name>
+                  <columnName>PK</columnName>
+                  <width v="30" />
+                  <dataType v="12" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>p</rendererValueTrue>
+                  <rendererValueFalse></rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/tblcolumns/columnmetadata/pk/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Spaltenname</name>
+                  <columnName>Spaltenname</columnName>
+                  <width v="100" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/tblcolumns/columnmetadata/spaltenname/editorComponentProcess.js</editorComponentProcess>
+                  <mandatoryInputProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/tblcolumns/columnmetadata/spaltenname/mandatoryInputProcess.js</mandatoryInputProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>DBName</name>
+                  <columnName>DB-Name</columnName>
+                  <width v="100" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/tblcolumns/columnmetadata/dbname/editorComponentProcess.js</editorComponentProcess>
+                  <mandatoryInputProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/tblcolumns/columnmetadata/dbname/mandatoryInputProcess.js</mandatoryInputProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Datentyp</name>
+                  <columnName>Datentyp</columnName>
+                  <width v="100" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/tblcolumns/columnmetadata/datentyp/editorComponentProcess.js</editorComponentProcess>
+                  <mandatoryInputProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/tblcolumns/columnmetadata/datentyp/mandatoryInputProcess.js</mandatoryInputProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Keyname</name>
+                  <columnName>Keyname</columnName>
+                  <width v="100" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/tblcolumns/columnmetadata/keyname/editorComponentProcess.js</editorComponentProcess>
+                  <mandatoryInputProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/tblcolumns/columnmetadata/keyname/mandatoryInputProcess.js</mandatoryInputProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Groesse</name>
+                  <columnName>Größe</columnName>
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/tblcolumns/columnmetadata/groesse/editorComponentProcess.js</editorComponentProcess>
+                  <mandatoryInputProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/tblcolumns/columnmetadata/groesse/mandatoryInputProcess.js</mandatoryInputProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Null</name>
+                  <columnName>Null</columnName>
+                  <width v="35" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>Y</rendererValueTrue>
+                  <rendererValueFalse>N</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/tblcolumns/columnmetadata/null/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Log</name>
+                  <columnName>Log</columnName>
+                  <width v="35" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>Y</rendererValueTrue>
+                  <rendererValueFalse>N</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/tblcolumns/columnmetadata/log/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Cust</name>
+                  <columnName>Cust</columnName>
+                  <width v="35" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>Y</rendererValueTrue>
+                  <rendererValueFalse>N</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/tblcolumns/columnmetadata/cust/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Beschreibung</name>
+                  <columnName>Beschreibung</columnName>
+                  <width v="100" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/cols/children/tblcolumns/columnmetadata/beschreibung/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>index</name>
+          <caption>Indexverwaltung</caption>
+          <children>
+            <button>
+              <name>Button_down</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/TABLEADMIN/children/register_0/children/index/children/button_down/onClick.js</onClick>
+              <x v="810" />
+              <y v="45" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <visibleProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/index/children/button_down/visibleProcess.js</visibleProcess>
+              <enabledProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/index/children/button_down/enabledProcess.js</enabledProcess>
+              <tabOrder v="4" />
+              <imageData>%aditoprj%/frame/TABLEADMIN/children/register_0/children/index/children/button_down/imageData.png</imageData>
+              <labelVisible v="false" />
+            </button>
+            <button>
+              <name>Button_up</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/TABLEADMIN/children/register_0/children/index/children/button_up/onClick.js</onClick>
+              <x v="810" />
+              <y v="25" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <visibleProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/index/children/button_up/visibleProcess.js</visibleProcess>
+              <enabledProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/index/children/button_up/enabledProcess.js</enabledProcess>
+              <tabOrder v="3" />
+              <imageData>%aditoprj%/frame/TABLEADMIN/children/register_0/children/index/children/button_up/imageData.png</imageData>
+              <labelVisible v="false" />
+            </button>
+            <edit>
+              <name>listColumn</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <valueProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/index/children/listcolumn/valueProcess.js</valueProcess>
+              <onValidation>%aditoprj%/frame/TABLEADMIN/children/register_0/children/index/children/listcolumn/onValidation.js</onValidation>
+              <x v="530" />
+              <y v="0" />
+              <width v="275" />
+              <horizontalAnchor v="2" />
+              <visible v="false" />
+              <tabOrder v="1" />
+              <labelDistance v="65" />
+            </edit>
+            <table>
+              <name>tbl_indexsort</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <separateSavable v="false" />
+              <displayContentProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/index/children/tbl_indexsort/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <singleSelection v="true" />
+              <x v="530" />
+              <y v="25" />
+              <width v="275" />
+              <height v="375" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <tabOrder v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Spaltenreihenfolge</name>
+                  <columnName>Spaltenreihenfolge</columnName>
+                  <width v="253" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+            <table>
+              <name>tblIndex</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowUpdate>%aditoprj%/frame/TABLEADMIN/children/register_0/children/index/children/tblindex/rowUpdate.js</rowUpdate>
+              <displayContentProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/index/children/tblindex/displayContentProcess.js</displayContentProcess>
+              <x v="20" />
+              <y v="25" />
+              <width v="495" />
+              <height v="375" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <tabOrder v="0" />
+              <grantArrangeColumns v="true" />
+              <labelText>Liste der Indizes</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Indexname</name>
+                  <columnName>Indexname</columnName>
+                  <width v="422" />
+                  <dataType v="12" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Unique</name>
+                  <columnName>Unique</columnName>
+                  <width v="48" />
+                  <dataType v="12" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>Y</rendererValueTrue>
+                  <rendererValueFalse>N</rendererValueFalse>
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>Neuer_Index</name>
+                  <caption>Neuer Index</caption>
+                  <onClick>%aditoprj%/frame/TABLEADMIN/children/register_0/children/index/children/tblindex/popup/neuer_index/onClick.js</onClick>
+                  <enabledProcess></enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>Indexeigenschaften</name>
+                  <caption>Indexeigenschaften</caption>
+                  <onClick>%aditoprj%/frame/TABLEADMIN/children/register_0/children/index/children/tblindex/popup/indexeigenschaften/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/index/children/tblindex/popup/indexeigenschaften/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>Index_loeschen</name>
+                  <caption>Index löschen</caption>
+                  <onClick>%aditoprj%/frame/TABLEADMIN/children/register_0/children/index/children/tblindex/popup/index_loeschen/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/index/children/tblindex/popup/index_loeschen/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>admin</name>
+          <caption>admin</caption>
+          <visible v="false" />
+          <children>
+            <label>
+              <name>lblColumn</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/TABLEADMIN/children/register_0/children/admin/children/lblcolumn/valueProcess.js</valueProcess>
+              <x v="80" />
+              <y v="15" />
+              <width v="260" />
+              <fontColor v="0xff0000ff" />
+              <visible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </label>
+            <label>
+              <name>TABLEID</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <tableName>AOSYS_TABLEREPOSITORY</tableName>
+              <columnName>TABLEID</columnName>
+              <dataType v="1" />
+              <x v="35" />
+              <y v="50" />
+              <width v="260" />
+              <fontColor v="0xff0000ff" />
+              <visible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </label>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+    <edit>
+      <name>TABLENAME</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>AOSYS_TABLEREPOSITORY</tableName>
+      <columnName>TABLENAME</columnName>
+      <precision v="128" />
+      <x v="120" />
+      <y v="45" />
+      <width v="215" />
+      <tabOrder v="1" />
+      <labelText>DB-Table</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+    <radioButton>
+      <name>TABLETYPE</name>
+      <template>%aditoprj%/template/Template_Radiobutton/Template_Radiobutton.aod</template>
+      <tableName>AOSYS_TABLEREPOSITORY</tableName>
+      <columnName>TABLETYPE</columnName>
+      <dataType v="1" />
+      <x v="680" />
+      <y v="15" />
+      <width v="165" />
+      <height v="80" />
+      <caption>Tabellentyp</caption>
+      <tabOrder v="4" />
+      <staticContent>
+        <entry>
+          <key>Benutzertabelle</key>
+          <value>U</value>
+        </entry>
+        <entry>
+          <key>Systemtabelle</key>
+          <value>S</value>
+        </entry>
+      </staticContent>
+    </radioButton>
+  </children>
+  <tableView>
+    <tableViewProperties>
+      <columnProperty>
+        <name>AOSYS_TABLEREPOSITORY_LONGNAME</name>
+        <tableName>AOSYS_TABLEREPOSITORY</tableName>
+        <columnName>LONGNAME</columnName>
+        <label>Tabellenname</label>
+        <width v="309" />
+      </columnProperty>
+      <columnProperty>
+        <name>AOSYS_TABLEREPOSITORY_TABLENAME</name>
+        <tableName>AOSYS_TABLEREPOSITORY</tableName>
+        <columnName>TABLENAME</columnName>
+        <label>DB-Name</label>
+        <width v="333" />
+      </columnProperty>
+    </tableViewProperties>
+  </tableView>
+  <width v="850" />
+  <height v="586" />
+</frame>

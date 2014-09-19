@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e7a916c8-3f9a-497d-84bb-3909b15271ea">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="myAddr" class="java.lang.String"/>
+	<parameter name="adito.image.myLogo" class="java.lang.String"/>
+	<parameter name="compPlace" class="java.lang.String"/>
+	<parameter name="referent" class="java.lang.String"/>
+	<parameter name="compName" class="java.lang.String"/>
+	<field name="PARTICIPANT" class="java.lang.String"/>
+	<field name="TITLE" class="java.lang.String"/>
+	<field name="EVENTSTART" class="java.lang.String"/>
+	<field name="EVENTEND" class="java.lang.String"/>
+	<group name="teilnehmer">
+		<groupExpression><![CDATA[$F{PARTICIPANT}]]></groupExpression>
+		<groupFooter>
+			<band height="532">
+				<textField isStretchWithOverflow="true">
+					<reportElement x="50" y="186" width="455" height="41" uuid="d804ae6a-fb1a-41a6-82ac-92c83a87a810"/>
+					<textElement textAlignment="Center">
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{Hiermit bestätigen wir, dass } +
+$F{PARTICIPANT} + $R{ vom } + 
+$F{EVENTSTART} + $R{ bis } + $F{EVENTEND} + 
+$R{ am Kurs } + $F{TITLE} + $R{ der Firma } +
+$P{compName} + $R{ teilgenommen hat} +"."]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement mode="Transparent" x="50" y="472" width="183" height="1" uuid="7c0d2e85-acf0-4f15-b8d4-848d1e1a668f"/>
+				</line>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="50" y="363" width="183" height="16" forecolor="#999999" uuid="6d8dada8-9dce-45a8-bff0-7b0f149f45b1"/>
+					<textElement>
+						<font fontName="Verdana" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{compPlace} + ", "]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="50" y="473" width="153" height="20" uuid="cb8c1846-75bc-47eb-9252-f5b434d8d0f0"/>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{referent}]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy" isBlankWhenNull="true">
+					<reportElement x="50" y="382" width="183" height="16" forecolor="#999999" uuid="7e9ac8f8-2105-4747-8d9c-2cce867a64e1"/>
+					<textElement>
+						<font fontName="Verdana"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="133" width="555" height="28" forecolor="#999999" uuid="33a9a7ec-fb39-428a-bdd0-bf7d1f15a53e"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Verdana" size="16"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{Teilnahmebestätigung}]]></textFieldExpression>
+				</textField>
+				<image scaleImage="RetainShape" hAlign="Center">
+					<reportElement x="183" y="0" width="188" height="50" uuid="1d9fbb1e-9288-4773-8daf-77d7a2048f2a"/>
+					<imageExpression><![CDATA[$P{adito.image.myLogo}]]></imageExpression>
+				</image>
+				<frame>
+					<reportElement x="0" y="66" width="556" height="19" forecolor="#999999" uuid="dc82b78e-f557-4396-80bb-971df0bd7b33"/>
+					<box>
+						<pen lineWidth="1.0"/>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+				</frame>
+				<textField>
+					<reportElement x="0" y="66" width="555" height="20" forecolor="#999999" uuid="24e6030a-eb4c-4f9b-bd55-4df49933fd59"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{myAddr}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+</jasperReport>

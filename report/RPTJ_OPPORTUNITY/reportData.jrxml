@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Verkaufschancen" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e7a916c8-3f9a-497d-84bb-3909b15271ea">
+	<property name="ireport.zoom" value="1.3310000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.callouts" value="##Fri Apr 11 11:55:49 CEST 2014"/>
+	<parameter name="myAddr" class="java.lang.String"/>
+	<parameter name="adito.image.myLogo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="VOLUME" class="java.lang.String"/>
+	<field name="PROJECTTITLE" class="java.lang.String"/>
+	<field name="PHASE" class="java.lang.String"/>
+	<field name="STARTDATE" class="java.lang.String"/>
+	<field name="ENDDATE" class="java.lang.String"/>
+	<field name="STATUS" class="java.lang.String"/>
+	<field name="DAUER" class="java.lang.String"/>
+	<sortField name="STATUS"/>
+	<sortField name="STARTDATE" order="Descending"/>
+	<sortField name="PHASE"/>
+	<variable name="STATUS_1" class="java.lang.Integer" resetType="Group" resetGroup="Status" calculation="Count">
+		<variableExpression><![CDATA[$F{STATUS}]]></variableExpression>
+	</variable>
+	<group name="Status">
+		<groupExpression><![CDATA[$F{STATUS}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="223" splitType="Stretch">
+			<image scaleImage="RetainShape" hAlign="Center">
+				<reportElement x="183" y="0" width="175" height="44" uuid="0d2bb047-0f1c-4adc-9063-7037e8f80b13"/>
+				<imageExpression><![CDATA[$P{adito.image.myLogo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="0" y="65" width="555" height="15" forecolor="#666666" uuid="f2ef51de-72bd-48ba-914f-c0f41955b60b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{myAddr}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="0" y="63" width="555" height="20" uuid="6091fb0b-cf3a-497c-97f8-43e40ee473fd"/>
+				<box>
+					<pen lineWidth="0.75" lineColor="#666666"/>
+					<topPen lineWidth="0.75" lineColor="#666666"/>
+					<leftPen lineWidth="0.75" lineColor="#666666"/>
+					<bottomPen lineWidth="0.75" lineColor="#666666"/>
+					<rightPen lineWidth="0.75" lineColor="#666666"/>
+				</box>
+			</frame>
+			<textField>
+				<reportElement x="0" y="102" width="144" height="20" forecolor="#666666" uuid="94b8bf13-bbb5-481c-b25b-27b4b26cdc84"/>
+				<textElement>
+					<font fontName="Segoe UI" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Vertriebsprojekte}]]></textFieldExpression>
+			</textField>
+			<pie3DChart>
+				<chart evaluationTime="Report" theme="default">
+					<reportElement x="183" y="132" width="182" height="91" uuid="96352a24-66ae-4c54-bced-62187d8d5db4"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend position="Right"/>
+				</chart>
+				<pieDataset>
+					<dataset incrementType="Group" incrementGroup="Status"/>
+					<keyExpression><![CDATA[$F{STATUS} + "  " + $V{STATUS_1}.toString()]]></keyExpression>
+					<valueExpression><![CDATA[$V{STATUS_1}]]></valueExpression>
+					<labelExpression><![CDATA[$V{STATUS_1}.toString()]]></labelExpression>
+				</pieDataset>
+				<pie3DPlot isShowLabels="false">
+					<plot/>
+					<itemLabel>
+						<font size="8" isBold="false"/>
+					</itemLabel>
+				</pie3DPlot>
+			</pie3DChart>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="39">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="14" width="114" height="15" uuid="dc22ffef-8001-4141-982a-f8136c6c80b2"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Projektname}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="125" y="14" width="58" height="15" uuid="1f1e4400-eba2-486a-942e-81853d62ba9e"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Status}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="194" y="14" width="110" height="15" uuid="fcf410b9-d29f-4138-993a-5df0720b9635"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Phase}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="315" y="14" width="61" height="24" uuid="138453db-678f-4d83-9c41-7822ee3eef38"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Volumen} + "\n" + "T€"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="393" y="14" width="69" height="15" uuid="4d715740-6ae5-41a9-b1b3-bde6bd095898"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Projektstart}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="482" y="0" width="73" height="15" uuid="9291ce1b-5ad2-4ba4-9512-0bd58d7a3803"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Dauer}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="482" y="14" width="73" height="15" uuid="81f7e685-555f-4cf1-a07a-b9664e81c281"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Monate}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="38" width="555" height="1" uuid="b073dd2f-8e96-496b-9029-de7c029be408"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="17" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="2" width="114" height="15" uuid="b07c2c1c-5099-4220-9448-9a1745929446"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PROJECTTITLE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="125" y="2" width="58" height="15" uuid="4d2846c0-0c46-40f2-9b55-e356524c4e16"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{STATUS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="194" y="2" width="110" height="15" uuid="a537cbb1-e512-43e2-ada6-bd8be5c92944"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PHASE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="315" y="2" width="61" height="15" uuid="5303b5f1-d60e-4570-b01a-b6e95df47193"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{VOLUME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="393" y="2" width="69" height="15" uuid="bb1ca904-06ec-49df-8fc0-4c4fbc62cd16"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{STARTDATE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="493" y="2" width="43" height="15" uuid="ecacd06d-ba2a-4a3b-b88e-996a2aee4e59"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DAUER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="45" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="370" y="17" width="90" height="15" forecolor="#666666" uuid="27c20716-20a1-449e-811f-859f6c52e7a9"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="17" width="49" height="15" forecolor="#666666" uuid="8bd3d054-f804-45de-bb50-471a488485bd"/>
+				<textElement textAlignment="Right">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Seite}+" "+$V{PAGE_NUMBER}+" "+$R{von}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="509" y="17" width="40" height="15" forecolor="#666666" uuid="15f8f8e3-2be5-4ac1-b6cb-ca60d0179be7"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="9" width="555" height="1" uuid="1e4482dd-a826-45da-86ee-d8e409f0b6ad"/>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,1 @@
+if ( a.valueof("$sys.superframeid") != "" )	a.rd("$image.ID");

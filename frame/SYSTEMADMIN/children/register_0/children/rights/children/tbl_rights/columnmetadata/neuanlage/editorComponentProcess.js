@@ -1,0 +1,1 @@
+a.rs("$comp.cbx_right_new");

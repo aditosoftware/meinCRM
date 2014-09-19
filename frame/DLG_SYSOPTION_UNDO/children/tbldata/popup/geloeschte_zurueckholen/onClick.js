@@ -1,0 +1,1 @@
+var dlg = a.askUserQuestion(a.translate("Bitte die zurückzuholenden Einstellungen markieren"), "DLG_SYSOPTION_UNDO");

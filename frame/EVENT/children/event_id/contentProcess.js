@@ -1,0 +1,1 @@
+a.rq("select EVENTID, TITLE from EVENT where EVENTID != '" + a.valueof("$comp.EVENTID") + "'");

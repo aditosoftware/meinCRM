@@ -1,0 +1,1 @@
+a.rq("select distinct COSTTYPE from EVENTCOST order by costtype");

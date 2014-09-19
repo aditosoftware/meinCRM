@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.2" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>sp_salesarea</name>
+  <process>%aditoprj%/process/sp_salesarea/process.js</process>
+  <title>aktualisiert VB-Gebiete in ORG</title>
+  <icon></icon>
+  <description></description>
+  <comment>@type public
+@status released
+@desc [aktualisiert VB-Gebiete in ORG mit Daten aus AOSYS_LOCATION]
+
+@module Standard
+@since 3.1
+@revision 1.0 PK 2011
+
+@import lib_salesarea</comment>
+  <webserviceEnabled v="false" />
+  <typeForWebservice>HTTP</typeForWebservice>
+  <alias>AO_DATEN</alias>
+</process>

@@ -1,0 +1,1 @@
+a.rs(a.valueof("$comp.tbl_participants") != "" && a.valueof("$comp.cbx_campaign_interview") != '')

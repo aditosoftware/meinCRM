@@ -1,0 +1,1 @@
+a.runSearchIndexer(["ORG", "PERS"]);

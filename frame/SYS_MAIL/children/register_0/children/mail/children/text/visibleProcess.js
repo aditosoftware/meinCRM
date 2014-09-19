@@ -1,0 +1,1 @@
+a.rs(a.valueof("$image.isReadOnly") == 'true' && a.valueof("$global.MailText") != 'windows');

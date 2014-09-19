@@ -1,0 +1,1 @@
+a.rd("$sys.date");

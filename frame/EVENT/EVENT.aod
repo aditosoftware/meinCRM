@@ -1,0 +1,2837 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>EVENT</name>
+  <title>Veranstaltung</title>
+  <icon>%aditoprj%/frame/EVENT/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/EVENT/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type  public
+@status released
+@desc [Frame für Veranstaltungen]
+
+@module Marketing
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <linkInformation>
+    <linkInformation>
+      <name>a6279acd-6ae1-4db3-ac5f-4a2be91d5ce5</name>
+      <tableName>EVENT</tableName>
+      <primaryKey>EVENTID</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+  </linkInformation>
+  <whereClause>%aditoprj%/frame/EVENT/whereClause.js</whereClause>
+  <idStrategy v="4" />
+  <beforeStart>%aditoprj%/frame/EVENT/beforeStart.js</beforeStart>
+  <afterStart>%aditoprj%/frame/EVENT/afterStart.js</afterStart>
+  <beforeSave>%aditoprj%/frame/EVENT/beforeSave.js</beforeSave>
+  <afterSave>%aditoprj%/frame/EVENT/afterSave.js</afterSave>
+  <beforeDelete>%aditoprj%/frame/EVENT/beforeDelete.js</beforeDelete>
+  <afterDelete>%aditoprj%/frame/EVENT/afterDelete.js</afterDelete>
+  <afterCancel>%aditoprj%/frame/EVENT/afterCancel.js</afterCancel>
+  <afterEdit>%aditoprj%/frame/EVENT/afterEdit.js</afterEdit>
+  <currentContentProcess>%aditoprj%/frame/EVENT/currentContentProcess.js</currentContentProcess>
+  <grantCreateProcess>%aditoprj%/frame/EVENT/grantCreateProcess.js</grantCreateProcess>
+  <grantUpdate v="false" />
+  <grantUpdateProcess>%aditoprj%/frame/EVENT/grantUpdateProcess.js</grantUpdateProcess>
+  <grantDelete v="false" />
+  <grantDeleteProcess>%aditoprj%/frame/EVENT/grantDeleteProcess.js</grantDeleteProcess>
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showSaveCancel v="false" />
+        <showCreate v="true" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <customComponents>
+          <rcCommandButton>
+            <name>Neue_Aufgabe</name>
+            <title>Neue Aufgabe</title>
+            <imageData>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/neue_aufgabe/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/neue_aufgabe/onClick.js</onClick>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+          <rcCommandButton>
+            <name>Neue_Historie</name>
+            <title>Neue Historie</title>
+            <imageData>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/neue_historie/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/neue_historie/onClick.js</onClick>
+            <enabledProcess>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/neue_historie/enabledProcess.js</enabledProcess>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+          <rcCommandButton>
+            <name>Reports</name>
+            <title>Reports</title>
+            <imageData>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/reports/imageData.png</imageData>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+            <commandButtonKind>ACTION_AND_POPUP_MAIN_ACTION</commandButtonKind>
+            <popupStyle>MENU</popupStyle>
+            <items>
+              <rcCommandButton>
+                <name>Teilnehmerliste</name>
+                <title>Teilnehmerliste</title>
+                <imageData>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/reports/items/teilnehmerliste/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/reports/items/teilnehmerliste/onClick.js</onClick>
+                <enabledProcess>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/reports/items/teilnehmerliste/enabledProcess.js</enabledProcess>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>Kostenplan</name>
+                <title>Kostenplan</title>
+                <imageData>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/reports/items/kostenplan/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/reports/items/kostenplan/onClick.js</onClick>
+                <enabledProcess>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/reports/items/kostenplan/enabledProcess.js</enabledProcess>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>Teilnahmebestaetigung</name>
+                <title>Teilnahmebestätigung</title>
+                <imageData>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/reports/items/teilnahmebestaetigung/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/reports/items/teilnahmebestaetigung/onClick.js</onClick>
+                <enabledProcess>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/reports/items/teilnahmebestaetigung/enabledProcess.js</enabledProcess>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>Tischkarten</name>
+                <title>Tischkarten</title>
+                <imageData>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/reports/items/tischkarten/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/reports/items/tischkarten/onClick.js</onClick>
+                <enabledProcess>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/reports/items/tischkarten/enabledProcess.js</enabledProcess>
+              </rcCommandButton>
+              <rcCommandButton>
+                <name>Feedbackbogen</name>
+                <title>Feedbackbogen</title>
+                <imageData>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/reports/items/feedbackbogen/imageData.png</imageData>
+                <onClick>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/reports/items/feedbackbogen/onClick.js</onClick>
+                <enabledProcess>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/reports/items/feedbackbogen/enabledProcess.js</enabledProcess>
+              </rcCommandButton>
+            </items>
+          </rcCommandButton>
+          <rcSeparator>
+            <name>Separator</name>
+          </rcSeparator>
+          <rcCommandButton>
+            <name>Kopieren</name>
+            <title>Kopieren</title>
+            <imageData>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/kopieren/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/EVENT/ribbon/ribbontasks/task_view/customcomponents/kopieren/onClick.js</onClick>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+        </customComponents>
+        <toolTip>Anzeige</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="true" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <databaseColumns>
+    <column>
+      <name>EVENT_EVENTID</name>
+      <tableName>EVENT</tableName>
+      <columnName>EVENTID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/EVENT/databasecolumns/event_eventid/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>EVENT_TITLE</name>
+      <tableName>EVENT</tableName>
+      <columnName>TITLE</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="100" />
+    </column>
+    <column>
+      <name>EVENT_EVENTNUMBER</name>
+      <tableName>EVENT</tableName>
+      <columnName>EVENTNUMBER</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/EVENT/databasecolumns/event_eventnumber/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>EVENT_EVENTACTIVE</name>
+      <tableName>EVENT</tableName>
+      <columnName>EVENTACTIVE</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="1" />
+      <presetNew>%aditoprj%/frame/EVENT/databasecolumns/event_eventactive/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>EVENT_CLOSINGDATE</name>
+      <tableName>EVENT</tableName>
+      <columnName>CLOSINGDATE</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+    </column>
+    <column>
+      <name>EVENT_SUBTITLE1</name>
+      <tableName>EVENT</tableName>
+      <columnName>SUBTITLE1</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="100" />
+    </column>
+    <column>
+      <name>EVENT_SUBTITLE2</name>
+      <tableName>EVENT</tableName>
+      <columnName>SUBTITLE2</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="100" />
+    </column>
+    <column>
+      <name>EVENT_SUBTITLE3</name>
+      <tableName>EVENT</tableName>
+      <columnName>SUBTITLE3</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="100" />
+    </column>
+    <column>
+      <name>EVENT_DESCRIPTION</name>
+      <tableName>EVENT</tableName>
+      <columnName>DESCRIPTION</columnName>
+      <dataTypeName>CLOB</dataTypeName>
+      <dataType v="2005" />
+      <precision v="2147483647" />
+      <scale>0</scale>
+    </column>
+    <column>
+      <name>EVENT_DATE_NEW</name>
+      <tableName>EVENT</tableName>
+      <columnName>DATE_NEW</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+      <presetNew>%aditoprj%/frame/EVENT/databasecolumns/event_date_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>EVENT_DATE_EDIT</name>
+      <tableName>EVENT</tableName>
+      <columnName>DATE_EDIT</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+      <presetChange>%aditoprj%/frame/EVENT/databasecolumns/event_date_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>EVENT_USER_NEW</name>
+      <tableName>EVENT</tableName>
+      <columnName>USER_NEW</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="30" />
+      <presetNew>%aditoprj%/frame/EVENT/databasecolumns/event_user_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>EVENT_USER_EDIT</name>
+      <tableName>EVENT</tableName>
+      <columnName>USER_EDIT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="30" />
+      <presetChange>%aditoprj%/frame/EVENT/databasecolumns/event_user_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>EVENT_RELATION_ID</name>
+      <tableName>EVENT</tableName>
+      <columnName>RELATION_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/EVENT/databasecolumns/event_relation_id/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>EVENT_CATEGORY</name>
+      <tableName>EVENT</tableName>
+      <columnName>CATEGORY</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+    </column>
+    <column>
+      <name>EVENT_MAX_PARTICIPANTS</name>
+      <tableName>EVENT</tableName>
+      <columnName>MAX_PARTICIPANTS</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/EVENT/databasecolumns/event_max_participants/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>EVENT_MODULE</name>
+      <tableName>EVENT</tableName>
+      <columnName>MODULE</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="250" />
+    </column>
+    <column>
+      <name>EVENT_EVENT_ID</name>
+      <tableName>EVENT</tableName>
+      <columnName>EVENT_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+    </column>
+    <column>
+      <name>EVENT_EVENTSTART</name>
+      <tableName>EVENT</tableName>
+      <columnName>EVENTSTART</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+    </column>
+    <column>
+      <name>EVENT_EVENTEND</name>
+      <tableName>EVENT</tableName>
+      <columnName>EVENTEND</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+    </column>
+    <column>
+      <name>EVENT_EVENTSTATUS</name>
+      <tableName>EVENT</tableName>
+      <columnName>EVENTSTATUS</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/EVENT/databasecolumns/event_eventstatus/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>EVENT_LOCATION</name>
+      <tableName>EVENT</tableName>
+      <columnName>LOCATION</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="100" />
+    </column>
+    <column>
+      <name>EVENT_INTERN</name>
+      <tableName>EVENT</tableName>
+      <columnName>INTERN</columnName>
+      <dataTypeName>CLOB</dataTypeName>
+      <dataType v="2005" />
+      <precision v="2147483647" />
+      <scale>0</scale>
+    </column>
+    <column>
+      <name>EVENT_CHARGE</name>
+      <tableName>EVENT</tableName>
+      <columnName>CHARGE</columnName>
+      <dataTypeName>NUMERIC</dataTypeName>
+      <dataType v="2" />
+      <precision v="16" />
+      <scale>2</scale>
+    </column>
+    <column>
+      <name>EVENT_FOLDER</name>
+      <tableName>EVENT</tableName>
+      <columnName>FOLDER</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="1" />
+      <presetNew>%aditoprj%/frame/EVENT/databasecolumns/event_folder/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>EVENT_QUESTIONNAIRE_ID</name>
+      <tableName>EVENT</tableName>
+      <columnName>QUESTIONNAIRE_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+    </column>
+  </databaseColumns>
+  <blobDatabaseColumns>
+    <blobColumn>
+      <name>EVENT_DOCUMENT</name>
+      <tableName>EVENT</tableName>
+      <columnName>DOCUMENT</columnName>
+      <rowIdProcess></rowIdProcess>
+    </blobColumn>
+  </blobDatabaseColumns>
+  <children>
+    <comboBox>
+      <name>CATEGORY</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>EVENT</tableName>
+      <columnName>CATEGORY</columnName>
+      <dataType v="4" />
+      <precision v="10" />
+      <contentProcess>%aditoprj%/frame/EVENT/children/category/contentProcess.js</contentProcess>
+      <x v="465" />
+      <y v="95" />
+      <width v="180" />
+      <horizontalAnchor v="2" />
+      <tabOrder v="11" />
+      <staticContent />
+      <labelText>Kurs-Kategorie</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <edit>
+      <name>CHARGE</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>EVENT</tableName>
+      <columnName>CHARGE</columnName>
+      <dataType v="2" />
+      <precision v="16" />
+      <outputFormat>#,##0.00</outputFormat>
+      <x v="575" />
+      <y v="120" />
+      <width v="70" />
+      <horizontalAnchor v="2" />
+      <tabOrder v="13" />
+      <labelText>Gebühr</labelText>
+      <labelDistance v="50" />
+    </edit>
+    <edit>
+      <name>CLOSINGDATE</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>EVENT</tableName>
+      <columnName>CLOSINGDATE</columnName>
+      <dataType v="93" />
+      <precision v="26" />
+      <outputFormat>dd.MM.yyyy</outputFormat>
+      <inputFormat>dd.MM.yyyy</inputFormat>
+      <calendarSupport v="true" />
+      <x v="465" />
+      <y v="45" />
+      <width v="180" />
+      <horizontalAnchor v="2" />
+      <tabOrder v="9" />
+      <labelText>Anmeldeschluss</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>Edt_eventnumber</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <valueProcess>%aditoprj%/frame/EVENT/children/edt_eventnumber/valueProcess.js</valueProcess>
+      <readOnly v="true" />
+      <x v="120" />
+      <y v="20" />
+      <width v="85" />
+      <backgroundColor v="0x00000000" />
+      <tabOrder v="0" />
+      <labelText>Kurs-Nr.</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+    <comboBox>
+      <name>EVENT_ID</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>EVENT</tableName>
+      <columnName>EVENT_ID</columnName>
+      <dataType v="1" />
+      <precision v="36" />
+      <contentProcess>%aditoprj%/frame/EVENT/children/event_id/contentProcess.js</contentProcess>
+      <x v="120" />
+      <y v="145" />
+      <width v="225" />
+      <visible v="false" />
+      <visibleProcess>%aditoprj%/frame/EVENT/children/event_id/visibleProcess.js</visibleProcess>
+      <tabOrder v="6" />
+      <labelText>übergeordnet</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <checkBox>
+      <name>EVENTACTIVE</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <tableName>EVENT</tableName>
+      <columnName>EVENTACTIVE</columnName>
+      <dataType v="1" />
+      <presetNew>%aditoprj%/frame/EVENT/children/eventactive/presetNew.js</presetNew>
+      <valueTrue>Y</valueTrue>
+      <valueFalse>N</valueFalse>
+      <x v="285" />
+      <y v="25" />
+      <horizontalAnchor v="2" />
+      <labelText>aktiv</labelText>
+      <labelDistance v="40" />
+      <tabOrder v="1" />
+    </checkBox>
+    <edit>
+      <name>EVENTEND</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>EVENT</tableName>
+      <columnName>EVENTEND</columnName>
+      <dataType v="93" />
+      <precision v="26" />
+      <outputFormat>dd.MM.yyyy HH:mm</outputFormat>
+      <inputFormat>dd.MM.yyyy HH:mm</inputFormat>
+      <alwaysEditable v="false" />
+      <searchableModes>none</searchableModes>
+      <calendarSupport v="true" />
+      <clockSupport v="true" />
+      <x v="120" />
+      <y v="120" />
+      <width v="150" />
+      <tabOrder v="5" />
+      <labelText>Ende</labelText>
+      <labelDistance v="100" />
+    </edit>
+    <edit>
+      <name>EVENTSTART</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>EVENT</tableName>
+      <columnName>EVENTSTART</columnName>
+      <dataType v="93" />
+      <precision v="26" />
+      <outputFormat>dd.MM.yyyy HH:mm</outputFormat>
+      <inputFormat>dd.MM.yyyy HH:mm</inputFormat>
+      <alwaysEditable v="false" />
+      <searchableModes>none</searchableModes>
+      <calendarSupport v="true" />
+      <clockSupport v="true" />
+      <x v="120" />
+      <y v="95" />
+      <width v="150" />
+      <tabOrder v="4" />
+      <labelText>Beginn</labelText>
+      <labelDistance v="100" />
+    </edit>
+    <comboBox>
+      <name>EVENTSTATUS</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>EVENT</tableName>
+      <columnName>EVENTSTATUS</columnName>
+      <dataType v="4" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/EVENT/children/eventstatus/presetNew.js</presetNew>
+      <contentProcess>%aditoprj%/frame/EVENT/children/eventstatus/contentProcess.js</contentProcess>
+      <alwaysEditable v="false" />
+      <searchableModes>none</searchableModes>
+      <x v="465" />
+      <y v="20" />
+      <width v="180" />
+      <horizontalAnchor v="2" />
+      <tabOrder v="8" />
+      <staticContent />
+      <emptyElementEnabled v="false" />
+      <labelText>Status</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <checkBox>
+      <name>FOLDER</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <tableName>EVENT</tableName>
+      <columnName>FOLDER</columnName>
+      <dataType v="1" />
+      <presetNew>%aditoprj%/frame/EVENT/children/folder/presetNew.js</presetNew>
+      <valueTrue>Y</valueTrue>
+      <valueFalse>N</valueFalse>
+      <x v="400" />
+      <y v="145" />
+      <visible v="false" />
+      <visibleProcess>%aditoprj%/frame/EVENT/children/folder/visibleProcess.js</visibleProcess>
+      <labelText>Ordner</labelText>
+      <labelDistance v="40" />
+      <tabOrder v="7" />
+    </checkBox>
+    <label>
+      <name>lblCreatedEdited</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <valueProcess>%aditoprj%/frame/EVENT/children/lblcreatededited/valueProcess.js</valueProcess>
+      <x v="20" />
+      <y v="565" />
+      <width v="830" />
+      <height v="15" />
+      <verticalAnchor v="5" />
+      <font name="Verdana" style="0" size="9" />
+      <backgroundColor v="0x00000000" />
+      <labelAnchor v="0" />
+    </label>
+    <edit>
+      <name>LOCATION</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>EVENT</tableName>
+      <columnName>LOCATION</columnName>
+      <dataType v="12" />
+      <precision v="100" />
+      <x v="120" />
+      <y v="70" />
+      <width v="225" />
+      <horizontalAnchor v="3" />
+      <tabOrder v="3" />
+      <labelText>Lokation</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>MAX_PARTICIPANTS</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>EVENT</tableName>
+      <columnName>MAX_PARTICIPANTS</columnName>
+      <dataType v="4" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/EVENT/children/max_participants/presetNew.js</presetNew>
+      <x v="465" />
+      <y v="120" />
+      <width v="50" />
+      <horizontalAnchor v="2" />
+      <tabOrder v="12" />
+      <labelText>max.Teilnehm.</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+    <register>
+      <name>Register_0</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <y v="165" />
+      <width v="850" />
+      <height v="400" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <tabOrder v="14" />
+      <children>
+        <registerTab>
+          <name>Teilnehmer</name>
+          <comment>Kommentar von Teilnehmer</comment>
+          <caption>&amp;amp;Teilnehmer</caption>
+          <visibleProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/visibleProcess.js</visibleProcess>
+          <toolTip>Tooltip von Teilnehmer</toolTip>
+          <children>
+            <button>
+              <name>btn_addDistlist</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_adddistlist/onClick.js</onClick>
+              <x v="745" />
+              <y v="330" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_adddistlist/enabledProcess.js</enabledProcess>
+              <tabOrder v="8" />
+              <imageData>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_adddistlist/imageData.png</imageData>
+              <toolTip>Verteiler hinzufügen</toolTip>
+            </button>
+            <button>
+              <name>btn_addParticipant</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_addparticipant/onClick.js</onClick>
+              <x v="745" />
+              <y v="305" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_addparticipant/enabledProcess.js</enabledProcess>
+              <tabOrder v="5" />
+              <imageData>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_addparticipant/imageData.png</imageData>
+              <toolTip>Teilnehmer hinzufügen</toolTip>
+            </button>
+            <button>
+              <name>btn_addSelection</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_addselection/onClick.js</onClick>
+              <x v="745" />
+              <y v="355" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_addselection/enabledProcess.js</enabledProcess>
+              <tabOrder v="11" />
+              <imageData>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_addselection/imageData.png</imageData>
+              <toolTip>Selektion hinzufügen</toolTip>
+            </button>
+            <button>
+              <name>btn_delParticipant</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_delparticipant/onClick.js</onClick>
+              <x v="770" />
+              <y v="305" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_delparticipant/enabledProcess.js</enabledProcess>
+              <tabOrder v="6" />
+              <imageData>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_delparticipant/imageData.png</imageData>
+              <toolTip>Teilnehmer löschen</toolTip>
+            </button>
+            <button>
+              <name>btn_delpdl</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_delpdl/onClick.js</onClick>
+              <x v="770" />
+              <y v="330" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_delpdl/enabledProcess.js</enabledProcess>
+              <tabOrder v="9" />
+              <imageData>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_delpdl/imageData.png</imageData>
+              <toolTip>Teilnehmer löschen</toolTip>
+            </button>
+            <button>
+              <name>btn_delpsel</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_delpsel/onClick.js</onClick>
+              <x v="770" />
+              <y v="355" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_delpsel/enabledProcess.js</enabledProcess>
+              <tabOrder v="12" />
+              <imageData>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_delpsel/imageData.png</imageData>
+              <toolTip>Teilnehmer löschen</toolTip>
+            </button>
+            <button>
+              <name>btn_resetPartFilter</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_resetpartfilter/onClick.js</onClick>
+              <x v="115" />
+              <y v="305" />
+              <width v="90" />
+              <height v="20" />
+              <verticalAnchor v="5" />
+              <caption>zurücksetzen</caption>
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_resetpartfilter/visibleProcess.js</visibleProcess>
+              <enabledProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_resetpartfilter/enabledProcess.js</enabledProcess>
+              <tabOrder v="3" />
+            </button>
+            <button>
+              <name>btn_setPartFilter</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_setpartfilter/onClick.js</onClick>
+              <x v="20" />
+              <y v="305" />
+              <width v="90" />
+              <height v="20" />
+              <verticalAnchor v="5" />
+              <caption>Filter setzen</caption>
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/btn_setpartfilter/visibleProcess.js</visibleProcess>
+              <tabOrder v="2" />
+              <labelText>Filter</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="35" />
+              <labelAnchor v="0" />
+            </button>
+            <button>
+              <name>Button_email</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/button_email/onClick.js</onClick>
+              <x v="745" />
+              <y v="25" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/button_email/enabledProcess.js</enabledProcess>
+              <tabOrder v="1" />
+              <imageData>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/button_email/imageData.png</imageData>
+            </button>
+            <comboBox>
+              <name>Cbx_tnfunc</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/cbx_tnfunc/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="265" />
+              <y v="5" />
+              <width v="95" />
+              <verticalAnchor v="5" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <staticContent />
+              <emptyElementEnabled v="false" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>Cbx_tnstatus</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/cbx_tnstatus/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="355" />
+              <y v="5" />
+              <width v="95" />
+              <verticalAnchor v="5" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <staticContent />
+              <emptyElementEnabled v="false" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>Combobox_Search</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/combobox_search/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="490" />
+              <y v="355" />
+              <width v="250" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/combobox_search/enabledProcess.js</enabledProcess>
+              <tabOrder v="10" />
+              <emptyElementEnabled v="false" />
+              <labelText>Suchen</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>Edit_anmeldedatum</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="93" />
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <inputFormat>dd.MM.yyyy</inputFormat>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <calendarSupport v="true" />
+              <x v="450" />
+              <y v="5" />
+              <width v="95" />
+              <verticalAnchor v="5" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelDistance v="65" />
+            </edit>
+            <edit>
+              <name>Edit_charge</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="6" />
+              <outputFormat>#,##0.00</outputFormat>
+              <inputFormat>#,##0.00</inputFormat>
+              <onValidation>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/edit_charge/onValidation.js</onValidation>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <calendarSupport v="true" />
+              <x v="645" />
+              <y v="5" />
+              <width v="95" />
+              <verticalAnchor v="5" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelDistance v="65" />
+            </edit>
+            <edit>
+              <name>Edit_discount</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="6" />
+              <outputFormat>#,##0.00</outputFormat>
+              <inputFormat>#,##0.00</inputFormat>
+              <onValidation>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/edit_discount/onValidation.js</onValidation>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <calendarSupport v="true" />
+              <x v="550" />
+              <y v="5" />
+              <width v="95" />
+              <verticalAnchor v="5" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelDistance v="65" />
+            </edit>
+            <label>
+              <name>Label_number_of_participants</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/label_number_of_participants/valueProcess.js</valueProcess>
+              <x v="20" />
+              <y v="5" />
+              <width v="195" />
+              <fontColor v="0xff5d667c" />
+              <visibleProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/label_number_of_participants/visibleProcess.js</visibleProcess>
+              <labelAnchor v="0" />
+            </label>
+            <lookup>
+              <name>lup_distlist</name>
+              <template>%aditoprj%/template/Template_Lookup/Template_Lookup.aod</template>
+              <alwaysEditable v="true" />
+              <selectClause>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/lup_distlist/selectClause.js</selectClause>
+              <fromClause>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/lup_distlist/fromClause.js</fromClause>
+              <x v="490" />
+              <y v="330" />
+              <width v="250" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/lup_distlist/enabledProcess.js</enabledProcess>
+              <popupWidth v="459" />
+              <popupHeight v="377" />
+              <tabOrder v="7" />
+              <labelText>Verteiler</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+              <columnProperties>
+                <lookupColumnMetaData>
+                  <name>Verteiler</name>
+                  <columnName>Verteiler</columnName>
+                  <searchable v="true" />
+                  <width v="166" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Beschreibung</name>
+                  <columnName>Beschreibung</columnName>
+                  <searchable v="true" />
+                  <width v="205" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+              </columnProperties>
+            </lookup>
+            <lookup>
+              <name>lup_relation</name>
+              <template>%aditoprj%/template/Template_Lookup/Template_Lookup.aod</template>
+              <alwaysEditable v="true" />
+              <selectClause>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/lup_relation/selectClause.js</selectClause>
+              <fromClause>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/lup_relation/fromClause.js</fromClause>
+              <whereClause>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/lup_relation/whereClause.js</whereClause>
+              <x v="490" />
+              <y v="305" />
+              <width v="250" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/lup_relation/enabledProcess.js</enabledProcess>
+              <popupWidth v="649" />
+              <popupHeight v="385" />
+              <tabOrder v="4" />
+              <labelText>Teilnehmer</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+              <columnProperties>
+                <lookupColumnMetaData>
+                  <name>KundenNr</name>
+                  <columnName>Kunden-Nr.</columnName>
+                  <searchable v="true" />
+                  <width v="69" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Firma</name>
+                  <columnName>Firma</columnName>
+                  <searchable v="true" />
+                  <width v="182" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>PLZ</name>
+                  <columnName>PLZ</columnName>
+                  <searchable v="true" />
+                  <width v="42" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Ort</name>
+                  <columnName>Ort</columnName>
+                  <searchable v="true" />
+                  <width v="65" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Titel</name>
+                  <columnName>Titel</columnName>
+                  <searchable v="true" />
+                  <width v="38" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Vorname</name>
+                  <columnName>Vorname</columnName>
+                  <searchable v="true" />
+                  <width v="79" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Nachname</name>
+                  <columnName>Nachname</columnName>
+                  <searchable v="true" />
+                  <width v="75" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Funktion</name>
+                  <columnName>Funktion</columnName>
+                  <searchable v="true" />
+                  <width v="75" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+              </columnProperties>
+            </lookup>
+            <lookup>
+              <name>lup_relation_0</name>
+              <template>%aditoprj%/template/Template_Lookup/Template_Lookup.aod</template>
+              <alwaysEditable v="true" />
+              <selectClause>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/lup_relation_0/selectClause.js</selectClause>
+              <fromClause>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/lup_relation_0/fromClause.js</fromClause>
+              <whereClause>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/lup_relation_0/whereClause.js</whereClause>
+              <x v="765" />
+              <y v="100" />
+              <width v="70" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <visible v="false" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/lup_relation_0/enabledProcess.js</enabledProcess>
+              <popupWidth v="649" />
+              <popupHeight v="385" />
+              <tabOrder v="-1" />
+              <labelText>Teilnehmer</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+              <columnProperties>
+                <lookupColumnMetaData>
+                  <name>KundenNr</name>
+                  <columnName>Kunden-Nr.</columnName>
+                  <searchable v="true" />
+                  <width v="69" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Firma</name>
+                  <columnName>Firma</columnName>
+                  <searchable v="true" />
+                  <width v="182" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>PLZ</name>
+                  <columnName>PLZ</columnName>
+                  <searchable v="true" />
+                  <width v="42" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Ort</name>
+                  <columnName>Ort</columnName>
+                  <searchable v="true" />
+                  <width v="65" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Titel</name>
+                  <columnName>Titel</columnName>
+                  <searchable v="true" />
+                  <width v="38" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Vorname</name>
+                  <columnName>Vorname</columnName>
+                  <searchable v="true" />
+                  <width v="79" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Nachname</name>
+                  <columnName>Nachname</columnName>
+                  <searchable v="true" />
+                  <width v="75" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Funktion</name>
+                  <columnName>Funktion</columnName>
+                  <searchable v="true" />
+                  <width v="75" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+              </columnProperties>
+            </lookup>
+            <table>
+              <name>tbl_participants</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/tbl_participants/onDoubleClick.js</onDoubleClick>
+              <rowCreate>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/tbl_participants/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/tbl_participants/rowUpdate.js</rowUpdate>
+              <separateSavable v="false" />
+              <displayContentProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/tbl_participants/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/tbl_participants/idContentProcess.js</idContentProcess>
+              <x v="20" />
+              <y v="25" />
+              <width v="720" />
+              <height v="275" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <utilizeRowFontColor v="true" />
+              <tabOrder v="0" />
+              <grantArrangeColumns v="true" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Anmeldung</name>
+                  <columnName>Anmeldung</columnName>
+                  <width v="95" />
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy</outputFormat>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/tbl_participants/columnmetadata/anmeldung/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Status</name>
+                  <columnName>Status</columnName>
+                  <width v="100" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/tbl_participants/columnmetadata/status/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Funktion</name>
+                  <columnName>Funktion</columnName>
+                  <width v="109" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/tbl_participants/columnmetadata/funktion/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Rab_</name>
+                  <columnName>Rab. (%)</columnName>
+                  <width v="70" />
+                  <alignment v="4" />
+                  <dataType v="6" />
+                  <outputFormat>#,##0.00</outputFormat>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/tbl_participants/columnmetadata/rab_/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Gebuehr_</name>
+                  <columnName>Gebühr (€)</columnName>
+                  <width v="80" />
+                  <alignment v="4" />
+                  <dataType v="6" />
+                  <outputFormat>#,##0.00</outputFormat>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/tbl_participants/columnmetadata/gebuehr_/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Person</name>
+                  <columnName>Person</columnName>
+                  <width v="184" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/tbl_participants/columnmetadata/person/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>Popup</name>
+                  <caption>Rechnung erstellen</caption>
+                  <onClick>%aditoprj%/frame/EVENT/children/register_0/children/teilnehmer/children/tbl_participants/popup/popup/onClick.js</onClick>
+                </menuItem>
+              </popup>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Struktur</name>
+          <caption>Struktur</caption>
+          <children>
+            <tree>
+              <name>eventtree</name>
+              <template>%aditoprj%/template/Template_Tree/Template_Tree.aod</template>
+              <contentProcess>%aditoprj%/frame/EVENT/children/register_0/children/struktur/children/eventtree/contentProcess.js</contentProcess>
+              <onDoubleClick>%aditoprj%/frame/EVENT/children/register_0/children/struktur/children/eventtree/onDoubleClick.js</onDoubleClick>
+              <alwaysEditable v="true" />
+              <singleSelection v="true" />
+              <singleSelectionProcess></singleSelectionProcess>
+              <x v="20" />
+              <y v="25" />
+              <width v="345" />
+              <height v="325" />
+              <verticalAnchor v="6" />
+              <popup>
+                <menuItem>
+                  <name>Baum_oeffnen</name>
+                  <caption>Baum öffnen</caption>
+                  <onClick>%aditoprj%/frame/EVENT/children/register_0/children/struktur/children/eventtree/popup/baum_oeffnen/onClick.js</onClick>
+                  <enabledProcess></enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>Baum_schliessen</name>
+                  <caption>Baum schließen</caption>
+                  <onClick>%aditoprj%/frame/EVENT/children/register_0/children/struktur/children/eventtree/popup/baum_schliessen/onClick.js</onClick>
+                  <enabledProcess></enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+            </tree>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Beschreibung</name>
+          <comment>Kommentar von Beschreibung</comment>
+          <caption>&amp;amp;Beschreibung</caption>
+          <toolTip>Tooltip von Beschreibung</toolTip>
+          <children>
+            <memo>
+              <name>DESCRIPTION</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <tableName>EVENT</tableName>
+              <columnName>DESCRIPTION</columnName>
+              <dataType v="2005" />
+              <precision v="-1" />
+              <x v="95" />
+              <y v="95" />
+              <width v="485" />
+              <height v="255" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <tabOrder v="3" />
+              <labelText>Beschreibung</labelText>
+              <labelDistance v="80" />
+            </memo>
+            <memo>
+              <name>INTERN</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <tableName>EVENT</tableName>
+              <columnName>INTERN</columnName>
+              <dataType v="2005" />
+              <precision v="-1" />
+              <searchableModes>none</searchableModes>
+              <x v="605" />
+              <y v="190" />
+              <width v="175" />
+              <height v="160" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="6" />
+              <tabOrder v="5" />
+              <labelText>Interner Vermerk</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+            </memo>
+            <list>
+              <name>MODULE</name>
+              <template>%aditoprj%/template/Template_List/Template_List.aod</template>
+              <tableName>EVENT</tableName>
+              <columnName>MODULE</columnName>
+              <dataType v="12" />
+              <x v="605" />
+              <y v="30" />
+              <width v="175" />
+              <height v="130" />
+              <horizontalAnchor v="2" />
+              <tabOrder v="4" />
+              <staticContent>
+                <entry>
+                  <key>Modul A</key>
+                  <value>Modul A</value>
+                </entry>
+                <entry>
+                  <key>Modul B</key>
+                  <value>Modul B</value>
+                </entry>
+                <entry>
+                  <key>Modul C</key>
+                  <value>Modul C</value>
+                </entry>
+                <entry>
+                  <key>Modul D</key>
+                  <value>Modul D</value>
+                </entry>
+              </staticContent>
+              <labelText>gehört zu Modul</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+            </list>
+            <edit>
+              <name>SUBTITLE1</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>EVENT</tableName>
+              <columnName>SUBTITLE1</columnName>
+              <dataType v="12" />
+              <precision v="100" />
+              <x v="95" />
+              <y v="15" />
+              <width v="485" />
+              <horizontalAnchor v="3" />
+              <tabOrder v="0" />
+              <labelText>Untertitel 1</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>SUBTITLE2</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>EVENT</tableName>
+              <columnName>SUBTITLE2</columnName>
+              <dataType v="12" />
+              <precision v="100" />
+              <x v="95" />
+              <y v="40" />
+              <width v="485" />
+              <horizontalAnchor v="3" />
+              <tabOrder v="1" />
+              <labelText>Untertitel 2</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>SUBTITLE3</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>EVENT</tableName>
+              <columnName>SUBTITLE3</columnName>
+              <dataType v="12" />
+              <precision v="100" />
+              <x v="95" />
+              <y v="65" />
+              <width v="485" />
+              <horizontalAnchor v="3" />
+              <tabOrder v="2" />
+              <labelText>Untertitel 3</labelText>
+              <labelDistance v="80" />
+            </edit>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Historie</name>
+          <caption>&amp;amp;Historie</caption>
+          <visibleProcess>%aditoprj%/frame/EVENT/children/register_0/children/historie/visibleProcess.js</visibleProcess>
+          <children>
+            <button>
+              <name>btn_resetHistoryFilter</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/EVENT/children/register_0/children/historie/children/btn_resethistoryfilter/onClick.js</onClick>
+              <x v="735" />
+              <y v="355" />
+              <width v="90" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <caption>zurücksetzen</caption>
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/EVENT/children/register_0/children/historie/children/btn_resethistoryfilter/visibleProcess.js</visibleProcess>
+              <enabledProcess>%aditoprj%/frame/EVENT/children/register_0/children/historie/children/btn_resethistoryfilter/enabledProcess.js</enabledProcess>
+              <tabOrder v="0" />
+            </button>
+            <button>
+              <name>btn_setHistoryFilter</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/EVENT/children/register_0/children/historie/children/btn_sethistoryfilter/onClick.js</onClick>
+              <x v="640" />
+              <y v="355" />
+              <width v="90" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <caption>Filter setzen</caption>
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/EVENT/children/register_0/children/historie/children/btn_sethistoryfilter/visibleProcess.js</visibleProcess>
+              <tabOrder v="1" />
+              <labelText>Filter</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="35" />
+              <labelAnchor v="0" />
+            </button>
+            <table>
+              <name>Table_history</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/EVENT/children/register_0/children/historie/children/table_history/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/EVENT/children/register_0/children/historie/children/table_history/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <singleSelection v="true" />
+              <x v="20" />
+              <y v="25" />
+              <width v="805" />
+              <height v="325" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <grantArrangeColumns v="true" />
+              <labelText>Historie</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>I</name>
+                  <columnName>I</columnName>
+                  <width v="20" />
+                  <dataType v="12" />
+                  <rendererType v="3" />
+                  <rendererDataProcess>%aditoprj%/frame/EVENT/children/register_0/children/historie/children/table_history/columnmetadata/i/rendererDataProcess.js</rendererDataProcess>
+                  <rendererCachingType v="3" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Datum</name>
+                  <columnName>Datum</columnName>
+                  <width v="80" />
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Medium</name>
+                  <columnName>Medium</columnName>
+                  <width v="90" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Betrifft</name>
+                  <columnName>Betrifft</columnName>
+                  <width v="180" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Mitarbeiter</name>
+                  <columnName>Mitarbeiter</columnName>
+                  <width v="140" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Themenbaum</name>
+                  <columnName>Themen</columnName>
+                  <width v="200" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Info</name>
+                  <columnName>Info</columnName>
+                  <width v="75" />
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>Dokument_oeffnen</name>
+                  <caption>Dokument öffnen</caption>
+                  <onClick>%aditoprj%/frame/EVENT/children/register_0/children/historie/children/table_history/popup/dokument_oeffnen/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/EVENT/children/register_0/children/historie/children/table_history/popup/dokument_oeffnen/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>Email_oeffnen</name>
+                  <caption>E-Mail öffnen</caption>
+                  <onClick>%aditoprj%/frame/EVENT/children/register_0/children/historie/children/table_history/popup/email_oeffnen/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/EVENT/children/register_0/children/historie/children/table_history/popup/email_oeffnen/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Feedback</name>
+          <caption>&amp;amp;Feedback</caption>
+          <children>
+            <button>
+              <name>btn_feedback</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/EVENT/children/register_0/children/feedback/children/btn_feedback/onClick.js</onClick>
+              <x v="455" />
+              <y v="170" />
+              <width v="240" />
+              <height v="20" />
+              <caption>angemeldete Teilnehmer übernehmen</caption>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/EVENT/children/register_0/children/feedback/children/btn_feedback/enabledProcess.js</enabledProcess>
+              <tabOrder v="1" />
+              <labelVisible v="false" />
+              <toolTip>Alle Teilnehmer mit Status angemeldet werden für ausgewählten Fragebogen übernommen</toolTip>
+            </button>
+            <comboBox>
+              <name>cmb_frage</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/EVENT/children/register_0/children/feedback/children/cmb_frage/contentProcess.js</contentProcess>
+              <x v="660" />
+              <y v="120" />
+              <width v="75" />
+              <visible v="false" />
+              <utilizeRowId v="false" />
+              <tabOrder v="4" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>cmb_fragebogen</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <tableName>EVENT</tableName>
+              <columnName>QUESTIONNAIRE_ID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <contentProcess>%aditoprj%/frame/EVENT/children/register_0/children/feedback/children/cmb_fragebogen/contentProcess.js</contentProcess>
+              <searchableModes>mask</searchableModes>
+              <x v="20" />
+              <y v="170" />
+              <width v="435" />
+              <tabOrder v="0" />
+              <labelText>Fragebogen</labelText>
+              <labelVisible v="false" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>cmb_note</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <x v="705" />
+              <y v="120" />
+              <width v="75" />
+              <visible v="false" />
+              <tabOrder v="3" />
+              <staticContent>
+                <entry>
+                  <key>1</key>
+                  <value>1</value>
+                </entry>
+                <entry>
+                  <key>2</key>
+                  <value>2</value>
+                </entry>
+                <entry>
+                  <key>3</key>
+                  <value>3</value>
+                </entry>
+                <entry>
+                  <key>4</key>
+                  <value>4</value>
+                </entry>
+                <entry>
+                  <key>5</key>
+                  <value>5</value>
+                </entry>
+                <entry>
+                  <key>6</key>
+                  <value>6</value>
+                </entry>
+              </staticContent>
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>cmb_TNFragebogen</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/EVENT/children/register_0/children/feedback/children/cmb_tnfragebogen/contentProcess.js</contentProcess>
+              <x v="585" />
+              <y v="120" />
+              <width v="75" />
+              <visible v="false" />
+              <utilizeRowId v="false" />
+              <tabOrder v="5" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>edt_bemerkung</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <x v="660" />
+              <y v="120" />
+              <width v="145" />
+              <visible v="false" />
+              <labelDistance v="65" />
+            </edit>
+            <table>
+              <name>tbl_1</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <displayContentProcess>%aditoprj%/frame/EVENT/children/register_0/children/feedback/children/tbl_1/displayContentProcess.js</displayContentProcess>
+              <x v="20" />
+              <y v="15" />
+              <width v="390" />
+              <height v="135" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Frage</name>
+                  <columnName>Frage</columnName>
+                  <width v="246" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Durchschnittsnote</name>
+                  <columnName>Durchschnittsnote</columnName>
+                  <width v="119" />
+                  <dataType v="6" />
+                  <outputFormat>0.00</outputFormat>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+            <table>
+              <name>tbl_feedback</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/EVENT/children/register_0/children/feedback/children/tbl_feedback/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/EVENT/children/register_0/children/feedback/children/tbl_feedback/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/EVENT/children/register_0/children/feedback/children/tbl_feedback/rowDelete.js</rowDelete>
+              <displayContentProcess>%aditoprj%/frame/EVENT/children/register_0/children/feedback/children/tbl_feedback/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="190" />
+              <width v="790" />
+              <height v="150" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <tabOrder v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Fragebogen</name>
+                  <columnName>Fragebogen</columnName>
+                  <width v="137" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/EVENT/children/register_0/children/feedback/children/tbl_feedback/columnmetadata/fragebogen/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Frage_2</name>
+                  <columnName>Frage</columnName>
+                  <width v="247" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/EVENT/children/register_0/children/feedback/children/tbl_feedback/columnmetadata/frage_2/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Note</name>
+                  <columnName>Note</columnName>
+                  <dataType v="4" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/EVENT/children/register_0/children/feedback/children/tbl_feedback/columnmetadata/note/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Bemerkung</name>
+                  <columnName>Bemerkung</columnName>
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/EVENT/children/register_0/children/feedback/children/tbl_feedback/columnmetadata/bemerkung/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Kosten</name>
+          <comment>Kommentar von Kosten</comment>
+          <caption>&amp;amp;Kosten</caption>
+          <visibleProcess>%aditoprj%/frame/EVENT/children/register_0/children/kosten/visibleProcess.js</visibleProcess>
+          <toolTip>Tooltip von Kosten</toolTip>
+          <children>
+            <comboBox>
+              <name>Cbx_costtype</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/EVENT/children/register_0/children/kosten/children/cbx_costtype/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="45" />
+              <y v="5" />
+              <width v="75" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <editable v="true" />
+              <staticContent />
+              <emptyElementEnabled v="false" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>Edit_AnzTN</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="6" />
+              <valueProcess>%aditoprj%/frame/EVENT/children/register_0/children/kosten/children/edit_anztn/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <readOnly v="true" />
+              <alignment v="4" />
+              <x v="590" />
+              <y v="85" />
+              <width v="90" />
+              <tabOrder v="2" />
+              <labelText>Anzahl Teilnehmer</labelText>
+              <labelDistance v="65" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>Edit_GebuehrproTN</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="6" />
+              <valueProcess>%aditoprj%/frame/EVENT/children/register_0/children/kosten/children/edit_gebuehrprotn/valueProcess.js</valueProcess>
+              <outputFormat>#,##0.00 €</outputFormat>
+              <searchableModes>none</searchableModes>
+              <readOnly v="true" />
+              <alignment v="4" />
+              <x v="590" />
+              <y v="135" />
+              <width v="90" />
+              <tabOrder v="4" />
+              <labelText>Gebühr pro Teilnehmer</labelText>
+              <labelDistance v="65" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>Edit_Gesamterloes</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="6" />
+              <valueProcess>%aditoprj%/frame/EVENT/children/register_0/children/kosten/children/edit_gesamterloes/valueProcess.js</valueProcess>
+              <outputFormat>#,##0.00 €</outputFormat>
+              <searchableModes>none</searchableModes>
+              <readOnly v="true" />
+              <alignment v="4" />
+              <x v="590" />
+              <y v="160" />
+              <width v="90" />
+              <tabOrder v="5" />
+              <labelText>Gesamterlös</labelText>
+              <labelDistance v="65" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>Edit_Gesamtgebuehren</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="6" />
+              <valueProcess>%aditoprj%/frame/EVENT/children/register_0/children/kosten/children/edit_gesamtgebuehren/valueProcess.js</valueProcess>
+              <outputFormat>#,##0.00 €</outputFormat>
+              <searchableModes>none</searchableModes>
+              <readOnly v="true" />
+              <alignment v="4" />
+              <x v="590" />
+              <y v="60" />
+              <width v="90" />
+              <tabOrder v="1" />
+              <labelText>Gesamtgebühren</labelText>
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>Edit_Gesamtkosten</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="6" />
+              <valueProcess>%aditoprj%/frame/EVENT/children/register_0/children/kosten/children/edit_gesamtkosten/valueProcess.js</valueProcess>
+              <outputFormat>#,##0.00 €</outputFormat>
+              <searchableModes>none</searchableModes>
+              <readOnly v="true" />
+              <alignment v="4" />
+              <x v="590" />
+              <y v="35" />
+              <width v="90" />
+              <tabOrder v="0" />
+              <labelText>Gesamtkosten</labelText>
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="65" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>Edit_KostproTN</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="6" />
+              <valueProcess>%aditoprj%/frame/EVENT/children/register_0/children/kosten/children/edit_kostprotn/valueProcess.js</valueProcess>
+              <outputFormat>#,##0.00 €</outputFormat>
+              <searchableModes>none</searchableModes>
+              <readOnly v="true" />
+              <alignment v="4" />
+              <x v="590" />
+              <y v="110" />
+              <width v="90" />
+              <tabOrder v="3" />
+              <labelText>Kosten pro Teilnehmer</labelText>
+              <labelDistance v="65" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>Edt_costvalue</name>
+              <dataType v="6" />
+              <outputFormat>#,##0.00 €</outputFormat>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <calendarSupport v="true" />
+              <clockSupport v="true" />
+              <alignment v="4" />
+              <x v="45" />
+              <y v="5" />
+              <width v="75" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="130" />
+            </edit>
+            <label>
+              <name>lbl_evaluation</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/EVENT/children/register_0/children/kosten/children/lbl_evaluation/valueProcess.js</valueProcess>
+              <x v="465" />
+              <y v="10" />
+              <width v="105" />
+              <backgroundColor v="0x00000000" />
+              <visible v="false" />
+              <labelDistance v="120" />
+              <labelAnchor v="0" />
+            </label>
+            <rectangleDecorator>
+              <name>Rechteck_0</name>
+              <template>%aditoprj%/template/Template_Rechteck/Template_Rechteck.aod</template>
+              <x v="380" />
+              <y v="20" />
+              <width v="315" />
+              <height v="175" />
+              <caption>Kalkulation</caption>
+            </rectangleDecorator>
+            <table>
+              <name>Tbl_eventcost</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/EVENT/children/register_0/children/kosten/children/tbl_eventcost/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/EVENT/children/register_0/children/kosten/children/tbl_eventcost/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/EVENT/children/register_0/children/kosten/children/tbl_eventcost/rowDelete.js</rowDelete>
+              <separateSavable v="false" />
+              <displayContentProcess>%aditoprj%/frame/EVENT/children/register_0/children/kosten/children/tbl_eventcost/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/EVENT/children/register_0/children/kosten/children/tbl_eventcost/idContentProcess.js</idContentProcess>
+              <singleSelection v="true" />
+              <x v="20" />
+              <y v="25" />
+              <width v="330" />
+              <height v="325" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <grantArrangeColumns v="true" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Kostenart</name>
+                  <columnName>Kostenart</columnName>
+                  <width v="230" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/EVENT/children/register_0/children/kosten/children/tbl_eventcost/columnmetadata/kostenart/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Kosten_2</name>
+                  <columnName>Kosten</columnName>
+                  <alignment v="4" />
+                  <dataType v="6" />
+                  <outputFormat>#,##0.00 €</outputFormat>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/EVENT/children/register_0/children/kosten/children/tbl_eventcost/columnmetadata/kosten_2/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Ressourcen</name>
+          <caption>Ressourcen</caption>
+          <visibleProcess>%aditoprj%/frame/EVENT/children/register_0/children/ressourcen/visibleProcess.js</visibleProcess>
+          <children>
+            <button>
+              <name>btn_Ressource_eintragen</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/EVENT/children/register_0/children/ressourcen/children/btn_ressource_eintragen/onClick.js</onClick>
+              <x v="670" />
+              <y v="355" />
+              <width v="155" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <caption>Ressource eintragen</caption>
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/EVENT/children/register_0/children/ressourcen/children/btn_ressource_eintragen/visibleProcess.js</visibleProcess>
+              <tabOrder v="1" />
+              <imageData>%aditoprj%/frame/EVENT/children/register_0/children/ressourcen/children/btn_ressource_eintragen/imageData.png</imageData>
+              <labelText>Filter</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="35" />
+              <labelAnchor v="0" />
+            </button>
+            <button>
+              <name>btn_Ressourcen_Kalender</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/EVENT/children/register_0/children/ressourcen/children/btn_ressourcen_kalender/onClick.js</onClick>
+              <x v="505" />
+              <y v="355" />
+              <width v="155" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <caption>Ressourcen-Kalender</caption>
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/EVENT/children/register_0/children/ressourcen/children/btn_ressourcen_kalender/visibleProcess.js</visibleProcess>
+              <tabOrder v="0" />
+              <imageData>%aditoprj%/frame/EVENT/children/register_0/children/ressourcen/children/btn_ressourcen_kalender/imageData.png</imageData>
+              <labelText>Filter</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="35" />
+              <labelAnchor v="0" />
+            </button>
+            <table>
+              <name>tbl_Ressource</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/EVENT/children/register_0/children/ressourcen/children/tbl_ressource/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/EVENT/children/register_0/children/ressourcen/children/tbl_ressource/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="805" />
+              <height v="325" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <utilizeRowFontColor v="true" />
+              <utilizeRowBackgroundColor v="true" />
+              <grantArrangeColumns v="true" />
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>I_2</name>
+                  <columnName>I</columnName>
+                  <width v="20" />
+                  <rendererType v="3" />
+                  <rendererDataProcess>%aditoprj%/frame/EVENT/children/register_0/children/ressourcen/children/tbl_ressource/columnmetadata/i_2/rendererDataProcess.js</rendererDataProcess>
+                  <rendererCachingType v="3" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>beginnt_um</name>
+                  <columnName>beginnt um</columnName>
+                  <width v="109" />
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy HH:mm</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>endet_um</name>
+                  <columnName>endet um</columnName>
+                  <width v="112" />
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy HH:mm</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Betreff</name>
+                  <columnName>Betreff</columnName>
+                  <width v="151" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>erstellt</name>
+                  <columnName>erstellt</columnName>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Ressource</name>
+                  <columnName>Ressource</columnName>
+                  <width v="205" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Beschreibung_2</name>
+                  <columnName>Beschreibung</columnName>
+                  <width v="110" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Attribute</name>
+          <comment>Kommentar von Attribute</comment>
+          <caption>&amp;amp;Eigenschaften</caption>
+          <visibleProcess>%aditoprj%/frame/EVENT/children/register_0/children/attribute/visibleProcess.js</visibleProcess>
+          <toolTip>Tooltip von Attribute</toolTip>
+          <children>
+            <comboBox>
+              <name>attributelist1</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/attributelist1/contentProcess.js</contentProcess>
+              <onValidationProcess>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/attributelist1/onValidationProcess.js</onValidationProcess>
+              <searchableModes>none</searchableModes>
+              <x v="390" />
+              <y v="5" />
+              <width v="50" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <maximumRowCount v="20" />
+              <labelText>Attribut</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+              <toolTip>Die Zahlen in Klammern bezeichnen, wie oft
+das Attribut mindestens vorkommen muss
+und maximal vorkommen darf.</toolTip>
+            </comboBox>
+            <comboBox>
+              <name>attributelist2</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/attributelist2/contentProcess.js</contentProcess>
+              <onValidationProcess>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/attributelist2/onValidationProcess.js</onValidationProcess>
+              <searchableModes>none</searchableModes>
+              <x v="445" />
+              <y v="5" />
+              <width v="50" />
+              <visible v="false" />
+              <tabOrder v="-1" />
+              <labelText>Attribut/Wert</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>cbx_attrvalue</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/cbx_attrvalue/contentProcess.js</contentProcess>
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_ID</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/cbx_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/cbx_attrvalue/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="5" />
+              <width v="50" />
+              <visible v="false" />
+              <tabOrder v="1" />
+              <staticContent />
+              <maximumRowCount v="30" />
+              <labelText>Eigenschaft</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <checkBox>
+              <name>chk_attrvalue</name>
+              <valueTrue>Y</valueTrue>
+              <valueFalse>N</valueFalse>
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_CHAR</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/chk_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/chk_attrvalue/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="5" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <tabOrder v="3" />
+            </checkBox>
+            <table>
+              <name>classification</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/classification/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/classification/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/classification/rowDelete.js</rowDelete>
+              <grantRowDeleteProcess>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/classification/grantRowDeleteProcess.js</grantRowDeleteProcess>
+              <separateSavable v="false" />
+              <displayContentProcess>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/classification/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/classification/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="595" />
+              <height v="325" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <utilizeRowFontColor v="true" />
+              <utilizeRowBackgroundColor v="true" />
+              <tabOrder v="0" />
+              <labelText>Attribute</labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>1_Attribut</name>
+                  <columnName>1. Attribut</columnName>
+                  <width v="200" />
+                  <dataType v="1" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/classification/columnmetadata/1_attribut/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>2_Attribut</name>
+                  <columnName>2. Attribut</columnName>
+                  <width v="201" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/classification/columnmetadata/2_attribut/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Wert</name>
+                  <columnName>Wert</columnName>
+                  <width v="168" />
+                  <dataType v="1" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/classification/columnmetadata/wert/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+            <edit>
+              <name>date_attrvalue</name>
+              <dataType v="93" />
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <inputFormat>dd.MM.yyyy</inputFormat>
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_DATE</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/date_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/date_attrvalue/searchFields.js</searchFields>
+              <calendarSupport v="true" />
+              <x v="500" />
+              <y v="5" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="5" />
+              <labelText>Wert</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>float_attrvalue</name>
+              <dataType v="6" />
+              <outputFormat>#,##0.00</outputFormat>
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_DOUBLE</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/float_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/float_attrvalue/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="5" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="2" />
+              <labelText>Wert</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>int_attrvalue</name>
+              <dataType v="4" />
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_INT</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/int_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/int_attrvalue/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="5" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="4" />
+              <labelText>Wert</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>string_attrvalue</name>
+              <searchLinkTableName>ATTRLINK</searchLinkTableName>
+              <searchLinkColumnName>VALUE_CHAR</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/string_attrvalue/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/EVENT/children/register_0/children/attribute/children/string_attrvalue/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="5" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <labelText>Wert</labelText>
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Aufgaben</name>
+          <caption>&amp;amp;Aufgaben</caption>
+          <children>
+            <button>
+              <name>btn_resetTEFilter</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/EVENT/children/register_0/children/aufgaben/children/btn_resettefilter/onClick.js</onClick>
+              <x v="735" />
+              <y v="355" />
+              <width v="90" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <caption>zurücksetzen</caption>
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/EVENT/children/register_0/children/aufgaben/children/btn_resettefilter/visibleProcess.js</visibleProcess>
+              <tabOrder v="0" />
+            </button>
+            <button>
+              <name>btn_setTEFilter</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/EVENT/children/register_0/children/aufgaben/children/btn_settefilter/onClick.js</onClick>
+              <x v="640" />
+              <y v="355" />
+              <width v="90" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <caption>Filter setzen</caption>
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/EVENT/children/register_0/children/aufgaben/children/btn_settefilter/visibleProcess.js</visibleProcess>
+              <tabOrder v="1" />
+              <labelText>Filter</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="35" />
+              <labelAnchor v="0" />
+            </button>
+            <table>
+              <name>tbl_Aufgabe</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/EVENT/children/register_0/children/aufgaben/children/tbl_aufgabe/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/EVENT/children/register_0/children/aufgaben/children/tbl_aufgabe/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="805" />
+              <height v="325" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <utilizeRowFontColor v="true" />
+              <utilizeRowBackgroundColor v="true" />
+              <grantArrangeColumns v="true" />
+              <labelText>Aufgaben</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>I_3</name>
+                  <columnName>I</columnName>
+                  <width v="19" />
+                  <rendererType v="3" />
+                  <rendererDataProcess>%aditoprj%/frame/EVENT/children/register_0/children/aufgaben/children/tbl_aufgabe/columnmetadata/i_3/rendererDataProcess.js</rendererDataProcess>
+                  <rendererCachingType v="3" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>faellig_am</name>
+                  <columnName>fällig am</columnName>
+                  <width v="90" />
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Status_2</name>
+                  <columnName>Status</columnName>
+                  <width v="108" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Betreff_2</name>
+                  <columnName>Betreff</columnName>
+                  <width v="174" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>erstellt_2</name>
+                  <columnName>erstellt</columnName>
+                  <width v="85" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>zustaendig</name>
+                  <columnName>zuständig</columnName>
+                  <width v="155" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Beschreibung_3</name>
+                  <columnName>Beschreibung</columnName>
+                  <width v="150" />
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>Erledigt_setzen</name>
+                  <caption>Erledigt setzen</caption>
+                  <onClick>%aditoprj%/frame/EVENT/children/register_0/children/aufgaben/children/tbl_aufgabe/popup/erledigt_setzen/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/EVENT/children/register_0/children/aufgaben/children/tbl_aufgabe/popup/erledigt_setzen/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>Weitergeben</name>
+                  <caption>Weitergeben</caption>
+                  <onClick>%aditoprj%/frame/EVENT/children/register_0/children/aufgaben/children/tbl_aufgabe/popup/weitergeben/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/EVENT/children/register_0/children/aufgaben/children/tbl_aufgabe/popup/weitergeben/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>Verschieben</name>
+                  <caption>Verschieben</caption>
+                  <onClick>%aditoprj%/frame/EVENT/children/register_0/children/aufgaben/children/tbl_aufgabe/popup/verschieben/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/EVENT/children/register_0/children/aufgaben/children/tbl_aufgabe/popup/verschieben/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+            </table>
+          </children>
+          <valueProcess>%aditoprj%/frame/EVENT/children/register_0/children/aufgaben/valueProcess.js</valueProcess>
+        </registerTab>
+        <registerTab>
+          <name>Dokumente</name>
+          <caption>D&amp;amp;okumente</caption>
+          <children>
+            <documentFolder>
+              <name>Dokumentenmappe</name>
+              <template>%aditoprj%/template/Template_Document/Template_Document.aod</template>
+              <tableName>EVENT</tableName>
+              <columnName>DOCUMENT</columnName>
+              <x v="20" />
+              <y v="25" />
+              <width v="805" />
+              <height v="325" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <tabOrder v="0" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+            </documentFolder>
+          </children>
+          <valueProcess>%aditoprj%/frame/EVENT/children/register_0/children/dokumente/valueProcess.js</valueProcess>
+        </registerTab>
+        <registerTab>
+          <name>Rechte</name>
+          <caption>&amp;amp;Rechte</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/EVENT/children/register_0/children/rechte/visibleProcess.js</visibleProcess>
+          <children>
+            <checkBox>
+              <name>cbx_right_del</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="90" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="3" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_edit</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="70" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="1" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_grant</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="110" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_read</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="50" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="2" />
+            </checkBox>
+            <comboBox>
+              <name>cmb_rights_roles</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/EVENT/children/register_0/children/rechte/children/cmb_rights_roles/contentProcess.js</contentProcess>
+              <searchLinkTableName>TABLEACCESS</searchLinkTableName>
+              <searchLinkColumnName>ROLEID</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/EVENT/children/register_0/children/rechte/children/cmb_rights_roles/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="25" />
+              <width v="40" />
+              <visible v="false" />
+              <tabOrder v="4" />
+              <emptyElementEnabled v="false" />
+              <labelText>Rolle</labelText>
+              <labelVisible v="false" />
+            </comboBox>
+            <label>
+              <name>Label_calculation</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/EVENT/children/register_0/children/rechte/children/label_calculation/valueProcess.js</valueProcess>
+              <x v="655" />
+              <y v="130" />
+              <visible v="false" />
+              <labelVisible v="false" />
+            </label>
+            <table>
+              <name>tbl_rights</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/EVENT/children/register_0/children/rechte/children/tbl_rights/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/EVENT/children/register_0/children/rechte/children/tbl_rights/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/EVENT/children/register_0/children/rechte/children/tbl_rights/rowDelete.js</rowDelete>
+              <grantRowCreateProcess>%aditoprj%/frame/EVENT/children/register_0/children/rechte/children/tbl_rights/grantRowCreateProcess.js</grantRowCreateProcess>
+              <grantRowUpdateProcess>%aditoprj%/frame/EVENT/children/register_0/children/rechte/children/tbl_rights/grantRowUpdateProcess.js</grantRowUpdateProcess>
+              <grantRowDeleteProcess>%aditoprj%/frame/EVENT/children/register_0/children/rechte/children/tbl_rights/grantRowDeleteProcess.js</grantRowDeleteProcess>
+              <separateSavable v="false" />
+              <displayContentProcess>%aditoprj%/frame/EVENT/children/register_0/children/rechte/children/tbl_rights/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/EVENT/children/register_0/children/rechte/children/tbl_rights/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <singleSelection v="true" />
+              <x v="20" />
+              <y v="25" />
+              <width v="630" />
+              <height v="325" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <tabOrder v="0" />
+              <labelText>Rechte auf den angezeigten Datensatz</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Rolle</name>
+                  <columnName>Rolle</columnName>
+                  <width v="205" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/EVENT/children/register_0/children/rechte/children/tbl_rights/columnmetadata/rolle/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Lesen</name>
+                  <columnName>Lesen</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/EVENT/children/register_0/children/rechte/children/tbl_rights/columnmetadata/lesen/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Aendern</name>
+                  <columnName>Ändern</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/EVENT/children/register_0/children/rechte/children/tbl_rights/columnmetadata/aendern/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Loeschen</name>
+                  <columnName>Löschen</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/EVENT/children/register_0/children/rechte/children/tbl_rights/columnmetadata/loeschen/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Rechte_vergeben</name>
+                  <columnName>Rechte vergeben</columnName>
+                  <width v="116" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/EVENT/children/register_0/children/rechte/children/tbl_rights/columnmetadata/rechte_vergeben/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Admin</name>
+          <caption>Admin</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/EVENT/children/register_0/children/admin/visibleProcess.js</visibleProcess>
+          <children>
+            <edit>
+              <name>DATE_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>EVENT</tableName>
+              <columnName>DATE_EDIT</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetChange>%aditoprj%/frame/EVENT/children/register_0/children/admin/children/date_edit/presetChange.js</presetChange>
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <searchableModes>mask</searchableModes>
+              <x v="140" />
+              <y v="165" />
+              <width v="140" />
+              <tabOrder v="4" />
+              <labelText>DATE_EDIT</labelText>
+              <labelDistance v="100" />
+            </edit>
+            <edit>
+              <name>DATE_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>EVENT</tableName>
+              <columnName>DATE_NEW</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetNew>%aditoprj%/frame/EVENT/children/register_0/children/admin/children/date_new/presetNew.js</presetNew>
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <searchableModes>mask</searchableModes>
+              <x v="140" />
+              <y v="140" />
+              <width v="140" />
+              <tabOrder v="3" />
+              <labelText>DATE_NEW</labelText>
+              <labelDistance v="100" />
+            </edit>
+            <edit>
+              <name>EVENTID</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>EVENT</tableName>
+              <columnName>EVENTID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <presetNew>%aditoprj%/frame/EVENT/children/register_0/children/admin/children/eventid/presetNew.js</presetNew>
+              <searchableModes>mask</searchableModes>
+              <x v="140" />
+              <y v="25" />
+              <width v="250" />
+              <tabOrder v="0" />
+              <labelText>EVENTID</labelText>
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>EVENTNUMBER</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>EVENT</tableName>
+              <columnName>EVENTNUMBER</columnName>
+              <dataType v="4" />
+              <precision v="10" />
+              <presetNew>%aditoprj%/frame/EVENT/children/register_0/children/admin/children/eventnumber/presetNew.js</presetNew>
+              <searchableModes>mask</searchableModes>
+              <x v="140" />
+              <y v="105" />
+              <width v="140" />
+              <tabOrder v="2" />
+              <labelText>EVENTNUMBER</labelText>
+              <labelDistance v="100" />
+            </edit>
+            <edit>
+              <name>idcolumn</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>EVENT</tableName>
+              <columnName>EVENTID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <presetNew>%aditoprj%/frame/EVENT/children/register_0/children/admin/children/idcolumn/presetNew.js</presetNew>
+              <searchableModes>mask</searchableModes>
+              <x v="140" />
+              <y v="50" />
+              <width v="250" />
+              <tabOrder v="1" />
+              <labelText>IDCOLUMN</labelText>
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SearchDATE</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="91" />
+              <searchLinkCondition>%aditoprj%/frame/EVENT/children/register_0/children/admin/children/searchdate/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/EVENT/children/register_0/children/admin/children/searchdate/searchFields.js</searchFields>
+              <calendarSupport v="true" />
+              <x v="500" />
+              <y v="25" />
+              <visible v="false" />
+              <tabOrder v="9" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SearchFLOAT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="6" />
+              <inputFormat>0.00</inputFormat>
+              <searchLinkCondition>%aditoprj%/frame/EVENT/children/register_0/children/admin/children/searchfloat/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/EVENT/children/register_0/children/admin/children/searchfloat/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="85" />
+              <visible v="false" />
+              <tabOrder v="10" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SearchINTEGER</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="4" />
+              <inputFormat>0</inputFormat>
+              <searchLinkCondition>%aditoprj%/frame/EVENT/children/register_0/children/admin/children/searchinteger/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/EVENT/children/register_0/children/admin/children/searchinteger/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="65" />
+              <visible v="false" />
+              <tabOrder v="7" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SearchVARCHAR</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <searchLinkCondition>%aditoprj%/frame/EVENT/children/register_0/children/admin/children/searchvarchar/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/EVENT/children/register_0/children/admin/children/searchvarchar/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="45" />
+              <visible v="false" />
+              <tabOrder v="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <comboBox>
+              <name>SerachCombo</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/EVENT/children/register_0/children/admin/children/serachcombo/contentProcess.js</contentProcess>
+              <searchLinkCondition>%aditoprj%/frame/EVENT/children/register_0/children/admin/children/serachcombo/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/EVENT/children/register_0/children/admin/children/serachcombo/searchFields.js</searchFields>
+              <x v="500" />
+              <y v="110" />
+              <visible v="false" />
+              <tabOrder v="8" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>USER_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>EVENT</tableName>
+              <columnName>USER_EDIT</columnName>
+              <dataType v="12" />
+              <precision v="30" />
+              <presetChange>%aditoprj%/frame/EVENT/children/register_0/children/admin/children/user_edit/presetChange.js</presetChange>
+              <searchableModes>mask</searchableModes>
+              <x v="140" />
+              <y v="220" />
+              <width v="140" />
+              <tabOrder v="6" />
+              <labelText>USER_EDIT</labelText>
+              <labelDistance v="100" />
+            </edit>
+            <edit>
+              <name>USER_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>EVENT</tableName>
+              <columnName>USER_NEW</columnName>
+              <dataType v="12" />
+              <precision v="30" />
+              <presetNew>%aditoprj%/frame/EVENT/children/register_0/children/admin/children/user_new/presetNew.js</presetNew>
+              <searchableModes>mask</searchableModes>
+              <x v="140" />
+              <y v="195" />
+              <width v="140" />
+              <tabOrder v="5" />
+              <labelText>USER_NEW</labelText>
+              <labelDistance v="100" />
+            </edit>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+    <lookup>
+      <name>RELATION_ID</name>
+      <template>%aditoprj%/template/Template_Lookup/Template_Lookup.aod</template>
+      <tableName>EVENT</tableName>
+      <columnName>RELATION_ID</columnName>
+      <dataType v="1" />
+      <presetNew>%aditoprj%/frame/EVENT/children/relation_id/presetNew.js</presetNew>
+      <selectClause>%aditoprj%/frame/EVENT/children/relation_id/selectClause.js</selectClause>
+      <fromClause>%aditoprj%/frame/EVENT/children/relation_id/fromClause.js</fromClause>
+      <x v="465" />
+      <y v="70" />
+      <width v="180" />
+      <height v="20" />
+      <horizontalAnchor v="2" />
+      <tabOrder v="10" />
+      <labelText>Verantwortlich</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+      <columnProperties>
+        <lookupColumnMetaData>
+          <name>Nachname</name>
+          <columnName>Nachname</columnName>
+          <searchable v="true" />
+          <width v="175" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>Vorname</name>
+          <columnName>Vorname</columnName>
+          <searchable v="true" />
+          <width v="180" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+      </columnProperties>
+    </lookup>
+    <staticPicture>
+      <name>Statisches_Bild_0</name>
+      <template>%aditoprj%/template/Template_Bild/Template_Bild.aod</template>
+      <imageData>%aditoprj%/frame/EVENT/children/statisches_bild_0/imageData.png</imageData>
+      <stretched v="true" />
+      <x v="215" />
+      <y v="20" />
+      <width v="15" />
+      <height v="15" />
+      <visible v="false" />
+      <visibleProcess>%aditoprj%/frame/EVENT/children/statisches_bild_0/visibleProcess.js</visibleProcess>
+    </staticPicture>
+    <edit>
+      <name>TITLE</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>EVENT</tableName>
+      <columnName>TITLE</columnName>
+      <dataType v="12" />
+      <precision v="100" />
+      <mandatoryInput v="true" />
+      <x v="120" />
+      <y v="45" />
+      <width v="225" />
+      <horizontalAnchor v="3" />
+      <tabOrder v="2" />
+      <labelText>Titel</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+  </children>
+  <tableView>
+    <tableViewProperties>
+      <columnProperty>
+        <name>EVENT_TITLE</name>
+        <tableName>EVENT</tableName>
+        <columnName>TITLE</columnName>
+        <label>Titel</label>
+        <width v="228" />
+      </columnProperty>
+      <columnProperty>
+        <name>EVENT_EVENTNUMBER</name>
+        <tableName>EVENT</tableName>
+        <columnName>EVENTNUMBER</columnName>
+        <label>Kurs-Nr.</label>
+        <width v="81" />
+      </columnProperty>
+      <columnProperty>
+        <name>EVENT_CLOSINGDATE</name>
+        <tableName>EVENT</tableName>
+        <columnName>CLOSINGDATE</columnName>
+        <label>Anmeldeschluss</label>
+        <width v="109" />
+        <dataType v="93" />
+        <outputFormat>dd.MM.yyyy</outputFormat>
+      </columnProperty>
+      <columnProperty>
+        <name>EVENT_MODULE</name>
+        <tableName>EVENT</tableName>
+        <columnName>MODULE</columnName>
+        <label>Modul</label>
+        <width v="207" />
+      </columnProperty>
+      <columnProperty>
+        <name>EVENT_DESCRIPTION</name>
+        <tableName>EVENT</tableName>
+        <columnName>DESCRIPTION</columnName>
+        <label>Beschreibung</label>
+        <width v="173" />
+      </columnProperty>
+    </tableViewProperties>
+  </tableView>
+  <width v="850" />
+  <height v="580" />
+</frame>

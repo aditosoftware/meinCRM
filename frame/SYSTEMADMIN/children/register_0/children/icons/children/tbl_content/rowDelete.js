@@ -1,0 +1,1 @@
+a.sqlDelete("ASYS_ICONS", "ID = '" + a.valueof("$local.idvalue") + "'");

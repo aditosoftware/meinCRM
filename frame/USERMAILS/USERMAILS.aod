@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>USERMAILS</name>
+  <title>E-Mails</title>
+  <icon>%aditoprj%/frame/USERMAILS/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/USERMAILS/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type public
+@status released
+
+@module Standard
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <afterStart>%aditoprj%/frame/USERMAILS/afterStart.js</afterStart>
+  <onClose>%aditoprj%/frame/USERMAILS/onClose.js</onClose>
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <customComponents>
+          <rcCommandButton>
+            <name>Serienmail</name>
+            <title>Serienmail</title>
+            <imageData>%aditoprj%/frame/USERMAILS/ribbon/ribbontasks/task_search/customcomponents/serienmail/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/USERMAILS/ribbon/ribbontasks/task_search/customcomponents/serienmail/onClick.js</onClick>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+        </customComponents>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showSaveCancel v="false" />
+        <showCreate v="true" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <register>
+      <name>Register</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <y v="15" />
+      <width v="850" />
+      <height v="560" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <tabOrder v="0" />
+      <children>
+        <registerTab>
+          <name>Posteingang</name>
+          <caption>&amp;amp;Empfangene E-Mails</caption>
+          <children>
+            <table>
+              <name>INBOX</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/USERMAILS/children/register/children/posteingang/children/inbox/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/USERMAILS/children/register/children/posteingang/children/inbox/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="0" />
+              <x v="20" />
+              <y v="25" />
+              <width v="805" />
+              <height v="485" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <utilizeRowFontColor v="true" />
+              <grantArrangeColumns v="true" />
+              <labelText>Posteingang</labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>A</name>
+                  <columnName>A</columnName>
+                  <width v="22" />
+                  <alignment v="4" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Betreff</name>
+                  <columnName>Betreff</columnName>
+                  <width v="318" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Sender</name>
+                  <columnName>Sender</columnName>
+                  <width v="313" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Datum</name>
+                  <columnName>Datum</columnName>
+                  <width v="66" />
+                  <outputFormat>dd.MM.yyyy HH:mm</outputFormat>
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>Loeschen_2</name>
+                  <caption>Löschen</caption>
+                  <onClick>%aditoprj%/frame/USERMAILS/children/register/children/posteingang/children/inbox/popup/loeschen_2/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/USERMAILS/children/register/children/posteingang/children/inbox/popup/loeschen_2/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>In_Repository</name>
+                  <caption>In Repository</caption>
+                  <onClick>%aditoprj%/frame/USERMAILS/children/register/children/posteingang/children/inbox/popup/in_repository/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/USERMAILS/children/register/children/posteingang/children/inbox/popup/in_repository/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>Gelesen_markieren</name>
+                  <caption>Gelesen markieren</caption>
+                  <onClick>%aditoprj%/frame/USERMAILS/children/register/children/posteingang/children/inbox/popup/gelesen_markieren/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/USERMAILS/children/register/children/posteingang/children/inbox/popup/gelesen_markieren/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Ausgang</name>
+          <caption>Ge&amp;amp;sendete E-Mails</caption>
+          <children>
+            <table>
+              <name>OUTBOX</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/USERMAILS/children/register/children/ausgang/children/outbox/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/USERMAILS/children/register/children/ausgang/children/outbox/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="0" />
+              <x v="20" />
+              <y v="25" />
+              <width v="805" />
+              <height v="485" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <grantArrangeColumns v="true" />
+              <labelText>Posteingang</labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>A_2</name>
+                  <columnName>A</columnName>
+                  <width v="22" />
+                  <alignment v="4" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Betreff_2</name>
+                  <columnName>Betreff</columnName>
+                  <width v="318" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Empfaenger</name>
+                  <columnName>Empfänger</columnName>
+                  <width v="313" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Datum_2</name>
+                  <columnName>Datum</columnName>
+                  <width v="66" />
+                  <outputFormat>dd.MM.yyyy HH:mm</outputFormat>
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>Loeschen_3</name>
+                  <caption>Löschen</caption>
+                  <onClick>%aditoprj%/frame/USERMAILS/children/register/children/ausgang/children/outbox/popup/loeschen_3/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/USERMAILS/children/register/children/ausgang/children/outbox/popup/loeschen_3/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>In_Repository_2</name>
+                  <caption>In Repository</caption>
+                  <onClick>%aditoprj%/frame/USERMAILS/children/register/children/ausgang/children/outbox/popup/in_repository_2/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/USERMAILS/children/register/children/ausgang/children/outbox/popup/in_repository_2/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>DeletedMails</name>
+          <caption>Ge&amp;amp;löschte E-Mails</caption>
+          <children>
+            <table>
+              <name>DELBOX</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/USERMAILS/children/register/children/deletedmails/children/delbox/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/USERMAILS/children/register/children/deletedmails/children/delbox/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="0" />
+              <x v="20" />
+              <y v="25" />
+              <width v="805" />
+              <height v="485" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <grantArrangeColumns v="true" />
+              <labelText>Posteingang</labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>A_3</name>
+                  <columnName>A</columnName>
+                  <width v="22" />
+                  <alignment v="4" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Betreff_3</name>
+                  <columnName>Betreff</columnName>
+                  <width v="318" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Empfaenger_2</name>
+                  <columnName>Empfänger</columnName>
+                  <width v="313" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Datum_3</name>
+                  <columnName>Datum</columnName>
+                  <width v="66" />
+                  <outputFormat>dd.MM.yyyy HH:mm</outputFormat>
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>Loeschen_4</name>
+                  <caption>Löschen</caption>
+                  <onClick>%aditoprj%/frame/USERMAILS/children/register/children/deletedmails/children/delbox/popup/loeschen_4/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/USERMAILS/children/register/children/deletedmails/children/delbox/popup/loeschen_4/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>In_Repository_3</name>
+                  <caption>In Repository</caption>
+                  <onClick>%aditoprj%/frame/USERMAILS/children/register/children/deletedmails/children/delbox/popup/in_repository_3/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/USERMAILS/children/register/children/deletedmails/children/delbox/popup/in_repository_3/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>unlinkedmails</name>
+          <caption>&amp;amp;unverknüpfte E-Mails</caption>
+          <children>
+            <label>
+              <name>Anzahl</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <dataType v="4" />
+              <outputFormat>#0</outputFormat>
+              <alignment v="4" />
+              <x v="55" />
+              <y v="515" />
+              <width v="50" />
+              <verticalAnchor v="5" />
+              <visible v="false" />
+              <labelDistance v="50" />
+              <labelAnchor v="0" />
+            </label>
+            <button>
+              <name>Loeschen</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/USERMAILS/children/register/children/unlinkedmails/children/loeschen/onClick.js</onClick>
+              <x v="770" />
+              <y v="515" />
+              <width v="20" />
+              <height v="20" />
+              <verticalAnchor v="5" />
+              <enabledProcess>%aditoprj%/frame/USERMAILS/children/register/children/unlinkedmails/children/loeschen/enabledProcess.js</enabledProcess>
+              <tabOrder v="3" />
+              <imageData>%aditoprj%/frame/USERMAILS/children/register/children/unlinkedmails/children/loeschen/imageData.png</imageData>
+              <toolTip>E-Mail löschen</toolTip>
+            </button>
+            <lookup>
+              <name>lup_funktion</name>
+              <template>%aditoprj%/template/Template_Lookup/Template_Lookup.aod</template>
+              <alwaysEditable v="true" />
+              <selectClause>%aditoprj%/frame/USERMAILS/children/register/children/unlinkedmails/children/lup_funktion/selectClause.js</selectClause>
+              <fromClause>%aditoprj%/frame/USERMAILS/children/register/children/unlinkedmails/children/lup_funktion/fromClause.js</fromClause>
+              <whereClause>%aditoprj%/frame/USERMAILS/children/register/children/unlinkedmails/children/lup_funktion/whereClause.js</whereClause>
+              <x v="375" />
+              <y v="515" />
+              <width v="360" />
+              <height v="20" />
+              <verticalAnchor v="5" />
+              <enabledProcess>%aditoprj%/frame/USERMAILS/children/register/children/unlinkedmails/children/lup_funktion/enabledProcess.js</enabledProcess>
+              <popupWidth v="450" />
+              <tabOrder v="1" />
+              <labelText>verknüpfen mit</labelText>
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+              <columnProperties>
+                <lookupColumnMetaData>
+                  <name>Vorname</name>
+                  <columnName>Vorname</columnName>
+                  <searchable v="true" />
+                  <width v="79" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Nachname</name>
+                  <columnName>Nachname</columnName>
+                  <searchable v="true" />
+                  <width v="107" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Firma</name>
+                  <columnName>Firma</columnName>
+                  <searchable v="true" />
+                  <width v="218" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+              </columnProperties>
+            </lookup>
+            <table>
+              <name>unlinked_mails</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/USERMAILS/children/register/children/unlinkedmails/children/unlinked_mails/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/USERMAILS/children/register/children/unlinkedmails/children/unlinked_mails/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="770" />
+              <height v="485" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <grantArrangeColumns v="true" />
+              <labelText>unverknüpfte E-Mails</labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Sender_2</name>
+                  <columnName>Sender</columnName>
+                  <width v="182" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Empfaenger_3</name>
+                  <columnName>Empfänger</columnName>
+                  <width v="186" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Betreff_4</name>
+                  <columnName>Betreff</columnName>
+                  <width v="184" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>gesendet</name>
+                  <columnName>gesendet</columnName>
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>empfangen</name>
+                  <columnName>empfangen</columnName>
+                  <width v="85" />
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy</outputFormat>
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>in_Clipboard_uebernehmen</name>
+                  <caption>in Clipboard übernehmen</caption>
+                  <onClick>%aditoprj%/frame/USERMAILS/children/register/children/unlinkedmails/children/unlinked_mails/popup/in_clipboard_uebernehmen/onClick.js</onClick>
+                  <enabledProcess></enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+            </table>
+            <comboBox>
+              <name>user</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <valueProcess>%aditoprj%/frame/USERMAILS/children/register/children/unlinkedmails/children/user/valueProcess.js</valueProcess>
+              <contentProcess>%aditoprj%/frame/USERMAILS/children/register/children/unlinkedmails/children/user/contentProcess.js</contentProcess>
+              <searchableModes>none</searchableModes>
+              <x v="20" />
+              <y v="515" />
+              <width v="240" />
+              <verticalAnchor v="5" />
+              <visible v="false" />
+              <tabOrder v="0" />
+              <staticContent />
+              <emptyElementEnabled v="false" />
+            </comboBox>
+            <button>
+              <name>Verknuepfen</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/USERMAILS/children/register/children/unlinkedmails/children/verknuepfen/onClick.js</onClick>
+              <x v="745" />
+              <y v="515" />
+              <width v="20" />
+              <height v="20" />
+              <verticalAnchor v="5" />
+              <enabledProcess>%aditoprj%/frame/USERMAILS/children/register/children/unlinkedmails/children/verknuepfen/enabledProcess.js</enabledProcess>
+              <tabOrder v="2" />
+              <imageData>%aditoprj%/frame/USERMAILS/children/register/children/unlinkedmails/children/verknuepfen/imageData.png</imageData>
+              <toolTip>E-Mail verknüpfen</toolTip>
+            </button>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Admin</name>
+          <caption>Admin</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/USERMAILS/children/register/children/admin/visibleProcess.js</visibleProcess>
+        </registerTab>
+      </children>
+    </register>
+  </children>
+  <tableView />
+  <width v="850" />
+  <height v="580" />
+</frame>

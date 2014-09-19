@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Historien" pageWidth="555" pageHeight="572" orientation="Landscape" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="4066531c-fd6e-4cc9-a763-20a1023e8349">
+	<property name="ireport.zoom" value="1.2100000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="ENTRYDATE" class="java.lang.String"/>
+	<field name="MEDIUM" class="java.lang.String"/>
+	<field name="LOGIN" class="java.lang.String"/>
+	<field name="INFO" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="17" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="1" width="100" height="15" uuid="fc8f2d06-0eb7-4fd0-a91c-cda7a85dd06e"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ENTRYDATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="103" y="1" width="100" height="15" uuid="d76859d9-0766-497e-9187-33ce879dc4f3"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MEDIUM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="1" width="91" height="15" uuid="df383fa6-a716-4f3c-ac97-d2beb7c329ac"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LOGIN}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="345" y="1" width="116" height="15" uuid="dd8ad103-b2e2-4fad-afea-81854bf12e47"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{INFO}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="4">
+			<line>
+				<reportElement x="0" y="2" width="555" height="1" uuid="f895ff04-ead0-48c3-85c1-5f6772d79ab3"/>
+				<graphicElement>
+					<pen lineWidth="0.75" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

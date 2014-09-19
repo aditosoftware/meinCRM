@@ -1,0 +1,1 @@
+a.rs(a.translate("Anhänge") + " (" + a.valueof("$comp.attachments") + ")");

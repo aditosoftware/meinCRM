@@ -1,0 +1,1 @@
+if ( a.valueof("$image.isChanged") != -1 )  a.imagevar("$image.isChanged", 1);

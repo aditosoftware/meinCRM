@@ -1,0 +1,1 @@
+a.sqlDelete("QUESTIONFLOW", " QUESTIONFLOWID = '" + a.valueof("$local.idvalue") + "'");

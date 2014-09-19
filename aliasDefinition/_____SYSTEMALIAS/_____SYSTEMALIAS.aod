@@ -1,0 +1,1638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aliasDefinition xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.0" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <name>_____SYSTEMALIAS</name>
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <datasourceType v="0" />
+  <aliasDefinitionSub>
+    <aliasDefDb>
+      <auditActive v="true" />
+      <syncActive v="false" />
+      <tableInfo>
+        <aliasDefDbTable>
+          <name>ASYS_AUDIT</name>
+          <tableName>ASYS_AUDIT</tableName>
+          <idColumn></idColumn>
+          <idGeneratorType v="1" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>DISTLIST</name>
+          <tableName>DISTLIST</tableName>
+          <idColumn>DISTLISTID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>RPT_VACATION</name>
+          <tableName>RPT_VACATION</tableName>
+          <idColumn></idColumn>
+          <idGeneratorType v="1" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>ATTROBJECT</name>
+          <tableName>ATTROBJECT</tableName>
+          <idColumn>ATTROBJECTID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="1" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>STOCK</name>
+          <tableName>STOCK</tableName>
+          <idColumn>STOCKID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>SUPPORTEVALUATION</name>
+          <tableName>SUPPORTEVALUATION</tableName>
+          <idColumn>SUPPORTEVALUATIONID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_SYNCCONTACT</name>
+          <tableName>AOSYS_SYNCCONTACT</tableName>
+          <idColumn>AOSYS_SYNCCONTACTID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>COUNTRYINFO</name>
+          <tableName>COUNTRYINFO</tableName>
+          <idColumn>ISO2</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>SERVICEORDER</name>
+          <tableName>SERVICEORDER</tableName>
+          <idColumn>SERVICEORDERID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>ASYS_CALENDAR</name>
+          <tableName>ASYS_CALENDAR</tableName>
+          <idColumn>ENTRYUID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>EQUIPMENTINVENTORY</name>
+          <tableName>EQUIPMENTINVENTORY</tableName>
+          <idColumn>EQUIPMENTINVENTORYID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>LEAD</name>
+          <tableName>LEAD</tableName>
+          <idColumn>LEADID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>SUPPORTHISTORY</name>
+          <tableName>SUPPORTHISTORY</tableName>
+          <idColumn>SUPPORTHISTORYID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>PLANNING</name>
+          <tableName>PLANNING</tableName>
+          <idColumn>PLANNINGID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>SERVICEITEM</name>
+          <tableName>SERVICEITEM</tableName>
+          <idColumn>SERVICEITEMID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>HISTORY</name>
+          <tableName>HISTORY</tableName>
+          <idColumn>HISTORYID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>MACHINE</name>
+          <tableName>MACHINE</tableName>
+          <idColumn>MACHINEID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>PROJECTMEMBER</name>
+          <tableName>PROJECTMEMBER</tableName>
+          <idColumn>PROJECTMEMBERID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>CTILOG</name>
+          <tableName>CTILOG</tableName>
+          <idColumn>CTILOGID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>CAMPAIGNCOST</name>
+          <tableName>CAMPAIGNCOST</tableName>
+          <idColumn>CAMPAIGNCOSTID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>CAMPAIGNLOG</name>
+          <tableName>CAMPAIGNLOG</tableName>
+          <idColumn></idColumn>
+          <idGeneratorType v="1" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>RECEIPT</name>
+          <tableName>RECEIPT</tableName>
+          <idColumn>RECEIPTID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>COMMRESTRICTION</name>
+          <tableName>COMMRESTRICTION</tableName>
+          <idColumn>COMMRESTRICTIONID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>OBJECTRELATION</name>
+          <tableName>OBJECTRELATION</tableName>
+          <idColumn>OBJECTRELATIONID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>CONTRACT</name>
+          <tableName>CONTRACT</tableName>
+          <idColumn>CONTRACTID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="2" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>TEXTBLOCK</name>
+          <tableName>TEXTBLOCK</tableName>
+          <idColumn>TEXTBLOCKID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>CAMPAIGNSTEP</name>
+          <tableName>CAMPAIGNSTEP</tableName>
+          <idColumn>CAMPAIGNSTEPID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>ASYS_SYSTEM</name>
+          <tableName>ASYS_SYSTEM</tableName>
+          <idColumn>ID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>BULKMAILRCPT</name>
+          <tableName>BULKMAILRCPT</tableName>
+          <idColumn>BULKMAILRCPTID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>RPT_PERS</name>
+          <tableName>RPT_PERS</tableName>
+          <idColumn></idColumn>
+          <idGeneratorType v="1" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>ASYS_BINARIES</name>
+          <tableName>ASYS_BINARIES</tableName>
+          <idColumn>ID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>KEYWORD</name>
+          <tableName>KEYWORD</tableName>
+          <idColumn>KEYWORDID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>TASKLOG</name>
+          <tableName>TASKLOG</tableName>
+          <idColumn>TASKLOGID</idColumn>
+          <idGeneratorType v="1" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>ORDERITEM</name>
+          <tableName>ORDERITEM</tableName>
+          <idColumn>ORDERITEMID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>DAYFEE</name>
+          <tableName>DAYFEE</tableName>
+          <idColumn>DAYFEEID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>HISTORYLINK</name>
+          <tableName>HISTORYLINK</tableName>
+          <idColumn>HISTORYLINKID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>OFFER</name>
+          <tableName>OFFER</tableName>
+          <idColumn>OFFERID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>ATTRLINK</name>
+          <tableName>ATTRLINK</tableName>
+          <idColumn>ATTRLINKID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="1" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>PROPERTY</name>
+          <tableName>PROPERTY</tableName>
+          <idColumn>PROPERTYID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>QUESTIONFLOW</name>
+          <tableName>QUESTIONFLOW</tableName>
+          <idColumn>QUESTIONFLOWID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>COMPLAINT</name>
+          <tableName>COMPLAINT</tableName>
+          <idColumn>COMPLAINTID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="1" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>ASYS_ICONS</name>
+          <tableName>ASYS_ICONS</tableName>
+          <idColumn>ID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_INDEXREPOSITORY</name>
+          <tableName>AOSYS_INDEXREPOSITORY</tableName>
+          <idColumn>AOSYS_INDEXREPOSITORYID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_WORKFLOWTASK</name>
+          <tableName>AOSYS_WORKFLOWTASK</tableName>
+          <idColumn></idColumn>
+          <idGeneratorType v="1" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>OFFERITEM</name>
+          <tableName>OFFERITEM</tableName>
+          <idColumn>OFFERITEMID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>EVENTPARTICIPANT</name>
+          <tableName>EVENTPARTICIPANT</tableName>
+          <idColumn>EVENTPARTICIPANTID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_SQLREPOSITORY</name>
+          <tableName>AOSYS_SQLREPOSITORY</tableName>
+          <idColumn></idColumn>
+          <idGeneratorType v="1" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_SYNCDATA</name>
+          <tableName>AOSYS_SYNCDATA</tableName>
+          <idColumn>AOSYS_SYNCDATAID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>QUESTIONNAIRE</name>
+          <tableName>QUESTIONNAIRE</tableName>
+          <idColumn>QUESTIONNAIREID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_CALENDARSYNCERROR</name>
+          <tableName>AOSYS_CALENDARSYNCERROR</tableName>
+          <idColumn></idColumn>
+          <idGeneratorType v="1" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_REPORTADMINISTRATION</name>
+          <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+          <idColumn>AOSYS_REPORTADMINISTRATIONID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>SALUTATION</name>
+          <tableName>SALUTATION</tableName>
+          <idColumn>SALUTATIONID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>RPT_ROUTE</name>
+          <tableName>RPT_ROUTE</tableName>
+          <idColumn></idColumn>
+          <idGeneratorType v="1" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>PRODUCTPRICE</name>
+          <tableName>PRODUCTPRICE</tableName>
+          <idColumn>PRODUCTPRICEID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>THEME</name>
+          <tableName>THEME</tableName>
+          <idColumn>THEMEID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>ERRORLOG</name>
+          <tableName>ERRORLOG</tableName>
+          <idColumn>ERRORLOGID</idColumn>
+          <idGeneratorType v="1" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>CAMPAIGNPARTICIPANT</name>
+          <tableName>CAMPAIGNPARTICIPANT</tableName>
+          <idColumn>CAMPAIGNPARTICIPANTID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_TIMER</name>
+          <tableName>AOSYS_TIMER</tableName>
+          <idColumn>TIMERID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>ASYS_TIMER</name>
+          <tableName>ASYS_TIMER</tableName>
+          <idColumn>TIMERID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>EVENTCOST</name>
+          <tableName>EVENTCOST</tableName>
+          <idColumn>EVENTCOSTID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_MAILCACHE</name>
+          <tableName>AOSYS_MAILCACHE</tableName>
+          <idColumn></idColumn>
+          <idGeneratorType v="1" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>CUST_EQUIPMENT</name>
+          <tableName>CUST_EQUIPMENT</tableName>
+          <idColumn>CUST_EQUIPMENTID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>BULKMAILDEF</name>
+          <tableName>BULKMAILDEF</tableName>
+          <idColumn>BULKMAILDEFID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_WORKFLOW</name>
+          <tableName>AOSYS_WORKFLOW</tableName>
+          <idColumn>WORKFLOWID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_SYNCLOG</name>
+          <tableName>AOSYS_SYNCLOG</tableName>
+          <idColumn></idColumn>
+          <idGeneratorType v="1" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>SELECTION</name>
+          <tableName>SELECTION</tableName>
+          <idColumn>SELECTIONID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>ORG</name>
+          <tableName>ORG</tableName>
+          <idColumn>ORGID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>SALESPROJECT</name>
+          <tableName>SALESPROJECT</tableName>
+          <idColumn>SALESPROJECTID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>QUESTIONLOG</name>
+          <tableName>QUESTIONLOG</tableName>
+          <idColumn>QUESTIONLOGID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>DOCUMENT</name>
+          <tableName>DOCUMENT</tableName>
+          <idColumn>DOCUMENTID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="2" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_LOGHIST</name>
+          <tableName>AOSYS_LOGHIST</tableName>
+          <idColumn></idColumn>
+          <idGeneratorType v="1" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>ASYS_SEQUENCES</name>
+          <tableName>ASYS_SEQUENCES</tableName>
+          <idColumn>ID_TABLE</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>PRODUCT</name>
+          <tableName>PRODUCT</tableName>
+          <idColumn>PRODUCTID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_SOUNDEXCONFIG</name>
+          <tableName>AOSYS_SOUNDEXCONFIG</tableName>
+          <idColumn>AOSYS_SOUNDEXCONFIGID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>EMPLOYEE</name>
+          <tableName>EMPLOYEE</tableName>
+          <idColumn>EMPLOYEEID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>RPT_TASKINREPORT</name>
+          <tableName>RPT_TASKINREPORT</tableName>
+          <idColumn></idColumn>
+          <idGeneratorType v="1" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_SYNCICALSTATE</name>
+          <tableName>AOSYS_SYNCICALSTATE</tableName>
+          <idColumn></idColumn>
+          <idGeneratorType v="1" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>ATTR</name>
+          <tableName>ATTR</tableName>
+          <idColumn>ATTRID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="1" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>IMPORTDEV</name>
+          <tableName>IMPORTDEV</tableName>
+          <idColumn>IMPORTDEVID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>RPT_QUESTIONNAIRE</name>
+          <tableName>RPT_QUESTIONNAIRE</tableName>
+          <idColumn></idColumn>
+          <idGeneratorType v="1" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>ASYS_POPREPOSITORY</name>
+          <tableName>ASYS_POPREPOSITORY</tableName>
+          <idColumn>ID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>TABLEACCESS</name>
+          <tableName>TABLEACCESS</tableName>
+          <idColumn>TABLEACCESSID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_CONFIGURATION</name>
+          <tableName>AOSYS_CONFIGURATION</tableName>
+          <idColumn>OPTIONID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>CAMPAIGN</name>
+          <tableName>CAMPAIGN</tableName>
+          <idColumn>CAMPAIGNID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_HOLIDAYS</name>
+          <tableName>AOSYS_HOLIDAYS</tableName>
+          <idColumn>AOSYS_HOLIDAYSID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>RESSOURCE</name>
+          <tableName>RESSOURCE</tableName>
+          <idColumn>RESSOURCEID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>RELATION</name>
+          <tableName>RELATION</tableName>
+          <idColumn>RELATIONID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="1" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_COLUMNREPOSITORY</name>
+          <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+          <idColumn>COLUMNID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>EXPENSES</name>
+          <tableName>EXPENSES</tableName>
+          <idColumn>EXPENSESID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>UNLINKEDMAIL</name>
+          <tableName>UNLINKEDMAIL</tableName>
+          <idColumn>MAILID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>COMM</name>
+          <tableName>COMM</tableName>
+          <idColumn>COMMID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="1" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_TABLEREPOSITORY</name>
+          <tableName>AOSYS_TABLEREPOSITORY</tableName>
+          <idColumn>TABLEID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>ASYS_MAILREPOSIT</name>
+          <tableName>ASYS_MAILREPOSIT</tableName>
+          <idColumn>ID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>ASYS_CALENDAR_AU</name>
+          <tableName>ASYS_CALENDAR_AU</tableName>
+          <idColumn>ID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>EVENT</name>
+          <tableName>EVENT</tableName>
+          <idColumn>EVENTID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>SALESORDER</name>
+          <tableName>SALESORDER</tableName>
+          <idColumn>SALESORDERID</idColumn>
+          <idGeneratorType v="1" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_VACATION</name>
+          <tableName>AOSYS_VACATION</tableName>
+          <idColumn>AOSYS_VACATIONID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>QUESTIONNAIRELOG</name>
+          <tableName>QUESTIONNAIRELOG</tableName>
+          <idColumn>QUESTIONNAIRELOGID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_SYNCLOGGING</name>
+          <tableName>AOSYS_SYNCLOGGING</tableName>
+          <idColumn>AOSYS_SYNCLOGGINGID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>IMPORTFIELDDEV</name>
+          <tableName>IMPORTFIELDDEV</tableName>
+          <idColumn></idColumn>
+          <idGeneratorType v="1" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_LOCATION</name>
+          <tableName>AOSYS_LOCATION</tableName>
+          <idColumn>LOCATIONID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>QUESTION</name>
+          <tableName>QUESTION</tableName>
+          <idColumn>QUESTIONID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>ADDRESS</name>
+          <tableName>ADDRESS</tableName>
+          <idColumn>ADDRESSID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="1" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>ASYS_CALENDARLINK</name>
+          <tableName>ASYS_CALENDARLINK</tableName>
+          <idColumn>ID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>ABSENCE</name>
+          <tableName>ABSENCE</tableName>
+          <idColumn>ABSENCEID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>HISTORY_THEME</name>
+          <tableName>HISTORY_THEME</tableName>
+          <idColumn>HISTORY_THEMEID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>SUPPORTTICKET</name>
+          <tableName>SUPPORTTICKET</tableName>
+          <idColumn>SUPPORTTICKETID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>IBAUADR</name>
+          <tableName>IBAUADR</tableName>
+          <idColumn>IBAUADRID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>PROPINV</name>
+          <tableName>PROPINV</tableName>
+          <idColumn>PROPINVID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>ADVERTISINGSHIPMENT</name>
+          <tableName>ADVERTISINGSHIPMENT</tableName>
+          <idColumn>ADVERTISINGSHIPMENTID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>PROJECTCOMPETITION</name>
+          <tableName>PROJECTCOMPETITION</tableName>
+          <idColumn>PROJECTCOMPETITIONID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>PERS</name>
+          <tableName>PERS</tableName>
+          <idColumn>PERSID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="2" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>DISTLISTMEMBER</name>
+          <tableName>DISTLISTMEMBER</tableName>
+          <idColumn>DISTLISTMEMBERID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>BANKACCOUNT</name>
+          <tableName>BANKACCOUNT</tableName>
+          <idColumn>BANKACCOUNTID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>AOSYS_WORKFLOWINSTANCE</name>
+          <tableName>AOSYS_WORKFLOWINSTANCE</tableName>
+          <idColumn></idColumn>
+          <idGeneratorType v="1" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+        <aliasDefDbTable>
+          <name>PROD2PROD</name>
+          <tableName>PROD2PROD</tableName>
+          <idColumn>PROD2PRODID</idColumn>
+          <idGeneratorType v="0" />
+          <idGeneratorInterval v="1" />
+          <auditSyncConfig>
+            <auditMode v="0" />
+            <syncActive v="true" />
+            <syncComplete v="true" />
+            <syncDirection v="1" />
+            <syncIds></syncIds>
+          </auditSyncConfig>
+        </aliasDefDbTable>
+      </tableInfo>
+    </aliasDefDb>
+  </aliasDefinitionSub>
+</aliasDefinition>

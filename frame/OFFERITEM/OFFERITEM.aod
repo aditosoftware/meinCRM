@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>OFFERITEM</name>
+  <title>Angebotsposten</title>
+  <icon>%aditoprj%/frame/OFFERITEM/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/OFFERITEM/iconInactive.png</iconInactive>
+  <description></description>
+  <alias>AO_DATEN</alias>
+  <linkInformation>
+    <linkInformation>
+      <name>9a1e5716-649d-48b2-b598-ada8643039c2</name>
+      <tableName>OFFERITEM</tableName>
+      <primaryKey>OFFERITEMID</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+  </linkInformation>
+  <idStrategy v="4" />
+  <beforeStart>%aditoprj%/frame/OFFERITEM/beforeStart.js</beforeStart>
+  <afterStart>%aditoprj%/frame/OFFERITEM/afterStart.js</afterStart>
+  <afterSave>%aditoprj%/frame/OFFERITEM/afterSave.js</afterSave>
+  <afterDelete>%aditoprj%/frame/OFFERITEM/afterDelete.js</afterDelete>
+  <afterCancel>%aditoprj%/frame/OFFERITEM/afterCancel.js</afterCancel>
+  <currentContentProcess>%aditoprj%/frame/OFFERITEM/currentContentProcess.js</currentContentProcess>
+  <grantCreate v="true" />
+  <grantCreateProcess>%aditoprj%/frame/OFFERITEM/grantCreateProcess.js</grantCreateProcess>
+  <grantUpdateProcess>%aditoprj%/frame/OFFERITEM/grantUpdateProcess.js</grantUpdateProcess>
+  <grantDeleteProcess>%aditoprj%/frame/OFFERITEM/grantDeleteProcess.js</grantDeleteProcess>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <databaseColumns>
+    <column>
+      <name>OFFERITEM_OFFERITEMID</name>
+      <tableName>OFFERITEM</tableName>
+      <columnName>OFFERITEMID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/OFFERITEM/databasecolumns/offeritem_offeritemid/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>OFFERITEM_PRODUCT_ID</name>
+      <tableName>OFFERITEM</tableName>
+      <columnName>PRODUCT_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+    </column>
+    <column>
+      <name>OFFERITEM_DISCOUNT</name>
+      <tableName>OFFERITEM</tableName>
+      <columnName>DISCOUNT</columnName>
+      <dataTypeName>NUMERIC</dataTypeName>
+      <dataType v="2" />
+      <precision v="14" />
+      <scale>2</scale>
+      <presetNew>%aditoprj%/frame/OFFERITEM/databasecolumns/offeritem_discount/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>OFFERITEM_PRICE</name>
+      <tableName>OFFERITEM</tableName>
+      <columnName>PRICE</columnName>
+      <dataTypeName>NUMERIC</dataTypeName>
+      <dataType v="2" />
+      <precision v="14" />
+      <scale>2</scale>
+    </column>
+    <column>
+      <name>OFFERITEM_QUANTITY</name>
+      <tableName>OFFERITEM</tableName>
+      <columnName>QUANTITY</columnName>
+      <dataTypeName>NUMERIC</dataTypeName>
+      <dataType v="2" />
+      <precision v="14" />
+      <scale>2</scale>
+      <presetNew>%aditoprj%/frame/OFFERITEM/databasecolumns/offeritem_quantity/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>OFFERITEM_DESCRIPTION</name>
+      <tableName>OFFERITEM</tableName>
+      <columnName>DESCRIPTION</columnName>
+      <dataTypeName>CLOB</dataTypeName>
+      <dataType v="2005" />
+      <precision v="2147483647" />
+      <scale>0</scale>
+      <valueProcess>%aditoprj%/frame/OFFERITEM/databasecolumns/offeritem_description/valueProcess.js</valueProcess>
+    </column>
+    <column>
+      <name>OFFERITEM_ITEMNAME</name>
+      <tableName>OFFERITEM</tableName>
+      <columnName>ITEMNAME</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="250" />
+      <valueProcess>%aditoprj%/frame/OFFERITEM/databasecolumns/offeritem_itemname/valueProcess.js</valueProcess>
+    </column>
+    <column>
+      <name>OFFERITEM_ITEMPOSITION</name>
+      <tableName>OFFERITEM</tableName>
+      <columnName>ITEMPOSITION</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/OFFERITEM/databasecolumns/offeritem_itemposition/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>OFFERITEM_USER_NEW</name>
+      <tableName>OFFERITEM</tableName>
+      <columnName>USER_NEW</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+      <presetNew>%aditoprj%/frame/OFFERITEM/databasecolumns/offeritem_user_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>OFFERITEM_DATE_NEW</name>
+      <tableName>OFFERITEM</tableName>
+      <columnName>DATE_NEW</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+      <presetNew>%aditoprj%/frame/OFFERITEM/databasecolumns/offeritem_date_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>OFFERITEM_USER_EDIT</name>
+      <tableName>OFFERITEM</tableName>
+      <columnName>USER_EDIT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+      <presetChange>%aditoprj%/frame/OFFERITEM/databasecolumns/offeritem_user_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>OFFERITEM_DATE_EDIT</name>
+      <tableName>OFFERITEM</tableName>
+      <columnName>DATE_EDIT</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+      <presetChange>%aditoprj%/frame/OFFERITEM/databasecolumns/offeritem_date_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>OFFERITEM_OFFER_ID</name>
+      <tableName>OFFERITEM</tableName>
+      <columnName>OFFER_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/OFFERITEM/databasecolumns/offeritem_offer_id/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>OFFERITEM_OPTIONAL</name>
+      <tableName>OFFERITEM</tableName>
+      <columnName>OPTIONAL</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="1" />
+      <presetNew>%aditoprj%/frame/OFFERITEM/databasecolumns/offeritem_optional/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>OFFERITEM_ITEMSORT</name>
+      <tableName>OFFERITEM</tableName>
+      <columnName>ITEMSORT</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+      <valueProcess></valueProcess>
+    </column>
+    <column>
+      <name>OFFERITEM_VAT</name>
+      <tableName>OFFERITEM</tableName>
+      <columnName>VAT</columnName>
+      <dataTypeName>NUMERIC</dataTypeName>
+      <dataType v="2" />
+      <precision v="14" />
+      <scale>2</scale>
+    </column>
+    <column>
+      <name>OFFERITEM_UNIT</name>
+      <tableName>OFFERITEM</tableName>
+      <columnName>UNIT</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+      <valueProcess></valueProcess>
+      <presetNew>%aditoprj%/frame/OFFERITEM/databasecolumns/offeritem_unit/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>OFFERITEM_GROUPCODEID</name>
+      <tableName>OFFERITEM</tableName>
+      <columnName>GROUPCODEID</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+      <scale>0</scale>
+    </column>
+  </databaseColumns>
+  <children>
+    <edit>
+      <name>Pricelist</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <searchableModes>none</searchableModes>
+      <readOnly v="true" />
+      <mandatoryInput v="false" />
+      <x v="480" />
+      <y v="70" />
+      <width v="280" />
+      <tabOrder v="-1" />
+      <labelText>Preisliste</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>UNITTEXT</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <precision v="-1" />
+      <valueProcess>%aditoprj%/frame/OFFERITEM/children/unittext/valueProcess.js</valueProcess>
+      <presetNew></presetNew>
+      <presetChange></presetChange>
+      <x v="265" />
+      <y v="70" />
+      <width v="90" />
+      <labelText>Einheit</labelText>
+      <labelDistance v="60" />
+    </edit>
+    <edit>
+      <name>Warengruppe</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <searchableModes>none</searchableModes>
+      <readOnly v="true" />
+      <mandatoryInput v="false" />
+      <x v="480" />
+      <y v="45" />
+      <width v="280" />
+      <tabOrder v="-1" />
+      <labelText>Warengruppe</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>ITEMPOS</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>OFFERITEM</tableName>
+      <columnName>ITEMPOSITION</columnName>
+      <dataType v="12" />
+      <precision v="10" />
+      <valueProcess>%aditoprj%/frame/OFFERITEM/children/itempos/valueProcess.js</valueProcess>
+      <readOnly v="true" />
+      <mandatoryInput v="true" />
+      <x v="105" />
+      <y v="20" />
+      <width v="80" />
+      <labelText>Position</labelText>
+      <labelDistance v="85" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>currency</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <valueProcess>%aditoprj%/frame/OFFERITEM/children/currency/valueProcess.js</valueProcess>
+      <searchableModes>none</searchableModes>
+      <readOnly v="true" />
+      <mandatoryInput v="false" />
+      <x v="265" />
+      <y v="95" />
+      <width v="90" />
+      <tabOrder v="-1" />
+      <labelText>Währung</labelText>
+      <labelDistance v="60" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>DISCOUNT</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>OFFERITEM</tableName>
+      <columnName>DISCOUNT</columnName>
+      <dataType v="2" />
+      <precision v="14" />
+      <presetNew>%aditoprj%/frame/OFFERITEM/children/discount/presetNew.js</presetNew>
+      <outputFormat>#,##0.00</outputFormat>
+      <inputFormat>#,##0.00</inputFormat>
+      <onValidation>%aditoprj%/frame/OFFERITEM/children/discount/onValidation.js</onValidation>
+      <alignment v="4" />
+      <x v="105" />
+      <y v="120" />
+      <width v="70" />
+      <tabOrder v="3" />
+      <labelText>Rabatt</labelText>
+      <labelDistance v="85" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>ITEMSUM</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <dataType v="6" />
+      <valueProcess>%aditoprj%/frame/OFFERITEM/children/itemsum/valueProcess.js</valueProcess>
+      <outputFormat>#,##0.00</outputFormat>
+      <searchableModes>none</searchableModes>
+      <readOnly v="true" />
+      <alignment v="4" />
+      <x v="265" />
+      <y v="145" />
+      <width v="90" />
+      <tabOrder v="-1" />
+      <labelText>Gesamt</labelText>
+      <labelDistance v="60" />
+      <labelAnchor v="0" />
+    </edit>
+    <label>
+      <name>lblCreatedEdited</name>
+      <valueProcess>%aditoprj%/frame/OFFERITEM/children/lblcreatededited/valueProcess.js</valueProcess>
+      <x v="20" />
+      <y v="565" />
+      <width v="390" />
+      <height v="15" />
+      <font name="Verdana" style="0" size="10" />
+      <backgroundColor v="0x00000000" />
+      <labelFont name="" style="0" size="11" />
+      <labelAnchor v="0" />
+    </label>
+    <checkBox>
+      <name>OPTIONAL</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <tableName>OFFERITEM</tableName>
+      <columnName>OPTIONAL</columnName>
+      <dataType v="1" />
+      <presetNew>%aditoprj%/frame/OFFERITEM/children/optional/presetNew.js</presetNew>
+      <valueTrue>1</valueTrue>
+      <valueFalse>0</valueFalse>
+      <x v="480" />
+      <y v="25" />
+      <height v="15" />
+      <labelText>optional</labelText>
+      <labelOrientation v="2" />
+      <labelDistance v="100" />
+      <tabOrder v="4" />
+    </checkBox>
+    <edit>
+      <name>PRICE</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>OFFERITEM</tableName>
+      <columnName>PRICE</columnName>
+      <dataType v="2" />
+      <precision v="14" />
+      <outputFormat>#,##0.00</outputFormat>
+      <inputFormat>#,##0.00</inputFormat>
+      <alignment v="4" />
+      <x v="105" />
+      <y v="95" />
+      <width v="70" />
+      <tabOrder v="2" />
+      <labelText>Einzelpreis</labelText>
+      <labelDistance v="85" />
+      <labelAnchor v="0" />
+    </edit>
+    <lookup>
+      <name>PRODUCT_ID</name>
+      <template>%aditoprj%/template/Template_Lookup/Template_Lookup.aod</template>
+      <tableName>OFFERITEM</tableName>
+      <columnName>PRODUCT_ID</columnName>
+      <dataType v="1" />
+      <onValidation>%aditoprj%/frame/OFFERITEM/children/product_id/onValidation.js</onValidation>
+      <selectClause>%aditoprj%/frame/OFFERITEM/children/product_id/selectClause.js</selectClause>
+      <fromClause>%aditoprj%/frame/OFFERITEM/children/product_id/fromClause.js</fromClause>
+      <whereClause>%aditoprj%/frame/OFFERITEM/children/product_id/whereClause.js</whereClause>
+      <x v="105" />
+      <y v="45" />
+      <width v="250" />
+      <height v="20" />
+      <popupWidth v="400" />
+      <popupHeight v="500" />
+      <utilizeRowBackgroundColor v="false" />
+      <utilizeRowFontColor v="false" />
+      <tabOrder v="0" />
+      <labelText>Artikel</labelText>
+      <labelDistance v="85" />
+      <labelAnchor v="0" />
+      <columnProperties>
+        <lookupColumnMetaData>
+          <name>Warengruppe</name>
+          <columnName>Warengruppe</columnName>
+          <width v="100" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>ArtikelNr</name>
+          <columnName>Artikel-Nr.</columnName>
+          <searchable v="true" />
+          <width v="100" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>Artikelname</name>
+          <columnName>Artikelname</columnName>
+          <searchable v="true" />
+          <width v="100" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+      </columnProperties>
+    </lookup>
+    <edit>
+      <name>QUANTITY</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>OFFERITEM</tableName>
+      <columnName>QUANTITY</columnName>
+      <dataType v="2" />
+      <precision v="14" />
+      <presetNew>%aditoprj%/frame/OFFERITEM/children/quantity/presetNew.js</presetNew>
+      <onValidation>%aditoprj%/frame/OFFERITEM/children/quantity/onValidation.js</onValidation>
+      <mandatoryInput v="true" />
+      <alignment v="4" />
+      <x v="105" />
+      <y v="70" />
+      <width v="70" />
+      <tabOrder v="1" />
+      <labelText>Anzahl</labelText>
+      <labelDistance v="85" />
+      <labelAnchor v="0" />
+    </edit>
+    <register>
+      <name>Register_0</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <y v="165" />
+      <width v="850" />
+      <height v="400" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <tabOrder v="5" />
+      <children>
+        <registerTab>
+          <name>Beschreibung</name>
+          <caption>Beschreibung</caption>
+          <children>
+            <memo>
+              <name>DESCRIPTION</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <tableName>OFFERITEM</tableName>
+              <columnName>DESCRIPTION</columnName>
+              <dataType v="2005" />
+              <precision v="-1" />
+              <valueProcess>%aditoprj%/frame/OFFERITEM/children/register_0/children/beschreibung/children/description/valueProcess.js</valueProcess>
+              <x v="100" />
+              <y v="60" />
+              <width v="660" />
+              <height v="285" />
+              <tabOrder v="1" />
+              <labelText>Beschreibung</labelText>
+              <labelDistance v="85" />
+            </memo>
+            <edit>
+              <name>ITEMNAME</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>OFFERITEM</tableName>
+              <columnName>ITEMNAME</columnName>
+              <dataType v="12" />
+              <precision v="250" />
+              <valueProcess>%aditoprj%/frame/OFFERITEM/children/register_0/children/beschreibung/children/itemname/valueProcess.js</valueProcess>
+              <x v="100" />
+              <y v="20" />
+              <width v="660" />
+              <tabOrder v="0" />
+              <labelText>Bezeichnung</labelText>
+              <labelDistance v="85" />
+              <labelAnchor v="0" />
+            </edit>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Admin</name>
+          <caption>Admin</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/OFFERITEM/children/register_0/children/admin/visibleProcess.js</visibleProcess>
+          <children>
+            <label>
+              <name>UNIT</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <tableName>OFFERITEM</tableName>
+              <columnName>UNIT</columnName>
+              <dataType v="4" />
+              <x v="105" />
+              <y v="190" />
+              <labelText>UNIT</labelText>
+              <labelVisible v="true" />
+              <labelDistance v="80" />
+            </label>
+            <edit>
+              <name>DATE_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>OFFERITEM</tableName>
+              <columnName>DATE_EDIT</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetChange>%aditoprj%/frame/OFFERITEM/children/register_0/children/admin/children/date_edit/presetChange.js</presetChange>
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <inputFormat>dd.MM.yyyy</inputFormat>
+              <readOnly v="true" />
+              <x v="490" />
+              <y v="35" />
+              <width v="75" />
+              <tabOrder v="4" />
+              <labelText>DATE_EDIT</labelText>
+              <labelDistance v="50" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>DATE_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>OFFERITEM</tableName>
+              <columnName>DATE_NEW</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetNew>%aditoprj%/frame/OFFERITEM/children/register_0/children/admin/children/date_new/presetNew.js</presetNew>
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <inputFormat>dd.MM.yyyy</inputFormat>
+              <readOnly v="true" />
+              <x v="490" />
+              <y v="10" />
+              <width v="75" />
+              <tabOrder v="2" />
+              <labelText>DATE_NEW</labelText>
+              <labelDistance v="50" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>edt_language</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="4" />
+              <valueProcess>%aditoprj%/frame/OFFERITEM/children/register_0/children/admin/children/edt_language/valueProcess.js</valueProcess>
+              <x v="105" />
+              <y v="110" />
+              <width v="135" />
+              <tabOrder v="7" />
+              <labelText>edt_language</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <label>
+              <name>ITEMSORT</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <tableName>OFFERITEM</tableName>
+              <columnName>ITEMSORT</columnName>
+              <dataType v="4" />
+              <valueProcess>%aditoprj%/frame/OFFERITEM/children/register_0/children/admin/children/itemsort/valueProcess.js</valueProcess>
+              <x v="105" />
+              <y v="140" />
+              <width v="135" />
+              <labelText>ITEMSORT</labelText>
+              <labelDistance v="80" />
+            </label>
+            <edit>
+              <name>OFFER_ID</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>OFFERITEM</tableName>
+              <columnName>OFFER_ID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <presetNew>%aditoprj%/frame/OFFERITEM/children/register_0/children/admin/children/offer_id/presetNew.js</presetNew>
+              <readOnly v="true" />
+              <x v="105" />
+              <y v="35" />
+              <width v="275" />
+              <tabOrder v="6" />
+              <labelText>OFFER_ID</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>offercode</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <valueProcess>%aditoprj%/frame/OFFERITEM/children/register_0/children/admin/children/offercode/valueProcess.js</valueProcess>
+              <mandatoryInput v="true" />
+              <x v="105" />
+              <y v="85" />
+              <width v="135" />
+              <tabOrder v="8" />
+              <labelText>offercode</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>OFFERITEMID</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>OFFERITEM</tableName>
+              <columnName>OFFERITEMID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <valueProcess>%aditoprj%/frame/OFFERITEM/children/register_0/children/admin/children/offeritemid/valueProcess.js</valueProcess>
+              <presetNew>%aditoprj%/frame/OFFERITEM/children/register_0/children/admin/children/offeritemid/presetNew.js</presetNew>
+              <readOnly v="true" />
+              <x v="105" />
+              <y v="10" />
+              <width v="275" />
+              <tabOrder v="5" />
+              <labelText>OFFERITEMID</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>relorgid</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <presetNew>%aditoprj%/frame/OFFERITEM/children/register_0/children/admin/children/relorgid/presetNew.js</presetNew>
+              <presetChange>%aditoprj%/frame/OFFERITEM/children/register_0/children/admin/children/relorgid/presetChange.js</presetChange>
+              <x v="105" />
+              <y v="165" />
+              <width v="200" />
+              <tabOrder v="9" />
+              <labelText>relorgid</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>USER_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>OFFERITEM</tableName>
+              <columnName>USER_EDIT</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <presetChange>%aditoprj%/frame/OFFERITEM/children/register_0/children/admin/children/user_edit/presetChange.js</presetChange>
+              <readOnly v="true" />
+              <x v="635" />
+              <y v="35" />
+              <width v="75" />
+              <tabOrder v="3" />
+              <labelText>USER_EDIT</labelText>
+              <labelDistance v="25" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>USER_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>OFFERITEM</tableName>
+              <columnName>USER_NEW</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <presetNew>%aditoprj%/frame/OFFERITEM/children/register_0/children/admin/children/user_new/presetNew.js</presetNew>
+              <readOnly v="true" />
+              <x v="635" />
+              <y v="10" />
+              <width v="75" />
+              <tabOrder v="1" />
+              <labelText>USER_NEW</labelText>
+              <labelDistance v="25" />
+              <labelAnchor v="0" />
+            </edit>
+            <label>
+              <name>GROUPCODEID</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <tableName>OFFERITEM</tableName>
+              <columnName>GROUPCODEID</columnName>
+              <dataType v="4" />
+              <x v="105" />
+              <y v="220" />
+              <labelText>Warengr.</labelText>
+              <labelDistance v="80" />
+            </label>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+    <edit>
+      <name>UMST</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>OFFERITEM</tableName>
+      <columnName>VAT</columnName>
+      <dataType v="2" />
+      <precision v="14" />
+      <outputFormat>#,##0.00 &amp;apos;%&amp;apos;</outputFormat>
+      <searchableModes>none</searchableModes>
+      <readOnly v="true" />
+      <mandatoryInput v="false" />
+      <alignment v="4" />
+      <x v="265" />
+      <y v="120" />
+      <width v="90" />
+      <tabOrder v="-1" />
+      <labelText>UMSt</labelText>
+      <labelDistance v="60" />
+      <labelAnchor v="0" />
+    </edit>
+  </children>
+  <tableView />
+  <width v="850" />
+  <height v="580" />
+</frame>

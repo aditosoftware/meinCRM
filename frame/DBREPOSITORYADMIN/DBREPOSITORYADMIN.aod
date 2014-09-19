@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>DBREPOSITORYADMIN</name>
+  <title>Repository Manager</title>
+  <icon>%aditoprj%/frame/DBREPOSITORYADMIN/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/DBREPOSITORYADMIN/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type public
+@status released
+@desc [Frame zur Verwaltung der Tabellen der Datenbank]
+
+@module Administration
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <beforeStart>%aditoprj%/frame/DBREPOSITORYADMIN/beforeStart.js</beforeStart>
+  <afterStart>%aditoprj%/frame/DBREPOSITORYADMIN/afterStart.js</afterStart>
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showSaveCancel v="false" />
+        <showCreate v="true" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <customComponents>
+          <rcCommandButton>
+            <name>Edit_ein</name>
+            <title>Edit ein</title>
+            <imageData>%aditoprj%/frame/DBREPOSITORYADMIN/ribbon/ribbontasks/task_edit/customcomponents/edit_ein/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/DBREPOSITORYADMIN/ribbon/ribbontasks/task_edit/customcomponents/edit_ein/onClick.js</onClick>
+            <enabledProcess>%aditoprj%/frame/DBREPOSITORYADMIN/ribbon/ribbontasks/task_edit/customcomponents/edit_ein/enabledProcess.js</enabledProcess>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+          <rcCommandButton>
+            <name>Edit_aus</name>
+            <title>Edit aus</title>
+            <imageData>%aditoprj%/frame/DBREPOSITORYADMIN/ribbon/ribbontasks/task_edit/customcomponents/edit_aus/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/DBREPOSITORYADMIN/ribbon/ribbontasks/task_edit/customcomponents/edit_aus/onClick.js</onClick>
+            <enabledProcess>%aditoprj%/frame/DBREPOSITORYADMIN/ribbon/ribbontasks/task_edit/customcomponents/edit_aus/enabledProcess.js</enabledProcess>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+        </customComponents>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <button>
+      <name>btnResetFilter</name>
+      <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+      <onClick>%aditoprj%/frame/DBREPOSITORYADMIN/children/btnresetfilter/onClick.js</onClick>
+      <x v="815" />
+      <y v="140" />
+      <width v="20" />
+      <height v="20" />
+      <horizontalAnchor v="2" />
+      <tabOrder v="6" />
+      <imageData>%aditoprj%/frame/DBREPOSITORYADMIN/children/btnresetfilter/imageData.png</imageData>
+      <toolTip>Reset filter</toolTip>
+    </button>
+    <checkBox>
+      <name>chk_logging</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <valueProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/chk_logging/valueProcess.js</valueProcess>
+      <valueTrue>Y</valueTrue>
+      <valueFalse>N</valueFalse>
+      <x v="690" />
+      <y v="140" />
+      <horizontalAnchor v="2" />
+      <labelText>Log</labelText>
+      <tabOrder v="5" />
+    </checkBox>
+    <comboBox>
+      <name>cmbModule</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/cmbmodule/contentProcess.js</contentProcess>
+      <searchableModes>none</searchableModes>
+      <x v="295" />
+      <width v="90" />
+      <visible v="false" />
+      <tabOrder v="-1" />
+      <maximumRowCount v="20" />
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>cmbModuleFilter</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/cmbmodulefilter/contentProcess.js</contentProcess>
+      <searchableModes>none</searchableModes>
+      <x v="690" />
+      <y v="60" />
+      <width v="145" />
+      <horizontalAnchor v="2" />
+      <tabOrder v="2" />
+      <maximumRowCount v="20" />
+      <labelText>Modul</labelText>
+      <labelDistance v="90" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>cmbType</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <searchableModes>none</searchableModes>
+      <x v="200" />
+      <width v="90" />
+      <visible v="false" />
+      <staticContent>
+        <entry>
+          <key>Benutzer</key>
+          <value>U</value>
+        </entry>
+        <entry>
+          <key>System</key>
+          <value>S</value>
+        </entry>
+      </staticContent>
+      <labelVisible v="false" />
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>cmbTypeFilter</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <searchableModes>none</searchableModes>
+      <x v="690" />
+      <y v="35" />
+      <width v="145" />
+      <horizontalAnchor v="2" />
+      <tabOrder v="1" />
+      <staticContent>
+        <entry>
+          <key>Benutzer</key>
+          <value>U</value>
+        </entry>
+        <entry>
+          <key>System</key>
+          <value>S</value>
+        </entry>
+      </staticContent>
+      <labelText>Typ</labelText>
+      <labelDistance v="90" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <edit>
+      <name>edtDbName</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <searchableModes>none</searchableModes>
+      <x v="485" />
+      <y v="0" />
+      <width v="90" />
+      <visible v="false" />
+      <tabOrder v="-1" />
+      <labelDistance v="90" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>edtDbNameFilter</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <searchableModes>none</searchableModes>
+      <x v="690" />
+      <y v="110" />
+      <width v="145" />
+      <horizontalAnchor v="2" />
+      <tabOrder v="4" />
+      <labelText>DB-Name</labelText>
+      <labelDistance v="90" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>edtLongname</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <searchableModes>none</searchableModes>
+      <x v="390" />
+      <y v="0" />
+      <width v="90" />
+      <visible v="false" />
+      <tabOrder v="-1" />
+      <labelDistance v="90" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>edtLongnameFilter</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <searchableModes>none</searchableModes>
+      <x v="690" />
+      <y v="85" />
+      <width v="145" />
+      <horizontalAnchor v="2" />
+      <tabOrder v="3" />
+      <labelText>Tabellenname</labelText>
+      <labelDistance v="90" />
+      <labelAnchor v="0" />
+    </edit>
+    <rectangleDecorator>
+      <name>Filter</name>
+      <template>%aditoprj%/template/Template_Rechteck/Template_Rechteck.aod</template>
+      <x v="590" />
+      <y v="20" />
+      <width v="255" />
+      <height v="155" />
+      <horizontalAnchor v="2" />
+      <caption>Filter</caption>
+    </rectangleDecorator>
+    <memo>
+      <name>memo_description</name>
+      <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+      <x v="590" />
+      <y v="0" />
+      <width v="50" />
+      <visible v="false" />
+      <tabOrder v="-1" />
+    </memo>
+    <register>
+      <name>Register_1</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <y v="215" />
+      <width v="850" />
+      <height v="360" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="5" />
+      <tabOrder v="7" />
+      <children>
+        <registerTab>
+          <name>Tab_2</name>
+          <caption>&amp;amp;SQL und Schema</caption>
+          <children>
+            <button>
+              <name>btnCheckIndex</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tab_2/children/btncheckindex/onClick.js</onClick>
+              <x v="260" />
+              <y v="15" />
+              <width v="115" />
+              <height v="25" />
+              <caption>Index-Check</caption>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tab_2/children/btncheckindex/enabledProcess.js</enabledProcess>
+              <tabOrder v="2" />
+              <toolTip>Sucht nach fehlenden Indexdefinitionen
+für foreign key-Spalten im Repository</toolTip>
+            </button>
+            <button>
+              <name>btnCheckKeyword</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tab_2/children/btncheckkeyword/onClick.js</onClick>
+              <x v="260" />
+              <y v="45" />
+              <width v="115" />
+              <height v="25" />
+              <caption>Keyword-Check</caption>
+              <tabOrder v="5" />
+            </button>
+            <button>
+              <name>btnCheckLimits</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tab_2/children/btnchecklimits/onClick.js</onClick>
+              <x v="20" />
+              <y v="45" />
+              <width v="115" />
+              <height v="25" />
+              <caption>Limits prüfen</caption>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tab_2/children/btnchecklimits/enabledProcess.js</enabledProcess>
+              <tabOrder v="3" />
+            </button>
+            <button>
+              <name>btnCopyTable</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tab_2/children/btncopytable/onClick.js</onClick>
+              <x v="140" />
+              <y v="45" />
+              <width v="115" />
+              <height v="25" />
+              <caption>Daten kopieren</caption>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tab_2/children/btncopytable/enabledProcess.js</enabledProcess>
+              <tabOrder v="4" />
+              <labelVisible v="false" />
+            </button>
+            <button>
+              <name>btnCreateTable</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tab_2/children/btncreatetable/onClick.js</onClick>
+              <x v="140" />
+              <y v="15" />
+              <width v="115" />
+              <height v="25" />
+              <caption>Tabellen anlegen</caption>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tab_2/children/btncreatetable/enabledProcess.js</enabledProcess>
+              <tabOrder v="1" />
+              <labelVisible v="false" />
+            </button>
+            <button>
+              <name>btnSqlScript</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tab_2/children/btnsqlscript/onClick.js</onClick>
+              <x v="20" />
+              <y v="15" />
+              <width v="115" />
+              <height v="25" />
+              <caption>SQL erzeugen</caption>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tab_2/children/btnsqlscript/enabledProcess.js</enabledProcess>
+              <tabOrder v="0" />
+              <labelVisible v="false" />
+            </button>
+            <checkBox>
+              <name>chk_allTables</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <valueProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tab_2/children/chk_alltables/valueProcess.js</valueProcess>
+              <valueTrue>true</valueTrue>
+              <valueFalse>false</valueFalse>
+              <x v="415" />
+              <y v="5" />
+              <labelText>alle Tabellen verwenden</labelText>
+              <labelOrientation v="4" />
+              <labelDistance v="5" />
+              <tabOrder v="6" />
+            </checkBox>
+            <checkBox>
+              <name>chkCreateConstraints</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <valueProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tab_2/children/chkcreateconstraints/valueProcess.js</valueProcess>
+              <valueTrue>true</valueTrue>
+              <valueFalse>false</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="415" />
+              <y v="45" />
+              <labelText>Primärschlüssel erzeugen</labelText>
+              <labelOrientation v="4" />
+              <labelDistance v="5" />
+              <tabOrder v="8" />
+            </checkBox>
+            <checkBox>
+              <name>chkCreateIndex</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <valueProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tab_2/children/chkcreateindex/valueProcess.js</valueProcess>
+              <valueTrue>true</valueTrue>
+              <valueFalse>false</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="415" />
+              <y v="65" />
+              <labelText>Index-SQL mit erzeugen</labelText>
+              <labelOrientation v="4" />
+              <labelDistance v="5" />
+              <tabOrder v="10" />
+            </checkBox>
+            <checkBox>
+              <name>chkUseLongname</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <valueProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tab_2/children/chkuselongname/valueProcess.js</valueProcess>
+              <presetChange>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tab_2/children/chkuselongname/presetChange.js</presetChange>
+              <valueTrue>true</valueTrue>
+              <valueFalse>false</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="415" />
+              <y v="25" />
+              <labelText>Langname als Kommentar</labelText>
+              <labelOrientation v="4" />
+              <labelDistance v="5" />
+              <tabOrder v="7" />
+            </checkBox>
+            <checkBox>
+              <name>chkwithdata</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <valueProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tab_2/children/chkwithdata/valueProcess.js</valueProcess>
+              <valueTrue>true</valueTrue>
+              <valueFalse>false</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="415" />
+              <y v="85" />
+              <labelText>mit Inhalt der Tabellen</labelText>
+              <labelOrientation v="4" />
+              <labelDistance v="5" />
+              <tabOrder v="11" />
+            </checkBox>
+            <edit>
+              <name>edtSeparator</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <valueProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tab_2/children/edtseparator/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="600" />
+              <y v="35" />
+              <width v="35" />
+              <tabOrder v="9" />
+              <labelText>als Trennzeichen verwenden</labelText>
+              <labelOrientation v="4" />
+              <labelDistance v="4" />
+              <labelAnchor v="0" />
+            </edit>
+            <memo>
+              <name>memoOutput</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <searchableModes>none</searchableModes>
+              <x v="20" />
+              <y v="105" />
+              <width v="605" />
+              <height v="210" />
+              <verticalAnchor v="6" />
+              <tabOrder v="12" />
+              <labelText>Ausgabe</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+            </memo>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>xmlin</name>
+          <caption>&amp;amp;XML Import/Export</caption>
+          <children>
+            <button>
+              <name>btnExportXml</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/xmlin/children/btnexportxml/onClick.js</onClick>
+              <x v="500" />
+              <y v="55" />
+              <width v="20" />
+              <height v="20" />
+              <tabOrder v="6" />
+              <imageData>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/xmlin/children/btnexportxml/imageData.png</imageData>
+              <labelVisible v="false" />
+              <toolTip>Ausgewählte Tabelle(n) nach XML exportieren</toolTip>
+            </button>
+            <button>
+              <name>btnImportXml</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/xmlin/children/btnimportxml/onClick.js</onClick>
+              <x v="500" />
+              <y v="15" />
+              <width v="20" />
+              <height v="20" />
+              <tabOrder v="2" />
+              <imageData>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/xmlin/children/btnimportxml/imageData.png</imageData>
+              <labelVisible v="false" />
+              <toolTip>XML-Tabellendeklaration importieren</toolTip>
+            </button>
+            <button>
+              <name>btnProcess</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/xmlin/children/btnprocess/onClick.js</onClick>
+              <x v="540" />
+              <y v="15" />
+              <width v="20" />
+              <height v="20" />
+              <enabledProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/xmlin/children/btnprocess/enabledProcess.js</enabledProcess>
+              <tabOrder v="3" />
+              <imageData>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/xmlin/children/btnprocess/imageData.png</imageData>
+              <labelVisible v="false" />
+              <toolTip>Starte den Import</toolTip>
+            </button>
+            <button>
+              <name>Button_1</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/xmlin/children/button_1/onClick.js</onClick>
+              <x v="455" />
+              <y v="15" />
+              <width v="30" />
+              <height v="20" />
+              <caption>...</caption>
+              <tabOrder v="1" />
+              <labelVisible v="false" />
+            </button>
+            <button>
+              <name>Button_2</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/xmlin/children/button_2/onClick.js</onClick>
+              <x v="455" />
+              <y v="55" />
+              <width v="30" />
+              <height v="20" />
+              <caption>...</caption>
+              <tabOrder v="5" />
+              <labelVisible v="false" />
+            </button>
+            <checkBox>
+              <name>chkUseStylesheet</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <presetChange>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/xmlin/children/chkusestylesheet/presetChange.js</presetChange>
+              <valueTrue>Y</valueTrue>
+              <valueFalse>N</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="100" />
+              <y v="80" />
+              <labelText>Stylesheet zur Anzeige im Browser einbinden</labelText>
+              <labelOrientation v="4" />
+              <labelDistance v="4" />
+              <tabOrder v="7" />
+            </checkBox>
+            <edit>
+              <name>edtExportFile</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <valueProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/xmlin/children/edtexportfile/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="100" />
+              <y v="55" />
+              <width v="355" />
+              <tabOrder v="4" />
+              <labelText>Exportdatei</labelText>
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>edtImportFile</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <valueProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/xmlin/children/edtimportfile/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="100" />
+              <y v="15" />
+              <width v="355" />
+              <tabOrder v="0" />
+              <labelText>Importdatei</labelText>
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </edit>
+            <table>
+              <name>tblTransferTable</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <displayContentProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/xmlin/children/tbltransfertable/displayContentProcess.js</displayContentProcess>
+              <x v="100" />
+              <y v="110" />
+              <width v="495" />
+              <height v="140" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <grantArrangeColumns v="true" />
+              <labelText>Tabellen</labelText>
+              <labelDistance v="90" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>TabellenName</name>
+                  <columnName>Tabellen-Name</columnName>
+                  <width v="196" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>DBTabellenname</name>
+                  <columnName>DB-Tabellenname</columnName>
+                  <width v="244" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>dbimport</name>
+          <caption>&amp;amp;Reverse Engineering</caption>
+          <children>
+            <button>
+              <name>btnToRepo</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/dbimport/children/btntorepo/onClick.js</onClick>
+              <x v="415" />
+              <y v="50" />
+              <width v="150" />
+              <height v="30" />
+              <caption>Repository-Übernahme</caption>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/dbimport/children/btntorepo/enabledProcess.js</enabledProcess>
+              <tabOrder v="3" />
+              <labelVisible v="false" />
+            </button>
+            <comboBox>
+              <name>comboAlias</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/dbimport/children/comboalias/contentProcess.js</contentProcess>
+              <searchableModes>none</searchableModes>
+              <x v="105" />
+              <y v="15" />
+              <width v="300" />
+              <utilizeRowId v="false" />
+              <tabOrder v="0" />
+              <labelText>DB-Alias</labelText>
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>comboCase</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <presetChange>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/dbimport/children/combocase/presetChange.js</presetChange>
+              <searchableModes>none</searchableModes>
+              <x v="415" />
+              <y v="105" />
+              <width v="155" />
+              <tabOrder v="4" />
+              <staticContent>
+                <entry>
+                  <key>Unverändert</key>
+                  <value>KEEP</value>
+                </entry>
+                <entry>
+                  <key>GROSS SCHREIBEN</key>
+                  <value>UPPER</value>
+                </entry>
+                <entry>
+                  <key>klein schreiben</key>
+                  <value>LOWER</value>
+                </entry>
+              </staticContent>
+              <emptyElementEnabled v="false" />
+              <labelText>Tabellen und Spalten</labelText>
+              <labelOrientation v="1" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <table>
+              <name>tblDatabaseTable</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <displayContentProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/dbimport/children/tbldatabasetable/displayContentProcess.js</displayContentProcess>
+              <x v="105" />
+              <y v="50" />
+              <width v="300" />
+              <height v="175" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <tabOrder v="1" />
+              <grantArrangeColumns v="true" />
+              <labelText>Tabellen</labelText>
+              <labelDistance v="90" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Tabellenname</name>
+                  <columnName>Tabellenname</columnName>
+                  <width v="270" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+            <button>
+              <name>Button</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/dbimport/children/button/onClick.js</onClick>
+              <x v="460" />
+              <y v="10" />
+              <horizontalAnchor v="1" />
+              <caption>Alias-Test</caption>
+              <backgroundColor v="0xffff0000" />
+              <tabOrder v="2" />
+            </button>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>tblsync</name>
+          <comment>Kommentar von tblsync</comment>
+          <caption>&amp;amp;Tabellen vergleichen</caption>
+          <toolTip>Tooltip von tblsync</toolTip>
+          <children>
+            <button>
+              <name>Button_0</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tblsync/children/button_0/onClick.js</onClick>
+              <x v="370" />
+              <y v="10" />
+              <width v="45" />
+              <height v="20" />
+              <caption>Go</caption>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tblsync/children/button_0/enabledProcess.js</enabledProcess>
+              <tabOrder v="1" />
+              <labelVisible v="false" />
+            </button>
+            <comboBox>
+              <name>comboAlias_0</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tblsync/children/comboalias_0/contentProcess.js</contentProcess>
+              <searchableModes>none</searchableModes>
+              <x v="100" />
+              <y v="10" />
+              <width v="265" />
+              <utilizeRowId v="false" />
+              <tabOrder v="0" />
+              <labelText>DB-Aliasname</labelText>
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <table>
+              <name>tblDiff</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <displayContentProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tblsync/children/tbldiff/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="100" />
+              <y v="35" />
+              <width v="670" />
+              <height v="215" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <grantArrangeColumns v="true" />
+              <labelText>Unterschiede</labelText>
+              <labelDistance v="90" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Tabelle</name>
+                  <columnName>Tabelle</columnName>
+                  <width v="142" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>RepositoryEintrag</name>
+                  <columnName>Repository-Eintrag</columnName>
+                  <width v="259" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>DatenbankEintrag</name>
+                  <columnName>Datenbank-Eintrag</columnName>
+                  <width v="235" />
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>Aus_DB_uebernehmen</name>
+                  <caption>Aus DB übernehmen</caption>
+                  <onClick>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tblsync/children/tbldiff/popup/aus_db_uebernehmen/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tblsync/children/tbldiff/popup/aus_db_uebernehmen/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>SQL_in_Zwischenablage</name>
+                  <caption>SQL in Zwischenablage</caption>
+                  <onClick>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/tblsync/children/tbldiff/popup/sql_in_zwischenablage/onClick.js</onClick>
+                  <enabledProcess></enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>bulkactions</name>
+          <comment>Kommentar von bulkactions</comment>
+          <caption>&amp;amp;Massenänderung</caption>
+          <toolTip>Tooltip von bulkactions</toolTip>
+          <children>
+            <button>
+              <name>btnColAction</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/bulkactions/children/btncolaction/onClick.js</onClick>
+              <x v="440" />
+              <y v="20" />
+              <height v="25" />
+              <caption>Ausführen</caption>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/bulkactions/children/btncolaction/enabledProcess.js</enabledProcess>
+              <tabOrder v="2" />
+            </button>
+            <button>
+              <name>btnSetModule</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <x v="265" />
+              <y v="80" />
+              <height v="25" />
+              <caption>Setzen</caption>
+              <tabOrder v="4" />
+            </button>
+            <comboBox>
+              <name>Combobox_2</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <searchableModes>none</searchableModes>
+              <x v="10" />
+              <y v="85" />
+              <width v="250" />
+              <tabOrder v="3" />
+              <labelText>Modul der ausgewählten Tabellen</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="4" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>comboColAction</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <searchableModes>none</searchableModes>
+              <x v="265" />
+              <y v="25" />
+              <width v="170" />
+              <tabOrder v="1" />
+              <staticContent>
+                <entry>
+                  <key>Spalte hinzufügen</key>
+                  <value>add</value>
+                </entry>
+                <entry>
+                  <key>Spalte löschen</key>
+                  <value>del</value>
+                </entry>
+                <entry>
+                  <key>Spalte umbenennen</key>
+                  <value>ren</value>
+                </entry>
+                <entry>
+                  <key>Spaltendefinition ändern</key>
+                  <value>mod</value>
+                </entry>
+              </staticContent>
+              <emptyElementEnabled v="false" />
+              <labelText>Aktion</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="4" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>comboColName</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/register_1/children/bulkactions/children/combocolname/contentProcess.js</contentProcess>
+              <searchableModes>none</searchableModes>
+              <x v="10" />
+              <y v="25" />
+              <width v="250" />
+              <tabOrder v="0" />
+              <editable v="true" />
+              <labelText>Spaltenname</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="4" />
+              <labelAnchor v="0" />
+            </comboBox>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+    <label>
+      <name>TABLEID_DECODED</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <valueProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/tableid_decoded/valueProcess.js</valueProcess>
+      <x v="590" />
+      <y v="175" />
+      <width v="30" />
+      <horizontalAnchor v="2" />
+      <fontColor v="0xff5d667c" />
+      <visible v="false" />
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </label>
+    <table>
+      <name>tblTablelist</name>
+      <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+      <onDoubleClick>%aditoprj%/frame/DBREPOSITORYADMIN/children/tbltablelist/onDoubleClick.js</onDoubleClick>
+      <rowCreate>%aditoprj%/frame/DBREPOSITORYADMIN/children/tbltablelist/rowCreate.js</rowCreate>
+      <rowUpdate>%aditoprj%/frame/DBREPOSITORYADMIN/children/tbltablelist/rowUpdate.js</rowUpdate>
+      <rowDelete>%aditoprj%/frame/DBREPOSITORYADMIN/children/tbltablelist/rowDelete.js</rowDelete>
+      <displayContentProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/tbltablelist/displayContentProcess.js</displayContentProcess>
+      <idContentProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/tbltablelist/idContentProcess.js</idContentProcess>
+      <contentProcessType v="1" />
+      <x v="20" />
+      <y v="25" />
+      <width v="565" />
+      <height v="170" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <utilizeRowId v="true" />
+      <utilizeRowEditable v="true" />
+      <utilizeRowBackgroundColor v="true" />
+      <tabOrder v="0" />
+      <grantArrangeColumns v="true" />
+      <labelText>Tabellen im Repository</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="2" />
+      <columnMetaData>
+        <columnMetaData>
+          <name>Typ</name>
+          <columnName>Typ</columnName>
+          <width v="60" />
+          <editable v="true" />
+          <editorComponentProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/tbltablelist/columnmetadata/typ/editorComponentProcess.js</editorComponentProcess>
+          <mandatoryInputProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/tbltablelist/columnmetadata/typ/mandatoryInputProcess.js</mandatoryInputProcess>
+        </columnMetaData>
+        <columnMetaData>
+          <name>Modul</name>
+          <columnName>Modul</columnName>
+          <width v="113" />
+          <editable v="true" />
+          <editorComponentProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/tbltablelist/columnmetadata/modul/editorComponentProcess.js</editorComponentProcess>
+          <mandatoryInputProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/tbltablelist/columnmetadata/modul/mandatoryInputProcess.js</mandatoryInputProcess>
+        </columnMetaData>
+        <columnMetaData>
+          <name>Tabellenname_2</name>
+          <columnName>Tabellenname</columnName>
+          <width v="182" />
+          <editable v="true" />
+          <editorComponentProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/tbltablelist/columnmetadata/tabellenname_2/editorComponentProcess.js</editorComponentProcess>
+          <mandatoryInputProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/tbltablelist/columnmetadata/tabellenname_2/mandatoryInputProcess.js</mandatoryInputProcess>
+        </columnMetaData>
+        <columnMetaData>
+          <name>DBName</name>
+          <columnName>DB-Name</columnName>
+          <width v="167" />
+          <editable v="true" />
+          <editorComponentProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/tbltablelist/columnmetadata/dbname/editorComponentProcess.js</editorComponentProcess>
+          <mandatoryInputProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/tbltablelist/columnmetadata/dbname/mandatoryInputProcess.js</mandatoryInputProcess>
+        </columnMetaData>
+        <columnMetaData>
+          <name>Beschreibung</name>
+          <columnName>Beschreibung</columnName>
+          <width v="97" />
+          <editable v="true" />
+          <editorComponentProcess>%aditoprj%/frame/DBREPOSITORYADMIN/children/tbltablelist/columnmetadata/beschreibung/editorComponentProcess.js</editorComponentProcess>
+        </columnMetaData>
+      </columnMetaData>
+    </table>
+  </children>
+  <tableView />
+  <width v="850" />
+  <height v="580" />
+</frame>

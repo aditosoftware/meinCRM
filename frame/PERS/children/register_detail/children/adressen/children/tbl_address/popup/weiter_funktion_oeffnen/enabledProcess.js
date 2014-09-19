@@ -1,0 +1,1 @@
+a.rs( a.decodeFirst(a.valueof("$comp.tbl_ADDRESS")).substr( 0, 4) == "ZZZ#" );

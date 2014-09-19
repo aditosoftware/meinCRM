@@ -1,0 +1,1 @@
+if ( a.hasvar("$image.affectedusers"))  a.ro(a.valueofObj("$image.affectedusers"));

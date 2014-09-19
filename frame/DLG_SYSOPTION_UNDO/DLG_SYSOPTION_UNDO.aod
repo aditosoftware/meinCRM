@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>DLG_SYSOPTION_UNDO</name>
+  <icon></icon>
+  <description>Dialog-Systemoptionen Rückgängig</description>
+  <comment>@type public
+@status released
+@desc [Dialog-Systemoptionen Rückgängig]
+
+@module Administration
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <comboBox>
+      <name>comboDate</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <dataType v="93" />
+      <contentProcess>%aditoprj%/frame/DLG_SYSOPTION_UNDO/children/combodate/contentProcess.js</contentProcess>
+      <searchableModes>none</searchableModes>
+      <x v="95" />
+      <y v="15" />
+      <width v="160" />
+      <tabOrder v="0" />
+      <labelText>Löschdatum</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <table>
+      <name>tblData</name>
+      <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+      <onDoubleClick>%aditoprj%/frame/DLG_SYSOPTION_UNDO/children/tbldata/onDoubleClick.js</onDoubleClick>
+      <displayContentProcess>%aditoprj%/frame/DLG_SYSOPTION_UNDO/children/tbldata/displayContentProcess.js</displayContentProcess>
+      <contentProcessType v="0" />
+      <singleSelection v="true" />
+      <x v="15" />
+      <y v="65" />
+      <width v="665" />
+      <height v="250" />
+      <utilizeRowId v="true" />
+      <grantArrangeColumns v="true" />
+      <labelText>Gelöschte Einstellungen</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="2" />
+      <columnMetaData>
+        <columnMetaData>
+          <name>Name</name>
+          <columnName>Name</columnName>
+          <width v="212" />
+        </columnMetaData>
+        <columnMetaData>
+          <name>Wert</name>
+          <columnName>Wert</columnName>
+          <width v="207" />
+        </columnMetaData>
+        <columnMetaData>
+          <name>Gueltigkeit</name>
+          <columnName>Gültigkeit</columnName>
+          <width v="100" />
+        </columnMetaData>
+        <columnMetaData>
+          <name>Loeschdatum</name>
+          <columnName>Löschdatum</columnName>
+          <width v="112" />
+          <dataType v="93" />
+          <outputFormat>dd.MM.yyyy HH:mm:ss</outputFormat>
+        </columnMetaData>
+      </columnMetaData>
+      <popup>
+        <menuItem>
+          <name>Neue_Option</name>
+          <caption>Neue Option</caption>
+          <onClick>%aditoprj%/frame/DLG_SYSOPTION_UNDO/children/tbldata/popup/neue_option/onClick.js</onClick>
+          <enabledProcess></enabledProcess>
+          <visibleProcess></visibleProcess>
+          <isSeparator v="false" />
+        </menuItem>
+        <menuItem>
+          <name>Option_bearbeiten</name>
+          <caption>Option bearbeiten</caption>
+          <onClick>%aditoprj%/frame/DLG_SYSOPTION_UNDO/children/tbldata/popup/option_bearbeiten/onClick.js</onClick>
+          <enabledProcess>%aditoprj%/frame/DLG_SYSOPTION_UNDO/children/tbldata/popup/option_bearbeiten/enabledProcess.js</enabledProcess>
+          <visibleProcess></visibleProcess>
+          <isSeparator v="false" />
+        </menuItem>
+        <menuItem>
+          <name>Option_loeschen</name>
+          <caption>Option löschen</caption>
+          <onClick>%aditoprj%/frame/DLG_SYSOPTION_UNDO/children/tbldata/popup/option_loeschen/onClick.js</onClick>
+          <enabledProcess>%aditoprj%/frame/DLG_SYSOPTION_UNDO/children/tbldata/popup/option_loeschen/enabledProcess.js</enabledProcess>
+          <visibleProcess></visibleProcess>
+          <isSeparator v="false" />
+        </menuItem>
+        <menuItem>
+          <name>Geloeschte_zurueckholen</name>
+          <caption>Gelöschte zurückholen</caption>
+          <onClick>%aditoprj%/frame/DLG_SYSOPTION_UNDO/children/tbldata/popup/geloeschte_zurueckholen/onClick.js</onClick>
+          <enabledProcess></enabledProcess>
+          <visibleProcess></visibleProcess>
+          <isSeparator v="false" />
+        </menuItem>
+      </popup>
+    </table>
+  </children>
+  <tableView>
+    <headerFont name="" style="0" size="11" />
+    <font name="Verdana" style="0" size="11" />
+  </tableView>
+  <width v="865" />
+</frame>

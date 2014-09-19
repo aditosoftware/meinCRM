@@ -1,0 +1,1 @@
+a.rs(a.decodeMS(a.valueof("$comp.tbl_participants")).length == 1 && a.valueof("$sys.workingmode") == a.FRAMEMODE_SHOW)

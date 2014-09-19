@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>DLG_PART_FILTER</name>
+  <icon></icon>
+  <description>Dialog-Historienfilter</description>
+  <comment>@type  public
+@status released
+@desc [Dialog-Historienfilter]
+
+@module Standard
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <comboBox>
+      <name>function</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/DLG_PART_FILTER/children/function/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <x v="65" />
+      <y v="30" />
+      <width v="130" />
+      <tabOrder v="1" />
+      <labelText>Funktion</labelText>
+      <labelDistance v="60" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>status</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/DLG_PART_FILTER/children/status/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <x v="65" />
+      <y v="5" />
+      <width v="130" />
+      <tabOrder v="0" />
+      <labelText>Status</labelText>
+      <labelDistance v="60" />
+      <labelAnchor v="0" />
+    </comboBox>
+  </children>
+  <tableView>
+    <headerFont name="" style="0" size="12" />
+    <font name="Arial" style="0" size="12" />
+  </tableView>
+  <width v="865" />
+  <height v="570" />
+</frame>

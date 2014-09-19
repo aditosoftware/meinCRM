@@ -1,0 +1,1 @@
+a.rq("select ISO2 from COUNTRYINFO");

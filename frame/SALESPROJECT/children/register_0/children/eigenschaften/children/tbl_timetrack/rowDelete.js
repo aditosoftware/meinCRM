@@ -1,0 +1,1 @@
+a.sqlDelete("TIMETRACKING", " TIMETRACKINGID = '" + a.valueof("$local.idvalue") + "'");

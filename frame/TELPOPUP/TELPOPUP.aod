@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>TELPOPUP</name>
+  <alias>AO_DATEN</alias>
+  <linkInformation>
+    <linkInformation>
+      <name>63737f21-8e94-4394-b56b-f3ebeab7f9d0</name>
+      <tableName>PERS</tableName>
+      <primaryKey>PERSID</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+    <linkInformation>
+      <name>b9da4dd9-0cf4-4c5e-a80d-444107955b30</name>
+      <tableName>RELATION</tableName>
+      <primaryKey>RELATIONID</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+  </linkInformation>
+  <whereClause>%aditoprj%/frame/TELPOPUP/whereClause.js</whereClause>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>SEARCH_24</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="true" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>SEARCH_MASK_24</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_24</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="true" />
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_24</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <databaseColumns>
+    <column>
+      <name>PERS_PERSID</name>
+      <tableName>PERS</tableName>
+      <columnName>PERSID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <scale>0</scale>
+    </column>
+    <column>
+      <name>RELATION_RELATIONID</name>
+      <tableName>RELATION</tableName>
+      <columnName>RELATIONID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <scale>0</scale>
+    </column>
+  </databaseColumns>
+  <children>
+    <memo>
+      <name>Memofeld</name>
+      <valueProcess>%aditoprj%/frame/TELPOPUP/children/memofeld/valueProcess.js</valueProcess>
+      <x v="15" />
+      <y v="15" />
+      <width v="190" />
+      <height v="85" />
+    </memo>
+    <button>
+      <name>Button</name>
+      <onClick>%aditoprj%/frame/TELPOPUP/children/button/onClick.js</onClick>
+      <x v="125" />
+      <y v="100" />
+      <caption>Öffnen</caption>
+      <backgroundColor v="0xff99cc00" />
+      <visibleProcess>%aditoprj%/frame/TELPOPUP/children/button/visibleProcess.js</visibleProcess>
+    </button>
+    <edit>
+      <name>telefon</name>
+      <valueProcess>%aditoprj%/frame/TELPOPUP/children/telefon/valueProcess.js</valueProcess>
+      <x v="15" />
+      <y v="105" />
+    </edit>
+    <label>
+      <name>Label</name>
+      <valueProcess>%aditoprj%/frame/TELPOPUP/children/label/valueProcess.js</valueProcess>
+      <x v="15" />
+      <y v="0" />
+      <width v="190" />
+      <height v="15" />
+      <font name="" style="0" size="9" />
+      <fontColor v="0xff000000" />
+      <backgroundColor v="0xffffcccc" />
+      <visible v="false" />
+      <visibleProcess>%aditoprj%/frame/TELPOPUP/children/label/visibleProcess.js</visibleProcess>
+    </label>
+  </children>
+  <tableView />
+</frame>

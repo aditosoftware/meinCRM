@@ -1,0 +1,1 @@
+a.rq("select relationid, orgname from relation, org where org_id = orgid and pers_id = '$local.persid'");

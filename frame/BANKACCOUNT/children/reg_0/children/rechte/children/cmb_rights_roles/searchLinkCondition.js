@@ -1,0 +1,1 @@
+a.rs(" EMPLOYEE.EMPLOYEEID in ( select ROW_ID from TABLEACCESS where " + a.valueof("$local.condition") + ")");

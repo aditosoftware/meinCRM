@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>DLG_CHOOSE_DISTLIST</name>
+  <icon></icon>
+  <description>Dialog-Auswahl Verteiler</description>
+  <comment>@type public
+@status released
+@desc [Dialogframe zum Laden von gepeicherten Verteiler]
+
+@module Marketing
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <table>
+      <name>selection</name>
+      <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+      <displayContentProcess>%aditoprj%/frame/DLG_CHOOSE_DISTLIST/children/selection/displayContentProcess.js</displayContentProcess>
+      <contentProcessType v="0" />
+      <x v="5" />
+      <y v="5" />
+      <width v="445" />
+      <height v="165" />
+      <utilizeRowId v="true" />
+      <tabOrder v="0" />
+      <grantArrangeColumns v="true" />
+      <columnMetaData>
+        <columnMetaData>
+          <name>Bezeichnung</name>
+          <columnName>Bezeichnung</columnName>
+          <width v="122" />
+        </columnMetaData>
+        <columnMetaData>
+          <name>Beschreibung</name>
+          <columnName>Beschreibung</columnName>
+          <width v="298" />
+        </columnMetaData>
+      </columnMetaData>
+    </table>
+  </children>
+  <tableView>
+    <headerFont name="" style="0" size="12" />
+    <font name="Arial" style="0" size="12" />
+  </tableView>
+  <width v="865" />
+  <height v="570" />
+</frame>

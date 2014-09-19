@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>SYS_VTODO</name>
+  <title>Aufgaben</title>
+  <icon>%aditoprj%/frame/SYS_VTODO/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/SYS_VTODO/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type  public
+@status released
+
+@module Standard
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <beforeStart>%aditoprj%/frame/SYS_VTODO/beforeStart.js</beforeStart>
+  <afterStart>%aditoprj%/frame/SYS_VTODO/afterStart.js</afterStart>
+  <beforeSave>%aditoprj%/frame/SYS_VTODO/beforeSave.js</beforeSave>
+  <afterSave>%aditoprj%/frame/SYS_VTODO/afterSave.js</afterSave>
+  <beforeDelete>%aditoprj%/frame/SYS_VTODO/beforeDelete.js</beforeDelete>
+  <afterDelete>%aditoprj%/frame/SYS_VTODO/afterDelete.js</afterDelete>
+  <beforeCancel>%aditoprj%/frame/SYS_VTODO/beforeCancel.js</beforeCancel>
+  <grantCreate v="true" />
+  <grantCreateProcess></grantCreateProcess>
+  <grantUpdateProcess></grantUpdateProcess>
+  <grantDeleteProcess></grantDeleteProcess>
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="true" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <register>
+      <name>Register_0</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <width v="850" />
+      <height v="565" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <tabOrder v="0" />
+      <children>
+        <registerTab>
+          <name>Allgemein</name>
+          <caption>Allgemein</caption>
+          <children>
+            <list>
+              <name>categories</name>
+              <template>%aditoprj%/template/Template_List/Template_List.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/categories/valueProcess.js</valueProcess>
+              <contentProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/categories/contentProcess.js</contentProcess>
+              <searchableModes>none</searchableModes>
+              <x v="100" />
+              <y v="425" />
+              <width v="345" />
+              <height v="85" />
+              <utilizeRowId v="false" />
+              <tabOrder v="10" />
+              <staticContent />
+              <labelText>Kategorien</labelText>
+              <labelDistance v="90" />
+            </list>
+            <checkBox>
+              <name>classification</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/classification/valueProcess.js</valueProcess>
+              <valueTrue>PRIVATE</valueTrue>
+              <valueFalse>PUBLIC</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="325" />
+              <y v="85" />
+              <height v="15" />
+              <enabledProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/classification/enabledProcess.js</enabledProcess>
+              <labelText>privat</labelText>
+              <labelDistance v="45" />
+              <labelAnchor v="0" />
+              <tabOrder v="7" />
+            </checkBox>
+            <comboBox>
+              <name>Cmb_SelectLink</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/cmb_selectlink/contentProcess.js</contentProcess>
+              <x v="660" />
+              <y v="375" />
+              <width v="45" />
+              <horizontalAnchor v="2" />
+              <visible v="false" />
+              <tabOrder v="17" />
+              <emptyElementEnabled v="false" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <label>
+              <name>created</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <dataType v="93" />
+              <valueProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/created/valueProcess.js</valueProcess>
+              <outputFormat>dd.MM.yyyy HH:mm</outputFormat>
+              <x v="100" />
+              <y v="515" />
+              <width v="110" />
+              <fontColor v="0xff8a9ccc" />
+              <labelText>Erzeugt:</labelText>
+              <labelFontColor v="0xff8a9ccc" />
+              <labelDistance v="90" />
+            </label>
+            <label>
+              <name>createdby</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/createdby/valueProcess.js</valueProcess>
+              <x v="210" />
+              <y v="515" />
+              <width v="415" />
+              <fontColor v="0xff8a9ccc" />
+            </label>
+            <edit>
+              <name>due_date</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="93" />
+              <valueProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/due_date/valueProcess.js</valueProcess>
+              <outputFormat>EE dd.MM.yyyy HH:mm</outputFormat>
+              <inputFormat>dd.MM.yyyy HH:mm</inputFormat>
+              <searchableModes>none</searchableModes>
+              <keyboardSupport v="true" />
+              <calendarSupport v="true" />
+              <clockSupport v="true" />
+              <x v="100" />
+              <y v="35" />
+              <width v="175" />
+              <tabOrder v="1" />
+              <labelText>Fällig um</labelText>
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </edit>
+            <label>
+              <name>errortext</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/errortext/valueProcess.js</valueProcess>
+              <x v="100" />
+              <y v="140" />
+              <width v="345" />
+              <height v="15" />
+              <backgroundColor v="0xffffffcc" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/errortext/visibleProcess.js</visibleProcess>
+            </label>
+            <radioButton>
+              <name>grouptype</name>
+              <template>%aditoprj%/template/Template_Radiobutton/Template_Radiobutton.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/grouptype/valueProcess.js</valueProcess>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <readOnlyProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/grouptype/readOnlyProcess.js</readOnlyProcess>
+              <x v="660" />
+              <y v="300" />
+              <width v="180" />
+              <height v="70" />
+              <horizontalAnchor v="2" />
+              <enabledProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/grouptype/enabledProcess.js</enabledProcess>
+              <caption>Gruppenart</caption>
+              <tabOrder v="15" />
+              <staticContent>
+                <entry>
+                  <key>Mehrere Einzelaufgaben</key>
+                  <value>multi</value>
+                </entry>
+                <entry>
+                  <key>Eine Gruppenaufgabe</key>
+                  <value>single</value>
+                </entry>
+              </staticContent>
+            </radioButton>
+            <checkBox>
+              <name>hasreminder</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/hasreminder/valueProcess.js</valueProcess>
+              <valueTrue>true</valueTrue>
+              <valueFalse>false</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="10" />
+              <y v="90" />
+              <height v="15" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelAnchor v="0" />
+              <tabOrder v="5" />
+            </checkBox>
+            <table>
+              <name>links</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/links/onDoubleClick.js</onDoubleClick>
+              <rowCreate>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/links/rowCreate.js</rowCreate>
+              <rowDelete>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/links/rowDelete.js</rowDelete>
+              <displayContentProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/links/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="660" />
+              <y v="395" />
+              <width v="180" />
+              <height v="110" />
+              <horizontalAnchor v="2" />
+              <utilizeRowId v="true" />
+              <tabOrder v="16" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Verknuepfungen</name>
+                  <columnName>Verknüpfungen</columnName>
+                  <width v="164" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/links/columnmetadata/verknuepfungen/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+            <label>
+              <name>owner</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/owner/valueProcess.js</valueProcess>
+              <x v="100" />
+              <y v="115" />
+              <width v="345" />
+              <visible v="false" />
+              <labelText>Verantwortlich</labelText>
+              <labelDistance v="90" />
+            </label>
+            <edit>
+              <name>percent</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="12" />
+              <valueProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/percent/valueProcess.js</valueProcess>
+              <onValidation>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/percent/onValidation.js</onValidation>
+              <searchableModes>none</searchableModes>
+              <x v="410" />
+              <y v="85" />
+              <width v="35" />
+              <tabOrder v="8" />
+              <labelText>% erledigt</labelText>
+              <labelDistance v="55" />
+              <labelAnchor v="0" />
+            </edit>
+            <comboBox>
+              <name>priority</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/priority/valueProcess.js</valueProcess>
+              <contentProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/priority/contentProcess.js</contentProcess>
+              <searchableModes>none</searchableModes>
+              <x v="325" />
+              <y v="60" />
+              <width v="120" />
+              <tabOrder v="4" />
+              <staticContent />
+              <emptyElementEnabled v="false" />
+              <labelText>Priorität</labelText>
+              <labelDistance v="45" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>reminder_date</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="93" />
+              <valueProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/reminder_date/valueProcess.js</valueProcess>
+              <outputFormat>EE dd.MM.yyyy HH:mm</outputFormat>
+              <inputFormat>dd.MM.yyyy HH:mm</inputFormat>
+              <searchableModes>none</searchableModes>
+              <keyboardSupport v="true" />
+              <calendarSupport v="true" />
+              <clockSupport v="true" />
+              <x v="100" />
+              <y v="85" />
+              <width v="175" />
+              <visibleProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/reminder_date/visibleProcess.js</visibleProcess>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/reminder_date/enabledProcess.js</enabledProcess>
+              <tabOrder v="6" />
+              <labelText>Erinnerung</labelText>
+              <labelDistance v="70" />
+              <labelAnchor v="0" />
+            </edit>
+            <comboBox>
+              <name>reminder_duration</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <dataType v="4" />
+              <valueProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/reminder_duration/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <readOnlyProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/reminder_duration/readOnlyProcess.js</readOnlyProcess>
+              <x v="100" />
+              <y v="85" />
+              <width v="175" />
+              <visibleProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/reminder_duration/visibleProcess.js</visibleProcess>
+              <tabOrder v="14" />
+              <staticContent>
+                <entry>
+                  <key>0 Minuten</key>
+                  <value>0</value>
+                </entry>
+                <entry>
+                  <key>1 Minute</key>
+                  <value>-60000</value>
+                </entry>
+                <entry>
+                  <key>5 Minuten</key>
+                  <value>-300000</value>
+                </entry>
+                <entry>
+                  <key>10 Minuten</key>
+                  <value>-600000</value>
+                </entry>
+                <entry>
+                  <key>15 Minuten</key>
+                  <value>-900000</value>
+                </entry>
+                <entry>
+                  <key>30 Minuten</key>
+                  <value>-1800000</value>
+                </entry>
+                <entry>
+                  <key>1 Stunde</key>
+                  <value>-3600000</value>
+                </entry>
+                <entry>
+                  <key>2 Stunden</key>
+                  <value>-7200000</value>
+                </entry>
+                <entry>
+                  <key>3 Stunden</key>
+                  <value>-10800000</value>
+                </entry>
+                <entry>
+                  <key>4 Stunden</key>
+                  <value>-14400000</value>
+                </entry>
+                <entry>
+                  <key>5 Stunden</key>
+                  <value>-18000000</value>
+                </entry>
+                <entry>
+                  <key>6 Stunden</key>
+                  <value>-21600000</value>
+                </entry>
+                <entry>
+                  <key>7 Stunden</key>
+                  <value>-25200000</value>
+                </entry>
+                <entry>
+                  <key>8 Stunden</key>
+                  <value>-28800000</value>
+                </entry>
+                <entry>
+                  <key>9 Stunden</key>
+                  <value>-32400000</value>
+                </entry>
+                <entry>
+                  <key>10 Stunden</key>
+                  <value>-36000000</value>
+                </entry>
+                <entry>
+                  <key>11 Stunden</key>
+                  <value>-39600000</value>
+                </entry>
+                <entry>
+                  <key>0,5 Tag</key>
+                  <value>-43200000</value>
+                </entry>
+                <entry>
+                  <key>1 Tag</key>
+                  <value>-86400000</value>
+                </entry>
+                <entry>
+                  <key>2 Tage</key>
+                  <value>-172800000</value>
+                </entry>
+                <entry>
+                  <key>7 Tage</key>
+                  <value>-604800000</value>
+                </entry>
+              </staticContent>
+              <emptyElementEnabled v="false" />
+              <labelText>Erinnerung</labelText>
+              <labelDistance v="70" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>startdate</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="93" />
+              <valueProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/startdate/valueProcess.js</valueProcess>
+              <outputFormat>EE dd.MM.yyyy HH:mm</outputFormat>
+              <inputFormat>dd.MM.yyyy HH:mm</inputFormat>
+              <searchableModes>none</searchableModes>
+              <keyboardSupport v="true" />
+              <calendarSupport v="true" />
+              <clockSupport v="true" />
+              <x v="100" />
+              <y v="60" />
+              <width v="175" />
+              <tabOrder v="3" />
+              <labelText>Beginnt um</labelText>
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </edit>
+            <comboBox>
+              <name>status</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/status/valueProcess.js</valueProcess>
+              <contentProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/status/contentProcess.js</contentProcess>
+              <searchableModes>none</searchableModes>
+              <x v="325" />
+              <y v="35" />
+              <width v="120" />
+              <tabOrder v="2" />
+              <staticContent />
+              <emptyElementEnabled v="false" />
+              <labelText>Status</labelText>
+              <labelDistance v="45" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>subject</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/subject/valueProcess.js</valueProcess>
+              <contentProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/subject/contentProcess.js</contentProcess>
+              <searchableModes>none</searchableModes>
+              <x v="100" />
+              <y v="10" />
+              <width v="345" />
+              <utilizeRowId v="false" />
+              <tabOrder v="0" />
+              <editable v="true" />
+              <emptyElementEnabled v="false" />
+              <labelText>Betreff</labelText>
+              <labelDistance v="90" />
+            </comboBox>
+            <memo>
+              <name>text</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/text/valueProcess.js</valueProcess>
+              <searchableModes>none</searchableModes>
+              <x v="100" />
+              <y v="165" />
+              <width v="345" />
+              <height v="250" />
+              <tabOrder v="9" />
+              <labelText>Beschreibung</labelText>
+              <labelVisible v="true" />
+              <labelDistance v="90" />
+            </memo>
+            <tree>
+              <name>treeThemen</name>
+              <template>%aditoprj%/template/Template_Tree/Template_Tree.aod</template>
+              <contentProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/treethemen/contentProcess.js</contentProcess>
+              <onDoubleClick>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/treethemen/onDoubleClick.js</onDoubleClick>
+              <readOnlyProcess></readOnlyProcess>
+              <x v="465" />
+              <y v="90" />
+              <width v="160" />
+              <height v="420" />
+              <horizontalAnchor v="3" />
+              <popup>
+                <menuItem>
+                  <name>eac6b426-1e7e-420f-99cf-1c34e5a3c056</name>
+                  <caption>Einzelaufgabe</caption>
+                  <onClick>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/treethemen/popup/eac6b426-1e7e-420f-99cf-1c34e5a3c056/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/treethemen/popup/eac6b426-1e7e-420f-99cf-1c34e5a3c056/enabledProcess.js</enabledProcess>
+                </menuItem>
+                <menuItem>
+                  <name>3afb32a4-dbbe-4741-ba2e-69b8eba8c068</name>
+                  <caption>&amp;lt;--Separator&amp;gt;</caption>
+                  <isSeparator v="true" />
+                </menuItem>
+                <menuItem>
+                  <name>82897d0c-c604-4fd6-98a7-d97b0aa8ab18</name>
+                  <caption>Baum öffnen</caption>
+                  <onClick>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/treethemen/popup/82897d0c-c604-4fd6-98a7-d97b0aa8ab18/onClick.js</onClick>
+                </menuItem>
+                <menuItem>
+                  <name>10f4b370-a7f1-4af5-bb34-a241e86cd7bd</name>
+                  <caption>Baum schließen</caption>
+                  <onClick>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/treethemen/popup/10f4b370-a7f1-4af5-bb34-a241e86cd7bd/onClick.js</onClick>
+                </menuItem>
+              </popup>
+              <labelText>Mitarbeiter</labelText>
+              <labelOrientation v="1" />
+            </tree>
+            <button>
+              <name>btn_add</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/btn_add/onClick.js</onClick>
+              <x v="630" />
+              <y v="90" />
+              <width v="25" />
+              <horizontalAnchor v="2" />
+              <enabledProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/btn_add/enabledProcess.js</enabledProcess>
+              <tabOrder v="-1" />
+              <imageData>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/btn_add/imageData.png</imageData>
+            </button>
+            <button>
+              <name>btn_del</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/btn_del/onClick.js</onClick>
+              <x v="630" />
+              <y v="120" />
+              <width v="25" />
+              <horizontalAnchor v="2" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/btn_del/enabledProcess.js</enabledProcess>
+              <imageData>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/btn_del/imageData.png</imageData>
+            </button>
+            <table>
+              <name>tblUsers</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/tblusers/onDoubleClick.js</onDoubleClick>
+              <alwaysEditable v="false" />
+              <separateSavable v="true" />
+              <displayContentProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/tblusers/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="660" />
+              <y v="90" />
+              <width v="180" />
+              <height v="210" />
+              <horizontalAnchor v="2" />
+              <utilizeRowId v="true" />
+              <utilizeRowFontColor v="true" />
+              <grantArrangeColumns v="false" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Column</name>
+                  <editable v="false" />
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>417ab8bd-7f5c-4107-9eb4-a5ed345e311a</name>
+                  <caption>Verantwortlichen setzen</caption>
+                  <onClick>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/tblusers/popup/417ab8bd-7f5c-4107-9eb4-a5ed345e311a/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/tblusers/popup/417ab8bd-7f5c-4107-9eb4-a5ed345e311a/enabledProcess.js</enabledProcess>
+                  <visibleProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/tblusers/popup/417ab8bd-7f5c-4107-9eb4-a5ed345e311a/visibleProcess.js</visibleProcess>
+                </menuItem>
+              </popup>
+            </table>
+            <edit>
+              <name>edt_Suche</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <onValidation>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/edt_suche/onValidation.js</onValidation>
+              <x v="465" />
+              <y v="40" />
+              <width v="120" />
+              <horizontalAnchor v="3" />
+              <tabOrder v="11" />
+            </edit>
+            <button>
+              <name>btn_suche</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick></onClick>
+              <x v="585" />
+              <y v="40" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <enabledProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/btn_suche/enabledProcess.js</enabledProcess>
+              <tabOrder v="12" />
+              <imageData>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/btn_suche/imageData.png</imageData>
+            </button>
+            <button>
+              <name>btn_suchezurueck</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/btn_suchezurueck/onClick.js</onClick>
+              <x v="605" />
+              <y v="40" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <enabledProcess>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/btn_suchezurueck/enabledProcess.js</enabledProcess>
+              <tabOrder v="13" />
+              <imageData>%aditoprj%/frame/SYS_VTODO/children/register_0/children/allgemein/children/btn_suchezurueck/imageData.png</imageData>
+            </button>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Details</name>
+          <caption>Details</caption>
+          <visible v="false" />
+          <children>
+            <label>
+              <name>creationtime</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <x v="140" />
+              <y v="50" />
+              <width v="190" />
+              <labelText>Angelegt am:</labelText>
+              <labelDistance v="120" />
+            </label>
+            <label>
+              <name>creationuser</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <x v="140" />
+              <y v="20" />
+              <width v="190" />
+              <labelText>Angelegt von:</labelText>
+              <labelDistance v="120" />
+            </label>
+            <label>
+              <name>modificationtime</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <x v="140" />
+              <y v="110" />
+              <width v="190" />
+              <labelText>Letzte Änderung am:</labelText>
+              <labelDistance v="120" />
+            </label>
+            <label>
+              <name>modificationuser</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <x v="140" />
+              <y v="80" />
+              <width v="190" />
+              <labelText>Letzte Änderung von:</labelText>
+              <labelDistance v="120" />
+            </label>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+  </children>
+  <tableView />
+  <width v="850" />
+  <height v="580" />
+</frame>

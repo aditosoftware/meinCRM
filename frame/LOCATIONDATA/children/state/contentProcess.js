@@ -1,0 +1,1 @@
+a.rq("select distinct state from aosys_location order by state");

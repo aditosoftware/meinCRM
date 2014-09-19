@@ -1,0 +1,1 @@
+a.rd("$comp.orgname \n$comp.Label_orgaddress");

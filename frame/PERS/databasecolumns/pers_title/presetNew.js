@@ -1,0 +1,1 @@
+if ( a.valueof("$sys.superframe") == "PERS" )		a.rs( a.valueof("$image.TITLE") );

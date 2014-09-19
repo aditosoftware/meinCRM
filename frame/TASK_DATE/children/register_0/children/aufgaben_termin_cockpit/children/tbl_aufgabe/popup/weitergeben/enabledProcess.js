@@ -1,0 +1,1 @@
+a.rs( a.valueof("$comp.tbl_Aufgabe") != "" && a.hasvar("$image.editableToDo") && a.valueofObj("$image.editableToDo") );

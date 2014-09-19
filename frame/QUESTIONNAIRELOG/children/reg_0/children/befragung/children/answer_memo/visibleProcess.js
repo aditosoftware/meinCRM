@@ -1,0 +1,1 @@
+a.rs(a.valueofObj("$image.currentCompType") == '3' && a.valueofObj("$image.currentTargetid").substr(0, 1) != "0");

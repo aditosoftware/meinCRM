@@ -1,0 +1,1 @@
+//a.rs( a.valueof("$sys.workingmode") != a.FRAMEMODE_SHOW || a.valueof("$comp.HISTORY_ID") == "");

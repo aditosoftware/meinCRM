@@ -1,0 +1,1 @@
+a.rs("$comp.lup_Part");

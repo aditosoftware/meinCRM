@@ -1,0 +1,1 @@
+a.rs(a.valueof("$comp.Merge_RELATION_ID") != "" && a.valueof("$sys.workingmode") == a.FRAMEMODE_EDIT )

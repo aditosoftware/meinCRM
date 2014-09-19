@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportData_subreport1" pageWidth="250" pageHeight="802" columnWidth="250" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="4417c7c6-2c0a-49be-8d97-941ef5eb0763">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="BONITAET" class="java.lang.String"/>
+	<field name="ANZAHL" class="java.lang.String"/>
+	<sortField name="BONITAET"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="147">
+			<pie3DChart>
+				<chart>
+					<reportElement x="0" y="0" width="181" height="147" uuid="da7ce6cd-74ea-4a78-896d-b01fe084dfb3"/>
+					<chartTitle color="#0033FF">
+						<font fontName="Segoe UI"/>
+						<titleExpression><![CDATA[$R{Bonität}]]></titleExpression>
+					</chartTitle>
+					<chartSubtitle/>
+					<chartLegend position="Right"/>
+				</chart>
+				<pieDataset>
+					<keyExpression><![CDATA[$F{BONITAET} + " " + $F{ANZAHL}]]></keyExpression>
+					<valueExpression><![CDATA[Integer.parseInt($F{ANZAHL})]]></valueExpression>
+				</pieDataset>
+				<pie3DPlot isShowLabels="false">
+					<plot/>
+					<itemLabel/>
+				</pie3DPlot>
+			</pie3DChart>
+		</band>
+	</summary>
+</jasperReport>

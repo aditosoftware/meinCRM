@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>PRODUCTPRICE</name>
+  <title>Preisblatt</title>
+  <icon>%aditoprj%/frame/PRODUCTPRICE/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/PRODUCTPRICE/iconInactive.png</iconInactive>
+  <description></description>
+  <alias>AO_DATEN</alias>
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showSaveCancel v="false" />
+        <showCreate v="true" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <customComponents>
+          <rcCommandButton>
+            <name>Filter_setzen</name>
+            <title>Filter setzen</title>
+            <imageData>%aditoprj%/frame/PRODUCTPRICE/ribbon/ribbontasks/task_edit/customcomponents/filter_setzen/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/PRODUCTPRICE/ribbon/ribbontasks/task_edit/customcomponents/filter_setzen/onClick.js</onClick>
+            <ribbonElementPriority>LOW</ribbonElementPriority>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+          <rcSeparator>
+            <name>Separator</name>
+          </rcSeparator>
+          <rcCommandButton>
+            <name>Zuruecksetzen</name>
+            <title>Zurücksetzen</title>
+            <imageData>%aditoprj%/frame/PRODUCTPRICE/ribbon/ribbontasks/task_edit/customcomponents/zuruecksetzen/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/PRODUCTPRICE/ribbon/ribbontasks/task_edit/customcomponents/zuruecksetzen/onClick.js</onClick>
+            <ribbonElementPriority>LOW</ribbonElementPriority>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+          <rcSeparator>
+            <name>Separator_2</name>
+          </rcSeparator>
+          <rcCommandButton>
+            <name>neue_Preisliste</name>
+            <title>neue Preisliste</title>
+            <imageData>%aditoprj%/frame/PRODUCTPRICE/ribbon/ribbontasks/task_edit/customcomponents/neue_preisliste/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/PRODUCTPRICE/ribbon/ribbontasks/task_edit/customcomponents/neue_preisliste/onClick.js</onClick>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+        </customComponents>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <comboBox>
+      <name>cmb_pricelist</name>
+      <contentProcess>%aditoprj%/frame/PRODUCTPRICE/children/cmb_pricelist/contentProcess.js</contentProcess>
+      <x v="395" />
+      <y v="595" />
+      <width v="110" />
+      <font name="Verdana" style="0" size="11" />
+      <visible v="false" />
+      <labelFont name="" style="0" size="11" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <edit>
+      <name>edt_fromquantity</name>
+      <dataType v="6" />
+      <outputFormat>0</outputFormat>
+      <inputFormat>0</inputFormat>
+      <x v="625" />
+      <y v="595" />
+      <width v="110" />
+      <font name="Verdana" style="0" size="11" />
+      <visible v="false" />
+      <tabOrder v="2" />
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="65" />
+    </edit>
+    <edit>
+      <name>edt_price</name>
+      <dataType v="6" />
+      <outputFormat>#,##0.00</outputFormat>
+      <inputFormat>#,##0.00</inputFormat>
+      <x v="740" />
+      <y v="595" />
+      <width v="110" />
+      <font name="Verdana" style="0" size="11" />
+      <visible v="false" />
+      <tabOrder v="3" />
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="65" />
+    </edit>
+    <edit>
+      <name>edt_validfrom</name>
+      <dataType v="93" />
+      <outputFormat>dd.MM.yyyy</outputFormat>
+      <inputFormat>dd.MM.yyyy</inputFormat>
+      <calendarSupport v="true" />
+      <x v="510" />
+      <y v="595" />
+      <width v="110" />
+      <font name="Verdana" style="0" size="11" />
+      <visible v="false" />
+      <tabOrder v="1" />
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="65" />
+    </edit>
+    <table>
+      <name>tbl_pricelist</name>
+      <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+      <onDoubleClick>%aditoprj%/frame/PRODUCTPRICE/children/tbl_pricelist/onDoubleClick.js</onDoubleClick>
+      <alwaysEditable v="true" />
+      <rowUpdate>%aditoprj%/frame/PRODUCTPRICE/children/tbl_pricelist/rowUpdate.js</rowUpdate>
+      <rowDelete>%aditoprj%/frame/PRODUCTPRICE/children/tbl_pricelist/rowDelete.js</rowDelete>
+      <displayContentProcess>%aditoprj%/frame/PRODUCTPRICE/children/tbl_pricelist/displayContentProcess.js</displayContentProcess>
+      <idContentProcess>%aditoprj%/frame/PRODUCTPRICE/children/tbl_pricelist/idContentProcess.js</idContentProcess>
+      <contentProcessType v="1" />
+      <x v="15" />
+      <y v="20" />
+      <width v="820" />
+      <height v="545" />
+      <verticalAnchor v="6" />
+      <utilizeRowId v="true" />
+      <tabOrder v="0" />
+      <columnMetaData>
+        <columnMetaData>
+          <name>Warengruppe</name>
+          <columnName>Warengruppe</columnName>
+          <width v="116" />
+        </columnMetaData>
+        <columnMetaData>
+          <name>ArtikelNr</name>
+          <columnName>Artikel-Nr.</columnName>
+          <width v="110" />
+        </columnMetaData>
+        <columnMetaData>
+          <name>Produktbezeichnung</name>
+          <columnName>Produktbezeichnung</columnName>
+          <width v="140" />
+        </columnMetaData>
+        <columnMetaData>
+          <name>Preisliste</name>
+          <columnName>Preisliste</columnName>
+          <width v="137" />
+          <editable v="true" />
+          <editorComponentProcess>%aditoprj%/frame/PRODUCTPRICE/children/tbl_pricelist/columnmetadata/preisliste/editorComponentProcess.js</editorComponentProcess>
+        </columnMetaData>
+        <columnMetaData>
+          <name>gueltig_ab</name>
+          <columnName>gültig ab</columnName>
+          <width v="77" />
+          <dataType v="93" />
+          <outputFormat>dd.MM.yyyy</outputFormat>
+          <editable v="true" />
+          <editorComponentProcess>%aditoprj%/frame/PRODUCTPRICE/children/tbl_pricelist/columnmetadata/gueltig_ab/editorComponentProcess.js</editorComponentProcess>
+        </columnMetaData>
+        <columnMetaData>
+          <name>ab_Anzahl</name>
+          <columnName>ab Anzahl</columnName>
+          <width v="70" />
+          <alignment v="4" />
+          <dataType v="6" />
+          <outputFormat>0</outputFormat>
+          <editable v="true" />
+          <editorComponentProcess>%aditoprj%/frame/PRODUCTPRICE/children/tbl_pricelist/columnmetadata/ab_anzahl/editorComponentProcess.js</editorComponentProcess>
+        </columnMetaData>
+        <columnMetaData>
+          <name>Preis</name>
+          <columnName>Preis</columnName>
+          <width v="53" />
+          <alignment v="4" />
+          <dataType v="6" />
+          <outputFormat>#,##0.00</outputFormat>
+          <editable v="true" />
+          <editorComponentProcess>%aditoprj%/frame/PRODUCTPRICE/children/tbl_pricelist/columnmetadata/preis/editorComponentProcess.js</editorComponentProcess>
+        </columnMetaData>
+        <columnMetaData>
+          <name>Waehrg</name>
+          <columnName>Währg</columnName>
+          <width v="49" />
+        </columnMetaData>
+        <columnMetaData>
+          <name>MWST</name>
+          <columnName>MWST</columnName>
+          <width v="45" />
+          <alignment v="0" />
+          <dataType v="6" />
+          <outputFormat>#,##0.0</outputFormat>
+        </columnMetaData>
+      </columnMetaData>
+      <popup>
+        <menuItem>
+          <name>Uebernahme_in_Preisliste</name>
+          <caption>Übernahme in Preisliste</caption>
+          <onClick>%aditoprj%/frame/PRODUCTPRICE/children/tbl_pricelist/popup/uebernahme_in_preisliste/onClick.js</onClick>
+          <enabledProcess></enabledProcess>
+          <visibleProcess></visibleProcess>
+          <isSeparator v="false" />
+        </menuItem>
+        <menuItem>
+          <name>Preisaenderung</name>
+          <caption>Preisänderung</caption>
+          <onClick>%aditoprj%/frame/PRODUCTPRICE/children/tbl_pricelist/popup/preisaenderung/onClick.js</onClick>
+          <enabledProcess></enabledProcess>
+          <visibleProcess></visibleProcess>
+          <isSeparator v="false" />
+        </menuItem>
+      </popup>
+    </table>
+  </children>
+  <tableView />
+  <width v="850" />
+  <height v="580" />
+</frame>

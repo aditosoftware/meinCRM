@@ -1,0 +1,1 @@
+a.rq("select distinct aomodule from aosys_tablerepository order by aomodule");

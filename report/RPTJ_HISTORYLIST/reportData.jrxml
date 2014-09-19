@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Historienliste" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e7a916c8-3f9a-497d-84bb-3909b15271ea">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="myAddr" class="java.lang.String"/>
+	<parameter name="adito.image.myLogo" class="java.lang.String"/>
+	<field name="HISTORYID" class="java.lang.String"/>
+	<field name="ENTRYDATE" class="java.lang.String"/>
+	<field name="MEDIUM" class="java.lang.String"/>
+	<field name="DIRECTION" class="java.lang.String"/>
+	<field name="FIRSTLASTNAME" class="java.lang.String"/>
+	<field name="SUBJECT" class="java.lang.String"/>
+	<field name="INFO" class="java.lang.String"/>
+	<field name="ORGNAME" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="192" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="92" width="555" height="20" uuid="ad0858f5-b1d5-4b8b-b76a-46f2309f0a3e"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="92" width="555" height="20" forecolor="#999999" uuid="16214822-1331-446f-b385-c78dd7c39b2b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{myAddr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="122" width="140" height="20" forecolor="#999999" uuid="20e7f6b3-1047-4995-b8bf-6b30e7de3c66"/>
+				<textElement>
+					<font fontName="Verdana" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Historienliste}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="162" width="55" height="10" uuid="b175aa5d-240e-4969-978b-3ec10428faa8"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Datum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="59" y="162" width="161" height="10" uuid="385aa645-ef6b-4398-aee2-19c67490193a"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{betrifft}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="59" y="175" width="161" height="10" uuid="d5d2e3b2-b98e-4049-8fea-fef03e78c6f8"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Info}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="162" width="66" height="10" uuid="1ffd1a57-27f6-4c6d-8ee9-6ee43ee49cdb"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Medium}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="162" width="100" height="10" uuid="117da997-7879-4998-8d21-f12a3ed5505a"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{zuständig}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="388" y="162" width="169" height="10" uuid="0a901079-6aa5-4c8f-8ed1-0766a6224e86"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Firma}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="188" width="555" height="1" uuid="1634eb03-2e88-437a-8efc-8c5c19edb8e9"/>
+			</line>
+			<image scaleImage="RetainShape" hAlign="Center">
+				<reportElement x="184" y="14" width="175" height="50" uuid="363be0a7-01c9-474f-8308-81887f1faa36"/>
+				<imageExpression><![CDATA[$P{adito.image.myLogo}]]></imageExpression>
+			</image>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="12" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="55" height="10" uuid="696427f1-9845-4172-88e5-1ac471d11f71"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ENTRYDATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="59" y="0" width="161" height="10" uuid="79fee1d2-2450-4073-b9ba-7237a95404f0"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SUBJECT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="66" height="10" uuid="ba0dee79-c354-4b9a-b754-6e86f307b0c9"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MEDIUM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="0" width="100" height="10" uuid="20a86993-4f4e-4118-8116-203d48d3f310"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FIRSTLASTNAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="388" y="0" width="167" height="10" uuid="c6eb8e9b-ba11-4c07-88bd-ac81072f8d10"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ORGNAME}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="13" y="0" width="13" height="10" uuid="99a636de-5159-4158-b0ee-9b5ba3283309"/>
+				<sr:sort xmlns:sr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<sr:symbol handlerColor="#000000" sortFieldType="Field" sortFieldName="ENTRYDATE" handlerHorizontalAlign="Center" handlerVerticalAlign="Middle"/>
+				</sr:sort>
+			</componentElement>
+		</band>
+		<band height="12">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="59" y="0" width="496" height="10" isRemoveLineWhenBlank="true" uuid="4a78abf8-1f83-49ae-8165-4c9ec6172663"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{INFO}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="9">
+			<line>
+				<reportElement x="0" y="5" width="555" height="1" uuid="20832e2f-b6d5-4b6c-b3ba-4c857cda43a9"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="40" splitType="Stretch">
+			<textField evaluationTime="Report">
+				<reportElement x="534" y="23" width="21" height="17" forecolor="#999999" uuid="00200292-6c99-44fa-bec7-f99714b2d95c"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="10" width="555" height="1" forecolor="#999999" uuid="a501ebf4-90c4-453a-af96-99e74a752ce3"/>
+			</line>
+			<textField>
+				<reportElement x="473" y="23" width="60" height="17" forecolor="#999999" uuid="85b0073d-7e06-452d-97ca-821798292a8c"/>
+				<textElement textAlignment="Right">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Seite}+" "+$V{PAGE_NUMBER}+" "+$R{von}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="385" y="23" width="95" height="17" forecolor="#999999" uuid="c92fefb2-71aa-454c-b04a-c1b8544719e2"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+</jasperReport>

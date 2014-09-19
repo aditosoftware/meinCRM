@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>HISTORY_FOLGE</name>
+  <title>Folge-Historie</title>
+  <icon>%aditoprj%/frame/HISTORY_FOLGE/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/HISTORY_FOLGE/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type  public
+@status released
+@desc [Frame für die Neuanlage und Verwaltung von Historieneinträgen]
+
+@module Standard
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <linkInformation>
+    <linkInformation>
+      <name>295b3681-ab15-43d2-a8ac-66ed245a105e</name>
+      <tableName>HISTORY</tableName>
+      <primaryKey>HISTORYID</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+  </linkInformation>
+  <whereClause></whereClause>
+  <orderByClause>%aditoprj%/frame/HISTORY_FOLGE/orderByClause.js</orderByClause>
+  <idStrategy v="4" />
+  <beforeStart></beforeStart>
+  <afterStart></afterStart>
+  <beforeSave></beforeSave>
+  <afterSave></afterSave>
+  <beforeDelete></beforeDelete>
+  <afterDelete>%aditoprj%/frame/HISTORY_FOLGE/afterDelete.js</afterDelete>
+  <afterCancel>%aditoprj%/frame/HISTORY_FOLGE/afterCancel.js</afterCancel>
+  <afterEdit></afterEdit>
+  <currentContentProcess>%aditoprj%/frame/HISTORY_FOLGE/currentContentProcess.js</currentContentProcess>
+  <grantCreate v="false" />
+  <grantCreateProcess></grantCreateProcess>
+  <grantUpdateProcess></grantUpdateProcess>
+  <grantDeleteProcess></grantDeleteProcess>
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <customComponents>
+          <rcCommandButton>
+            <name>HistorienListe</name>
+            <title>Historien-Liste</title>
+            <imageData>%aditoprj%/frame/HISTORY_FOLGE/ribbon/ribbontasks/task_search/customcomponents/historienliste/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/HISTORY_FOLGE/ribbon/ribbontasks/task_search/customcomponents/historienliste/onClick.js</onClick>
+            <enabledProcess>%aditoprj%/frame/HISTORY_FOLGE/ribbon/ribbontasks/task_search/customcomponents/historienliste/enabledProcess.js</enabledProcess>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+        </customComponents>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="true" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <databaseColumns>
+    <column>
+      <name>HISTORY_HISTORYID</name>
+      <tableName>HISTORY</tableName>
+      <columnName>HISTORYID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/HISTORY_FOLGE/databasecolumns/history_historyid/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>HISTORY_DATE_NEW</name>
+      <tableName>HISTORY</tableName>
+      <columnName>DATE_NEW</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+      <presetNew>%aditoprj%/frame/HISTORY_FOLGE/databasecolumns/history_date_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>HISTORY_DATE_EDIT</name>
+      <tableName>HISTORY</tableName>
+      <columnName>DATE_EDIT</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+      <presetNew>%aditoprj%/frame/HISTORY_FOLGE/databasecolumns/history_date_edit/presetNew.js</presetNew>
+      <presetChange>%aditoprj%/frame/HISTORY_FOLGE/databasecolumns/history_date_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>HISTORY_USER_NEW</name>
+      <tableName>HISTORY</tableName>
+      <columnName>USER_NEW</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+      <presetNew>%aditoprj%/frame/HISTORY_FOLGE/databasecolumns/history_user_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>HISTORY_USER_EDIT</name>
+      <tableName>HISTORY</tableName>
+      <columnName>USER_EDIT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+      <presetNew>%aditoprj%/frame/HISTORY_FOLGE/databasecolumns/history_user_edit/presetNew.js</presetNew>
+      <presetChange>%aditoprj%/frame/HISTORY_FOLGE/databasecolumns/history_user_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>HISTORY_ENTRYDATE</name>
+      <tableName>HISTORY</tableName>
+      <columnName>ENTRYDATE</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="29" />
+      <scale>9</scale>
+      <presetNew>%aditoprj%/frame/HISTORY_FOLGE/databasecolumns/history_entrydate/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>HISTORY_RELATION_ID</name>
+      <tableName>HISTORY</tableName>
+      <columnName>RELATION_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/HISTORY_FOLGE/databasecolumns/history_relation_id/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>HISTORY_MAIL_ID</name>
+      <tableName>HISTORY</tableName>
+      <columnName>MAIL_ID</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="128" />
+    </column>
+    <column>
+      <name>HISTORY_MEDIUM</name>
+      <tableName>HISTORY</tableName>
+      <columnName>MEDIUM</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/HISTORY_FOLGE/databasecolumns/history_medium/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>HISTORY_DIRECTION</name>
+      <tableName>HISTORY</tableName>
+      <columnName>DIRECTION</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="1" />
+      <presetNew>%aditoprj%/frame/HISTORY_FOLGE/databasecolumns/history_direction/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>HISTORY_INFO</name>
+      <tableName>HISTORY</tableName>
+      <columnName>INFO</columnName>
+      <dataTypeName>CLOB</dataTypeName>
+      <dataType v="2005" />
+      <precision v="2147483647" />
+      <scale>0</scale>
+    </column>
+    <column>
+      <name>HISTORY_SUBJECT</name>
+      <tableName>HISTORY</tableName>
+      <columnName>SUBJECT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="254" />
+    </column>
+    <column>
+      <name>HISTORY_HISTORY_ID</name>
+      <tableName>HISTORY</tableName>
+      <columnName>HISTORY_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+    </column>
+  </databaseColumns>
+  <blobDatabaseColumns>
+    <blobColumn>
+      <name>HISTORY_DOCUMENT</name>
+      <tableName>HISTORY</tableName>
+      <columnName>DOCUMENT</columnName>
+      <rowIdProcess></rowIdProcess>
+    </blobColumn>
+    <blobColumn>
+      <name>_____GENERIC_DOCUMENT</name>
+      <tableName>$!GENERIC!$</tableName>
+      <columnName>DOCUMENT</columnName>
+      <rowIdProcess>%aditoprj%/frame/HISTORY_FOLGE/blobdatabasecolumns/_____generic_document/rowIdProcess.js</rowIdProcess>
+    </blobColumn>
+  </blobDatabaseColumns>
+  <children>
+    <comboBox>
+      <name>DIRECTION</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>HISTORY</tableName>
+      <columnName>DIRECTION</columnName>
+      <dataType v="1" />
+      <precision v="1" />
+      <presetNew>%aditoprj%/frame/HISTORY_FOLGE/children/direction/presetNew.js</presetNew>
+      <mandatoryInput v="true" />
+      <x v="255" />
+      <y v="95" />
+      <width v="115" />
+      <tabOrder v="4" />
+      <staticContent>
+        <entry>
+          <key>ausgehend</key>
+          <value>o</value>
+        </entry>
+        <entry>
+          <key>eingehend</key>
+          <value>i</value>
+        </entry>
+      </staticContent>
+      <labelText>Richtung</labelText>
+      <labelVisible v="false" />
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <edit>
+      <name>ENTRYDATE</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>HISTORY</tableName>
+      <columnName>ENTRYDATE</columnName>
+      <dataType v="93" />
+      <precision v="26" />
+      <presetNew>%aditoprj%/frame/HISTORY_FOLGE/children/entrydate/presetNew.js</presetNew>
+      <outputFormat>EEEE, dd.MM.yyyy</outputFormat>
+      <inputFormat>dd.MM.yyyy</inputFormat>
+      <mandatoryInput v="true" />
+      <calendarSupport v="true" />
+      <searchInInterval v="true" />
+      <x v="120" />
+      <y v="20" />
+      <width v="250" />
+      <tabOrder v="0" />
+      <labelText>Datum</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+    <label>
+      <name>lblCreatedEdited</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <valueProcess>%aditoprj%/frame/HISTORY_FOLGE/children/lblcreatededited/valueProcess.js</valueProcess>
+      <x v="20" />
+      <y v="565" />
+      <width v="830" />
+      <height v="15" />
+      <verticalAnchor v="5" />
+      <font name="Verdana" style="0" size="9" />
+      <labelAnchor v="0" />
+    </label>
+    <comboBox>
+      <name>MEDIUM</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>HISTORY</tableName>
+      <columnName>MEDIUM</columnName>
+      <dataType v="4" />
+      <precision v="10" />
+      <presetNew>%aditoprj%/frame/HISTORY_FOLGE/children/medium/presetNew.js</presetNew>
+      <contentProcess>%aditoprj%/frame/HISTORY_FOLGE/children/medium/contentProcess.js</contentProcess>
+      <mandatoryInput v="true" />
+      <x v="120" />
+      <y v="95" />
+      <width v="130" />
+      <tabOrder v="3" />
+      <staticContent />
+      <maximumRowCount v="20" />
+      <emptyElementEnabled v="false" />
+      <labelText>Medium</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <register>
+      <name>Register_0</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <y v="165" />
+      <width v="850" />
+      <height v="400" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <visible v="true" />
+      <tabOrder v="5" />
+      <children>
+        <registerTab>
+          <name>Bericht</name>
+          <caption>&amp;amp;Bericht</caption>
+          <children>
+            <memo>
+              <name>INFO</name>
+              <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+              <tableName>HISTORY</tableName>
+              <columnName>INFO</columnName>
+              <dataType v="2005" />
+              <precision v="-1" />
+              <x v="20" />
+              <y v="10" />
+              <width v="805" />
+              <height v="350" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <visibleProcess>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/bericht/children/info/visibleProcess.js</visibleProcess>
+              <tabOrder v="1" />
+              <labelText>Bemerkung</labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+            </memo>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Admin</name>
+          <caption>Admin</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/visibleProcess.js</visibleProcess>
+          <children>
+            <edit>
+              <name>DATE_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>HISTORY</tableName>
+              <columnName>DATE_EDIT</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetNew>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/date_edit/presetNew.js</presetNew>
+              <presetChange>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/date_edit/presetChange.js</presetChange>
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <searchableModes>mask</searchableModes>
+              <x v="545" />
+              <y v="45" />
+              <width v="140" />
+              <tabOrder v="5" />
+              <labelText>DATE_EDIT</labelText>
+              <labelDistance v="100" />
+            </edit>
+            <edit>
+              <name>DATE_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>HISTORY</tableName>
+              <columnName>DATE_NEW</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetNew>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/date_new/presetNew.js</presetNew>
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <searchableModes>mask</searchableModes>
+              <x v="545" />
+              <y v="20" />
+              <width v="140" />
+              <tabOrder v="4" />
+              <labelText>DATE_NEW</labelText>
+              <labelDistance v="100" />
+            </edit>
+            <edit>
+              <name>HISTORY_ID</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>HISTORY</tableName>
+              <columnName>HISTORY_ID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <searchableModes>mask</searchableModes>
+              <x v="135" />
+              <y v="110" />
+              <width v="250" />
+              <tabOrder v="3" />
+              <labelText>HISTORY_ID</labelText>
+              <labelDistance v="100" />
+            </edit>
+            <edit>
+              <name>historyid</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>HISTORY</tableName>
+              <columnName>HISTORYID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <presetNew>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/historyid/presetNew.js</presetNew>
+              <onDoubleClick>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/historyid/onDoubleClick.js</onDoubleClick>
+              <searchableModes>mask</searchableModes>
+              <x v="135" />
+              <y v="25" />
+              <width v="250" />
+              <tabOrder v="0" />
+              <labelText>HISTORYID</labelText>
+              <labelDistance v="100" />
+            </edit>
+            <edit>
+              <name>idcolumn</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="1" />
+              <precision v="36" />
+              <valueProcess>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/idcolumn/valueProcess.js</valueProcess>
+              <presetNew>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/idcolumn/presetNew.js</presetNew>
+              <onDoubleClick>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/idcolumn/onDoubleClick.js</onDoubleClick>
+              <searchableModes>mask</searchableModes>
+              <x v="135" />
+              <y v="50" />
+              <width v="250" />
+              <tabOrder v="1" />
+              <labelText>IDCOLUMN</labelText>
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>MAIL_ID</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>HISTORY</tableName>
+              <columnName>MAIL_ID</columnName>
+              <dataType v="12" />
+              <precision v="128" />
+              <onDoubleClick>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/mail_id/onDoubleClick.js</onDoubleClick>
+              <searchableModes>mask</searchableModes>
+              <x v="135" />
+              <y v="80" />
+              <width v="250" />
+              <tabOrder v="2" />
+              <labelText>MAIL_ID</labelText>
+              <labelDistance v="100" />
+            </edit>
+            <edit>
+              <name>SearchDATE</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="91" />
+              <searchLinkCondition>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/searchdate/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/searchdate/searchFields.js</searchFields>
+              <calendarSupport v="true" />
+              <x v="710" />
+              <y v="20" />
+              <width v="95" />
+              <visible v="false" />
+              <tabOrder v="9" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SearchFLOAT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="6" />
+              <inputFormat>0.00</inputFormat>
+              <searchLinkCondition>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/searchfloat/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/searchfloat/searchFields.js</searchFields>
+              <x v="710" />
+              <y v="80" />
+              <width v="95" />
+              <visible v="false" />
+              <tabOrder v="12" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SearchINTEGER</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="4" />
+              <inputFormat>0</inputFormat>
+              <searchLinkCondition>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/searchinteger/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/searchinteger/searchFields.js</searchFields>
+              <x v="710" />
+              <y v="60" />
+              <width v="95" />
+              <visible v="false" />
+              <tabOrder v="8" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SearchVARCHAR</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <searchLinkCondition>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/searchvarchar/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/searchvarchar/searchFields.js</searchFields>
+              <x v="710" />
+              <y v="40" />
+              <width v="95" />
+              <visible v="false" />
+              <tabOrder v="10" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <comboBox>
+              <name>SerachCombo</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/serachcombo/contentProcess.js</contentProcess>
+              <searchLinkCondition>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/serachcombo/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <searchFields>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/serachcombo/searchFields.js</searchFields>
+              <x v="710" />
+              <y v="105" />
+              <width v="95" />
+              <visible v="false" />
+              <tabOrder v="11" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>SerachCombo_Themen</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <dataType v="1" />
+              <precision v="36" />
+              <contentProcess>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/serachcombo_themen/contentProcess.js</contentProcess>
+              <searchLinkTableName>HISTORY_THEME</searchLinkTableName>
+              <searchLinkColumnName>THEME_ID</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/serachcombo_themen/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>table</searchableModes>
+              <x v="710" />
+              <y v="130" />
+              <width v="95" />
+              <visible v="false" />
+              <tabOrder v="13" />
+              <labelText>Thema</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>USER_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>HISTORY</tableName>
+              <columnName>USER_EDIT</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <presetNew>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/user_edit/presetNew.js</presetNew>
+              <presetChange>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/user_edit/presetChange.js</presetChange>
+              <searchableModes>mask</searchableModes>
+              <x v="545" />
+              <y v="100" />
+              <width v="140" />
+              <tabOrder v="7" />
+              <labelText>USER_EDIT</labelText>
+              <labelDistance v="100" />
+            </edit>
+            <edit>
+              <name>USER_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>HISTORY</tableName>
+              <columnName>USER_NEW</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <presetNew>%aditoprj%/frame/HISTORY_FOLGE/children/register_0/children/admin/children/user_new/presetNew.js</presetNew>
+              <searchableModes>mask</searchableModes>
+              <x v="545" />
+              <y v="75" />
+              <width v="140" />
+              <tabOrder v="6" />
+              <labelText>USER_NEW</labelText>
+              <labelDistance v="100" />
+            </edit>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+    <lookup>
+      <name>relation_id</name>
+      <template>%aditoprj%/template/Template_Lookup/Template_Lookup.aod</template>
+      <tableName>HISTORY</tableName>
+      <columnName>RELATION_ID</columnName>
+      <dataType v="1" />
+      <presetNew>%aditoprj%/frame/HISTORY_FOLGE/children/relation_id/presetNew.js</presetNew>
+      <selectClause>%aditoprj%/frame/HISTORY_FOLGE/children/relation_id/selectClause.js</selectClause>
+      <fromClause>%aditoprj%/frame/HISTORY_FOLGE/children/relation_id/fromClause.js</fromClause>
+      <x v="120" />
+      <y v="70" />
+      <width v="250" />
+      <height v="20" />
+      <enabled v="true" />
+      <tabOrder v="2" />
+      <labelText>Mitarbeiter</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+      <columnProperties>
+        <lookupColumnMetaData>
+          <name>Nachname</name>
+          <columnName>Nachname</columnName>
+          <searchable v="true" />
+          <width v="175" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+        <lookupColumnMetaData>
+          <name>Vorname</name>
+          <columnName>Vorname</columnName>
+          <searchable v="true" />
+          <width v="180" />
+          <alignment v="2" />
+        </lookupColumnMetaData>
+      </columnProperties>
+    </lookup>
+    <comboBox>
+      <name>SUBJECT</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>HISTORY</tableName>
+      <columnName>SUBJECT</columnName>
+      <dataType v="12" />
+      <precision v="254" />
+      <contentProcess>%aditoprj%/frame/HISTORY_FOLGE/children/subject/contentProcess.js</contentProcess>
+      <x v="120" />
+      <y v="45" />
+      <width v="250" />
+      <horizontalAnchor v="1" />
+      <visibleProcess>%aditoprj%/frame/HISTORY_FOLGE/children/subject/visibleProcess.js</visibleProcess>
+      <enabled v="true" />
+      <utilizeRowId v="false" />
+      <tabOrder v="1" />
+      <editable v="true" />
+      <maximumRowCount v="30" />
+      <labelText>Betrifft</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </comboBox>
+  </children>
+  <tableView>
+    <tableViewProperties>
+      <columnProperty>
+        <name>HISTORY_ENTRYDATE</name>
+        <tableName>HISTORY</tableName>
+        <columnName>ENTRYDATE</columnName>
+        <label>Datum</label>
+        <width v="74" />
+        <dataType v="93" />
+        <outputFormat>dd.MM.yyyy</outputFormat>
+      </columnProperty>
+      <columnProperty>
+        <name>Medium</name>
+        <label>Medium</label>
+        <width v="70" />
+        <subSelect>%aditoprj%/frame/HISTORY_FOLGE/tableview/tableviewproperties/medium/subSelect.js</subSelect>
+      </columnProperty>
+      <columnProperty>
+        <name>Employee</name>
+        <label>Mitarbeiter</label>
+        <width v="120" />
+        <subSelect>%aditoprj%/frame/HISTORY_FOLGE/tableview/tableviewproperties/employee/subSelect.js</subSelect>
+      </columnProperty>
+      <columnProperty>
+        <name>HISTORY_SUBJECT</name>
+        <tableName>HISTORY</tableName>
+        <columnName>SUBJECT</columnName>
+        <label>Betrifft</label>
+        <width v="180" />
+      </columnProperty>
+      <columnProperty>
+        <name>HISTORY_INFO</name>
+        <tableName>HISTORY</tableName>
+        <columnName>INFO</columnName>
+        <label>Bemerkung</label>
+        <width v="200" />
+      </columnProperty>
+    </tableViewProperties>
+  </tableView>
+  <width v="850" />
+  <height v="580" />
+</frame>

@@ -1,0 +1,1 @@
+a.rq("select columnname from aosys_columnrepository where table_id = '$local.TABLEID' order by columnname");

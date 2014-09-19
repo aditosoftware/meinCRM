@@ -1,0 +1,1 @@
+a.rs(eMath.addInt(a.sql("select max(EVENTNUMBER) from EVENT"),"1"));

@@ -1,0 +1,1 @@
+if ( a.valueof("$comp.lastname") == "" )     a.rs("");

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e7a916c8-3f9a-497d-84bb-3909b15271ea">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="myAddr" class="java.lang.String"/>
+	<parameter name="adito.image.myLogo" class="java.lang.String"/>
+	<field name="CONTRACTID" class="java.lang.String"/>
+	<field name="CONTRACTCODE" class="java.lang.String"/>
+	<field name="CONTRACTSTART" class="java.lang.String"/>
+	<field name="CONTRACTEND" class="java.lang.String"/>
+	<field name="CONTRACTTYPE" class="java.lang.String"/>
+	<field name="CONTRACTSTATUS" class="java.lang.String"/>
+	<field name="REMARK" class="java.lang.String"/>
+	<field name="ORG" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="171" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="86" width="555" height="20" forecolor="#666666" uuid="7a9e452d-d607-49e3-b232-c5917878c0a1"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="86" width="555" height="20" forecolor="#999999" uuid="96eaff62-7661-4d4c-a527-753030bce7ca"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{myAddr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="112" width="100" height="10" uuid="5c18f6f8-fbf5-4864-8d70-480bb5b23c7e"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Vertragsliste}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="138" width="100" height="10" uuid="faaf9790-f49e-4a23-8d6d-7b8955ffc138"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Vertrags-Nr.}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="153" width="200" height="10" uuid="94d35278-a30b-4d56-ac0e-d73c513bc43d"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Firma}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="138" width="100" height="10" uuid="cafa1d30-1c75-4ce5-accf-f9481de888bb"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Vertragsart}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="138" width="100" height="10" uuid="0ed47da7-dcfd-408f-9902-84ed95bace8b"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Vertragsbeginn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="153" width="100" height="10" uuid="660b67e3-4256-4106-be3e-7e2be94abf10"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Bemerkung}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="342" y="138" width="100" height="10" uuid="1dd006db-29a7-4319-ba31-f44865d91fe5"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Vertragsende}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="138" width="100" height="10" uuid="2e2c8829-0292-4e95-b281-06b92c457527"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Status}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="167" width="555" height="1" uuid="a0d3894f-37d3-4c7f-9d85-8780a4c5bade"/>
+			</line>
+			<image scaleImage="RetainShape" hAlign="Center">
+				<reportElement x="186" y="10" width="170" height="50" uuid="90dc3ca6-bff3-4b74-a03d-84cc3f9ab729"/>
+				<imageExpression><![CDATA[$P{adito.image.myLogo}]]></imageExpression>
+			</image>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="13" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="10" uuid="8860c261-37b2-466d-8722-6fb30869a5ad"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CONTRACTCODE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="0" width="100" height="10" uuid="bcdb0f8e-5763-4eba-b651-f9bed8d17466"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CONTRACTTYPE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="0" width="100" height="10" uuid="61d939c2-c56c-482a-a6dd-0bb6a128e245"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CONTRACTSTART}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="342" y="0" width="100" height="10" uuid="70970dbe-6496-46d9-befd-2b68b8d597ad"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CONTRACTEND}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="455" y="0" width="100" height="10" uuid="7bb24b03-86d6-45aa-ab01-ab419e9a999f"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CONTRACTSTATUS}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="12">
+			<textField>
+				<reportElement x="0" y="0" width="200" height="10" uuid="f3431480-e70f-4d99-90a6-54c10cb868b7"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ORG}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="230" y="0" width="212" height="10" uuid="9a72a0c9-9230-4d46-8efb-69cb2d352a5f"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{REMARK}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="9">
+			<line>
+				<reportElement x="0" y="4" width="555" height="1" uuid="3a43f33d-e9d0-4e73-ab15-f0b87729234a"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="40" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="383" y="23" width="95" height="17" forecolor="#999999" uuid="bf8f9479-f46c-48d6-9d39-69835f0f0864"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="530" y="23" width="21" height="17" forecolor="#999999" uuid="bc131025-0a51-45e4-bb0b-c025d296ba15"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-1" y="10" width="555" height="1" forecolor="#999999" uuid="9eb9203a-a2fb-45c6-bb75-bb7611fc45e5"/>
+			</line>
+			<textField>
+				<reportElement x="471" y="23" width="60" height="17" forecolor="#999999" uuid="cdfc7bd9-d314-4945-b462-c260f52dee1c"/>
+				<textElement textAlignment="Right">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Seite "+$V{PAGE_NUMBER}+" von"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+</jasperReport>

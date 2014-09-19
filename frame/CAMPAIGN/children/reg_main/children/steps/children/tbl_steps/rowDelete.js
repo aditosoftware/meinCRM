@@ -1,0 +1,1 @@
+a.sqlDelete("CAMPAIGNSTEP", " campaignstepid = '" + a.valueof("$local.idvalue") + "'");

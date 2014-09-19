@@ -1,0 +1,1 @@
+if ( a.hasvar("$image.campaignparticipant") )	a.rs(a.valueof("$image.campaignparticipant"));

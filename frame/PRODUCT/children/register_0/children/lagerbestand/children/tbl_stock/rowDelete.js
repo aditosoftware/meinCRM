@@ -1,0 +1,1 @@
+a.sqlDelete("STOCK", " STOCKID = '" + a.valueof("$local.idvalue") + "'");

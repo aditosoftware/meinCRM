@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>REPORT_ADMINISTRATION</name>
+  <title>Report Verwaltung</title>
+  <icon>%aditoprj%/frame/REPORT_ADMINISTRATION/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/REPORT_ADMINISTRATION/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type  public
+@status released
+@desc [Frame zur Verwaltung der Reports]
+
+@module Administration
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <linkInformation>
+    <linkInformation>
+      <name>2aa71534-9fe2-4824-a51e-340a3fa4be4e</name>
+      <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+      <primaryKey>AOSYS_REPORTADMINISTRATIONID</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+  </linkInformation>
+  <whereClause>%aditoprj%/frame/REPORT_ADMINISTRATION/whereClause.js</whereClause>
+  <beforeStart>%aditoprj%/frame/REPORT_ADMINISTRATION/beforeStart.js</beforeStart>
+  <afterSave>%aditoprj%/frame/REPORT_ADMINISTRATION/afterSave.js</afterSave>
+  <afterEdit>%aditoprj%/frame/REPORT_ADMINISTRATION/afterEdit.js</afterEdit>
+  <grantCreateProcess>%aditoprj%/frame/REPORT_ADMINISTRATION/grantCreateProcess.js</grantCreateProcess>
+  <grantUpdateProcess>%aditoprj%/frame/REPORT_ADMINISTRATION/grantUpdateProcess.js</grantUpdateProcess>
+  <grantDeleteProcess>%aditoprj%/frame/REPORT_ADMINISTRATION/grantDeleteProcess.js</grantDeleteProcess>
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showSaveCancel v="false" />
+        <showCreate v="true" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="true" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <databaseColumns>
+    <column>
+      <name>AOSYS_REPORTADMINISTRATION_AOSYS_REPORTADMINISTRATIONID</name>
+      <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+      <columnName>AOSYS_REPORTADMINISTRATIONID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+    </column>
+    <column>
+      <name>AOSYS_REPORTADMINISTRATION_REPORTNAME</name>
+      <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+      <columnName>REPORTNAME</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="100" />
+    </column>
+    <column>
+      <name>AOSYS_REPORTADMINISTRATION_FUNCTIONNAME</name>
+      <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+      <columnName>FUNCTIONNAME</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="100" />
+    </column>
+    <column>
+      <name>AOSYS_REPORTADMINISTRATION_RUBRIC</name>
+      <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+      <columnName>RUBRIC</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+    </column>
+    <column>
+      <name>AOSYS_REPORTADMINISTRATION_DESCRIPTION</name>
+      <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+      <columnName>DESCRIPTION</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="500" />
+    </column>
+    <column>
+      <name>AOSYS_REPORTADMINISTRATION_DATE_NEW</name>
+      <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+      <columnName>DATE_NEW</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="26" />
+      <scale>6</scale>
+      <presetNew>%aditoprj%/frame/REPORT_ADMINISTRATION/databasecolumns/aosys_reportadministration_date_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>AOSYS_REPORTADMINISTRATION_DATE_EDIT</name>
+      <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+      <columnName>DATE_EDIT</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="26" />
+      <scale>6</scale>
+      <presetNew>%aditoprj%/frame/REPORT_ADMINISTRATION/databasecolumns/aosys_reportadministration_date_edit/presetNew.js</presetNew>
+      <presetChange>%aditoprj%/frame/REPORT_ADMINISTRATION/databasecolumns/aosys_reportadministration_date_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>AOSYS_REPORTADMINISTRATION_USER_NEW</name>
+      <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+      <columnName>USER_NEW</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="30" />
+      <presetNew>%aditoprj%/frame/REPORT_ADMINISTRATION/databasecolumns/aosys_reportadministration_user_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>AOSYS_REPORTADMINISTRATION_USER_EDIT</name>
+      <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+      <columnName>USER_EDIT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="30" />
+      <presetNew>%aditoprj%/frame/REPORT_ADMINISTRATION/databasecolumns/aosys_reportadministration_user_edit/presetNew.js</presetNew>
+      <presetChange>%aditoprj%/frame/REPORT_ADMINISTRATION/databasecolumns/aosys_reportadministration_user_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>AOSYS_REPORTADMINISTRATION_ISACTIVE</name>
+      <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+      <columnName>ISACTIVE</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="1" />
+      <presetNew>%aditoprj%/frame/REPORT_ADMINISTRATION/databasecolumns/aosys_reportadministration_isactive/presetNew.js</presetNew>
+    </column>
+  </databaseColumns>
+  <children>
+    <edit>
+      <name>DESCRIPTION</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+      <columnName>DESCRIPTION</columnName>
+      <dataType v="12" />
+      <precision v="500" />
+      <x v="120" />
+      <y v="45" />
+      <width v="625" />
+      <tabOrder v="2" />
+      <labelText>Beschreibung</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>FUNCTIONNAME</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+      <columnName>FUNCTIONNAME</columnName>
+      <dataType v="12" />
+      <precision v="100" />
+      <x v="120" />
+      <y v="120" />
+      <width v="355" />
+      <tabOrder v="4" />
+      <labelText>Funktionsname aus dem Prozess lib_report zum Aufruf des Reports</labelText>
+      <labelOrientation v="1" />
+      <labelDistance v="10" />
+      <labelAnchor v="0" />
+    </edit>
+    <checkBox>
+      <name>ISACTIVE</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+      <columnName>ISACTIVE</columnName>
+      <dataType v="1" />
+      <presetNew>%aditoprj%/frame/REPORT_ADMINISTRATION/children/isactive/presetNew.js</presetNew>
+      <valueTrue>Y</valueTrue>
+      <valueFalse>N</valueFalse>
+      <x v="425" />
+      <y v="20" />
+      <labelText>aktiv</labelText>
+      <tabOrder v="1" />
+    </checkBox>
+    <label>
+      <name>lblCreatedEdited</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <valueProcess>%aditoprj%/frame/REPORT_ADMINISTRATION/children/lblcreatededited/valueProcess.js</valueProcess>
+      <x v="20" />
+      <y v="565" />
+      <width v="830" />
+      <height v="15" />
+      <verticalAnchor v="5" />
+      <font name="Verdana" style="0" size="9" />
+      <labelAnchor v="0" />
+    </label>
+    <register>
+      <name>reg_Main</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <y v="165" />
+      <width v="865" />
+      <height v="400" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <tabOrder v="5" />
+      <children>
+        <registerTab>
+          <name>Rechte</name>
+          <caption>&amp;amp;Rechte</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/rechte/visibleProcess.js</visibleProcess>
+          <children>
+            <checkBox>
+              <name>cbx_right_del</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="90" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="4" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_edit</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="70" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="2" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_grant</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="110" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="1" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_read</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="50" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="3" />
+            </checkBox>
+            <comboBox>
+              <name>cmb_rights_roles</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/rechte/children/cmb_rights_roles/contentProcess.js</contentProcess>
+              <searchLinkTableName>TABLEACCESS</searchLinkTableName>
+              <searchLinkCondition>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/rechte/children/cmb_rights_roles/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="25" />
+              <width v="40" />
+              <visible v="false" />
+              <emptyElementEnabled v="false" />
+              <labelText>Rolle</labelText>
+              <labelVisible v="false" />
+            </comboBox>
+            <label>
+              <name>Label_calculation</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/rechte/children/label_calculation/valueProcess.js</valueProcess>
+              <x v="655" />
+              <y v="130" />
+              <visible v="false" />
+              <labelVisible v="false" />
+            </label>
+            <table>
+              <name>tbl_rights</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/rechte/children/tbl_rights/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/rechte/children/tbl_rights/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/rechte/children/tbl_rights/rowDelete.js</rowDelete>
+              <grantRowCreateProcess>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/rechte/children/tbl_rights/grantRowCreateProcess.js</grantRowCreateProcess>
+              <grantRowUpdateProcess>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/rechte/children/tbl_rights/grantRowUpdateProcess.js</grantRowUpdateProcess>
+              <grantRowDeleteProcess>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/rechte/children/tbl_rights/grantRowDeleteProcess.js</grantRowDeleteProcess>
+              <separateSavable v="false" />
+              <displayContentProcess>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/rechte/children/tbl_rights/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/rechte/children/tbl_rights/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <singleSelection v="true" />
+              <x v="20" />
+              <y v="25" />
+              <width v="630" />
+              <height v="325" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <tabOrder v="0" />
+              <labelText>Rechte auf den angezeigten Datensatz</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Rolle</name>
+                  <columnName>Rolle</columnName>
+                  <width v="205" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/rechte/children/tbl_rights/columnmetadata/rolle/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Lesen</name>
+                  <columnName>Lesen</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/rechte/children/tbl_rights/columnmetadata/lesen/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Aendern</name>
+                  <columnName>Ändern</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/rechte/children/tbl_rights/columnmetadata/aendern/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Loeschen</name>
+                  <columnName>Löschen</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/rechte/children/tbl_rights/columnmetadata/loeschen/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Rechte_vergeben</name>
+                  <columnName>Rechte vergeben</columnName>
+                  <width v="116" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/rechte/children/tbl_rights/columnmetadata/rechte_vergeben/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Admin</name>
+          <caption>Admin</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/admin/visibleProcess.js</visibleProcess>
+          <children>
+            <edit>
+              <name>DATE_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+              <columnName>DATE_EDIT</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetNew>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/admin/children/date_edit/presetNew.js</presetNew>
+              <presetChange>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/admin/children/date_edit/presetChange.js</presetChange>
+              <searchableModes>mask</searchableModes>
+              <x v="265" />
+              <y v="95" />
+              <width v="250" />
+              <tabOrder v="2" />
+              <labelText>DATE_EDIT</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>DATE_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+              <columnName>DATE_NEW</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetNew>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/admin/children/date_new/presetNew.js</presetNew>
+              <searchableModes>mask</searchableModes>
+              <x v="265" />
+              <y v="70" />
+              <width v="250" />
+              <tabOrder v="1" />
+              <labelText>DATE_NEW</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>idcolumn</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+              <columnName>AOSYS_REPORTADMINISTRATIONID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <searchableModes>mask</searchableModes>
+              <x v="265" />
+              <y v="40" />
+              <width v="250" />
+              <tabOrder v="0" />
+              <labelText>REPORT_ADMINISTRATIONID</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>USER_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+              <columnName>USER_EDIT</columnName>
+              <dataType v="12" />
+              <precision v="30" />
+              <presetNew>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/admin/children/user_edit/presetNew.js</presetNew>
+              <presetChange>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/admin/children/user_edit/presetChange.js</presetChange>
+              <searchableModes>mask</searchableModes>
+              <x v="265" />
+              <y v="150" />
+              <width v="250" />
+              <tabOrder v="4" />
+              <labelText>USER_EDIT</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>USER_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+              <columnName>USER_NEW</columnName>
+              <dataType v="12" />
+              <precision v="30" />
+              <presetNew>%aditoprj%/frame/REPORT_ADMINISTRATION/children/reg_main/children/admin/children/user_new/presetNew.js</presetNew>
+              <searchableModes>mask</searchableModes>
+              <x v="265" />
+              <y v="125" />
+              <width v="250" />
+              <tabOrder v="3" />
+              <labelText>USER_NEW</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+    <edit>
+      <name>REPORTNAME</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+      <columnName>REPORTNAME</columnName>
+      <dataType v="12" />
+      <precision v="100" />
+      <x v="120" />
+      <y v="20" />
+      <width v="250" />
+      <tabOrder v="0" />
+      <labelText>Name</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+    <comboBox>
+      <name>RUBRIC</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+      <columnName>RUBRIC</columnName>
+      <dataType v="4" />
+      <precision v="10" />
+      <contentProcess>%aditoprj%/frame/REPORT_ADMINISTRATION/children/rubric/contentProcess.js</contentProcess>
+      <x v="120" />
+      <y v="70" />
+      <width v="250" />
+      <tabOrder v="3" />
+      <labelText>Rubrik</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </comboBox>
+  </children>
+  <tableView>
+    <tableViewProperties>
+      <columnProperty>
+        <name>AOSYS_REPORTADMINISTRATION_REPORTNAME</name>
+        <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+        <columnName>REPORTNAME</columnName>
+        <label>Reportname</label>
+        <width v="187" />
+      </columnProperty>
+      <columnProperty>
+        <name>AOSYS_REPORTADMINISTRATION_FUNCTIONNAME</name>
+        <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+        <columnName>FUNCTIONNAME</columnName>
+        <label>Funktionsname</label>
+        <width v="230" />
+      </columnProperty>
+      <columnProperty>
+        <name>subselect</name>
+        <label>Rubrik</label>
+        <width v="156" />
+        <subSelect>%aditoprj%/frame/REPORT_ADMINISTRATION/tableview/tableviewproperties/subselect/subSelect.js</subSelect>
+      </columnProperty>
+      <columnProperty>
+        <name>AOSYS_REPORTADMINISTRATION_DESCRIPTION</name>
+        <tableName>AOSYS_REPORTADMINISTRATION</tableName>
+        <columnName>DESCRIPTION</columnName>
+        <label>Beschreibung</label>
+        <width v="362" />
+      </columnProperty>
+    </tableViewProperties>
+  </tableView>
+  <width v="865" />
+  <height v="580" />
+</frame>

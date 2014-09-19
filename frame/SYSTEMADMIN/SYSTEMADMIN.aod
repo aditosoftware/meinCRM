@@ -1,0 +1,1092 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>SYSTEMADMIN</name>
+  <title>Systemverwaltung</title>
+  <icon>%aditoprj%/frame/SYSTEMADMIN/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/SYSTEMADMIN/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type  public
+@status released
+@desc [Frame zur Systemverwaltung]
+
+@module Administration
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showSaveCancel v="false" />
+        <showCreate v="true" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <register>
+      <name>Register_0</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <y v="15" />
+      <width v="870" />
+      <height v="565" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <tabOrder v="0" />
+      <children>
+        <registerTab>
+          <name>Salutation</name>
+          <caption>&amp;amp;Salutation</caption>
+          <children>
+            <button>
+              <name>Button_down</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/salutation/children/button_down/onClick.js</onClick>
+              <x v="815" />
+              <y v="55" />
+              <width v="20" />
+              <height v="20" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/salutation/children/button_down/enabledProcess.js</enabledProcess>
+              <tabOrder v="2" />
+              <imageData>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/salutation/children/button_down/imageData.png</imageData>
+              <labelVisible v="false" />
+            </button>
+            <button>
+              <name>Button_up</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/salutation/children/button_up/onClick.js</onClick>
+              <x v="815" />
+              <y v="35" />
+              <width v="20" />
+              <height v="20" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/salutation/children/button_up/enabledProcess.js</enabledProcess>
+              <tabOrder v="1" />
+              <imageData>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/salutation/children/button_up/imageData.png</imageData>
+              <labelVisible v="false" />
+            </button>
+            <comboBox>
+              <name>Combobox_lang</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/salutation/children/combobox_lang/contentProcess.js</contentProcess>
+              <x v="730" />
+              <width v="50" />
+              <visible v="false" />
+              <tabOrder v="7" />
+              <staticContent>
+                <entry>
+                  <key>männlich</key>
+                  <value>männlich</value>
+                </entry>
+                <entry>
+                  <key>weiblich</key>
+                  <value>weiblich</value>
+                </entry>
+              </staticContent>
+              <emptyElementEnabled v="false" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>Combobox_sex</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <x v="570" />
+              <width v="50" />
+              <visible v="false" />
+              <utilizeRowId v="false" />
+              <tabOrder v="3" />
+              <staticContent>
+                <entry>
+                  <key>männlich</key>
+                  <value>männlich</value>
+                </entry>
+                <entry>
+                  <key>weiblich</key>
+                  <value>weiblich</value>
+                </entry>
+              </staticContent>
+              <emptyElementEnabled v="false" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>Edit_headline</name>
+              <x v="570" />
+              <y v="0" />
+              <width v="50" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="4" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="65" />
+            </edit>
+            <edit>
+              <name>Edit_lettersalutation</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <x v="620" />
+              <y v="0" />
+              <width v="50" />
+              <visible v="false" />
+              <tabOrder v="6" />
+              <labelDistance v="65" />
+            </edit>
+            <edit>
+              <name>Edit_salutation</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <x v="670" />
+              <y v="0" />
+              <width v="50" />
+              <visible v="false" />
+              <tabOrder v="5" />
+              <labelDistance v="65" />
+            </edit>
+            <edit>
+              <name>Edit_title</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <x v="520" />
+              <y v="0" />
+              <width v="50" />
+              <visible v="false" />
+              <labelDistance v="65" />
+            </edit>
+            <table>
+              <name>tbl_salutation</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/salutation/children/tbl_salutation/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/salutation/children/tbl_salutation/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/salutation/children/tbl_salutation/rowDelete.js</rowDelete>
+              <displayContentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/salutation/children/tbl_salutation/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/salutation/children/tbl_salutation/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <singleSelection v="true" />
+              <x v="20" />
+              <y v="25" />
+              <width v="795" />
+              <height v="490" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <tabOrder v="0" />
+              <showTooltip v="false" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Sprache</name>
+                  <columnName>Sprache</columnName>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/salutation/children/tbl_salutation/columnmetadata/sprache/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Anrede</name>
+                  <columnName>Anrede</columnName>
+                  <width v="167" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/salutation/children/tbl_salutation/columnmetadata/anrede/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Titel</name>
+                  <columnName>Titel</columnName>
+                  <width v="138" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/salutation/children/tbl_salutation/columnmetadata/titel/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Kopfanrede</name>
+                  <columnName>Kopfanrede</columnName>
+                  <width v="184" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/salutation/children/tbl_salutation/columnmetadata/kopfanrede/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Briefanrede</name>
+                  <columnName>Briefanrede</columnName>
+                  <width v="128" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/salutation/children/tbl_salutation/columnmetadata/briefanrede/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Geschlecht</name>
+                  <columnName>Geschlecht</columnName>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/salutation/children/tbl_salutation/columnmetadata/geschlecht/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Ressourcen</name>
+          <caption>&amp;amp;Ressourcen</caption>
+          <children>
+            <table>
+              <name>tbl_Ressources</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <alwaysEditable v="true" />
+              <rowDelete></rowDelete>
+              <grantRowCreateProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/ressourcen/children/tbl_ressources/grantRowCreateProcess.js</grantRowCreateProcess>
+              <grantRowUpdateProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/ressourcen/children/tbl_ressources/grantRowUpdateProcess.js</grantRowUpdateProcess>
+              <grantRowDeleteProcess></grantRowDeleteProcess>
+              <displayContentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/ressourcen/children/tbl_ressources/displayContentProcess.js</displayContentProcess>
+              <idContentProcess></idContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="810" />
+              <height v="490" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <utilizeRowFontColor v="true" />
+              <tabOrder v="0" />
+              <grantArrangeColumns v="true" />
+              <toolTip>Farbe: grün = Ressource als User angelegt, rot = Ressource noch nicht als User angelegt, grau = inaktive Ressource, blau = User ohne Ressource (gelöscht)</toolTip>
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Kategorie</name>
+                  <columnName>Kategorie</columnName>
+                  <width v="150" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/ressourcen/children/tbl_ressources/columnmetadata/kategorie/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Bezeichnung</name>
+                  <columnName>Bezeichnung</columnName>
+                  <width v="150" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/ressourcen/children/tbl_ressources/columnmetadata/bezeichnung/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Beschreibung_7</name>
+                  <columnName>Beschreibung</columnName>
+                  <width v="500" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/ressourcen/children/tbl_ressources/columnmetadata/beschreibung_7/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>Popup</name>
+                  <caption>Als Benutzer anlegen</caption>
+                  <onClick>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/ressourcen/children/tbl_ressources/popup/popup/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/ressourcen/children/tbl_ressources/popup/popup/enabledProcess.js</enabledProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>option</name>
+          <comment>Kommentar von option</comment>
+          <caption>&amp;amp;Optionen</caption>
+          <toolTip>Tooltip von option</toolTip>
+          <children>
+            <comboBox>
+              <name>cmb_options_name</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/option/children/cmb_options_name/contentProcess.js</contentProcess>
+              <searchLinkTableName>TABLEACCESS</searchLinkTableName>
+              <searchLinkCondition>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/option/children/cmb_options_name/searchLinkCondition.js</searchLinkCondition>
+              <x v="240" />
+              <y v="5" />
+              <width v="60" />
+              <visible v="false" />
+              <tabOrder v="3" />
+              <editable v="true" />
+              <maximumRowCount v="30" />
+              <emptyElementEnabled v="false" />
+              <labelText>Rolle</labelText>
+              <labelVisible v="false" />
+            </comboBox>
+            <comboBox>
+              <name>cmb_options_roles</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/option/children/cmb_options_roles/contentProcess.js</contentProcess>
+              <searchLinkTableName>TABLEACCESS</searchLinkTableName>
+              <searchLinkCondition>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/option/children/cmb_options_roles/searchLinkCondition.js</searchLinkCondition>
+              <x v="550" />
+              <y v="5" />
+              <width v="60" />
+              <visible v="false" />
+              <tabOrder v="1" />
+              <labelText>Rolle</labelText>
+              <labelVisible v="false" />
+            </comboBox>
+            <comboBox>
+              <name>cmb_options_values</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/option/children/cmb_options_values/contentProcess.js</contentProcess>
+              <searchLinkTableName>TABLEACCESS</searchLinkTableName>
+              <searchLinkCondition>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/option/children/cmb_options_values/searchLinkCondition.js</searchLinkCondition>
+              <x v="315" />
+              <y v="5" />
+              <width v="60" />
+              <visible v="false" />
+              <utilizeRowId v="false" />
+              <tabOrder v="2" />
+              <emptyElementEnabled v="false" />
+              <labelText>Rolle</labelText>
+              <labelVisible v="false" />
+            </comboBox>
+            <edit>
+              <name>edtOptionValue</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <searchableModes>none</searchableModes>
+              <x v="450" />
+              <y v="5" />
+              <width v="80" />
+              <visible v="false" />
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+              <toolTip>Geben Sie hier einen Teil eines Wertes
+einer Option ein, um die Liste zu filtern</toolTip>
+            </edit>
+            <table>
+              <name>tblOptions</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/option/children/tbloptions/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/option/children/tbloptions/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/option/children/tbloptions/rowDelete.js</rowDelete>
+              <displayContentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/option/children/tbloptions/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/option/children/tbloptions/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <singleSelection v="true" />
+              <x v="20" />
+              <y v="25" />
+              <width v="810" />
+              <height v="490" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <tabOrder v="0" />
+              <grantArrangeColumns v="true" />
+              <labelText>Vorhandene Systemoptionen</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Name</name>
+                  <columnName>Name</columnName>
+                  <width v="181" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/option/children/tbloptions/columnmetadata/name/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Wert</name>
+                  <columnName>Wert</columnName>
+                  <width v="289" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/option/children/tbloptions/columnmetadata/wert/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Rolle</name>
+                  <columnName>Rolle</columnName>
+                  <width v="170" />
+                  <dataType v="-9" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/option/children/tbloptions/columnmetadata/rolle/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Beschreibung_3</name>
+                  <columnName>Beschreibung</columnName>
+                  <width v="150" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Rights</name>
+          <caption>&amp;amp;Frame-Rechte</caption>
+          <children>
+            <checkBox>
+              <name>cbx_right_del</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="535" />
+              <y v="10" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="4" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_edit</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="520" />
+              <y v="10" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="3" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_new</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="505" />
+              <y v="10" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelOrientation v="4" />
+              <tabOrder v="2" />
+            </checkBox>
+            <comboBox>
+              <name>cmb_objectname</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/rights/children/cmb_objectname/contentProcess.js</contentProcess>
+              <searchableModes>none</searchableModes>
+              <x v="445" />
+              <y v="5" />
+              <width v="60" />
+              <visible v="false" />
+              <labelVisible v="false" />
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>cmb_rights_roles</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/rights/children/cmb_rights_roles/contentProcess.js</contentProcess>
+              <searchLinkTableName>TABLEACCESS</searchLinkTableName>
+              <searchLinkCondition>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/rights/children/cmb_rights_roles/searchLinkCondition.js</searchLinkCondition>
+              <x v="385" />
+              <y v="5" />
+              <width v="60" />
+              <backgroundColorProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/rights/children/cmb_rights_roles/backgroundColorProcess.js</backgroundColorProcess>
+              <visible v="false" />
+              <tabOrder v="1" />
+              <emptyElementEnabled v="false" />
+              <labelText>Rolle</labelText>
+              <labelVisible v="false" />
+            </comboBox>
+            <table>
+              <name>tbl_rights</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/rights/children/tbl_rights/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/rights/children/tbl_rights/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/rights/children/tbl_rights/rowDelete.js</rowDelete>
+              <displayContentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/rights/children/tbl_rights/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/rights/children/tbl_rights/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="665" />
+              <height v="490" />
+              <horizontalAnchor v="1" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <tabOrder v="0" />
+              <grantArrangeColumns v="true" />
+              <labelText>Frame-Recht</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Rolle_2</name>
+                  <columnName>Rolle</columnName>
+                  <width v="194" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/rights/children/tbl_rights/columnmetadata/rolle_2/editorComponentProcess.js</editorComponentProcess>
+                  <mandatoryInputProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/rights/children/tbl_rights/columnmetadata/rolle_2/mandatoryInputProcess.js</mandatoryInputProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Frame</name>
+                  <columnName>Frame</columnName>
+                  <width v="211" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/rights/children/tbl_rights/columnmetadata/frame/editorComponentProcess.js</editorComponentProcess>
+                  <mandatoryInputProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/rights/children/tbl_rights/columnmetadata/frame/mandatoryInputProcess.js</mandatoryInputProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Neuanlage</name>
+                  <columnName>Neuanlage</columnName>
+                  <width v="86" />
+                  <alignment v="0" />
+                  <dataType v="12" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/rights/children/tbl_rights/columnmetadata/neuanlage/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Aendern</name>
+                  <columnName>Ändern</columnName>
+                  <width v="83" />
+                  <alignment v="0" />
+                  <dataType v="12" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/rights/children/tbl_rights/columnmetadata/aendern/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Loeschen</name>
+                  <columnName>Löschen</columnName>
+                  <width v="83" />
+                  <alignment v="0" />
+                  <dataType v="12" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/rights/children/tbl_rights/columnmetadata/loeschen/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>ICONS</name>
+          <comment>Kommentar von ICONS</comment>
+          <caption>S&amp;amp;ymbole</caption>
+          <toolTip>Tooltip von ICONS</toolTip>
+          <children>
+            <edit>
+              <name>edt_description</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <valueProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/icons/children/edt_description/valueProcess.js</valueProcess>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="250" />
+              <y v="0" />
+              <visible v="false" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>edt_name</name>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="250" />
+              <y v="0" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <tabOrder v="2" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </edit>
+            <comboBox>
+              <name>edt_type</name>
+              <valueProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/icons/children/edt_type/valueProcess.js</valueProcess>
+              <contentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/icons/children/edt_type/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="250" />
+              <font name="Verdana" style="0" size="11" />
+              <visible v="false" />
+              <utilizeRowId v="false" />
+              <tabOrder v="1" />
+              <editable v="true" />
+              <emptyElementEnabled v="false" />
+              <labelFont name="" style="0" size="11" />
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <table>
+              <name>tbl_content</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/icons/children/tbl_content/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/icons/children/tbl_content/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/icons/children/tbl_content/rowDelete.js</rowDelete>
+              <displayContentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/icons/children/tbl_content/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="0" />
+              <x v="20" />
+              <y v="25" />
+              <width v="810" />
+              <height v="490" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <tabOrder v="0" />
+              <grantArrangeColumns v="true" />
+              <labelText>Icons</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Beschreibung_4</name>
+                  <columnName>Beschreibung</columnName>
+                  <width v="350" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/icons/children/tbl_content/columnmetadata/beschreibung_4/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Typ</name>
+                  <columnName>Typ</columnName>
+                  <width v="300" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/icons/children/tbl_content/columnmetadata/typ/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Symbol</name>
+                  <columnName>Symbol</columnName>
+                  <width v="88" />
+                  <rendererType v="3" />
+                  <rendererDataProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/icons/children/tbl_content/columnmetadata/symbol/rendererDataProcess.js</rendererDataProcess>
+                  <rendererCachingType v="3" />
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>Bild_laden</name>
+                  <caption>Bild laden</caption>
+                  <onClick>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/icons/children/tbl_content/popup/bild_laden/onClick.js</onClick>
+                  <enabledProcess></enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>proces</name>
+          <comment>Kommentar von serverproc</comment>
+          <caption>&amp;amp;Prozesse</caption>
+          <toolTip>Tooltip von serverproc</toolTip>
+          <children>
+            <button>
+              <name>Button_13</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/button_13/onClick.js</onClick>
+              <x v="470" />
+              <y v="460" />
+              <height v="20" />
+              <caption>Starten</caption>
+              <enabledProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/button_13/enabledProcess.js</enabledProcess>
+              <tabOrder v="7" />
+            </button>
+            <button>
+              <name>Button_ProzessStart</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/button_prozessstart/onClick.js</onClick>
+              <x v="715" />
+              <y v="25" />
+              <width v="95" />
+              <height v="25" />
+              <caption>Starten</caption>
+              <enabledProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/button_prozessstart/enabledProcess.js</enabledProcess>
+              <tabOrder v="1" />
+            </button>
+            <button>
+              <name>Button_ProzessStop</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/button_prozessstop/onClick.js</onClick>
+              <x v="715" />
+              <y v="55" />
+              <width v="95" />
+              <height v="25" />
+              <caption>Stoppen</caption>
+              <enabledProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/button_prozessstop/enabledProcess.js</enabledProcess>
+              <tabOrder v="2" />
+            </button>
+            <checkBox>
+              <name>chkShowAll</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <presetChange>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/chkshowall/presetChange.js</presetChange>
+              <valueTrue>Y</valueTrue>
+              <valueFalse>N</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="20" />
+              <y v="480" />
+              <labelText>Alle Prozesse anzeigen (nicht nur sp_XXX)</labelText>
+              <labelOrientation v="4" />
+              <tabOrder v="8" />
+            </checkBox>
+            <comboBox>
+              <name>comboManual</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/combomanual/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="20" />
+              <y v="460" />
+              <width v="370" />
+              <tabOrder v="3" />
+              <maximumRowCount v="20" />
+              <emptyElementEnabled v="false" />
+              <labelText>Prozess manuell starten</labelText>
+              <labelOrientation v="1" />
+            </comboBox>
+            <comboBox>
+              <name>comboRunAt</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <presetChange>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/comborunat/presetChange.js</presetChange>
+              <searchableModes>none</searchableModes>
+              <x v="390" />
+              <y v="460" />
+              <width v="75" />
+              <tabOrder v="6" />
+              <staticContent>
+                <entry>
+                  <key>Server</key>
+                  <value>S</value>
+                </entry>
+                <entry>
+                  <key>Client</key>
+                  <value>C</value>
+                </entry>
+              </staticContent>
+              <emptyElementEnabled v="false" />
+              <labelText>Ausführen</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <edit>
+              <name>interval</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="4" />
+              <precision v="4" />
+              <inputFormat>0</inputFormat>
+              <searchableModes>none</searchableModes>
+              <x v="320" />
+              <y v="0" />
+              <width v="65" />
+              <visible v="false" />
+              <tabOrder v="9" />
+              <labelText>Intervall</labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <toolTip>Angaben in Minuten</toolTip>
+            </edit>
+            <comboBox>
+              <name>process</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/process/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="20" />
+              <width v="190" />
+              <visible v="false" />
+              <tabOrder v="4" />
+              <labelText>Prozess</labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+            </comboBox>
+            <edit>
+              <name>start</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="93" />
+              <outputFormat>dd.MM.yyyy HH:mm</outputFormat>
+              <inputFormat>dd.MM.yyyy HH:mm</inputFormat>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <calendarSupport v="true" />
+              <clockSupport v="true" />
+              <x v="210" />
+              <y v="0" />
+              <width v="110" />
+              <visible v="false" />
+              <tabOrder v="5" />
+              <labelText>Startzeit</labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+            </edit>
+            <table>
+              <name>timers</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/timers/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/timers/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/timers/rowDelete.js</rowDelete>
+              <grantRowUpdateProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/timers/grantRowUpdateProcess.js</grantRowUpdateProcess>
+              <grantRowDeleteProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/timers/grantRowDeleteProcess.js</grantRowDeleteProcess>
+              <displayContentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/timers/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/timers/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <singleSelection v="true" />
+              <x v="20" />
+              <y v="25" />
+              <width v="690" />
+              <height v="405" />
+              <utilizeRowId v="true" />
+              <tabOrder v="0" />
+              <showTooltip v="false" />
+              <grantArrangeColumns v="true" />
+              <labelText>Aktive Serverprozesse</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Prozess</name>
+                  <columnName>Prozess</columnName>
+                  <width v="252" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/timers/columnmetadata/prozess/editorComponentProcess.js</editorComponentProcess>
+                  <mandatoryInputProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/timers/columnmetadata/prozess/mandatoryInputProcess.js</mandatoryInputProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Naechster_Lauf</name>
+                  <columnName>Nächster Lauf</columnName>
+                  <width v="112" />
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy HH:mm</outputFormat>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/timers/columnmetadata/naechster_lauf/editorComponentProcess.js</editorComponentProcess>
+                  <mandatoryInputProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/timers/columnmetadata/naechster_lauf/mandatoryInputProcess.js</mandatoryInputProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Intervall_min</name>
+                  <columnName>Intervall (min)</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="4" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/timers/columnmetadata/intervall_min/editorComponentProcess.js</editorComponentProcess>
+                  <mandatoryInputProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/proces/children/timers/columnmetadata/intervall_min/mandatoryInputProcess.js</mandatoryInputProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Status</name>
+                  <columnName>Status</columnName>
+                  <width v="76" />
+                  <dataType v="12" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Letzter_Lauf</name>
+                  <columnName>Letzter Lauf</columnName>
+                  <width v="98" />
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy HH:mm</outputFormat>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Log</name>
+          <comment>Kommentar von Log</comment>
+          <caption>&amp;amp;Log</caption>
+          <toolTip>Tooltip von Log</toolTip>
+          <children>
+            <button>
+              <name>Button_4</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/log/children/button_4/onClick.js</onClick>
+              <x v="760" />
+              <y v="490" />
+              <width v="70" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <caption>leeren</caption>
+              <tabOrder v="2" />
+            </button>
+            <button>
+              <name>Button_5</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/log/children/button_5/onClick.js</onClick>
+              <x v="760" />
+              <y v="360" />
+              <width v="70" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <caption>leeren</caption>
+              <tabOrder v="1" />
+            </button>
+            <comboBox>
+              <name>cmb_prozess_tasklog</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/log/children/cmb_prozess_tasklog/contentProcess.js</contentProcess>
+              <searchableModes>none</searchableModes>
+              <x v="405" />
+              <y v="5" />
+              <width v="425" />
+              <horizontalAnchor v="2" />
+              <utilizeRowId v="false" />
+              <tabOrder v="0" />
+              <labelDistance v="68" />
+            </comboBox>
+            <table>
+              <name>Tabelle_0</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <displayContentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/log/children/tabelle_0/displayContentProcess.js</displayContentProcess>
+              <x v="15" />
+              <y v="405" />
+              <width v="815" />
+              <height v="80" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <grantArrangeColumns v="true" />
+              <labelText>ErrorLog</labelText>
+              <labelOrientation v="1" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>ErrorLogID</name>
+                  <columnName>ErrorLogID</columnName>
+                  <width v="74" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Prozess_2</name>
+                  <columnName>Prozess</columnName>
+                  <width v="196" />
+                  <dataType v="12" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Beschreibung</name>
+                  <columnName>Beschreibung</columnName>
+                  <width v="303" />
+                  <dataType v="12" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Datum</name>
+                  <columnName>Datum</columnName>
+                  <width v="142" />
+                  <dataType v="93" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Status_2</name>
+                  <columnName>Status</columnName>
+                  <width v="43" />
+                  <dataType v="4" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Prio</name>
+                  <columnName>Prio</columnName>
+                  <width v="28" />
+                  <dataType v="4" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+            <table>
+              <name>Tabelle_1</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <displayContentProcess>%aditoprj%/frame/SYSTEMADMIN/children/register_0/children/log/children/tabelle_1/displayContentProcess.js</displayContentProcess>
+              <x v="20" />
+              <y v="25" />
+              <width v="810" />
+              <height v="330" />
+              <horizontalAnchor v="3" />
+              <grantArrangeColumns v="true" />
+              <labelText>TaskLog</labelText>
+              <labelOrientation v="1" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>TaskLogID</name>
+                  <columnName>TaskLogID</columnName>
+                  <width v="68" />
+                  <dataType v="4" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Prozess_3</name>
+                  <columnName>Prozess</columnName>
+                  <width v="173" />
+                  <dataType v="12" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Beschreibung_2</name>
+                  <columnName>Beschreibung</columnName>
+                  <width v="338" />
+                  <dataType v="12" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Datum_2</name>
+                  <columnName>Datum</columnName>
+                  <width v="131" />
+                  <dataType v="93" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Status_3</name>
+                  <columnName>Status</columnName>
+                  <width v="40" />
+                  <dataType v="4" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Prio_2</name>
+                  <columnName>Prio</columnName>
+                  <width v="30" />
+                  <dataType v="4" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+  </children>
+  <tableView />
+  <width v="850" />
+  <height v="580" />
+</frame>

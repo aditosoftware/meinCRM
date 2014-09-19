@@ -1,0 +1,1 @@
+if ( a.hasvar("$image.addr") ) a.rs(a.valueof("$image.addr"));

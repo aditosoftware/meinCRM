@@ -1,0 +1,1 @@
+a.rs(tools.hasRole(a.valueof("$sys.user"), "INTERNAL_DESIGNER"))

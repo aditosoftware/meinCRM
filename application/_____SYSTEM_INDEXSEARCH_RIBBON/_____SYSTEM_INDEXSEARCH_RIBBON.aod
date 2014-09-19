@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.5" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>_____SYSTEM_INDEXSEARCH_RIBBON</name>
+  <indexSearchRibbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_INDEXSEARCH</name>
+        <showMaskSearch v="true" />
+        <showActions v="true" />
+        <showAux v="true" />
+        <icon>INDEXSEARCH_24</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <customComponents>
+          <rcCommandButton>
+            <name>Schnelleingabe</name>
+            <title>Schnelleingabe</title>
+            <toolTip>Schnelleingabe von Firma, Person und Historie</toolTip>
+            <imageData>%aditoprj%/application/_____SYSTEM_INDEXSEARCH_RIBBON/indexsearchribbon/ribbontasks/task_indexsearch/customcomponents/schnelleingabe/imageData.png</imageData>
+            <onClick>%aditoprj%/application/_____SYSTEM_INDEXSEARCH_RIBBON/indexsearchribbon/ribbontasks/task_indexsearch/customcomponents/schnelleingabe/onClick.js</onClick>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+          <rcSeparator>
+            <name>Separator</name>
+          </rcSeparator>
+          <rcCommandButton>
+            <name>Einzelbrief</name>
+            <title>Einzelbrief</title>
+            <imageData>%aditoprj%/application/_____SYSTEM_INDEXSEARCH_RIBBON/indexsearchribbon/ribbontasks/task_indexsearch/customcomponents/einzelbrief/imageData.png</imageData>
+            <onClick>%aditoprj%/application/_____SYSTEM_INDEXSEARCH_RIBBON/indexsearchribbon/ribbontasks/task_indexsearch/customcomponents/einzelbrief/onClick.js</onClick>
+            <enabledProcess>%aditoprj%/application/_____SYSTEM_INDEXSEARCH_RIBBON/indexsearchribbon/ribbontasks/task_indexsearch/customcomponents/einzelbrief/enabledProcess.js</enabledProcess>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+          <rcCommandButton>
+            <name>Email</name>
+            <title>E-Mail</title>
+            <imageData>%aditoprj%/application/_____SYSTEM_INDEXSEARCH_RIBBON/indexsearchribbon/ribbontasks/task_indexsearch/customcomponents/email/imageData.png</imageData>
+            <onClick>%aditoprj%/application/_____SYSTEM_INDEXSEARCH_RIBBON/indexsearchribbon/ribbontasks/task_indexsearch/customcomponents/email/onClick.js</onClick>
+            <enabledProcess>%aditoprj%/application/_____SYSTEM_INDEXSEARCH_RIBBON/indexsearchribbon/ribbontasks/task_indexsearch/customcomponents/email/enabledProcess.js</enabledProcess>
+          </rcCommandButton>
+          <rcCommandButton>
+            <name>Telefon</name>
+            <title>Telefon</title>
+            <imageData>%aditoprj%/application/_____SYSTEM_INDEXSEARCH_RIBBON/indexsearchribbon/ribbontasks/task_indexsearch/customcomponents/telefon/imageData.png</imageData>
+            <onClick>%aditoprj%/application/_____SYSTEM_INDEXSEARCH_RIBBON/indexsearchribbon/ribbontasks/task_indexsearch/customcomponents/telefon/onClick.js</onClick>
+            <enabledProcess>%aditoprj%/application/_____SYSTEM_INDEXSEARCH_RIBBON/indexsearchribbon/ribbontasks/task_indexsearch/customcomponents/telefon/enabledProcess.js</enabledProcess>
+          </rcCommandButton>
+        </customComponents>
+        <toolTip>[no text: 00000000]</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </indexSearchRibbon>
+  <alias>AO_DATEN</alias>
+</application>

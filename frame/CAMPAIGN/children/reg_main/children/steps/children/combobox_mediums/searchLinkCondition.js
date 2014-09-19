@@ -1,0 +1,1 @@
+a.rs("CAMPAIGN.CAMPAIGNID IN ( SELECT CAMPAIGN_ID   FROM CAMPAIGNSTEP   WHERE ( " + a.valueof("$local.condition") + ") ) ");

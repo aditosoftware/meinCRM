@@ -1,0 +1,1 @@
+a.rs(a.sql("select count(*) from offeritem where offer_id = '" + a.valueof("$comp.idcolumn") + "'") > 0 && a.valueof("$comp.cmb_Status") == 3)

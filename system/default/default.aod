@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.0.0" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>default</name>
+  <serverConfigPath>$ADITOHOME/config/serverconfig_meinCRM.xml</serverConfigPath>
+  <aditoHomePath>$ADITOHOME/</aditoHomePath>
+  <javaHomePath>$ADITOHOME/jre/</javaHomePath>
+  <loginUser>Admin</loginUser>
+  <loginPassword>a</loginPassword>
+  <javaVMParametersServer>-Xmx1024m</javaVMParametersServer>
+  <enableJDitoDebug v="false" />
+  <clientConfig>$ADITOHOME/config/clientconfig.xml</clientConfig>
+</system>

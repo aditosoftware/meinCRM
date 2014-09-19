@@ -1,0 +1,1 @@
+a.sqlDelete("SPFORECAST", " SPFORECASTID = '" + a.valueof("$local.idvalue") + "'");

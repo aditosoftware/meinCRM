@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Reklamations-Liste" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e7a916c8-3f9a-497d-84bb-3909b15271ea">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="myAddr" class="java.lang.String"/>
+	<parameter name="adito.image.myLogo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="COMPLAINTID" class="java.lang.String"/>
+	<field name="COMPLAINTNUMBER" class="java.lang.String"/>
+	<field name="COMPANY" class="java.lang.String"/>
+	<field name="RESPONSIBLE" class="java.lang.String"/>
+	<field name="CATEGORY" class="java.lang.String"/>
+	<field name="STATUS" class="java.lang.String"/>
+	<field name="GROUPCODE" class="java.lang.String"/>
+	<field name="PRODUCT" class="java.lang.String"/>
+	<field name="DAMAGE" class="java.lang.String"/>
+	<field name="SUBJECT" class="java.lang.String"/>
+	<field name="DESCRIPTION" class="java.lang.String"/>
+	<sortField name="COMPLAINTNUMBER"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="191" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="99" width="555" height="20" uuid="2b8d9c1c-8cbf-43cf-a360-b5287b7dc57b"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="99" width="555" height="20" forecolor="#999999" uuid="ff5a078b-0e19-48ee-b839-83f1263efd63"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{myAddr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="132" width="195" height="20" forecolor="#999999" uuid="803755d9-0385-4081-a0af-f30f862872b1"/>
+				<textElement>
+					<font fontName="Verdana" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Reklamationsliste}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="164" width="56" height="10" uuid="14bbb766-a666-40f2-9bad-232d9434a7f2"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Rekl.-Nr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="63" y="164" width="125" height="10" uuid="5f7d615e-0212-481c-8f02-b4239e699c80"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Firma}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="63" y="175" width="125" height="10" uuid="6d5b875e-ec2b-4ad8-8174-897a40b99b11"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Zuständig}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="197" y="164" width="100" height="10" uuid="6db1a480-b132-45d3-9e29-a3cc9f313264"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Rekl.-Kategorie}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="197" y="175" width="100" height="10" uuid="6baed345-7ec5-46f2-a85e-3d81436a8a7d"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Rekl.-Status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="306" y="164" width="100" height="10" uuid="f484c380-c6c0-4a49-a49b-aba0b21c0a14"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Warengruppe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="306" y="175" width="100" height="10" uuid="871676a6-6aca-41fc-b91d-c433246d8f09"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Produkt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="406" y="164" width="149" height="10" uuid="f6b86e47-2cef-482b-9a7a-e14dbb83754f"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Betrifft}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="187" width="555" height="1" uuid="66f6ddb0-3477-4d59-a435-058b1efadf57"/>
+			</line>
+			<image hAlign="Center">
+				<reportElement x="188" y="18" width="165" height="50" uuid="f35b1824-bf45-43dc-9e87-fff82b99ae3a"/>
+				<imageExpression><![CDATA[$P{adito.image.myLogo}]]></imageExpression>
+			</image>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="10" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="56" height="10" uuid="9f081a5b-b136-4cbc-b540-e5a52f31df11"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{COMPLAINTNUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="63" y="0" width="125" height="10" uuid="dcdba429-7f18-4210-b6e8-2be9bf5053db"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{COMPANY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="306" y="0" width="100" height="10" uuid="43c3b9ee-caf4-4bcc-856b-067731b75a46"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{GROUPCODE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="408" y="0" width="149" height="10" uuid="b877bb4e-36c4-4894-a5f4-fee0a1aef6c1"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SUBJECT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="197" y="0" width="100" height="10" uuid="7a9f9455-4fd9-4cbd-80eb-91a7529c675c"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{STATUS}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="10">
+			<textField>
+				<reportElement x="63" y="0" width="125" height="10" uuid="151b59e6-128c-4e44-b342-a52b0a1f3d69"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RESPONSIBLE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="305" y="0" width="100" height="10" uuid="524c194e-d711-4300-88c3-f01407181f78"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="197" y="0" width="100" height="10" uuid="1fd15179-f90d-414e-97dc-e4acedd83f5f"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CATEGORY}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="15">
+			<textField>
+				<reportElement x="63" y="2" width="485" height="13" isRemoveLineWhenBlank="true" uuid="be6f08f7-8824-414a-be74-1636ed52a39d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DESCRIPTION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="2" width="62" height="13" uuid="db1b2a16-6e0e-4b39-8aa8-cd63cb8ec3e5">
+					<printWhenExpression><![CDATA[!$F{DESCRIPTION}.equals( "" )]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Beschreibung}+":"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="11">
+			<line>
+				<reportElement x="0" y="5" width="555" height="1" uuid="b21712c8-0151-4786-a810-faaec4514767"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="473" y="25" width="60" height="17" forecolor="#999999" uuid="4f33e00e-d953-4bb8-8555-4e5f976e039a"/>
+				<textElement textAlignment="Right">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Seite "+$V{PAGE_NUMBER}+" von"]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="385" y="25" width="95" height="17" forecolor="#999999" uuid="a212bd1a-9532-4afe-8578-6a3f4a1b4a9d"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="12" width="555" height="1" forecolor="#999999" uuid="800242e8-d73a-4829-a39b-e31e709314a4"/>
+			</line>
+			<textField evaluationTime="Report">
+				<reportElement x="532" y="25" width="21" height="17" forecolor="#999999" uuid="438ce95a-9d7b-4bf9-b2b3-325a408fe4fd"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+</jasperReport>

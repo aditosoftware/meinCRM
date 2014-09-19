@@ -1,0 +1,1 @@
+a.rd("$super.comp.dec_offeritem");

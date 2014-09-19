@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>SYS_MAIL</name>
+  <title>eMail</title>
+  <icon>%aditoprj%/frame/SYS_MAIL/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/SYS_MAIL/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@module ADITO-Standard</comment>
+  <alias>AO_DATEN</alias>
+  <beforeStart>%aditoprj%/frame/SYS_MAIL/beforeStart.js</beforeStart>
+  <grantCreate v="false" />
+  <grantUpdate v="false" />
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showSaveCancel v="false" />
+        <showCreate v="true" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="true" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <edit>
+      <name>BCCRECIPIENT</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <valueProcess>%aditoprj%/frame/SYS_MAIL/children/bccrecipient/valueProcess.js</valueProcess>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <readOnlyProcess>%aditoprj%/frame/SYS_MAIL/children/bccrecipient/readOnlyProcess.js</readOnlyProcess>
+      <x v="70" />
+      <y v="75" />
+      <width v="735" />
+      <tabOrder v="5" />
+      <labelText>BCC</labelText>
+      <labelFont name="" style="1" size="" />
+      <labelDistance v="45" />
+      <labelAnchor v="0" />
+    </edit>
+    <button>
+      <name>btn_addbccreciep</name>
+      <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+      <onClick>%aditoprj%/frame/SYS_MAIL/children/btn_addbccreciep/onClick.js</onClick>
+      <x v="805" />
+      <y v="75" />
+      <width v="20" />
+      <height v="20" />
+      <enabled v="false" />
+      <enabledProcess>%aditoprj%/frame/SYS_MAIL/children/btn_addbccreciep/enabledProcess.js</enabledProcess>
+      <tabOrder v="6" />
+      <imageData>%aditoprj%/frame/SYS_MAIL/children/btn_addbccreciep/imageData.png</imageData>
+      <toolTip>Teilnehmer hinzufügen</toolTip>
+    </button>
+    <button>
+      <name>btn_addccreciep</name>
+      <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+      <onClick>%aditoprj%/frame/SYS_MAIL/children/btn_addccreciep/onClick.js</onClick>
+      <x v="805" />
+      <y v="55" />
+      <width v="20" />
+      <height v="20" />
+      <enabled v="false" />
+      <enabledProcess>%aditoprj%/frame/SYS_MAIL/children/btn_addccreciep/enabledProcess.js</enabledProcess>
+      <tabOrder v="4" />
+      <imageData>%aditoprj%/frame/SYS_MAIL/children/btn_addccreciep/imageData.png</imageData>
+      <toolTip>Teilnehmer hinzufügen</toolTip>
+    </button>
+    <button>
+      <name>btn_addreciepient</name>
+      <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+      <onClick>%aditoprj%/frame/SYS_MAIL/children/btn_addreciepient/onClick.js</onClick>
+      <x v="805" />
+      <y v="35" />
+      <width v="20" />
+      <height v="20" />
+      <backgroundColor v="0xffdee7f7" />
+      <enabled v="false" />
+      <enabledProcess>%aditoprj%/frame/SYS_MAIL/children/btn_addreciepient/enabledProcess.js</enabledProcess>
+      <tabOrder v="2" />
+      <imageData>%aditoprj%/frame/SYS_MAIL/children/btn_addreciepient/imageData.png</imageData>
+      <toolTip>Teilnehmer hinzufügen</toolTip>
+    </button>
+    <edit>
+      <name>CCRECIPIENT</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <readOnlyProcess>%aditoprj%/frame/SYS_MAIL/children/ccrecipient/readOnlyProcess.js</readOnlyProcess>
+      <x v="70" />
+      <y v="55" />
+      <width v="735" />
+      <tabOrder v="3" />
+      <labelText>CC</labelText>
+      <labelFont name="" style="1" size="" />
+      <labelDistance v="45" />
+      <labelAnchor v="0" />
+    </edit>
+    <label>
+      <name>ID</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <x v="610" />
+      <y v="130" />
+      <width v="25" />
+      <height v="15" />
+      <visible v="false" />
+    </label>
+    <label>
+      <name>MAILBOX</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <alignment v="0" />
+      <x v="675" />
+      <y v="130" />
+      <width v="30" />
+      <height v="15" />
+      <visible v="false" />
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </label>
+    <edit>
+      <name>RECIPIENT</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <readOnlyProcess>%aditoprj%/frame/SYS_MAIL/children/recipient/readOnlyProcess.js</readOnlyProcess>
+      <x v="70" />
+      <y v="35" />
+      <width v="735" />
+      <tabOrder v="1" />
+      <labelText>An</labelText>
+      <labelFont name="" style="1" size="" />
+      <labelDistance v="45" />
+      <labelAnchor v="0" />
+    </edit>
+    <register>
+      <name>Register_0</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <x v="0" />
+      <y v="125" />
+      <width v="850" />
+      <height v="445" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <tabOrder v="8" />
+      <children>
+        <registerTab>
+          <name>Adressen</name>
+          <caption>Adressen</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/visibleProcess.js</visibleProcess>
+          <children>
+            <label>
+              <name>addrcopy</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <x v="645" />
+              <y v="25" />
+              <width v="85" />
+              <fontColor v="0xff0000ff" />
+              <visible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </label>
+            <button>
+              <name>btn_addDistlist</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/btn_adddistlist/onClick.js</onClick>
+              <x v="650" />
+              <y v="385" />
+              <width v="20" />
+              <height v="20" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/btn_adddistlist/enabledProcess.js</enabledProcess>
+              <tabOrder v="7" />
+              <imageData>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/btn_adddistlist/imageData.png</imageData>
+              <toolTip>Adressen übernehmen</toolTip>
+            </button>
+            <button>
+              <name>btn_addParticipant</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/btn_addparticipant/onClick.js</onClick>
+              <x v="650" />
+              <y v="360" />
+              <width v="20" />
+              <height v="20" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/btn_addparticipant/enabledProcess.js</enabledProcess>
+              <tabOrder v="4" />
+              <imageData>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/btn_addparticipant/imageData.png</imageData>
+              <toolTip>Teilnehmer hinzufügen</toolTip>
+            </button>
+            <button>
+              <name>btn_cancle</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/btn_cancle/onClick.js</onClick>
+              <x v="55" />
+              <y v="365" />
+              <width v="25" />
+              <height v="25" />
+              <verticalAnchor v="5" />
+              <font name="" style="1" size="" />
+              <tabOrder v="2" />
+              <imageData>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/btn_cancle/imageData.png</imageData>
+              <labelVisible v="false" />
+              <toolTip>Abbrechen</toolTip>
+            </button>
+            <button>
+              <name>btn_delParticipant</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/btn_delparticipant/onClick.js</onClick>
+              <x v="675" />
+              <y v="360" />
+              <width v="20" />
+              <height v="20" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/btn_delparticipant/enabledProcess.js</enabledProcess>
+              <tabOrder v="5" />
+              <imageData>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/btn_delparticipant/imageData.png</imageData>
+              <toolTip>Teilnehmer löschen</toolTip>
+            </button>
+            <button>
+              <name>btn_ok</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/btn_ok/onClick.js</onClick>
+              <x v="20" />
+              <y v="365" />
+              <width v="25" />
+              <height v="25" />
+              <verticalAnchor v="5" />
+              <font name="" style="1" size="" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/btn_ok/enabledProcess.js</enabledProcess>
+              <tabOrder v="1" />
+              <imageData>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/btn_ok/imageData.png</imageData>
+              <labelVisible v="false" />
+            </button>
+            <label>
+              <name>decoded_adress</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/decoded_adress/valueProcess.js</valueProcess>
+              <x v="645" />
+              <y v="50" />
+              <width v="85" />
+              <fontColor v="0xff0000ff" />
+              <visible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </label>
+            <lookup>
+              <name>lup_distlist</name>
+              <template>%aditoprj%/template/Template_Lookup/Template_Lookup.aod</template>
+              <alwaysEditable v="true" />
+              <selectClause>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/lup_distlist/selectClause.js</selectClause>
+              <fromClause>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/lup_distlist/fromClause.js</fromClause>
+              <x v="395" />
+              <y v="385" />
+              <width v="250" />
+              <height v="20" />
+              <verticalAnchor v="5" />
+              <popupWidth v="459" />
+              <popupHeight v="352" />
+              <tabOrder v="6" />
+              <labelText>Verteiler</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+              <columnProperties>
+                <lookupColumnMetaData>
+                  <name>Verteiler</name>
+                  <columnName>Verteiler</columnName>
+                  <searchable v="true" />
+                  <width v="166" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Beschreibung</name>
+                  <columnName>Beschreibung</columnName>
+                  <searchable v="true" />
+                  <width v="205" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+              </columnProperties>
+            </lookup>
+            <lookup>
+              <name>lup_relation</name>
+              <template>%aditoprj%/template/Template_Lookup/Template_Lookup.aod</template>
+              <alwaysEditable v="true" />
+              <selectClause>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/lup_relation/selectClause.js</selectClause>
+              <fromClause>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/lup_relation/fromClause.js</fromClause>
+              <whereClause>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/lup_relation/whereClause.js</whereClause>
+              <x v="395" />
+              <y v="360" />
+              <width v="250" />
+              <height v="20" />
+              <verticalAnchor v="5" />
+              <popupWidth v="649" />
+              <popupHeight v="385" />
+              <tabOrder v="3" />
+              <labelText>Teilnehmer</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+              <columnProperties>
+                <lookupColumnMetaData>
+                  <name>KundenNr</name>
+                  <columnName>Kunden-Nr.</columnName>
+                  <searchable v="true" />
+                  <width v="69" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Firma</name>
+                  <columnName>Firma</columnName>
+                  <searchable v="true" />
+                  <width v="182" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>PLZ</name>
+                  <columnName>PLZ</columnName>
+                  <searchable v="true" />
+                  <width v="42" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Ort</name>
+                  <columnName>Ort</columnName>
+                  <searchable v="true" />
+                  <width v="65" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Titel</name>
+                  <columnName>Titel</columnName>
+                  <searchable v="true" />
+                  <width v="38" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Vorname</name>
+                  <columnName>Vorname</columnName>
+                  <searchable v="true" />
+                  <width v="79" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Nachname</name>
+                  <columnName>Nachname</columnName>
+                  <searchable v="true" />
+                  <width v="75" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Funktion</name>
+                  <columnName>Funktion</columnName>
+                  <searchable v="true" />
+                  <width v="75" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+              </columnProperties>
+            </lookup>
+            <table>
+              <name>tbl_addresses</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/tbl_addresses/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/SYS_MAIL/children/register_0/children/adressen/children/tbl_addresses/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="625" />
+              <height v="325" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <tabOrder v="0" />
+              <grantArrangeColumns v="true" />
+              <labelText>Teilnehmer</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Mailadresse</name>
+                  <columnName>Mailadresse</columnName>
+                  <width v="145" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Firma__Name</name>
+                  <columnName>Firma / Name</columnName>
+                  <width v="424" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Mail</name>
+          <caption>&amp;amp;Mail</caption>
+          <visibleProcess>%aditoprj%/frame/SYS_MAIL/children/register_0/children/mail/visibleProcess.js</visibleProcess>
+          <children>
+            <dataVisualisation>
+              <name>Browser</name>
+              <valueProcess>%aditoprj%/frame/SYS_MAIL/children/register_0/children/mail/children/browser/valueProcess.js</valueProcess>
+              <x v="0" />
+              <y v="0" />
+              <width v="850" />
+              <height v="420" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <visibleProcess>%aditoprj%/frame/SYS_MAIL/children/register_0/children/mail/children/browser/visibleProcess.js</visibleProcess>
+              <dataVisualisationSub>
+                <browser>
+                  <browserType v="2" />
+                </browser>
+              </dataVisualisationSub>
+            </dataVisualisation>
+            <memo>
+              <name>text</name>
+              <textType v="2" />
+              <searchableModes>none</searchableModes>
+              <readOnly v="true" />
+              <readOnlyProcess>%aditoprj%/frame/SYS_MAIL/children/register_0/children/mail/children/text/readOnlyProcess.js</readOnlyProcess>
+              <x v="0" />
+              <y v="0" />
+              <width v="850" />
+              <height v="420" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <font name="Verdana" style="0" size="11" />
+              <visibleProcess>%aditoprj%/frame/SYS_MAIL/children/register_0/children/mail/children/text/visibleProcess.js</visibleProcess>
+              <tabOrder v="-1" />
+              <labelVisible v="false" />
+              <labelFont name="" style="0" size="12" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </memo>
+            <memo>
+              <name>writetext</name>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <readOnlyProcess>%aditoprj%/frame/SYS_MAIL/children/register_0/children/mail/children/writetext/readOnlyProcess.js</readOnlyProcess>
+              <x v="0" />
+              <y v="0" />
+              <width v="850" />
+              <height v="420" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <font name="Verdana" style="0" size="11" />
+              <visibleProcess>%aditoprj%/frame/SYS_MAIL/children/register_0/children/mail/children/writetext/visibleProcess.js</visibleProcess>
+              <labelFont name="" style="0" size="11" />
+            </memo>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Anhang</name>
+          <caption>&amp;amp;Anhänge</caption>
+          <visibleProcess>%aditoprj%/frame/SYS_MAIL/children/register_0/children/anhang/visibleProcess.js</visibleProcess>
+          <children>
+            <documentFolder>
+              <name>attachments</name>
+              <template>%aditoprj%/template/Template_Document/Template_Document.aod</template>
+              <readOnly v="true" />
+              <readOnlyProcess>%aditoprj%/frame/SYS_MAIL/children/register_0/children/anhang/children/attachments/readOnlyProcess.js</readOnlyProcess>
+              <x v="20" />
+              <y v="10" />
+              <width v="760" />
+              <height v="395" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <tabOrder v="0" />
+            </documentFolder>
+          </children>
+          <valueProcess>%aditoprj%/frame/SYS_MAIL/children/register_0/children/anhang/valueProcess.js</valueProcess>
+        </registerTab>
+      </children>
+    </register>
+    <edit>
+      <name>SENDER</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <valueProcess>%aditoprj%/frame/SYS_MAIL/children/sender/valueProcess.js</valueProcess>
+      <searchableModes>none</searchableModes>
+      <readOnly v="true" />
+      <x v="70" />
+      <y v="10" />
+      <width v="240" />
+      <tabOrder v="0" />
+      <labelText>Von</labelText>
+      <labelFont name="" style="1" size="" />
+      <labelDistance v="45" />
+      <labelAnchor v="0" />
+    </edit>
+    <label>
+      <name>SENTDATE</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <dataType v="93" />
+      <outputFormat>dd.MM.yyyy HH:mm</outputFormat>
+      <x v="115" />
+      <y v="570" />
+      <width v="160" />
+      <height v="15" />
+      <verticalAnchor v="5" />
+      <visibleProcess>%aditoprj%/frame/SYS_MAIL/children/sentdate/visibleProcess.js</visibleProcess>
+      <labelText>gesendet am</labelText>
+      <labelFont name="" style="1" size="" />
+      <labelDistance v="96" />
+      <labelAnchor v="0" />
+    </label>
+    <label>
+      <name>SERVER</name>
+      <alignment v="0" />
+      <x v="640" />
+      <y v="130" />
+      <width v="25" />
+      <height v="15" />
+      <visible v="false" />
+      <labelAnchor v="0" />
+    </label>
+    <edit>
+      <name>SUBJECT</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <readOnlyProcess>%aditoprj%/frame/SYS_MAIL/children/subject/readOnlyProcess.js</readOnlyProcess>
+      <x v="70" />
+      <y v="100" />
+      <width v="735" />
+      <tabOrder v="7" />
+      <labelText>Betreff</labelText>
+      <labelFont name="" style="1" size="" />
+      <labelDistance v="45" />
+      <labelAnchor v="0" />
+    </edit>
+    <label>
+      <name>UID</name>
+      <alignment v="0" />
+      <x v="725" />
+      <y v="130" />
+      <width v="30" />
+      <height v="15" />
+      <font name="Arial" style="0" size="12" />
+      <visible v="false" />
+      <labelFont name="" style="0" size="12" />
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </label>
+  </children>
+  <tableView />
+  <width v="850" />
+  <height v="586" />
+</frame>

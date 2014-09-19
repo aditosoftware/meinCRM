@@ -1,0 +1,1 @@
+a.rs ( a.valueof("$comp.IMPORTFILE") != ""  && a.valueof("$sys.workingmode")  == a.FRAMEMODE_SHOW );

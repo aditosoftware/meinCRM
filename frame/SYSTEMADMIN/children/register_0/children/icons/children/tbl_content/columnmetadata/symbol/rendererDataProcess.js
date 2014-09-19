@@ -1,0 +1,1 @@
+a.rq("SELECT BINDATA FROM ICONS WHERE ID = " + a.valueof("$comp.tbl_content.context"));

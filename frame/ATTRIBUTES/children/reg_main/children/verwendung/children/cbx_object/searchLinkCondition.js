@@ -1,0 +1,1 @@
+a.rs("ATTR.ATTRID IN ( SELECT ATTROBJECT.ATTR_ID   FROM ATTROBJECT   WHERE ( " + a.valueof("$local.condition") + ") ) ");

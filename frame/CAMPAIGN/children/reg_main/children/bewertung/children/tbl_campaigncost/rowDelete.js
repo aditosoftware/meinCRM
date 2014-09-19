@@ -1,0 +1,1 @@
+a.sqlDelete("CAMPAIGNCOST", " CAMPAIGNCOSTID = '" + a.valueof("$local.idvalue") + "'");

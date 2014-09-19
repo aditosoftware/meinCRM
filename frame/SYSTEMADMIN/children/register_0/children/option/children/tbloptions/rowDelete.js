@@ -1,0 +1,1 @@
+a.sqlDelete("AOSYS_CONFIGURATION", "OPTIONID = '" + a.valueof("$local.idvalue") + "'");

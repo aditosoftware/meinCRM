@@ -1,0 +1,1 @@
+a.rs(a.decodeMS(a.valueof("$comp.tblLeads")).length > 0);

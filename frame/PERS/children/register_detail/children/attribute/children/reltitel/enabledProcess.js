@@ -1,0 +1,1 @@
+a.rs( a.valueof("$sys.workingmode") == a.FRAMEMODE_SHOW || a.valueof("$sys.workingmode") == a.FRAMEMODE_SEARCH || a.valueof("$comp.AOTYPE") == "3" );

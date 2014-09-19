@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>LOCATIONDATA</name>
+  <title>Orte</title>
+  <icon>%aditoprj%/frame/LOCATIONDATA/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/LOCATIONDATA/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type  public
+@status released
+@desc [Frame für die Länderdaten]
+
+@module Administration
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <linkInformation>
+    <linkInformation>
+      <name>da8fdbc1-aa7f-43a9-aced-2126cd708c50</name>
+      <tableName>AOSYS_LOCATION</tableName>
+      <primaryKey>LOCATIONID</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+  </linkInformation>
+  <beforeStart>%aditoprj%/frame/LOCATIONDATA/beforeStart.js</beforeStart>
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <customComponents>
+          <rcCommandButton>
+            <name>VBGebiet_eintragen</name>
+            <title>VB-Gebiet eintragen</title>
+            <imageData>%aditoprj%/frame/LOCATIONDATA/ribbon/ribbontasks/task_search/customcomponents/vbgebiet_eintragen/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/LOCATIONDATA/ribbon/ribbontasks/task_search/customcomponents/vbgebiet_eintragen/onClick.js</onClick>
+            <enabledProcess>%aditoprj%/frame/LOCATIONDATA/ribbon/ribbontasks/task_search/customcomponents/vbgebiet_eintragen/enabledProcess.js</enabledProcess>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+          <rcSeparator>
+            <name>Separator</name>
+          </rcSeparator>
+          <rcCommandButton>
+            <name>Datenimport</name>
+            <title>Datenimport</title>
+            <toolTip>Bezug der PLZ-Daten von www.geopostcodes.com. 
+Zur Aktualisierung oder zur Beschaffung von Auslandsdaten müssen diese von dieser Adresse erworben werden.
+
+ACHTUNG: Zum Einlesen das CSV-Format verwenden (z.B. GeoPC_DE.csv) !
+
+U.U. sind Datensätze aus einer Kombination ZIP-CITY mehrfach vorhanden (z.B.wenn Original-Datenquelle Ortsteile berücksichtigt)
+Diese werden entfernt um eine eindeutige Auswahlliste zu bekommen.</toolTip>
+            <imageData>%aditoprj%/frame/LOCATIONDATA/ribbon/ribbontasks/task_search/customcomponents/datenimport/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/LOCATIONDATA/ribbon/ribbontasks/task_search/customcomponents/datenimport/onClick.js</onClick>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+        </customComponents>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showSaveCancel v="false" />
+        <showCreate v="true" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="true" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <databaseColumns>
+    <column>
+      <name>AOSYS_LOCATION_LOCATIONID</name>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>LOCATIONID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+    </column>
+    <column>
+      <name>AOSYS_LOCATION_CITY</name>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>CITY</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="256" />
+    </column>
+    <column>
+      <name>AOSYS_LOCATION_COUNTRY</name>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>COUNTRY</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="2" />
+    </column>
+    <column>
+      <name>AOSYS_LOCATION_ZIP</name>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>ZIP</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="20" />
+    </column>
+    <column>
+      <name>AOSYS_LOCATION_LAT</name>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>LAT</columnName>
+      <dataTypeName>NUMERIC</dataTypeName>
+      <dataType v="2" />
+      <precision v="14" />
+      <scale>4</scale>
+    </column>
+    <column>
+      <name>AOSYS_LOCATION_LON</name>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>LON</columnName>
+      <dataTypeName>NUMERIC</dataTypeName>
+      <dataType v="2" />
+      <precision v="14" />
+      <scale>4</scale>
+    </column>
+    <column>
+      <name>AOSYS_LOCATION_DISTRICT</name>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>DISTRICT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="255" />
+    </column>
+    <column>
+      <name>AOSYS_LOCATION_STATE</name>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>STATE</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+    </column>
+    <column>
+      <name>AOSYS_LOCATION_DATE_NEW</name>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>DATE_NEW</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="26" />
+      <scale>6</scale>
+      <presetNew>%aditoprj%/frame/LOCATIONDATA/databasecolumns/aosys_location_date_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>AOSYS_LOCATION_DATE_EDIT</name>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>DATE_EDIT</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="26" />
+      <scale>6</scale>
+      <presetNew>%aditoprj%/frame/LOCATIONDATA/databasecolumns/aosys_location_date_edit/presetNew.js</presetNew>
+      <presetChange>%aditoprj%/frame/LOCATIONDATA/databasecolumns/aosys_location_date_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>AOSYS_LOCATION_USER_EDIT</name>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>USER_EDIT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+      <presetNew>%aditoprj%/frame/LOCATIONDATA/databasecolumns/aosys_location_user_edit/presetNew.js</presetNew>
+      <presetChange>%aditoprj%/frame/LOCATIONDATA/databasecolumns/aosys_location_user_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>AOSYS_LOCATION_USER_NEW</name>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>USER_NEW</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+      <presetNew>%aditoprj%/frame/LOCATIONDATA/databasecolumns/aosys_location_user_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>AOSYS_LOCATION_SALESAREA</name>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>SALESAREA</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+    </column>
+    <column>
+      <name>AOSYS_LOCATION_REGION</name>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>REGION</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="255" />
+    </column>
+  </databaseColumns>
+  <children>
+    <edit>
+      <name>CITY</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>CITY</columnName>
+      <dataType v="12" />
+      <precision v="256" />
+      <x v="100" />
+      <y v="25" />
+      <width v="275" />
+      <tabOrder v="0" />
+      <labelText>Ortsname</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+    <comboBox>
+      <name>COUNTRY</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>COUNTRY</columnName>
+      <dataType v="1" />
+      <precision v="2" />
+      <contentProcess>%aditoprj%/frame/LOCATIONDATA/children/country/contentProcess.js</contentProcess>
+      <x v="510" />
+      <y v="75" />
+      <width v="275" />
+      <tabOrder v="8" />
+      <labelText>Landesname</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>DISTRICT</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>DISTRICT</columnName>
+      <dataType v="12" />
+      <precision v="255" />
+      <contentProcess>%aditoprj%/frame/LOCATIONDATA/children/district/contentProcess.js</contentProcess>
+      <x v="100" />
+      <y v="75" />
+      <width v="275" />
+      <tabOrder v="3" />
+      <editable v="true" />
+      <labelText>Landkreis</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <edit>
+      <name>LAT</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>LAT</columnName>
+      <dataType v="2" />
+      <precision v="14" />
+      <x v="510" />
+      <y v="25" />
+      <width v="110" />
+      <tabOrder v="6" />
+      <labelText>Breitengrad</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+    <label>
+      <name>lblCreatedEdited</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <valueProcess>%aditoprj%/frame/LOCATIONDATA/children/lblcreatededited/valueProcess.js</valueProcess>
+      <x v="20" />
+      <y v="565" />
+      <width v="830" />
+      <height v="15" />
+      <verticalAnchor v="5" />
+      <font name="Verdana" style="0" size="9" />
+      <labelAnchor v="0" />
+    </label>
+    <edit>
+      <name>LON</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>LON</columnName>
+      <dataType v="2" />
+      <precision v="14" />
+      <x v="510" />
+      <y v="50" />
+      <width v="110" />
+      <tabOrder v="7" />
+      <labelText>Längengrad</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+    <register>
+      <name>reg_0</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <y v="165" />
+      <width v="850" />
+      <height v="400" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <visible v="false" />
+      <tabOrder v="9" />
+      <children>
+        <registerTab>
+          <name>Daten</name>
+          <caption>Daten</caption>
+          <children>
+            <table>
+              <name>tbl_import</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <displayContentProcess>%aditoprj%/frame/LOCATIONDATA/children/reg_0/children/daten/children/tbl_import/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="810" />
+              <height v="340" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <showTooltip v="false" />
+              <grantArrangeColumns v="true" />
+              <labelText>Quelldaten</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="5" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Land</name>
+                  <columnName>Land</columnName>
+                  <width v="47" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Sprache</name>
+                  <columnName>Sprache</columnName>
+                  <width v="56" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>ID</name>
+                  <columnName>ID</columnName>
+                  <width v="59" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>ColumnMetadata</name>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>ColumnMetadata_2</name>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>ColumnMetadata_3</name>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>ColumnMetadata_4</name>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>ColumnMetadata_5</name>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>ColumnMetadata_6</name>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>ColumnMetadata_7</name>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>ColumnMetadata_8</name>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>ColumnMetadata_9</name>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>ColumnMetadata_10</name>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>ColumnMetadata_11</name>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>ColumnMetadata_12</name>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Admin</name>
+          <caption>Admin</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/LOCATIONDATA/children/reg_0/children/admin/visibleProcess.js</visibleProcess>
+          <children>
+            <edit>
+              <name>DATE_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>AOSYS_LOCATION</tableName>
+              <columnName>DATE_EDIT</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetNew>%aditoprj%/frame/LOCATIONDATA/children/reg_0/children/admin/children/date_edit/presetNew.js</presetNew>
+              <presetChange>%aditoprj%/frame/LOCATIONDATA/children/reg_0/children/admin/children/date_edit/presetChange.js</presetChange>
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <searchableModes>mask</searchableModes>
+              <x v="125" />
+              <y v="75" />
+              <width v="140" />
+              <tabOrder v="2" />
+              <labelText>DATE_EDIT</labelText>
+              <labelDistance v="100" />
+            </edit>
+            <edit>
+              <name>DATE_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>AOSYS_LOCATION</tableName>
+              <columnName>DATE_NEW</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetNew>%aditoprj%/frame/LOCATIONDATA/children/reg_0/children/admin/children/date_new/presetNew.js</presetNew>
+              <outputFormat>dd.MM.yyyy</outputFormat>
+              <searchableModes>mask</searchableModes>
+              <x v="125" />
+              <y v="50" />
+              <width v="140" />
+              <tabOrder v="1" />
+              <labelText>DATE_NEW</labelText>
+              <labelDistance v="100" />
+            </edit>
+            <edit>
+              <name>FIELDLIMIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <valueProcess>%aditoprj%/frame/LOCATIONDATA/children/reg_0/children/admin/children/fieldlimit/valueProcess.js</valueProcess>
+              <searchableModes>mask</searchableModes>
+              <x v="125" />
+              <y v="210" />
+              <width v="140" />
+              <tabOrder v="7" />
+              <labelText>FIELDLIMIT</labelText>
+              <labelDistance v="65" />
+            </edit>
+            <edit>
+              <name>FIELDSEPERATOR</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <valueProcess>%aditoprj%/frame/LOCATIONDATA/children/reg_0/children/admin/children/fieldseperator/valueProcess.js</valueProcess>
+              <searchableModes>mask</searchableModes>
+              <x v="125" />
+              <y v="185" />
+              <width v="140" />
+              <tabOrder v="6" />
+              <labelText>FIELDSEPERATOR</labelText>
+              <labelDistance v="65" />
+            </edit>
+            <edit>
+              <name>LOCATIONID</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>AOSYS_LOCATION</tableName>
+              <columnName>LOCATIONID</columnName>
+              <dataType v="1" />
+              <precision v="36" />
+              <searchableModes>mask</searchableModes>
+              <x v="125" />
+              <y v="20" />
+              <width v="110" />
+              <tabOrder v="0" />
+              <labelText>LOCATIONID</labelText>
+              <labelDistance v="80" />
+            </edit>
+            <edit>
+              <name>RECORDSEPERATOR</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <valueProcess>%aditoprj%/frame/LOCATIONDATA/children/reg_0/children/admin/children/recordseperator/valueProcess.js</valueProcess>
+              <searchableModes>mask</searchableModes>
+              <x v="125" />
+              <y v="160" />
+              <width v="140" />
+              <tabOrder v="5" />
+              <labelText>RECORDSEPERATOR</labelText>
+              <labelDistance v="65" />
+            </edit>
+            <edit>
+              <name>USER_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>AOSYS_LOCATION</tableName>
+              <columnName>USER_EDIT</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <presetNew>%aditoprj%/frame/LOCATIONDATA/children/reg_0/children/admin/children/user_edit/presetNew.js</presetNew>
+              <presetChange>%aditoprj%/frame/LOCATIONDATA/children/reg_0/children/admin/children/user_edit/presetChange.js</presetChange>
+              <searchableModes>mask</searchableModes>
+              <x v="125" />
+              <y v="130" />
+              <width v="140" />
+              <tabOrder v="4" />
+              <labelText>USER_EDIT</labelText>
+              <labelDistance v="100" />
+            </edit>
+            <edit>
+              <name>USER_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>AOSYS_LOCATION</tableName>
+              <columnName>USER_NEW</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <presetNew>%aditoprj%/frame/LOCATIONDATA/children/reg_0/children/admin/children/user_new/presetNew.js</presetNew>
+              <searchableModes>mask</searchableModes>
+              <x v="125" />
+              <y v="105" />
+              <width v="140" />
+              <tabOrder v="3" />
+              <labelText>USER_NEW</labelText>
+              <labelDistance v="100" />
+            </edit>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+    <comboBox>
+      <name>REGION</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>REGION</columnName>
+      <dataType v="12" />
+      <precision v="255" />
+      <contentProcess>%aditoprj%/frame/LOCATIONDATA/children/region/contentProcess.js</contentProcess>
+      <x v="100" />
+      <y v="100" />
+      <width v="275" />
+      <tabOrder v="4" />
+      <editable v="true" />
+      <labelText>Bezirk</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>SALESAREA</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>SALESAREA</columnName>
+      <dataType v="4" />
+      <precision v="10" />
+      <contentProcess>%aditoprj%/frame/LOCATIONDATA/children/salesarea/contentProcess.js</contentProcess>
+      <x v="240" />
+      <y v="50" />
+      <width v="135" />
+      <tabOrder v="2" />
+      <labelText>Gebiet</labelText>
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>STATE</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>STATE</columnName>
+      <dataType v="12" />
+      <precision v="50" />
+      <contentProcess>%aditoprj%/frame/LOCATIONDATA/children/state/contentProcess.js</contentProcess>
+      <x v="100" />
+      <y v="125" />
+      <width v="275" />
+      <tabOrder v="5" />
+      <editable v="true" />
+      <labelText>Bundesland</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <edit>
+      <name>ZIP</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>AOSYS_LOCATION</tableName>
+      <columnName>ZIP</columnName>
+      <dataType v="12" />
+      <precision v="20" />
+      <x v="100" />
+      <y v="50" />
+      <width v="95" />
+      <tabOrder v="1" />
+      <labelText>Postleitzahl</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+  </children>
+  <tableView>
+    <tableViewProperties>
+      <columnProperty>
+        <name>AOSYS_LOCATION_COUNTRY</name>
+        <tableName>AOSYS_LOCATION</tableName>
+        <columnName>COUNTRY</columnName>
+        <label>Land</label>
+        <width v="44" />
+      </columnProperty>
+      <columnProperty>
+        <name>AOSYS_LOCATION_CITY</name>
+        <tableName>AOSYS_LOCATION</tableName>
+        <columnName>CITY</columnName>
+        <label>Ortsname</label>
+        <width v="149" />
+      </columnProperty>
+      <columnProperty>
+        <name>AOSYS_LOCATION_ZIP</name>
+        <tableName>AOSYS_LOCATION</tableName>
+        <columnName>ZIP</columnName>
+        <label>PLZ</label>
+        <width v="58" />
+      </columnProperty>
+      <columnProperty>
+        <name>AOSYS_LOCATION_DISTRICT</name>
+        <tableName>AOSYS_LOCATION</tableName>
+        <columnName>DISTRICT</columnName>
+        <label>Landkreis</label>
+        <width v="177" />
+      </columnProperty>
+      <columnProperty>
+        <name>AOSYS_LOCATION_REGION</name>
+        <tableName>AOSYS_LOCATION</tableName>
+        <columnName>REGION</columnName>
+        <label>Bezirk</label>
+        <width v="154" />
+      </columnProperty>
+      <columnProperty>
+        <name>AOSYS_LOCATION_STATE</name>
+        <tableName>AOSYS_LOCATION</tableName>
+        <columnName>STATE</columnName>
+        <label>Bundesland</label>
+        <width v="167" />
+      </columnProperty>
+      <columnProperty>
+        <name>subselect</name>
+        <label>Gebiet</label>
+        <width v="144" />
+        <subSelect>%aditoprj%/frame/LOCATIONDATA/tableview/tableviewproperties/subselect/subSelect.js</subSelect>
+      </columnProperty>
+    </tableViewProperties>
+  </tableView>
+  <width v="850" />
+  <height v="580" />
+</frame>

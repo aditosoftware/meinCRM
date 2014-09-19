@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>DLG_CHOOSE_CITY</name>
+  <icon></icon>
+  <description>Dialog-Stadtwahl</description>
+  <comment>@type  public
+@status released
+@desc [Frame für die Verwaltung der Länderdaten]
+
+@module Standard
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <table>
+      <name>plzid</name>
+      <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+      <displayContentProcess>%aditoprj%/frame/DLG_CHOOSE_CITY/children/plzid/displayContentProcess.js</displayContentProcess>
+      <contentProcessType v="0" />
+      <x v="5" />
+      <y v="10" />
+      <width v="835" />
+      <height v="350" />
+      <utilizeRowId v="true" />
+      <tabOrder v="0" />
+      <grantArrangeColumns v="true" />
+      <columnMetaData>
+        <columnMetaData>
+          <name>PLZ</name>
+          <columnName>PLZ</columnName>
+          <width v="57" />
+        </columnMetaData>
+        <columnMetaData>
+          <name>Ort</name>
+          <columnName>Ort</columnName>
+          <width v="176" />
+        </columnMetaData>
+        <columnMetaData>
+          <name>Kreis</name>
+          <columnName>Kreis</columnName>
+          <width v="212" />
+        </columnMetaData>
+        <columnMetaData>
+          <name>Bezirk</name>
+          <columnName>Bezirk</columnName>
+          <width v="134" />
+        </columnMetaData>
+        <columnMetaData>
+          <name>Staat</name>
+          <columnName>Staat</columnName>
+          <width v="220" />
+        </columnMetaData>
+      </columnMetaData>
+    </table>
+  </children>
+  <tableView>
+    <headerFont name="" style="0" size="11" />
+    <font name="Verdana" style="0" size="11" />
+  </tableView>
+  <width v="850" />
+  <height v="590" />
+</frame>

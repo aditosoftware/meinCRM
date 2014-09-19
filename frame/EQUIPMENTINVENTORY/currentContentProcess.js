@@ -1,0 +1,1 @@
+a.rs(a.translate("Ausrüstung"))

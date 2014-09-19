@@ -1,0 +1,1 @@
+a.rs( a.valueof("$comp.edt_Suche") != "" && (a.valueof("$sys.workingmode") == a.FRAMEMODE_NEW || a.valueof("$sys.workingmode") == a.FRAMEMODE_EDIT ));

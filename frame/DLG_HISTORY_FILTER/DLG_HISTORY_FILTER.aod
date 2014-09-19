@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>DLG_HISTORY_FILTER</name>
+  <icon></icon>
+  <description>Dialog-Historienfilter</description>
+  <comment>@type public
+@status released
+@desc [Dialog-Historienfilter]
+
+@module Standard
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <edit>
+      <name>date_from</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <dataType v="93" />
+      <outputFormat>dd.MM.yyyy</outputFormat>
+      <inputFormat>dd.MM.yyyy</inputFormat>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <calendarSupport v="true" />
+      <x v="100" />
+      <y v="10" />
+      <width v="130" />
+      <tabOrder v="0" />
+      <labelText>von - bis</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>date_until</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <dataType v="93" />
+      <outputFormat>dd.MM.yyyy</outputFormat>
+      <inputFormat>dd.MM.yyyy</inputFormat>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <calendarSupport v="true" />
+      <x v="240" />
+      <y v="10" />
+      <width v="130" />
+      <tabOrder v="1" />
+      <labelText>-</labelText>
+      <labelDistance v="10" />
+      <labelAnchor v="0" />
+    </edit>
+    <comboBox>
+      <name>direction</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <mandatoryInput v="true" />
+      <x v="240" />
+      <y v="85" />
+      <width v="130" />
+      <tabOrder v="5" />
+      <staticContent>
+        <entry>
+          <key>ausgehend</key>
+          <value>o</value>
+        </entry>
+        <entry>
+          <key>eingehend</key>
+          <value>i</value>
+        </entry>
+      </staticContent>
+      <maximumRowCount v="3" />
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>entrytype</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/DLG_HISTORY_FILTER/children/entrytype/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <x v="100" />
+      <y v="60" />
+      <width v="270" />
+      <tabOrder v="3" />
+      <maximumRowCount v="20" />
+      <labelText>Thema</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <memo>
+      <name>info</name>
+      <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+      <searchableModes>none</searchableModes>
+      <x v="100" />
+      <y v="135" />
+      <width v="270" />
+      <height v="50" />
+      <tabOrder v="7" />
+      <labelText>Info</labelText>
+      <labelDistance v="80" />
+    </memo>
+    <comboBox>
+      <name>medium</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/DLG_HISTORY_FILTER/children/medium/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <x v="100" />
+      <y v="85" />
+      <width v="130" />
+      <tabOrder v="4" />
+      <labelText>Medium</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>organisation</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/DLG_HISTORY_FILTER/children/organisation/contentProcess.js</contentProcess>
+      <searchableModes>none</searchableModes>
+      <x v="100" />
+      <y v="190" />
+      <width v="270" />
+      <visibleProcess>%aditoprj%/frame/DLG_HISTORY_FILTER/children/organisation/visibleProcess.js</visibleProcess>
+      <tabOrder v="8" />
+      <labelText>Firma</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>relation_id</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/DLG_HISTORY_FILTER/children/relation_id/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <x v="100" />
+      <y v="35" />
+      <width v="270" />
+      <tabOrder v="2" />
+      <labelText>Mitarbeiter</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>subject</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/DLG_HISTORY_FILTER/children/subject/contentProcess.js</contentProcess>
+      <alwaysEditable v="true" />
+      <searchableModes>none</searchableModes>
+      <x v="100" />
+      <y v="110" />
+      <width v="270" />
+      <utilizeRowId v="false" />
+      <tabOrder v="6" />
+      <editable v="true" />
+      <labelText>Betreff</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <edit>
+      <name>dslimit</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <dataType v="4" />
+      <precision v="4" />
+      <x v="310" />
+      <y v="215" />
+      <width v="60" />
+      <tabOrder v="9" />
+      <labelText>maximale Anzahl der Historien</labelText>
+      <labelDistance v="200" />
+    </edit>
+  </children>
+  <tableView>
+    <headerFont name="" style="0" size="12" />
+    <font name="Arial" style="0" size="12" />
+  </tableView>
+  <width v="865" />
+  <height v="570" />
+</frame>

@@ -1,0 +1,1 @@
+a.rq("select CURRENCYCODE from COUNTRYINFO");

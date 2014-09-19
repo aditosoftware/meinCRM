@@ -1,0 +1,1253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>BULKMAIL_DEFINITION</name>
+  <title>Serienmail</title>
+  <icon>%aditoprj%/frame/BULKMAIL_DEFINITION/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/BULKMAIL_DEFINITION/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type public
+@status draft
+@desc [Frame zur Verwaltung des Versendens von Serienmails]
+
+@module Marketing
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <linkInformation>
+    <linkInformation>
+      <name>1ec20d2b-4107-4fc0-9f34-066ea7c0e8c0</name>
+      <tableName>BULKMAILDEF</tableName>
+      <primaryKey>BULKMAILDEFID</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+  </linkInformation>
+  <whereClause>%aditoprj%/frame/BULKMAIL_DEFINITION/whereClause.js</whereClause>
+  <idStrategy v="4" />
+  <beforeStart>%aditoprj%/frame/BULKMAIL_DEFINITION/beforeStart.js</beforeStart>
+  <afterSave>%aditoprj%/frame/BULKMAIL_DEFINITION/afterSave.js</afterSave>
+  <beforeDelete>%aditoprj%/frame/BULKMAIL_DEFINITION/beforeDelete.js</beforeDelete>
+  <afterDelete>%aditoprj%/frame/BULKMAIL_DEFINITION/afterDelete.js</afterDelete>
+  <afterCancel>%aditoprj%/frame/BULKMAIL_DEFINITION/afterCancel.js</afterCancel>
+  <afterEdit>%aditoprj%/frame/BULKMAIL_DEFINITION/afterEdit.js</afterEdit>
+  <currentContentProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/currentContentProcess.js</currentContentProcess>
+  <grantCreateProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/grantCreateProcess.js</grantCreateProcess>
+  <grantUpdateProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/grantUpdateProcess.js</grantUpdateProcess>
+  <grantDeleteProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/grantDeleteProcess.js</grantDeleteProcess>
+  <ribbon>
+    <name>RIBBON</name>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showSaveCancel v="false" />
+        <showCreate v="true" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="false" />
+        <showEdit v="true" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="false" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <customComponents>
+          <rcCommandButton>
+            <name>Neue_Aufgabe</name>
+            <title>Neue Aufgabe</title>
+            <imageData>%aditoprj%/frame/BULKMAIL_DEFINITION/ribbon/ribbontasks/task_view/customcomponents/neue_aufgabe/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/BULKMAIL_DEFINITION/ribbon/ribbontasks/task_view/customcomponents/neue_aufgabe/onClick.js</onClick>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+          <rcCommandButton>
+            <name>Kopieren</name>
+            <title>Kopieren</title>
+            <imageData>%aditoprj%/frame/BULKMAIL_DEFINITION/ribbon/ribbontasks/task_view/customcomponents/kopieren/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/BULKMAIL_DEFINITION/ribbon/ribbontasks/task_view/customcomponents/kopieren/onClick.js</onClick>
+            <layoutPosition>POSITION_NATIVE</layoutPosition>
+          </rcCommandButton>
+        </customComponents>
+        <toolTip>Anzeige</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showNavigationBar v="false" />
+        <showTableSearch v="false" />
+        <showEdit v="false" />
+        <showMaskSearch v="false" />
+        <showExtendedMaskSearch v="false" />
+        <showSaveCancel v="true" />
+        <showCreate v="false" />
+        <showZoom v="false" />
+        <showExport v="false" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+        <toolTipProcess></toolTipProcess>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <databaseColumns>
+    <column>
+      <name>BULKMAILDEF_MAILINGNAME</name>
+      <tableName>BULKMAILDEF</tableName>
+      <columnName>MAILINGNAME</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="80" />
+    </column>
+    <column>
+      <name>BULKMAILDEF_MAILINGDESC</name>
+      <tableName>BULKMAILDEF</tableName>
+      <columnName>MAILINGDESC</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="255" />
+    </column>
+    <column>
+      <name>BULKMAILDEF_SENTDATE</name>
+      <tableName>BULKMAILDEF</tableName>
+      <columnName>SENTDATE</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="26" />
+      <scale>6</scale>
+      <presetNew>%aditoprj%/frame/BULKMAIL_DEFINITION/databasecolumns/bulkmaildef_sentdate/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>BULKMAILDEF_SUBJECT</name>
+      <tableName>BULKMAILDEF</tableName>
+      <columnName>SUBJECT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="200" />
+    </column>
+    <column>
+      <name>BULKMAILDEF_SENDER</name>
+      <tableName>BULKMAILDEF</tableName>
+      <columnName>SENDER</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="120" />
+    </column>
+    <column>
+      <name>BULKMAILDEF_CREATEINDIVIDUAL</name>
+      <tableName>BULKMAILDEF</tableName>
+      <columnName>CREATEINDIVIDUAL</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="1" />
+      <presetNew>%aditoprj%/frame/BULKMAIL_DEFINITION/databasecolumns/bulkmaildef_createindividual/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>BULKMAILDEF_BULKMAILDEFID</name>
+      <tableName>BULKMAILDEF</tableName>
+      <columnName>BULKMAILDEFID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/BULKMAIL_DEFINITION/databasecolumns/bulkmaildef_bulkmaildefid/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>BULKMAILDEF_DATE_NEW</name>
+      <tableName>BULKMAILDEF</tableName>
+      <columnName>DATE_NEW</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="26" />
+      <scale>6</scale>
+      <presetNew>%aditoprj%/frame/BULKMAIL_DEFINITION/databasecolumns/bulkmaildef_date_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>BULKMAILDEF_USER_NEW</name>
+      <tableName>BULKMAILDEF</tableName>
+      <columnName>USER_NEW</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="50" />
+      <presetNew>%aditoprj%/frame/BULKMAIL_DEFINITION/databasecolumns/bulkmaildef_user_new/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>BULKMAILDEF_DATE_EDIT</name>
+      <tableName>BULKMAILDEF</tableName>
+      <columnName>DATE_EDIT</columnName>
+      <dataTypeName>TIMESTAMP</dataTypeName>
+      <dataType v="93" />
+      <precision v="26" />
+      <scale>6</scale>
+      <presetChange>%aditoprj%/frame/BULKMAIL_DEFINITION/databasecolumns/bulkmaildef_date_edit/presetChange.js</presetChange>
+    </column>
+    <column>
+      <name>BULKMAILDEF_USER_EDIT</name>
+      <tableName>BULKMAILDEF</tableName>
+      <columnName>USER_EDIT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="50" />
+      <presetChange>%aditoprj%/frame/BULKMAIL_DEFINITION/databasecolumns/bulkmaildef_user_edit/presetChange.js</presetChange>
+    </column>
+  </databaseColumns>
+  <blobDatabaseColumns>
+    <blobColumn>
+      <name>BULKMAILDEF_DOCUMENT</name>
+      <tableName>BULKMAILDEF</tableName>
+      <columnName>DOCUMENT</columnName>
+      <rowIdProcess></rowIdProcess>
+    </blobColumn>
+    <blobColumn>
+      <name>BULKMAILDEF_BULKMAILATTACHMENT</name>
+      <tableName>BULKMAILDEF</tableName>
+      <columnName>BULKMAILATTACHMENT</columnName>
+      <rowIdProcess></rowIdProcess>
+    </blobColumn>
+  </blobDatabaseColumns>
+  <children>
+    <label>
+      <name>lblCreatedEdited</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <valueProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/lblcreatededited/valueProcess.js</valueProcess>
+      <x v="20" />
+      <y v="565" />
+      <width v="830" />
+      <height v="15" />
+      <verticalAnchor v="5" />
+      <font name="Verdana" style="0" size="9" />
+      <backgroundColor v="0x00000000" />
+      <labelAnchor v="0" />
+    </label>
+    <memo>
+      <name>MAILINGDESC</name>
+      <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+      <tableName>BULKMAILDEF</tableName>
+      <columnName>MAILINGDESC</columnName>
+      <precision v="255" />
+      <x v="120" />
+      <y v="45" />
+      <width v="520" />
+      <height v="50" />
+      <tabOrder v="1" />
+      <labelText>Beschreibung</labelText>
+      <labelDistance v="100" />
+    </memo>
+    <edit>
+      <name>MAILINGNAME</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>BULKMAILDEF</tableName>
+      <columnName>MAILINGNAME</columnName>
+      <precision v="80" />
+      <mandatoryInput v="true" />
+      <x v="120" />
+      <y v="20" />
+      <width v="520" />
+      <tabOrder v="0" />
+      <labelText>Name</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+    <register>
+      <name>Register_0</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <y v="165" />
+      <width v="850" />
+      <height v="400" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <tabOrder v="3" />
+      <children>
+        <registerTab>
+          <name>def</name>
+          <caption>&amp;amp;Definition</caption>
+          <children>
+            <checkBox>
+              <name>CREATEINDIVIDUAL</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <tableName>BULKMAILDEF</tableName>
+              <columnName>CREATEINDIVIDUAL</columnName>
+              <dataType v="1" />
+              <presetNew>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/def/children/createindividual/presetNew.js</presetNew>
+              <valueTrue>Y</valueTrue>
+              <valueFalse>N</valueFalse>
+              <x v="100" />
+              <y v="245" />
+              <verticalAnchor v="5" />
+              <labelText>Mails personalisieren (werden dann als Einzelmails versandt)</labelText>
+              <labelOrientation v="4" />
+              <labelDistance v="10" />
+              <tabOrder v="3" />
+              <toolTip>Erzeugt einzelne Mails anstelle einer Mail,
+in der alle Empfänger als BCC enthalten sind</toolTip>
+            </checkBox>
+            <documentFolder>
+              <name>Dokumentenmappe</name>
+              <template>%aditoprj%/template/Template_Document/Template_Document.aod</template>
+              <tableName>BULKMAILDEF</tableName>
+              <columnName>BULKMAILATTACHMENT</columnName>
+              <x v="100" />
+              <y v="90" />
+              <width v="500" />
+              <height v="115" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <tabOrder v="2" />
+              <labelText>Mailtext und</labelText>
+              <labelDistance v="80" />
+            </documentFolder>
+            <label>
+              <name>Label_0</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/def/children/label_0/valueProcess.js</valueProcess>
+              <x v="20" />
+              <y v="105" />
+              <width v="80" />
+            </label>
+            <rectangleDecorator>
+              <name>Linie_0</name>
+              <x v="25" />
+              <y v="225" />
+              <width v="600" />
+              <height v="1" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="5" />
+              <backgroundColor v="0xff868ea1" />
+            </rectangleDecorator>
+            <edit>
+              <name>SENDER</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BULKMAILDEF</tableName>
+              <columnName>SENDER</columnName>
+              <precision v="120" />
+              <x v="100" />
+              <y v="60" />
+              <width v="425" />
+              <horizontalAnchor v="3" />
+              <tabOrder v="1" />
+              <labelText>Absender</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>SUBJECT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BULKMAILDEF</tableName>
+              <columnName>SUBJECT</columnName>
+              <precision v="200" />
+              <x v="100" />
+              <y v="30" />
+              <width v="425" />
+              <horizontalAnchor v="3" />
+              <tabOrder v="0" />
+              <labelText>Betreffzeile</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </edit>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>recpt</name>
+          <caption>&amp;amp;Empfänger</caption>
+          <children>
+            <button>
+              <name>btn_addDistlist</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btn_adddistlist/onClick.js</onClick>
+              <x v="740" />
+              <y v="330" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btn_adddistlist/enabledProcess.js</enabledProcess>
+              <tabOrder v="8" />
+              <imageData>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btn_adddistlist/imageData.png</imageData>
+              <toolTip>Verteiler hinzufügen</toolTip>
+            </button>
+            <button>
+              <name>btn_addParticipant</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btn_addparticipant/onClick.js</onClick>
+              <x v="740" />
+              <y v="305" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btn_addparticipant/enabledProcess.js</enabledProcess>
+              <tabOrder v="5" />
+              <imageData>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btn_addparticipant/imageData.png</imageData>
+              <toolTip>Teilnehmer hinzufügen</toolTip>
+            </button>
+            <button>
+              <name>btn_addSelection</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btn_addselection/onClick.js</onClick>
+              <x v="740" />
+              <y v="355" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btn_addselection/enabledProcess.js</enabledProcess>
+              <tabOrder v="11" />
+              <imageData>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btn_addselection/imageData.png</imageData>
+              <toolTip>Suche hinzufügen</toolTip>
+            </button>
+            <button>
+              <name>btn_delParticipant</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btn_delparticipant/onClick.js</onClick>
+              <x v="765" />
+              <y v="305" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btn_delparticipant/enabledProcess.js</enabledProcess>
+              <tabOrder v="6" />
+              <imageData>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btn_delparticipant/imageData.png</imageData>
+              <toolTip>markierte Teilnehmer entfernen</toolTip>
+            </button>
+            <button>
+              <name>btn_delpdl</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btn_delpdl/onClick.js</onClick>
+              <x v="765" />
+              <y v="330" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btn_delpdl/enabledProcess.js</enabledProcess>
+              <tabOrder v="9" />
+              <imageData>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btn_delpdl/imageData.png</imageData>
+              <toolTip>Teilnehmer des ausgewählten Verteilers entfernen</toolTip>
+            </button>
+            <button>
+              <name>btn_delpsel</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btn_delpsel/onClick.js</onClick>
+              <x v="765" />
+              <y v="355" />
+              <width v="20" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btn_delpsel/enabledProcess.js</enabledProcess>
+              <tabOrder v="12" />
+              <imageData>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btn_delpsel/imageData.png</imageData>
+              <toolTip>Teilnehmer der ausgewählten Suche entfernen</toolTip>
+            </button>
+            <button>
+              <name>btnSend</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btnsend/onClick.js</onClick>
+              <x v="185" />
+              <y v="305" />
+              <width v="85" />
+              <height v="20" />
+              <verticalAnchor v="5" />
+              <caption>Versenden</caption>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btnsend/enabledProcess.js</enabledProcess>
+              <tabOrder v="1" />
+              <labelFont name="" style="0" size="11" />
+            </button>
+            <button>
+              <name>btnTestsend</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btntestsend/onClick.js</onClick>
+              <x v="185" />
+              <y v="330" />
+              <width v="85" />
+              <height v="20" />
+              <verticalAnchor v="5" />
+              <caption>Test!</caption>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/btntestsend/enabledProcess.js</enabledProcess>
+              <tabOrder v="2" />
+            </button>
+            <button>
+              <name>Button_mail_unknown</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/button_mail_unknown/onClick.js</onClick>
+              <x v="25" />
+              <y v="335" />
+              <width v="20" />
+              <height v="20" />
+              <verticalAnchor v="5" />
+              <backgroundColor v="0xfff0f1fb" />
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/button_mail_unknown/visibleProcess.js</visibleProcess>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/button_mail_unknown/enabledProcess.js</enabledProcess>
+              <tabOrder v="3" />
+              <imageData>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/button_mail_unknown/imageData.png</imageData>
+              <labelAnchor v="0" />
+              <toolTip>Rückläufer</toolTip>
+            </button>
+            <comboBox>
+              <name>Combobox_Search</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/combobox_search/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="485" />
+              <y v="355" />
+              <width v="250" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/combobox_search/enabledProcess.js</enabledProcess>
+              <tabOrder v="10" />
+              <emptyElementEnabled v="false" />
+              <labelText>Suchen</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>comboSelection</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <valueProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/comboselection/valueProcess.js</valueProcess>
+              <contentProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/comboselection/contentProcess.js</contentProcess>
+              <alwaysEditable v="true" />
+              <searchableModes>none</searchableModes>
+              <x v="20" />
+              <y v="305" />
+              <width v="160" />
+              <verticalAnchor v="5" />
+              <tabOrder v="0" />
+              <staticContent />
+              <emptyElementEnabled v="false" />
+              <labelText>Auswahl</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="60" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <label>
+              <name>label_anz_member</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/label_anz_member/valueProcess.js</valueProcess>
+              <x v="20" />
+              <y v="5" />
+              <width v="195" />
+              <fontColor v="0xff5d667c" />
+              <visibleProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/label_anz_member/visibleProcess.js</visibleProcess>
+              <labelVisible v="false" />
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+            </label>
+            <lookup>
+              <name>lup_distlist</name>
+              <template>%aditoprj%/template/Template_Lookup/Template_Lookup.aod</template>
+              <alwaysEditable v="true" />
+              <selectClause>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/lup_distlist/selectClause.js</selectClause>
+              <fromClause>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/lup_distlist/fromClause.js</fromClause>
+              <x v="485" />
+              <y v="330" />
+              <width v="250" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/lup_distlist/enabledProcess.js</enabledProcess>
+              <popupWidth v="459" />
+              <popupHeight v="377" />
+              <tabOrder v="7" />
+              <labelText>Verteiler</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+              <columnProperties>
+                <lookupColumnMetaData>
+                  <name>Verteiler</name>
+                  <columnName>Verteiler</columnName>
+                  <searchable v="true" />
+                  <width v="166" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Beschreibung</name>
+                  <columnName>Beschreibung</columnName>
+                  <searchable v="true" />
+                  <width v="205" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+              </columnProperties>
+            </lookup>
+            <lookup>
+              <name>lup_relation</name>
+              <template>%aditoprj%/template/Template_Lookup/Template_Lookup.aod</template>
+              <alwaysEditable v="true" />
+              <selectClause>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/lup_relation/selectClause.js</selectClause>
+              <fromClause>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/lup_relation/fromClause.js</fromClause>
+              <whereClause>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/lup_relation/whereClause.js</whereClause>
+              <x v="485" />
+              <y v="305" />
+              <width v="250" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/lup_relation/enabledProcess.js</enabledProcess>
+              <popupWidth v="649" />
+              <popupHeight v="385" />
+              <tabOrder v="4" />
+              <labelText>Teilnehmer</labelText>
+              <labelDistance v="80" />
+              <labelAnchor v="0" />
+              <columnProperties>
+                <lookupColumnMetaData>
+                  <name>KundenNr</name>
+                  <columnName>Kunden-Nr.</columnName>
+                  <searchable v="true" />
+                  <width v="69" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Firma</name>
+                  <columnName>Firma</columnName>
+                  <searchable v="true" />
+                  <width v="182" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>PLZ</name>
+                  <columnName>PLZ</columnName>
+                  <searchable v="true" />
+                  <width v="42" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Ort</name>
+                  <columnName>Ort</columnName>
+                  <searchable v="true" />
+                  <width v="65" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Titel</name>
+                  <columnName>Titel</columnName>
+                  <searchable v="true" />
+                  <width v="38" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Vorname</name>
+                  <columnName>Vorname</columnName>
+                  <searchable v="true" />
+                  <width v="79" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Nachname</name>
+                  <columnName>Nachname</columnName>
+                  <searchable v="true" />
+                  <width v="75" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+                <lookupColumnMetaData>
+                  <name>Funktion</name>
+                  <columnName>Funktion</columnName>
+                  <searchable v="true" />
+                  <width v="75" />
+                  <alignment v="2" />
+                </lookupColumnMetaData>
+              </columnProperties>
+            </lookup>
+            <table>
+              <name>tblRcpt</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/tblrcpt/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/tblrcpt/displayContentProcess.js</displayContentProcess>
+              <x v="20" />
+              <y v="25" />
+              <width v="765" />
+              <height v="275" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <grantArrangeColumns v="true" />
+              <labelText>Empfänger</labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>I</name>
+                  <columnName>I</columnName>
+                  <width v="20" />
+                  <alignment v="0" />
+                  <dataType v="12" />
+                  <rendererType v="3" />
+                  <rendererDataProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/recpt/children/tblrcpt/columnmetadata/i/rendererDataProcess.js</rendererDataProcess>
+                  <rendererCachingType v="3" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Nachname</name>
+                  <columnName>Nachname</columnName>
+                  <width v="106" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Vorname</name>
+                  <columnName>Vorname</columnName>
+                  <width v="83" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Firma</name>
+                  <columnName>Firma</columnName>
+                  <width v="159" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>EMailAdresse</name>
+                  <columnName>E-Mail</columnName>
+                  <width v="206" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Sendedatum</name>
+                  <columnName>Sendedatum</columnName>
+                  <width v="95" />
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yy HH:mm</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Erg</name>
+                  <columnName>Erg.</columnName>
+                  <width v="49" />
+                  <dataType v="12" />
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Aufgaben</name>
+          <caption>&amp;amp;Aufgaben</caption>
+          <children>
+            <button>
+              <name>btn_resetTEFilter</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/aufgaben/children/btn_resettefilter/onClick.js</onClick>
+              <x v="735" />
+              <y v="355" />
+              <width v="90" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <caption>zurücksetzen</caption>
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/aufgaben/children/btn_resettefilter/visibleProcess.js</visibleProcess>
+              <tabOrder v="1" />
+            </button>
+            <button>
+              <name>btn_setTEFilter</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/aufgaben/children/btn_settefilter/onClick.js</onClick>
+              <x v="640" />
+              <y v="355" />
+              <width v="90" />
+              <height v="20" />
+              <horizontalAnchor v="2" />
+              <verticalAnchor v="5" />
+              <caption>Filter setzen</caption>
+              <visible v="false" />
+              <visibleProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/aufgaben/children/btn_settefilter/visibleProcess.js</visibleProcess>
+              <tabOrder v="0" />
+              <labelText>Filter</labelText>
+              <labelVisible v="false" />
+              <labelDistance v="35" />
+              <labelAnchor v="0" />
+            </button>
+            <table>
+              <name>tbl_Aufgabe</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/aufgaben/children/tbl_aufgabe/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/aufgaben/children/tbl_aufgabe/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="20" />
+              <y v="25" />
+              <width v="805" />
+              <height v="325" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <utilizeRowFontColor v="true" />
+              <utilizeRowBackgroundColor v="true" />
+              <grantArrangeColumns v="true" />
+              <labelText>Aufgaben</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>I_2</name>
+                  <columnName>I</columnName>
+                  <width v="19" />
+                  <rendererType v="3" />
+                  <rendererDataProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/aufgaben/children/tbl_aufgabe/columnmetadata/i_2/rendererDataProcess.js</rendererDataProcess>
+                  <rendererCachingType v="3" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>faellig_am</name>
+                  <columnName>fällig am</columnName>
+                  <width v="90" />
+                  <dataType v="93" />
+                  <outputFormat>dd.MM.yyyy</outputFormat>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Status</name>
+                  <columnName>Status</columnName>
+                  <width v="108" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Betreff</name>
+                  <columnName>Betreff</columnName>
+                  <width v="174" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>erstellt</name>
+                  <columnName>erstellt</columnName>
+                  <width v="85" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>zustaendig</name>
+                  <columnName>zuständig</columnName>
+                  <width v="155" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Beschreibung</name>
+                  <columnName>Beschreibung</columnName>
+                  <width v="150" />
+                </columnMetaData>
+              </columnMetaData>
+              <popup>
+                <menuItem>
+                  <name>Erledigt_setzen</name>
+                  <caption>Erledigt setzen</caption>
+                  <onClick>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/aufgaben/children/tbl_aufgabe/popup/erledigt_setzen/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/aufgaben/children/tbl_aufgabe/popup/erledigt_setzen/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>Weitergeben</name>
+                  <caption>Weitergeben</caption>
+                  <onClick>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/aufgaben/children/tbl_aufgabe/popup/weitergeben/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/aufgaben/children/tbl_aufgabe/popup/weitergeben/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+                <menuItem>
+                  <name>Verschieben</name>
+                  <caption>Verschieben</caption>
+                  <onClick>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/aufgaben/children/tbl_aufgabe/popup/verschieben/onClick.js</onClick>
+                  <enabledProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/aufgaben/children/tbl_aufgabe/popup/verschieben/enabledProcess.js</enabledProcess>
+                  <visibleProcess></visibleProcess>
+                  <isSeparator v="false" />
+                </menuItem>
+              </popup>
+            </table>
+          </children>
+          <valueProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/aufgaben/valueProcess.js</valueProcess>
+        </registerTab>
+        <registerTab>
+          <name>Dokumente</name>
+          <caption>D&amp;amp;okumente</caption>
+          <children>
+            <documentFolder>
+              <name>Dokumentenmappe_0</name>
+              <template>%aditoprj%/template/Template_Document/Template_Document.aod</template>
+              <tableName>BULKMAILDEF</tableName>
+              <columnName>DOCUMENT</columnName>
+              <x v="20" />
+              <y v="25" />
+              <width v="805" />
+              <height v="325" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <tabOrder v="0" />
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+            </documentFolder>
+          </children>
+          <valueProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/dokumente/valueProcess.js</valueProcess>
+        </registerTab>
+        <registerTab>
+          <name>Rechte</name>
+          <caption>&amp;amp;Rechte</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/rechte/visibleProcess.js</visibleProcess>
+          <children>
+            <checkBox>
+              <name>cbx_right_del</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="90" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="3" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_edit</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="70" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="1" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_grant</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="110" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+            </checkBox>
+            <checkBox>
+              <name>cbx_right_read</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <dataType v="1" />
+              <valueTrue>1</valueTrue>
+              <valueFalse>0</valueFalse>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="50" />
+              <visible v="false" />
+              <labelText></labelText>
+              <labelVisible v="false" />
+              <labelOrientation v="4" />
+              <tabOrder v="2" />
+            </checkBox>
+            <comboBox>
+              <name>cmb_rights_roles</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <contentProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/rechte/children/cmb_rights_roles/contentProcess.js</contentProcess>
+              <searchLinkTableName>TABLEACCESS</searchLinkTableName>
+              <searchLinkColumnName>ROLEID</searchLinkColumnName>
+              <searchLinkCondition>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/rechte/children/cmb_rights_roles/searchLinkCondition.js</searchLinkCondition>
+              <searchableModes>none</searchableModes>
+              <x v="655" />
+              <y v="25" />
+              <width v="40" />
+              <visible v="false" />
+              <tabOrder v="4" />
+              <emptyElementEnabled v="false" />
+              <labelText>Rolle</labelText>
+              <labelVisible v="false" />
+            </comboBox>
+            <label>
+              <name>Label_calculation</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <valueProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/rechte/children/label_calculation/valueProcess.js</valueProcess>
+              <x v="655" />
+              <y v="130" />
+              <backgroundColor v="0x00000000" />
+              <visible v="false" />
+              <labelVisible v="false" />
+            </label>
+            <table>
+              <name>tbl_rights</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <rowCreate>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/rechte/children/tbl_rights/rowCreate.js</rowCreate>
+              <rowUpdate>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/rechte/children/tbl_rights/rowUpdate.js</rowUpdate>
+              <rowDelete>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/rechte/children/tbl_rights/rowDelete.js</rowDelete>
+              <grantRowCreateProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/rechte/children/tbl_rights/grantRowCreateProcess.js</grantRowCreateProcess>
+              <grantRowUpdateProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/rechte/children/tbl_rights/grantRowUpdateProcess.js</grantRowUpdateProcess>
+              <grantRowDeleteProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/rechte/children/tbl_rights/grantRowDeleteProcess.js</grantRowDeleteProcess>
+              <separateSavable v="false" />
+              <displayContentProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/rechte/children/tbl_rights/displayContentProcess.js</displayContentProcess>
+              <idContentProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/rechte/children/tbl_rights/idContentProcess.js</idContentProcess>
+              <contentProcessType v="1" />
+              <singleSelection v="true" />
+              <x v="20" />
+              <y v="25" />
+              <width v="630" />
+              <height v="325" />
+              <verticalAnchor v="6" />
+              <utilizeRowId v="true" />
+              <tabOrder v="0" />
+              <labelText>Rechte auf den angezeigten Datensatz</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>Rolle</name>
+                  <columnName>Rolle</columnName>
+                  <width v="205" />
+                  <dataType v="12" />
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/rechte/children/tbl_rights/columnmetadata/rolle/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Lesen</name>
+                  <columnName>Lesen</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/rechte/children/tbl_rights/columnmetadata/lesen/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Aendern</name>
+                  <columnName>Ändern</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/rechte/children/tbl_rights/columnmetadata/aendern/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Loeschen</name>
+                  <columnName>Löschen</columnName>
+                  <width v="95" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/rechte/children/tbl_rights/columnmetadata/loeschen/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>Rechte_vergeben</name>
+                  <columnName>Rechte vergeben</columnName>
+                  <width v="116" />
+                  <alignment v="0" />
+                  <dataType v="1" />
+                  <rendererType v="1" />
+                  <rendererValueTrue>1</rendererValueTrue>
+                  <rendererValueFalse>0</rendererValueFalse>
+                  <editable v="true" />
+                  <editorComponentProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/rechte/children/tbl_rights/columnmetadata/rechte_vergeben/editorComponentProcess.js</editorComponentProcess>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>Admin</name>
+          <caption>Admin</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/admin/visibleProcess.js</visibleProcess>
+          <children>
+            <edit>
+              <name>BULKMAILDEFID</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BULKMAILDEF</tableName>
+              <columnName>BULKMAILDEFID</columnName>
+              <dataType v="1" />
+              <precision v="0" />
+              <presetNew>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/admin/children/bulkmaildefid/presetNew.js</presetNew>
+              <onDoubleClick>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/admin/children/bulkmaildefid/onDoubleClick.js</onDoubleClick>
+              <searchableModes>mask</searchableModes>
+              <x v="120" />
+              <y v="20" />
+              <width v="250" />
+              <tabOrder v="0" />
+              <labelText>BULKMAILDEFID</labelText>
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>DATE_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BULKMAILDEF</tableName>
+              <columnName>DATE_EDIT</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetChange>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/admin/children/date_edit/presetChange.js</presetChange>
+              <searchableModes>mask</searchableModes>
+              <x v="120" />
+              <y v="105" />
+              <width v="130" />
+              <tabOrder v="2" />
+              <labelText>DATE_EDIT</labelText>
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>DATE_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BULKMAILDEF</tableName>
+              <columnName>DATE_NEW</columnName>
+              <dataType v="93" />
+              <precision v="26" />
+              <presetNew>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/admin/children/date_new/presetNew.js</presetNew>
+              <searchableModes>mask</searchableModes>
+              <x v="120" />
+              <y v="80" />
+              <width v="130" />
+              <tabOrder v="1" />
+              <labelText>DATE_NEW</labelText>
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </edit>
+            <label>
+              <name>idcolumn</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <tableName>BULKMAILDEF</tableName>
+              <columnName>BULKMAILDEFID</columnName>
+              <dataType v="1" />
+              <presetNew>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/admin/children/idcolumn/presetNew.js</presetNew>
+              <onDoubleClick>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/admin/children/idcolumn/onDoubleClick.js</onDoubleClick>
+              <x v="120" />
+              <y v="45" />
+              <width v="250" />
+              <labelText>idcolumn</labelText>
+              <labelDistance v="100" />
+            </label>
+            <edit>
+              <name>USER_EDIT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BULKMAILDEF</tableName>
+              <columnName>USER_EDIT</columnName>
+              <precision v="50" />
+              <presetChange>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/admin/children/user_edit/presetChange.js</presetChange>
+              <searchableModes>mask</searchableModes>
+              <x v="120" />
+              <y v="160" />
+              <width v="130" />
+              <tabOrder v="4" />
+              <labelText>USER_EDIT</labelText>
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </edit>
+            <edit>
+              <name>USER_NEW</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>BULKMAILDEF</tableName>
+              <columnName>USER_NEW</columnName>
+              <precision v="50" />
+              <presetNew>%aditoprj%/frame/BULKMAIL_DEFINITION/children/register_0/children/admin/children/user_new/presetNew.js</presetNew>
+              <searchableModes>mask</searchableModes>
+              <x v="120" />
+              <y v="135" />
+              <width v="130" />
+              <tabOrder v="3" />
+              <labelText>USER_NEW</labelText>
+              <labelDistance v="90" />
+              <labelAnchor v="0" />
+            </edit>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+    <edit>
+      <name>SENTDATE</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>BULKMAILDEF</tableName>
+      <columnName>SENTDATE</columnName>
+      <dataType v="93" />
+      <precision v="26" />
+      <presetNew>%aditoprj%/frame/BULKMAIL_DEFINITION/children/sentdate/presetNew.js</presetNew>
+      <outputFormat>dd.MM.yyyy</outputFormat>
+      <inputFormat>dd.MM.yyyy</inputFormat>
+      <calendarSupport v="true" />
+      <x v="120" />
+      <y v="100" />
+      <width v="115" />
+      <tabOrder v="2" />
+      <labelText>Versendet am</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+  </children>
+  <tableView>
+    <tableViewProperties>
+      <columnProperty>
+        <name>BULKMAILDEF_MAILINGNAME</name>
+        <tableName>BULKMAILDEF</tableName>
+        <columnName>MAILINGNAME</columnName>
+        <label>Mailingname</label>
+        <width v="203" />
+      </columnProperty>
+      <columnProperty>
+        <name>BULKMAILDEF_SUBJECT</name>
+        <tableName>BULKMAILDEF</tableName>
+        <columnName>SUBJECT</columnName>
+        <label>Betreff</label>
+        <width v="224" />
+      </columnProperty>
+      <columnProperty>
+        <name>BULKMAILDEF_SENTDATE</name>
+        <tableName>BULKMAILDEF</tableName>
+        <columnName>SENTDATE</columnName>
+        <label>gesendet</label>
+        <width v="84" />
+        <dataType v="93" />
+        <outputFormat>dd.MM.yyyy</outputFormat>
+      </columnProperty>
+      <columnProperty>
+        <name>BULKMAILDEF_SENDER</name>
+        <tableName>BULKMAILDEF</tableName>
+        <columnName>SENDER</columnName>
+        <label>Absender</label>
+        <width v="239" />
+      </columnProperty>
+    </tableViewProperties>
+  </tableView>
+  <width v="850" />
+  <height v="580" />
+</frame>

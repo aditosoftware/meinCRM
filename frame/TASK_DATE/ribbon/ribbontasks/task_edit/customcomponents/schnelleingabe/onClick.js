@@ -1,0 +1,1 @@
+a.openFrame("QUICKINSERT", null, false, a.FRAMEMODE_NEW);

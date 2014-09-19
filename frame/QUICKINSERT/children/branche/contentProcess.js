@@ -1,0 +1,1 @@
+a.rq("select attrid, attrname from attr where attr_id = (select attrid from attr where attrname = 'Branche') order by attrsort");

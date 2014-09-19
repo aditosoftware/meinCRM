@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>DLG_VACATION</name>
+  <icon></icon>
+  <description>Dialog für Urlaubsplanung</description>
+  <comment>@type public
+@status released
+@desc [Dialog für Urlaubsplanung]
+
+@module Standard
+@since 3.1
+
+@revision 1.0 PK 04/2011</comment>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <comboBox>
+      <name>yearEnd</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/DLG_VACATION/children/yearend/contentProcess.js</contentProcess>
+      <x v="270" />
+      <y v="0" />
+      <width v="110" />
+      <tabOrder v="0" />
+      <emptyElementEnabled v="false" />
+      <labelText>bis Jahr</labelText>
+      <labelDistance v="40" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>monthEnd</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <x v="270" />
+      <y v="25" />
+      <width v="110" />
+      <tabOrder v="1" />
+      <staticContent>
+        <entry>
+          <key>Januar</key>
+          <value>01</value>
+        </entry>
+        <entry>
+          <key>Februar</key>
+          <value>02</value>
+        </entry>
+        <entry>
+          <key>März</key>
+          <value>03</value>
+        </entry>
+        <entry>
+          <key>April</key>
+          <value>04</value>
+        </entry>
+        <entry>
+          <key>Mai</key>
+          <value>05</value>
+        </entry>
+        <entry>
+          <key>Juni</key>
+          <value>06</value>
+        </entry>
+        <entry>
+          <key>Juli</key>
+          <value>07</value>
+        </entry>
+        <entry>
+          <key>August</key>
+          <value>08</value>
+        </entry>
+        <entry>
+          <key>September</key>
+          <value>09</value>
+        </entry>
+        <entry>
+          <key>Oktober</key>
+          <value>10</value>
+        </entry>
+        <entry>
+          <key>November</key>
+          <value>11</value>
+        </entry>
+        <entry>
+          <key>Dezember</key>
+          <value>12</value>
+        </entry>
+      </staticContent>
+      <maximumRowCount v="13" />
+      <emptyElementEnabled v="false" />
+      <labelText>Monat</labelText>
+      <labelDistance v="40" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>month</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <x v="70" />
+      <y v="25" />
+      <width v="110" />
+      <tabOrder v="1" />
+      <staticContent>
+        <entry>
+          <key>Januar</key>
+          <value>01</value>
+        </entry>
+        <entry>
+          <key>Februar</key>
+          <value>02</value>
+        </entry>
+        <entry>
+          <key>März</key>
+          <value>03</value>
+        </entry>
+        <entry>
+          <key>April</key>
+          <value>04</value>
+        </entry>
+        <entry>
+          <key>Mai</key>
+          <value>05</value>
+        </entry>
+        <entry>
+          <key>Juni</key>
+          <value>06</value>
+        </entry>
+        <entry>
+          <key>Juli</key>
+          <value>07</value>
+        </entry>
+        <entry>
+          <key>August</key>
+          <value>08</value>
+        </entry>
+        <entry>
+          <key>September</key>
+          <value>09</value>
+        </entry>
+        <entry>
+          <key>Oktober</key>
+          <value>10</value>
+        </entry>
+        <entry>
+          <key>November</key>
+          <value>11</value>
+        </entry>
+        <entry>
+          <key>Dezember</key>
+          <value>12</value>
+        </entry>
+      </staticContent>
+      <maximumRowCount v="13" />
+      <emptyElementEnabled v="false" />
+      <labelText>Monat</labelText>
+      <labelDistance v="40" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>year</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/DLG_VACATION/children/year/contentProcess.js</contentProcess>
+      <x v="70" />
+      <width v="110" />
+      <tabOrder v="0" />
+      <emptyElementEnabled v="false" />
+      <labelText>von Jahr</labelText>
+      <labelDistance v="40" />
+      <labelAnchor v="0" />
+    </comboBox>
+  </children>
+  <tableView>
+    <headerFont name="" style="0" size="11" />
+    <font name="Verdana" style="0" size="11" />
+  </tableView>
+  <width v="850" />
+  <height v="590" />
+</frame>

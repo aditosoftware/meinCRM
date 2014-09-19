@@ -1,0 +1,1 @@
+a.sqlDelete("SPMEMBER", " SPMEMBERID = '" + a.valueof("$local.idvalue") + "'");

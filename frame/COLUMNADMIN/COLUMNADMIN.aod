@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>COLUMNADMIN</name>
+  <title>Tabellenspalten</title>
+  <icon>%aditoprj%/frame/COLUMNADMIN/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/COLUMNADMIN/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type public
+@status released
+@desc [Frame zur Verwaltung der Tabellenspalten der Daten-Datenbank]
+
+@module Administration
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <linkInformation>
+    <linkInformation>
+      <name>be6a6f28-379c-4525-af19-4eccc89fb7e0</name>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <primaryKey>COLUMNID</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+  </linkInformation>
+  <beforeStart>%aditoprj%/frame/COLUMNADMIN/beforeStart.js</beforeStart>
+  <afterSave>%aditoprj%/frame/COLUMNADMIN/afterSave.js</afterSave>
+  <afterDelete>%aditoprj%/frame/COLUMNADMIN/afterDelete.js</afterDelete>
+  <afterCancel>%aditoprj%/frame/COLUMNADMIN/afterCancel.js</afterCancel>
+  <currentContentProcess>%aditoprj%/frame/COLUMNADMIN/currentContentProcess.js</currentContentProcess>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <databaseColumns>
+    <column>
+      <name>AOSYS_COLUMNREPOSITORY_COLUMNID</name>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>COLUMNID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+    </column>
+    <column>
+      <name>AOSYS_COLUMNREPOSITORY_LONGNAME</name>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>LONGNAME</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="255" />
+    </column>
+    <column>
+      <name>AOSYS_COLUMNREPOSITORY_COLUMNNAME</name>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>COLUMNNAME</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="128" />
+    </column>
+    <column>
+      <name>AOSYS_COLUMNREPOSITORY_DATATYPE</name>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>DATATYPE</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="32" />
+    </column>
+    <column>
+      <name>AOSYS_COLUMNREPOSITORY_COLUMNSIZE</name>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>COLUMNSIZE</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="10" />
+    </column>
+    <column>
+      <name>AOSYS_COLUMNREPOSITORY_DESCRIPTION</name>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>DESCRIPTION</columnName>
+      <dataTypeName>CLOB</dataTypeName>
+      <dataType v="2005" />
+      <precision v="2147483647" />
+      <scale>0</scale>
+    </column>
+    <column>
+      <name>AOSYS_COLUMNREPOSITORY_NULLABLE</name>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>NULLABLE</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="1" />
+      <presetNew>%aditoprj%/frame/COLUMNADMIN/databasecolumns/aosys_columnrepository_nullable/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>AOSYS_COLUMNREPOSITORY_TABLE_ID</name>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>TABLE_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/COLUMNADMIN/databasecolumns/aosys_columnrepository_table_id/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>AOSYS_COLUMNREPOSITORY_CONSTRAINTTYPE</name>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>CONSTRAINTTYPE</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="1" />
+    </column>
+    <column>
+      <name>AOSYS_COLUMNREPOSITORY_COLUMNREF</name>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>COLUMNREF</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="128" />
+    </column>
+    <column>
+      <name>AOSYS_COLUMNREPOSITORY_TABLEREF</name>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>TABLEREF</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="128" />
+    </column>
+    <column>
+      <name>AOSYS_COLUMNREPOSITORY_INTERNALUSE</name>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>INTERNALUSE</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="1" />
+    </column>
+    <column>
+      <name>AOSYS_COLUMNREPOSITORY_CUSTOMIZED</name>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>CUSTOMIZED</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="1" />
+      <presetNew>%aditoprj%/frame/COLUMNADMIN/databasecolumns/aosys_columnrepository_customized/presetNew.js</presetNew>
+    </column>
+    <column>
+      <name>AOSYS_COLUMNREPOSITORY_KEYNAME</name>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>KEYNAME</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <precision v="50" />
+    </column>
+    <column>
+      <name>AOSYS_COLUMNREPOSITORY_LOGGING</name>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>LOGGING</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="1" />
+      <presetNew>%aditoprj%/frame/COLUMNADMIN/databasecolumns/aosys_columnrepository_logging/presetNew.js</presetNew>
+    </column>
+  </databaseColumns>
+  <children>
+    <edit>
+      <name>COLUMNNAME</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>COLUMNNAME</columnName>
+      <precision v="128" />
+      <onValidation>%aditoprj%/frame/COLUMNADMIN/children/columnname/onValidation.js</onValidation>
+      <mandatoryInput v="true" />
+      <x v="140" />
+      <y v="120" />
+      <width v="515" />
+      <tabOrder v="2" />
+      <labelText>DB-Spalte</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>COLUMNSIZE</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>COLUMNSIZE</columnName>
+      <precision v="10" />
+      <x v="140" />
+      <y v="185" />
+      <width v="110" />
+      <visibleProcess>%aditoprj%/frame/COLUMNADMIN/children/columnsize/visibleProcess.js</visibleProcess>
+      <tabOrder v="4" />
+      <labelText>Spaltenlänge</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+    <checkBox>
+      <name>CUSTOMIZED</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>CUSTOMIZED</columnName>
+      <dataType v="1" />
+      <presetNew>%aditoprj%/frame/COLUMNADMIN/children/customized/presetNew.js</presetNew>
+      <valueTrue>Y</valueTrue>
+      <valueFalse>N</valueFalse>
+      <x v="640" />
+      <y v="150" />
+      <labelText>Customizing</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+      <tabOrder v="6" />
+    </checkBox>
+    <comboBox>
+      <name>DATATYPE</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>DATATYPE</columnName>
+      <precision v="32" />
+      <mandatoryInput v="true" />
+      <x v="140" />
+      <y v="155" />
+      <width v="225" />
+      <tabOrder v="3" />
+      <staticContent>
+        <entry>
+          <key>Ganzzahl</key>
+          <value>integer</value>
+        </entry>
+        <entry>
+          <key>Numerisch</key>
+          <value>numeric</value>
+        </entry>
+        <entry>
+          <key>Dezimalbruch</key>
+          <value>float</value>
+        </entry>
+        <entry>
+          <key>Datum und Zeit</key>
+          <value>datetime</value>
+        </entry>
+        <entry>
+          <key>Zeichen (feste Länge)</key>
+          <value>char</value>
+        </entry>
+        <entry>
+          <key>Zeichen (variable Länge)</key>
+          <value>varchar</value>
+        </entry>
+        <entry>
+          <key>Unicode (feste Länge)</key>
+          <value>nchar</value>
+        </entry>
+        <entry>
+          <key>Unicode (variable Länge)</key>
+          <value>nvarchar</value>
+        </entry>
+        <entry>
+          <key>Langer Text / Memo</key>
+          <value>text</value>
+        </entry>
+        <entry>
+          <key>Binärdaten (blob)</key>
+          <value>image</value>
+        </entry>
+        <entry>
+          <key>Schlüsselwort</key>
+          <value>keyword</value>
+        </entry>
+      </staticContent>
+      <emptyElementEnabled v="false" />
+      <labelText>Datentyp</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <memo>
+      <name>DESCRIPTION</name>
+      <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>DESCRIPTION</columnName>
+      <dataType v="2005" />
+      <precision v="-1" />
+      <x v="140" />
+      <y v="215" />
+      <width v="515" />
+      <height v="110" />
+      <tabOrder v="9" />
+      <labelText>Beschreibung</labelText>
+      <labelDistance v="100" />
+    </memo>
+    <comboBox>
+      <name>KEYNAME</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>KEYNAME</columnName>
+      <precision v="50" />
+      <contentProcess>%aditoprj%/frame/COLUMNADMIN/children/keyname/contentProcess.js</contentProcess>
+      <x v="140" />
+      <y v="185" />
+      <width v="225" />
+      <visible v="false" />
+      <visibleProcess>%aditoprj%/frame/COLUMNADMIN/children/keyname/visibleProcess.js</visibleProcess>
+      <tabOrder v="5" />
+      <labelText>Schlüsselname</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <checkBox>
+      <name>LOGGING</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>LOGGING</columnName>
+      <dataType v="1" />
+      <presetNew>%aditoprj%/frame/COLUMNADMIN/children/logging/presetNew.js</presetNew>
+      <valueTrue>Y</valueTrue>
+      <valueFalse>N</valueFalse>
+      <x v="640" />
+      <y v="190" />
+      <labelText>Logging</labelText>
+      <labelDistance v="80" />
+      <tabOrder v="8" />
+    </checkBox>
+    <edit>
+      <name>LONGNAME</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>LONGNAME</columnName>
+      <precision v="255" />
+      <mandatoryInput v="true" />
+      <x v="140" />
+      <y v="90" />
+      <width v="515" />
+      <tabOrder v="1" />
+      <labelText>Spaltenname</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </edit>
+    <checkBox>
+      <name>NULLABLE</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>NULLABLE</columnName>
+      <dataType v="1" />
+      <presetNew>%aditoprj%/frame/COLUMNADMIN/children/nullable/presetNew.js</presetNew>
+      <valueTrue>Y</valueTrue>
+      <valueFalse>N</valueFalse>
+      <x v="640" />
+      <y v="170" />
+      <labelText>NULL erlaubt</labelText>
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+      <tabOrder v="7" />
+    </checkBox>
+    <register>
+      <name>Register_0</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <x v="40" />
+      <y v="350" />
+      <width v="610" />
+      <height v="175" />
+      <tabOrder v="10" />
+      <children>
+        <registerTab>
+          <name>constraints</name>
+          <caption>Ref.Integrität</caption>
+          <children>
+            <checkBox>
+              <name>chkPhysNames</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <presetNew>%aditoprj%/frame/COLUMNADMIN/children/register_0/children/constraints/children/chkphysnames/presetNew.js</presetNew>
+              <presetChange>%aditoprj%/frame/COLUMNADMIN/children/register_0/children/constraints/children/chkphysnames/presetChange.js</presetChange>
+              <searchableModes>none</searchableModes>
+              <x v="385" />
+              <y v="55" />
+              <labelText>DB-Namen anzeigen</labelText>
+              <labelOrientation v="4" />
+              <labelDistance v="5" />
+              <labelAnchor v="0" />
+              <tabOrder v="2" />
+            </checkBox>
+            <comboBox>
+              <name>COLUMNREF</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+              <columnName>COLUMNREF</columnName>
+              <precision v="128" />
+              <contentProcess>%aditoprj%/frame/COLUMNADMIN/children/register_0/children/constraints/children/columnref/contentProcess.js</contentProcess>
+              <x v="110" />
+              <y v="80" />
+              <width v="265" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/COLUMNADMIN/children/register_0/children/constraints/children/columnref/enabledProcess.js</enabledProcess>
+              <tabOrder v="3" />
+              <labelText>Zielspalte</labelText>
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <comboBox>
+              <name>CONSTRAINTTYPE</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+              <columnName>CONSTRAINTTYPE</columnName>
+              <dataType v="1" />
+              <precision v="1" />
+              <x v="110" />
+              <y v="20" />
+              <width v="160" />
+              <tabOrder v="0" />
+              <staticContent>
+                <entry>
+                  <key>Kein</key>
+                  <value></value>
+                </entry>
+                <entry>
+                  <key>Primärschlüssel</key>
+                  <value>p</value>
+                </entry>
+                <entry>
+                  <key>Fremdschlüssel</key>
+                  <value>f</value>
+                </entry>
+              </staticContent>
+              <emptyElementEnabled v="false" />
+              <labelText>Constraint</labelText>
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </comboBox>
+            <checkBox>
+              <name>INTERNALUSE</name>
+              <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+              <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+              <columnName>INTERNALUSE</columnName>
+              <dataType v="1" />
+              <valueTrue>Y</valueTrue>
+              <valueFalse>N</valueFalse>
+              <x v="110" />
+              <y v="110" />
+              <labelText>Interne Spalte</labelText>
+              <labelDistance v="100" />
+              <tabOrder v="4" />
+              <toolTip>Gibt an, ob es sich um eine nur intern
+verwendete Spalte handelt, die nicht in 
+den Listen für Workflows und anderen
+Benutzersichten auftaucht.</toolTip>
+            </checkBox>
+            <comboBox>
+              <name>TABLEREF</name>
+              <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+              <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+              <columnName>TABLEREF</columnName>
+              <precision v="128" />
+              <contentProcess>%aditoprj%/frame/COLUMNADMIN/children/register_0/children/constraints/children/tableref/contentProcess.js</contentProcess>
+              <x v="110" />
+              <y v="50" />
+              <width v="265" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/COLUMNADMIN/children/register_0/children/constraints/children/tableref/enabledProcess.js</enabledProcess>
+              <tabOrder v="1" />
+              <labelText>Zieltabelle</labelText>
+              <labelDistance v="100" />
+              <labelAnchor v="0" />
+            </comboBox>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+    <comboBox>
+      <name>TABLE_ID</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+      <columnName>TABLE_ID</columnName>
+      <dataType v="1" />
+      <precision v="36" />
+      <presetNew>%aditoprj%/frame/COLUMNADMIN/children/table_id/presetNew.js</presetNew>
+      <contentProcess>%aditoprj%/frame/COLUMNADMIN/children/table_id/contentProcess.js</contentProcess>
+      <mandatoryInput v="true" />
+      <x v="140" />
+      <y v="55" />
+      <width v="515" />
+      <enabledProcess>%aditoprj%/frame/COLUMNADMIN/children/table_id/enabledProcess.js</enabledProcess>
+      <tabOrder v="0" />
+      <labelText>Tabellenname</labelText>
+      <labelDistance v="100" />
+      <labelAnchor v="0" />
+    </comboBox>
+  </children>
+  <tableView>
+    <tableViewProperties>
+      <columnProperty>
+        <name>AOSYS_COLUMNREPOSITORY_LONGNAME</name>
+        <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+        <columnName>LONGNAME</columnName>
+        <label>Spaltenname</label>
+        <width v="228" />
+        <dataType v="12" />
+      </columnProperty>
+      <columnProperty>
+        <name>AOSYS_COLUMNREPOSITORY_COLUMNNAME</name>
+        <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+        <columnName>COLUMNNAME</columnName>
+        <label>DB-Spalte</label>
+        <width v="188" />
+        <dataType v="12" />
+      </columnProperty>
+      <columnProperty>
+        <name>AOSYS_COLUMNREPOSITORY_DATATYPE</name>
+        <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+        <columnName>DATATYPE</columnName>
+        <label>Datentyp</label>
+        <width v="80" />
+        <dataType v="12" />
+      </columnProperty>
+      <columnProperty>
+        <name>AOSYS_COLUMNREPOSITORY_COLUMNSIZE</name>
+        <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+        <columnName>COLUMNSIZE</columnName>
+        <label>Größe</label>
+        <alignment v="4" />
+        <width v="63" />
+        <dataType v="12" />
+      </columnProperty>
+      <columnProperty>
+        <name>AOSYS_COLUMNREPOSITORY_NULLABLE</name>
+        <tableName>AOSYS_COLUMNREPOSITORY</tableName>
+        <columnName>NULLABLE</columnName>
+        <label>Null</label>
+        <width v="37" />
+        <dataType v="12" />
+      </columnProperty>
+    </tableViewProperties>
+  </tableView>
+  <width v="850" />
+  <height v="586" />
+</frame>

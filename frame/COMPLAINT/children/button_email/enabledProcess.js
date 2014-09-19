@@ -1,0 +1,1 @@
+a.rs(a.valueof("$comp.EMAIL") != '' && a.valueof("$sys.workingmode") == a.FRAMEMODE_SHOW)

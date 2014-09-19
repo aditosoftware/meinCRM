@@ -1,0 +1,1 @@
+a.rs(a.valueofObj("$image.entry")[calendar.LOCATION]);

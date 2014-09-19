@@ -1,0 +1,1 @@
+a.rs("A" + a.valueof("$comp.offercode") + "/" + a.valueof("$comp.ITEMPOS"));

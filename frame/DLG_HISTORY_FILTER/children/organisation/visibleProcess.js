@@ -1,0 +1,1 @@
+a.rs( a.sql("select count(*) from relation join org on org_id = orgid and pers_id = '" + a.valueof("$local.persid") + "'")  > 1 );

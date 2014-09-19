@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>DLG_CHOOSE_ATTRIBUTE</name>
+  <icon></icon>
+  <description>Dialog-Attribute</description>
+  <comment>@type public
+@status released
+@desc [Dialogframe für das Eintragen eines Historieneintrags]
+
+@module Standard
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <comboBox>
+      <name>attributelist1</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <dataType v="4" />
+      <contentProcess>%aditoprj%/frame/DLG_CHOOSE_ATTRIBUTE/children/attributelist1/contentProcess.js</contentProcess>
+      <searchableModes>mask</searchableModes>
+      <x v="15" />
+      <y v="30" />
+      <width v="200" />
+      <tabOrder v="0" />
+      <labelText>Attribut bitte auswählen</labelText>
+      <labelFont name="" style="1" size="14" />
+      <labelOrientation v="1" />
+      <labelDistance v="10" />
+      <labelAnchor v="0" />
+      <toolTip>Die Zahlen in Klammern bezeichnen, wie oft
+das Attribut mindestens vorkommen muss
+und maximal vorkommen darf.</toolTip>
+    </comboBox>
+    <comboBox>
+      <name>attributelist2</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/DLG_CHOOSE_ATTRIBUTE/children/attributelist2/contentProcess.js</contentProcess>
+      <searchLinkTableName>ATTRLINK</searchLinkTableName>
+      <searchLinkColumnName>ATTR_ID</searchLinkColumnName>
+      <searchLinkCondition>%aditoprj%/frame/DLG_CHOOSE_ATTRIBUTE/children/attributelist2/searchLinkCondition.js</searchLinkCondition>
+      <x v="215" />
+      <y v="30" />
+      <width v="200" />
+      <visible v="false" />
+      <visibleProcess>%aditoprj%/frame/DLG_CHOOSE_ATTRIBUTE/children/attributelist2/visibleProcess.js</visibleProcess>
+      <tabOrder v="1" />
+      <labelText>Attribut/Wert</labelText>
+      <labelVisible v="false" />
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>cbx</name>
+      <template>%aditoprj%/template/Template_Combobox/Template_Combobox.aod</template>
+      <contentProcess>%aditoprj%/frame/DLG_CHOOSE_ATTRIBUTE/children/cbx/contentProcess.js</contentProcess>
+      <searchLinkTableName>ATTRLINK</searchLinkTableName>
+      <searchLinkColumnName>VALUE_INT</searchLinkColumnName>
+      <searchLinkCondition>%aditoprj%/frame/DLG_CHOOSE_ATTRIBUTE/children/cbx/searchLinkCondition.js</searchLinkCondition>
+      <x v="415" />
+      <y v="30" />
+      <width v="200" />
+      <visible v="false" />
+      <visibleProcess>%aditoprj%/frame/DLG_CHOOSE_ATTRIBUTE/children/cbx/visibleProcess.js</visibleProcess>
+      <tabOrder v="2" />
+      <labelText>Wert</labelText>
+      <labelVisible v="false" />
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <comboBox>
+      <name>chk</name>
+      <searchLinkTableName>ATTRLINK</searchLinkTableName>
+      <searchLinkColumnName>VALUE_INT</searchLinkColumnName>
+      <searchLinkCondition>%aditoprj%/frame/DLG_CHOOSE_ATTRIBUTE/children/chk/searchLinkCondition.js</searchLinkCondition>
+      <x v="415" />
+      <y v="30" />
+      <width v="200" />
+      <font name="Verdana" style="0" size="11" />
+      <visible v="false" />
+      <visibleProcess>%aditoprj%/frame/DLG_CHOOSE_ATTRIBUTE/children/chk/visibleProcess.js</visibleProcess>
+      <tabOrder v="7" />
+      <staticContent>
+        <entry>
+          <key>Ja</key>
+          <value>Y</value>
+        </entry>
+        <entry>
+          <key>Nein</key>
+          <value>N</value>
+        </entry>
+      </staticContent>
+      <emptyElementEnabled v="false" />
+      <labelText>Wert</labelText>
+      <labelVisible v="false" />
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </comboBox>
+    <edit>
+      <name>date</name>
+      <dataType v="93" />
+      <outputFormat>dd.MM.yyyy</outputFormat>
+      <inputFormat>dd.MM.yyyy</inputFormat>
+      <searchLinkTableName>ATTRLINK</searchLinkTableName>
+      <searchLinkColumnName>VALUE_DATE</searchLinkColumnName>
+      <searchLinkCondition>%aditoprj%/frame/DLG_CHOOSE_ATTRIBUTE/children/date/searchLinkCondition.js</searchLinkCondition>
+      <calendarSupport v="true" />
+      <x v="415" />
+      <y v="30" />
+      <width v="200" />
+      <font name="Verdana" style="0" size="11" />
+      <visible v="false" />
+      <visibleProcess>%aditoprj%/frame/DLG_CHOOSE_ATTRIBUTE/children/date/visibleProcess.js</visibleProcess>
+      <tabOrder v="6" />
+      <labelText>Wert</labelText>
+      <labelVisible v="false" />
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>float</name>
+      <dataType v="6" />
+      <outputFormat>#,##0.00</outputFormat>
+      <searchLinkTableName>ATTRLINK</searchLinkTableName>
+      <searchLinkColumnName>VALUE_DOUBLE</searchLinkColumnName>
+      <searchLinkCondition>%aditoprj%/frame/DLG_CHOOSE_ATTRIBUTE/children/float/searchLinkCondition.js</searchLinkCondition>
+      <x v="415" />
+      <y v="30" />
+      <width v="200" />
+      <font name="Verdana" style="0" size="11" />
+      <visible v="false" />
+      <visibleProcess>%aditoprj%/frame/DLG_CHOOSE_ATTRIBUTE/children/float/visibleProcess.js</visibleProcess>
+      <tabOrder v="5" />
+      <labelText>Wert</labelText>
+      <labelVisible v="false" />
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>int</name>
+      <dataType v="4" />
+      <outputFormat>#,##0</outputFormat>
+      <searchLinkTableName>ATTRLINK</searchLinkTableName>
+      <searchLinkColumnName>VALUE_INT</searchLinkColumnName>
+      <searchLinkCondition>%aditoprj%/frame/DLG_CHOOSE_ATTRIBUTE/children/int/searchLinkCondition.js</searchLinkCondition>
+      <x v="415" />
+      <y v="30" />
+      <width v="200" />
+      <font name="Verdana" style="0" size="11" />
+      <visible v="false" />
+      <visibleProcess>%aditoprj%/frame/DLG_CHOOSE_ATTRIBUTE/children/int/visibleProcess.js</visibleProcess>
+      <tabOrder v="4" />
+      <labelText>Wert</labelText>
+      <labelVisible v="false" />
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+    <edit>
+      <name>string</name>
+      <searchLinkTableName>ATTRLINK</searchLinkTableName>
+      <searchLinkColumnName>VALUE_CHAR</searchLinkColumnName>
+      <searchLinkCondition>%aditoprj%/frame/DLG_CHOOSE_ATTRIBUTE/children/string/searchLinkCondition.js</searchLinkCondition>
+      <x v="415" />
+      <y v="30" />
+      <width v="200" />
+      <font name="Verdana" style="0" size="11" />
+      <visible v="false" />
+      <visibleProcess>%aditoprj%/frame/DLG_CHOOSE_ATTRIBUTE/children/string/visibleProcess.js</visibleProcess>
+      <tabOrder v="3" />
+      <labelText>Wert</labelText>
+      <labelVisible v="false" />
+      <labelFont name="" style="0" size="11" />
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </edit>
+  </children>
+  <tableView>
+    <headerFont name="" style="0" size="12" />
+    <font name="Arial" style="0" size="12" />
+  </tableView>
+  <width v="865" />
+  <height v="570" />
+</frame>

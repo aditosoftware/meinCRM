@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>LEAD</name>
+  <title>Lead</title>
+  <icon>%aditoprj%/frame/LEAD/icon.png</icon>
+  <iconInactive>%aditoprj%/frame/LEAD/iconInactive.png</iconInactive>
+  <description></description>
+  <comment>@type public
+@status released
+@desc [Frame für die Verwaltung der Leads]
+
+@module Standard
+@since 3.1
+
+@revision 1.0 HB 05/2010</comment>
+  <alias>AO_DATEN</alias>
+  <linkInformation>
+    <linkInformation>
+      <name>5af65704-0231-45f8-94bb-191cd7c0cbba</name>
+      <tableName>LEAD</tableName>
+      <primaryKey>LEADID</primaryKey>
+      <foreignKey></foreignKey>
+    </linkInformation>
+  </linkInformation>
+  <whereClause>%aditoprj%/frame/LEAD/whereClause.js</whereClause>
+  <beforeStart>%aditoprj%/frame/LEAD/beforeStart.js</beforeStart>
+  <grantCreate v="false" />
+  <grantDelete v="false" />
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <databaseColumns>
+    <column>
+      <name>LEAD_LEADID</name>
+      <tableName>LEAD</tableName>
+      <columnName>LEADID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+    </column>
+    <column>
+      <name>LEAD_ADDRESS</name>
+      <tableName>LEAD</tableName>
+      <columnName>ADDRESS</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+    </column>
+    <column>
+      <name>LEAD_BUILDINGNO</name>
+      <tableName>LEAD</tableName>
+      <columnName>BUILDINGNO</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+    </column>
+    <column>
+      <name>LEAD_CITY</name>
+      <tableName>LEAD</tableName>
+      <columnName>CITY</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+    </column>
+    <column>
+      <name>LEAD_COUNTRY</name>
+      <tableName>LEAD</tableName>
+      <columnName>COUNTRY</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="2" />
+    </column>
+    <column>
+      <name>LEAD_FIRSTNAME</name>
+      <tableName>LEAD</tableName>
+      <columnName>FIRSTNAME</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+    </column>
+    <column>
+      <name>LEAD_LASTNAME</name>
+      <tableName>LEAD</tableName>
+      <columnName>LASTNAME</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+    </column>
+    <column>
+      <name>LEAD_MIDDLENAME</name>
+      <tableName>LEAD</tableName>
+      <columnName>MIDDLENAME</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+    </column>
+    <column>
+      <name>LEAD_RELPOSITION</name>
+      <tableName>LEAD</tableName>
+      <columnName>RELPOSITION</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+    </column>
+    <column>
+      <name>LEAD_SALUTATION</name>
+      <tableName>LEAD</tableName>
+      <columnName>SALUTATION</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="30" />
+    </column>
+    <column>
+      <name>LEAD_TITLE</name>
+      <tableName>LEAD</tableName>
+      <columnName>TITLE</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="30" />
+    </column>
+    <column>
+      <name>LEAD_ZIP</name>
+      <tableName>LEAD</tableName>
+      <columnName>ZIP</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+    </column>
+    <column>
+      <name>LEAD_REGION</name>
+      <tableName>LEAD</tableName>
+      <columnName>REGION</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+    </column>
+    <column>
+      <name>LEAD_ORGCOUNTRYCODE</name>
+      <tableName>LEAD</tableName>
+      <columnName>ORGCOUNTRYCODE</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="10" />
+    </column>
+    <column>
+      <name>LEAD_DISTRICT</name>
+      <tableName>LEAD</tableName>
+      <columnName>DISTRICT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+    </column>
+    <column>
+      <name>LEAD_DEPARTMENT</name>
+      <tableName>LEAD</tableName>
+      <columnName>DEPARTMENT</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+    </column>
+    <column>
+      <name>LEAD_STATUS</name>
+      <tableName>LEAD</tableName>
+      <columnName>STATUS</columnName>
+      <dataTypeName>INTEGER</dataTypeName>
+      <dataType v="4" />
+      <precision v="10" />
+    </column>
+    <column>
+      <name>LEAD_STATE</name>
+      <tableName>LEAD</tableName>
+      <columnName>STATE</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+    </column>
+    <column>
+      <name>LEAD_LETTERSALUTATION</name>
+      <tableName>LEAD</tableName>
+      <columnName>LETTERSALUTATION</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="100" />
+    </column>
+    <column>
+      <name>LEAD_SOURCE</name>
+      <tableName>LEAD</tableName>
+      <columnName>SOURCE</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="50" />
+    </column>
+    <column>
+      <name>LEAD_ORGNAME</name>
+      <tableName>LEAD</tableName>
+      <columnName>ORGNAME</columnName>
+      <dataTypeName>VARCHAR</dataTypeName>
+      <dataType v="12" />
+      <precision v="250" />
+    </column>
+    <column>
+      <name>LEAD_ORG_ID</name>
+      <tableName>LEAD</tableName>
+      <columnName>ORG_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+    </column>
+    <column>
+      <name>LEAD_PERS_ID</name>
+      <tableName>LEAD</tableName>
+      <columnName>PERS_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+    </column>
+    <column>
+      <name>LEAD_IMPORTDEV_ID</name>
+      <tableName>LEAD</tableName>
+      <columnName>IMPORTDEV_ID</columnName>
+      <dataTypeName>CHAR</dataTypeName>
+      <dataType v="1" />
+      <precision v="36" />
+    </column>
+  </databaseColumns>
+  <children>
+    <edit>
+      <name>ADDRESS</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>LEAD</tableName>
+      <columnName>ADDRESS</columnName>
+      <dataType v="12" />
+      <precision v="50" />
+      <x v="340" />
+      <y v="25" />
+      <width v="180" />
+      <tabOrder v="1" />
+      <labelText>Adresse</labelText>
+      <labelDistance v="60" />
+    </edit>
+    <edit>
+      <name>BUILDINGNO</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>LEAD</tableName>
+      <columnName>BUILDINGNO</columnName>
+      <dataType v="12" />
+      <precision v="50" />
+      <x v="340" />
+      <y v="50" />
+      <width v="180" />
+      <tabOrder v="2" />
+      <labelText>Hausnr.</labelText>
+      <labelDistance v="60" />
+    </edit>
+    <edit>
+      <name>CITY</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>LEAD</tableName>
+      <columnName>CITY</columnName>
+      <dataType v="12" />
+      <precision v="50" />
+      <x v="340" />
+      <y v="100" />
+      <width v="180" />
+      <tabOrder v="4" />
+      <labelText>Stadt</labelText>
+      <labelDistance v="60" />
+    </edit>
+    <edit>
+      <name>COUNTRY</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>LEAD</tableName>
+      <columnName>COUNTRY</columnName>
+      <dataType v="1" />
+      <precision v="2" />
+      <x v="340" />
+      <y v="125" />
+      <width v="180" />
+      <tabOrder v="5" />
+      <labelText>Land</labelText>
+      <labelDistance v="60" />
+    </edit>
+    <edit>
+      <name>FIRSTNAME</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>LEAD</tableName>
+      <columnName>FIRSTNAME</columnName>
+      <dataType v="12" />
+      <precision v="50" />
+      <x v="625" />
+      <y v="75" />
+      <width v="180" />
+      <tabOrder v="8" />
+      <labelText>Vorname</labelText>
+      <labelDistance v="70" />
+    </edit>
+    <label>
+      <name>Label_2</name>
+      <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+      <valueProcess>%aditoprj%/frame/LEAD/children/label_2/valueProcess.js</valueProcess>
+      <x v="165" />
+      <y v="160" />
+      <width v="365" />
+      <height v="40" />
+      <font name="Verdana" style="0" size="14" />
+      <fontColor v="0xff2c5d9d" />
+      <labelDistance v="80" />
+      <labelAnchor v="0" />
+    </label>
+    <edit>
+      <name>LASTNAME</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>LEAD</tableName>
+      <columnName>LASTNAME</columnName>
+      <dataType v="12" />
+      <precision v="50" />
+      <x v="625" />
+      <y v="125" />
+      <width v="180" />
+      <tabOrder v="10" />
+      <labelText>Nachname</labelText>
+      <labelDistance v="70" />
+    </edit>
+    <edit>
+      <name>MIDDLENAME</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>LEAD</tableName>
+      <columnName>MIDDLENAME</columnName>
+      <dataType v="12" />
+      <precision v="50" />
+      <x v="625" />
+      <y v="100" />
+      <width v="180" />
+      <tabOrder v="9" />
+      <labelText>Beiname</labelText>
+      <labelDistance v="70" />
+    </edit>
+    <memo>
+      <name>ORGNAME</name>
+      <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+      <tableName>LEAD</tableName>
+      <columnName>ORGNAME</columnName>
+      <dataType v="12" />
+      <precision v="250" />
+      <x v="70" />
+      <y v="25" />
+      <width v="180" />
+      <height v="45" />
+      <tabOrder v="0" />
+      <labelText>Firma</labelText>
+      <labelDistance v="60" />
+    </memo>
+    <register>
+      <name>Register_0</name>
+      <template>%aditoprj%/template/Template_Register/Template_Register.aod</template>
+      <x v="0" />
+      <y v="185" />
+      <width v="850" />
+      <height v="400" />
+      <horizontalAnchor v="3" />
+      <verticalAnchor v="6" />
+      <tabOrder v="12" />
+      <children>
+        <registerTab>
+          <name>Dubletten</name>
+          <caption>Dubletten</caption>
+          <children>
+            <button>
+              <name>btnUseLead</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/LEAD/children/register_0/children/dubletten/children/btnuselead/onClick.js</onClick>
+              <x v="585" />
+              <y v="340" />
+              <width v="185" />
+              <height v="25" />
+              <verticalAnchor v="5" />
+              <caption>Lead trotzdem einfügen</caption>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/LEAD/children/register_0/children/dubletten/children/btnuselead/enabledProcess.js</enabledProcess>
+              <tabOrder v="5" />
+            </button>
+            <button>
+              <name>btnUseOrg</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/LEAD/children/register_0/children/dubletten/children/btnuseorg/onClick.js</onClick>
+              <x v="205" />
+              <y v="340" />
+              <width v="185" />
+              <height v="25" />
+              <verticalAnchor v="5" />
+              <caption>Organisation verwenden</caption>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/LEAD/children/register_0/children/dubletten/children/btnuseorg/enabledProcess.js</enabledProcess>
+              <tabOrder v="2" />
+              <labelVisible v="false" />
+            </button>
+            <button>
+              <name>btnUseOrgPers</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/LEAD/children/register_0/children/dubletten/children/btnuseorgpers/onClick.js</onClick>
+              <x v="15" />
+              <y v="340" />
+              <width v="185" />
+              <height v="25" />
+              <verticalAnchor v="5" />
+              <caption>Org/Pers verwenden</caption>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/LEAD/children/register_0/children/dubletten/children/btnuseorgpers/enabledProcess.js</enabledProcess>
+              <tabOrder v="1" />
+            </button>
+            <button>
+              <name>btnUsePers</name>
+              <template>%aditoprj%/template/Template_Button/Template_Button.aod</template>
+              <onClick>%aditoprj%/frame/LEAD/children/register_0/children/dubletten/children/btnusepers/onClick.js</onClick>
+              <x v="395" />
+              <y v="340" />
+              <width v="185" />
+              <height v="25" />
+              <verticalAnchor v="5" />
+              <caption>Person verwenden</caption>
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/LEAD/children/register_0/children/dubletten/children/btnusepers/enabledProcess.js</enabledProcess>
+              <tabOrder v="4" />
+            </button>
+            <table>
+              <name>tbl_orgdubletten</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/LEAD/children/register_0/children/dubletten/children/tbl_orgdubletten/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/LEAD/children/register_0/children/dubletten/children/tbl_orgdubletten/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="15" />
+              <y v="25" />
+              <width v="815" />
+              <height v="120" />
+              <horizontalAnchor v="3" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/LEAD/children/register_0/children/dubletten/children/tbl_orgdubletten/enabledProcess.js</enabledProcess>
+              <utilizeRowId v="true" />
+              <tabOrder v="0" />
+              <grantArrangeColumns v="true" />
+              <labelText>Mögliche Dubletten</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>organisation_dubORG</name>
+                  <columnName>Organisation</columnName>
+                  <width v="334" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>country_dubORG</name>
+                  <columnName>Land</columnName>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>zip_dubORG</name>
+                  <columnName>PLZ</columnName>
+                  <width v="57" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>city_dubORG</name>
+                  <columnName>Ort</columnName>
+                  <width v="141" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>address_dubORG</name>
+                  <columnName>Strasse</columnName>
+                  <width v="190" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>status_dubORG</name>
+                  <columnName>Status</columnName>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+            <table>
+              <name>tbl_persdubletten</name>
+              <template>%aditoprj%/template/Template_Table/Template_Table.aod</template>
+              <onDoubleClick>%aditoprj%/frame/LEAD/children/register_0/children/dubletten/children/tbl_persdubletten/onDoubleClick.js</onDoubleClick>
+              <displayContentProcess>%aditoprj%/frame/LEAD/children/register_0/children/dubletten/children/tbl_persdubletten/displayContentProcess.js</displayContentProcess>
+              <contentProcessType v="1" />
+              <x v="15" />
+              <y v="170" />
+              <width v="815" />
+              <height v="165" />
+              <horizontalAnchor v="3" />
+              <verticalAnchor v="6" />
+              <enabled v="false" />
+              <enabledProcess>%aditoprj%/frame/LEAD/children/register_0/children/dubletten/children/tbl_persdubletten/enabledProcess.js</enabledProcess>
+              <utilizeRowId v="true" />
+              <tabOrder v="3" />
+              <grantArrangeColumns v="true" />
+              <labelText>Mögliche Dubletten</labelText>
+              <labelOrientation v="1" />
+              <labelDistance v="2" />
+              <columnMetaData>
+                <columnMetaData>
+                  <name>organisation_dubPERS</name>
+                  <columnName>Organisation</columnName>
+                  <width v="217" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>person_dubPERS</name>
+                  <columnName>Person</columnName>
+                  <width v="120" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>country_dubPERS</name>
+                  <columnName>Land</columnName>
+                </columnMetaData>
+                <columnMetaData>
+                  <name>zip_dubPERS</name>
+                  <columnName>PLZ</columnName>
+                  <width v="57" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>city_dubPERS</name>
+                  <columnName>Ort</columnName>
+                  <width v="141" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>address_dubPERS</name>
+                  <columnName>Strasse</columnName>
+                  <width v="190" />
+                </columnMetaData>
+                <columnMetaData>
+                  <name>status_dubPERS</name>
+                  <columnName>Status</columnName>
+                </columnMetaData>
+              </columnMetaData>
+            </table>
+          </children>
+        </registerTab>
+        <registerTab>
+          <name>allgemein</name>
+          <caption>allgemein</caption>
+          <visible v="false" />
+          <visibleProcess>%aditoprj%/frame/LEAD/children/register_0/children/allgemein/visibleProcess.js</visibleProcess>
+          <children>
+            <edit>
+              <name>DEPARTMENT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>LEAD</tableName>
+              <columnName>DEPARTMENT</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <x v="495" />
+              <y v="120" />
+              <width v="145" />
+              <tabOrder v="8" />
+              <labelText>DEPARTMENT</labelText>
+              <labelDistance v="120" />
+            </edit>
+            <edit>
+              <name>DISTRICT</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>LEAD</tableName>
+              <columnName>DISTRICT</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <x v="495" />
+              <y v="95" />
+              <width v="145" />
+              <tabOrder v="7" />
+              <labelText>DISTRICT</labelText>
+              <labelDistance v="120" />
+            </edit>
+            <edit>
+              <name>IMPORTDATE</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <dataType v="93" />
+              <searchableModes>none</searchableModes>
+              <x v="140" />
+              <y v="70" />
+              <width v="145" />
+              <tabOrder v="2" />
+              <labelText>IMPORTDATE</labelText>
+              <labelDistance v="85" />
+            </edit>
+            <label>
+              <name>IMPORTDEV_ID</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <tableName>LEAD</tableName>
+              <columnName>IMPORTDEV_ID</columnName>
+              <dataType v="1" />
+              <x v="140" />
+              <y v="275" />
+              <width v="145" />
+              <labelText>IMPORTDEV_ID</labelText>
+              <labelDistance v="85" />
+              <labelAnchor v="0" />
+            </label>
+            <label>
+              <name>LEADID</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <tableName>LEAD</tableName>
+              <columnName>LEADID</columnName>
+              <dataType v="1" />
+              <x v="140" />
+              <y v="150" />
+              <width v="145" />
+              <labelText>LEADID</labelText>
+              <labelDistance v="85" />
+            </label>
+            <edit>
+              <name>LETTERSALUTATION</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>LEAD</tableName>
+              <columnName>LETTERSALUTATION</columnName>
+              <dataType v="12" />
+              <precision v="100" />
+              <x v="495" />
+              <y v="20" />
+              <width v="145" />
+              <tabOrder v="4" />
+              <labelText>LETTERSALUTATION</labelText>
+              <labelDistance v="120" />
+            </edit>
+            <label>
+              <name>ORG_ID</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <tableName>LEAD</tableName>
+              <columnName>ORG_ID</columnName>
+              <dataType v="1" />
+              <x v="140" />
+              <y v="225" />
+              <width v="145" />
+              <labelText>ORG_ID</labelText>
+              <labelDistance v="85" />
+              <labelAnchor v="0" />
+            </label>
+            <edit>
+              <name>ORGCOUNTRYCODE</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>LEAD</tableName>
+              <columnName>ORGCOUNTRYCODE</columnName>
+              <dataType v="12" />
+              <precision v="10" />
+              <x v="495" />
+              <y v="70" />
+              <width v="145" />
+              <tabOrder v="6" />
+              <labelText>ORGCOUNTRYCODE</labelText>
+              <labelDistance v="120" />
+            </edit>
+            <label>
+              <name>PERS_ID</name>
+              <template>%aditoprj%/template/Template_Label/Template_Label.aod</template>
+              <tableName>LEAD</tableName>
+              <columnName>PERS_ID</columnName>
+              <dataType v="1" />
+              <x v="140" />
+              <y v="250" />
+              <width v="145" />
+              <labelText>PERS_ID</labelText>
+              <labelDistance v="85" />
+              <labelAnchor v="0" />
+            </label>
+            <edit>
+              <name>REGION</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>LEAD</tableName>
+              <columnName>REGION</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <x v="495" />
+              <y v="45" />
+              <width v="145" />
+              <tabOrder v="5" />
+              <labelText>REGION</labelText>
+              <labelDistance v="120" />
+            </edit>
+            <edit>
+              <name>SOURCE</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>LEAD</tableName>
+              <columnName>SOURCE</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <x v="140" />
+              <y v="100" />
+              <width v="145" />
+              <tabOrder v="3" />
+              <labelText>SOURCE</labelText>
+              <labelDistance v="85" />
+            </edit>
+            <edit>
+              <name>STATE</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>LEAD</tableName>
+              <columnName>STATE</columnName>
+              <dataType v="12" />
+              <precision v="50" />
+              <x v="140" />
+              <y v="45" />
+              <width v="145" />
+              <tabOrder v="1" />
+              <labelText>STATE</labelText>
+              <labelDistance v="85" />
+            </edit>
+            <edit>
+              <name>STATUS</name>
+              <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+              <tableName>LEAD</tableName>
+              <columnName>STATUS</columnName>
+              <dataType v="4" />
+              <precision v="10" />
+              <x v="140" />
+              <y v="20" />
+              <width v="145" />
+              <tabOrder v="0" />
+              <labelText>STATUS</labelText>
+              <labelDistance v="85" />
+            </edit>
+          </children>
+        </registerTab>
+      </children>
+    </register>
+    <edit>
+      <name>RELPOSITION</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>LEAD</tableName>
+      <columnName>RELPOSITION</columnName>
+      <dataType v="12" />
+      <precision v="50" />
+      <x v="625" />
+      <y v="150" />
+      <width v="180" />
+      <tabOrder v="11" />
+      <labelText>Position</labelText>
+      <labelDistance v="70" />
+    </edit>
+    <edit>
+      <name>SALUTATION</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>LEAD</tableName>
+      <columnName>SALUTATION</columnName>
+      <dataType v="12" />
+      <precision v="30" />
+      <x v="625" />
+      <y v="25" />
+      <width v="180" />
+      <tabOrder v="6" />
+      <labelText>Anrede</labelText>
+      <labelDistance v="70" />
+    </edit>
+    <edit>
+      <name>TITLE</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>LEAD</tableName>
+      <columnName>TITLE</columnName>
+      <dataType v="12" />
+      <precision v="30" />
+      <x v="625" />
+      <y v="50" />
+      <width v="180" />
+      <tabOrder v="7" />
+      <labelText>Titel</labelText>
+      <labelDistance v="70" />
+    </edit>
+    <edit>
+      <name>ZIP</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <tableName>LEAD</tableName>
+      <columnName>ZIP</columnName>
+      <dataType v="12" />
+      <precision v="50" />
+      <x v="340" />
+      <y v="75" />
+      <width v="180" />
+      <tabOrder v="3" />
+      <labelText>PLZ</labelText>
+      <labelDistance v="60" />
+    </edit>
+  </children>
+  <tableView>
+    <tableViewProperties>
+      <columnProperty>
+        <name>LEAD_SALUTATION</name>
+        <tableName>LEAD</tableName>
+        <columnName>SALUTATION</columnName>
+        <label>Anrede</label>
+        <width v="53" />
+      </columnProperty>
+      <columnProperty>
+        <name>LEAD_FIRSTNAME</name>
+        <tableName>LEAD</tableName>
+        <columnName>FIRSTNAME</columnName>
+        <label>Vorname</label>
+        <width v="97" />
+      </columnProperty>
+      <columnProperty>
+        <name>LEAD_LASTNAME</name>
+        <tableName>LEAD</tableName>
+        <columnName>LASTNAME</columnName>
+        <label>Nachname</label>
+        <width v="144" />
+      </columnProperty>
+      <columnProperty>
+        <name>LEAD_COUNTRY</name>
+        <tableName>LEAD</tableName>
+        <columnName>COUNTRY</columnName>
+        <label>Land</label>
+        <width v="44" />
+      </columnProperty>
+      <columnProperty>
+        <name>LEAD_ZIP</name>
+        <tableName>LEAD</tableName>
+        <columnName>ZIP</columnName>
+        <label>PLZ</label>
+        <width v="65" />
+      </columnProperty>
+      <columnProperty>
+        <name>LEAD_CITY</name>
+        <tableName>LEAD</tableName>
+        <columnName>CITY</columnName>
+        <label>Ort</label>
+        <width v="181" />
+      </columnProperty>
+      <columnProperty>
+        <name>LEAD_ADDRESS</name>
+        <tableName>LEAD</tableName>
+        <columnName>ADDRESS</columnName>
+        <label>Strasse</label>
+        <width v="146" />
+      </columnProperty>
+      <columnProperty>
+        <name>LEAD_BUILDINGNO</name>
+        <tableName>LEAD</tableName>
+        <columnName>BUILDINGNO</columnName>
+        <label>Nr.</label>
+        <width v="34" />
+      </columnProperty>
+      <columnProperty>
+        <name>LEAD_ORGNAME</name>
+        <tableName>LEAD</tableName>
+        <columnName>ORGNAME</columnName>
+        <label>Firma</label>
+        <width v="247" />
+      </columnProperty>
+    </tableViewProperties>
+  </tableView>
+  <width v="850" />
+  <height v="586" />
+</frame>

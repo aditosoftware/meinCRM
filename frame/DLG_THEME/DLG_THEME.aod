@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.21" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <name>DLG_THEME</name>
+  <icon></icon>
+  <description></description>
+  <alias>AO_DATEN</alias>
+  <ribbon>
+    <ribbonTasks>
+      <ribbonTask>
+        <name>TASK_SEARCH</name>
+        <showNavigationBar v="true" />
+        <showTableSearch v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchen</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_SEARCHMASK</name>
+        <showMaskSearch v="true" />
+        <showExtendedMaskSearch v="true" />
+        <showCreate v="true" />
+        <showAux v="true" />
+        <icon>ZOOM_PLUS_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Suchmaske (F5)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_VIEW</name>
+        <showNavigationBar v="true" />
+        <showEdit v="true" />
+        <showAux v="true" />
+        <icon>VIEW_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Anzeige (F6)</toolTip>
+      </ribbonTask>
+      <ribbonTask>
+        <name>TASK_EDIT</name>
+        <showSaveCancel v="true" />
+        <showAux v="true" />
+        <icon>EDIT_16</icon>
+        <enabled v="true" />
+        <layoutPosition>POSITION_TOP</layoutPosition>
+        <toolTip>Bearbeiten</toolTip>
+      </ribbonTask>
+    </ribbonTasks>
+  </ribbon>
+  <children>
+    <checkBox>
+      <name>ISACTIVE</name>
+      <template>%aditoprj%/template/Template_Checkbox/Template_Checkbox.aod</template>
+      <dataType v="4" />
+      <valueTrue></valueTrue>
+      <valueFalse></valueFalse>
+      <x v="100" />
+      <y v="5" />
+      <labelText>Aktiv</labelText>
+      <labelDistance v="90" />
+      <labelAnchor v="0" />
+      <tabOrder v="0" />
+    </checkBox>
+    <edit>
+      <name>THEME</name>
+      <template>%aditoprj%/template/Template_Edit/Template_Edit.aod</template>
+      <onValidation>%aditoprj%/frame/DLG_THEME/children/theme/onValidation.js</onValidation>
+      <x v="100" />
+      <y v="25" />
+      <width v="330" />
+      <tabOrder v="1" />
+      <labelText>Bezeichnung</labelText>
+      <labelDistance v="90" />
+      <labelAnchor v="0" />
+    </edit>
+    <memo>
+      <name>DESCRIPTION</name>
+      <template>%aditoprj%/template/Template_Memo/Template_Memo.aod</template>
+      <x v="100" />
+      <y v="50" />
+      <width v="330" />
+      <height v="95" />
+      <tabOrder v="2" />
+      <labelText>Beschreibung</labelText>
+      <labelDistance v="90" />
+    </memo>
+  </children>
+  <tableView />
+</frame>

@@ -1,0 +1,1 @@
+a.rs("RELATION.RELATIONID IN ( SELECT RELATION_ID FROM ADDRESS WHERE (" + a.valueof("$local.condition") + "))");

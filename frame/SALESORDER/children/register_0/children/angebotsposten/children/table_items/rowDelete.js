@@ -1,0 +1,1 @@
+a.sqlDelete("ORDERITEM", " ORDERITEMID = '" + a.valueof("$local.idvalue") + "'");

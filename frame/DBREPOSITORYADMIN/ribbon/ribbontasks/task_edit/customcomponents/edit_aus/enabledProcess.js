@@ -1,0 +1,1 @@
+a.rs(!a.hasvar("$image.edit") || a.valueof("$image.edit") == "true");

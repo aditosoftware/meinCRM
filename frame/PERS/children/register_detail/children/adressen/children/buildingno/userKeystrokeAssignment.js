@@ -1,0 +1,1 @@
+a.ro( [["pressed ENTER", "EXECUTE_PROCESS"], ["pressed HOME", "EXECUTE_PROCESS"], ["pressed END", "EXECUTE_PROCESS"]] );

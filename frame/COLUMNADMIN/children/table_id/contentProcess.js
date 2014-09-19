@@ -1,0 +1,1 @@
+a.rq("select tableid, longname from aosys_tablerepository order by longname");

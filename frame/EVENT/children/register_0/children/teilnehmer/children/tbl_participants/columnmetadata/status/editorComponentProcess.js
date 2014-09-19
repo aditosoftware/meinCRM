@@ -1,0 +1,1 @@
+a.rs("$comp.Cbx_tnstatus");

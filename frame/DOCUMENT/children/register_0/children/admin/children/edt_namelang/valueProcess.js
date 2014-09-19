@@ -1,0 +1,1 @@
+a.rs(a.valueof("$comp.NAME") + a.valueof("$comp.LANG"))

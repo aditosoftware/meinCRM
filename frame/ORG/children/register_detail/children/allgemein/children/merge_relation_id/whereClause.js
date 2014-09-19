@@ -1,0 +1,1 @@
+a.rd("PERS_ID is null and RELATIONID <> '$comp.relationid'");

@@ -1,0 +1,1 @@
+a.rq("select errorlogid, prozess, beschreibung, date_new, status, prio from ERRORLOG order by 1 desc");
