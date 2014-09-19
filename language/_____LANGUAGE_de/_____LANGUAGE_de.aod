@@ -1,0 +1,5772 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.2" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <name>_____LANGUAGE_de</name>
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <language>de</language>
+  <country></country>
+  <variant></variant>
+  <keyValueMap>
+    <entry>
+      <key>Kontaktperson</key>
+    </entry>
+    <entry>
+      <key>Historie</key>
+    </entry>
+    <entry>
+      <key>Kampagne</key>
+    </entry>
+    <entry>
+      <key>Firma</key>
+    </entry>
+    <entry>
+      <key>Personen immer anlegen</key>
+    </entry>
+    <entry>
+      <key>Tabellenname</key>
+    </entry>
+    <entry>
+      <key>PLZ</key>
+    </entry>
+    <entry>
+      <key>Firmenname</key>
+    </entry>
+    <entry>
+      <key>Region</key>
+    </entry>
+    <entry>
+      <key>weitere Währungen durch Eintrag in Hilfsliste</key>
+    </entry>
+    <entry>
+      <key>Mögliche Dubletten</key>
+    </entry>
+    <entry>
+      <key>Benutzertabelle</key>
+    </entry>
+    <entry>
+      <key>part_pers</key>
+    </entry>
+    <entry>
+      <key>Label__comm__dec</key>
+    </entry>
+    <entry>
+      <key>Auswahl in Combobox &amp;apos;Dublette&amp;apos; treffen.</key>
+    </entry>
+    <entry>
+      <key>Stammkunden</key>
+    </entry>
+    <entry>
+      <key>#,##0.00</key>
+    </entry>
+    <entry>
+      <key>BULKMAILDEFID</key>
+    </entry>
+    <entry>
+      <key>Details</key>
+    </entry>
+    <entry>
+      <key>Mitglieder</key>
+    </entry>
+    <entry>
+      <key>Teilnehmer hinzufügen</key>
+    </entry>
+    <entry>
+      <key>A&amp;amp;ufgaben</key>
+    </entry>
+    <entry>
+      <key>Dokumentenart</key>
+    </entry>
+    <entry>
+      <key>zum Angebot gehörende Dokumente</key>
+    </entry>
+    <entry>
+      <key>Min. Anzahl</key>
+    </entry>
+    <entry>
+      <key>Empfänger</key>
+    </entry>
+    <entry>
+      <key>Serienbrief</key>
+    </entry>
+    <entry>
+      <key>Größe</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Rechte</key>
+    </entry>
+    <entry>
+      <key>Systemtabelle</key>
+    </entry>
+    <entry>
+      <key>Samstag</key>
+    </entry>
+    <entry>
+      <key>Übernahme rückgängig</key>
+    </entry>
+    <entry>
+      <key>Staat</key>
+    </entry>
+    <entry>
+      <key>attr_decoded</key>
+    </entry>
+    <entry>
+      <key>Information</key>
+    </entry>
+    <entry>
+      <key>Löschen</key>
+    </entry>
+    <entry>
+      <key>date_edit_rel</key>
+    </entry>
+    <entry>
+      <key>Von</key>
+    </entry>
+    <entry>
+      <key>dd.MM.yyyy</key>
+    </entry>
+    <entry>
+      <key>Produkt</key>
+    </entry>
+    <entry>
+      <key>Standard</key>
+    </entry>
+    <entry>
+      <key>Kampagnenstufen</key>
+    </entry>
+    <entry>
+      <key>Befragung</key>
+    </entry>
+    <entry>
+      <key>ORGCOUNTRYCODE</key>
+    </entry>
+    <entry>
+      <key>Keyname 2</key>
+    </entry>
+    <entry>
+      <key>beginnt um</key>
+    </entry>
+    <entry>
+      <key>Quelle</key>
+    </entry>
+    <entry>
+      <key>Organisation verwenden</key>
+    </entry>
+    <entry>
+      <key>Währung</key>
+    </entry>
+    <entry>
+      <key>OFFERITEMID</key>
+    </entry>
+    <entry>
+      <key>Gruppenart</key>
+    </entry>
+    <entry>
+      <key>E-Preis</key>
+    </entry>
+    <entry>
+      <key>Gesamt</key>
+    </entry>
+    <entry>
+      <key>Fremdschlüssel</key>
+    </entry>
+    <entry>
+      <key>Keine</key>
+    </entry>
+    <entry>
+      <key>Daten übernehmen</key>
+    </entry>
+    <entry>
+      <key>Landkarte</key>
+    </entry>
+    <entry>
+      <key>Die Zahlen in Klammern bezeichnen, wie oft
+das Attribut mindestens vorkommen muss
+und maximal vorkommen darf.</key>
+    </entry>
+    <entry>
+      <key>Passwort</key>
+    </entry>
+    <entry>
+      <key>Aktiv</key>
+    </entry>
+    <entry>
+      <key>EE dd.MM.yyyy HH:mm</key>
+    </entry>
+    <entry>
+      <key>Warengruppe</key>
+    </entry>
+    <entry>
+      <key>Auswahl</key>
+    </entry>
+    <entry>
+      <key>Zuständigen setzen</key>
+    </entry>
+    <entry>
+      <key>Sonntag</key>
+    </entry>
+    <entry>
+      <key>Letzte Änderung von:</key>
+    </entry>
+    <entry>
+      <key>USER_NEW</key>
+    </entry>
+    <entry>
+      <key>Abbrechen</key>
+    </entry>
+    <entry>
+      <key>in Clipboard übernehmen</key>
+    </entry>
+    <entry>
+      <key>Typ</key>
+    </entry>
+    <entry>
+      <key>allgemein</key>
+    </entry>
+    <entry>
+      <key>optional</key>
+    </entry>
+    <entry>
+      <key>Täglich</key>
+    </entry>
+    <entry>
+      <key>ATTR_ID</key>
+    </entry>
+    <entry>
+      <key>Daten laden</key>
+    </entry>
+    <entry>
+      <key>Label__relpers__dec</key>
+    </entry>
+    <entry>
+      <key>Doku Vorlagen</key>
+    </entry>
+    <entry>
+      <key>Start</key>
+    </entry>
+    <entry>
+      <key>unverknüpfte Emails</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Bericht</key>
+    </entry>
+    <entry>
+      <key>Summe</key>
+    </entry>
+    <entry>
+      <key>Teilnehmer löschen</key>
+    </entry>
+    <entry>
+      <key>user_edit</key>
+    </entry>
+    <entry>
+      <key>DISTRICT</key>
+    </entry>
+    <entry>
+      <key>Einheit</key>
+    </entry>
+    <entry>
+      <key>Tel-Vorwahl</key>
+    </entry>
+    <entry>
+      <key>Montag</key>
+    </entry>
+    <entry>
+      <key>Tabellentyp</key>
+    </entry>
+    <entry>
+      <key>Beginnt um</key>
+    </entry>
+    <entry>
+      <key>Strasse</key>
+    </entry>
+    <entry>
+      <key>date_new_rel</key>
+    </entry>
+    <entry>
+      <key>Stufe</key>
+    </entry>
+    <entry>
+      <key>Geben Sie hier eine RegEx an.</key>
+    </entry>
+    <entry>
+      <key>Weitergeben</key>
+    </entry>
+    <entry>
+      <key>Freitag</key>
+    </entry>
+    <entry>
+      <key>Kontaktart</key>
+    </entry>
+    <entry>
+      <key>Validierung</key>
+    </entry>
+    <entry>
+      <key>Zahlungsbed.</key>
+    </entry>
+    <entry>
+      <key>Angebotsdatum</key>
+    </entry>
+    <entry>
+      <key>Kunden-Nr.</key>
+    </entry>
+    <entry>
+      <key>Kalender</key>
+    </entry>
+    <entry>
+      <key>Kundenstammblatt</key>
+    </entry>
+    <entry>
+      <key>dd.MM.yy HH:mm</key>
+    </entry>
+    <entry>
+      <key>Sortierung</key>
+    </entry>
+    <entry>
+      <key>Projekt</key>
+    </entry>
+    <entry>
+      <key>Status</key>
+    </entry>
+    <entry>
+      <key>abweichende Briefanrede</key>
+    </entry>
+    <entry>
+      <key>Schriftfarbe</key>
+    </entry>
+    <entry>
+      <key>Vorname</key>
+    </entry>
+    <entry>
+      <key>SOURCE</key>
+    </entry>
+    <entry>
+      <key>Zuständig</key>
+    </entry>
+    <entry>
+      <key>Letzte Änderung am:</key>
+    </entry>
+    <entry>
+      <key>Erinnerung</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Empfänger</key>
+    </entry>
+    <entry>
+      <key>Rechte vergeben</key>
+    </entry>
+    <entry>
+      <key>Distrikt</key>
+    </entry>
+    <entry>
+      <key>Angebotsnummer</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Personen</key>
+    </entry>
+    <entry>
+      <key>Importspalte</key>
+    </entry>
+    <entry>
+      <key>Kategorie</key>
+    </entry>
+    <entry>
+      <key>Fragen</key>
+    </entry>
+    <entry>
+      <key>LEADID</key>
+    </entry>
+    <entry>
+      <key>Datentyp</key>
+    </entry>
+    <entry>
+      <key>Dauer</key>
+    </entry>
+    <entry>
+      <key>Anrede</key>
+    </entry>
+    <entry>
+      <key>Hinzufügen</key>
+    </entry>
+    <entry>
+      <key>Telefon</key>
+    </entry>
+    <entry>
+      <key>geprüft</key>
+    </entry>
+    <entry>
+      <key>Normal</key>
+    </entry>
+    <entry>
+      <key>DATE_EDIT</key>
+    </entry>
+    <entry>
+      <key>Funktion</key>
+    </entry>
+    <entry>
+      <key>date_edit</key>
+    </entry>
+    <entry>
+      <key>Personen</key>
+    </entry>
+    <entry>
+      <key>Internet</key>
+    </entry>
+    <entry>
+      <key>Admin</key>
+    </entry>
+    <entry>
+      <key>Verteiler hinzufügen</key>
+    </entry>
+    <entry>
+      <key>Betreff</key>
+    </entry>
+    <entry>
+      <key>Ja</key>
+    </entry>
+    <entry>
+      <key>Nein</key>
+    </entry>
+    <entry>
+      <key>Constraint</key>
+    </entry>
+    <entry>
+      <key>Max. Anzahl</key>
+    </entry>
+    <entry>
+      <key>Fusstext kurz</key>
+    </entry>
+    <entry>
+      <key>Ende-Datum</key>
+    </entry>
+    <entry>
+      <key>Zielspalte</key>
+    </entry>
+    <entry>
+      <key>Beschreibung</key>
+    </entry>
+    <entry>
+      <key>von</key>
+    </entry>
+    <entry>
+      <key>Schrift</key>
+    </entry>
+    <entry>
+      <key>Beiname</key>
+    </entry>
+    <entry>
+      <key>Sendedatum</key>
+    </entry>
+    <entry>
+      <key>Aufgaben</key>
+    </entry>
+    <entry>
+      <key>OFFER_ID</key>
+    </entry>
+    <entry>
+      <key>ISO2</key>
+    </entry>
+    <entry>
+      <key>Prio</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Historie</key>
+    </entry>
+    <entry>
+      <key>Nr.</key>
+    </entry>
+    <entry>
+      <key>Rückläufer</key>
+    </entry>
+    <entry>
+      <key>Code</key>
+    </entry>
+    <entry>
+      <key>Kein</key>
+    </entry>
+    <entry>
+      <key>alle markierten löschen</key>
+    </entry>
+    <entry>
+      <key>date_new</key>
+    </entry>
+    <entry>
+      <key>DUP_CHECK_DONE</key>
+    </entry>
+    <entry>
+      <key>Preisliste</key>
+    </entry>
+    <entry>
+      <key>PLZ / Ort</key>
+    </entry>
+    <entry>
+      <key>USER_EDIT</key>
+    </entry>
+    <entry>
+      <key>Dienstag</key>
+    </entry>
+    <entry>
+      <key>I</key>
+    </entry>
+    <entry>
+      <key>Angelegt von:</key>
+    </entry>
+    <entry>
+      <key>Endet am</key>
+    </entry>
+    <entry>
+      <key>Gesehen</key>
+    </entry>
+    <entry>
+      <key>Rollen</key>
+    </entry>
+    <entry>
+      <key>Adresstyp</key>
+    </entry>
+    <entry>
+      <key>Pos</key>
+    </entry>
+    <entry>
+      <key>aktiv</key>
+    </entry>
+    <entry>
+      <key>Links</key>
+    </entry>
+    <entry>
+      <key>Produktgruppe</key>
+    </entry>
+    <entry>
+      <key>Ersteller</key>
+    </entry>
+    <entry>
+      <key>Artikel</key>
+    </entry>
+    <entry>
+      <key>Frage</key>
+    </entry>
+    <entry>
+      <key>Land</key>
+    </entry>
+    <entry>
+      <key>Wert</key>
+    </entry>
+    <entry>
+      <key>als Standardtelefon setzen</key>
+    </entry>
+    <entry>
+      <key>Sieht</key>
+    </entry>
+    <entry>
+      <key>Untergeordnete Attribute</key>
+    </entry>
+    <entry>
+      <key>Angebots&amp;amp;posten</key>
+    </entry>
+    <entry>
+      <key>Eine Gruppenaufgabe</key>
+    </entry>
+    <entry>
+      <key>Label__history__dec</key>
+    </entry>
+    <entry>
+      <key>Versenden</key>
+    </entry>
+    <entry>
+      <key>Eingabevalidierung</key>
+    </entry>
+    <entry>
+      <key>Sprache</key>
+    </entry>
+    <entry>
+      <key>Bemerkung</key>
+    </entry>
+    <entry>
+      <key>Rolle</key>
+    </entry>
+    <entry>
+      <key>Medium</key>
+    </entry>
+    <entry>
+      <key>Test!</key>
+    </entry>
+    <entry>
+      <key>steps1_dec</key>
+    </entry>
+    <entry>
+      <key>Angebotsposten</key>
+    </entry>
+    <entry>
+      <key>Mailtext und</key>
+    </entry>
+    <entry>
+      <key>Lieferbed.</key>
+    </entry>
+    <entry>
+      <key>1. Zeile nicht übernehmen</key>
+    </entry>
+    <entry>
+      <key>Wöchentlich</key>
+    </entry>
+    <entry>
+      <key>Fällig um</key>
+    </entry>
+    <entry>
+      <key>Termine</key>
+    </entry>
+    <entry>
+      <key>Attribute</key>
+    </entry>
+    <entry>
+      <key>IMPORTDEV_ID</key>
+    </entry>
+    <entry>
+      <key>Komponente</key>
+    </entry>
+    <entry>
+      <key>keytype</key>
+    </entry>
+    <entry>
+      <key>Mitarbeiter</key>
+    </entry>
+    <entry>
+      <key>Tage</key>
+    </entry>
+    <entry>
+      <key>Ende</key>
+    </entry>
+    <entry>
+      <key>Importdatum</key>
+    </entry>
+    <entry>
+      <key>Primärschlüssel</key>
+    </entry>
+    <entry>
+      <key>Priorität</key>
+    </entry>
+    <entry>
+      <key>Rechte auf den angezeigten Datensatz</key>
+    </entry>
+    <entry>
+      <key>% erledigt</key>
+    </entry>
+    <entry>
+      <key>Position</key>
+    </entry>
+    <entry>
+      <key>Lead trotzdem einfügen</key>
+    </entry>
+    <entry>
+      <key>neue Aufgabe</key>
+    </entry>
+    <entry>
+      <key>1. Attribut</key>
+    </entry>
+    <entry>
+      <key>Stufe setzen</key>
+    </entry>
+    <entry>
+      <key>Jede/Alle</key>
+    </entry>
+    <entry>
+      <key>Person</key>
+    </entry>
+    <entry>
+      <key>h_decoded</key>
+    </entry>
+    <entry>
+      <key>Preis</key>
+    </entry>
+    <entry>
+      <key>empfangen</key>
+    </entry>
+    <entry>
+      <key>Serienmail</key>
+    </entry>
+    <entry>
+      <key>Monatlich</key>
+    </entry>
+    <entry>
+      <key>Woche(n) am</key>
+    </entry>
+    <entry>
+      <key>Export</key>
+    </entry>
+    <entry>
+      <key>admin</key>
+    </entry>
+    <entry>
+      <key>Type</key>
+    </entry>
+    <entry>
+      <key>Neue Aufgabe</key>
+    </entry>
+    <entry>
+      <key>Passwort zurücksetzen</key>
+    </entry>
+    <entry>
+      <key>Attribut/Wert</key>
+    </entry>
+    <entry>
+      <key>steps_dec</key>
+    </entry>
+    <entry>
+      <key>Null</key>
+    </entry>
+    <entry>
+      <key>Jahr</key>
+    </entry>
+    <entry>
+      <key>PERS_ID</key>
+    </entry>
+    <entry>
+      <key>Serienende</key>
+    </entry>
+    <entry>
+      <key>Herkunft</key>
+    </entry>
+    <entry>
+      <key>Abteilung</key>
+    </entry>
+    <entry>
+      <key>Name</key>
+    </entry>
+    <entry>
+      <key>Datenspalte</key>
+    </entry>
+    <entry>
+      <key>Serie</key>
+    </entry>
+    <entry>
+      <key>user_new_rel</key>
+    </entry>
+    <entry>
+      <key>Dubletten</key>
+    </entry>
+    <entry>
+      <key>Angebots-Nr</key>
+    </entry>
+    <entry>
+      <key>idcolumn</key>
+    </entry>
+    <entry>
+      <key>Datensatz</key>
+    </entry>
+    <entry>
+      <key>Lead</key>
+    </entry>
+    <entry>
+      <key>Text</key>
+    </entry>
+    <entry>
+      <key>Person verwenden</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Beziehungen</key>
+    </entry>
+    <entry>
+      <key>Neuer Termin</key>
+    </entry>
+    <entry>
+      <key>Schreiben</key>
+    </entry>
+    <entry>
+      <key>Endet nach Anzahl Terminen</key>
+    </entry>
+    <entry>
+      <key>Label_history_dec</key>
+    </entry>
+    <entry>
+      <key>Spaltenname</key>
+    </entry>
+    <entry>
+      <key>Hintergrund</key>
+    </entry>
+    <entry>
+      <key>verknüpft mit</key>
+    </entry>
+    <entry>
+      <key>LETTERSALUTATION</key>
+    </entry>
+    <entry>
+      <key>IMPORTDATE</key>
+    </entry>
+    <entry>
+      <key>Minuten</key>
+    </entry>
+    <entry>
+      <key>Start-Datum</key>
+    </entry>
+    <entry>
+      <key>Termin</key>
+    </entry>
+    <entry>
+      <key>Allgemein</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Stufen</key>
+    </entry>
+    <entry>
+      <key>gesendet</key>
+    </entry>
+    <entry>
+      <key>ORG_ID</key>
+    </entry>
+    <entry>
+      <key>Objekt</key>
+    </entry>
+    <entry>
+      <key>Attribut</key>
+    </entry>
+    <entry>
+      <key>Absender</key>
+    </entry>
+    <entry>
+      <key>Trotzdem übernehmen</key>
+    </entry>
+    <entry>
+      <key>Nummer</key>
+    </entry>
+    <entry>
+      <key>Ort</key>
+    </entry>
+    <entry>
+      <key>part_dec</key>
+    </entry>
+    <entry>
+      <key>Mittwoch</key>
+    </entry>
+    <entry>
+      <key>Info</key>
+    </entry>
+    <entry>
+      <key>Wird mit dem Login gefüllt, falls es den User schon
+in der SystemDB gbit.</key>
+    </entry>
+    <entry>
+      <key>Hintergrundfarbe</key>
+    </entry>
+    <entry>
+      <key>Betreffzeile</key>
+    </entry>
+    <entry>
+      <key>Mails personalisieren (werden dann als Einzelmails versandt)</key>
+    </entry>
+    <entry>
+      <key>Untergeordnete Keywords</key>
+    </entry>
+    <entry>
+      <key>privat</key>
+    </entry>
+    <entry>
+      <key>Nummer / Adresse</key>
+    </entry>
+    <entry>
+      <key>Label_comm_dec</key>
+    </entry>
+    <entry>
+      <key>Verwendung</key>
+    </entry>
+    <entry>
+      <key>2. Attribut</key>
+    </entry>
+    <entry>
+      <key>Mitglieder des Verteilers</key>
+    </entry>
+    <entry>
+      <key>Kategorien</key>
+    </entry>
+    <entry>
+      <key>MAIL_ID</key>
+    </entry>
+    <entry>
+      <key>Ändern</key>
+    </entry>
+    <entry>
+      <key>Fax</key>
+    </entry>
+    <entry>
+      <key>Angebot</key>
+    </entry>
+    <entry>
+      <key>Angelegt am:</key>
+    </entry>
+    <entry>
+      <key>Frame</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Definition</key>
+    </entry>
+    <entry>
+      <key>endet um</key>
+    </entry>
+    <entry>
+      <key>Jährlich</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Aufgaben</key>
+    </entry>
+    <entry>
+      <key>Dublette</key>
+    </entry>
+    <entry>
+      <key>Titel</key>
+    </entry>
+    <entry>
+      <key>Bezeichnung</key>
+    </entry>
+    <entry>
+      <key>#,##0</key>
+    </entry>
+    <entry>
+      <key>Donnerstag</key>
+    </entry>
+    <entry>
+      <key>alle</key>
+    </entry>
+    <entry>
+      <key>Mehrere Einzelaufgaben</key>
+    </entry>
+    <entry>
+      <key>DATE_NEW</key>
+    </entry>
+    <entry>
+      <key>DB-Table</key>
+    </entry>
+    <entry>
+      <key>Dokument</key>
+    </entry>
+    <entry>
+      <key>Kopftext kurz</key>
+    </entry>
+    <entry>
+      <key>Importdatei</key>
+    </entry>
+    <entry>
+      <key>Login</key>
+    </entry>
+    <entry>
+      <key>Max. Anz. Teiln.</key>
+    </entry>
+    <entry>
+      <key>Erg.</key>
+    </entry>
+    <entry>
+      <key>part_rel</key>
+    </entry>
+    <entry>
+      <key>EE dd.MM.yyyy</key>
+    </entry>
+    <entry>
+      <key>Serienmuster</key>
+    </entry>
+    <entry>
+      <key>STATE</key>
+    </entry>
+    <entry>
+      <key>Verteiler</key>
+    </entry>
+    <entry>
+      <key>Kommunikation</key>
+    </entry>
+    <entry>
+      <key>zuständig</key>
+    </entry>
+    <entry>
+      <key>Art</key>
+    </entry>
+    <entry>
+      <key>Sprachkürzel</key>
+    </entry>
+    <entry>
+      <key>STATUS</key>
+    </entry>
+    <entry>
+      <key>user_edit_rel</key>
+    </entry>
+    <entry>
+      <key>Lesen</key>
+    </entry>
+    <entry>
+      <key>Mailadresse</key>
+    </entry>
+    <entry>
+      <key>Kein Enddatum</key>
+    </entry>
+    <entry>
+      <key>Menge</key>
+    </entry>
+    <entry>
+      <key>DEPARTMENT</key>
+    </entry>
+    <entry>
+      <key>Organisation</key>
+    </entry>
+    <entry>
+      <key>my ADITO</key>
+    </entry>
+    <entry>
+      <key>CRLF</key>
+    </entry>
+    <entry>
+      <key>Zieltabelle</key>
+    </entry>
+    <entry>
+      <key>Label__pers__dec</key>
+    </entry>
+    <entry>
+      <key>Kunde</key>
+    </entry>
+    <entry>
+      <key>fällig am</key>
+    </entry>
+    <entry>
+      <key>name</key>
+    </entry>
+    <entry>
+      <key>Datum</key>
+    </entry>
+    <entry>
+      <key>Teilnehmer</key>
+    </entry>
+    <entry>
+      <key>Versendet am</key>
+    </entry>
+    <entry>
+      <key>adito_user</key>
+    </entry>
+    <entry>
+      <key>Niedrig</key>
+    </entry>
+    <entry>
+      <key>Endet um</key>
+    </entry>
+    <entry>
+      <key>Report</key>
+    </entry>
+    <entry>
+      <key>Bedingung</key>
+    </entry>
+    <entry>
+      <key>Markierten verwenden</key>
+    </entry>
+    <entry>
+      <key>Label_CallCenter</key>
+    </entry>
+    <entry>
+      <key>Sender</key>
+    </entry>
+    <entry>
+      <key>Dokumente</key>
+    </entry>
+    <entry>
+      <key>Nachname</key>
+    </entry>
+    <entry>
+      <key>Filter</key>
+    </entry>
+    <entry>
+      <key>REGION</key>
+    </entry>
+    <entry>
+      <key>user_new</key>
+    </entry>
+    <entry>
+      <key>Anzahl</key>
+    </entry>
+    <entry>
+      <key>Stadt</key>
+    </entry>
+    <entry>
+      <key>Adresse</key>
+    </entry>
+    <entry>
+      <key>Leadimport</key>
+    </entry>
+    <entry>
+      <key>DB-Spalte</key>
+    </entry>
+    <entry>
+      <key>Email</key>
+    </entry>
+    <entry>
+      <key>dd.MM.yyyy HH:mm</key>
+    </entry>
+    <entry>
+      <key>EEEE, dd.MM.yyyy</key>
+    </entry>
+    <entry>
+      <key>Org/Pers verwenden</key>
+    </entry>
+    <entry>
+      <key>Produktnummer</key>
+    </entry>
+    <entry>
+      <key>Tabellen</key>
+    </entry>
+    <entry>
+      <key>DB-Tabellenname</key>
+    </entry>
+    <entry>
+      <key>Antwortauswahl</key>
+    </entry>
+    <entry>
+      <key>Exportdatei</key>
+    </entry>
+    <entry>
+      <key>Nächste Frage</key>
+    </entry>
+    <entry>
+      <key>als Trennzeichen verwenden</key>
+    </entry>
+    <entry>
+      <key>Zeichen (feste Länge)</key>
+    </entry>
+    <entry>
+      <key>Ref.Integrität</key>
+    </entry>
+    <entry>
+      <key>verknüpfen mit</key>
+    </entry>
+    <entry>
+      <key>Schlüsselwörter</key>
+    </entry>
+    <entry>
+      <key>Bewertung</key>
+    </entry>
+    <entry>
+      <key>Prozess</key>
+    </entry>
+    <entry>
+      <key>Symbol</key>
+    </entry>
+    <entry>
+      <key>Datum und Zeit</key>
+    </entry>
+    <entry>
+      <key>Dezimalbruch</key>
+    </entry>
+    <entry>
+      <key>Filter zurücksetzen</key>
+    </entry>
+    <entry>
+      <key>Daten leeren</key>
+    </entry>
+    <entry>
+      <key>Tabellenspalten</key>
+    </entry>
+    <entry>
+      <key>Numerisch</key>
+    </entry>
+    <entry>
+      <key>Tabelle</key>
+    </entry>
+    <entry>
+      <key>Benutzer</key>
+    </entry>
+    <entry>
+      <key>Repository-Übernahme</key>
+    </entry>
+    <entry>
+      <key>XML-Tabellendeklaration importieren</key>
+    </entry>
+    <entry>
+      <key>Ausgewählte Tabelle(n) nach XML exportieren</key>
+    </entry>
+    <entry>
+      <key>Gibt an, ob es sich um eine nur intern
+verwendete Spalte handelt, die nicht in 
+den Listen für Workflows und anderen
+Benutzersichten auftaucht.</key>
+    </entry>
+    <entry>
+      <key>Version</key>
+    </entry>
+    <entry>
+      <key>Selektion hinzufügen</key>
+    </entry>
+    <entry>
+      <key>Unicode (variable Länge)</key>
+    </entry>
+    <entry>
+      <key>DB-Name</key>
+    </entry>
+    <entry>
+      <key>Interne Spalte</key>
+    </entry>
+    <entry>
+      <key>Ganzzahl</key>
+    </entry>
+    <entry>
+      <key>Unicode (feste Länge)</key>
+    </entry>
+    <entry>
+      <key>Addr.format</key>
+    </entry>
+    <entry>
+      <key>...</key>
+    </entry>
+    <entry>
+      <key>Ausgabe</key>
+    </entry>
+    <entry>
+      <key>Tabellenverwaltung</key>
+    </entry>
+    <entry>
+      <key>SQL erzeugen</key>
+    </entry>
+    <entry>
+      <key>Flagge</key>
+    </entry>
+    <entry>
+      <key>SQL-Datenbank</key>
+    </entry>
+    <entry>
+      <key>Tabellen-Name</key>
+    </entry>
+    <entry>
+      <key>Lieferant</key>
+    </entry>
+    <entry>
+      <key>Branche</key>
+    </entry>
+    <entry>
+      <key>Briefanrede</key>
+    </entry>
+    <entry>
+      <key>Starte den Import</key>
+    </entry>
+    <entry>
+      <key>Opportunity</key>
+    </entry>
+    <entry>
+      <key>Binärdaten (blob)</key>
+    </entry>
+    <entry>
+      <key>Länderdaten</key>
+    </entry>
+    <entry>
+      <key>Zeichen (variable Länge)</key>
+    </entry>
+    <entry>
+      <key>Langname als Kommentar</key>
+    </entry>
+    <entry>
+      <key>Langer Text / Memo</key>
+    </entry>
+    <entry>
+      <key>Mailingname</key>
+    </entry>
+    <entry>
+      <key>DB-Alias</key>
+    </entry>
+    <entry>
+      <key>Zielcode</key>
+    </entry>
+    <entry>
+      <key>Reklamation</key>
+    </entry>
+    <entry>
+      <key>Indexname</key>
+    </entry>
+    <entry>
+      <key>Mitglieder löschen</key>
+    </entry>
+    <entry>
+      <key>Primärschlüssel erzeugen</key>
+    </entry>
+    <entry>
+      <key>QUESTIONNAIREID</key>
+    </entry>
+    <entry>
+      <key>A</key>
+    </entry>
+    <entry>
+      <key>QUESTIONID</key>
+    </entry>
+    <entry>
+      <key>Im Index enthaltene Spalten</key>
+    </entry>
+    <entry>
+      <key>Tabellen anlegen</key>
+    </entry>
+    <entry>
+      <key>NULL erlaubt</key>
+    </entry>
+    <entry>
+      <key>Indexverwaltung</key>
+    </entry>
+    <entry>
+      <key>TARGETQUESTION_ID</key>
+    </entry>
+    <entry>
+      <key>Unique</key>
+    </entry>
+    <entry>
+      <key>Limits prüfen</key>
+    </entry>
+    <entry>
+      <key>Antwort</key>
+    </entry>
+    <entry>
+      <key>Interviewdefinition</key>
+    </entry>
+    <entry>
+      <key>Index-SQL mit erzeugen</key>
+    </entry>
+    <entry>
+      <key>Daten kopieren</key>
+    </entry>
+    <entry>
+      <key>Spaltenliste der Tabelle</key>
+    </entry>
+    <entry>
+      <key>Liste der Indizes</key>
+    </entry>
+    <entry>
+      <key>C</key>
+    </entry>
+    <entry>
+      <key>Artikel-Nr.</key>
+    </entry>
+    <entry>
+      <key>Key-Type*</key>
+    </entry>
+    <entry>
+      <key>Hilfstext</key>
+    </entry>
+    <entry>
+      <key>Dokumente öffnen</key>
+    </entry>
+    <entry>
+      <key>Anruf</key>
+    </entry>
+    <entry>
+      <key>Kampagne - Stufe</key>
+    </entry>
+    <entry>
+      <key>Befragung beenden</key>
+    </entry>
+    <entry>
+      <key>Kampagne - Stufe / Interview wählen</key>
+    </entry>
+    <entry>
+      <key>Interview prüfen</key>
+    </entry>
+    <entry>
+      <key>0</key>
+    </entry>
+    <entry>
+      <key>Betrag netto</key>
+    </entry>
+    <entry>
+      <key>Hinweistext</key>
+    </entry>
+    <entry>
+      <key>Teilnehmer der Kampagne</key>
+    </entry>
+    <entry>
+      <key>Label_Interview</key>
+    </entry>
+    <entry>
+      <key>Interview</key>
+    </entry>
+    <entry>
+      <key>Betrag brutto</key>
+    </entry>
+    <entry>
+      <key>Text eintragen</key>
+    </entry>
+    <entry>
+      <key>Where-Definition</key>
+    </entry>
+    <entry>
+      <key>Anzeige-Spalte</key>
+    </entry>
+    <entry>
+      <key>ID-Spalte</key>
+    </entry>
+    <entry>
+      <key>Anlass</key>
+    </entry>
+    <entry>
+      <key>Gelesen markieren</key>
+    </entry>
+    <entry>
+      <key>Kreis</key>
+    </entry>
+    <entry>
+      <key>Firma / Name</key>
+    </entry>
+    <entry>
+      <key>Erledigt setzen</key>
+    </entry>
+    <entry>
+      <key>Partner</key>
+    </entry>
+    <entry>
+      <key>Adressen</key>
+    </entry>
+    <entry>
+      <key>gesendet am</key>
+    </entry>
+    <entry>
+      <key>An</key>
+    </entry>
+    <entry>
+      <key>In Repository</key>
+    </entry>
+    <entry>
+      <key>keine Dublette</key>
+    </entry>
+    <entry>
+      <key>BCC</key>
+    </entry>
+    <entry>
+      <key>eingehend</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Anhänge</key>
+    </entry>
+    <entry>
+      <key>Tabulator</key>
+    </entry>
+    <entry>
+      <key>Veranlasser</key>
+    </entry>
+    <entry>
+      <key>D&amp;amp;okumente</key>
+    </entry>
+    <entry>
+      <key>ausgehend</key>
+    </entry>
+    <entry>
+      <key>Export Excel</key>
+    </entry>
+    <entry>
+      <key>Ausführen</key>
+    </entry>
+    <entry>
+      <key>Standard aufheben</key>
+    </entry>
+    <entry>
+      <key>Order-Spalten</key>
+    </entry>
+    <entry>
+      <key>CC</key>
+    </entry>
+    <entry>
+      <key>From-Definition</key>
+    </entry>
+    <entry>
+      <key>bev.IK</key>
+    </entry>
+    <entry>
+      <key>Customizing</key>
+    </entry>
+    <entry>
+      <key>Richtung</key>
+    </entry>
+    <entry>
+      <key>mögliche Dublette</key>
+    </entry>
+    <entry>
+      <key>PRODUCTID</key>
+    </entry>
+    <entry>
+      <key>Stufe enthalten</key>
+    </entry>
+    <entry>
+      <key>Posteingang</key>
+    </entry>
+    <entry>
+      <key>Semikolen</key>
+    </entry>
+    <entry>
+      <key>Suchen</key>
+    </entry>
+    <entry>
+      <key>Straße</key>
+    </entry>
+    <entry>
+      <key>bevorzugter InfoKanal</key>
+    </entry>
+    <entry>
+      <key>Kontakt</key>
+    </entry>
+    <entry>
+      <key>leeren</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Mail</key>
+    </entry>
+    <entry>
+      <key>in Zwischenablage übernehmen</key>
+    </entry>
+    <entry>
+      <key>eMail</key>
+    </entry>
+    <entry>
+      <key>Adressen übernehmen</key>
+    </entry>
+    <entry>
+      <key>#0</key>
+    </entry>
+    <entry>
+      <key>dd.MM.yyyy HH:mm:ss</key>
+    </entry>
+    <entry>
+      <key>Teamkalender</key>
+    </entry>
+    <entry>
+      <key>Marketing</key>
+    </entry>
+    <entry>
+      <key>Angebot Fuss</key>
+    </entry>
+    <entry>
+      <key>Innendienst</key>
+    </entry>
+    <entry>
+      <key>Aussendienst</key>
+    </entry>
+    <entry>
+      <key>Service</key>
+    </entry>
+    <entry>
+      <key>Auftrag Kopf</key>
+    </entry>
+    <entry>
+      <key>Angebot Kopf</key>
+    </entry>
+    <entry>
+      <key>Lang</key>
+    </entry>
+    <entry>
+      <key>Auftrag Fuss</key>
+    </entry>
+    <entry>
+      <key>Schnelleingabe von Firma, Person und Historie</key>
+    </entry>
+    <entry>
+      <key>Modul</key>
+    </entry>
+    <entry>
+      <key>System</key>
+    </entry>
+    <entry>
+      <key>&amp;quot;</key>
+    </entry>
+    <entry>
+      <key>Kampagnen-Auswertung</key>
+    </entry>
+    <entry>
+      <key>1</key>
+    </entry>
+    <entry>
+      <key>letzte</key>
+    </entry>
+    <entry>
+      <key>Kurzbezeichnung</key>
+    </entry>
+    <entry>
+      <key>Fragebogen Auswertung</key>
+    </entry>
+    <entry>
+      <key>mit Haken : Teilnehmer welche die markierten Stufe(n) als aktuelle Stufe haben.
+ohne Haken : Teilnehmer welche die anzeigt die markierten Stufe(n) durchlaufen haben.</key>
+    </entry>
+    <entry>
+      <key>4</key>
+    </entry>
+    <entry>
+      <key>Setzen</key>
+    </entry>
+    <entry>
+      <key>3</key>
+    </entry>
+    <entry>
+      <key>Lagerbestand</key>
+    </entry>
+    <entry>
+      <key>Artikelnummer</key>
+    </entry>
+    <entry>
+      <key>2</key>
+    </entry>
+    <entry>
+      <key>übernommene &amp;amp;Daten</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;SQL</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Importdaten</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Hierarchie</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Spaltenzuordnung</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;XML Import/Export</key>
+    </entry>
+    <entry>
+      <key>Be&amp;amp;wertung</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Befragung</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Reverse Engineering</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Dublette</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Verwendung</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;SQL und Schema</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Bedingung</key>
+    </entry>
+    <entry>
+      <key>bis</key>
+    </entry>
+    <entry>
+      <key>Teil&amp;amp;nehmer</key>
+    </entry>
+    <entry>
+      <key>Tooltip von Beschreibung</key>
+    </entry>
+    <entry>
+      <key>-</key>
+    </entry>
+    <entry>
+      <key>6</key>
+    </entry>
+    <entry>
+      <key>5</key>
+    </entry>
+    <entry>
+      <key>Produktname</key>
+    </entry>
+    <entry>
+      <key>0.00</key>
+    </entry>
+    <entry>
+      <key>Dialog-Systemoptionen Rückgängig</key>
+    </entry>
+    <entry>
+      <key>Dialog-Repo: Index +</key>
+    </entry>
+    <entry>
+      <key>klein schreiben</key>
+    </entry>
+    <entry>
+      <key>Einzelbrief</key>
+    </entry>
+    <entry>
+      <key>Angaben in Minuten</key>
+    </entry>
+    <entry>
+      <key>Orte</key>
+    </entry>
+    <entry>
+      <key>Zeit</key>
+    </entry>
+    <entry>
+      <key>Index löschen</key>
+    </entry>
+    <entry>
+      <key>Sucht nach fehlenden Indexdefinitionen
+für foreign key-Spalten im Repository</key>
+    </entry>
+    <entry>
+      <key>Verwendung-Frame</key>
+    </entry>
+    <entry>
+      <key>Teil</key>
+    </entry>
+    <entry>
+      <key>Dialog-Historienfilter</key>
+    </entry>
+    <entry>
+      <key>ISO3</key>
+    </entry>
+    <entry>
+      <key>Dialog-Systemoptionen bearbeiten</key>
+    </entry>
+    <entry>
+      <key>UserAccount class</key>
+    </entry>
+    <entry>
+      <key>Schnelleingabe</key>
+    </entry>
+    <entry>
+      <key>Neuer Index</key>
+    </entry>
+    <entry>
+      <key>Schlüsselbegriff</key>
+    </entry>
+    <entry>
+      <key>Funktionsname aus dem Prozess lib_report zum Aufruf des Reports</key>
+    </entry>
+    <entry>
+      <key>Letzter Lauf</key>
+    </entry>
+    <entry>
+      <key>Feldtrenner</key>
+    </entry>
+    <entry>
+      <key>Filter setzen</key>
+    </entry>
+    <entry>
+      <key>Option löschen</key>
+    </entry>
+    <entry>
+      <key>Geben Sie hier einen Teil eines Wertes
+einer Option ein, um die Liste zu filtern</key>
+    </entry>
+    <entry>
+      <key>DB-Aliasname</key>
+    </entry>
+    <entry>
+      <key>Aktion</key>
+    </entry>
+    <entry>
+      <key>Anzahl:</key>
+    </entry>
+    <entry>
+      <key>zu Serienmail</key>
+    </entry>
+    <entry>
+      <key>Name DE</key>
+    </entry>
+    <entry>
+      <key>Spalte löschen</key>
+    </entry>
+    <entry>
+      <key>Gelöschte Einstellungen</key>
+    </entry>
+    <entry>
+      <key>0.0</key>
+    </entry>
+    <entry>
+      <key>Dialog-Stadtwahl</key>
+    </entry>
+    <entry>
+      <key>Tooltip von bulkactions</key>
+    </entry>
+    <entry>
+      <key>Textbaustein</key>
+    </entry>
+    <entry>
+      <key>Unterschiede</key>
+    </entry>
+    <entry>
+      <key>TEXTBLOCKID</key>
+    </entry>
+    <entry>
+      <key>Teilnehmer einem Verteiler zuordnen</key>
+    </entry>
+    <entry>
+      <key>Dialog-Kampagnenwahl
+Dialogframe zum Laden einer gespeicherten Kampagne</key>
+    </entry>
+    <entry>
+      <key>Indexeigenschaften</key>
+    </entry>
+    <entry>
+      <key>Tabellen und Spalten</key>
+    </entry>
+    <entry>
+      <key>REPORT_ADMINISTRATIONID</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Auswahlliste</key>
+    </entry>
+    <entry>
+      <key>Starten</key>
+    </entry>
+    <entry>
+      <key>Vorhandene Systemoptionen</key>
+    </entry>
+    <entry>
+      <key>Stylesheet zur Anzeige im Browser einbinden</key>
+    </entry>
+    <entry>
+      <key>Ortsname</key>
+    </entry>
+    <entry>
+      <key>Bundesland</key>
+    </entry>
+    <entry>
+      <key>Währung DE</key>
+    </entry>
+    <entry>
+      <key>Tickettitel</key>
+    </entry>
+    <entry>
+      <key>Kopieren</key>
+    </entry>
+    <entry>
+      <key>Texttyp</key>
+    </entry>
+    <entry>
+      <key>Intervall (min)</key>
+    </entry>
+    <entry>
+      <key>Tooltip von ICONS</key>
+    </entry>
+    <entry>
+      <key>Historien Datum</key>
+    </entry>
+    <entry>
+      <key>Stufe-Medium</key>
+    </entry>
+    <entry>
+      <key>Datenbank-Eintrag</key>
+    </entry>
+    <entry>
+      <key>Historien Mitarbeiter</key>
+    </entry>
+    <entry>
+      <key>Komm.-Medium</key>
+    </entry>
+    <entry>
+      <key>markierte Suchen löschen</key>
+    </entry>
+    <entry>
+      <key>Tooltip von SelectionList</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Massenänderung</key>
+    </entry>
+    <entry>
+      <key>Historien Betreff</key>
+    </entry>
+    <entry>
+      <key>Historien Info</key>
+    </entry>
+    <entry>
+      <key>Kopiert eine Spaltendefiniton in andere Tabellen</key>
+    </entry>
+    <entry>
+      <key>WM-Status</key>
+    </entry>
+    <entry>
+      <key>Gelöschte zurückholen</key>
+    </entry>
+    <entry>
+      <key>Index-Check</key>
+    </entry>
+    <entry>
+      <key>Icons</key>
+    </entry>
+    <entry>
+      <key>Error und Task Log</key>
+    </entry>
+    <entry>
+      <key>Label_Histtoryof</key>
+    </entry>
+    <entry>
+      <key>Anrufen</key>
+    </entry>
+    <entry>
+      <key>Eindeutiger Index</key>
+    </entry>
+    <entry>
+      <key>Stoppen</key>
+    </entry>
+    <entry>
+      <key>Dialog-Verteiler wählen</key>
+    </entry>
+    <entry>
+      <key>Aus Liste entfernen</key>
+    </entry>
+    <entry>
+      <key>Systemverwaltung</key>
+    </entry>
+    <entry>
+      <key>Dialog-Mitarbeiter</key>
+    </entry>
+    <entry>
+      <key>Spalte hinzufügen</key>
+    </entry>
+    <entry>
+      <key>Tooltip von tblsync</key>
+    </entry>
+    <entry>
+      <key>Beschreibung der Beziehung</key>
+    </entry>
+    <entry>
+      <key>Attribut bitte auswählen</key>
+    </entry>
+    <entry>
+      <key>Auswahlliste</key>
+    </entry>
+    <entry>
+      <key>Aktionen in % von der Gesamtteilnehmerzahl</key>
+    </entry>
+    <entry>
+      <key>Spalte umbenennen</key>
+    </entry>
+    <entry>
+      <key>Datenbestand prüfen und bereinigen</key>
+    </entry>
+    <entry>
+      <key>Feldbegrenzer</key>
+    </entry>
+    <entry>
+      <key>Verknüpfungen</key>
+    </entry>
+    <entry>
+      <key>Strukturansicht</key>
+    </entry>
+    <entry>
+      <key>E-Mails</key>
+    </entry>
+    <entry>
+      <key>Aktive Serverprozesse</key>
+    </entry>
+    <entry>
+      <key>Stufe-Status</key>
+    </entry>
+    <entry>
+      <key>Zusammenführen</key>
+    </entry>
+    <entry>
+      <key>Tooltip von Admin</key>
+    </entry>
+    <entry>
+      <key>Schlüsselwort</key>
+    </entry>
+    <entry>
+      <key>Längengrad</key>
+    </entry>
+    <entry>
+      <key>Repository-Eintrag</key>
+    </entry>
+    <entry>
+      <key>Schlüsselname</key>
+    </entry>
+    <entry>
+      <key>Dialog-Report Kunde</key>
+    </entry>
+    <entry>
+      <key>DB-Namen anzeigen</key>
+    </entry>
+    <entry>
+      <key>Dialog-Datenbankwahl</key>
+    </entry>
+    <entry>
+      <key>Versender</key>
+    </entry>
+    <entry>
+      <key>Firmenliste</key>
+    </entry>
+    <entry>
+      <key>WM-Anlass</key>
+    </entry>
+    <entry>
+      <key>Neue Option</key>
+    </entry>
+    <entry>
+      <key>Test für Importer</key>
+    </entry>
+    <entry>
+      <key>Tabellen im Repository</key>
+    </entry>
+    <entry>
+      <key>Prozess manuell starten</key>
+    </entry>
+    <entry>
+      <key>besteht aus</key>
+    </entry>
+    <entry>
+      <key>Rubrik</key>
+    </entry>
+    <entry>
+      <key>Spaltendefinition ändern</key>
+    </entry>
+    <entry>
+      <key>Go</key>
+    </entry>
+    <entry>
+      <key>Modul der ausgewählten Tabellen</key>
+    </entry>
+    <entry>
+      <key>ErrorLog</key>
+    </entry>
+    <entry>
+      <key>Hausnr.</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Tabellen vergleichen</key>
+    </entry>
+    <entry>
+      <key>Aus DB übernehmen</key>
+    </entry>
+    <entry>
+      <key>Preis verwenden</key>
+    </entry>
+    <entry>
+      <key>Server</key>
+    </entry>
+    <entry>
+      <key>Gültigkeit</key>
+    </entry>
+    <entry>
+      <key>Anzeige</key>
+    </entry>
+    <entry>
+      <key>ErrorLogID</key>
+    </entry>
+    <entry>
+      <key>Client</key>
+    </entry>
+    <entry>
+      <key>Importer-Lib</key>
+    </entry>
+    <entry>
+      <key>Landesname</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Kalender</key>
+    </entry>
+    <entry>
+      <key>Postleitzahl</key>
+    </entry>
+    <entry>
+      <key>Alle Prozesse anzeigen (nicht nur sp_XXX)</key>
+    </entry>
+    <entry>
+      <key>zu erledigende Aufgaben im Zeitraum von</key>
+    </entry>
+    <entry>
+      <key>Breitengrad</key>
+    </entry>
+    <entry>
+      <key>Company</key>
+    </entry>
+    <entry>
+      <key>Info-Kanal</key>
+    </entry>
+    <entry>
+      <key>Eingang</key>
+    </entry>
+    <entry>
+      <key>Dialog-Kampagnenschritt</key>
+    </entry>
+    <entry>
+      <key>zu erledigende Aufgaben im Zeitraum bis</key>
+    </entry>
+    <entry>
+      <key>Werbemittel</key>
+    </entry>
+    <entry>
+      <key>Eigenschaft</key>
+    </entry>
+    <entry>
+      <key>Kurzbeschreibung</key>
+    </entry>
+    <entry>
+      <key>Komm.-Adresse</key>
+    </entry>
+    <entry>
+      <key>WM-Produkt</key>
+    </entry>
+    <entry>
+      <key>Satztrenner</key>
+    </entry>
+    <entry>
+      <key>von - bis</key>
+    </entry>
+    <entry>
+      <key>wird verwendet von</key>
+    </entry>
+    <entry>
+      <key>Stufe-Name</key>
+    </entry>
+    <entry>
+      <key>TaskLogID</key>
+    </entry>
+    <entry>
+      <key>2 Tage</key>
+    </entry>
+    <entry>
+      <key>VCard Import</key>
+    </entry>
+    <entry>
+      <key>Suchmaske</key>
+    </entry>
+    <entry>
+      <key>1 Tag</key>
+    </entry>
+    <entry>
+      <key>Tooltip von serverproc</key>
+    </entry>
+    <entry>
+      <key>Löschdatum</key>
+    </entry>
+    <entry>
+      <key>Intervall</key>
+    </entry>
+    <entry>
+      <key>Tooltip von Anruflisten</key>
+    </entry>
+    <entry>
+      <key>Geburtsdatum</key>
+    </entry>
+    <entry>
+      <key>WM-Jahr</key>
+    </entry>
+    <entry>
+      <key>Produkt-Beschreibung</key>
+    </entry>
+    <entry>
+      <key>TaskLog</key>
+    </entry>
+    <entry>
+      <key>GROSS SCHREIBEN</key>
+    </entry>
+    <entry>
+      <key>zurücksetzen</key>
+    </entry>
+    <entry>
+      <key>Tooltip von Attribute</key>
+    </entry>
+    <entry>
+      <key>SQL in Zwischenablage</key>
+    </entry>
+    <entry>
+      <key>Tooltip von Log</key>
+    </entry>
+    <entry>
+      <key>Aufgabe</key>
+    </entry>
+    <entry>
+      <key>OFFERID</key>
+    </entry>
+    <entry>
+      <key>WM-Datum</key>
+    </entry>
+    <entry>
+      <key>Kalender-ID</key>
+    </entry>
+    <entry>
+      <key>für CTI Telefonnummer bereinigen</key>
+    </entry>
+    <entry>
+      <key>Reset filter</key>
+    </entry>
+    <entry>
+      <key>Option bearbeiten</key>
+    </entry>
+    <entry>
+      <key>Dialog-Passwort ändern</key>
+    </entry>
+    <entry>
+      <key>Bearbeiten</key>
+    </entry>
+    <entry>
+      <key>Tooltip von option</key>
+    </entry>
+    <entry>
+      <key>Spaltenlänge</key>
+    </entry>
+    <entry>
+      <key>Startzeit</key>
+    </entry>
+    <entry>
+      <key>Adresse export</key>
+    </entry>
+    <entry>
+      <key>Optionsname</key>
+    </entry>
+    <entry>
+      <key>Export Tabellenk.</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;User</key>
+    </entry>
+    <entry>
+      <key>Serienaktion</key>
+    </entry>
+    <entry>
+      <key>WM-Anzahl</key>
+    </entry>
+    <entry>
+      <key>Unverändert</key>
+    </entry>
+    <entry>
+      <key>Historien Medium</key>
+    </entry>
+    <entry>
+      <key>Erzeugt einzelne Mails anstelle einer Mail,
+in der alle Empfänger als BCC enthalten sind</key>
+    </entry>
+    <entry>
+      <key>Telefonnummer</key>
+    </entry>
+    <entry>
+      <key>Durchwahl</key>
+    </entry>
+    <entry>
+      <key>Dialog-Telefonnummerprüfung</key>
+    </entry>
+    <entry>
+      <key>aus dem markierten Verteiler entfernen</key>
+    </entry>
+    <entry>
+      <key>Landesvorwahl</key>
+    </entry>
+    <entry>
+      <key>Format: Land (Ort) Rufnummer - Durchwahl</key>
+    </entry>
+    <entry>
+      <key>Ortsvorwahl</key>
+    </entry>
+    <entry>
+      <key>neue Adresse</key>
+    </entry>
+    <entry>
+      <key>aus der markierten Kampagne entfernen</key>
+    </entry>
+    <entry>
+      <key>Dialog-EMail/Internet-Adresse</key>
+    </entry>
+    <entry>
+      <key>VCard Export</key>
+    </entry>
+    <entry>
+      <key>Rufnummer</key>
+    </entry>
+    <entry>
+      <key>Tooltip von unlinkedMails</key>
+    </entry>
+    <entry>
+      <key>An&amp;amp;ruflisten</key>
+    </entry>
+    <entry>
+      <key>Original Adresse</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Eigenschaften</key>
+    </entry>
+    <entry>
+      <key>Posten löschen</key>
+    </entry>
+    <entry>
+      <key>Angebote</key>
+    </entry>
+    <entry>
+      <key>jährlich</key>
+    </entry>
+    <entry>
+      <key>&amp;gt;</key>
+    </entry>
+    <entry>
+      <key>=</key>
+    </entry>
+    <entry>
+      <key>&amp;lt;</key>
+    </entry>
+    <entry>
+      <key>edt_language</key>
+    </entry>
+    <entry>
+      <key>AUS</key>
+    </entry>
+    <entry>
+      <key>von (Start)</key>
+    </entry>
+    <entry>
+      <key>Loyalität</key>
+    </entry>
+    <entry>
+      <key>Posten editieren</key>
+    </entry>
+    <entry>
+      <key>Proj.Leiter</key>
+    </entry>
+    <entry>
+      <key>Teilnehmerliste</key>
+    </entry>
+    <entry>
+      <key>akt. VK-Preis</key>
+    </entry>
+    <entry>
+      <key>offercode</key>
+    </entry>
+    <entry>
+      <key>0 &amp;apos;Monate&amp;apos;</key>
+    </entry>
+    <entry>
+      <key>offen</key>
+    </entry>
+    <entry>
+      <key>Verantwortlich</key>
+    </entry>
+    <entry>
+      <key>Reklamations-Nr.</key>
+    </entry>
+    <entry>
+      <key>Kalkulation</key>
+    </entry>
+    <entry>
+      <key>Lokation</key>
+    </entry>
+    <entry>
+      <key>Kurs-Kategorie</key>
+    </entry>
+    <entry>
+      <key>Tooltip von Preisliste</key>
+    </entry>
+    <entry>
+      <key>Projektname</key>
+    </entry>
+    <entry>
+      <key>Kurs-Nr.</key>
+    </entry>
+    <entry>
+      <key>bezahlt</key>
+    </entry>
+    <entry>
+      <key>Anmeldeschluss</key>
+    </entry>
+    <entry>
+      <key>Garantie</key>
+    </entry>
+    <entry>
+      <key>bis (Start)</key>
+    </entry>
+    <entry>
+      <key>Teilnahmebestätigung</key>
+    </entry>
+    <entry>
+      <key>Kosten pro Teilnehmer</key>
+    </entry>
+    <entry>
+      <key>Untertitel 2</key>
+    </entry>
+    <entry>
+      <key>Untertitel 3</key>
+    </entry>
+    <entry>
+      <key>Untertitel 1</key>
+    </entry>
+    <entry>
+      <key>versendet</key>
+    </entry>
+    <entry>
+      <key>Wertber.</key>
+    </entry>
+    <entry>
+      <key>betrifft</key>
+    </entry>
+    <entry>
+      <key>alle in der Rolle &amp;apos;Service&amp;apos;</key>
+    </entry>
+    <entry>
+      <key>Veranstaltung</key>
+    </entry>
+    <entry>
+      <key>Neueintrag</key>
+    </entry>
+    <entry>
+      <key>Fusstext</key>
+    </entry>
+    <entry>
+      <key>Beginn</key>
+    </entry>
+    <entry>
+      <key>Phase</key>
+    </entry>
+    <entry>
+      <key>st.</key>
+    </entry>
+    <entry>
+      <key>Kosten</key>
+    </entry>
+    <entry>
+      <key>Volumen €</key>
+    </entry>
+    <entry>
+      <key>Min.-Bestand</key>
+    </entry>
+    <entry>
+      <key>Edit_StatusStart</key>
+    </entry>
+    <entry>
+      <key>wb.</key>
+    </entry>
+    <entry>
+      <key>Projektteam</key>
+    </entry>
+    <entry>
+      <key>Währ.</key>
+    </entry>
+    <entry>
+      <key>COMPLAINTID</key>
+    </entry>
+    <entry>
+      <key>Tischkarten</key>
+    </entry>
+    <entry>
+      <key>E / A</key>
+    </entry>
+    <entry>
+      <key>Faktura</key>
+    </entry>
+    <entry>
+      <key>Zahlgziel</key>
+    </entry>
+    <entry>
+      <key>Bezahlt</key>
+    </entry>
+    <entry>
+      <key>Einzelpreis</key>
+    </entry>
+    <entry>
+      <key>SALESORDERID</key>
+    </entry>
+    <entry>
+      <key>Volumen</key>
+    </entry>
+    <entry>
+      <key>Reports</key>
+    </entry>
+    <entry>
+      <key>Gesamtkosten</key>
+    </entry>
+    <entry>
+      <key>Produkte</key>
+    </entry>
+    <entry>
+      <key>EK</key>
+    </entry>
+    <entry>
+      <key>Referenz</key>
+    </entry>
+    <entry>
+      <key>Gebühr (€)</key>
+    </entry>
+    <entry>
+      <key>Meilensteine</key>
+    </entry>
+    <entry>
+      <key>MS</key>
+    </entry>
+    <entry>
+      <key>EK/VK</key>
+    </entry>
+    <entry>
+      <key>Posten neu</key>
+    </entry>
+    <entry>
+      <key>gültig ab</key>
+    </entry>
+    <entry>
+      <key>Kostenplan</key>
+    </entry>
+    <entry>
+      <key>Faktura-Nr</key>
+    </entry>
+    <entry>
+      <key>Mahnung</key>
+    </entry>
+    <entry>
+      <key>Rab. (%)</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Detail</key>
+    </entry>
+    <entry>
+      <key>VK</key>
+    </entry>
+    <entry>
+      <key>Meilenstein</key>
+    </entry>
+    <entry>
+      <key>ab Stückzahl</key>
+    </entry>
+    <entry>
+      <key>Person / Firma</key>
+    </entry>
+    <entry>
+      <key>Projekt-Nr</key>
+    </entry>
+    <entry>
+      <key>Tooltip von Teilnehmer</key>
+    </entry>
+    <entry>
+      <key>akt. EK-Preis</key>
+    </entry>
+    <entry>
+      <key>EVENTID</key>
+    </entry>
+    <entry>
+      <key>Modul B</key>
+    </entry>
+    <entry>
+      <key>Modul A</key>
+    </entry>
+    <entry>
+      <key>Modul D</key>
+    </entry>
+    <entry>
+      <key>Modul C</key>
+    </entry>
+    <entry>
+      <key>Version-Nr</key>
+    </entry>
+    <entry>
+      <key>Expertenselektion</key>
+    </entry>
+    <entry>
+      <key>Fakturadatum</key>
+    </entry>
+    <entry>
+      <key>Personenliste</key>
+    </entry>
+    <entry>
+      <key>Tooltip von Lagerbestand</key>
+    </entry>
+    <entry>
+      <key>0 &amp;apos;Tage&amp;apos;</key>
+    </entry>
+    <entry>
+      <key>Produkt-Nr.</key>
+    </entry>
+    <entry>
+      <key>Anmeldung</key>
+    </entry>
+    <entry>
+      <key>gehört zu Modul</key>
+    </entry>
+    <entry>
+      <key>Fakturatyp</key>
+    </entry>
+    <entry>
+      <key>Rest</key>
+    </entry>
+    <entry>
+      <key>Reklamations-Liste</key>
+    </entry>
+    <entry>
+      <key>Kostenart</key>
+    </entry>
+    <entry>
+      <key>ges.</key>
+    </entry>
+    <entry>
+      <key>An&amp;amp;gebot / Faktura</key>
+    </entry>
+    <entry>
+      <key>Tooltip von Kosten</key>
+    </entry>
+    <entry>
+      <key>Rabatt</key>
+    </entry>
+    <entry>
+      <key>MWST</key>
+    </entry>
+    <entry>
+      <key>Produktbild</key>
+    </entry>
+    <entry>
+      <key>Projektleiter</key>
+    </entry>
+    <entry>
+      <key>opt.</key>
+    </entry>
+    <entry>
+      <key>EIN</key>
+    </entry>
+    <entry>
+      <key>Assistent</key>
+    </entry>
+    <entry>
+      <key>Kopftext</key>
+    </entry>
+    <entry>
+      <key>#,##0.00 €</key>
+    </entry>
+    <entry>
+      <key>Storno</key>
+    </entry>
+    <entry>
+      <key>#,##0.0</key>
+    </entry>
+    <entry>
+      <key>Mahndat.</key>
+    </entry>
+    <entry>
+      <key>Netto</key>
+    </entry>
+    <entry>
+      <key>Mahntext kurz</key>
+    </entry>
+    <entry>
+      <key>Umsatz</key>
+    </entry>
+    <entry>
+      <key>PROJECTNUMBER</key>
+    </entry>
+    <entry>
+      <key>Suche hinzufügen</key>
+    </entry>
+    <entry>
+      <key>EVENTNUMBER</key>
+    </entry>
+    <entry>
+      <key>Nr</key>
+    </entry>
+    <entry>
+      <key>Teilnehmer des ausgewählten Verteilers entfernen</key>
+    </entry>
+    <entry>
+      <key>Reklam.-Nr</key>
+    </entry>
+    <entry>
+      <key>Anzeigen der Clienthilfe</key>
+    </entry>
+    <entry>
+      <key>Teilnehmer der ausgewählten Suche entfernen</key>
+    </entry>
+    <entry>
+      <key>markierte Teilnehmer entfernen</key>
+    </entry>
+    <entry>
+      <key>Keyword-Check</key>
+    </entry>
+    <entry>
+      <key>EMPLOYEEID</key>
+    </entry>
+    <entry>
+      <key>Monat</key>
+    </entry>
+    <entry>
+      <key>Projekt-Nr.</key>
+    </entry>
+    <entry>
+      <key>Projekt Start</key>
+    </entry>
+    <entry>
+      <key>erstellt</key>
+    </entry>
+    <entry>
+      <key>Spesenabrechnung</key>
+    </entry>
+    <entry>
+      <key>Rechte</key>
+    </entry>
+    <entry>
+      <key>Belege</key>
+    </entry>
+    <entry>
+      <key>SALESPROJECTID</key>
+    </entry>
+    <entry>
+      <key>Anzahl  / Phase</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Vertriebsprojekte</key>
+    </entry>
+    <entry>
+      <key>Vertriebsprojekt</key>
+    </entry>
+    <entry>
+      <key>Stichwort</key>
+    </entry>
+    <entry>
+      <key>T€ / Phase</key>
+    </entry>
+    <entry>
+      <key>Neue Person</key>
+    </entry>
+    <entry>
+      <key>Positionen&amp;gt;0, offen&amp;gt;0, versendet, nicht wertberichtigt, nicht storniert</key>
+    </entry>
+    <entry>
+      <key>löscht ein Attribut bei alle selektierten Datensätze</key>
+    </entry>
+    <entry>
+      <key>neue Historie für alle selektierten Datensätze</key>
+    </entry>
+    <entry>
+      <key>Die aktuelle Selektion einem Verteiler hinzufügen</key>
+    </entry>
+    <entry>
+      <key>Kopiere in Angebot</key>
+    </entry>
+    <entry>
+      <key>Export allerselektierten Datensätze</key>
+    </entry>
+    <entry>
+      <key>Betrifft</key>
+    </entry>
+    <entry>
+      <key>Drucke Angebot</key>
+    </entry>
+    <entry>
+      <key>Die aktuelle Selektion einer Kampagne hinzufügen</key>
+    </entry>
+    <entry>
+      <key>Die aktuelle Selektion aus einem Verteiler löschen</key>
+    </entry>
+    <entry>
+      <key>zu Verteiler</key>
+    </entry>
+    <entry>
+      <key>aus Kampagne</key>
+    </entry>
+    <entry>
+      <key>Diesen Datensatz aus der markierten Kampagne entfernen</key>
+    </entry>
+    <entry>
+      <key>fügt ein Attribut bei alle selektierten Datensätze ein</key>
+    </entry>
+    <entry>
+      <key>zu Kampagne</key>
+    </entry>
+    <entry>
+      <key>aus Verteiler</key>
+    </entry>
+    <entry>
+      <key>Drucke Mahnung</key>
+    </entry>
+    <entry>
+      <key>Serienbrief an alle selektierten Datensätze</key>
+    </entry>
+    <entry>
+      <key>aus Serienmail</key>
+    </entry>
+    <entry>
+      <key>Neue Historie</key>
+    </entry>
+    <entry>
+      <key>Projektliste</key>
+    </entry>
+    <entry>
+      <key>Suchfeld</key>
+    </entry>
+    <entry>
+      <key>TYPE</key>
+    </entry>
+    <entry>
+      <key>Attribute löschen</key>
+    </entry>
+    <entry>
+      <key>ITEMSORT</key>
+    </entry>
+    <entry>
+      <key>IdCOLUMN</key>
+    </entry>
+    <entry>
+      <key>Dialog-Attribute</key>
+    </entry>
+    <entry>
+      <key>ReLATIONID</key>
+    </entry>
+    <entry>
+      <key>KEYWORDID</key>
+    </entry>
+    <entry>
+      <key>ATTRID</key>
+    </entry>
+    <entry>
+      <key>Attribute eintragen</key>
+    </entry>
+    <entry>
+      <key>Projekttitel</key>
+    </entry>
+    <entry>
+      <key>DISTLISTID</key>
+    </entry>
+    <entry>
+      <key>SELECTIONID</key>
+    </entry>
+    <entry>
+      <key>IDCOlumn</key>
+    </entry>
+    <entry>
+      <key>Export aller selektierten Datensätze</key>
+    </entry>
+    <entry>
+      <key>PERSID</key>
+    </entry>
+    <entry>
+      <key>SELEKTIERE LEADiD</key>
+    </entry>
+    <entry>
+      <key>CAMPAIGNID</key>
+    </entry>
+    <entry>
+      <key>Antworten</key>
+    </entry>
+    <entry>
+      <key>IDCOLUMN</key>
+    </entry>
+    <entry>
+      <key>IDCOLuMN</key>
+    </entry>
+    <entry>
+      <key>IDCOlUMN</key>
+    </entry>
+    <entry>
+      <key>HISTORYID</key>
+    </entry>
+    <entry>
+      <key>ORGID</key>
+    </entry>
+    <entry>
+      <key>RELATIONID</key>
+    </entry>
+    <entry>
+      <key>Datum von</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Forecast</key>
+    </entry>
+    <entry>
+      <key>Datum bis</key>
+    </entry>
+    <entry>
+      <key>Zahlungsweise</key>
+    </entry>
+    <entry>
+      <key>Hersteller</key>
+    </entry>
+    <entry>
+      <key>Vertragsnummer</key>
+    </entry>
+    <entry>
+      <key>UmsatzY nach WG</key>
+    </entry>
+    <entry>
+      <key>Vertragsart</key>
+    </entry>
+    <entry>
+      <key>Vertrag</key>
+    </entry>
+    <entry>
+      <key>Versendung</key>
+    </entry>
+    <entry>
+      <key>Absatz</key>
+    </entry>
+    <entry>
+      <key>vierteljählich</key>
+    </entry>
+    <entry>
+      <key>nächste Fälligkeit</key>
+    </entry>
+    <entry>
+      <key>Verkaufschancen</key>
+    </entry>
+    <entry>
+      <key>active_contact</key>
+    </entry>
+    <entry>
+      <key>Stufe für markierte Kampagnen setzen</key>
+    </entry>
+    <entry>
+      <key>User</key>
+    </entry>
+    <entry>
+      <key>Status setzen</key>
+    </entry>
+    <entry>
+      <key>Fachadministrator</key>
+    </entry>
+    <entry>
+      <key>ausgeschieden</key>
+    </entry>
+    <entry>
+      <key>UmsatzYM nach WG</key>
+    </entry>
+    <entry>
+      <key>Vertragsende</key>
+    </entry>
+    <entry>
+      <key>Dialog für Routenplanung</key>
+    </entry>
+    <entry>
+      <key>Versandstatus</key>
+    </entry>
+    <entry>
+      <key>Reportname</key>
+    </entry>
+    <entry>
+      <key>Vertragsbeginn</key>
+    </entry>
+    <entry>
+      <key>CONTRACTID</key>
+    </entry>
+    <entry>
+      <key>Dialog zum setzen des Status im Frame Werbemittelverwaltung</key>
+    </entry>
+    <entry>
+      <key>Begründung</key>
+    </entry>
+    <entry>
+      <key>halbjährlich</key>
+    </entry>
+    <entry>
+      <key>Funktionsname</key>
+    </entry>
+    <entry>
+      <key>Wettbewerbsanalyse</key>
+    </entry>
+    <entry>
+      <key>Zahlweise</key>
+    </entry>
+    <entry>
+      <key>Brutto</key>
+    </entry>
+    <entry>
+      <key>Vertriebsprojekte</key>
+    </entry>
+    <entry>
+      <key>Bericht</key>
+    </entry>
+    <entry>
+      <key>Verschieben</key>
+    </entry>
+    <entry>
+      <key>A&amp;amp;T</key>
+    </entry>
+    <entry>
+      <key>Keyname1</key>
+    </entry>
+    <entry>
+      <key>Keyname2</key>
+    </entry>
+    <entry>
+      <key>Anruf-Kategorie</key>
+    </entry>
+    <entry>
+      <key>Dialog-Support Mitarbeiter</key>
+    </entry>
+    <entry>
+      <key>erledigt setzen</key>
+    </entry>
+    <entry>
+      <key>Dialog-Aufgaben/Termin-Filter</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Dokumente</key>
+    </entry>
+    <entry>
+      <key>S-Farbe</key>
+    </entry>
+    <entry>
+      <key>delegiert</key>
+    </entry>
+    <entry>
+      <key>gespeicherte Selektionen</key>
+    </entry>
+    <entry>
+      <key>max.Teilnehm.</key>
+    </entry>
+    <entry>
+      <key>Offene Posten</key>
+    </entry>
+    <entry>
+      <key>mit Export öffnen</key>
+    </entry>
+    <entry>
+      <key>FIELDIDS</key>
+    </entry>
+    <entry>
+      <key>Geburtstagsliste</key>
+    </entry>
+    <entry>
+      <key>Geschlecht</key>
+    </entry>
+    <entry>
+      <key>weiblich</key>
+    </entry>
+    <entry>
+      <key>männlich</key>
+    </entry>
+    <entry>
+      <key>Kopfanrede</key>
+    </entry>
+    <entry>
+      <key>öffne alle Personen</key>
+    </entry>
+    <entry>
+      <key>erfasst</key>
+    </entry>
+    <entry>
+      <key>geplant</key>
+    </entry>
+    <entry>
+      <key>inaktiv</key>
+    </entry>
+    <entry>
+      <key>Repository Manager</key>
+    </entry>
+    <entry>
+      <key>Attribute hinzufügen</key>
+    </entry>
+    <entry>
+      <key>SQL Selektion</key>
+    </entry>
+    <entry>
+      <key>0,5 Tag</key>
+    </entry>
+    <entry>
+      <key>0 Minuten</key>
+    </entry>
+    <entry>
+      <key>6 Stunden</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Lagerbestand</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Stückliste</key>
+    </entry>
+    <entry>
+      <key>Kollision</key>
+    </entry>
+    <entry>
+      <key>November</key>
+    </entry>
+    <entry>
+      <key>Dialog eingehender Anruf</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Beschreibung</key>
+    </entry>
+    <entry>
+      <key>4 Stunden</key>
+    </entry>
+    <entry>
+      <key>transparent</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Salutation</key>
+    </entry>
+    <entry>
+      <key>7 Stunden</key>
+    </entry>
+    <entry>
+      <key>Erzeugt:</key>
+    </entry>
+    <entry>
+      <key>10 Stunden</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Log</key>
+    </entry>
+    <entry>
+      <key>5 Stunden</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Frame-Rechte</key>
+    </entry>
+    <entry>
+      <key>Historien-Liste</key>
+    </entry>
+    <entry>
+      <key>2 Stunden</key>
+    </entry>
+    <entry>
+      <key>5 Minuten</key>
+    </entry>
+    <entry>
+      <key>Neuanlage</key>
+    </entry>
+    <entry>
+      <key>September</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;History</key>
+    </entry>
+    <entry>
+      <key>1 Minute</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Kosten</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Optionen</key>
+    </entry>
+    <entry>
+      <key>7 Tage</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Fragen</key>
+    </entry>
+    <entry>
+      <key>3 Stunden</key>
+    </entry>
+    <entry>
+      <key>30 Minuten</key>
+    </entry>
+    <entry>
+      <key>Frame-Recht</key>
+    </entry>
+    <entry>
+      <key>Juni</key>
+    </entry>
+    <entry>
+      <key>Januar</key>
+    </entry>
+    <entry>
+      <key>Juli</key>
+    </entry>
+    <entry>
+      <key>9 Stunden</key>
+    </entry>
+    <entry>
+      <key>S&amp;amp;ymbole</key>
+    </entry>
+    <entry>
+      <key>1 Stunde</key>
+    </entry>
+    <entry>
+      <key>E&amp;amp;xportfelder</key>
+    </entry>
+    <entry>
+      <key>8 Stunden</key>
+    </entry>
+    <entry>
+      <key>11 Stunden</key>
+    </entry>
+    <entry>
+      <key>15 Minuten</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Texte</key>
+    </entry>
+    <entry>
+      <key>Mai</key>
+    </entry>
+    <entry>
+      <key>Februar</key>
+    </entry>
+    <entry>
+      <key>April</key>
+    </entry>
+    <entry>
+      <key>März</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Teilnehmer</key>
+    </entry>
+    <entry>
+      <key>A&amp;amp;dressen</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Preisliste</key>
+    </entry>
+    <entry>
+      <key>Vertrags-Nr.</key>
+    </entry>
+    <entry>
+      <key>Dezember</key>
+    </entry>
+    <entry>
+      <key>10 Minuten</key>
+    </entry>
+    <entry>
+      <key>August</key>
+    </entry>
+    <entry>
+      <key>Oktober</key>
+    </entry>
+    <entry>
+      <key>Logging</key>
+    </entry>
+    <entry>
+      <key>Anrufer öffnen</key>
+    </entry>
+    <entry>
+      <key>€/TN</key>
+    </entry>
+    <entry>
+      <key>€</key>
+    </entry>
+    <entry>
+      <key>Ressource eintragen</key>
+    </entry>
+    <entry>
+      <key>Ressourcen</key>
+    </entry>
+    <entry>
+      <key>variable Kosten</key>
+    </entry>
+    <entry>
+      <key>Ressourcen-Kalender</key>
+    </entry>
+    <entry>
+      <key>fixe Kosten</key>
+    </entry>
+    <entry>
+      <key>Ressource</key>
+    </entry>
+    <entry>
+      <key>Mahnst.</key>
+    </entry>
+    <entry>
+      <key>Kontoinhaber</key>
+    </entry>
+    <entry>
+      <key>Kontoart</key>
+    </entry>
+    <entry>
+      <key>0.00 &amp;apos;%&amp;apos;</key>
+    </entry>
+    <entry>
+      <key>Ausrüstung</key>
+    </entry>
+    <entry>
+      <key>Bankdaten</key>
+    </entry>
+    <entry>
+      <key>Bankname</key>
+    </entry>
+    <entry>
+      <key>BLZ</key>
+    </entry>
+    <entry>
+      <key>Zu Kampagne hinzufügen</key>
+    </entry>
+    <entry>
+      <key>Browser</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Klassifikation</key>
+    </entry>
+    <entry>
+      <key>Gesellschaftsform</key>
+    </entry>
+    <entry>
+      <key>Historie eintragen</key>
+    </entry>
+    <entry>
+      <key>Kontaktbericht</key>
+    </entry>
+    <entry>
+      <key>neu hinzufügen</key>
+    </entry>
+    <entry>
+      <key>Dialog-Auswahl Verteiler</key>
+    </entry>
+    <entry>
+      <key>Neues Angebot</key>
+    </entry>
+    <entry>
+      <key>Konto-Nr.</key>
+    </entry>
+    <entry>
+      <key>Erstinstallation</key>
+    </entry>
+    <entry>
+      <key>Steuernummer</key>
+    </entry>
+    <entry>
+      <key>Zu Serienmail</key>
+    </entry>
+    <entry>
+      <key>EU-Member</key>
+    </entry>
+    <entry>
+      <key>Zu Verteiler hinzufügen</key>
+    </entry>
+    <entry>
+      <key>IBAN</key>
+    </entry>
+    <entry>
+      <key>POBox Name</key>
+    </entry>
+    <entry>
+      <key>UmsST</key>
+    </entry>
+    <entry>
+      <key>#,##0.00 &amp;apos;%&amp;apos;</key>
+    </entry>
+    <entry>
+      <key>EQUIPMENTINVENTORYID</key>
+    </entry>
+    <entry>
+      <key>Dialog-Modulauswahl
+Dialogframe zum Einfügen eines neuen Moduls</key>
+    </entry>
+    <entry>
+      <key>Swiftcode</key>
+    </entry>
+    <entry>
+      <key>Betrag MWST</key>
+    </entry>
+    <entry>
+      <key>BANKACCOUNTID</key>
+    </entry>
+    <entry>
+      <key>Umsatzsteuernummer</key>
+    </entry>
+    <entry>
+      <key>UMSt</key>
+    </entry>
+    <entry>
+      <key>EUROZONE-Member</key>
+    </entry>
+    <entry>
+      <key>Seriennummer</key>
+    </entry>
+    <entry>
+      <key>Hilfe</key>
+    </entry>
+    <entry>
+      <key>UMST</key>
+    </entry>
+    <entry>
+      <key>Bonität und Risiko</key>
+    </entry>
+    <entry>
+      <key>neue Historie</key>
+    </entry>
+    <entry>
+      <key>relorgid</key>
+    </entry>
+    <entry>
+      <key>Beschreibung der Änderung</key>
+    </entry>
+    <entry>
+      <key>geändert</key>
+    </entry>
+    <entry>
+      <key>Log</key>
+    </entry>
+    <entry>
+      <key>Bild laden</key>
+    </entry>
+    <entry>
+      <key>Qualifizierung</key>
+    </entry>
+    <entry>
+      <key>Reporting</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Ressourcen</key>
+    </entry>
+    <entry>
+      <key>Adressen Export</key>
+    </entry>
+    <entry>
+      <key>Report Verwaltung</key>
+    </entry>
+    <entry>
+      <key>zu Veranstaltung</key>
+    </entry>
+    <entry>
+      <key>zuordnen</key>
+    </entry>
+    <entry>
+      <key>on = orgname (Name der Organisation)
+hs = header salutaion (Anrede im Briefkopf)
+ls = lettersalutation (Briefanrede)
+sa = salutation (Anrede)
+ti = title (Titel)
+dp = department (Abteilung)
+fn = firstname (Vorname)
+mn = middlename (Mittelname)
+ln = lastname (Nachname)
+al = addressline (Straße)
+bn = building number (Hausnummer)
+zc = zipcode (PLZ)
+ci = city (Ort)
+di = district (Landkreis)
+rg = region (Region)
+st = state(Staat)
+cc = countrycode (Ländercode)
+cn = countryname (Länderbezeichnung)</key>
+    </entry>
+    <entry>
+      <key>Dialog-Auswahl Veranstaltung</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Prozesse</key>
+    </entry>
+    <entry>
+      <key>Eigenschaften</key>
+    </entry>
+    <entry>
+      <key>Eintrag Löschen</key>
+    </entry>
+    <entry>
+      <key>Hiermit werden alle Daten der markierten Firma zu der aktuellen Firma übertragen 
+und danach die markierte Firma gelöscht !</key>
+    </entry>
+    <entry>
+      <key>Hiermit werden alle Daten der markierten Person zu der aktuellen Person übertragen 
+und danach die markierte Person gelöscht !</key>
+    </entry>
+    <entry>
+      <key>Objekt öffnen</key>
+    </entry>
+    <entry>
+      <key>Beschreibung speichern</key>
+    </entry>
+    <entry>
+      <key>GoogleMaps Route</key>
+    </entry>
+    <entry>
+      <key>Dokument öffnen</key>
+    </entry>
+    <entry>
+      <key>Routenplanung</key>
+    </entry>
+    <entry>
+      <key>Umkreissuche</key>
+    </entry>
+    <entry>
+      <key>Daten</key>
+    </entry>
+    <entry>
+      <key>Gesamtgebühren</key>
+    </entry>
+    <entry>
+      <key>LOCATIONID</key>
+    </entry>
+    <entry>
+      <key>RECORDSEPERATOR</key>
+    </entry>
+    <entry>
+      <key>Gebühr pro Teilnehmer</key>
+    </entry>
+    <entry>
+      <key>Gebühr</key>
+    </entry>
+    <entry>
+      <key>Gesamterlös</key>
+    </entry>
+    <entry>
+      <key>FIELDLIMIT</key>
+    </entry>
+    <entry>
+      <key>ID</key>
+    </entry>
+    <entry>
+      <key>FIELDSEPERATOR</key>
+    </entry>
+    <entry>
+      <key>Anzahl Teilnehmer</key>
+    </entry>
+    <entry>
+      <key>Quelldaten</key>
+    </entry>
+    <entry>
+      <key>Werbeeinschränkung</key>
+    </entry>
+    <entry>
+      <key>neues Interview</key>
+    </entry>
+    <entry>
+      <key>Fragesteller</key>
+    </entry>
+    <entry>
+      <key>Grund</key>
+    </entry>
+    <entry>
+      <key>Fragebogen</key>
+    </entry>
+    <entry>
+      <key>Auswertungen</key>
+    </entry>
+    <entry>
+      <key>QUESTIONNAIRELOGID</key>
+    </entry>
+    <entry>
+      <key>Nur 1 Fragebogen auswählen !</key>
+    </entry>
+    <entry>
+      <key>Test der Image-Variablen</key>
+    </entry>
+    <entry>
+      <key>campaignparticipant</key>
+    </entry>
+    <entry>
+      <key>geführte Interviews</key>
+    </entry>
+    <entry>
+      <key>Veranstaltungstitel</key>
+    </entry>
+    <entry>
+      <key>Mailprozess mit dem Anhänge der Mails an die History verknüpt werden.</key>
+    </entry>
+    <entry>
+      <key>Artikelname</key>
+    </entry>
+    <entry>
+      <key>Jeder</key>
+    </entry>
+    <entry>
+      <key>Preisänderung</key>
+    </entry>
+    <entry>
+      <key>Produktbezeichnung</key>
+    </entry>
+    <entry>
+      <key>Dialog für Urlaubsplanung</key>
+    </entry>
+    <entry>
+      <key>Übernahme in Preisliste</key>
+    </entry>
+    <entry>
+      <key>HISTORY_ID</key>
+    </entry>
+    <entry>
+      <key>Anzeige (F6)</key>
+    </entry>
+    <entry>
+      <key>Währg</key>
+    </entry>
+    <entry>
+      <key>Preisblatt</key>
+    </entry>
+    <entry>
+      <key>ab Anzahl</key>
+    </entry>
+    <entry>
+      <key>Suchmaske (F5)</key>
+    </entry>
+    <entry>
+      <key>Folgehistorie</key>
+    </entry>
+    <entry>
+      <key>neue Preisliste</key>
+    </entry>
+    <entry>
+      <key>Zurücksetzen</key>
+    </entry>
+    <entry>
+      <key>gültig von</key>
+    </entry>
+    <entry>
+      <key>Anzahl von</key>
+    </entry>
+    <entry>
+      <key>AOTYPE</key>
+    </entry>
+    <entry>
+      <key>neuer Termin</key>
+    </entry>
+    <entry>
+      <key>Belegtyp</key>
+    </entry>
+    <entry>
+      <key>Teilnehmer einer Kampagne zuordnen</key>
+    </entry>
+    <entry>
+      <key>Beleg&amp;amp;posten</key>
+    </entry>
+    <entry>
+      <key>in Lieferschein übertragen</key>
+    </entry>
+    <entry>
+      <key>einer Kampagne hinzufügen</key>
+    </entry>
+    <entry>
+      <key>Treffer</key>
+    </entry>
+    <entry>
+      <key>Beleg-Nr</key>
+    </entry>
+    <entry>
+      <key>neues Modul</key>
+    </entry>
+    <entry>
+      <key>Frageauswertung</key>
+    </entry>
+    <entry>
+      <key>neue Person</key>
+    </entry>
+    <entry>
+      <key>EMail an alle</key>
+    </entry>
+    <entry>
+      <key>öffne Personen</key>
+    </entry>
+    <entry>
+      <key>einem Verteiler hinzufügen</key>
+    </entry>
+    <entry>
+      <key>Belegposten</key>
+    </entry>
+    <entry>
+      <key>in Rechnung übertragen</key>
+    </entry>
+    <entry>
+      <key>eine EMail an alle selektierten Personen</key>
+    </entry>
+    <entry>
+      <key>Beleg</key>
+    </entry>
+    <entry>
+      <key>Baujahr</key>
+    </entry>
+    <entry>
+      <key>MACHINEID</key>
+    </entry>
+    <entry>
+      <key>Neuer Beleg</key>
+    </entry>
+    <entry>
+      <key>Themenauswahl</key>
+    </entry>
+    <entry>
+      <key>weiter Funktion öffnen</key>
+    </entry>
+    <entry>
+      <key>Thema ausschneiden</key>
+    </entry>
+    <entry>
+      <key>Ersatzteile</key>
+    </entry>
+    <entry>
+      <key>Standard setzen</key>
+    </entry>
+    <entry>
+      <key>Adress-Felder</key>
+    </entry>
+    <entry>
+      <key>Service-Nr.</key>
+    </entry>
+    <entry>
+      <key>Maschinenstatus</key>
+    </entry>
+    <entry>
+      <key>Neues Thema</key>
+    </entry>
+    <entry>
+      <key>Standard Adresse setzen</key>
+    </entry>
+    <entry>
+      <key>Themenbaum</key>
+    </entry>
+    <entry>
+      <key>Technische Merkmale</key>
+    </entry>
+    <entry>
+      <key>SERVICEORDERID</key>
+    </entry>
+    <entry>
+      <key>Servicemeldung</key>
+    </entry>
+    <entry>
+      <key>Drucke Beleg</key>
+    </entry>
+    <entry>
+      <key>Serien-Nr.</key>
+    </entry>
+    <entry>
+      <key>gepl. Std.</key>
+    </entry>
+    <entry>
+      <key>Maschinentyp</key>
+    </entry>
+    <entry>
+      <key>RELORG_ID</key>
+    </entry>
+    <entry>
+      <key>nur aktiv wenn Posten eingetragen sind</key>
+    </entry>
+    <entry>
+      <key>Zusatz</key>
+    </entry>
+    <entry>
+      <key>Serviceaufträge</key>
+    </entry>
+    <entry>
+      <key>Ersatzteilbezeichnung</key>
+    </entry>
+    <entry>
+      <key>Meldung</key>
+    </entry>
+    <entry>
+      <key>Thema</key>
+    </entry>
+    <entry>
+      <key>Ersatzteilnummer</key>
+    </entry>
+    <entry>
+      <key>Legt eine neu Funktion zur Person an.</key>
+    </entry>
+    <entry>
+      <key>KundenNr.</key>
+    </entry>
+    <entry>
+      <key>Bezeichung</key>
+    </entry>
+    <entry>
+      <key>Kopiere in AB</key>
+    </entry>
+    <entry>
+      <key>Drucke Servicebericht</key>
+    </entry>
+    <entry>
+      <key>Themen</key>
+    </entry>
+    <entry>
+      <key>Gerät/Maschine</key>
+    </entry>
+    <entry>
+      <key>Einsatzort</key>
+    </entry>
+    <entry>
+      <key>Adresszusatz</key>
+    </entry>
+    <entry>
+      <key>Angebotsliste</key>
+    </entry>
+    <entry>
+      <key>Serviceauftragsliste</key>
+    </entry>
+    <entry>
+      <key>Serviceauftrag</key>
+    </entry>
+    <entry>
+      <key>Servicestatus</key>
+    </entry>
+    <entry>
+      <key>Belegliste</key>
+    </entry>
+    <entry>
+      <key>Maschineneigenschaften</key>
+    </entry>
+    <entry>
+      <key>Maschine</key>
+    </entry>
+    <entry>
+      <key>Dauer (h)</key>
+    </entry>
+    <entry>
+      <key>mit Report</key>
+    </entry>
+    <entry>
+      <key>A&amp;amp;llgemein</key>
+    </entry>
+    <entry>
+      <key>ADDRESS_ID</key>
+    </entry>
+    <entry>
+      <key>Angebots-Nr.</key>
+    </entry>
+    <entry>
+      <key>Thema bearbeiten</key>
+    </entry>
+    <entry>
+      <key>Anwendung</key>
+    </entry>
+    <entry>
+      <key>versendet raus</key>
+    </entry>
+    <entry>
+      <key>neuer Serviceauftrag</key>
+    </entry>
+    <entry>
+      <key>Versendet setzen</key>
+    </entry>
+    <entry>
+      <key>Stimmung gut</key>
+    </entry>
+    <entry>
+      <key>Stimmung schlecht</key>
+    </entry>
+    <entry>
+      <key>Vertragsliste</key>
+    </entry>
+    <entry>
+      <key>neue Funktion</key>
+    </entry>
+    <entry>
+      <key>Datenimport</key>
+    </entry>
+    <entry>
+      <key>Thema löschen</key>
+    </entry>
+    <entry>
+      <key>Thema einfügen</key>
+    </entry>
+    <entry>
+      <key>nur aktiv wenn Posten eingetragen sind und &amp;apos;geprüft&amp;apos; gesetzt ist</key>
+    </entry>
+    <entry>
+      <key>Bezug der PLZ-Daten von www.geopostcodes.com. 
+Zur Aktualisierung oder zur Beschaffung von Auslandsdaten müssen diese von dieser Adresse erworben werden.
+
+ACHTUNG: Zum Einlesen das CSV-Format verwenden (z.B. GeoPC_DE.csv) !
+
+U.U. sind Datensätze aus einer Kombination ZIP-CITY mehrfach vorhanden (z.B.wenn Original-Datenquelle Ortsteile berücksichtigt)
+Diese werden entfernt um eine eindeutige Auswahlliste zu bekommen.</key>
+    </entry>
+    <entry>
+      <key>Serviceart</key>
+    </entry>
+    <entry>
+      <key>ADDRESSID</key>
+    </entry>
+    <entry>
+      <key>Serviceposten</key>
+    </entry>
+    <entry>
+      <key>Stimmung mittel</key>
+    </entry>
+    <entry>
+      <key>Erfassungsdatum</key>
+    </entry>
+    <entry>
+      <key>ADM-Bewertung</key>
+    </entry>
+    <entry>
+      <key>Baum öffnen</key>
+    </entry>
+    <entry>
+      <key>Baum schließen</key>
+    </entry>
+    <entry>
+      <key>SALESORDER_ID</key>
+    </entry>
+    <entry>
+      <key>Ordner</key>
+    </entry>
+    <entry>
+      <key>übergeordnet</key>
+    </entry>
+    <entry>
+      <key>Jahresurlaub</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Links</key>
+    </entry>
+    <entry>
+      <key>integer</key>
+    </entry>
+    <entry>
+      <key>char</key>
+    </entry>
+    <entry>
+      <key>maximal 50km</key>
+    </entry>
+    <entry>
+      <key>Bezirk</key>
+    </entry>
+    <entry>
+      <key>Liefer-Adresse</key>
+    </entry>
+    <entry>
+      <key>Edit ein</key>
+    </entry>
+    <entry>
+      <key>PK</key>
+    </entry>
+    <entry>
+      <key>Protokoll</key>
+    </entry>
+    <entry>
+      <key>Spalte30</key>
+    </entry>
+    <entry>
+      <key>Spalte31</key>
+    </entry>
+    <entry>
+      <key>Spalte32</key>
+    </entry>
+    <entry>
+      <key>Spalte33</key>
+    </entry>
+    <entry>
+      <key>Spalte34</key>
+    </entry>
+    <entry>
+      <key>Spalte35</key>
+    </entry>
+    <entry>
+      <key>Spalte36</key>
+    </entry>
+    <entry>
+      <key>Spalte37</key>
+    </entry>
+    <entry>
+      <key>Spalte38</key>
+    </entry>
+    <entry>
+      <key>Spalte39</key>
+    </entry>
+    <entry>
+      <key>Spalte29</key>
+    </entry>
+    <entry>
+      <key>Spalte20</key>
+    </entry>
+    <entry>
+      <key>Spalte23</key>
+    </entry>
+    <entry>
+      <key>Spalte24</key>
+    </entry>
+    <entry>
+      <key>Spalte21</key>
+    </entry>
+    <entry>
+      <key>Spalte22</key>
+    </entry>
+    <entry>
+      <key>Spalte27</key>
+    </entry>
+    <entry>
+      <key>Spalte28</key>
+    </entry>
+    <entry>
+      <key>Spalte25</key>
+    </entry>
+    <entry>
+      <key>Spalte26</key>
+    </entry>
+    <entry>
+      <key>Spalte19</key>
+    </entry>
+    <entry>
+      <key>Spalte18</key>
+    </entry>
+    <entry>
+      <key>Spalte14</key>
+    </entry>
+    <entry>
+      <key>Spalte15</key>
+    </entry>
+    <entry>
+      <key>Spalte16</key>
+    </entry>
+    <entry>
+      <key>Spalte17</key>
+    </entry>
+    <entry>
+      <key>Spalte10</key>
+    </entry>
+    <entry>
+      <key>Spalte11</key>
+    </entry>
+    <entry>
+      <key>Spalte12</key>
+    </entry>
+    <entry>
+      <key>Spalte13</key>
+    </entry>
+    <entry>
+      <key>keyword</key>
+    </entry>
+    <entry>
+      <key>image</key>
+    </entry>
+    <entry>
+      <key>Stornieren</key>
+    </entry>
+    <entry>
+      <key>Spalte40</key>
+    </entry>
+    <entry>
+      <key>Spalte42</key>
+    </entry>
+    <entry>
+      <key>Spalte41</key>
+    </entry>
+    <entry>
+      <key>Spalte44</key>
+    </entry>
+    <entry>
+      <key>Spalte43</key>
+    </entry>
+    <entry>
+      <key>Spalte46</key>
+    </entry>
+    <entry>
+      <key>Spalte45</key>
+    </entry>
+    <entry>
+      <key>Spalte48</key>
+    </entry>
+    <entry>
+      <key>Spalte47</key>
+    </entry>
+    <entry>
+      <key>Spalte49</key>
+    </entry>
+    <entry>
+      <key>Spalte50</key>
+    </entry>
+    <entry>
+      <key>to</key>
+    </entry>
+    <entry>
+      <key>text</key>
+    </entry>
+    <entry>
+      <key>numeric</key>
+    </entry>
+    <entry>
+      <key>Keyname</key>
+    </entry>
+    <entry>
+      <key>Salesman.</key>
+    </entry>
+    <entry>
+      <key>varchar</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Aufgaben/Termine</key>
+    </entry>
+    <entry>
+      <key>Rechn.-Adresse</key>
+    </entry>
+    <entry>
+      <key>aktualisiert VB-Gebiete in ORG</key>
+    </entry>
+    <entry>
+      <key>VB-Gebiet eintragen</key>
+    </entry>
+    <entry>
+      <key>Landkreis</key>
+    </entry>
+    <entry>
+      <key>edt_namelang</key>
+    </entry>
+    <entry>
+      <key>Nächster Lauf</key>
+    </entry>
+    <entry>
+      <key>Aufgaben&amp;amp;Eskalation</key>
+    </entry>
+    <entry>
+      <key>Spaltenreihenfolge</key>
+    </entry>
+    <entry>
+      <key>Spalte5</key>
+    </entry>
+    <entry>
+      <key>Spalte6</key>
+    </entry>
+    <entry>
+      <key>Spalte7</key>
+    </entry>
+    <entry>
+      <key>Spalte8</key>
+    </entry>
+    <entry>
+      <key>Spalte1</key>
+    </entry>
+    <entry>
+      <key>Spalte2</key>
+    </entry>
+    <entry>
+      <key>Spalte3</key>
+    </entry>
+    <entry>
+      <key>Spalte4</key>
+    </entry>
+    <entry>
+      <key>Spalte9</key>
+    </entry>
+    <entry>
+      <key>float</key>
+    </entry>
+    <entry>
+      <key>alle Tabellen verwenden</key>
+    </entry>
+    <entry>
+      <key>überfällige Tage</key>
+    </entry>
+    <entry>
+      <key>Seite</key>
+    </entry>
+    <entry>
+      <key>Gebiet</key>
+    </entry>
+    <entry>
+      <key>nchar</key>
+    </entry>
+    <entry>
+      <key>nvarchar</key>
+    </entry>
+    <entry>
+      <key>Edit aus</key>
+    </entry>
+    <entry>
+      <key>Interner Vermerk</key>
+    </entry>
+    <entry>
+      <key>Cust</key>
+    </entry>
+    <entry>
+      <key>datetime</key>
+    </entry>
+    <entry>
+      <key>Struktur</key>
+    </entry>
+    <entry>
+      <key>Filter Abteilung</key>
+    </entry>
+    <entry>
+      <key>CONSTRAINTTYPE</key>
+    </entry>
+    <entry>
+      <key>Rekl.-Nr</key>
+    </entry>
+    <entry>
+      <key>Alle markierten Optionen löschen?</key>
+    </entry>
+    <entry>
+      <key>Prozess abgeschlossen.</key>
+    </entry>
+    <entry>
+      <key>Es sind keine Empfänger für dieses Mailing definiert.</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Empfangene E-Mails</key>
+    </entry>
+    <entry>
+      <key>Keine der ausgewählten Tabellen überschreitet die Begrenzungen der gewählten Datenbank.</key>
+    </entry>
+    <entry>
+      <key>Bitte Spaltendaten definieren</key>
+    </entry>
+    <entry>
+      <key>Offene Posten Liste</key>
+    </entry>
+    <entry>
+      <key>Gesamte</key>
+    </entry>
+    <entry>
+      <key>Kein Dokument in Vorlage &amp;apos;%0&amp;apos;</key>
+    </entry>
+    <entry>
+      <key> Monate</key>
+    </entry>
+    <entry>
+      <key>Kein Empfänger zum hinzufügen</key>
+    </entry>
+    <entry>
+      <key>Serienmuster konnte nicht ermittelt werden</key>
+    </entry>
+    <entry>
+      <key>Markieren Sie bitte die gewünschten Teilnehmer!</key>
+    </entry>
+    <entry>
+      <key>Beiträge</key>
+    </entry>
+    <entry>
+      <key>Preiseliste ungültig !</key>
+    </entry>
+    <entry>
+      <key>Enddatum konnte nicht bestimmt werden.</key>
+    </entry>
+    <entry>
+      <key>Keine E-Mail-Adresse gefunden</key>
+    </entry>
+    <entry>
+      <key>Firmen-Dubletten neu berechnen</key>
+    </entry>
+    <entry>
+      <key>Keine Vorlage vorhanden!</key>
+    </entry>
+    <entry>
+      <key>Bitte wählen Sie einen Verteiler!</key>
+    </entry>
+    <entry>
+      <key>Das Attribut &amp;apos;%0&amp;apos; darf maximal %1 mal angegeben werden!</key>
+    </entry>
+    <entry>
+      <key>Service-Art</key>
+    </entry>
+    <entry>
+      <key>Include</key>
+    </entry>
+    <entry>
+      <key> : gesetzt über Firma!</key>
+    </entry>
+    <entry>
+      <key>Status/Phase</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Firmendubletten</key>
+    </entry>
+    <entry>
+      <key>Serviceaufträge (%0)</key>
+    </entry>
+    <entry>
+      <key>Folgeeintrag</key>
+    </entry>
+    <entry>
+      <key>Die beiden Eingaben sind nicht identisch.\nBitte probieren Sie es noch einmal!</key>
+    </entry>
+    <entry>
+      <key>Person schon vorhanden\nFunktion und Organisation neu angelegt</key>
+    </entry>
+    <entry>
+      <key>Projektart</key>
+    </entry>
+    <entry>
+      <key>Artikelbezeichnung</key>
+    </entry>
+    <entry>
+      <key>E-Mail-Adresse eintragen ?\nKein Eintrag mit Abbruch !</key>
+    </entry>
+    <entry>
+      <key>Anzahl: </key>
+    </entry>
+    <entry>
+      <key>Diese Relation ist nicht aktiv!</key>
+    </entry>
+    <entry>
+      <key>Internal (2)</key>
+    </entry>
+    <entry>
+      <key>mal ausgewähltes Attribut löschen ?</key>
+    </entry>
+    <entry>
+      <key>Projektstart</key>
+    </entry>
+    <entry>
+      <key>bevorzugter Infokanal</key>
+    </entry>
+    <entry>
+      <key>Kurs-Nr</key>
+    </entry>
+    <entry>
+      <key>Diese Option ist bereits vorhanden.\nWollen Sie den Wert überschreiben?</key>
+    </entry>
+    <entry>
+      <key>Artikel-Nr</key>
+    </entry>
+    <entry>
+      <key>keine Dubletten mehr vorhanden!</key>
+    </entry>
+    <entry>
+      <key>%0 Dubletten in %1 Firmen gefunden.</key>
+    </entry>
+    <entry>
+      <key>Reklamationsliste</key>
+    </entry>
+    <entry>
+      <key>Testversand ohne Adresse nicht möglich.</key>
+    </entry>
+    <entry>
+      <key>Welche Datei für den Text verwenden?</key>
+    </entry>
+    <entry>
+      <key>#,##0 T€</key>
+    </entry>
+    <entry>
+      <key>Organisation, Person und Funktion neu angelegt</key>
+    </entry>
+    <entry>
+      <key>Erledigt</key>
+    </entry>
+    <entry>
+      <key>Datei wählen</key>
+    </entry>
+    <entry>
+      <key> %</key>
+    </entry>
+    <entry>
+      <key>Proj.Nr.</key>
+    </entry>
+    <entry>
+      <key>Keine Vorlage in der gewünschten Sprache gefunden.\nBitte eine Sprache auswählen.</key>
+    </entry>
+    <entry>
+      <key>Die Kombination von Name und Sprache sind bereits vergeben!\nBitte ändern Sie Namen oder Sprache für die Vorlage.</key>
+    </entry>
+    <entry>
+      <key>Eingabe in Minuten oder Stunden (8:00)</key>
+    </entry>
+    <entry>
+      <key>Markierten Index wirklich aus dem Repository entfernen?</key>
+    </entry>
+    <entry>
+      <key>Jährliche Serie nicht genauer spezifiziert. Ignoriere Serie.</key>
+    </entry>
+    <entry>
+      <key>Brief in Datenbank hinterlegt: </key>
+    </entry>
+    <entry>
+      <key>Ticket: %0\nTitel: %1\nStartzeit: %2</key>
+    </entry>
+    <entry>
+      <key>Vertriebsprojekt anlegen</key>
+    </entry>
+    <entry>
+      <key>Spalten wurden entfernt.</key>
+    </entry>
+    <entry>
+      <key>%0</key>
+    </entry>
+    <entry>
+      <key>Ticketliste</key>
+    </entry>
+    <entry>
+      <key>Kein Empfänger zum entfernen</key>
+    </entry>
+    <entry>
+      <key>Gesprächspartner</key>
+    </entry>
+    <entry>
+      <key>Datei &amp;apos;%0&amp;apos; bereits geöffnet!</key>
+    </entry>
+    <entry>
+      <key>Keine Tabellen wurden erzeugt.</key>
+    </entry>
+    <entry>
+      <key>Bitte wählen Sie eine Firma aus.</key>
+    </entry>
+    <entry>
+      <key>Bitte wählen Sie eine Veranstaltung!</key>
+    </entry>
+    <entry>
+      <key>bestätigt</key>
+    </entry>
+    <entry>
+      <key>Kontenabstimmung</key>
+    </entry>
+    <entry>
+      <key>Die Daten wurden kopiert.</key>
+    </entry>
+    <entry>
+      <key>Mahnstufe</key>
+    </entry>
+    <entry>
+      <key>Sollen die falschen Datensätze gelöscht werden ?</key>
+    </entry>
+    <entry>
+      <key>Zuständiger Mitarbeiter %0 in Kampagne %1 gesetzt</key>
+    </entry>
+    <entry>
+      <key>Aufgaben von</key>
+    </entry>
+    <entry>
+      <key>Die aktuelle Selektion aus einer Serien-E-Mail löschen</key>
+    </entry>
+    <entry>
+      <key>Zahlungsbedingung</key>
+    </entry>
+    <entry>
+      <key>Offen</key>
+    </entry>
+    <entry>
+      <key>E-Mail öffnen</key>
+    </entry>
+    <entry>
+      <key>Wollen Sie alle Daten der markierten Firma zu der aktuellen Firma übertragen\n</key>
+    </entry>
+    <entry>
+      <key>Mitglieder entfernen</key>
+    </entry>
+    <entry>
+      <key>Bitte Datenbanktyp auswählen</key>
+    </entry>
+    <entry>
+      <key>TicketHistory zu Ticket &amp;apos;%0&amp;apos; \nmuss zuerst geschlossen werden !</key>
+    </entry>
+    <entry>
+      <key>Ge&amp;amp;löschte E-Mails</key>
+    </entry>
+    <entry>
+      <key>Bitte Alias zur Erzeugung der Tabellen auswählen</key>
+    </entry>
+    <entry>
+      <key>Besuche</key>
+    </entry>
+    <entry>
+      <key>Verknüpfung</key>
+    </entry>
+    <entry>
+      <key>Terminübersicht</key>
+    </entry>
+    <entry>
+      <key>erstellt von</key>
+    </entry>
+    <entry>
+      <key>Kurstitel</key>
+    </entry>
+    <entry>
+      <key>Interview ist durchgängig.</key>
+    </entry>
+    <entry>
+      <key>E-Mail verknüpfen</key>
+    </entry>
+    <entry>
+      <key>Bitte Absender wählen</key>
+    </entry>
+    <entry>
+      <key>Mitglieder hinzufügen</key>
+    </entry>
+    <entry>
+      <key>als Standard-E-Mail setzen</key>
+    </entry>
+    <entry>
+      <key>Möglicherweise ist ein Import-Feld zu groß für das Zielfeld.</key>
+    </entry>
+    <entry>
+      <key>eigener Absender</key>
+    </entry>
+    <entry>
+      <key>Adrssse nicht vorhanden!</key>
+    </entry>
+    <entry>
+      <key>Ersteintrag Status / Phase</key>
+    </entry>
+    <entry>
+      <key>Teilnehmer entfernen</key>
+    </entry>
+    <entry>
+      <key>Durchschnittsnote</key>
+    </entry>
+    <entry>
+      <key>Rolle IBau</key>
+    </entry>
+    <entry>
+      <key>Ruecklaeufer aufgrund fehlender E-Mail-Adresse!</key>
+    </entry>
+    <entry>
+      <key>Hoch</key>
+    </entry>
+    <entry>
+      <key>E-Mails löschen ?</key>
+    </entry>
+    <entry>
+      <key>Vorlage wählen</key>
+    </entry>
+    <entry>
+      <key>Artikel: </key>
+    </entry>
+    <entry>
+      <key>Zu folgenden Fragen wurden keine Antworten und Zielcodes angegeben:</key>
+    </entry>
+    <entry>
+      <key>Zeit eintragen</key>
+    </entry>
+    <entry>
+      <key>Soll sie überschrieben werden?</key>
+    </entry>
+    <entry>
+      <key>Volumen (T€)</key>
+    </entry>
+    <entry>
+      <key>Der login ist bereits vergeben! Bitte verwenden sie einen anderen.</key>
+    </entry>
+    <entry>
+      <key> Stunden</key>
+    </entry>
+    <entry>
+      <key>unverknüpfte E-Mails</key>
+    </entry>
+    <entry>
+      <key>T€</key>
+    </entry>
+    <entry>
+      <key>In Bearbeitung</key>
+    </entry>
+    <entry>
+      <key>Historienliste</key>
+    </entry>
+    <entry>
+      <key>Serienbrief %0 eingetragen</key>
+    </entry>
+    <entry>
+      <key>Organisation oder Person neu angelegt</key>
+    </entry>
+    <entry>
+      <key>und danach die Dubletten-Firma löschen ?</key>
+    </entry>
+    <entry>
+      <key>30%</key>
+    </entry>
+    <entry>
+      <key>Ge&amp;amp;sendete E-Mails</key>
+    </entry>
+    <entry>
+      <key>Exportdatei wählen !</key>
+    </entry>
+    <entry>
+      <key>Neuer Spaltenname:</key>
+    </entry>
+    <entry>
+      <key>Laufzeit (Monate)/ Phase</key>
+    </entry>
+    <entry>
+      <key>Keinen Teilnehmer zum Entfernen</key>
+    </entry>
+    <entry>
+      <key>%0 Dubletten in %1 Personen gefunden.</key>
+    </entry>
+    <entry>
+      <key>Abteilungsleiter</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Aufgaben(%0)</key>
+    </entry>
+    <entry>
+      <key>Belegdatum</key>
+    </entry>
+    <entry>
+      <key>Geburtstag</key>
+    </entry>
+    <entry>
+      <key>abgesagt</key>
+    </entry>
+    <entry>
+      <key>Folgende Überschreitungen der Begrenzungen der gewählten Datenbank wurden gefunden:</key>
+    </entry>
+    <entry>
+      <key>Icon auswählen</key>
+    </entry>
+    <entry>
+      <key>Werbeeinschränkung wurde zusätzlich bei allen %0 Mitarbeitern gesetzt</key>
+    </entry>
+    <entry>
+      <key>Eingehend, nicht angenommen</key>
+    </entry>
+    <entry>
+      <key>Projekt-Phase</key>
+    </entry>
+    <entry>
+      <key> / gesamt: </key>
+    </entry>
+    <entry>
+      <key>E-Mail CC an</key>
+    </entry>
+    <entry>
+      <key>Service-Status</key>
+    </entry>
+    <entry>
+      <key>Stufe &amp;apos;%0&amp;apos; in Kampagne &amp;apos;%1&amp;apos; gesetzt.</key>
+    </entry>
+    <entry>
+      <key>Telefonnummern bereinigt!</key>
+    </entry>
+    <entry>
+      <key>Fälligkeitsdatum liegt in der Vergangenheit. </key>
+    </entry>
+    <entry>
+      <key>Aufgabenübersicht</key>
+    </entry>
+    <entry>
+      <key>versendet am</key>
+    </entry>
+    <entry>
+      <key>Korrektur in Minuten ( z.B.: 5 oder -5 )</key>
+    </entry>
+    <entry>
+      <key>Alle Daten der ausgewählten Firma (Quelle) werden zu der aktuellen Firma übertragen.
+Die ausgewählten Firma (Quelle) wird gelöscht !!</key>
+    </entry>
+    <entry>
+      <key>Alle markierten Tabellen ins Repository übernehmen?</key>
+    </entry>
+    <entry>
+      <key>Organisation schon vorhanden\nPerson und Funktion neu angelegt</key>
+    </entry>
+    <entry>
+      <key>MM | yyyy</key>
+    </entry>
+    <entry>
+      <key>Verschieben nach Position ?</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;unverknüpfte E-Mails</key>
+    </entry>
+    <entry>
+      <key>enthalten</key>
+    </entry>
+    <entry>
+      <key>Für den Export von Daten ist mindestens eine befüllte Spalte notwendig</key>
+    </entry>
+    <entry>
+      <key>Serienmail &amp;apos;%0&amp;apos; versandt</key>
+    </entry>
+    <entry>
+      <key> / Wahrsch.:</key>
+    </entry>
+    <entry>
+      <key>Möchten Sie den Import abbrechen?</key>
+    </entry>
+    <entry>
+      <key>erledigt / zurückgestellt</key>
+    </entry>
+    <entry>
+      <key>Markierte Empfänger als nicht zugestellt markieren?</key>
+    </entry>
+    <entry>
+      <key>S/P</key>
+    </entry>
+    <entry>
+      <key>Kampagnenauswertung</key>
+    </entry>
+    <entry>
+      <key>Kein Mitglied zum entfernen</key>
+    </entry>
+    <entry>
+      <key>Auftr.Wahr.</key>
+    </entry>
+    <entry>
+      <key>Kd.-Nr.</key>
+    </entry>
+    <entry>
+      <key>Bitte wählen Sie die Exportdatei aus</key>
+    </entry>
+    <entry>
+      <key>Personendaten zusammengeführt und die Dublette gelöscht</key>
+    </entry>
+    <entry>
+      <key>Einschätzung</key>
+    </entry>
+    <entry>
+      <key>Tabellen wurden importiert.</key>
+    </entry>
+    <entry>
+      <key>Dieser Eintrag ist bereits vorhanden</key>
+    </entry>
+    <entry>
+      <key>Nicht begonnen</key>
+    </entry>
+    <entry>
+      <key>Beschreibung: </key>
+    </entry>
+    <entry>
+      <key>Ausgehend, angenommen</key>
+    </entry>
+    <entry>
+      <key>Ungültiger Modus des Frames. Wenden Sie sich an Ihren Administrator</key>
+    </entry>
+    <entry>
+      <key>Reminder</key>
+    </entry>
+    <entry>
+      <key>Bitte Testempfänger eingeben</key>
+    </entry>
+    <entry>
+      <key>A&amp;amp;ufgaben (%0)</key>
+    </entry>
+    <entry>
+      <key>maximale Anzahl der Historien</key>
+    </entry>
+    <entry>
+      <key>vorläufig</key>
+    </entry>
+    <entry>
+      <key>Person schon vorhanden\nOrganisation mögliche Dublette</key>
+    </entry>
+    <entry>
+      <key>Initialeintrag</key>
+    </entry>
+    <entry>
+      <key>Bitte Vorgaben setzen</key>
+    </entry>
+    <entry>
+      <key>Bitte Filterbedingungen setzen</key>
+    </entry>
+    <entry>
+      <key>Enddatum liegt in der Vergangenheit. </key>
+    </entry>
+    <entry>
+      <key>Markieren Sie eine oder mehrere Zeilen in &amp;apos;Versendung&amp;apos; !</key>
+    </entry>
+    <entry>
+      <key>Projekt-Status</key>
+    </entry>
+    <entry>
+      <key>Die Tabelle</key>
+    </entry>
+    <entry>
+      <key>Vorläufig</key>
+    </entry>
+    <entry>
+      <key>Bonität</key>
+    </entry>
+    <entry>
+      <key>Empfänger entfernen</key>
+    </entry>
+    <entry>
+      <key>Webseite</key>
+    </entry>
+    <entry>
+      <key>Projekt-Titel</key>
+    </entry>
+    <entry>
+      <key>Die aktuelle Selektion einem Serien-E-Mail hinzufügen</key>
+    </entry>
+    <entry>
+      <key>optinaler </key>
+    </entry>
+    <entry>
+      <key>Kein Erinnerungsdatum angegeben.</key>
+    </entry>
+    <entry>
+      <key>Verantwortlichen setzen</key>
+    </entry>
+    <entry>
+      <key>Rechg.-Datum</key>
+    </entry>
+    <entry>
+      <key>Die maximale Anzahl Teilnehmer ist erreicht!</key>
+    </entry>
+    <entry>
+      <key>mal ausgewähltes Attribut hinzufügen ?</key>
+    </entry>
+    <entry>
+      <key>markierte Suchen kopieren</key>
+    </entry>
+    <entry>
+      <key>Mail konnten nicht in das System übernommen werden.</key>
+    </entry>
+    <entry>
+      <key>Bitte wählen Sie einen Ort:</key>
+    </entry>
+    <entry>
+      <key>Servicebericht</key>
+    </entry>
+    <entry>
+      <key>Roll Out</key>
+    </entry>
+    <entry>
+      <key>Gebiet:</key>
+    </entry>
+    <entry>
+      <key>Wenden Sie sich an Ihren Administrator</key>
+    </entry>
+    <entry>
+      <key>Beleg-Nr.</key>
+    </entry>
+    <entry>
+      <key>Alte Repositoryversion gefunden, </key>
+    </entry>
+    <entry>
+      <key>Kundennr.:</key>
+    </entry>
+    <entry>
+      <key>inaktiv: </key>
+    </entry>
+    <entry>
+      <key>Bitte Datei auswählen</key>
+    </entry>
+    <entry>
+      <key>Ausschreibungen</key>
+    </entry>
+    <entry>
+      <key>Hauptrolle</key>
+    </entry>
+    <entry>
+      <key>Alle Fremdschlüssel besitzen einen Index.</key>
+    </entry>
+    <entry>
+      <key>&amp;lt;null value&amp;gt;</key>
+    </entry>
+    <entry>
+      <key>Termine von</key>
+    </entry>
+    <entry>
+      <key>Rech.-Nr</key>
+    </entry>
+    <entry>
+      <key>Fehler bei den Datumsangaben.</key>
+    </entry>
+    <entry>
+      <key>Rech.-Datum</key>
+    </entry>
+    <entry>
+      <key>Wollen Sie das gesamte System leeren?</key>
+    </entry>
+    <entry>
+      <key>Zeiterfassung</key>
+    </entry>
+    <entry>
+      <key>Person auswählen</key>
+    </entry>
+    <entry>
+      <key>Bestätigt</key>
+    </entry>
+    <entry>
+      <key>Sollen die Tabellen vor dem Kopieren geleert werden?</key>
+    </entry>
+    <entry>
+      <key>zzgl.</key>
+    </entry>
+    <entry>
+      <key>existiert bereits im Repository.\n</key>
+    </entry>
+    <entry>
+      <key>Einschätzung: </key>
+    </entry>
+    <entry>
+      <key>Organisation schon vorhanden\nPerson mögliche Dublette</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Persondubletten</key>
+    </entry>
+    <entry>
+      <key>Sind Sie sicher?</key>
+    </entry>
+    <entry>
+      <key>Sollen die übernommenen Daten aus der Datenbank entfernt werden?</key>
+    </entry>
+    <entry>
+      <key>Aufgabe(n) erfolgreich weitergegeben an: %0</key>
+    </entry>
+    <entry>
+      <key>Kein Mitglied zum hinzufügen</key>
+    </entry>
+    <entry>
+      <key>Alias-Test</key>
+    </entry>
+    <entry>
+      <key>Monatliches Serienmuster konnte nicht bestimmt werden</key>
+    </entry>
+    <entry>
+      <key>Senden per E-Mail</key>
+    </entry>
+    <entry>
+      <key>Der angegebene Wert ist nicht gültig!</key>
+    </entry>
+    <entry>
+      <key>Forecast</key>
+    </entry>
+    <entry>
+      <key>läuft</key>
+    </entry>
+    <entry>
+      <key>Bitte Quell-Alias zum Kopieren der Daten auswählen</key>
+    </entry>
+    <entry>
+      <key>Bitte Zieltabellen auswählen</key>
+    </entry>
+    <entry>
+      <key>Analysen</key>
+    </entry>
+    <entry>
+      <key>Zeilen eingelesen</key>
+    </entry>
+    <entry>
+      <key>Kein Verteiler vorhanden!</key>
+    </entry>
+    <entry>
+      <key>und danach die markierte Firma löschen ?</key>
+    </entry>
+    <entry>
+      <key>(mit Filter)</key>
+    </entry>
+    <entry>
+      <key>Eine Pflicht-Spalte wurde nicht gefüllt !</key>
+    </entry>
+    <entry>
+      <key>Kontaktpersonen</key>
+    </entry>
+    <entry>
+      <key>mit Inhalt der Tabellen</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;360°</key>
+    </entry>
+    <entry>
+      <key>Status: </key>
+    </entry>
+    <entry>
+      <key>%0 nachfassen (Nr.%1)</key>
+    </entry>
+    <entry>
+      <key>Rech.-Betrag</key>
+    </entry>
+    <entry>
+      <key>Volumen: </key>
+    </entry>
+    <entry>
+      <key>Bitte wählen Sie eine Kampagne !</key>
+    </entry>
+    <entry>
+      <key>Aufwand</key>
+    </entry>
+    <entry>
+      <key>Feedbackbogen</key>
+    </entry>
+    <entry>
+      <key>Zielgruppe</key>
+    </entry>
+    <entry>
+      <key>Berichtsdatum</key>
+    </entry>
+    <entry>
+      <key>Organisation und Person schon vorhanden\nFunktion neu angelegt</key>
+    </entry>
+    <entry>
+      <key>Abgabetermin</key>
+    </entry>
+    <entry>
+      <key>Wollen Sie alle Daten der ausgewählten Firma zu der aktuellen Firma übertragen\n</key>
+    </entry>
+    <entry>
+      <key>Monatliche Serie nicht genauer spezifiziert. Ignoriere Serie.</key>
+    </entry>
+    <entry>
+      <key>gelöschte ORGID =&amp;apos;%0&amp;apos;,\ngelöschte RELATIONID = &amp;apos;%1&amp;apos;</key>
+    </entry>
+    <entry>
+      <key>Kein Teilnehmer zum Hinzufügen</key>
+    </entry>
+    <entry>
+      <key>Erinnerungsdatum liegt in der Vergangenheit.</key>
+    </entry>
+    <entry>
+      <key>Roll-Out</key>
+    </entry>
+    <entry>
+      <key>alles</key>
+    </entry>
+    <entry>
+      <key>ist bereits als Teilnehmer eingetragen !</key>
+    </entry>
+    <entry>
+      <key>Wollen Sie alle Daten der markierten Person auf die aktuelle Person übernehmen\nund danach löschen ?</key>
+    </entry>
+    <entry>
+      <key>Person neu angelegt\nOrganisation mögliche Dublette</key>
+    </entry>
+    <entry>
+      <key>SEX</key>
+    </entry>
+    <entry>
+      <key>Empfänger hinzufügen</key>
+    </entry>
+    <entry>
+      <key>fällig</key>
+    </entry>
+    <entry>
+      <key>Die aktuelle Selektion einem Serien E-Mail hinzufügen</key>
+    </entry>
+    <entry>
+      <key>Verschieben um Anzahl Positionen\n  ( + nach unten / - nach oben ) ?</key>
+    </entry>
+    <entry>
+      <key>E-Mail löschen</key>
+    </entry>
+    <entry>
+      <key>Tägliche Serie nicht genauer spezifiziert. Ignoriere Serie.</key>
+    </entry>
+    <entry>
+      <key>erstellt %0 von %1</key>
+    </entry>
+    <entry>
+      <key>Mitbewerber</key>
+    </entry>
+    <entry>
+      <key>Organisation, Person und Funktion schon vorhanden</key>
+    </entry>
+    <entry>
+      <key>Firmendaten zusammengeführt und Dubletten-Firma gelöscht</key>
+    </entry>
+    <entry>
+      <key>Etiketten</key>
+    </entry>
+    <entry>
+      <key>Telefonnummer nicht gefunden!</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Feedback</key>
+    </entry>
+    <entry>
+      <key>Ums (T\€)</key>
+    </entry>
+    <entry>
+      <key>Eingehend, angenommen</key>
+    </entry>
+    <entry>
+      <key>Ausgehend, nicht angenommen</key>
+    </entry>
+    <entry>
+      <key>Bitte Daten eingeben</key>
+    </entry>
+    <entry>
+      <key>Der Datei &amp;apos;%0&amp;apos; ist keine Anwendung zugeordnet.</key>
+    </entry>
+    <entry>
+      <key>90%</key>
+    </entry>
+    <entry>
+      <key>Links (</key>
+    </entry>
+    <entry>
+      <key>Übernahme zurückgenommen</key>
+    </entry>
+    <entry>
+      <key>Tägliches Serienmuster konnte nicht bestimmt werden</key>
+    </entry>
+    <entry>
+      <key>Planung</key>
+    </entry>
+    <entry>
+      <key>Das Attribut &amp;apos;%0&amp;apos; muss mindestens %1 mal angegeben werden!</key>
+    </entry>
+    <entry>
+      <key>Es wurde kein Ende Kennzeichen angegeben!</key>
+    </entry>
+    <entry>
+      <key>Zahlungsziel</key>
+    </entry>
+    <entry>
+      <key>Kein Kampagne vorhanden!</key>
+    </entry>
+    <entry>
+      <key>MS-Word nicht installiert !</key>
+    </entry>
+    <entry>
+      <key>Startdatum liegt in der Vergangenheit. </key>
+    </entry>
+    <entry>
+      <key>Dialog für den ProjTicket Zeiterfassung</key>
+    </entry>
+    <entry>
+      <key>Hintergrundfarbe: 
+  weiß: Risiko unbewertet
+  grün: Risiko gering
+  gelb: Risiko mittel
+  rot: Risiko groß</key>
+    </entry>
+    <entry>
+      <key>Ein Thema mit gleichen Namen existiert bereits!</key>
+    </entry>
+    <entry>
+      <key>Derzeit wird der Import aus einem Datenbankalias\nfür diesen Datenbanktyp nicht unterstützt.</key>
+    </entry>
+    <entry>
+      <key>Folgende Pflichtfelder wurde noch nicht gefüllt:</key>
+    </entry>
+    <entry>
+      <key>Es wurde eine leere Tabelle übergeben</key>
+    </entry>
+    <entry>
+      <key>Aufwand: </key>
+    </entry>
+    <entry>
+      <key>Bitte XML-Datei auswählen</key>
+    </entry>
+    <entry>
+      <key>Dialog für das Stoppen der ProjTicketZeit</key>
+    </entry>
+    <entry>
+      <key>Keine VCard-Datei !!</key>
+    </entry>
+    <entry>
+      <key>Rolle ADITO</key>
+    </entry>
+    <entry>
+      <key>Importdatei wählen !</key>
+    </entry>
+    <entry>
+      <key>Tabellen angelegt</key>
+    </entry>
+    <entry>
+      <key>Personen-Dubletten neu berechnen</key>
+    </entry>
+    <entry>
+      <key>Rekl.-Kategorie</key>
+    </entry>
+    <entry>
+      <key>Ein Fehler ist aufgetreten beim Import dieses Datensatzes:\n</key>
+    </entry>
+    <entry>
+      <key>mit Ihrem Login ist kein Kontaktperson verknüpft !</key>
+    </entry>
+    <entry>
+      <key>Ticketeingang</key>
+    </entry>
+    <entry>
+      <key> / Auftragswahrsch.: </key>
+    </entry>
+    <entry>
+      <key>Bitte die zurückzuholenden Einstellungen markieren</key>
+    </entry>
+    <entry>
+      <key>Ticketcode</key>
+    </entry>
+    <entry>
+      <key>Thema kann nicht gelöscht werden, da dies oder ein untergeordnetes Thema in einem Kundenkontakt verwendet wird.</key>
+    </entry>
+    <entry>
+      <key>Bitte geben Sie eine gültige Telefonummer an.</key>
+    </entry>
+    <entry>
+      <key>Wollen Sie wirklich alle markierten löschen ?</key>
+    </entry>
+    <entry>
+      <key>Dauer: %0 min\nDauer darf nicht kleiner %1 und nicht größer %2 sein.</key>
+    </entry>
+    <entry>
+      <key>Warengruppe: </key>
+    </entry>
+    <entry>
+      <key>Monate</key>
+    </entry>
+    <entry>
+      <key>Bitte geben Sie zweimal das neue Passwort ein!</key>
+    </entry>
+    <entry>
+      <key>Organisation und Person mögliche Dublette</key>
+    </entry>
+    <entry>
+      <key>Die %0 Nr %1 wird hiermit storniert</key>
+    </entry>
+    <entry>
+      <key>Rekl.-Status</key>
+    </entry>
+    <entry>
+      <key>Als Benutzer anlegen</key>
+    </entry>
+    <entry>
+      <key>Lieferbedingung</key>
+    </entry>
+    <entry>
+      <key>Markieren Sie bitte die Teilnehmer!</key>
+    </entry>
+    <entry>
+      <key>Organisation neu angelegt\nPerson mögliche Dublette</key>
+    </entry>
+    <entry>
+      <key>Möchten Sie alle Teilnehmer verwenden ?</key>
+    </entry>
+    <entry>
+      <key> Tage</key>
+    </entry>
+    <entry>
+      <key>In Ihrer Kontakperson ist keine Standard Telefonnummer eingetragen</key>
+    </entry>
+    <entry>
+      <key>Mindestbestand unterschritten</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Aufg / Term (%0/%1)</key>
+    </entry>
+    <entry>
+      <key>Name der neuen Kampagne:</key>
+    </entry>
+    <entry>
+      <key>Fehler beim Setzen der Kalenderrechte!</key>
+    </entry>
+    <entry>
+      <key>Verschieben auf Datum?</key>
+    </entry>
+    <entry>
+      <key>Soll das Thema und alle untergeordneten Themen wirklich gelöscht werden?</key>
+    </entry>
+    <entry>
+      <key>60%</key>
+    </entry>
+    <entry>
+      <key>Laufzeit</key>
+    </entry>
+    <entry>
+      <key>Kommunikationsdaten</key>
+    </entry>
+    <entry>
+      <key>geändert %0 von %1</key>
+    </entry>
+    <entry>
+      <key>Wert T€</key>
+    </entry>
+    <entry>
+      <key>Abgesagt</key>
+    </entry>
+    <entry>
+      <key>Welchem Mitarbeiter möchten Sie die Teilnehmer zuordnen?</key>
+    </entry>
+    <entry>
+      <key>Jährliches Serienmuster konnte nicht bestimmt werden</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Unverknüpfte E-Mails</key>
+    </entry>
+    <entry>
+      <key>Datensatz konnte nicht geladen werden.\n\nSie haben keine Berechtigung für diesen Datensatz oder die Bedingung ist ungültig.</key>
+    </entry>
+    <entry>
+      <key>E-Mail</key>
+    </entry>
+    <entry>
+      <key>Keine Stufe vorhanden!</key>
+    </entry>
+    <entry>
+      <key>Anhänge</key>
+    </entry>
+    <entry>
+      <key>Mailadresse nicht vorhanden.\nSiehe unverknüpfte Mials!</key>
+    </entry>
+    <entry>
+      <key>Bitte wählen Sie eine Serienmail !</key>
+    </entry>
+    <entry>
+      <key>Phase: </key>
+    </entry>
+    <entry>
+      <key>E-Mail-Adresse eintragen ?\n Keine Eintag mit Abbruch !</key>
+    </entry>
+    <entry>
+      <key>E-Mail an Kunden senden?</key>
+    </entry>
+    <entry>
+      <key>Zeilen verarbeitet</key>
+    </entry>
+    <entry>
+      <key>Begründung Gewonnen-Verloren</key>
+    </entry>
+    <entry>
+      <key>überschrieben.\n</key>
+    </entry>
+    <entry>
+      <key>Rechg.-Nr.</key>
+    </entry>
+    <entry>
+      <key> % / gew.: </key>
+    </entry>
+    <entry>
+      <key>hoch</key>
+    </entry>
+    <entry>
+      <key>Note</key>
+    </entry>
+    <entry>
+      <key>Reklam.</key>
+    </entry>
+    <entry>
+      <key>keine Firma/Person aus diesem Land verfügbar</key>
+    </entry>
+    <entry>
+      <key>Anrufe löschen ?</key>
+    </entry>
+    <entry>
+      <key>Der Schlüsselbegriff ist bereits vergeben! Bitte verwenden sie einen anderen Schlüsselbegriff.</key>
+    </entry>
+    <entry>
+      <key>Keine Veranstaltung vorhanden!</key>
+    </entry>
+    <entry>
+      <key>Auf welche Stufe möchten Sie die Teilnehmer setzen?</key>
+    </entry>
+    <entry>
+      <key>keine E-Mail-Adresse gefunden !</key>
+    </entry>
+    <entry>
+      <key>In Ihrer Kontakperson ist keine Standard E-Mail-Adresse eingetragen</key>
+    </entry>
+    <entry>
+      <key>Eingabe in Minuten
+Dauer veringern mit -</key>
+    </entry>
+    <entry>
+      <key>gelöschte PERSID =&amp;apos;%0&amp;apos;,\ngelöschte RELATIONID = &amp;apos;%1&amp;apos;</key>
+    </entry>
+    <entry>
+      <key>Kein Attribut ausgewählt !</key>
+    </entry>
+    <entry>
+      <key> E-Mail-Adressen nicht gefunden</key>
+    </entry>
+    <entry>
+      <key> existiert im Repository. Tabellendefinition ersetzen?</key>
+    </entry>
+    <entry>
+      <key>Bitte Ziel-Alias zum Kopieren der Daten auswählen</key>
+    </entry>
+    <entry>
+      <key>Die Datenbankverbindung für den Alias</key>
+    </entry>
+    <entry>
+      <key>Zurückgestellt</key>
+    </entry>
+    <entry>
+      <key>Für folgende Spalten sollte ein Index definiert sein:\n</key>
+    </entry>
+    <entry>
+      <key>Pos.</key>
+    </entry>
+    <entry>
+      <key>Firmen-Dubletten aktualisieren</key>
+    </entry>
+    <entry>
+      <key>Ein Gruppentermin</key>
+    </entry>
+    <entry>
+      <key>Mögliche Dubletten Organisation</key>
+    </entry>
+    <entry>
+      <key>Sollen für %0 Personen die Dublette neu berechnet werden?</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Dubletten</key>
+    </entry>
+    <entry>
+      <key>Mögliche Dubletten Person</key>
+    </entry>
+    <entry>
+      <key>Mehrere Einzeltermine</key>
+    </entry>
+    <entry>
+      <key>Count</key>
+    </entry>
+    <entry>
+      <key>Es wurden mögliche Dubletten gefunden !</key>
+    </entry>
+    <entry>
+      <key>Einzelaufgabe</key>
+    </entry>
+    <entry>
+      <key>Sollen für %0 Firmen die Dublette neu berechnet werden?</key>
+    </entry>
+    <entry>
+      <key>Personen-Dubletten aktalisieren</key>
+    </entry>
+    <entry>
+      <key>ein einmal gesetzter Status für den Werbemittelversand kann nicht mehr geändert werden</key>
+    </entry>
+    <entry>
+      <key>Folge-Historie</key>
+    </entry>
+    <entry>
+      <key>Öffne Folgehistorien</key>
+    </entry>
+    <entry>
+      <key>Folge-Datum</key>
+    </entry>
+    <entry>
+      <key>Es besteht keine Schreibberechtigung für folgende Teilnehmer:\n\n</key>
+    </entry>
+    <entry>
+      <key>UNIT</key>
+    </entry>
+    <entry>
+      <key>Posten einfügen</key>
+    </entry>
+    <entry>
+      <key>Änderungen speichern?</key>
+    </entry>
+    <entry>
+      <key>Seriennr.</key>
+    </entry>
+    <entry>
+      <key>Markierte verwenden</key>
+    </entry>
+    <entry>
+      <key>Warengr.</key>
+    </entry>
+    <entry>
+      <key>normal</key>
+    </entry>
+    <entry>
+      <key>Speichern</key>
+    </entry>
+    <entry>
+      <key>[no text: 00000000]</key>
+    </entry>
+    <entry>
+      <key>Datei kann nicht geladen werden !</key>
+    </entry>
+    <entry>
+      <key>setzt internationales Nummernformat</key>
+    </entry>
+    <entry>
+      <key>mit Office</key>
+    </entry>
+    <entry>
+      <key>Gruppenaufgabe</key>
+    </entry>
+    <entry>
+      <key>Org. / Pers. verwenden</key>
+    </entry>
+    <entry>
+      <key>Ein Thema mit gleichen Namen existiert bereits.</key>
+    </entry>
+    <entry>
+      <key>%0 Telefonnummern formatiert!</key>
+    </entry>
+    <entry>
+      <key>niedrig</key>
+    </entry>
+    <entry>
+      <key>ohne Dialog</key>
+    </entry>
+    <entry>
+      <key>Suchindex neu aufbauen</key>
+    </entry>
+    <entry>
+      <key>&amp;lt;--Separator&amp;gt;</key>
+    </entry>
+    <entry>
+      <key>zzgl. Summe UmSt</key>
+    </entry>
+    <entry>
+      <key>beendet</key>
+    </entry>
+    <entry>
+      <key>vor Start</key>
+    </entry>
+    <entry>
+      <key>4.</key>
+    </entry>
+    <entry>
+      <key>3.</key>
+    </entry>
+    <entry>
+      <key>2.</key>
+    </entry>
+    <entry>
+      <key>1.</key>
+    </entry>
+    <entry>
+      <key>8.</key>
+    </entry>
+    <entry>
+      <key>7.</key>
+    </entry>
+    <entry>
+      <key>6.</key>
+    </entry>
+    <entry>
+      <key>5.</key>
+    </entry>
+    <entry>
+      <key>9.</key>
+    </entry>
+    <entry>
+      <key>31.</key>
+    </entry>
+    <entry>
+      <key>30.</key>
+    </entry>
+    <entry>
+      <key>Am</key>
+    </entry>
+    <entry>
+      <key>Farbe: grün = Ressource als User angelegt, rot = Ressource noch nicht als User angelegt, grau = inaktive Ressource, blau = User ohne Ressource (gelöscht)</key>
+    </entry>
+    <entry>
+      <key>Projekt öffnen</key>
+    </entry>
+    <entry>
+      <key>20.</key>
+    </entry>
+    <entry>
+      <key>21.</key>
+    </entry>
+    <entry>
+      <key>22.</key>
+    </entry>
+    <entry>
+      <key>Jeden/Alle</key>
+    </entry>
+    <entry>
+      <key>PLZ vorhanden</key>
+    </entry>
+    <entry>
+      <key>28.</key>
+    </entry>
+    <entry>
+      <key>27.</key>
+    </entry>
+    <entry>
+      <key>vorletzten</key>
+    </entry>
+    <entry>
+      <key>29.</key>
+    </entry>
+    <entry>
+      <key>24.</key>
+    </entry>
+    <entry>
+      <key>23.</key>
+    </entry>
+    <entry>
+      <key>26.</key>
+    </entry>
+    <entry>
+      <key>25.</key>
+    </entry>
+    <entry>
+      <key>UmSt</key>
+    </entry>
+    <entry>
+      <key>Am </key>
+    </entry>
+    <entry>
+      <key>15.</key>
+    </entry>
+    <entry>
+      <key>16.</key>
+    </entry>
+    <entry>
+      <key>17.</key>
+    </entry>
+    <entry>
+      <key>Firma öffnen</key>
+    </entry>
+    <entry>
+      <key>18.</key>
+    </entry>
+    <entry>
+      <key>11.</key>
+    </entry>
+    <entry>
+      <key>12.</key>
+    </entry>
+    <entry>
+      <key>13.</key>
+    </entry>
+    <entry>
+      <key>14.</key>
+    </entry>
+    <entry>
+      <key>Rechnung erstellen</key>
+    </entry>
+    <entry>
+      <key>19.</key>
+    </entry>
+    <entry>
+      <key>10.</key>
+    </entry>
+    <entry>
+      <key>Bitte Datumseingabe prüfen!</key>
+    </entry>
+    <entry>
+      <key>Gruppe</key>
+    </entry>
+    <entry>
+      <key>Volumen(T\€)</key>
+    </entry>
+    <entry>
+      <key>letzten</key>
+    </entry>
+    <entry>
+      <key>Jeden</key>
+    </entry>
+    <entry>
+      <key>gewonnen</key>
+    </entry>
+    <entry>
+      <key>netto</key>
+    </entry>
+    <entry>
+      <key>bis Jahr</key>
+    </entry>
+    <entry>
+      <key>gelb hinterlegt bedeutet Standard</key>
+    </entry>
+    <entry>
+      <key>Summe Tagesgeld</key>
+    </entry>
+    <entry>
+      <key>Tagesgeld</key>
+    </entry>
+    <entry>
+      <key>Modul öffnen</key>
+    </entry>
+    <entry>
+      <key>Semikolon</key>
+    </entry>
+    <entry>
+      <key>Gesamtsumme</key>
+    </entry>
+    <entry>
+      <key>Ausdruck</key>
+    </entry>
+    <entry>
+      <key>Umsatzübersicht</key>
+    </entry>
+    <entry>
+      <key>ADM-Besuche</key>
+    </entry>
+    <entry>
+      <key>Umsatz Jahre</key>
+    </entry>
+    <entry>
+      <key>verloren</key>
+    </entry>
+    <entry>
+      <key>von Jahr</key>
+    </entry>
+    <entry>
+      <key>Firmen</key>
+    </entry>
+    <entry>
+      <key>Kilometergeld</key>
+    </entry>
+    <entry>
+      <key>Homepage</key>
+    </entry>
+    <entry>
+      <key>Summe Belege</key>
+    </entry>
+    <entry>
+      <key>Aussendienstbesuche</key>
+    </entry>
+    <entry>
+      <key> bis </key>
+    </entry>
+    <entry>
+      <key>Event</key>
+    </entry>
+    <entry>
+      <key>Betreff: </key>
+    </entry>
+    <entry>
+      <key>Mail Import</key>
+    </entry>
+    <entry>
+      <key>Umsatz nach Warengruppen über Jahre</key>
+    </entry>
+    <entry>
+      <key>Umsatzübersicht Jahre</key>
+    </entry>
+    <entry>
+      <key>nur aktiv bei Status versendet</key>
+    </entry>
+    <entry>
+      <key>angemeldete Teilnehmer übernehmen</key>
+    </entry>
+    <entry>
+      <key>Bitte Auswahl treffen</key>
+    </entry>
+    <entry>
+      <key>Anrufer nicht identifizierbar</key>
+    </entry>
+    <entry>
+      <key>Mobil</key>
+    </entry>
+    <entry>
+      <key>Alle Teilnehmer mit Status angemeldet werden für ausgewählten Fragebogen übernommen</key>
+    </entry>
+    <entry>
+      <key>Maximal %0 Zeichen erlaubt</key>
+    </entry>
+    <entry>
+      <key>Öffnen</key>
+    </entry>
+    <entry>
+      <key>Reisekosten- und Spesenvorschlag</key>
+    </entry>
+    <entry>
+      <key>Reisekosten</key>
+    </entry>
+    <entry>
+      <key> teilgenommen hat</key>
+    </entry>
+    <entry>
+      <key>Schulnoten</key>
+    </entry>
+    <entry>
+      <key>und nach Monaten</key>
+    </entry>
+    <entry>
+      <key>für den Monat</key>
+    </entry>
+    <entry>
+      <key>Fragebogenauswertung</key>
+    </entry>
+    <entry>
+      <key>Anrufe</key>
+    </entry>
+    <entry>
+      <key>Folgende Leistungen wurden erbracht</key>
+    </entry>
+    <entry>
+      <key>Umsatzübersicht monatlich</key>
+    </entry>
+    <entry>
+      <key>Öffnet den Kalender in Planungsansicht</key>
+    </entry>
+    <entry>
+      <key>Terminkollisionen</key>
+    </entry>
+    <entry>
+      <key>Absatz über 3 Jahre</key>
+    </entry>
+    <entry>
+      <key>Durchschnittliche Kosten</key>
+    </entry>
+    <entry>
+      <key> vom </key>
+    </entry>
+    <entry>
+      <key>Seminar</key>
+    </entry>
+    <entry>
+      <key>Ihre Meinung ist uns wichtig!</key>
+    </entry>
+    <entry>
+      <key> am Kurs </key>
+    </entry>
+    <entry>
+      <key>Durchschnittliche Gebühr</key>
+    </entry>
+    <entry>
+      <key>Aussendienstbewertung</key>
+    </entry>
+    <entry>
+      <key>Bewertung über alle selektierten Firmen</key>
+    </entry>
+    <entry>
+      <key>Gesamtgebühr</key>
+    </entry>
+    <entry>
+      <key>Werte in €</key>
+    </entry>
+    <entry>
+      <key>Stückzahl</key>
+    </entry>
+    <entry>
+      <key>Umsatz über 3 Jahre</key>
+    </entry>
+    <entry>
+      <key>Ihr zuständiger Betreuer:</key>
+    </entry>
+    <entry>
+      <key>Betrag</key>
+    </entry>
+    <entry>
+      <key>Daher werden folgende Positionen verrechnet</key>
+    </entry>
+    <entry>
+      <key>Projekte</key>
+    </entry>
+    <entry>
+      <key>Jahresübersicht Kampagnen und Seminare</key>
+    </entry>
+    <entry>
+      <key>Hiermit bestätigen wir, dass </key>
+    </entry>
+    <entry>
+      <key> der Firma </key>
+    </entry>
+    <entry>
+      <key>Info meinCRM</key>
+    </entry>
+    <entry>
+      <key>Beim Start Seite öffnen</key>
+    </entry>
+    <entry>
+      <key>meinCRM</key>
+    </entry>
+    <entry>
+      <key>Welche Themen haben Sie vermisst?</key>
+    </entry>
+    <entry>
+      <key>Wir sind ständig dabei, unser Angebot zu verbessern. Bitte helfen Sie uns dabei, indem Sie diesen Feedbackbogen ausgefüllt am Ende der Veranstaltung abgeben. Vielen Dank!</key>
+    </entry>
+    <entry>
+      <key>Beim Start Seite nicht mehr öffnen</key>
+    </entry>
+  </keyValueMap>
+  <font name="Dialog" style="0" size="11" />
+</language>

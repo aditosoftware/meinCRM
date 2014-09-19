@@ -1,0 +1,7620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.adito.de/2013/ao/Model/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VERSION="1.1.2" xsi:schemaLocation="http://www.adito.de/2013/ao/Model/1.0.1 http://www.adito.de/xsd/aomodel-1.0.1.xsd">
+  <name>_____LANGUAGE_en</name>
+  <majorModelMode>DISTRIBUTED</majorModelMode>
+  <language>en</language>
+  <country></country>
+  <variant></variant>
+  <keyValueMap>
+    <entry>
+      <key>Kontaktperson</key>
+      <value>Contact person</value>
+    </entry>
+    <entry>
+      <key>Historie</key>
+      <value>History</value>
+    </entry>
+    <entry>
+      <key>Kampagne</key>
+      <value>Campaign</value>
+    </entry>
+    <entry>
+      <key>Firma</key>
+      <value>Company</value>
+    </entry>
+    <entry>
+      <key>Personen immer anlegen</key>
+      <value>Always generate person</value>
+    </entry>
+    <entry>
+      <key>Tabellenname</key>
+      <value>Table Name</value>
+    </entry>
+    <entry>
+      <key>PLZ</key>
+      <value>Zip Code</value>
+    </entry>
+    <entry>
+      <key>Firmenname</key>
+      <value>Company Name</value>
+    </entry>
+    <entry>
+      <key>Region</key>
+      <value>Region</value>
+    </entry>
+    <entry>
+      <key>weitere Währungen durch Eintrag in Hilfsliste</key>
+      <value>more currencies by entry in help list</value>
+    </entry>
+    <entry>
+      <key>Mögliche Dubletten</key>
+      <value>Possible Duplicates</value>
+    </entry>
+    <entry>
+      <key>Benutzertabelle</key>
+      <value>User Table</value>
+    </entry>
+    <entry>
+      <key>part_pers</key>
+      <value>part_pers</value>
+    </entry>
+    <entry>
+      <key>Label__comm__dec</key>
+      <value>Label_comm_dec</value>
+    </entry>
+    <entry>
+      <key>Auswahl in Combobox &amp;apos;Dublette&amp;apos; treffen.</key>
+      <value>Select in combobox &amp;quot;duplicate&amp;quot;.</value>
+    </entry>
+    <entry>
+      <key>Stammkunden</key>
+      <value>Regular Customer</value>
+    </entry>
+    <entry>
+      <key>#,##0.00</key>
+      <value>#,##0.00</value>
+    </entry>
+    <entry>
+      <key>BULKMAILDEFID</key>
+      <value>BULKMAILDEFID</value>
+    </entry>
+    <entry>
+      <key>Details</key>
+      <value>Details</value>
+    </entry>
+    <entry>
+      <key>Mitglieder</key>
+      <value>Members</value>
+    </entry>
+    <entry>
+      <key>Teilnehmer hinzufügen</key>
+      <value>Add participant</value>
+    </entry>
+    <entry>
+      <key>A&amp;amp;ufgaben</key>
+      <value>T&amp;amp;asks</value>
+    </entry>
+    <entry>
+      <key>Dokumentenart</key>
+      <value>Type of Document</value>
+    </entry>
+    <entry>
+      <key>zum Angebot gehörende Dokumente</key>
+      <value>Documents attached to the offer</value>
+    </entry>
+    <entry>
+      <key>Min. Anzahl</key>
+      <value>Min. Number</value>
+    </entry>
+    <entry>
+      <key>Empfänger</key>
+      <value>Recipient</value>
+    </entry>
+    <entry>
+      <key>Serienbrief</key>
+      <value>Serial Letter</value>
+    </entry>
+    <entry>
+      <key>Größe</key>
+      <value>Size</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Rechte</key>
+      <value>&amp;amp;Authorisations</value>
+    </entry>
+    <entry>
+      <key>Systemtabelle</key>
+      <value>System Table</value>
+    </entry>
+    <entry>
+      <key>Samstag</key>
+      <value>Saturday</value>
+    </entry>
+    <entry>
+      <key>Übernahme rückgängig</key>
+      <value>Reverse Transfer</value>
+    </entry>
+    <entry>
+      <key>Staat</key>
+      <value>State</value>
+    </entry>
+    <entry>
+      <key>attr_decoded</key>
+      <value>attr_decoded</value>
+    </entry>
+    <entry>
+      <key>Information</key>
+      <value>Information</value>
+    </entry>
+    <entry>
+      <key>Löschen</key>
+      <value>Delete</value>
+    </entry>
+    <entry>
+      <key>date_edit_rel</key>
+      <value>date_edit_rel</value>
+    </entry>
+    <entry>
+      <key>Von</key>
+      <value>from</value>
+    </entry>
+    <entry>
+      <key>dd.MM.yyyy</key>
+      <value>dd.MM.yyyy</value>
+    </entry>
+    <entry>
+      <key>Produkt</key>
+      <value>Product</value>
+    </entry>
+    <entry>
+      <key>Standard</key>
+      <value>Standard</value>
+    </entry>
+    <entry>
+      <key>Kampagnenstufen</key>
+      <value>Campaign Levels</value>
+    </entry>
+    <entry>
+      <key>Befragung</key>
+      <value>Questioning</value>
+    </entry>
+    <entry>
+      <key>ORGCOUNTRYCODE</key>
+      <value>ORGCOUNTRYCODE</value>
+    </entry>
+    <entry>
+      <key>Keyname 2</key>
+      <value>Key Name 2</value>
+    </entry>
+    <entry>
+      <key>beginnt um</key>
+      <value>starts at</value>
+    </entry>
+    <entry>
+      <key>Quelle</key>
+      <value>Source</value>
+    </entry>
+    <entry>
+      <key>Organisation verwenden</key>
+      <value>Use organisation</value>
+    </entry>
+    <entry>
+      <key>Währung</key>
+      <value>Currency</value>
+    </entry>
+    <entry>
+      <key>OFFERITEMID</key>
+      <value>OFFERITEMID</value>
+    </entry>
+    <entry>
+      <key>Gruppenart</key>
+      <value>Type of Group</value>
+    </entry>
+    <entry>
+      <key>E-Preis</key>
+      <value>Price in EUR</value>
+    </entry>
+    <entry>
+      <key>Gesamt</key>
+      <value>Total</value>
+    </entry>
+    <entry>
+      <key>Fremdschlüssel</key>
+      <value>Foreign Key</value>
+    </entry>
+    <entry>
+      <key>Keine</key>
+      <value>None</value>
+    </entry>
+    <entry>
+      <key>Daten übernehmen</key>
+      <value>Assume Data</value>
+    </entry>
+    <entry>
+      <key>Landkarte</key>
+      <value>Map</value>
+    </entry>
+    <entry>
+      <key>Die Zahlen in Klammern bezeichnen, wie oft
+das Attribut mindestens vorkommen muss
+und maximal vorkommen darf.</key>
+      <value>The numbers in brackets indicate how often the attribute must occur at least and how often it can occur at most.</value>
+    </entry>
+    <entry>
+      <key>Passwort</key>
+      <value>Password</value>
+    </entry>
+    <entry>
+      <key>Aktiv</key>
+      <value>Active</value>
+    </entry>
+    <entry>
+      <key>EE dd.MM.yyyy HH:mm</key>
+      <value>EE dd.MM.yyyy HH:mm</value>
+    </entry>
+    <entry>
+      <key>Warengruppe</key>
+      <value>Commodity Group</value>
+    </entry>
+    <entry>
+      <key>Auswahl</key>
+      <value>Selection</value>
+    </entry>
+    <entry>
+      <key>Zuständigen setzen</key>
+      <value>Set responsible person</value>
+    </entry>
+    <entry>
+      <key>Sonntag</key>
+      <value>Sunday</value>
+    </entry>
+    <entry>
+      <key>Letzte Änderung von:</key>
+      <value>Last change by:</value>
+    </entry>
+    <entry>
+      <key>USER_NEW</key>
+      <value>USER_NEW</value>
+    </entry>
+    <entry>
+      <key>Abbrechen</key>
+      <value>Cancel</value>
+    </entry>
+    <entry>
+      <key>in Clipboard übernehmen</key>
+      <value>Assume into Clipboard</value>
+    </entry>
+    <entry>
+      <key>Typ</key>
+      <value>Type</value>
+    </entry>
+    <entry>
+      <key>allgemein</key>
+      <value>general</value>
+    </entry>
+    <entry>
+      <key>optional</key>
+      <value>optional</value>
+    </entry>
+    <entry>
+      <key>Täglich</key>
+      <value>Daily</value>
+    </entry>
+    <entry>
+      <key>ATTR_ID</key>
+      <value>ATTR_ID</value>
+    </entry>
+    <entry>
+      <key>Daten laden</key>
+      <value>Load Data</value>
+    </entry>
+    <entry>
+      <key>Label__relpers__dec</key>
+      <value>Label_relpers_dec</value>
+    </entry>
+    <entry>
+      <key>Doku Vorlagen</key>
+      <value>Documentation Templates</value>
+    </entry>
+    <entry>
+      <key>Start</key>
+      <value>Start</value>
+    </entry>
+    <entry>
+      <key>unverknüpfte Emails</key>
+      <value>unlinked mails</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Bericht</key>
+      <value>&amp;amp;Report</value>
+    </entry>
+    <entry>
+      <key>Summe</key>
+      <value>Sum</value>
+    </entry>
+    <entry>
+      <key>Teilnehmer löschen</key>
+      <value>Delete Participant</value>
+    </entry>
+    <entry>
+      <key>user_edit</key>
+      <value>user_edit</value>
+    </entry>
+    <entry>
+      <key>DISTRICT</key>
+      <value>DISTRICT</value>
+    </entry>
+    <entry>
+      <key>Einheit</key>
+      <value>Unit</value>
+    </entry>
+    <entry>
+      <key>Tel-Vorwahl</key>
+      <value>Tel.-Prefix</value>
+    </entry>
+    <entry>
+      <key>Montag</key>
+      <value>Monday</value>
+    </entry>
+    <entry>
+      <key>Tabellentyp</key>
+      <value>Type of Table</value>
+    </entry>
+    <entry>
+      <key>Beginnt um</key>
+      <value>Begins at</value>
+    </entry>
+    <entry>
+      <key>Strasse</key>
+      <value>Street</value>
+    </entry>
+    <entry>
+      <key>date_new_rel</key>
+      <value>date_new_rel</value>
+    </entry>
+    <entry>
+      <key>Stufe</key>
+      <value>Level</value>
+    </entry>
+    <entry>
+      <key>Geben Sie hier eine RegEx an.</key>
+      <value>Indicate a RegEx here.</value>
+    </entry>
+    <entry>
+      <key>Weitergeben</key>
+      <value>Pass</value>
+    </entry>
+    <entry>
+      <key>Freitag</key>
+      <value>Friday</value>
+    </entry>
+    <entry>
+      <key>Kontaktart</key>
+      <value>Type of Contact</value>
+    </entry>
+    <entry>
+      <key>Validierung</key>
+      <value>Validation</value>
+    </entry>
+    <entry>
+      <key>Zahlungsbed.</key>
+      <value>Payment cond.</value>
+    </entry>
+    <entry>
+      <key>Angebotsdatum</key>
+      <value>Date of Offer</value>
+    </entry>
+    <entry>
+      <key>Kunden-Nr.</key>
+      <value>Customer-No.</value>
+    </entry>
+    <entry>
+      <key>Kalender</key>
+      <value>Calendar</value>
+    </entry>
+    <entry>
+      <key>Kundenstammblatt</key>
+      <value>Customer Master Data Sheet</value>
+    </entry>
+    <entry>
+      <key>dd.MM.yy HH:mm</key>
+      <value>dd.MM.yy HH:mm</value>
+    </entry>
+    <entry>
+      <key>Sortierung</key>
+      <value>Sorting</value>
+    </entry>
+    <entry>
+      <key>Projekt</key>
+      <value>Project</value>
+    </entry>
+    <entry>
+      <key>Status</key>
+      <value>Status</value>
+    </entry>
+    <entry>
+      <key>abweichende Briefanrede</key>
+      <value>Differing Letter Salutation</value>
+    </entry>
+    <entry>
+      <key>Schriftfarbe</key>
+      <value>Font Colour</value>
+    </entry>
+    <entry>
+      <key>Vorname</key>
+      <value>First Name</value>
+    </entry>
+    <entry>
+      <key>SOURCE</key>
+      <value>SOURCE</value>
+    </entry>
+    <entry>
+      <key>Zuständig</key>
+      <value>Responsible</value>
+    </entry>
+    <entry>
+      <key>Letzte Änderung am:</key>
+      <value>Last change on:</value>
+    </entry>
+    <entry>
+      <key>Erinnerung</key>
+      <value>Reminder</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Empfänger</key>
+      <value>&amp;amp;Recipient</value>
+    </entry>
+    <entry>
+      <key>Rechte vergeben</key>
+      <value>Distribute Right</value>
+    </entry>
+    <entry>
+      <key>Distrikt</key>
+      <value>District</value>
+    </entry>
+    <entry>
+      <key>Angebotsnummer</key>
+      <value>Offer Number</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Personen</key>
+      <value>&amp;amp;Persons</value>
+    </entry>
+    <entry>
+      <key>Importspalte</key>
+      <value>Import Column</value>
+    </entry>
+    <entry>
+      <key>Kategorie</key>
+      <value>Category</value>
+    </entry>
+    <entry>
+      <key>Fragen</key>
+      <value>Questions</value>
+    </entry>
+    <entry>
+      <key>LEADID</key>
+      <value>LEADID</value>
+    </entry>
+    <entry>
+      <key>Datentyp</key>
+      <value>Data Type</value>
+    </entry>
+    <entry>
+      <key>Dauer</key>
+      <value>Duration</value>
+    </entry>
+    <entry>
+      <key>Anrede</key>
+      <value>Salutation</value>
+    </entry>
+    <entry>
+      <key>Hinzufügen</key>
+      <value>Add</value>
+    </entry>
+    <entry>
+      <key>Telefon</key>
+      <value>Telephone</value>
+    </entry>
+    <entry>
+      <key>geprüft</key>
+      <value>checked</value>
+    </entry>
+    <entry>
+      <key>Normal</key>
+      <value>Normal</value>
+    </entry>
+    <entry>
+      <key>DATE_EDIT</key>
+      <value>DATE_EDIT</value>
+    </entry>
+    <entry>
+      <key>Funktion</key>
+      <value>Function</value>
+    </entry>
+    <entry>
+      <key>date_edit</key>
+      <value>date_edit</value>
+    </entry>
+    <entry>
+      <key>Personen</key>
+      <value>People</value>
+    </entry>
+    <entry>
+      <key>Internet</key>
+      <value>Internet</value>
+    </entry>
+    <entry>
+      <key>Admin</key>
+      <value>Admin</value>
+    </entry>
+    <entry>
+      <key>Verteiler hinzufügen</key>
+      <value>Add Distribution List</value>
+    </entry>
+    <entry>
+      <key>Betreff</key>
+      <value>Subject</value>
+    </entry>
+    <entry>
+      <key>Ja</key>
+      <value>Yes</value>
+    </entry>
+    <entry>
+      <key>Nein</key>
+      <value>No</value>
+    </entry>
+    <entry>
+      <key>Constraint</key>
+      <value>Constraint</value>
+    </entry>
+    <entry>
+      <key>Max. Anzahl</key>
+      <value>Max Number</value>
+    </entry>
+    <entry>
+      <key>Fusstext kurz</key>
+      <value>Short Footer Text</value>
+    </entry>
+    <entry>
+      <key>Ende-Datum</key>
+      <value>End Date</value>
+    </entry>
+    <entry>
+      <key>Zielspalte</key>
+      <value>Target Column</value>
+    </entry>
+    <entry>
+      <key>Beschreibung</key>
+      <value>Description</value>
+    </entry>
+    <entry>
+      <key>von</key>
+      <value>from</value>
+    </entry>
+    <entry>
+      <key>Schrift</key>
+      <value>Font</value>
+    </entry>
+    <entry>
+      <key>Beiname</key>
+      <value>Surname</value>
+    </entry>
+    <entry>
+      <key>Sendedatum</key>
+      <value>Date of Sending</value>
+    </entry>
+    <entry>
+      <key>Aufgaben</key>
+      <value>Tasks</value>
+    </entry>
+    <entry>
+      <key>OFFER_ID</key>
+      <value>OFFER_ID</value>
+    </entry>
+    <entry>
+      <key>ISO2</key>
+      <value>ISO2</value>
+    </entry>
+    <entry>
+      <key>Prio</key>
+      <value>Prio</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Historie</key>
+      <value>&amp;amp;History</value>
+    </entry>
+    <entry>
+      <key>Nr.</key>
+      <value>No.</value>
+    </entry>
+    <entry>
+      <key>Rückläufer</key>
+      <value>Returns</value>
+    </entry>
+    <entry>
+      <key>Code</key>
+      <value>Code</value>
+    </entry>
+    <entry>
+      <key>Kein</key>
+      <value>None</value>
+    </entry>
+    <entry>
+      <key>alle markierten löschen</key>
+      <value>Delete All Selected</value>
+    </entry>
+    <entry>
+      <key>date_new</key>
+      <value>date_new</value>
+    </entry>
+    <entry>
+      <key>DUP_CHECK_DONE</key>
+      <value>DUP_CHECK_DONE</value>
+    </entry>
+    <entry>
+      <key>Preisliste</key>
+      <value>Price List</value>
+    </entry>
+    <entry>
+      <key>PLZ / Ort</key>
+      <value>Zip Code/City</value>
+    </entry>
+    <entry>
+      <key>USER_EDIT</key>
+      <value>USER_EDIT</value>
+    </entry>
+    <entry>
+      <key>Dienstag</key>
+      <value>Tuesday</value>
+    </entry>
+    <entry>
+      <key>I</key>
+      <value>I</value>
+    </entry>
+    <entry>
+      <key>Angelegt von:</key>
+      <value>Created by:</value>
+    </entry>
+    <entry>
+      <key>Endet am</key>
+      <value>Ends on:</value>
+    </entry>
+    <entry>
+      <key>Gesehen</key>
+      <value>Viewed</value>
+    </entry>
+    <entry>
+      <key>Rollen</key>
+      <value>Rolls</value>
+    </entry>
+    <entry>
+      <key>Adresstyp</key>
+      <value>Address Type</value>
+    </entry>
+    <entry>
+      <key>Pos</key>
+      <value>Pos</value>
+    </entry>
+    <entry>
+      <key>aktiv</key>
+      <value>active</value>
+    </entry>
+    <entry>
+      <key>Links</key>
+      <value>Links</value>
+    </entry>
+    <entry>
+      <key>Produktgruppe</key>
+      <value>Product Group</value>
+    </entry>
+    <entry>
+      <key>Ersteller</key>
+      <value>Creator</value>
+    </entry>
+    <entry>
+      <key>Artikel</key>
+      <value>Article</value>
+    </entry>
+    <entry>
+      <key>Frage</key>
+      <value>Question</value>
+    </entry>
+    <entry>
+      <key>Land</key>
+      <value>Country</value>
+    </entry>
+    <entry>
+      <key>Wert</key>
+      <value>Value</value>
+    </entry>
+    <entry>
+      <key>als Standardtelefon setzen</key>
+      <value>set as standard phone</value>
+    </entry>
+    <entry>
+      <key>Sieht</key>
+      <value>Sees</value>
+    </entry>
+    <entry>
+      <key>Untergeordnete Attribute</key>
+      <value>Subordinate Attributes</value>
+    </entry>
+    <entry>
+      <key>Angebots&amp;amp;posten</key>
+      <value>Offer Positions</value>
+    </entry>
+    <entry>
+      <key>Eine Gruppenaufgabe</key>
+      <value>A Group Task</value>
+    </entry>
+    <entry>
+      <key>Label__history__dec</key>
+      <value>Label_history_dec</value>
+    </entry>
+    <entry>
+      <key>Versenden</key>
+      <value>Send</value>
+    </entry>
+    <entry>
+      <key>Eingabevalidierung</key>
+      <value>Entry Validation</value>
+    </entry>
+    <entry>
+      <key>Sprache</key>
+      <value>Language</value>
+    </entry>
+    <entry>
+      <key>Bemerkung</key>
+      <value>Comment</value>
+    </entry>
+    <entry>
+      <key>Rolle</key>
+      <value>Roll</value>
+    </entry>
+    <entry>
+      <key>Medium</key>
+      <value>Medium</value>
+    </entry>
+    <entry>
+      <key>Test!</key>
+      <value>Test!</value>
+    </entry>
+    <entry>
+      <key>steps1_dec</key>
+      <value>steps1_dec</value>
+    </entry>
+    <entry>
+      <key>Angebotsposten</key>
+      <value>Offer Positions</value>
+    </entry>
+    <entry>
+      <key>Mailtext und</key>
+      <value>Mailtext and</value>
+    </entry>
+    <entry>
+      <key>Lieferbed.</key>
+      <value>Delivery cond.</value>
+    </entry>
+    <entry>
+      <key>1. Zeile nicht übernehmen</key>
+      <value>Do not assume 1st line</value>
+    </entry>
+    <entry>
+      <key>Wöchentlich</key>
+      <value>Weekly</value>
+    </entry>
+    <entry>
+      <key>Fällig um</key>
+      <value>Due at</value>
+    </entry>
+    <entry>
+      <key>Termine</key>
+      <value>Appointments</value>
+    </entry>
+    <entry>
+      <key>Attribute</key>
+      <value>Attributes</value>
+    </entry>
+    <entry>
+      <key>IMPORTDEV_ID</key>
+      <value>IMPORTDEV_ID</value>
+    </entry>
+    <entry>
+      <key>Komponente</key>
+      <value>Component</value>
+    </entry>
+    <entry>
+      <key>keytype</key>
+      <value>Key Type</value>
+    </entry>
+    <entry>
+      <key>Mitarbeiter</key>
+      <value>Employees</value>
+    </entry>
+    <entry>
+      <key>Tage</key>
+      <value>Days</value>
+    </entry>
+    <entry>
+      <key>Ende</key>
+      <value>End</value>
+    </entry>
+    <entry>
+      <key>Importdatum</key>
+      <value>Import Date</value>
+    </entry>
+    <entry>
+      <key>Primärschlüssel</key>
+      <value>Primary Key</value>
+    </entry>
+    <entry>
+      <key>Priorität</key>
+      <value>Priority</value>
+    </entry>
+    <entry>
+      <key>Rechte auf den angezeigten Datensatz</key>
+      <value>Rights on the displayed data record</value>
+    </entry>
+    <entry>
+      <key>% erledigt</key>
+      <value>% done</value>
+    </entry>
+    <entry>
+      <key>Position</key>
+      <value>Position</value>
+    </entry>
+    <entry>
+      <key>Lead trotzdem einfügen</key>
+      <value>Add lead anyway</value>
+    </entry>
+    <entry>
+      <key>neue Aufgabe</key>
+      <value>New Task</value>
+    </entry>
+    <entry>
+      <key>1. Attribut</key>
+      <value>1st Attribute</value>
+    </entry>
+    <entry>
+      <key>Stufe setzen</key>
+      <value>Set level</value>
+    </entry>
+    <entry>
+      <key>Jede/Alle</key>
+      <value>Every/All</value>
+    </entry>
+    <entry>
+      <key>Person</key>
+      <value>Person</value>
+    </entry>
+    <entry>
+      <key>h_decoded</key>
+      <value>h_decoded</value>
+    </entry>
+    <entry>
+      <key>Preis</key>
+      <value>Price</value>
+    </entry>
+    <entry>
+      <key>empfangen</key>
+      <value>received</value>
+    </entry>
+    <entry>
+      <key>Serienmail</key>
+      <value>Serial Mail</value>
+    </entry>
+    <entry>
+      <key>Monatlich</key>
+      <value>Monthly</value>
+    </entry>
+    <entry>
+      <key>Woche(n) am</key>
+      <value>Week(s) on</value>
+    </entry>
+    <entry>
+      <key>Export</key>
+      <value>Export</value>
+    </entry>
+    <entry>
+      <key>admin</key>
+      <value>admin</value>
+    </entry>
+    <entry>
+      <key>Type</key>
+      <value>Type</value>
+    </entry>
+    <entry>
+      <key>Neue Aufgabe</key>
+      <value>New Task</value>
+    </entry>
+    <entry>
+      <key>Passwort zurücksetzen</key>
+      <value>Reset password</value>
+    </entry>
+    <entry>
+      <key>Attribut/Wert</key>
+      <value>Attribute/Value</value>
+    </entry>
+    <entry>
+      <key>steps_dec</key>
+      <value>steps_dec</value>
+    </entry>
+    <entry>
+      <key>Null</key>
+      <value>Null</value>
+    </entry>
+    <entry>
+      <key>Jahr</key>
+      <value>Year</value>
+    </entry>
+    <entry>
+      <key>PERS_ID</key>
+      <value>PERS_ID</value>
+    </entry>
+    <entry>
+      <key>Serienende</key>
+      <value>End of Series</value>
+    </entry>
+    <entry>
+      <key>Herkunft</key>
+      <value>Source</value>
+    </entry>
+    <entry>
+      <key>Abteilung</key>
+      <value>Department</value>
+    </entry>
+    <entry>
+      <key>Name</key>
+      <value>Name</value>
+    </entry>
+    <entry>
+      <key>Datenspalte</key>
+      <value>Data Column</value>
+    </entry>
+    <entry>
+      <key>Serie</key>
+      <value>Series</value>
+    </entry>
+    <entry>
+      <key>user_new_rel</key>
+      <value>user_new_rel</value>
+    </entry>
+    <entry>
+      <key>Dubletten</key>
+      <value>Duplicates</value>
+    </entry>
+    <entry>
+      <key>Angebots-Nr</key>
+      <value>Offer-No.</value>
+    </entry>
+    <entry>
+      <key>idcolumn</key>
+      <value>idcolumn</value>
+    </entry>
+    <entry>
+      <key>Datensatz</key>
+      <value>Data Record</value>
+    </entry>
+    <entry>
+      <key>Lead</key>
+      <value>Lead</value>
+    </entry>
+    <entry>
+      <key>Text</key>
+      <value>Text</value>
+    </entry>
+    <entry>
+      <key>Person verwenden</key>
+      <value>Use this person</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Beziehungen</key>
+      <value>&amp;amp;Relations</value>
+    </entry>
+    <entry>
+      <key>Neuer Termin</key>
+      <value>New Appointment</value>
+    </entry>
+    <entry>
+      <key>Schreiben</key>
+      <value>Letter</value>
+    </entry>
+    <entry>
+      <key>Endet nach Anzahl Terminen</key>
+      <value>Ends after number of appointments</value>
+    </entry>
+    <entry>
+      <key>Label_history_dec</key>
+      <value>Label_history_dec</value>
+    </entry>
+    <entry>
+      <key>Spaltenname</key>
+      <value>Column Name</value>
+    </entry>
+    <entry>
+      <key>Hintergrund</key>
+      <value>Background</value>
+    </entry>
+    <entry>
+      <key>verknüpft mit</key>
+      <value>linked with</value>
+    </entry>
+    <entry>
+      <key>LETTERSALUTATION</key>
+      <value>LETTERSALUTATION</value>
+    </entry>
+    <entry>
+      <key>IMPORTDATE</key>
+      <value>IMPORTDATE</value>
+    </entry>
+    <entry>
+      <key>Minuten</key>
+      <value>Minutes</value>
+    </entry>
+    <entry>
+      <key>Start-Datum</key>
+      <value>Start Date</value>
+    </entry>
+    <entry>
+      <key>Termin</key>
+      <value>Appointment</value>
+    </entry>
+    <entry>
+      <key>Allgemein</key>
+      <value>General</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Stufen</key>
+      <value>&amp;amp;Levels</value>
+    </entry>
+    <entry>
+      <key>gesendet</key>
+      <value>sent</value>
+    </entry>
+    <entry>
+      <key>ORG_ID</key>
+      <value>ORG_ID</value>
+    </entry>
+    <entry>
+      <key>Objekt</key>
+      <value>Object</value>
+    </entry>
+    <entry>
+      <key>Attribut</key>
+      <value>Attribute</value>
+    </entry>
+    <entry>
+      <key>Absender</key>
+      <value>Sender</value>
+    </entry>
+    <entry>
+      <key>Trotzdem übernehmen</key>
+      <value>Assume anyway</value>
+    </entry>
+    <entry>
+      <key>Nummer</key>
+      <value>Number</value>
+    </entry>
+    <entry>
+      <key>Ort</key>
+      <value>City</value>
+    </entry>
+    <entry>
+      <key>part_dec</key>
+      <value>part_dec</value>
+    </entry>
+    <entry>
+      <key>Mittwoch</key>
+      <value>Wednesday</value>
+    </entry>
+    <entry>
+      <key>Info</key>
+      <value>Info</value>
+    </entry>
+    <entry>
+      <key>Wird mit dem Login gefüllt, falls es den User schon
+in der SystemDB gbit.</key>
+      <value>Is filled during the Login if the user is already available in the systemDB.</value>
+    </entry>
+    <entry>
+      <key>Hintergrundfarbe</key>
+      <value>Background Colour</value>
+    </entry>
+    <entry>
+      <key>Betreffzeile</key>
+      <value>Subject Line</value>
+    </entry>
+    <entry>
+      <key>Mails personalisieren (werden dann als Einzelmails versandt)</key>
+      <value>Personalise Mails (will then be sent individually)</value>
+    </entry>
+    <entry>
+      <key>Untergeordnete Keywords</key>
+      <value>Subordinate Keywords</value>
+    </entry>
+    <entry>
+      <key>privat</key>
+      <value>private</value>
+    </entry>
+    <entry>
+      <key>Nummer / Adresse</key>
+      <value>Number / Address</value>
+    </entry>
+    <entry>
+      <key>Label_comm_dec</key>
+      <value>Label_comm_dec</value>
+    </entry>
+    <entry>
+      <key>Verwendung</key>
+      <value>Assignment</value>
+    </entry>
+    <entry>
+      <key>2. Attribut</key>
+      <value>2nd Attribute</value>
+    </entry>
+    <entry>
+      <key>Mitglieder des Verteilers</key>
+      <value>Members of the Distribution List</value>
+    </entry>
+    <entry>
+      <key>Kategorien</key>
+      <value>Categories</value>
+    </entry>
+    <entry>
+      <key>MAIL_ID</key>
+      <value>MAIL_ID</value>
+    </entry>
+    <entry>
+      <key>Ändern</key>
+      <value>Change</value>
+    </entry>
+    <entry>
+      <key>Fax</key>
+      <value>Fax</value>
+    </entry>
+    <entry>
+      <key>Angebot</key>
+      <value>Offer</value>
+    </entry>
+    <entry>
+      <key>Angelegt am:</key>
+      <value>Created on:</value>
+    </entry>
+    <entry>
+      <key>Frame</key>
+      <value>Frame</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Definition</key>
+      <value>&amp;amp;Definition</value>
+    </entry>
+    <entry>
+      <key>endet um</key>
+      <value>ends at</value>
+    </entry>
+    <entry>
+      <key>Jährlich</key>
+      <value>Annual</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Aufgaben</key>
+      <value>&amp;amp;Tasks</value>
+    </entry>
+    <entry>
+      <key>Dublette</key>
+      <value>Duplicate</value>
+    </entry>
+    <entry>
+      <key>Titel</key>
+      <value>Title</value>
+    </entry>
+    <entry>
+      <key>Bezeichnung</key>
+      <value>Designation</value>
+    </entry>
+    <entry>
+      <key>#,##0</key>
+      <value>#,##0</value>
+    </entry>
+    <entry>
+      <key>Donnerstag</key>
+      <value>Thursday</value>
+    </entry>
+    <entry>
+      <key>alle</key>
+      <value>all</value>
+    </entry>
+    <entry>
+      <key>Mehrere Einzelaufgaben</key>
+      <value>Several Individual Tasks</value>
+    </entry>
+    <entry>
+      <key>DATE_NEW</key>
+      <value>DATE_NEW</value>
+    </entry>
+    <entry>
+      <key>DB-Table</key>
+      <value>DB Table</value>
+    </entry>
+    <entry>
+      <key>Dokument</key>
+      <value>Document</value>
+    </entry>
+    <entry>
+      <key>Kopftext kurz</key>
+      <value>Short Header Text</value>
+    </entry>
+    <entry>
+      <key>Importdatei</key>
+      <value>Import File</value>
+    </entry>
+    <entry>
+      <key>Login</key>
+      <value>Login</value>
+    </entry>
+    <entry>
+      <key>Max. Anz. Teiln.</key>
+      <value>Max. No. Part.</value>
+    </entry>
+    <entry>
+      <key>Erg.</key>
+      <value>Comp.</value>
+    </entry>
+    <entry>
+      <key>part_rel</key>
+      <value>part_rel</value>
+    </entry>
+    <entry>
+      <key>EE dd.MM.yyyy</key>
+      <value>EE dd.MM.yyyy</value>
+    </entry>
+    <entry>
+      <key>Serienmuster</key>
+      <value>Serial Pattern</value>
+    </entry>
+    <entry>
+      <key>STATE</key>
+      <value>STATE</value>
+    </entry>
+    <entry>
+      <key>Verteiler</key>
+      <value>Distribution List</value>
+    </entry>
+    <entry>
+      <key>Kommunikation</key>
+      <value>Communication</value>
+    </entry>
+    <entry>
+      <key>zuständig</key>
+      <value>responsible</value>
+    </entry>
+    <entry>
+      <key>Art</key>
+      <value>Type</value>
+    </entry>
+    <entry>
+      <key>Sprachkürzel</key>
+      <value>Language Abbreviation</value>
+    </entry>
+    <entry>
+      <key>STATUS</key>
+      <value>STATUS</value>
+    </entry>
+    <entry>
+      <key>user_edit_rel</key>
+      <value>user_edit_rel</value>
+    </entry>
+    <entry>
+      <key>Lesen</key>
+      <value>Read</value>
+    </entry>
+    <entry>
+      <key>Mailadresse</key>
+      <value>Mail Address</value>
+    </entry>
+    <entry>
+      <key>Kein Enddatum</key>
+      <value>No end date</value>
+    </entry>
+    <entry>
+      <key>Menge</key>
+      <value>Quantity</value>
+    </entry>
+    <entry>
+      <key>DEPARTMENT</key>
+      <value>DEPARTMENT</value>
+    </entry>
+    <entry>
+      <key>Organisation</key>
+      <value>Organisation</value>
+    </entry>
+    <entry>
+      <key>my ADITO</key>
+      <value>my ADITO</value>
+    </entry>
+    <entry>
+      <key>CRLF</key>
+      <value>CRLF</value>
+    </entry>
+    <entry>
+      <key>Zieltabelle</key>
+      <value>Target Table</value>
+    </entry>
+    <entry>
+      <key>Label__pers__dec</key>
+      <value>Label_pers_dec</value>
+    </entry>
+    <entry>
+      <key>Kunde</key>
+      <value>Customer</value>
+    </entry>
+    <entry>
+      <key>fällig am</key>
+      <value>due at</value>
+    </entry>
+    <entry>
+      <key>name</key>
+      <value>name</value>
+    </entry>
+    <entry>
+      <key>Datum</key>
+      <value>Date</value>
+    </entry>
+    <entry>
+      <key>Teilnehmer</key>
+      <value>Participant</value>
+    </entry>
+    <entry>
+      <key>Versendet am</key>
+      <value>Sent on</value>
+    </entry>
+    <entry>
+      <key>adito_user</key>
+      <value>adito_user</value>
+    </entry>
+    <entry>
+      <key>Niedrig</key>
+      <value>Low</value>
+    </entry>
+    <entry>
+      <key>Endet um</key>
+      <value>Ends at</value>
+    </entry>
+    <entry>
+      <key>Report</key>
+      <value>Report</value>
+    </entry>
+    <entry>
+      <key>Bedingung</key>
+      <value>Condition</value>
+    </entry>
+    <entry>
+      <key>Markierten verwenden</key>
+      <value>Use selected</value>
+    </entry>
+    <entry>
+      <key>Label_CallCenter</key>
+      <value>Label_callcenter</value>
+    </entry>
+    <entry>
+      <key>Sender</key>
+      <value>Sender</value>
+    </entry>
+    <entry>
+      <key>Dokumente</key>
+      <value>Documents</value>
+    </entry>
+    <entry>
+      <key>Nachname</key>
+      <value>Surname</value>
+    </entry>
+    <entry>
+      <key>Filter</key>
+      <value>Filter</value>
+    </entry>
+    <entry>
+      <key>REGION</key>
+      <value>REGION</value>
+    </entry>
+    <entry>
+      <key>user_new</key>
+      <value>user_new</value>
+    </entry>
+    <entry>
+      <key>Anzahl</key>
+      <value>Number</value>
+    </entry>
+    <entry>
+      <key>Stadt</key>
+      <value>City</value>
+    </entry>
+    <entry>
+      <key>Adresse</key>
+      <value>Address</value>
+    </entry>
+    <entry>
+      <key>Leadimport</key>
+      <value>Lead Import</value>
+    </entry>
+    <entry>
+      <key>DB-Spalte</key>
+      <value>DB-Column</value>
+    </entry>
+    <entry>
+      <key>Email</key>
+      <value>Email</value>
+    </entry>
+    <entry>
+      <key>dd.MM.yyyy HH:mm</key>
+      <value>dd.MM.yyyy HH:mm</value>
+    </entry>
+    <entry>
+      <key>EEEE, dd.MM.yyyy</key>
+      <value>EEEE, dd.MM.yyyy</value>
+    </entry>
+    <entry>
+      <key>Org/Pers verwenden</key>
+      <value>Use org/pers</value>
+    </entry>
+    <entry>
+      <key>Produktnummer</key>
+      <value>Product Number</value>
+    </entry>
+    <entry>
+      <key>Tabellen</key>
+      <value>Tables</value>
+    </entry>
+    <entry>
+      <key>DB-Tabellenname</key>
+      <value>DB Table Name</value>
+    </entry>
+    <entry>
+      <key>Antwortauswahl</key>
+      <value>Answer Selection</value>
+    </entry>
+    <entry>
+      <key>Exportdatei</key>
+      <value>Export File</value>
+    </entry>
+    <entry>
+      <key>Nächste Frage</key>
+      <value>Next Question</value>
+    </entry>
+    <entry>
+      <key>als Trennzeichen verwenden</key>
+      <value>Use as separator</value>
+    </entry>
+    <entry>
+      <key>Zeichen (feste Länge)</key>
+      <value>Symbol (fixed length)</value>
+    </entry>
+    <entry>
+      <key>Ref.Integrität</key>
+      <value>Ref. Integrity</value>
+    </entry>
+    <entry>
+      <key>verknüpfen mit</key>
+      <value>link with</value>
+    </entry>
+    <entry>
+      <key>Schlüsselwörter</key>
+      <value>Key Words</value>
+    </entry>
+    <entry>
+      <key>Bewertung</key>
+      <value>Assessment</value>
+    </entry>
+    <entry>
+      <key>Prozess</key>
+      <value>Process</value>
+    </entry>
+    <entry>
+      <key>Symbol</key>
+      <value>Symbol</value>
+    </entry>
+    <entry>
+      <key>Datum und Zeit</key>
+      <value>Date and Time</value>
+    </entry>
+    <entry>
+      <key>Dezimalbruch</key>
+      <value>Decimal Fraction</value>
+    </entry>
+    <entry>
+      <key>Filter zurücksetzen</key>
+      <value>Reset filter</value>
+    </entry>
+    <entry>
+      <key>Daten leeren</key>
+      <value>Empty Data</value>
+    </entry>
+    <entry>
+      <key>Tabellenspalten</key>
+      <value>Table Columns</value>
+    </entry>
+    <entry>
+      <key>Numerisch</key>
+      <value>Numerical</value>
+    </entry>
+    <entry>
+      <key>Tabelle</key>
+      <value>Table</value>
+    </entry>
+    <entry>
+      <key>Benutzer</key>
+      <value>User</value>
+    </entry>
+    <entry>
+      <key>Repository-Übernahme</key>
+      <value>Repository takeover</value>
+    </entry>
+    <entry>
+      <key>XML-Tabellendeklaration importieren</key>
+      <value>Import xml table declaration</value>
+    </entry>
+    <entry>
+      <key>Ausgewählte Tabelle(n) nach XML exportieren</key>
+      <value>Export selected table(s) to xml</value>
+    </entry>
+    <entry>
+      <key>Gibt an, ob es sich um eine nur intern
+verwendete Spalte handelt, die nicht in 
+den Listen für Workflows und anderen
+Benutzersichten auftaucht.</key>
+      <value>Indicates if it involves an internally used column which does not occur in the lists for workflows and other user interfaces.</value>
+    </entry>
+    <entry>
+      <key>Version</key>
+      <value>Version</value>
+    </entry>
+    <entry>
+      <key>Selektion hinzufügen</key>
+      <value>Add Selection</value>
+    </entry>
+    <entry>
+      <key>Unicode (variable Länge)</key>
+      <value>Unicode (variable length)</value>
+    </entry>
+    <entry>
+      <key>DB-Name</key>
+      <value>DB Name</value>
+    </entry>
+    <entry>
+      <key>Interne Spalte</key>
+      <value>Internal Column</value>
+    </entry>
+    <entry>
+      <key>Ganzzahl</key>
+      <value>Integer</value>
+    </entry>
+    <entry>
+      <key>Unicode (feste Länge)</key>
+      <value>Unicode (fixed length)</value>
+    </entry>
+    <entry>
+      <key>Addr.format</key>
+      <value>Address Format</value>
+    </entry>
+    <entry>
+      <key>...</key>
+      <value>...</value>
+    </entry>
+    <entry>
+      <key>Ausgabe</key>
+      <value>Output</value>
+    </entry>
+    <entry>
+      <key>Tabellenverwaltung</key>
+      <value>Table Administration</value>
+    </entry>
+    <entry>
+      <key>SQL erzeugen</key>
+      <value>Create SQL</value>
+    </entry>
+    <entry>
+      <key>Flagge</key>
+      <value>Flag</value>
+    </entry>
+    <entry>
+      <key>SQL-Datenbank</key>
+      <value>SQL data base</value>
+    </entry>
+    <entry>
+      <key>Tabellen-Name</key>
+      <value>Table-Name</value>
+    </entry>
+    <entry>
+      <key>Lieferant</key>
+      <value>Supplier</value>
+    </entry>
+    <entry>
+      <key>Branche</key>
+      <value>Industry</value>
+    </entry>
+    <entry>
+      <key>Briefanrede</key>
+      <value>Salutation</value>
+    </entry>
+    <entry>
+      <key>Starte den Import</key>
+      <value>Start the Import</value>
+    </entry>
+    <entry>
+      <key>Opportunity</key>
+      <value>Opportunity</value>
+    </entry>
+    <entry>
+      <key>Binärdaten (blob)</key>
+      <value>Binary Data (blob)</value>
+    </entry>
+    <entry>
+      <key>Länderdaten</key>
+      <value>Country Data</value>
+    </entry>
+    <entry>
+      <key>Zeichen (variable Länge)</key>
+      <value>Symbol (variable length)</value>
+    </entry>
+    <entry>
+      <key>Langname als Kommentar</key>
+      <value>Longname as Comment</value>
+    </entry>
+    <entry>
+      <key>Langer Text / Memo</key>
+      <value>Long Text / Memo</value>
+    </entry>
+    <entry>
+      <key>Mailingname</key>
+      <value>Mailing Name</value>
+    </entry>
+    <entry>
+      <key>DB-Alias</key>
+      <value>DB-Alias</value>
+    </entry>
+    <entry>
+      <key>Zielcode</key>
+      <value>Target Code</value>
+    </entry>
+    <entry>
+      <key>Reklamation</key>
+      <value>Reclamation</value>
+    </entry>
+    <entry>
+      <key>Indexname</key>
+      <value>Index Name</value>
+    </entry>
+    <entry>
+      <key>Mitglieder löschen</key>
+      <value>Delete Members</value>
+    </entry>
+    <entry>
+      <key>Primärschlüssel erzeugen</key>
+      <value>Generate primary key</value>
+    </entry>
+    <entry>
+      <key>QUESTIONNAIREID</key>
+      <value>QUESTIONNAIREID</value>
+    </entry>
+    <entry>
+      <key>A</key>
+      <value>A</value>
+    </entry>
+    <entry>
+      <key>QUESTIONID</key>
+      <value>QUESTIONID</value>
+    </entry>
+    <entry>
+      <key>Im Index enthaltene Spalten</key>
+      <value>Columns contained in the index</value>
+    </entry>
+    <entry>
+      <key>Tabellen anlegen</key>
+      <value>Create Tables</value>
+    </entry>
+    <entry>
+      <key>NULL erlaubt</key>
+      <value>NULL allowed</value>
+    </entry>
+    <entry>
+      <key>Indexverwaltung</key>
+      <value>Index Administration</value>
+    </entry>
+    <entry>
+      <key>TARGETQUESTION_ID</key>
+      <value>TARGETQUESTION_ID</value>
+    </entry>
+    <entry>
+      <key>Unique</key>
+      <value>unique</value>
+    </entry>
+    <entry>
+      <key>Limits prüfen</key>
+      <value>Check Limits</value>
+    </entry>
+    <entry>
+      <key>Antwort</key>
+      <value>Answer</value>
+    </entry>
+    <entry>
+      <key>Interviewdefinition</key>
+      <value>Interview Definition</value>
+    </entry>
+    <entry>
+      <key>Index-SQL mit erzeugen</key>
+      <value>Create index SQL as well</value>
+    </entry>
+    <entry>
+      <key>Daten kopieren</key>
+      <value>Copy Data</value>
+    </entry>
+    <entry>
+      <key>Spaltenliste der Tabelle</key>
+      <value>Column List of the Table</value>
+    </entry>
+    <entry>
+      <key>Liste der Indizes</key>
+      <value>List of Indices</value>
+    </entry>
+    <entry>
+      <key>C</key>
+      <value>C</value>
+    </entry>
+    <entry>
+      <key>Artikel-Nr.</key>
+      <value>Article-No.</value>
+    </entry>
+    <entry>
+      <key>Key-Type*</key>
+      <value>Key-Type*</value>
+    </entry>
+    <entry>
+      <key>Hilfstext</key>
+      <value>Help Text</value>
+    </entry>
+    <entry>
+      <key>Dokumente öffnen</key>
+      <value>Open Documents</value>
+    </entry>
+    <entry>
+      <key>Anruf</key>
+      <value>Call</value>
+    </entry>
+    <entry>
+      <key>Kampagne - Stufe</key>
+      <value>Campaign - Level</value>
+    </entry>
+    <entry>
+      <key>Befragung beenden</key>
+      <value>End Questioning</value>
+    </entry>
+    <entry>
+      <key>Kampagne - Stufe / Interview wählen</key>
+      <value>Campaign - Level / Select Interview</value>
+    </entry>
+    <entry>
+      <key>Interview prüfen</key>
+      <value>Check Interview</value>
+    </entry>
+    <entry>
+      <key>0</key>
+      <value>0</value>
+    </entry>
+    <entry>
+      <key>Betrag netto</key>
+      <value>Total net</value>
+    </entry>
+    <entry>
+      <key>Hinweistext</key>
+      <value>Legend</value>
+    </entry>
+    <entry>
+      <key>Teilnehmer der Kampagne</key>
+      <value>Participants of the Campaign</value>
+    </entry>
+    <entry>
+      <key>Label_Interview</key>
+      <value>Label_interview</value>
+    </entry>
+    <entry>
+      <key>Interview</key>
+      <value>Interview</value>
+    </entry>
+    <entry>
+      <key>Betrag brutto</key>
+      <value>Total gross</value>
+    </entry>
+    <entry>
+      <key>Text eintragen</key>
+      <value>Insert Text</value>
+    </entry>
+    <entry>
+      <key>Where-Definition</key>
+      <value>where-definition</value>
+    </entry>
+    <entry>
+      <key>Anzeige-Spalte</key>
+      <value>Display Column</value>
+    </entry>
+    <entry>
+      <key>ID-Spalte</key>
+      <value>ID column</value>
+    </entry>
+    <entry>
+      <key>Anlass</key>
+      <value>Occasion</value>
+    </entry>
+    <entry>
+      <key>Gelesen markieren</key>
+      <value>Mark as read</value>
+    </entry>
+    <entry>
+      <key>Kreis</key>
+      <value>Circle</value>
+    </entry>
+    <entry>
+      <key>Firma / Name</key>
+      <value>Company / Name</value>
+    </entry>
+    <entry>
+      <key>Erledigt setzen</key>
+      <value>Set done</value>
+    </entry>
+    <entry>
+      <key>Partner</key>
+      <value>Partner</value>
+    </entry>
+    <entry>
+      <key>Adressen</key>
+      <value>Addresses</value>
+    </entry>
+    <entry>
+      <key>gesendet am</key>
+      <value>sent</value>
+    </entry>
+    <entry>
+      <key>An</key>
+      <value>to</value>
+    </entry>
+    <entry>
+      <key>In Repository</key>
+      <value>In repository</value>
+    </entry>
+    <entry>
+      <key>keine Dublette</key>
+      <value>no duplicate</value>
+    </entry>
+    <entry>
+      <key>BCC</key>
+      <value>BCC</value>
+    </entry>
+    <entry>
+      <key>eingehend</key>
+      <value>incoming</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Anhänge</key>
+      <value>&amp;amp;Attachements</value>
+    </entry>
+    <entry>
+      <key>Tabulator</key>
+      <value>Tabulator</value>
+    </entry>
+    <entry>
+      <key>Veranlasser</key>
+      <value>Initiator</value>
+    </entry>
+    <entry>
+      <key>D&amp;amp;okumente</key>
+      <value>Documents</value>
+    </entry>
+    <entry>
+      <key>ausgehend</key>
+      <value>outgoing</value>
+    </entry>
+    <entry>
+      <key>Export Excel</key>
+      <value>Export Excel</value>
+    </entry>
+    <entry>
+      <key>Ausführen</key>
+      <value>Execute</value>
+    </entry>
+    <entry>
+      <key>Standard aufheben</key>
+      <value>Lift Standard</value>
+    </entry>
+    <entry>
+      <key>Order-Spalten</key>
+      <value>Order Columns</value>
+    </entry>
+    <entry>
+      <key>CC</key>
+      <value>CC</value>
+    </entry>
+    <entry>
+      <key>From-Definition</key>
+      <value>from definition</value>
+    </entry>
+    <entry>
+      <key>bev.IK</key>
+      <value>bev.IK</value>
+    </entry>
+    <entry>
+      <key>Customizing</key>
+      <value>Customizing</value>
+    </entry>
+    <entry>
+      <key>Richtung</key>
+      <value>Direction</value>
+    </entry>
+    <entry>
+      <key>mögliche Dublette</key>
+      <value>possible duplicate</value>
+    </entry>
+    <entry>
+      <key>PRODUCTID</key>
+      <value>PRODUCTID</value>
+    </entry>
+    <entry>
+      <key>Stufe enthalten</key>
+      <value>Level contained</value>
+    </entry>
+    <entry>
+      <key>Posteingang</key>
+      <value>Inbox</value>
+    </entry>
+    <entry>
+      <key>Semikolen</key>
+      <value>Semicolon</value>
+    </entry>
+    <entry>
+      <key>Suchen</key>
+      <value>Search</value>
+    </entry>
+    <entry>
+      <key>Straße</key>
+      <value>Street</value>
+    </entry>
+    <entry>
+      <key>bevorzugter InfoKanal</key>
+      <value>preferred info channel</value>
+    </entry>
+    <entry>
+      <key>Kontakt</key>
+      <value>Contact</value>
+    </entry>
+    <entry>
+      <key>leeren</key>
+      <value>empty</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Mail</key>
+      <value>&amp;amp;Mail</value>
+    </entry>
+    <entry>
+      <key>in Zwischenablage übernehmen</key>
+      <value>Assume to Clipboard</value>
+    </entry>
+    <entry>
+      <key>eMail</key>
+      <value>email</value>
+    </entry>
+    <entry>
+      <key>Adressen übernehmen</key>
+      <value>Assume addresses</value>
+    </entry>
+    <entry>
+      <key>#0</key>
+      <value>#0</value>
+    </entry>
+    <entry>
+      <key>dd.MM.yyyy HH:mm:ss</key>
+      <value>dd.MM.yyyy HH:mm:ss</value>
+    </entry>
+    <entry>
+      <key>Teamkalender</key>
+      <value>Team Calendar</value>
+    </entry>
+    <entry>
+      <key>Marketing</key>
+      <value>Marketing</value>
+    </entry>
+    <entry>
+      <key>Angebot Fuss</key>
+      <value>Offer Footer</value>
+    </entry>
+    <entry>
+      <key>Innendienst</key>
+      <value>Indoor Service</value>
+    </entry>
+    <entry>
+      <key>Aussendienst</key>
+      <value>Field Service</value>
+    </entry>
+    <entry>
+      <key>Service</key>
+      <value>Service</value>
+    </entry>
+    <entry>
+      <key>Auftrag Kopf</key>
+      <value>Order Header</value>
+    </entry>
+    <entry>
+      <key>Angebot Kopf</key>
+      <value>Offer Header</value>
+    </entry>
+    <entry>
+      <key>Lang</key>
+      <value>Long</value>
+    </entry>
+    <entry>
+      <key>Auftrag Fuss</key>
+      <value>Order Footer</value>
+    </entry>
+    <entry>
+      <key>Schnelleingabe von Firma, Person und Historie</key>
+      <value>Quick entry of company, contact and history</value>
+    </entry>
+    <entry>
+      <key>Modul</key>
+      <value>Module</value>
+    </entry>
+    <entry>
+      <key>System</key>
+      <value>System</value>
+    </entry>
+    <entry>
+      <key>&amp;quot;</key>
+      <value>&amp;apos;&amp;apos;</value>
+    </entry>
+    <entry>
+      <key>Kampagnen-Auswertung</key>
+      <value>Campaign Analysis</value>
+    </entry>
+    <entry>
+      <key>1</key>
+      <value>1</value>
+    </entry>
+    <entry>
+      <key>letzte</key>
+      <value>last</value>
+    </entry>
+    <entry>
+      <key>Kurzbezeichnung</key>
+      <value>Short Term</value>
+    </entry>
+    <entry>
+      <key>Fragebogen Auswertung</key>
+      <value>Questionnaire analysis</value>
+    </entry>
+    <entry>
+      <key>mit Haken : Teilnehmer welche die markierten Stufe(n) als aktuelle Stufe haben.
+ohne Haken : Teilnehmer welche die anzeigt die markierten Stufe(n) durchlaufen haben.</key>
+      <value>with checkmark: participants with the selected level(s) as current level. without checkmark:participants which have already passed through the current level(s).</value>
+    </entry>
+    <entry>
+      <key>4</key>
+      <value>4</value>
+    </entry>
+    <entry>
+      <key>Setzen</key>
+      <value>Set</value>
+    </entry>
+    <entry>
+      <key>3</key>
+      <value>3</value>
+    </entry>
+    <entry>
+      <key>Lagerbestand</key>
+      <value>Stock</value>
+    </entry>
+    <entry>
+      <key>Artikelnummer</key>
+      <value>Article Number</value>
+    </entry>
+    <entry>
+      <key>2</key>
+      <value>2</value>
+    </entry>
+    <entry>
+      <key>übernommene &amp;amp;Daten</key>
+      <value>Assumed Data</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;SQL</key>
+      <value>&amp;amp;SQL</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Importdaten</key>
+      <value>&amp;amp;Import data</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Hierarchie</key>
+      <value>&amp;amp;Hierarchy</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Spaltenzuordnung</key>
+      <value>&amp;amp;Column allocation</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;XML Import/Export</key>
+      <value>&amp;amp;XML Import/Export</value>
+    </entry>
+    <entry>
+      <key>Be&amp;amp;wertung</key>
+      <value>Assessment</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Befragung</key>
+      <value>&amp;amp;Questioning</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Reverse Engineering</key>
+      <value>&amp;amp;Reverse Engineering</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Dublette</key>
+      <value>&amp;amp;Duplicate</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Verwendung</key>
+      <value>&amp;amp;Disposition</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;SQL und Schema</key>
+      <value>&amp;amp;SQL and Scheme</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Bedingung</key>
+      <value>&amp;amp;Condition</value>
+    </entry>
+    <entry>
+      <key>bis</key>
+      <value>until</value>
+    </entry>
+    <entry>
+      <key>Teil&amp;amp;nehmer</key>
+      <value>Participants</value>
+    </entry>
+    <entry>
+      <key>Tooltip von Beschreibung</key>
+      <value>Tooltip from Description</value>
+    </entry>
+    <entry>
+      <key>-</key>
+      <value>-</value>
+    </entry>
+    <entry>
+      <key>6</key>
+      <value>6</value>
+    </entry>
+    <entry>
+      <key>5</key>
+      <value>5</value>
+    </entry>
+    <entry>
+      <key>Produktname</key>
+      <value>Product Name</value>
+    </entry>
+    <entry>
+      <key>0.00</key>
+      <value>0.00</value>
+    </entry>
+    <entry>
+      <key>Dialog-Systemoptionen Rückgängig</key>
+      <value>Reverse dialogue system options</value>
+    </entry>
+    <entry>
+      <key>Dialog-Repo: Index +</key>
+      <value>Dialogue-Repo: Index +</value>
+    </entry>
+    <entry>
+      <key>klein schreiben</key>
+      <value>write in small letters</value>
+    </entry>
+    <entry>
+      <key>Einzelbrief</key>
+      <value>Individual Letter</value>
+    </entry>
+    <entry>
+      <key>Angaben in Minuten</key>
+      <value>Indications in Minutes</value>
+    </entry>
+    <entry>
+      <key>Orte</key>
+      <value>Cities</value>
+    </entry>
+    <entry>
+      <key>Zeit</key>
+      <value>Time</value>
+    </entry>
+    <entry>
+      <key>Index löschen</key>
+      <value>Delete Index</value>
+    </entry>
+    <entry>
+      <key>Sucht nach fehlenden Indexdefinitionen
+für foreign key-Spalten im Repository</key>
+      <value>Searches for missing index definition for foreign key columns in the repository.</value>
+    </entry>
+    <entry>
+      <key>Verwendung-Frame</key>
+      <value>Use frame</value>
+    </entry>
+    <entry>
+      <key>Teil</key>
+      <value>Part</value>
+    </entry>
+    <entry>
+      <key>Dialog-Historienfilter</key>
+      <value>Dialogue History Filter</value>
+    </entry>
+    <entry>
+      <key>ISO3</key>
+      <value>ISO3</value>
+    </entry>
+    <entry>
+      <key>Dialog-Systemoptionen bearbeiten</key>
+      <value>Process Dialogue System Options</value>
+    </entry>
+    <entry>
+      <key>UserAccount class</key>
+      <value>useraccount class</value>
+    </entry>
+    <entry>
+      <key>Schnelleingabe</key>
+      <value>Quick entry</value>
+    </entry>
+    <entry>
+      <key>Neuer Index</key>
+      <value>New Index</value>
+    </entry>
+    <entry>
+      <key>Schlüsselbegriff</key>
+      <value>Key Word</value>
+    </entry>
+    <entry>
+      <key>Funktionsname aus dem Prozess lib_report zum Aufruf des Reports</key>
+      <value>Function name from the process lib_report for calling the report</value>
+    </entry>
+    <entry>
+      <key>Letzter Lauf</key>
+      <value>Last Run</value>
+    </entry>
+    <entry>
+      <key>Feldtrenner</key>
+      <value>Semicolon</value>
+    </entry>
+    <entry>
+      <key>Filter setzen</key>
+      <value>Set filter</value>
+    </entry>
+    <entry>
+      <key>Option löschen</key>
+      <value>Delete Option</value>
+    </entry>
+    <entry>
+      <key>Geben Sie hier einen Teil eines Wertes
+einer Option ein, um die Liste zu filtern</key>
+      <value>Enter here a part of the value of an option in order to filter the list.</value>
+    </entry>
+    <entry>
+      <key>DB-Aliasname</key>
+      <value>DB Alias Name</value>
+    </entry>
+    <entry>
+      <key>Aktion</key>
+      <value>Action</value>
+    </entry>
+    <entry>
+      <key>Anzahl:</key>
+      <value>Number:</value>
+    </entry>
+    <entry>
+      <key>zu Serienmail</key>
+      <value>to seriel mail</value>
+    </entry>
+    <entry>
+      <key>Name DE</key>
+      <value>Name DE</value>
+    </entry>
+    <entry>
+      <key>Spalte löschen</key>
+      <value>Delete Column</value>
+    </entry>
+    <entry>
+      <key>Gelöschte Einstellungen</key>
+      <value>Deleted Settings</value>
+    </entry>
+    <entry>
+      <key>0.0</key>
+      <value>0.0</value>
+    </entry>
+    <entry>
+      <key>Dialog-Stadtwahl</key>
+      <value>Dialogue City Selection</value>
+    </entry>
+    <entry>
+      <key>Tooltip von bulkactions</key>
+      <value>Tooltip from Bulkactions</value>
+    </entry>
+    <entry>
+      <key>Textbaustein</key>
+      <value>Text Module</value>
+    </entry>
+    <entry>
+      <key>Unterschiede</key>
+      <value>Differences</value>
+    </entry>
+    <entry>
+      <key>TEXTBLOCKID</key>
+      <value>TEXTBLOCKID</value>
+    </entry>
+    <entry>
+      <key>Teilnehmer einem Verteiler zuordnen</key>
+      <value>Allocate participants to a distribution list</value>
+    </entry>
+    <entry>
+      <key>Dialog-Kampagnenwahl
+Dialogframe zum Laden einer gespeicherten Kampagne</key>
+      <value>Dialogue campaign selection Dialogue frame to load a saved campaign</value>
+    </entry>
+    <entry>
+      <key>Indexeigenschaften</key>
+      <value>Index Properties</value>
+    </entry>
+    <entry>
+      <key>Tabellen und Spalten</key>
+      <value>Tables and Columns</value>
+    </entry>
+    <entry>
+      <key>REPORT_ADMINISTRATIONID</key>
+      <value>REPORT_ADMINISTRATIONID</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Auswahlliste</key>
+      <value>&amp;amp;Shortlist</value>
+    </entry>
+    <entry>
+      <key>Starten</key>
+      <value>Start</value>
+    </entry>
+    <entry>
+      <key>Vorhandene Systemoptionen</key>
+      <value>Available System Option</value>
+    </entry>
+    <entry>
+      <key>Stylesheet zur Anzeige im Browser einbinden</key>
+      <value>Integrate stylesheet for display in the browser</value>
+    </entry>
+    <entry>
+      <key>Ortsname</key>
+      <value>City</value>
+    </entry>
+    <entry>
+      <key>Bundesland</key>
+      <value>Federal State</value>
+    </entry>
+    <entry>
+      <key>Währung DE</key>
+      <value>Currency DE</value>
+    </entry>
+    <entry>
+      <key>Tickettitel</key>
+      <value>Ticket Title</value>
+    </entry>
+    <entry>
+      <key>Kopieren</key>
+      <value>Copy</value>
+    </entry>
+    <entry>
+      <key>Texttyp</key>
+      <value>Text Type</value>
+    </entry>
+    <entry>
+      <key>Intervall (min)</key>
+      <value>Interval (min)</value>
+    </entry>
+    <entry>
+      <key>Tooltip von ICONS</key>
+      <value>Tooltip from ICONS</value>
+    </entry>
+    <entry>
+      <key>Historien Datum</key>
+      <value>History Date</value>
+    </entry>
+    <entry>
+      <key>Stufe-Medium</key>
+      <value>Level medium</value>
+    </entry>
+    <entry>
+      <key>Datenbank-Eintrag</key>
+      <value>Database Entry</value>
+    </entry>
+    <entry>
+      <key>Historien Mitarbeiter</key>
+      <value>History Employee</value>
+    </entry>
+    <entry>
+      <key>Komm.-Medium</key>
+      <value>Comm. Media</value>
+    </entry>
+    <entry>
+      <key>markierte Suchen löschen</key>
+      <value>delete selected searches</value>
+    </entry>
+    <entry>
+      <key>Tooltip von SelectionList</key>
+      <value>Tooltip from Selection List</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Massenänderung</key>
+      <value>&amp;amp;Bulk change</value>
+    </entry>
+    <entry>
+      <key>Historien Betreff</key>
+      <value>History Subject</value>
+    </entry>
+    <entry>
+      <key>Historien Info</key>
+      <value>History Info</value>
+    </entry>
+    <entry>
+      <key>Kopiert eine Spaltendefiniton in andere Tabellen</key>
+      <value>Copies a column definition into other tables.</value>
+    </entry>
+    <entry>
+      <key>WM-Status</key>
+      <value>AM Status</value>
+    </entry>
+    <entry>
+      <key>Gelöschte zurückholen</key>
+      <value>Retrieve deleted</value>
+    </entry>
+    <entry>
+      <key>Index-Check</key>
+      <value>Index Check</value>
+    </entry>
+    <entry>
+      <key>Icons</key>
+      <value>Icons</value>
+    </entry>
+    <entry>
+      <key>Error und Task Log</key>
+      <value>Error and Task Log</value>
+    </entry>
+    <entry>
+      <key>Label_Histtoryof</key>
+      <value>Label_historyof</value>
+    </entry>
+    <entry>
+      <key>Anrufen</key>
+      <value>Call</value>
+    </entry>
+    <entry>
+      <key>Eindeutiger Index</key>
+      <value>Clear Index</value>
+    </entry>
+    <entry>
+      <key>Stoppen</key>
+      <value>Stop</value>
+    </entry>
+    <entry>
+      <key>Dialog-Verteiler wählen</key>
+      <value>Selec dialogue distribution list</value>
+    </entry>
+    <entry>
+      <key>Aus Liste entfernen</key>
+      <value>Remove from list</value>
+    </entry>
+    <entry>
+      <key>Systemverwaltung</key>
+      <value>System Administration</value>
+    </entry>
+    <entry>
+      <key>Dialog-Mitarbeiter</key>
+      <value>Dialogue Employee</value>
+    </entry>
+    <entry>
+      <key>Spalte hinzufügen</key>
+      <value>Add Column</value>
+    </entry>
+    <entry>
+      <key>Tooltip von tblsync</key>
+      <value>Tooltip from tblsync</value>
+    </entry>
+    <entry>
+      <key>Beschreibung der Beziehung</key>
+      <value>Description of the Relation</value>
+    </entry>
+    <entry>
+      <key>Attribut bitte auswählen</key>
+      <value>Please select attribute</value>
+    </entry>
+    <entry>
+      <key>Auswahlliste</key>
+      <value>Selection List</value>
+    </entry>
+    <entry>
+      <key>Aktionen in % von der Gesamtteilnehmerzahl</key>
+      <value>Acivities in % of all participants</value>
+    </entry>
+    <entry>
+      <key>Spalte umbenennen</key>
+      <value>Rename column</value>
+    </entry>
+    <entry>
+      <key>Datenbestand prüfen und bereinigen</key>
+      <value>Check and Debug Data Pool</value>
+    </entry>
+    <entry>
+      <key>Feldbegrenzer</key>
+      <value>Field Limiter</value>
+    </entry>
+    <entry>
+      <key>Verknüpfungen</key>
+      <value>Links</value>
+    </entry>
+    <entry>
+      <key>Strukturansicht</key>
+      <value>Structural Display</value>
+    </entry>
+    <entry>
+      <key>E-Mails</key>
+      <value>Emails</value>
+    </entry>
+    <entry>
+      <key>Aktive Serverprozesse</key>
+      <value>Active Server Processes</value>
+    </entry>
+    <entry>
+      <key>Stufe-Status</key>
+      <value>Level-Status</value>
+    </entry>
+    <entry>
+      <key>Zusammenführen</key>
+      <value>Consolidate</value>
+    </entry>
+    <entry>
+      <key>Tooltip von Admin</key>
+      <value>Tooltip from admin</value>
+    </entry>
+    <entry>
+      <key>Schlüsselwort</key>
+      <value>Key Word</value>
+    </entry>
+    <entry>
+      <key>Längengrad</key>
+      <value>Longitude</value>
+    </entry>
+    <entry>
+      <key>Repository-Eintrag</key>
+      <value>Repository entry</value>
+    </entry>
+    <entry>
+      <key>Schlüsselname</key>
+      <value>Key Name</value>
+    </entry>
+    <entry>
+      <key>Dialog-Report Kunde</key>
+      <value>Dialogue Report Customer</value>
+    </entry>
+    <entry>
+      <key>DB-Namen anzeigen</key>
+      <value>Show DB names</value>
+    </entry>
+    <entry>
+      <key>Dialog-Datenbankwahl</key>
+      <value>Dialogue Database Selection</value>
+    </entry>
+    <entry>
+      <key>Versender</key>
+      <value>Sender</value>
+    </entry>
+    <entry>
+      <key>Firmenliste</key>
+      <value>Company List</value>
+    </entry>
+    <entry>
+      <key>WM-Anlass</key>
+      <value>AM Occasion</value>
+    </entry>
+    <entry>
+      <key>Neue Option</key>
+      <value>New Option</value>
+    </entry>
+    <entry>
+      <key>Test für Importer</key>
+      <value>Test for Importer</value>
+    </entry>
+    <entry>
+      <key>Tabellen im Repository</key>
+      <value>Tables in the Repository</value>
+    </entry>
+    <entry>
+      <key>Prozess manuell starten</key>
+      <value>Start Process Manually</value>
+    </entry>
+    <entry>
+      <key>besteht aus</key>
+      <value>consists of</value>
+    </entry>
+    <entry>
+      <key>Rubrik</key>
+      <value>Category</value>
+    </entry>
+    <entry>
+      <key>Spaltendefinition ändern</key>
+      <value>Change Column Definition</value>
+    </entry>
+    <entry>
+      <key>Go</key>
+      <value>Go</value>
+    </entry>
+    <entry>
+      <key>Modul der ausgewählten Tabellen</key>
+      <value>Module of the selected tables</value>
+    </entry>
+    <entry>
+      <key>ErrorLog</key>
+      <value>ErrorLog</value>
+    </entry>
+    <entry>
+      <key>Hausnr.</key>
+      <value>Building-No.</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Tabellen vergleichen</key>
+      <value>&amp;amp;Compare tables</value>
+    </entry>
+    <entry>
+      <key>Aus DB übernehmen</key>
+      <value>Assume from DB</value>
+    </entry>
+    <entry>
+      <key>Preis verwenden</key>
+      <value>Use price</value>
+    </entry>
+    <entry>
+      <key>Server</key>
+      <value>Server</value>
+    </entry>
+    <entry>
+      <key>Gültigkeit</key>
+      <value>Validity</value>
+    </entry>
+    <entry>
+      <key>Anzeige</key>
+      <value>Advert</value>
+    </entry>
+    <entry>
+      <key>ErrorLogID</key>
+      <value>ErrorLogID</value>
+    </entry>
+    <entry>
+      <key>Client</key>
+      <value>Client</value>
+    </entry>
+    <entry>
+      <key>Importer-Lib</key>
+      <value>Importer-lib</value>
+    </entry>
+    <entry>
+      <key>Landesname</key>
+      <value>Country Name</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Kalender</key>
+      <value>&amp;amp;Calendar</value>
+    </entry>
+    <entry>
+      <key>Postleitzahl</key>
+      <value>Zip Code</value>
+    </entry>
+    <entry>
+      <key>Alle Prozesse anzeigen (nicht nur sp_XXX)</key>
+      <value>Show all processes (not only sp_XXX)</value>
+    </entry>
+    <entry>
+      <key>zu erledigende Aufgaben im Zeitraum von</key>
+      <value>tasks to be done in the period of</value>
+    </entry>
+    <entry>
+      <key>Breitengrad</key>
+      <value>Latitude</value>
+    </entry>
+    <entry>
+      <key>Company</key>
+      <value>Company</value>
+    </entry>
+    <entry>
+      <key>Info-Kanal</key>
+      <value>Info-Channel</value>
+    </entry>
+    <entry>
+      <key>Eingang</key>
+      <value>Receipt</value>
+    </entry>
+    <entry>
+      <key>Dialog-Kampagnenschritt</key>
+      <value>Dialogue Campaign Step</value>
+    </entry>
+    <entry>
+      <key>zu erledigende Aufgaben im Zeitraum bis</key>
+      <value>tasks to be done in the period until</value>
+    </entry>
+    <entry>
+      <key>Werbemittel</key>
+      <value>Advertising Media</value>
+    </entry>
+    <entry>
+      <key>Eigenschaft</key>
+      <value>Property</value>
+    </entry>
+    <entry>
+      <key>Kurzbeschreibung</key>
+      <value>Short Description</value>
+    </entry>
+    <entry>
+      <key>Komm.-Adresse</key>
+      <value>Comm. Address</value>
+    </entry>
+    <entry>
+      <key>WM-Produkt</key>
+      <value>AM Product</value>
+    </entry>
+    <entry>
+      <key>Satztrenner</key>
+      <value>Sentence sep.</value>
+    </entry>
+    <entry>
+      <key>von - bis</key>
+      <value>from - until</value>
+    </entry>
+    <entry>
+      <key>wird verwendet von</key>
+      <value>is being used by</value>
+    </entry>
+    <entry>
+      <key>Stufe-Name</key>
+      <value>Level-Name</value>
+    </entry>
+    <entry>
+      <key>TaskLogID</key>
+      <value>tasklogID</value>
+    </entry>
+    <entry>
+      <key>2 Tage</key>
+      <value>2 days</value>
+    </entry>
+    <entry>
+      <key>VCard Import</key>
+      <value>VCard Import</value>
+    </entry>
+    <entry>
+      <key>Suchmaske</key>
+      <value>Search Mask</value>
+    </entry>
+    <entry>
+      <key>1 Tag</key>
+      <value>1 Day</value>
+    </entry>
+    <entry>
+      <key>Tooltip von serverproc</key>
+      <value>Tooltip from serverproc</value>
+    </entry>
+    <entry>
+      <key>Löschdatum</key>
+      <value>Deletion Date</value>
+    </entry>
+    <entry>
+      <key>Intervall</key>
+      <value>Interval</value>
+    </entry>
+    <entry>
+      <key>Tooltip von Anruflisten</key>
+      <value>Tooltip from Call Lists</value>
+    </entry>
+    <entry>
+      <key>Geburtsdatum</key>
+      <value>Date of Birth</value>
+    </entry>
+    <entry>
+      <key>WM-Jahr</key>
+      <value>AM Year</value>
+    </entry>
+    <entry>
+      <key>Produkt-Beschreibung</key>
+      <value>Product Description</value>
+    </entry>
+    <entry>
+      <key>TaskLog</key>
+      <value>TaskLog</value>
+    </entry>
+    <entry>
+      <key>GROSS SCHREIBEN</key>
+      <value>WRITE IN CAPITAL LETTERS</value>
+    </entry>
+    <entry>
+      <key>zurücksetzen</key>
+      <value>reset</value>
+    </entry>
+    <entry>
+      <key>Tooltip von Attribute</key>
+      <value>Tooltip from Attributes</value>
+    </entry>
+    <entry>
+      <key>SQL in Zwischenablage</key>
+      <value>SQL in clipboard</value>
+    </entry>
+    <entry>
+      <key>Tooltip von Log</key>
+      <value>Tooltip from Log</value>
+    </entry>
+    <entry>
+      <key>Aufgabe</key>
+      <value>Task</value>
+    </entry>
+    <entry>
+      <key>OFFERID</key>
+      <value>OFFERID</value>
+    </entry>
+    <entry>
+      <key>WM-Datum</key>
+      <value>AM Date</value>
+    </entry>
+    <entry>
+      <key>Kalender-ID</key>
+      <value>Calendar ID</value>
+    </entry>
+    <entry>
+      <key>für CTI Telefonnummer bereinigen</key>
+      <value>debug phone number for CTI</value>
+    </entry>
+    <entry>
+      <key>Reset filter</key>
+      <value>Reset filter</value>
+    </entry>
+    <entry>
+      <key>Option bearbeiten</key>
+      <value>Process Option</value>
+    </entry>
+    <entry>
+      <key>Dialog-Passwort ändern</key>
+      <value>Change Dialogue-Password</value>
+    </entry>
+    <entry>
+      <key>Bearbeiten</key>
+      <value>Edit</value>
+    </entry>
+    <entry>
+      <key>Tooltip von option</key>
+      <value>Tooltip from Option</value>
+    </entry>
+    <entry>
+      <key>Spaltenlänge</key>
+      <value>Column Length</value>
+    </entry>
+    <entry>
+      <key>Startzeit</key>
+      <value>Start Time</value>
+    </entry>
+    <entry>
+      <key>Adresse export</key>
+      <value>Address Export</value>
+    </entry>
+    <entry>
+      <key>Optionsname</key>
+      <value>Option Name</value>
+    </entry>
+    <entry>
+      <key>Export Tabellenk.</key>
+      <value>Export tablec.</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;User</key>
+      <value>&amp;amp;User</value>
+    </entry>
+    <entry>
+      <key>Serienaktion</key>
+      <value>Serial Action</value>
+    </entry>
+    <entry>
+      <key>WM-Anzahl</key>
+      <value>AM Number</value>
+    </entry>
+    <entry>
+      <key>Unverändert</key>
+      <value>Unchanged</value>
+    </entry>
+    <entry>
+      <key>Historien Medium</key>
+      <value>History Medium</value>
+    </entry>
+    <entry>
+      <key>Erzeugt einzelne Mails anstelle einer Mail,
+in der alle Empfänger als BCC enthalten sind</key>
+      <value>Creates individual mails instead of one mail containing all recipients as BCC.</value>
+    </entry>
+    <entry>
+      <key>Telefonnummer</key>
+      <value>Phone Number</value>
+    </entry>
+    <entry>
+      <key>Durchwahl</key>
+      <value>Extension</value>
+    </entry>
+    <entry>
+      <key>Dialog-Telefonnummerprüfung</key>
+      <value>Dialogue Phone Number Check</value>
+    </entry>
+    <entry>
+      <key>aus dem markierten Verteiler entfernen</key>
+      <value>delete from selected distribution list</value>
+    </entry>
+    <entry>
+      <key>Landesvorwahl</key>
+      <value>Country Code</value>
+    </entry>
+    <entry>
+      <key>Format: Land (Ort) Rufnummer - Durchwahl</key>
+      <value>Format: Country (Place) Phone Number - Extension</value>
+    </entry>
+    <entry>
+      <key>Ortsvorwahl</key>
+      <value>Area Code</value>
+    </entry>
+    <entry>
+      <key>neue Adresse</key>
+      <value>New Address</value>
+    </entry>
+    <entry>
+      <key>aus der markierten Kampagne entfernen</key>
+      <value>delete from selected campaign</value>
+    </entry>
+    <entry>
+      <key>Dialog-EMail/Internet-Adresse</key>
+      <value>Dialogue-Email/Internet Address</value>
+    </entry>
+    <entry>
+      <key>VCard Export</key>
+      <value>VCard Export</value>
+    </entry>
+    <entry>
+      <key>Rufnummer</key>
+      <value>Phone Number</value>
+    </entry>
+    <entry>
+      <key>Tooltip von unlinkedMails</key>
+      <value>Tooltip from Unlinked Mails</value>
+    </entry>
+    <entry>
+      <key>An&amp;amp;ruflisten</key>
+      <value>Call List</value>
+    </entry>
+    <entry>
+      <key>Original Adresse</key>
+      <value>Original Address</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Eigenschaften</key>
+      <value>&amp;amp;Properties</value>
+    </entry>
+    <entry>
+      <key>Posten löschen</key>
+      <value>Delete Position</value>
+    </entry>
+    <entry>
+      <key>Angebote</key>
+      <value>Offers</value>
+    </entry>
+    <entry>
+      <key>jährlich</key>
+      <value>annual</value>
+    </entry>
+    <entry>
+      <key>&amp;gt;</key>
+      <value>&amp;gt;</value>
+    </entry>
+    <entry>
+      <key>=</key>
+      <value>=</value>
+    </entry>
+    <entry>
+      <key>&amp;lt;</key>
+      <value>&amp;lt;</value>
+    </entry>
+    <entry>
+      <key>edt_language</key>
+      <value>edit_language</value>
+    </entry>
+    <entry>
+      <key>AUS</key>
+      <value>OFF</value>
+    </entry>
+    <entry>
+      <key>von (Start)</key>
+      <value>from (start)</value>
+    </entry>
+    <entry>
+      <key>Loyalität</key>
+      <value>Loyalty</value>
+    </entry>
+    <entry>
+      <key>Posten editieren</key>
+      <value>Edit Position</value>
+    </entry>
+    <entry>
+      <key>Proj.Leiter</key>
+      <value>Proj.Leader</value>
+    </entry>
+    <entry>
+      <key>Teilnehmerliste</key>
+      <value>List of Participants</value>
+    </entry>
+    <entry>
+      <key>akt. VK-Preis</key>
+      <value>Curr. Selling Price</value>
+    </entry>
+    <entry>
+      <key>offercode</key>
+      <value>offercode</value>
+    </entry>
+    <entry>
+      <key>0 &amp;apos;Monate&amp;apos;</key>
+      <value>0 &amp;apos; months&amp;apos;</value>
+    </entry>
+    <entry>
+      <key>offen</key>
+      <value>unpaid</value>
+    </entry>
+    <entry>
+      <key>Verantwortlich</key>
+      <value>Responsible</value>
+    </entry>
+    <entry>
+      <key>Reklamations-Nr.</key>
+      <value>Cancellation-No.</value>
+    </entry>
+    <entry>
+      <key>Kalkulation</key>
+      <value>Calculation</value>
+    </entry>
+    <entry>
+      <key>Lokation</key>
+      <value>Location</value>
+    </entry>
+    <entry>
+      <key>Kurs-Kategorie</key>
+      <value>Course Category</value>
+    </entry>
+    <entry>
+      <key>Tooltip von Preisliste</key>
+      <value>Tooltip from Price List</value>
+    </entry>
+    <entry>
+      <key>Projektname</key>
+      <value>Project Name</value>
+    </entry>
+    <entry>
+      <key>Kurs-Nr.</key>
+      <value>Course-No.</value>
+    </entry>
+    <entry>
+      <key>bezahlt</key>
+      <value>paid</value>
+    </entry>
+    <entry>
+      <key>Anmeldeschluss</key>
+      <value>Deadline</value>
+    </entry>
+    <entry>
+      <key>Garantie</key>
+      <value>Warranty</value>
+    </entry>
+    <entry>
+      <key>bis (Start)</key>
+      <value>until (start)</value>
+    </entry>
+    <entry>
+      <key>Teilnahmebestätigung</key>
+      <value>Confirmation of Participation</value>
+    </entry>
+    <entry>
+      <key>Kosten pro Teilnehmer</key>
+      <value>Costs per Participant</value>
+    </entry>
+    <entry>
+      <key>Untertitel 2</key>
+      <value>Subtitle 2</value>
+    </entry>
+    <entry>
+      <key>Untertitel 3</key>
+      <value>Subtitle 3</value>
+    </entry>
+    <entry>
+      <key>Untertitel 1</key>
+      <value>Subtitle 1</value>
+    </entry>
+    <entry>
+      <key>versendet</key>
+      <value>sent</value>
+    </entry>
+    <entry>
+      <key>Wertber.</key>
+      <value>Value Adj.</value>
+    </entry>
+    <entry>
+      <key>betrifft</key>
+      <value>Concerns</value>
+    </entry>
+    <entry>
+      <key>alle in der Rolle &amp;apos;Service&amp;apos;</key>
+      <value>all in the role &amp;apos;service&amp;apos;</value>
+    </entry>
+    <entry>
+      <key>Veranstaltung</key>
+      <value>Event</value>
+    </entry>
+    <entry>
+      <key>Neueintrag</key>
+      <value>New Entry</value>
+    </entry>
+    <entry>
+      <key>Fusstext</key>
+      <value>Footer Text</value>
+    </entry>
+    <entry>
+      <key>Beginn</key>
+      <value>Start</value>
+    </entry>
+    <entry>
+      <key>Phase</key>
+      <value>Level</value>
+    </entry>
+    <entry>
+      <key>st.</key>
+      <value>st.</value>
+    </entry>
+    <entry>
+      <key>Kosten</key>
+      <value>Costs</value>
+    </entry>
+    <entry>
+      <key>Volumen €</key>
+      <value>Volume €</value>
+    </entry>
+    <entry>
+      <key>Min.-Bestand</key>
+      <value>Min.-Stock</value>
+    </entry>
+    <entry>
+      <key>Edit_StatusStart</key>
+      <value>Edit_StatusStart</value>
+    </entry>
+    <entry>
+      <key>wb.</key>
+      <value>wb.</value>
+    </entry>
+    <entry>
+      <key>Projektteam</key>
+      <value>Project Team</value>
+    </entry>
+    <entry>
+      <key>Währ.</key>
+      <value>Curr.</value>
+    </entry>
+    <entry>
+      <key>COMPLAINTID</key>
+      <value>COMPLAINTID</value>
+    </entry>
+    <entry>
+      <key>Tischkarten</key>
+      <value>Place Cards</value>
+    </entry>
+    <entry>
+      <key>E / A</key>
+      <value>E / A</value>
+    </entry>
+    <entry>
+      <key>Faktura</key>
+      <value>Invoice</value>
+    </entry>
+    <entry>
+      <key>Zahlgziel</key>
+      <value>Date/Pay.</value>
+    </entry>
+    <entry>
+      <key>Bezahlt</key>
+      <value>Paid</value>
+    </entry>
+    <entry>
+      <key>Einzelpreis</key>
+      <value>Unit Price</value>
+    </entry>
+    <entry>
+      <key>SALESORDERID</key>
+      <value>SALESORDERID</value>
+    </entry>
+    <entry>
+      <key>Volumen</key>
+      <value>Volume</value>
+    </entry>
+    <entry>
+      <key>Reports</key>
+      <value>Reports</value>
+    </entry>
+    <entry>
+      <key>Gesamtkosten</key>
+      <value>Total costs</value>
+    </entry>
+    <entry>
+      <key>Produkte</key>
+      <value>Products</value>
+    </entry>
+    <entry>
+      <key>EK</key>
+      <value>Purchase Price</value>
+    </entry>
+    <entry>
+      <key>Referenz</key>
+      <value>Reference</value>
+    </entry>
+    <entry>
+      <key>Gebühr (€)</key>
+      <value>Fee (€)</value>
+    </entry>
+    <entry>
+      <key>Meilensteine</key>
+      <value>Milestones</value>
+    </entry>
+    <entry>
+      <key>MS</key>
+      <value>MS</value>
+    </entry>
+    <entry>
+      <key>EK/VK</key>
+      <value>PP/SP</value>
+    </entry>
+    <entry>
+      <key>Posten neu</key>
+      <value>New Position</value>
+    </entry>
+    <entry>
+      <key>gültig ab</key>
+      <value>valid from</value>
+    </entry>
+    <entry>
+      <key>Kostenplan</key>
+      <value>Cost Schedule</value>
+    </entry>
+    <entry>
+      <key>Faktura-Nr</key>
+      <value>Invoice-No</value>
+    </entry>
+    <entry>
+      <key>Mahnung</key>
+      <value>Reminder</value>
+    </entry>
+    <entry>
+      <key>Rab. (%)</key>
+      <value>Disc. (%)</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Detail</key>
+      <value>&amp;amp;Detail</value>
+    </entry>
+    <entry>
+      <key>VK</key>
+      <value>SP</value>
+    </entry>
+    <entry>
+      <key>Meilenstein</key>
+      <value>Milestone</value>
+    </entry>
+    <entry>
+      <key>ab Stückzahl</key>
+      <value>from units</value>
+    </entry>
+    <entry>
+      <key>Person / Firma</key>
+      <value>Person/Company</value>
+    </entry>
+    <entry>
+      <key>Projekt-Nr</key>
+      <value>Project-No.</value>
+    </entry>
+    <entry>
+      <key>Tooltip von Teilnehmer</key>
+      <value>Tooltip from Participants</value>
+    </entry>
+    <entry>
+      <key>akt. EK-Preis</key>
+      <value>Curr. Purchase Price</value>
+    </entry>
+    <entry>
+      <key>EVENTID</key>
+      <value>EVENTID</value>
+    </entry>
+    <entry>
+      <key>Modul B</key>
+      <value>Module B</value>
+    </entry>
+    <entry>
+      <key>Modul A</key>
+      <value>Module A</value>
+    </entry>
+    <entry>
+      <key>Modul D</key>
+      <value>Module D</value>
+    </entry>
+    <entry>
+      <key>Modul C</key>
+      <value>Module C</value>
+    </entry>
+    <entry>
+      <key>Version-Nr</key>
+      <value>Version-No.</value>
+    </entry>
+    <entry>
+      <key>Expertenselektion</key>
+      <value>Expert Selection</value>
+    </entry>
+    <entry>
+      <key>Fakturadatum</key>
+      <value>Date of Invoice</value>
+    </entry>
+    <entry>
+      <key>Personenliste</key>
+      <value>List of People</value>
+    </entry>
+    <entry>
+      <key>Tooltip von Lagerbestand</key>
+      <value>Tooltip from Stock</value>
+    </entry>
+    <entry>
+      <key>0 &amp;apos;Tage&amp;apos;</key>
+      <value>0 &amp;apos;days&amp;apos;</value>
+    </entry>
+    <entry>
+      <key>Produkt-Nr.</key>
+      <value>Product-No.</value>
+    </entry>
+    <entry>
+      <key>Anmeldung</key>
+      <value>Login</value>
+    </entry>
+    <entry>
+      <key>gehört zu Modul</key>
+      <value>related to module</value>
+    </entry>
+    <entry>
+      <key>Fakturatyp</key>
+      <value>Type of Invoice</value>
+    </entry>
+    <entry>
+      <key>Rest</key>
+      <value>Rest</value>
+    </entry>
+    <entry>
+      <key>Reklamations-Liste</key>
+      <value>Cancellation List</value>
+    </entry>
+    <entry>
+      <key>Kostenart</key>
+      <value>Type of Costs</value>
+    </entry>
+    <entry>
+      <key>ges.</key>
+      <value>sent</value>
+    </entry>
+    <entry>
+      <key>An&amp;amp;gebot / Faktura</key>
+      <value>Offer / Invoice</value>
+    </entry>
+    <entry>
+      <key>Tooltip von Kosten</key>
+      <value>Tooltip from Costs</value>
+    </entry>
+    <entry>
+      <key>Rabatt</key>
+      <value>Discount</value>
+    </entry>
+    <entry>
+      <key>MWST</key>
+      <value>VAT</value>
+    </entry>
+    <entry>
+      <key>Produktbild</key>
+      <value>Product Image</value>
+    </entry>
+    <entry>
+      <key>Projektleiter</key>
+      <value>Project Manager</value>
+    </entry>
+    <entry>
+      <key>opt.</key>
+      <value>opt.</value>
+    </entry>
+    <entry>
+      <key>EIN</key>
+      <value>ON</value>
+    </entry>
+    <entry>
+      <key>Assistent</key>
+      <value>Assisstant</value>
+    </entry>
+    <entry>
+      <key>Kopftext</key>
+      <value>Header Text</value>
+    </entry>
+    <entry>
+      <key>#,##0.00 €</key>
+      <value>#,##0.00 €</value>
+    </entry>
+    <entry>
+      <key>Storno</key>
+      <value>Cancellation</value>
+    </entry>
+    <entry>
+      <key>#,##0.0</key>
+      <value>#,##0.00 €</value>
+    </entry>
+    <entry>
+      <key>Mahndat.</key>
+      <value>Date/dun</value>
+    </entry>
+    <entry>
+      <key>Netto</key>
+      <value>Net</value>
+    </entry>
+    <entry>
+      <key>Mahntext kurz</key>
+      <value>Dunning Text Short</value>
+    </entry>
+    <entry>
+      <key>Umsatz</key>
+      <value>Turnover</value>
+    </entry>
+    <entry>
+      <key>PROJECTNUMBER</key>
+      <value>PROJECTNUMBER</value>
+    </entry>
+    <entry>
+      <key>Suche hinzufügen</key>
+      <value>Add Search</value>
+    </entry>
+    <entry>
+      <key>EVENTNUMBER</key>
+      <value>EVENTNUMBER</value>
+    </entry>
+    <entry>
+      <key>Nr</key>
+      <value>no</value>
+    </entry>
+    <entry>
+      <key>Teilnehmer des ausgewählten Verteilers entfernen</key>
+      <value>Delete participants of the selected distribution list</value>
+    </entry>
+    <entry>
+      <key>Reklam.-Nr</key>
+      <value>Canc.-No.</value>
+    </entry>
+    <entry>
+      <key>Anzeigen der Clienthilfe</key>
+      <value>Show the client help</value>
+    </entry>
+    <entry>
+      <key>Teilnehmer der ausgewählten Suche entfernen</key>
+      <value>Delete participants of the selected search</value>
+    </entry>
+    <entry>
+      <key>markierte Teilnehmer entfernen</key>
+      <value>Delete Selected Participants</value>
+    </entry>
+    <entry>
+      <key>Keyword-Check</key>
+      <value>Keyword-Check</value>
+    </entry>
+    <entry>
+      <key>EMPLOYEEID</key>
+      <value>EMPLOYEEID</value>
+    </entry>
+    <entry>
+      <key>Monat</key>
+      <value>Month</value>
+    </entry>
+    <entry>
+      <key>Projekt-Nr.</key>
+      <value>Project-No.</value>
+    </entry>
+    <entry>
+      <key>Projekt Start</key>
+      <value>Project Start</value>
+    </entry>
+    <entry>
+      <key>erstellt</key>
+      <value>generated</value>
+    </entry>
+    <entry>
+      <key>Spesenabrechnung</key>
+      <value>Statement of Expenses</value>
+    </entry>
+    <entry>
+      <key>Rechte</key>
+      <value>Rights</value>
+    </entry>
+    <entry>
+      <key>Belege</key>
+      <value>Receipts</value>
+    </entry>
+    <entry>
+      <key>SALESPROJECTID</key>
+      <value>SALESPROJECTID</value>
+    </entry>
+    <entry>
+      <key>Anzahl  / Phase</key>
+      <value>Number / Phase</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Vertriebsprojekte</key>
+      <value>&amp;amp;Opportunities</value>
+    </entry>
+    <entry>
+      <key>Vertriebsprojekt</key>
+      <value>Opportunity</value>
+    </entry>
+    <entry>
+      <key>Stichwort</key>
+      <value>Keyword</value>
+    </entry>
+    <entry>
+      <key>T€ / Phase</key>
+      <value>T€ / phase</value>
+    </entry>
+    <entry>
+      <key>Neue Person</key>
+      <value>New Person</value>
+    </entry>
+    <entry>
+      <key>Positionen&amp;gt;0, offen&amp;gt;0, versendet, nicht wertberichtigt, nicht storniert</key>
+      <value>Positions&amp;gt;0, unsettled&amp;gt;0, sent, not value-corrected, not cancelled</value>
+    </entry>
+    <entry>
+      <key>löscht ein Attribut bei alle selektierten Datensätze</key>
+      <value>deletes a attribute from all selected data records</value>
+    </entry>
+    <entry>
+      <key>neue Historie für alle selektierten Datensätze</key>
+      <value>new history for all selected data records</value>
+    </entry>
+    <entry>
+      <key>Die aktuelle Selektion einem Verteiler hinzufügen</key>
+      <value>Adding the current selection to a distribution list</value>
+    </entry>
+    <entry>
+      <key>Kopiere in Angebot</key>
+      <value>Copy into Offer</value>
+    </entry>
+    <entry>
+      <key>Export allerselektierten Datensätze</key>
+      <value>Export of all selected data records</value>
+    </entry>
+    <entry>
+      <key>Betrifft</key>
+      <value>Concerns</value>
+    </entry>
+    <entry>
+      <key>Drucke Angebot</key>
+      <value>Print Offer</value>
+    </entry>
+    <entry>
+      <key>Die aktuelle Selektion einer Kampagne hinzufügen</key>
+      <value>Adding the current selection to a campaign</value>
+    </entry>
+    <entry>
+      <key>Die aktuelle Selektion aus einem Verteiler löschen</key>
+      <value>Delete this selection from distributor</value>
+    </entry>
+    <entry>
+      <key>zu Verteiler</key>
+      <value>to Distribution List</value>
+    </entry>
+    <entry>
+      <key>aus Kampagne</key>
+      <value>from campaign</value>
+    </entry>
+    <entry>
+      <key>Diesen Datensatz aus der markierten Kampagne entfernen</key>
+      <value>Delete this data record from the selected campaign</value>
+    </entry>
+    <entry>
+      <key>fügt ein Attribut bei alle selektierten Datensätze ein</key>
+      <value>inserts an attribute into all selected data records</value>
+    </entry>
+    <entry>
+      <key>zu Kampagne</key>
+      <value>to Campaign</value>
+    </entry>
+    <entry>
+      <key>aus Verteiler</key>
+      <value>from distribution list</value>
+    </entry>
+    <entry>
+      <key>Drucke Mahnung</key>
+      <value>Print Reminder</value>
+    </entry>
+    <entry>
+      <key>Serienbrief an alle selektierten Datensätze</key>
+      <value>Serial letter to all selected data records</value>
+    </entry>
+    <entry>
+      <key>aus Serienmail</key>
+      <value>from serial mail</value>
+    </entry>
+    <entry>
+      <key>Neue Historie</key>
+      <value>New History</value>
+    </entry>
+    <entry>
+      <key>Projektliste</key>
+      <value>Project List</value>
+    </entry>
+    <entry>
+      <key>Suchfeld</key>
+      <value>Search Field</value>
+    </entry>
+    <entry>
+      <key>TYPE</key>
+      <value>TYPE</value>
+    </entry>
+    <entry>
+      <key>Attribute löschen</key>
+      <value>Delete Attributes</value>
+    </entry>
+    <entry>
+      <key>ITEMSORT</key>
+      <value>ITEMSORT</value>
+    </entry>
+    <entry>
+      <key>IdCOLUMN</key>
+      <value>IdCOLUMN</value>
+    </entry>
+    <entry>
+      <key>Dialog-Attribute</key>
+      <value>Dialogue Attribute</value>
+    </entry>
+    <entry>
+      <key>ReLATIONID</key>
+      <value>ReLATIONID</value>
+    </entry>
+    <entry>
+      <key>KEYWORDID</key>
+      <value>KEYWORDID</value>
+    </entry>
+    <entry>
+      <key>ATTRID</key>
+      <value>ATTRID</value>
+    </entry>
+    <entry>
+      <key>Attribute eintragen</key>
+      <value>Enter Attributes</value>
+    </entry>
+    <entry>
+      <key>Projekttitel</key>
+      <value>Project Title</value>
+    </entry>
+    <entry>
+      <key>DISTLISTID</key>
+      <value>DISTLISTID</value>
+    </entry>
+    <entry>
+      <key>SELECTIONID</key>
+      <value>SELECTIONID</value>
+    </entry>
+    <entry>
+      <key>IDCOlumn</key>
+      <value>IDCOlumn</value>
+    </entry>
+    <entry>
+      <key>Export aller selektierten Datensätze</key>
+      <value>Export all selected data records</value>
+    </entry>
+    <entry>
+      <key>PERSID</key>
+      <value>PERSID</value>
+    </entry>
+    <entry>
+      <key>SELEKTIERE LEADiD</key>
+      <value>SELECTED LEADiD</value>
+    </entry>
+    <entry>
+      <key>CAMPAIGNID</key>
+      <value>CAMPAIGNID</value>
+    </entry>
+    <entry>
+      <key>Antworten</key>
+      <value>Responses</value>
+    </entry>
+    <entry>
+      <key>IDCOLUMN</key>
+      <value>IDCOLUMN</value>
+    </entry>
+    <entry>
+      <key>IDCOLuMN</key>
+      <value>IDCOLuMN</value>
+    </entry>
+    <entry>
+      <key>IDCOlUMN</key>
+      <value>IDCOLUMN</value>
+    </entry>
+    <entry>
+      <key>HISTORYID</key>
+      <value>HISTORYID</value>
+    </entry>
+    <entry>
+      <key>ORGID</key>
+      <value>ORGID</value>
+    </entry>
+    <entry>
+      <key>RELATIONID</key>
+      <value>RELATIONID</value>
+    </entry>
+    <entry>
+      <key>Datum von</key>
+      <value>Date from</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Forecast</key>
+      <value>&amp;amp;Forecast</value>
+    </entry>
+    <entry>
+      <key>Datum bis</key>
+      <value>Date until</value>
+    </entry>
+    <entry>
+      <key>Zahlungsweise</key>
+      <value>Payment method</value>
+    </entry>
+    <entry>
+      <key>Hersteller</key>
+      <value>Developer</value>
+    </entry>
+    <entry>
+      <key>Vertragsnummer</key>
+      <value>Contract Number</value>
+    </entry>
+    <entry>
+      <key>UmsatzY nach WG</key>
+      <value>SalesY in PG</value>
+    </entry>
+    <entry>
+      <key>Vertragsart</key>
+      <value>Type of Contract</value>
+    </entry>
+    <entry>
+      <key>Vertrag</key>
+      <value>Contract</value>
+    </entry>
+    <entry>
+      <key>Versendung</key>
+      <value>Sending</value>
+    </entry>
+    <entry>
+      <key>Absatz</key>
+      <value>Sales</value>
+    </entry>
+    <entry>
+      <key>vierteljählich</key>
+      <value>quarterly</value>
+    </entry>
+    <entry>
+      <key>nächste Fälligkeit</key>
+      <value>Next due date</value>
+    </entry>
+    <entry>
+      <key>Verkaufschancen</key>
+      <value>Sales Opportunities</value>
+    </entry>
+    <entry>
+      <key>active_contact</key>
+      <value>active_contact</value>
+    </entry>
+    <entry>
+      <key>Stufe für markierte Kampagnen setzen</key>
+      <value>Set level for selected campaign</value>
+    </entry>
+    <entry>
+      <key>User</key>
+      <value>User</value>
+    </entry>
+    <entry>
+      <key>Status setzen</key>
+      <value>Set status</value>
+    </entry>
+    <entry>
+      <key>Fachadministrator</key>
+      <value>Administrator</value>
+    </entry>
+    <entry>
+      <key>ausgeschieden</key>
+      <value>eliminated</value>
+    </entry>
+    <entry>
+      <key>UmsatzYM nach WG</key>
+      <value>SalesYM in PG</value>
+    </entry>
+    <entry>
+      <key>Vertragsende</key>
+      <value>Expiration date</value>
+    </entry>
+    <entry>
+      <key>Dialog für Routenplanung</key>
+      <value>Dialogue for Route Planning</value>
+    </entry>
+    <entry>
+      <key>Versandstatus</key>
+      <value>Tracking info.</value>
+    </entry>
+    <entry>
+      <key>Reportname</key>
+      <value>Report name</value>
+    </entry>
+    <entry>
+      <key>Vertragsbeginn</key>
+      <value>Beginning date</value>
+    </entry>
+    <entry>
+      <key>CONTRACTID</key>
+      <value>CONTRACTID</value>
+    </entry>
+    <entry>
+      <key>Dialog zum setzen des Status im Frame Werbemittelverwaltung</key>
+      <value>Dialogue for setting the status in the frame administration of advertising material</value>
+    </entry>
+    <entry>
+      <key>Begründung</key>
+      <value>Reasoning</value>
+    </entry>
+    <entry>
+      <key>halbjährlich</key>
+      <value>semiannual</value>
+    </entry>
+    <entry>
+      <key>Funktionsname</key>
+      <value>Function Name</value>
+    </entry>
+    <entry>
+      <key>Wettbewerbsanalyse</key>
+      <value>Competition Analysis</value>
+    </entry>
+    <entry>
+      <key>Zahlweise</key>
+      <value>Payment method</value>
+    </entry>
+    <entry>
+      <key>Brutto</key>
+      <value>Gross</value>
+    </entry>
+    <entry>
+      <key>Vertriebsprojekte</key>
+      <value>Opportunities</value>
+    </entry>
+    <entry>
+      <key>Bericht</key>
+      <value>Report</value>
+    </entry>
+    <entry>
+      <key>Verschieben</key>
+      <value>Shifted</value>
+    </entry>
+    <entry>
+      <key>A&amp;amp;T</key>
+      <value>A&amp;amp;T</value>
+    </entry>
+    <entry>
+      <key>Keyname1</key>
+      <value>Keyname1</value>
+    </entry>
+    <entry>
+      <key>Keyname2</key>
+      <value>Keyname2</value>
+    </entry>
+    <entry>
+      <key>Anruf-Kategorie</key>
+      <value>Category of Call</value>
+    </entry>
+    <entry>
+      <key>Dialog-Support Mitarbeiter</key>
+      <value>Dialogue Support Employee</value>
+    </entry>
+    <entry>
+      <key>erledigt setzen</key>
+      <value>Set done</value>
+    </entry>
+    <entry>
+      <key>Dialog-Aufgaben/Termin-Filter</key>
+      <value>Dialogue Tasks / Appointment Filter</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Dokumente</key>
+      <value>&amp;amp;Documents</value>
+    </entry>
+    <entry>
+      <key>S-Farbe</key>
+      <value>S colour</value>
+    </entry>
+    <entry>
+      <key>delegiert</key>
+      <value>Delegated</value>
+    </entry>
+    <entry>
+      <key>gespeicherte Selektionen</key>
+      <value>saved selections</value>
+    </entry>
+    <entry>
+      <key>max.Teilnehm.</key>
+      <value>Max. Particip.</value>
+    </entry>
+    <entry>
+      <key>Offene Posten</key>
+      <value>Uncleared Invoices</value>
+    </entry>
+    <entry>
+      <key>mit Export öffnen</key>
+      <value>open with export</value>
+    </entry>
+    <entry>
+      <key>FIELDIDS</key>
+      <value>FIELDIDS</value>
+    </entry>
+    <entry>
+      <key>Geburtstagsliste</key>
+      <value>Birthday List</value>
+    </entry>
+    <entry>
+      <key>Geschlecht</key>
+      <value>Gender</value>
+    </entry>
+    <entry>
+      <key>weiblich</key>
+      <value>female</value>
+    </entry>
+    <entry>
+      <key>männlich</key>
+      <value>male</value>
+    </entry>
+    <entry>
+      <key>Kopfanrede</key>
+      <value>Header Salutation</value>
+    </entry>
+    <entry>
+      <key>öffne alle Personen</key>
+      <value>open all persons</value>
+    </entry>
+    <entry>
+      <key>erfasst</key>
+      <value>gathered</value>
+    </entry>
+    <entry>
+      <key>geplant</key>
+      <value>planned</value>
+    </entry>
+    <entry>
+      <key>inaktiv</key>
+      <value>inactive</value>
+    </entry>
+    <entry>
+      <key>Repository Manager</key>
+      <value>Repository Manager</value>
+    </entry>
+    <entry>
+      <key>Attribute hinzufügen</key>
+      <value>Add Attributes</value>
+    </entry>
+    <entry>
+      <key>SQL Selektion</key>
+      <value>SQL Selection</value>
+    </entry>
+    <entry>
+      <key>0,5 Tag</key>
+      <value>0,5 days</value>
+    </entry>
+    <entry>
+      <key>0 Minuten</key>
+      <value>0 Minutes</value>
+    </entry>
+    <entry>
+      <key>6 Stunden</key>
+      <value>6 hours</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Lagerbestand</key>
+      <value>&amp;amp;Stock</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Stückliste</key>
+      <value>&amp;amp;Bill of Lading</value>
+    </entry>
+    <entry>
+      <key>Kollision</key>
+      <value>Collision</value>
+    </entry>
+    <entry>
+      <key>November</key>
+      <value>November</value>
+    </entry>
+    <entry>
+      <key>Dialog eingehender Anruf</key>
+      <value>Dialogue incoming call</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Beschreibung</key>
+      <value>&amp;amp;Description</value>
+    </entry>
+    <entry>
+      <key>4 Stunden</key>
+      <value>4 Hours</value>
+    </entry>
+    <entry>
+      <key>transparent</key>
+      <value>transparent</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Salutation</key>
+      <value>&amp;amp;Salutation</value>
+    </entry>
+    <entry>
+      <key>7 Stunden</key>
+      <value>7 Hours</value>
+    </entry>
+    <entry>
+      <key>Erzeugt:</key>
+      <value>Generated:</value>
+    </entry>
+    <entry>
+      <key>10 Stunden</key>
+      <value>10 Hours</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Log</key>
+      <value>&amp;amp;Log</value>
+    </entry>
+    <entry>
+      <key>5 Stunden</key>
+      <value>5 Hours</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Frame-Rechte</key>
+      <value>&amp;amp;Frame Rights</value>
+    </entry>
+    <entry>
+      <key>Historien-Liste</key>
+      <value>History-List</value>
+    </entry>
+    <entry>
+      <key>2 Stunden</key>
+      <value>2 Hours</value>
+    </entry>
+    <entry>
+      <key>5 Minuten</key>
+      <value>5 Minutes</value>
+    </entry>
+    <entry>
+      <key>Neuanlage</key>
+      <value>New Creation</value>
+    </entry>
+    <entry>
+      <key>September</key>
+      <value>September</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;History</key>
+      <value>&amp;amp;History</value>
+    </entry>
+    <entry>
+      <key>1 Minute</key>
+      <value>1 Minute</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Kosten</key>
+      <value>&amp;amp;Costs</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Optionen</key>
+      <value>&amp;amp;Options</value>
+    </entry>
+    <entry>
+      <key>7 Tage</key>
+      <value>7 Days</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Fragen</key>
+      <value>&amp;amp;Questions</value>
+    </entry>
+    <entry>
+      <key>3 Stunden</key>
+      <value>3 Hours</value>
+    </entry>
+    <entry>
+      <key>30 Minuten</key>
+      <value>30 Minutes</value>
+    </entry>
+    <entry>
+      <key>Frame-Recht</key>
+      <value>Frame Right</value>
+    </entry>
+    <entry>
+      <key>Juni</key>
+      <value>June</value>
+    </entry>
+    <entry>
+      <key>Januar</key>
+      <value>January</value>
+    </entry>
+    <entry>
+      <key>Juli</key>
+      <value>July</value>
+    </entry>
+    <entry>
+      <key>9 Stunden</key>
+      <value>9 Hours</value>
+    </entry>
+    <entry>
+      <key>S&amp;amp;ymbole</key>
+      <value>S&amp;amp;ymbols</value>
+    </entry>
+    <entry>
+      <key>1 Stunde</key>
+      <value>1 Hour</value>
+    </entry>
+    <entry>
+      <key>E&amp;amp;xportfelder</key>
+      <value>E&amp;amp;xportfields</value>
+    </entry>
+    <entry>
+      <key>8 Stunden</key>
+      <value>8 Hours</value>
+    </entry>
+    <entry>
+      <key>11 Stunden</key>
+      <value>11 Hours</value>
+    </entry>
+    <entry>
+      <key>15 Minuten</key>
+      <value>15 Minutes</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Texte</key>
+      <value>&amp;amp;Texts</value>
+    </entry>
+    <entry>
+      <key>Mai</key>
+      <value>May</value>
+    </entry>
+    <entry>
+      <key>Februar</key>
+      <value>February</value>
+    </entry>
+    <entry>
+      <key>April</key>
+      <value>April</value>
+    </entry>
+    <entry>
+      <key>März</key>
+      <value>March</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Teilnehmer</key>
+      <value>&amp;amp;Participant</value>
+    </entry>
+    <entry>
+      <key>A&amp;amp;dressen</key>
+      <value>A&amp;amp;ddresses</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Preisliste</key>
+      <value>&amp;amp;Pricelist</value>
+    </entry>
+    <entry>
+      <key>Vertrags-Nr.</key>
+      <value>Contract-No.</value>
+    </entry>
+    <entry>
+      <key>Dezember</key>
+      <value>December</value>
+    </entry>
+    <entry>
+      <key>10 Minuten</key>
+      <value>10 Minutes</value>
+    </entry>
+    <entry>
+      <key>August</key>
+      <value>August</value>
+    </entry>
+    <entry>
+      <key>Oktober</key>
+      <value>October</value>
+    </entry>
+    <entry>
+      <key>Logging</key>
+      <value>Logging</value>
+    </entry>
+    <entry>
+      <key>Anrufer öffnen</key>
+      <value>Open Caller</value>
+    </entry>
+    <entry>
+      <key>€/TN</key>
+      <value>€/TN</value>
+    </entry>
+    <entry>
+      <key>€</key>
+      <value>€</value>
+    </entry>
+    <entry>
+      <key>Ressource eintragen</key>
+      <value>to enter  resources</value>
+    </entry>
+    <entry>
+      <key>Ressourcen</key>
+      <value>resources</value>
+    </entry>
+    <entry>
+      <key>variable Kosten</key>
+      <value>variable costs</value>
+    </entry>
+    <entry>
+      <key>Ressourcen-Kalender</key>
+      <value>ressource - calendar</value>
+    </entry>
+    <entry>
+      <key>fixe Kosten</key>
+      <value>fixed costs</value>
+    </entry>
+    <entry>
+      <key>Ressource</key>
+      <value>resource</value>
+    </entry>
+    <entry>
+      <key>Mahnst.</key>
+      <value>dunning level</value>
+    </entry>
+    <entry>
+      <key>Kontoinhaber</key>
+      <value>account holder</value>
+    </entry>
+    <entry>
+      <key>Kontoart</key>
+      <value>account type</value>
+    </entry>
+    <entry>
+      <key>0.00 &amp;apos;%&amp;apos;</key>
+      <value>0.00&amp;apos;%&amp;apos;</value>
+    </entry>
+    <entry>
+      <key>Ausrüstung</key>
+      <value>Equipment</value>
+    </entry>
+    <entry>
+      <key>Bankdaten</key>
+      <value>Bank details</value>
+    </entry>
+    <entry>
+      <key>Bankname</key>
+      <value>bank name</value>
+    </entry>
+    <entry>
+      <key>BLZ</key>
+      <value>BIC</value>
+    </entry>
+    <entry>
+      <key>Zu Kampagne hinzufügen</key>
+      <value>to Campaign</value>
+    </entry>
+    <entry>
+      <key>Browser</key>
+      <value>browser</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Klassifikation</key>
+      <value>&amp;amp;classification</value>
+    </entry>
+    <entry>
+      <key>Gesellschaftsform</key>
+      <value>corporate structure</value>
+    </entry>
+    <entry>
+      <key>Historie eintragen</key>
+      <value>insert History</value>
+    </entry>
+    <entry>
+      <key>Kontaktbericht</key>
+      <value>call report</value>
+    </entry>
+    <entry>
+      <key>neu hinzufügen</key>
+      <value>new</value>
+    </entry>
+    <entry>
+      <key>Dialog-Auswahl Verteiler</key>
+      <value>dialogue-choice distributor</value>
+    </entry>
+    <entry>
+      <key>Neues Angebot</key>
+      <value>New</value>
+    </entry>
+    <entry>
+      <key>Konto-Nr.</key>
+      <value>account-no.</value>
+    </entry>
+    <entry>
+      <key>Erstinstallation</key>
+      <value>initial installation</value>
+    </entry>
+    <entry>
+      <key>Steuernummer</key>
+      <value>Tax number</value>
+    </entry>
+    <entry>
+      <key>Zu Serienmail</key>
+      <value>to seriel mail</value>
+    </entry>
+    <entry>
+      <key>EU-Member</key>
+      <value>EU-Member</value>
+    </entry>
+    <entry>
+      <key>Zu Verteiler hinzufügen</key>
+      <value>to Distribution List</value>
+    </entry>
+    <entry>
+      <key>IBAN</key>
+      <value>IBAN</value>
+    </entry>
+    <entry>
+      <key>POBox Name</key>
+      <value>POBox Name</value>
+    </entry>
+    <entry>
+      <key>UmsST</key>
+      <value>VAT</value>
+    </entry>
+    <entry>
+      <key>#,##0.00 &amp;apos;%&amp;apos;</key>
+      <value>#,##0.00&amp;apos;%&amp;apos;</value>
+    </entry>
+    <entry>
+      <key>EQUIPMENTINVENTORYID</key>
+      <value>EQUIPMENTINVENTORYID</value>
+    </entry>
+    <entry>
+      <key>Dialog-Modulauswahl
+Dialogframe zum Einfügen eines neuen Moduls</key>
+      <value>dialogue-module-select dialogue frame to insert a new module</value>
+    </entry>
+    <entry>
+      <key>Swiftcode</key>
+      <value>Swiftcode</value>
+    </entry>
+    <entry>
+      <key>Betrag MWST</key>
+      <value>Amount tax</value>
+    </entry>
+    <entry>
+      <key>BANKACCOUNTID</key>
+      <value>BANKACCOUNTID</value>
+    </entry>
+    <entry>
+      <key>Umsatzsteuernummer</key>
+      <value>VAT Number</value>
+    </entry>
+    <entry>
+      <key>UMSt</key>
+      <value>VAT</value>
+    </entry>
+    <entry>
+      <key>EUROZONE-Member</key>
+      <value>EUROZONE-Member</value>
+    </entry>
+    <entry>
+      <key>Seriennummer</key>
+      <value>serial number</value>
+    </entry>
+    <entry>
+      <key>Hilfe</key>
+      <value>help</value>
+    </entry>
+    <entry>
+      <key>UMST</key>
+      <value>VAT</value>
+    </entry>
+    <entry>
+      <key>Bonität und Risiko</key>
+      <value>solvency and risk</value>
+    </entry>
+    <entry>
+      <key>neue Historie</key>
+      <value>new history</value>
+    </entry>
+    <entry>
+      <key>relorgid</key>
+      <value>relorgid</value>
+    </entry>
+    <entry>
+      <key>Beschreibung der Änderung</key>
+      <value>description of change</value>
+    </entry>
+    <entry>
+      <key>geändert</key>
+      <value>changed</value>
+    </entry>
+    <entry>
+      <key>Log</key>
+      <value>Log</value>
+    </entry>
+    <entry>
+      <key>Bild laden</key>
+      <value>load image</value>
+    </entry>
+    <entry>
+      <key>Qualifizierung</key>
+      <value>qualification</value>
+    </entry>
+    <entry>
+      <key>Reporting</key>
+      <value>Reporting</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Ressourcen</key>
+      <value>&amp;amp;ressources</value>
+    </entry>
+    <entry>
+      <key>Adressen Export</key>
+      <value>Address Export</value>
+    </entry>
+    <entry>
+      <key>Report Verwaltung</key>
+      <value>Report Administration</value>
+    </entry>
+    <entry>
+      <key>zu Veranstaltung</key>
+      <value>to event</value>
+    </entry>
+    <entry>
+      <key>zuordnen</key>
+      <value>attach</value>
+    </entry>
+    <entry>
+      <key>on = orgname (Name der Organisation)
+hs = header salutaion (Anrede im Briefkopf)
+ls = lettersalutation (Briefanrede)
+sa = salutation (Anrede)
+ti = title (Titel)
+dp = department (Abteilung)
+fn = firstname (Vorname)
+mn = middlename (Mittelname)
+ln = lastname (Nachname)
+al = addressline (Straße)
+bn = building number (Hausnummer)
+zc = zipcode (PLZ)
+ci = city (Ort)
+di = district (Landkreis)
+rg = region (Region)
+st = state(Staat)
+cc = countrycode (Ländercode)
+cn = countryname (Länderbezeichnung)</key>
+      <value>on = orgname (name of organisation)
+hs = heading salutation
+ls = lettersalutation
+sa = salutation
+ti = title
+dp = department
+fn = firstname
+mn = middlename
+ln = lastname
+al = addressline
+bn = building number
+zc = zipcode
+ci = city
+di = district
+rg = region
+st = state
+cc = countrycode
+cn = countryname</value>
+    </entry>
+    <entry>
+      <key>Dialog-Auswahl Veranstaltung</key>
+      <value>dialog field event</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Prozesse</key>
+      <value>&amp;amp;Processes</value>
+    </entry>
+    <entry>
+      <key>Eigenschaften</key>
+      <value>characteristics</value>
+    </entry>
+    <entry>
+      <key>Eintrag Löschen</key>
+      <value>delete entry</value>
+    </entry>
+    <entry>
+      <key>Hiermit werden alle Daten der markierten Firma zu der aktuellen Firma übertragen 
+und danach die markierte Firma gelöscht !</key>
+      <value>All data of the tagged company will be transferedto actual company 
+and after that the tagged company will be deleted !</value>
+    </entry>
+    <entry>
+      <key>Hiermit werden alle Daten der markierten Person zu der aktuellen Person übertragen 
+und danach die markierte Person gelöscht !</key>
+      <value>All information of the tagged person will be transfered to actual person 
+and after that the tagged person will be deleted !</value>
+    </entry>
+    <entry>
+      <key>Objekt öffnen</key>
+      <value>open object</value>
+    </entry>
+    <entry>
+      <key>Beschreibung speichern</key>
+      <value>save specification</value>
+    </entry>
+    <entry>
+      <key>GoogleMaps Route</key>
+      <value>GoogleMaps Route</value>
+    </entry>
+    <entry>
+      <key>Dokument öffnen</key>
+      <value>open document</value>
+    </entry>
+    <entry>
+      <key>Routenplanung</key>
+      <value>route planning</value>
+    </entry>
+    <entry>
+      <key>Umkreissuche</key>
+      <value>Circle Search</value>
+    </entry>
+    <entry>
+      <key>Daten</key>
+      <value>Data</value>
+    </entry>
+    <entry>
+      <key>Gesamtgebühren</key>
+      <value>Total fees</value>
+    </entry>
+    <entry>
+      <key>LOCATIONID</key>
+      <value>LOCATIONID</value>
+    </entry>
+    <entry>
+      <key>RECORDSEPERATOR</key>
+      <value>RECORDSEPERATOR</value>
+    </entry>
+    <entry>
+      <key>Gebühr pro Teilnehmer</key>
+      <value>Fee per participant</value>
+    </entry>
+    <entry>
+      <key>Gebühr</key>
+      <value>Fee</value>
+    </entry>
+    <entry>
+      <key>Gesamterlös</key>
+      <value>Total proceeds</value>
+    </entry>
+    <entry>
+      <key>FIELDLIMIT</key>
+      <value>FIELDLIMIT</value>
+    </entry>
+    <entry>
+      <key>ID</key>
+      <value>ID</value>
+    </entry>
+    <entry>
+      <key>FIELDSEPERATOR</key>
+      <value>FIELDSEPERATOR</value>
+    </entry>
+    <entry>
+      <key>Anzahl Teilnehmer</key>
+      <value>Number of participants</value>
+    </entry>
+    <entry>
+      <key>Quelldaten</key>
+      <value>Data source</value>
+    </entry>
+    <entry>
+      <key>Werbeeinschränkung</key>
+      <value>Constraint of promotion</value>
+    </entry>
+    <entry>
+      <key>neues Interview</key>
+      <value>new interview</value>
+    </entry>
+    <entry>
+      <key>Fragesteller</key>
+      <value>Questioner</value>
+    </entry>
+    <entry>
+      <key>Grund</key>
+      <value>Reason</value>
+    </entry>
+    <entry>
+      <key>Fragebogen</key>
+      <value>Questionnaire</value>
+    </entry>
+    <entry>
+      <key>Auswertungen</key>
+      <value>analyses</value>
+    </entry>
+    <entry>
+      <key>QUESTIONNAIRELOGID</key>
+      <value>QUESTIONNAIRELOGID</value>
+    </entry>
+    <entry>
+      <key>Nur 1 Fragebogen auswählen !</key>
+      <value>Pleas select only one questionnaire!</value>
+    </entry>
+    <entry>
+      <key>Test der Image-Variablen</key>
+      <value>Test of image-variable</value>
+    </entry>
+    <entry>
+      <key>campaignparticipant</key>
+      <value>campaignparticipant</value>
+    </entry>
+    <entry>
+      <key>geführte Interviews</key>
+      <value>conducted interviews</value>
+    </entry>
+    <entry>
+      <key>Veranstaltungstitel</key>
+      <value>Name of event</value>
+    </entry>
+    <entry>
+      <key>Mailprozess mit dem Anhänge der Mails an die History verknüpt werden.</key>
+      <value>Mailprocess to link mail attachments to the history</value>
+    </entry>
+    <entry>
+      <key>Artikelname</key>
+      <value>Item</value>
+    </entry>
+    <entry>
+      <key>Jeder</key>
+      <value>everyone</value>
+    </entry>
+    <entry>
+      <key>Preisänderung</key>
+      <value>Price change</value>
+    </entry>
+    <entry>
+      <key>Produktbezeichnung</key>
+      <value>Product description</value>
+    </entry>
+    <entry>
+      <key>Dialog für Urlaubsplanung</key>
+      <value>Dialogue for holiday planning</value>
+    </entry>
+    <entry>
+      <key>Übernahme in Preisliste</key>
+      <value>Takeover into price list</value>
+    </entry>
+    <entry>
+      <key>HISTORY_ID</key>
+      <value>HISTORY_ID</value>
+    </entry>
+    <entry>
+      <key>Anzeige (F6)</key>
+      <value>Display (F6)</value>
+    </entry>
+    <entry>
+      <key>Währg</key>
+      <value>Valuta</value>
+    </entry>
+    <entry>
+      <key>Preisblatt</key>
+      <value>List of prices</value>
+    </entry>
+    <entry>
+      <key>ab Anzahl</key>
+      <value>Starting from quantity</value>
+    </entry>
+    <entry>
+      <key>Suchmaske (F5)</key>
+      <value>Search mask (F5)</value>
+    </entry>
+    <entry>
+      <key>Folgehistorie</key>
+      <value>Succession history</value>
+    </entry>
+    <entry>
+      <key>neue Preisliste</key>
+      <value>new price list</value>
+    </entry>
+    <entry>
+      <key>Zurücksetzen</key>
+      <value>Reset</value>
+    </entry>
+    <entry>
+      <key>gültig von</key>
+      <value>Valid from</value>
+    </entry>
+    <entry>
+      <key>Anzahl von</key>
+      <value>Count from</value>
+    </entry>
+    <entry>
+      <key>AOTYPE</key>
+      <value>AOTYPE</value>
+    </entry>
+    <entry>
+      <key>neuer Termin</key>
+      <value>new appointment</value>
+    </entry>
+    <entry>
+      <key>Belegtyp</key>
+      <value>Voucher type</value>
+    </entry>
+    <entry>
+      <key>Teilnehmer einer Kampagne zuordnen</key>
+      <value>Match participants to a campaign</value>
+    </entry>
+    <entry>
+      <key>Beleg&amp;amp;posten</key>
+      <value>Voucher &amp;amp;item</value>
+    </entry>
+    <entry>
+      <key>in Lieferschein übertragen</key>
+      <value>Transfer into packing list</value>
+    </entry>
+    <entry>
+      <key>einer Kampagne hinzufügen</key>
+      <value>Add to a campaign</value>
+    </entry>
+    <entry>
+      <key>Treffer</key>
+      <value>Hits</value>
+    </entry>
+    <entry>
+      <key>Beleg-Nr</key>
+      <value>Voucher-No</value>
+    </entry>
+    <entry>
+      <key>neues Modul</key>
+      <value>New module</value>
+    </entry>
+    <entry>
+      <key>Frageauswertung</key>
+      <value>Query analysis</value>
+    </entry>
+    <entry>
+      <key>neue Person</key>
+      <value>New Person</value>
+    </entry>
+    <entry>
+      <key>EMail an alle</key>
+      <value>Email to all</value>
+    </entry>
+    <entry>
+      <key>öffne Personen</key>
+      <value>open persons</value>
+    </entry>
+    <entry>
+      <key>einem Verteiler hinzufügen</key>
+      <value>Add to a distributor</value>
+    </entry>
+    <entry>
+      <key>Belegposten</key>
+      <value>Voucher item</value>
+    </entry>
+    <entry>
+      <key>in Rechnung übertragen</key>
+      <value>Transfer into invoice</value>
+    </entry>
+    <entry>
+      <key>eine EMail an alle selektierten Personen</key>
+      <value>Email to all selected persons</value>
+    </entry>
+    <entry>
+      <key>Beleg</key>
+      <value>Voucher</value>
+    </entry>
+    <entry>
+      <key>Baujahr</key>
+      <value>Year of construction</value>
+    </entry>
+    <entry>
+      <key>MACHINEID</key>
+      <value>MACHINEID</value>
+    </entry>
+    <entry>
+      <key>Neuer Beleg</key>
+      <value>New voucher</value>
+    </entry>
+    <entry>
+      <key>Themenauswahl</key>
+      <value>Choice of topics</value>
+    </entry>
+    <entry>
+      <key>weiter Funktion öffnen</key>
+      <value>Open other feature</value>
+    </entry>
+    <entry>
+      <key>Thema ausschneiden</key>
+      <value>Cut topic</value>
+    </entry>
+    <entry>
+      <key>Ersatzteile</key>
+      <value>Spare parts</value>
+    </entry>
+    <entry>
+      <key>Standard setzen</key>
+      <value>set standard</value>
+    </entry>
+    <entry>
+      <key>Adress-Felder</key>
+      <value>Address field</value>
+    </entry>
+    <entry>
+      <key>Service-Nr.</key>
+      <value>Service no.</value>
+    </entry>
+    <entry>
+      <key>Maschinenstatus</key>
+      <value>Status of engine</value>
+    </entry>
+    <entry>
+      <key>Neues Thema</key>
+      <value>New topic</value>
+    </entry>
+    <entry>
+      <key>Standard Adresse setzen</key>
+      <value>Set standard address</value>
+    </entry>
+    <entry>
+      <key>Themenbaum</key>
+      <value>List of topics</value>
+    </entry>
+    <entry>
+      <key>Technische Merkmale</key>
+      <value>Technical features</value>
+    </entry>
+    <entry>
+      <key>SERVICEORDERID</key>
+      <value>SERVICEORDERID</value>
+    </entry>
+    <entry>
+      <key>Servicemeldung</key>
+      <value>Service message</value>
+    </entry>
+    <entry>
+      <key>Drucke Beleg</key>
+      <value>Print voucher</value>
+    </entry>
+    <entry>
+      <key>Serien-Nr.</key>
+      <value>Serial-no.</value>
+    </entry>
+    <entry>
+      <key>gepl. Std.</key>
+      <value>calc. hours</value>
+    </entry>
+    <entry>
+      <key>Maschinentyp</key>
+      <value>Type of engine</value>
+    </entry>
+    <entry>
+      <key>RELORG_ID</key>
+      <value>RELORG_ID</value>
+    </entry>
+    <entry>
+      <key>nur aktiv wenn Posten eingetragen sind</key>
+      <value>active just if items are lsited</value>
+    </entry>
+    <entry>
+      <key>Zusatz</key>
+      <value>Addition</value>
+    </entry>
+    <entry>
+      <key>Serviceaufträge</key>
+      <value>Orders for service</value>
+    </entry>
+    <entry>
+      <key>Ersatzteilbezeichnung</key>
+      <value>name of spare</value>
+    </entry>
+    <entry>
+      <key>Meldung</key>
+      <value>Message</value>
+    </entry>
+    <entry>
+      <key>Thema</key>
+      <value>Topic</value>
+    </entry>
+    <entry>
+      <key>Ersatzteilnummer</key>
+      <value>Spare no.</value>
+    </entry>
+    <entry>
+      <key>Legt eine neu Funktion zur Person an.</key>
+      <value>Creates a new function according to a person.</value>
+    </entry>
+    <entry>
+      <key>KundenNr.</key>
+      <value>CustomerNo.</value>
+    </entry>
+    <entry>
+      <key>Bezeichung</key>
+      <value>Description</value>
+    </entry>
+    <entry>
+      <key>Kopiere in AB</key>
+      <value>Copy into order confirmation</value>
+    </entry>
+    <entry>
+      <key>Drucke Servicebericht</key>
+      <value>Print servicereport</value>
+    </entry>
+    <entry>
+      <key>Themen</key>
+      <value>Topics</value>
+    </entry>
+    <entry>
+      <key>Gerät/Maschine</key>
+      <value>Instrument/engine</value>
+    </entry>
+    <entry>
+      <key>Einsatzort</key>
+      <value>Job site</value>
+    </entry>
+    <entry>
+      <key>Adresszusatz</key>
+      <value>address add-on</value>
+    </entry>
+    <entry>
+      <key>Angebotsliste</key>
+      <value>List of offers</value>
+    </entry>
+    <entry>
+      <key>Serviceauftragsliste</key>
+      <value>List of service orders</value>
+    </entry>
+    <entry>
+      <key>Serviceauftrag</key>
+      <value>Servcie order</value>
+    </entry>
+    <entry>
+      <key>Servicestatus</key>
+      <value>Service status</value>
+    </entry>
+    <entry>
+      <key>Belegliste</key>
+      <value>List of vouchers</value>
+    </entry>
+    <entry>
+      <key>Maschineneigenschaften</key>
+      <value>engine properties</value>
+    </entry>
+    <entry>
+      <key>Maschine</key>
+      <value>engine</value>
+    </entry>
+    <entry>
+      <key>Dauer (h)</key>
+      <value>Duration (h)</value>
+    </entry>
+    <entry>
+      <key>mit Report</key>
+      <value>with report</value>
+    </entry>
+    <entry>
+      <key>A&amp;amp;llgemein</key>
+      <value>Common</value>
+    </entry>
+    <entry>
+      <key>ADDRESS_ID</key>
+      <value>ADDRESS_ID</value>
+    </entry>
+    <entry>
+      <key>Angebots-Nr.</key>
+      <value>Offer-No.</value>
+    </entry>
+    <entry>
+      <key>Thema bearbeiten</key>
+      <value>Edit topic</value>
+    </entry>
+    <entry>
+      <key>Anwendung</key>
+      <value>application</value>
+    </entry>
+    <entry>
+      <key>versendet raus</key>
+      <value>sent</value>
+    </entry>
+    <entry>
+      <key>neuer Serviceauftrag</key>
+      <value>new service order</value>
+    </entry>
+    <entry>
+      <key>Versendet setzen</key>
+      <value>set conveyed</value>
+    </entry>
+    <entry>
+      <key>Stimmung gut</key>
+      <value>good mood</value>
+    </entry>
+    <entry>
+      <key>Stimmung schlecht</key>
+      <value>bad mood</value>
+    </entry>
+    <entry>
+      <key>Vertragsliste</key>
+      <value>contract list</value>
+    </entry>
+    <entry>
+      <key>neue Funktion</key>
+      <value>New function</value>
+    </entry>
+    <entry>
+      <key>Datenimport</key>
+      <value>data import</value>
+    </entry>
+    <entry>
+      <key>Thema löschen</key>
+      <value>Delete topic</value>
+    </entry>
+    <entry>
+      <key>Thema einfügen</key>
+      <value>Add topic</value>
+    </entry>
+    <entry>
+      <key>nur aktiv wenn Posten eingetragen sind und &amp;apos;geprüft&amp;apos; gesetzt ist</key>
+      <value>just active if positions are listed and &amp;apos;checked&amp;apos; is set.</value>
+    </entry>
+    <entry>
+      <key>Bezug der PLZ-Daten von www.geopostcodes.com. 
+Zur Aktualisierung oder zur Beschaffung von Auslandsdaten müssen diese von dieser Adresse erworben werden.
+
+ACHTUNG: Zum Einlesen das CSV-Format verwenden (z.B. GeoPC_DE.csv) !
+
+U.U. sind Datensätze aus einer Kombination ZIP-CITY mehrfach vorhanden (z.B.wenn Original-Datenquelle Ortsteile berücksichtigt)
+Diese werden entfernt um eine eindeutige Auswahlliste zu bekommen.</key>
+      <value>Fetching ZIP data from www.geopostcodes.com. They must be acquired from this address in order to get or to refresh external data</value>
+    </entry>
+    <entry>
+      <key>Serviceart</key>
+      <value>Service Type</value>
+    </entry>
+    <entry>
+      <key>ADDRESSID</key>
+      <value>ADDRESSID</value>
+    </entry>
+    <entry>
+      <key>Serviceposten</key>
+      <value>Service item</value>
+    </entry>
+    <entry>
+      <key>Stimmung mittel</key>
+      <value>sedate temper</value>
+    </entry>
+    <entry>
+      <key>Erfassungsdatum</key>
+      <value>entry date</value>
+    </entry>
+    <entry>
+      <key>ADM-Bewertung</key>
+      <value>FSR-Benchmarking</value>
+    </entry>
+    <entry>
+      <key>Baum öffnen</key>
+      <value>open tree</value>
+    </entry>
+    <entry>
+      <key>Baum schließen</key>
+      <value>close tree</value>
+    </entry>
+    <entry>
+      <key>SALESORDER_ID</key>
+    </entry>
+    <entry>
+      <key>Ordner</key>
+      <value>folder</value>
+    </entry>
+    <entry>
+      <key>übergeordnet</key>
+      <value>superior</value>
+    </entry>
+    <entry>
+      <key>Jahresurlaub</key>
+      <value>Annual leave</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Links</key>
+    </entry>
+    <entry>
+      <key>integer</key>
+    </entry>
+    <entry>
+      <key>char</key>
+    </entry>
+    <entry>
+      <key>maximal 50km</key>
+      <value>maximum 50km</value>
+    </entry>
+    <entry>
+      <key>Bezirk</key>
+      <value>District</value>
+    </entry>
+    <entry>
+      <key>Liefer-Adresse</key>
+      <value>Delivery address</value>
+    </entry>
+    <entry>
+      <key>Edit ein</key>
+      <value>Edit on</value>
+    </entry>
+    <entry>
+      <key>PK</key>
+    </entry>
+    <entry>
+      <key>Protokoll</key>
+      <value>Protocol</value>
+    </entry>
+    <entry>
+      <key>Spalte30</key>
+      <value>Column30</value>
+    </entry>
+    <entry>
+      <key>Spalte31</key>
+      <value>Column31</value>
+    </entry>
+    <entry>
+      <key>Spalte32</key>
+      <value>Column32</value>
+    </entry>
+    <entry>
+      <key>Spalte33</key>
+      <value>Column33</value>
+    </entry>
+    <entry>
+      <key>Spalte34</key>
+      <value>Column34</value>
+    </entry>
+    <entry>
+      <key>Spalte35</key>
+      <value>Column35</value>
+    </entry>
+    <entry>
+      <key>Spalte36</key>
+      <value>Column36</value>
+    </entry>
+    <entry>
+      <key>Spalte37</key>
+      <value>Column37</value>
+    </entry>
+    <entry>
+      <key>Spalte38</key>
+      <value>Column38</value>
+    </entry>
+    <entry>
+      <key>Spalte39</key>
+      <value>Column39</value>
+    </entry>
+    <entry>
+      <key>Spalte29</key>
+      <value>Column29</value>
+    </entry>
+    <entry>
+      <key>Spalte20</key>
+      <value>Column20</value>
+    </entry>
+    <entry>
+      <key>Spalte23</key>
+      <value>Column23</value>
+    </entry>
+    <entry>
+      <key>Spalte24</key>
+      <value>Column24</value>
+    </entry>
+    <entry>
+      <key>Spalte21</key>
+      <value>Column21</value>
+    </entry>
+    <entry>
+      <key>Spalte22</key>
+      <value>Column22</value>
+    </entry>
+    <entry>
+      <key>Spalte27</key>
+      <value>Column27</value>
+    </entry>
+    <entry>
+      <key>Spalte28</key>
+      <value>Column28</value>
+    </entry>
+    <entry>
+      <key>Spalte25</key>
+      <value>Column25</value>
+    </entry>
+    <entry>
+      <key>Spalte26</key>
+      <value>Column26</value>
+    </entry>
+    <entry>
+      <key>Spalte19</key>
+      <value>Column19</value>
+    </entry>
+    <entry>
+      <key>Spalte18</key>
+      <value>Column18</value>
+    </entry>
+    <entry>
+      <key>Spalte14</key>
+      <value>Column14</value>
+    </entry>
+    <entry>
+      <key>Spalte15</key>
+      <value>Column15</value>
+    </entry>
+    <entry>
+      <key>Spalte16</key>
+      <value>Column16</value>
+    </entry>
+    <entry>
+      <key>Spalte17</key>
+      <value>Column17</value>
+    </entry>
+    <entry>
+      <key>Spalte10</key>
+      <value>Column10</value>
+    </entry>
+    <entry>
+      <key>Spalte11</key>
+      <value>Column11</value>
+    </entry>
+    <entry>
+      <key>Spalte12</key>
+      <value>Column12</value>
+    </entry>
+    <entry>
+      <key>Spalte13</key>
+      <value>Column13</value>
+    </entry>
+    <entry>
+      <key>keyword</key>
+    </entry>
+    <entry>
+      <key>image</key>
+    </entry>
+    <entry>
+      <key>Stornieren</key>
+      <value>cancel</value>
+    </entry>
+    <entry>
+      <key>Spalte40</key>
+      <value>Column40</value>
+    </entry>
+    <entry>
+      <key>Spalte42</key>
+      <value>Column42</value>
+    </entry>
+    <entry>
+      <key>Spalte41</key>
+      <value>Column41</value>
+    </entry>
+    <entry>
+      <key>Spalte44</key>
+      <value>Column44</value>
+    </entry>
+    <entry>
+      <key>Spalte43</key>
+      <value>Column43</value>
+    </entry>
+    <entry>
+      <key>Spalte46</key>
+      <value>Column46</value>
+    </entry>
+    <entry>
+      <key>Spalte45</key>
+      <value>Column45</value>
+    </entry>
+    <entry>
+      <key>Spalte48</key>
+      <value>Column48</value>
+    </entry>
+    <entry>
+      <key>Spalte47</key>
+      <value>Column47</value>
+    </entry>
+    <entry>
+      <key>Spalte49</key>
+      <value>Column49</value>
+    </entry>
+    <entry>
+      <key>Spalte50</key>
+      <value>Column50</value>
+    </entry>
+    <entry>
+      <key>to</key>
+    </entry>
+    <entry>
+      <key>text</key>
+    </entry>
+    <entry>
+      <key>numeric</key>
+    </entry>
+    <entry>
+      <key>Keyname</key>
+    </entry>
+    <entry>
+      <key>Salesman.</key>
+    </entry>
+    <entry>
+      <key>varchar</key>
+    </entry>
+    <entry>
+      <key>&amp;amp;Aufgaben/Termine</key>
+      <value>&amp;amp;Tasks / Appointments</value>
+    </entry>
+    <entry>
+      <key>Rechn.-Adresse</key>
+      <value>Billg.-address</value>
+    </entry>
+    <entry>
+      <key>aktualisiert VB-Gebiete in ORG</key>
+      <value>actualized VB-fields in ORG</value>
+    </entry>
+    <entry>
+      <key>VB-Gebiet eintragen</key>
+      <value>Enter VB-area</value>
+    </entry>
+    <entry>
+      <key>Landkreis</key>
+      <value>County</value>
+    </entry>
+    <entry>
+      <key>edt_namelang</key>
+    </entry>
+    <entry>
+      <key>Nächster Lauf</key>
+      <value>Next run</value>
+    </entry>
+    <entry>
+      <key>Aufgaben&amp;amp;Eskalation</key>
+      <value>Task&amp;amp;Escalation</value>
+    </entry>
+    <entry>
+      <key>Spaltenreihenfolge</key>
+      <value>Column order</value>
+    </entry>
+    <entry>
+      <key>Spalte5</key>
+      <value>Column5</value>
+    </entry>
+    <entry>
+      <key>Spalte6</key>
+      <value>Column6</value>
+    </entry>
+    <entry>
+      <key>Spalte7</key>
+      <value>Column7</value>
+    </entry>
+    <entry>
+      <key>Spalte8</key>
+      <value>Column8</value>
+    </entry>
+    <entry>
+      <key>Spalte1</key>
+      <value>Column1</value>
+    </entry>
+    <entry>
+      <key>Spalte2</key>
+      <value>Column2</value>
+    </entry>
+    <entry>
+      <key>Spalte3</key>
+      <value>Column3</value>
+    </entry>
+    <entry>
+      <key>Spalte4</key>
+      <value>Column4</value>
+    </entry>
+    <entry>
+      <key>Spalte9</key>
+      <value>Column9</value>
+    </entry>
+    <entry>
+      <key>float</key>
+    </entry>
+    <entry>
+      <key>alle Tabellen verwenden</key>
+      <value>use all tables</value>
+    </entry>
+    <entry>
+      <key>überfällige Tage</key>
+      <value>overdue days</value>
+    </entry>
+    <entry>
+      <key>Seite</key>
+      <value>Page</value>
+    </entry>
+    <entry>
+      <key>Gebiet</key>
+      <value>Area</value>
+    </entry>
+    <entry>
+      <key>nchar</key>
+    </entry>
+    <entry>
+      <key>nvarchar</key>
+    </entry>
+    <entry>
+      <key>Edit aus</key>
+      <value>Edit off</value>
+    </entry>
+    <entry>
+      <key>Interner Vermerk</key>
+      <value>internal note</value>
+    </entry>
+    <entry>
+      <key>Cust</key>
+    </entry>
+    <entry>
+      <key>datetime</key>
+      <value></value>
+    </entry>
+    <entry>
+      <key>Struktur</key>
+      <value>Strucutre</value>
+    </entry>
+    <entry>
+      <key>Filter Abteilung</key>
+      <value>Filter Department</value>
+    </entry>
+    <entry>
+      <key>CONSTRAINTTYPE</key>
+    </entry>
+    <entry>
+      <key>Rekl.-Nr</key>
+      <value>Recl.-No</value>
+    </entry>
+    <entry>
+      <key>Alle markierten Optionen löschen?</key>
+      <value>Should all marked options be deleted?</value>
+    </entry>
+    <entry>
+      <key>Prozess abgeschlossen.</key>
+      <value>Process finished.</value>
+    </entry>
+    <entry>
+      <key>Es sind keine Empfänger für dieses Mailing definiert.</key>
+      <value>No recipients are defined for this kind of mailing.</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Empfangene E-Mails</key>
+      <value>&amp;amp;Received Emails</value>
+    </entry>
+    <entry>
+      <key>Keine der ausgewählten Tabellen überschreitet die Begrenzungen der gewählten Datenbank.</key>
+      <value>None of the selected tables exceeds the limits of the chosen data base.</value>
+    </entry>
+    <entry>
+      <key>Bitte Spaltendaten definieren</key>
+      <value>Please define the column data</value>
+    </entry>
+    <entry>
+      <key>Offene Posten Liste</key>
+      <value>Outstanding items list</value>
+    </entry>
+    <entry>
+      <key>Gesamte</key>
+      <value>Complete</value>
+    </entry>
+    <entry>
+      <key>Kein Dokument in Vorlage &amp;apos;%0&amp;apos;</key>
+      <value>No document in submission &amp;apos;%0&amp;apos;</value>
+    </entry>
+    <entry>
+      <key> Monate</key>
+      <value> months</value>
+    </entry>
+    <entry>
+      <key>Kein Empfänger zum hinzufügen</key>
+      <value>No participant to add</value>
+    </entry>
+    <entry>
+      <key>Serienmuster konnte nicht ermittelt werden</key>
+      <value>Serial pattern couldn&amp;apos;t be determined</value>
+    </entry>
+    <entry>
+      <key>Markieren Sie bitte die gewünschten Teilnehmer!</key>
+      <value>Please mark the required paticipants!</value>
+    </entry>
+    <entry>
+      <key>Beiträge</key>
+      <value>Contributions</value>
+    </entry>
+    <entry>
+      <key>Preiseliste ungültig !</key>
+      <value>Price list invalid !</value>
+    </entry>
+    <entry>
+      <key>Enddatum konnte nicht bestimmt werden.</key>
+      <value>End date could not be determined.</value>
+    </entry>
+    <entry>
+      <key>Keine E-Mail-Adresse gefunden</key>
+      <value>No E-Mail address found</value>
+    </entry>
+    <entry>
+      <key>Firmen-Dubletten neu berechnen</key>
+      <value>Calculate company-doublets for new</value>
+    </entry>
+    <entry>
+      <key>Keine Vorlage vorhanden!</key>
+      <value>No template existing!</value>
+    </entry>
+    <entry>
+      <key>Bitte wählen Sie einen Verteiler!</key>
+      <value>Please select a distributor!</value>
+    </entry>
+    <entry>
+      <key>Das Attribut &amp;apos;%0&amp;apos; darf maximal %1 mal angegeben werden!</key>
+      <value>The attribute &amp;apos;%0&amp;apos; must not be specified more than %1 times!</value>
+    </entry>
+    <entry>
+      <key>Service-Art</key>
+      <value>Service-Type</value>
+    </entry>
+    <entry>
+      <key>Include</key>
+    </entry>
+    <entry>
+      <key> : gesetzt über Firma!</key>
+      <value>: substituted by company</value>
+    </entry>
+    <entry>
+      <key>Status/Phase</key>
+      <value>Status/Stadium</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Firmendubletten</key>
+      <value>&amp;amp;Duplicates of companies</value>
+    </entry>
+    <entry>
+      <key>Serviceaufträge (%0)</key>
+      <value>Orders for service (%0)</value>
+    </entry>
+    <entry>
+      <key>Folgeeintrag</key>
+      <value>Succession entry</value>
+    </entry>
+    <entry>
+      <key>Die beiden Eingaben sind nicht identisch.\nBitte probieren Sie es noch einmal!</key>
+      <value>The two inputs are not identical.
+Please try again!</value>
+    </entry>
+    <entry>
+      <key>Person schon vorhanden\nFunktion und Organisation neu angelegt</key>
+    </entry>
+    <entry>
+      <key>Projektart</key>
+      <value>Project type</value>
+    </entry>
+    <entry>
+      <key>Artikelbezeichnung</key>
+      <value>Article Description</value>
+    </entry>
+    <entry>
+      <key>E-Mail-Adresse eintragen ?\nKein Eintrag mit Abbruch !</key>
+      <value>Enter E-Mail address ?
+No entry in case of cancelling !</value>
+    </entry>
+    <entry>
+      <key>Anzahl: </key>
+      <value>Number: </value>
+    </entry>
+    <entry>
+      <key>Diese Relation ist nicht aktiv!</key>
+      <value>This relation is not active!</value>
+    </entry>
+    <entry>
+      <key>Internal (2)</key>
+    </entry>
+    <entry>
+      <key>mal ausgewähltes Attribut löschen ?</key>
+      <value>times deleting selected attribute ?</value>
+    </entry>
+    <entry>
+      <key>Projektstart</key>
+      <value>Project start</value>
+    </entry>
+    <entry>
+      <key>bevorzugter Infokanal</key>
+      <value>preferred info channel</value>
+    </entry>
+    <entry>
+      <key>Diese Option ist bereits vorhanden.\nWollen Sie den Wert überschreiben?</key>
+      <value>This option already exists.
+Do You want to overwrite the value?</value>
+    </entry>
+    <entry>
+      <key>Artikel-Nr</key>
+      <value>Article-No</value>
+    </entry>
+    <entry>
+      <key>keine Dubletten mehr vorhanden!</key>
+      <value>no doublets are existing any more!</value>
+    </entry>
+    <entry>
+      <key>%0 Dubletten in %1 Firmen gefunden.</key>
+      <value>%0 doublets found in %1 companys</value>
+    </entry>
+    <entry>
+      <key>Reklamationsliste</key>
+      <value>Reclamation list</value>
+    </entry>
+    <entry>
+      <key>Testversand ohne Adresse nicht möglich.</key>
+      <value>Test delivery without address not possible.</value>
+    </entry>
+    <entry>
+      <key>Welche Datei für den Text verwenden?</key>
+      <value>Which file do you want to use for the text?</value>
+    </entry>
+    <entry>
+      <key>#,##0 T€</key>
+    </entry>
+    <entry>
+      <key>Organisation, Person und Funktion neu angelegt</key>
+      <value>New organisation, person and function created</value>
+    </entry>
+    <entry>
+      <key>Erledigt</key>
+      <value>Completed</value>
+    </entry>
+    <entry>
+      <key>Datei wählen</key>
+      <value>Choose file</value>
+    </entry>
+    <entry>
+      <key> %</key>
+    </entry>
+    <entry>
+      <key>Proj.Nr.</key>
+      <value>Proj.No.</value>
+    </entry>
+    <entry>
+      <key>Keine Vorlage in der gewünschten Sprache gefunden.\nBitte eine Sprache auswählen.</key>
+      <value>No template found in the required language.
+Please select a language.</value>
+    </entry>
+    <entry>
+      <key>Die Kombination von Name und Sprache sind bereits vergeben!\nBitte ändern Sie Namen oder Sprache für die Vorlage.</key>
+      <value>This combination of name and language is already assigned!
+Please change either name or language for the template.</value>
+    </entry>
+    <entry>
+      <key>Eingabe in Minuten oder Stunden (8:00)</key>
+      <value>Entrty in minutes or hours (8:00)</value>
+    </entry>
+    <entry>
+      <key>Markierten Index wirklich aus dem Repository entfernen?</key>
+      <value>Should the marked index really be removed from the repository?</value>
+    </entry>
+    <entry>
+      <key>Jährliche Serie nicht genauer spezifiziert. Ignoriere Serie.</key>
+      <value>Annual series not further specified. Ignore series.</value>
+    </entry>
+    <entry>
+      <key>Brief in Datenbank hinterlegt: </key>
+      <value>Letter stored in data base:</value>
+    </entry>
+    <entry>
+      <key>Ticket: %0\nTitel: %1\nStartzeit: %2</key>
+      <value>Ticket: %0
+Title: %1
+Starting time: %2</value>
+    </entry>
+    <entry>
+      <key>Vertriebsprojekt anlegen</key>
+      <value>Generate a opportunity</value>
+    </entry>
+    <entry>
+      <key>Spalten wurden entfernt.</key>
+      <value>Columns were removed.</value>
+    </entry>
+    <entry>
+      <key>%0</key>
+    </entry>
+    <entry>
+      <key>Ticketliste</key>
+      <value>Ticket list</value>
+    </entry>
+    <entry>
+      <key>Kein Empfänger zum entfernen</key>
+      <value>No participant to remove</value>
+    </entry>
+    <entry>
+      <key>Gesprächspartner</key>
+      <value>Conversation partner</value>
+    </entry>
+    <entry>
+      <key>Datei &amp;apos;%0&amp;apos; bereits geöffnet!</key>
+      <value>File &amp;apos;%0&amp;apos; has already been opened!</value>
+    </entry>
+    <entry>
+      <key>Keine Tabellen wurden erzeugt.</key>
+      <value>No tables were created.</value>
+    </entry>
+    <entry>
+      <key>Bitte wählen Sie eine Firma aus.</key>
+      <value>Please select a company.</value>
+    </entry>
+    <entry>
+      <key>Bitte wählen Sie eine Veranstaltung!</key>
+      <value>Please select an event!</value>
+    </entry>
+    <entry>
+      <key>bestätigt</key>
+      <value>confirmed</value>
+    </entry>
+    <entry>
+      <key>Kontenabstimmung</key>
+      <value> Account reconciliation</value>
+    </entry>
+    <entry>
+      <key>Die Daten wurden kopiert.</key>
+      <value>The data was copied.</value>
+    </entry>
+    <entry>
+      <key>Mahnstufe</key>
+      <value>Reminder level</value>
+    </entry>
+    <entry>
+      <key>Sollen die falschen Datensätze gelöscht werden ?</key>
+      <value>Should the wrong data sets be deleted?</value>
+    </entry>
+    <entry>
+      <key>Zuständiger Mitarbeiter %0 in Kampagne %1 gesetzt</key>
+    </entry>
+    <entry>
+      <key>Aufgaben von</key>
+      <value>Tasks of</value>
+    </entry>
+    <entry>
+      <key>Die aktuelle Selektion aus einer Serien-E-Mail löschen</key>
+      <value>Deleting the current selection from a serial mail</value>
+    </entry>
+    <entry>
+      <key>Zahlungsbedingung</key>
+      <value>Payment conditions</value>
+    </entry>
+    <entry>
+      <key>Offen</key>
+      <value>Open</value>
+    </entry>
+    <entry>
+      <key>E-Mail öffnen</key>
+      <value>open E-Mail</value>
+    </entry>
+    <entry>
+      <key>Wollen Sie alle Daten der markierten Firma zu der aktuellen Firma übertragen\n</key>
+      <value>Do You want to transfer all data of the marked company to the current company
+</value>
+    </entry>
+    <entry>
+      <key>Mitglieder entfernen</key>
+      <value>Delete member</value>
+    </entry>
+    <entry>
+      <key>Bitte Datenbanktyp auswählen</key>
+      <value>Please choose data base type</value>
+    </entry>
+    <entry>
+      <key>TicketHistory zu Ticket &amp;apos;%0&amp;apos; \nmuss zuerst geschlossen werden !</key>
+      <value>TicketHistory according ticket &amp;apos;%0&amp;apos;
+first has to be closed!</value>
+    </entry>
+    <entry>
+      <key>Ge&amp;amp;löschte E-Mails</key>
+      <value>De&amp;amp;leted E-Mails</value>
+    </entry>
+    <entry>
+      <key>Bitte Alias zur Erzeugung der Tabellen auswählen</key>
+      <value>Please choose Alias for creating the table</value>
+    </entry>
+    <entry>
+      <key>Besuche</key>
+      <value>Visits:</value>
+    </entry>
+    <entry>
+      <key>Verknüpfung</key>
+      <value>Link</value>
+    </entry>
+    <entry>
+      <key>Terminübersicht</key>
+      <value>Appointment overview</value>
+    </entry>
+    <entry>
+      <key>erstellt von</key>
+      <value>created of</value>
+    </entry>
+    <entry>
+      <key>Kurstitel</key>
+      <value>Course title</value>
+    </entry>
+    <entry>
+      <key>Interview ist durchgängig.</key>
+      <value>Interview is consistently.</value>
+    </entry>
+    <entry>
+      <key>E-Mail verknüpfen</key>
+      <value>link E-Mail</value>
+    </entry>
+    <entry>
+      <key>Bitte Absender wählen</key>
+      <value>Please choose sender</value>
+    </entry>
+    <entry>
+      <key>Mitglieder hinzufügen</key>
+      <value>Add member</value>
+    </entry>
+    <entry>
+      <key>als Standard-E-Mail setzen</key>
+      <value>set as standard mail address</value>
+    </entry>
+    <entry>
+      <key>Möglicherweise ist ein Import-Feld zu groß für das Zielfeld.</key>
+      <value>Maybe an import field is too big for the target field.</value>
+    </entry>
+    <entry>
+      <key>eigener Absender</key>
+      <value>own sender</value>
+    </entry>
+    <entry>
+      <key>Adrssse nicht vorhanden!</key>
+      <value>Address doesn&amp;apos;t exist!</value>
+    </entry>
+    <entry>
+      <key>Ersteintrag Status / Phase</key>
+      <value>First entry status / stadium</value>
+    </entry>
+    <entry>
+      <key>Teilnehmer entfernen</key>
+      <value>Remove participant</value>
+    </entry>
+    <entry>
+      <key>Durchschnittsnote</key>
+      <value>Average Mark</value>
+    </entry>
+    <entry>
+      <key>Rolle IBau</key>
+      <value>Role IBau</value>
+    </entry>
+    <entry>
+      <key>Ruecklaeufer aufgrund fehlender E-Mail-Adresse!</key>
+      <value>Back runner because of missing mail address!</value>
+    </entry>
+    <entry>
+      <key>Hoch</key>
+      <value>High</value>
+    </entry>
+    <entry>
+      <key>E-Mails löschen ?</key>
+      <value>Should the E-Mails be deleted ?</value>
+    </entry>
+    <entry>
+      <key>Vorlage wählen</key>
+      <value>Choose a master</value>
+    </entry>
+    <entry>
+      <key>Artikel: </key>
+      <value>Article:</value>
+    </entry>
+    <entry>
+      <key>Zu folgenden Fragen wurden keine Antworten und Zielcodes angegeben:</key>
+    </entry>
+    <entry>
+      <key>Zeit eintragen</key>
+    </entry>
+    <entry>
+      <key>Soll sie überschrieben werden?</key>
+      <value>Should it be overwritten?</value>
+    </entry>
+    <entry>
+      <key>Volumen (T€)</key>
+      <value>Volume (T€)</value>
+    </entry>
+    <entry>
+      <key>Der login ist bereits vergeben! Bitte verwenden sie einen anderen.</key>
+      <value>The login is already assigned! Please use a different one.</value>
+    </entry>
+    <entry>
+      <key> Stunden</key>
+      <value> hours</value>
+    </entry>
+    <entry>
+      <key>unverknüpfte E-Mails</key>
+      <value>unlinked mails</value>
+    </entry>
+    <entry>
+      <key>T€</key>
+    </entry>
+    <entry>
+      <key>In Bearbeitung</key>
+      <value>In progressing</value>
+    </entry>
+    <entry>
+      <key>Historienliste</key>
+      <value>History List</value>
+    </entry>
+    <entry>
+      <key>Serienbrief %0 eingetragen</key>
+      <value>Serial letter %0 listed</value>
+    </entry>
+    <entry>
+      <key>Organisation oder Person neu angelegt</key>
+      <value>Organisation or person created newly</value>
+    </entry>
+    <entry>
+      <key>und danach die Dubletten-Firma löschen ?</key>
+      <value>and afterwards deleting the doublets company?</value>
+    </entry>
+    <entry>
+      <key>30%</key>
+      <value></value>
+    </entry>
+    <entry>
+      <key>Ge&amp;amp;sendete E-Mails</key>
+      <value>Se&amp;amp;nd E-Mails</value>
+    </entry>
+    <entry>
+      <key>Exportdatei wählen !</key>
+      <value>Choose the file to be exported !</value>
+    </entry>
+    <entry>
+      <key>Neuer Spaltenname:</key>
+      <value>New column name</value>
+    </entry>
+    <entry>
+      <key>Laufzeit (Monate)/ Phase</key>
+      <value>Runtime (month)/Phase</value>
+    </entry>
+    <entry>
+      <key>Keinen Teilnehmer zum Entfernen</key>
+      <value>No participant to remove</value>
+    </entry>
+    <entry>
+      <key>%0 Dubletten in %1 Personen gefunden.</key>
+      <value>%0 doublets found in %1 persons</value>
+    </entry>
+    <entry>
+      <key>Abteilungsleiter</key>
+      <value>Head of department</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Aufgaben(%0)</key>
+      <value>&amp;amp;Tasks</value>
+    </entry>
+    <entry>
+      <key>Belegdatum</key>
+      <value>Voucher date</value>
+    </entry>
+    <entry>
+      <key>Geburtstag</key>
+      <value>Birthday</value>
+    </entry>
+    <entry>
+      <key>abgesagt</key>
+      <value>cancelled
+</value>
+    </entry>
+    <entry>
+      <key>Folgende Überschreitungen der Begrenzungen der gewählten Datenbank wurden gefunden:</key>
+      <value>The following transgressions of the limit of the chosen data base were founf:</value>
+    </entry>
+    <entry>
+      <key>Icon auswählen</key>
+      <value>Select icon</value>
+    </entry>
+    <entry>
+      <key>Werbeeinschränkung wurde zusätzlich bei allen %0 Mitarbeitern gesetzt</key>
+      <value>Contraint of promotion has listed to all %0 employees addionaly</value>
+    </entry>
+    <entry>
+      <key>Eingehend, nicht angenommen</key>
+      <value>Incoming, not accepted</value>
+    </entry>
+    <entry>
+      <key>Projekt-Phase</key>
+      <value>Project-step</value>
+    </entry>
+    <entry>
+      <key> / gesamt: </key>
+      <value>/ complete:</value>
+    </entry>
+    <entry>
+      <key>E-Mail CC an</key>
+      <value>E-Mail CC to</value>
+    </entry>
+    <entry>
+      <key>Service-Status</key>
+      <value>Service status</value>
+    </entry>
+    <entry>
+      <key>Stufe &amp;apos;%0&amp;apos; in Kampagne &amp;apos;%1&amp;apos; gesetzt.</key>
+      <value>Level &amp;apos;%0&amp;apos; set in campaign &amp;apos;%1&amp;apos;.</value>
+    </entry>
+    <entry>
+      <key>Telefonnummern bereinigt!</key>
+      <value>Phone number corrected.</value>
+    </entry>
+    <entry>
+      <key>Fälligkeitsdatum liegt in der Vergangenheit. </key>
+      <value>Due time is in the past.</value>
+    </entry>
+    <entry>
+      <key>Aufgabenübersicht</key>
+      <value>Summary of tasks</value>
+    </entry>
+    <entry>
+      <key>versendet am</key>
+      <value>sent on</value>
+    </entry>
+    <entry>
+      <key>Korrektur in Minuten ( z.B.: 5 oder -5 )</key>
+      <value>Correction in minutes (e.g.: 5 or -5)</value>
+    </entry>
+    <entry>
+      <key>Alle Daten der ausgewählten Firma (Quelle) werden zu der aktuellen Firma übertragen.
+Die ausgewählten Firma (Quelle) wird gelöscht !!</key>
+      <value>All data of the selected company (source) are transfered to this company!!! The selected company (source) will be deleted!!!</value>
+    </entry>
+    <entry>
+      <key>Alle markierten Tabellen ins Repository übernehmen?</key>
+      <value>Should all marked tables be taken over to the repository?</value>
+    </entry>
+    <entry>
+      <key>Organisation schon vorhanden\nPerson und Funktion neu angelegt</key>
+      <value>Organisation already exists
+Person and function created newly</value>
+    </entry>
+    <entry>
+      <key>MM | yyyy</key>
+    </entry>
+    <entry>
+      <key>Verschieben nach Position ?</key>
+      <value>Shifted to position?</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;unverknüpfte E-Mails</key>
+      <value>&amp;amp;Unlinked Emails</value>
+    </entry>
+    <entry>
+      <key>enthalten</key>
+      <value>included</value>
+    </entry>
+    <entry>
+      <key>Für den Export von Daten ist mindestens eine befüllte Spalte notwendig</key>
+      <value>To export data at least one filled column is required</value>
+    </entry>
+    <entry>
+      <key>Serienmail &amp;apos;%0&amp;apos; versandt</key>
+      <value>Serial mail &amp;apos;%0&amp;apos; sent</value>
+    </entry>
+    <entry>
+      <key> / Wahrsch.:</key>
+      <value>/ chance</value>
+    </entry>
+    <entry>
+      <key>Möchten Sie den Import abbrechen?</key>
+      <value>Do You want to abort the import?</value>
+    </entry>
+    <entry>
+      <key>erledigt / zurückgestellt</key>
+      <value>completed/deferred</value>
+    </entry>
+    <entry>
+      <key>Markierte Empfänger als nicht zugestellt markieren?</key>
+      <value>Mark marked recipients as not delivered?</value>
+    </entry>
+    <entry>
+      <key>S/P</key>
+    </entry>
+    <entry>
+      <key>Kampagnenauswertung</key>
+      <value>Campaign analysis</value>
+    </entry>
+    <entry>
+      <key>Kein Mitglied zum entfernen</key>
+      <value>No member to remove</value>
+    </entry>
+    <entry>
+      <key>Auftr.Wahr.</key>
+      <value>Order chance</value>
+    </entry>
+    <entry>
+      <key>Kd.-Nr.</key>
+      <value>Cust.-No.</value>
+    </entry>
+    <entry>
+      <key>Bitte wählen Sie die Exportdatei aus</key>
+      <value>Please select the file to be exported</value>
+    </entry>
+    <entry>
+      <key>Personendaten zusammengeführt und die Dublette gelöscht</key>
+    </entry>
+    <entry>
+      <key>Einschätzung</key>
+      <value>Estimation</value>
+    </entry>
+    <entry>
+      <key>Tabellen wurden importiert.</key>
+      <value>Tables imported.</value>
+    </entry>
+    <entry>
+      <key>Dieser Eintrag ist bereits vorhanden</key>
+      <value>This entry already exists</value>
+    </entry>
+    <entry>
+      <key>Nicht begonnen</key>
+      <value>Not started</value>
+    </entry>
+    <entry>
+      <key>Beschreibung: </key>
+      <value>Description:</value>
+    </entry>
+    <entry>
+      <key>Ausgehend, angenommen</key>
+      <value>Outgoing, accepted</value>
+    </entry>
+    <entry>
+      <key>Ungültiger Modus des Frames. Wenden Sie sich an Ihren Administrator</key>
+      <value>Invalid frame mode. Contact Your administrator</value>
+    </entry>
+    <entry>
+      <key>Reminder</key>
+    </entry>
+    <entry>
+      <key>Bitte Testempfänger eingeben</key>
+      <value>Please enter the test receiver</value>
+    </entry>
+    <entry>
+      <key>A&amp;amp;ufgaben (%0)</key>
+      <value>T&amp;amp;asks (%0)</value>
+    </entry>
+    <entry>
+      <key>maximale Anzahl der Historien</key>
+      <value>maximum amount of histories</value>
+    </entry>
+    <entry>
+      <key>vorläufig</key>
+      <value>temporary</value>
+    </entry>
+    <entry>
+      <key>Person schon vorhanden\nOrganisation mögliche Dublette</key>
+    </entry>
+    <entry>
+      <key>Initialeintrag</key>
+      <value>Initial item</value>
+    </entry>
+    <entry>
+      <key>Bitte Vorgaben setzen</key>
+      <value>Please set guidelines</value>
+    </entry>
+    <entry>
+      <key>Bitte Filterbedingungen setzen</key>
+      <value>Please set the filter conditions</value>
+    </entry>
+    <entry>
+      <key>Enddatum liegt in der Vergangenheit. </key>
+      <value>End date is in the past.</value>
+    </entry>
+    <entry>
+      <key>Markieren Sie eine oder mehrere Zeilen in &amp;apos;Versendung&amp;apos; !</key>
+      <value>Mark one or more rows in &amp;apos;sending&amp;apos; !</value>
+    </entry>
+    <entry>
+      <key>Projekt-Status</key>
+      <value>Project-status</value>
+    </entry>
+    <entry>
+      <key>Die Tabelle</key>
+      <value>The table</value>
+    </entry>
+    <entry>
+      <key>Vorläufig</key>
+      <value>Temporary</value>
+    </entry>
+    <entry>
+      <key>Bonität</key>
+      <value>Solvency</value>
+    </entry>
+    <entry>
+      <key>Empfänger entfernen</key>
+      <value>Remove recipient</value>
+    </entry>
+    <entry>
+      <key>Webseite</key>
+      <value>Website</value>
+    </entry>
+    <entry>
+      <key>Projekt-Titel</key>
+      <value>Project-title</value>
+    </entry>
+    <entry>
+      <key>Die aktuelle Selektion einem Serien-E-Mail hinzufügen</key>
+      <value>Adding the current selection to a serial-mail</value>
+    </entry>
+    <entry>
+      <key>optinaler </key>
+      <value>optional</value>
+    </entry>
+    <entry>
+      <key>Kein Erinnerungsdatum angegeben.</key>
+      <value>Don&amp;apos;t enter reminder date.</value>
+    </entry>
+    <entry>
+      <key>Verantwortlichen setzen</key>
+      <value>Set responsible person</value>
+    </entry>
+    <entry>
+      <key>Rechg.-Datum</key>
+      <value>Billg.-date</value>
+    </entry>
+    <entry>
+      <key>Die maximale Anzahl Teilnehmer ist erreicht!</key>
+      <value>The maximum of the number of participants is reached!</value>
+    </entry>
+    <entry>
+      <key>mal ausgewähltes Attribut hinzufügen ?</key>
+      <value>times adding selected attribute ?</value>
+    </entry>
+    <entry>
+      <key>markierte Suchen kopieren</key>
+      <value>copy marked search</value>
+    </entry>
+    <entry>
+      <key>Mail konnten nicht in das System übernommen werden.</key>
+      <value>Mail could not be taken over to the system.</value>
+    </entry>
+    <entry>
+      <key>Bitte wählen Sie einen Ort:</key>
+      <value>Please select a city:</value>
+    </entry>
+    <entry>
+      <key>Servicebericht</key>
+      <value>Service report</value>
+    </entry>
+    <entry>
+      <key>Roll Out</key>
+    </entry>
+    <entry>
+      <key>Gebiet:</key>
+      <value>Area:</value>
+    </entry>
+    <entry>
+      <key>Wenden Sie sich an Ihren Administrator</key>
+      <value>Please call your administrator</value>
+    </entry>
+    <entry>
+      <key>Beleg-Nr.</key>
+      <value>Voucher-No.</value>
+    </entry>
+    <entry>
+      <key>Alte Repositoryversion gefunden, </key>
+      <value>Old repository version found.</value>
+    </entry>
+    <entry>
+      <key>Kundennr.:</key>
+      <value>CustomerNo.:</value>
+    </entry>
+    <entry>
+      <key>inaktiv: </key>
+      <value>inactive: </value>
+    </entry>
+    <entry>
+      <key>Bitte Datei auswählen</key>
+      <value>Please choose file</value>
+    </entry>
+    <entry>
+      <key>Ausschreibungen</key>
+      <value>Announcement</value>
+    </entry>
+    <entry>
+      <key>Hauptrolle</key>
+      <value>Main role</value>
+    </entry>
+    <entry>
+      <key>Alle Fremdschlüssel besitzen einen Index.</key>
+      <value>All foreign keys own an index.</value>
+    </entry>
+    <entry>
+      <key>&amp;lt;null value&amp;gt;</key>
+    </entry>
+    <entry>
+      <key>Termine von</key>
+      <value>Appointments of</value>
+    </entry>
+    <entry>
+      <key>Rech.-Nr</key>
+      <value>Bill.-No</value>
+    </entry>
+    <entry>
+      <key>Fehler bei den Datumsangaben.</key>
+      <value>Error in the specified dates.</value>
+    </entry>
+    <entry>
+      <key>Rech.-Datum</key>
+      <value>Bill.-date</value>
+    </entry>
+    <entry>
+      <key>Wollen Sie das gesamte System leeren?</key>
+      <value>Do You want to empty the whole system?</value>
+    </entry>
+    <entry>
+      <key>Zeiterfassung</key>
+    </entry>
+    <entry>
+      <key>Person auswählen</key>
+    </entry>
+    <entry>
+      <key>Bestätigt</key>
+      <value>Confirmed</value>
+    </entry>
+    <entry>
+      <key>Sollen die Tabellen vor dem Kopieren geleert werden?</key>
+      <value>Should the tables be emptied before copying?</value>
+    </entry>
+    <entry>
+      <key>zzgl.</key>
+    </entry>
+    <entry>
+      <key>existiert bereits im Repository.\n</key>
+      <value>already exists in the repository.
+</value>
+    </entry>
+    <entry>
+      <key>Einschätzung: </key>
+      <value>Estimation:</value>
+    </entry>
+    <entry>
+      <key>Organisation schon vorhanden\nPerson mögliche Dublette</key>
+      <value>Organisation already exists
+Person possible doublet</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Persondubletten</key>
+      <value>&amp;amp;Duplicates of contacts</value>
+    </entry>
+    <entry>
+      <key>Sind Sie sicher?</key>
+      <value>Are You sure?</value>
+    </entry>
+    <entry>
+      <key>Sollen die übernommenen Daten aus der Datenbank entfernt werden?</key>
+      <value>Should the accepted data be deleted out of the data base?</value>
+    </entry>
+    <entry>
+      <key>Aufgabe(n) erfolgreich weitergegeben an: %0</key>
+      <value>Task(s) refered to: %0</value>
+    </entry>
+    <entry>
+      <key>Kein Mitglied zum hinzufügen</key>
+      <value>No member to add</value>
+    </entry>
+    <entry>
+      <key>Alias-Test</key>
+      <value>Alias-Testing</value>
+    </entry>
+    <entry>
+      <key>Monatliches Serienmuster konnte nicht bestimmt werden</key>
+      <value>Monthly series pattern could not be determined</value>
+    </entry>
+    <entry>
+      <key>Senden per E-Mail</key>
+      <value>Send per mail</value>
+    </entry>
+    <entry>
+      <key>Der angegebene Wert ist nicht gültig!</key>
+      <value>The specified value is invalid!</value>
+    </entry>
+    <entry>
+      <key>Forecast</key>
+      <value></value>
+    </entry>
+    <entry>
+      <key>läuft</key>
+      <value>running</value>
+    </entry>
+    <entry>
+      <key>Bitte Quell-Alias zum Kopieren der Daten auswählen</key>
+      <value>Please choose the source-alias for copying the data</value>
+    </entry>
+    <entry>
+      <key>Bitte Zieltabellen auswählen</key>
+      <value>Please select the target tables</value>
+    </entry>
+    <entry>
+      <key>Analysen</key>
+      <value>Analyses</value>
+    </entry>
+    <entry>
+      <key>Zeilen eingelesen</key>
+    </entry>
+    <entry>
+      <key>Kein Verteiler vorhanden!</key>
+      <value>No distribution list existing!</value>
+    </entry>
+    <entry>
+      <key>und danach die markierte Firma löschen ?</key>
+      <value>and afterwards deleting the marked company?</value>
+    </entry>
+    <entry>
+      <key>(mit Filter)</key>
+      <value>(by filter)</value>
+    </entry>
+    <entry>
+      <key>Eine Pflicht-Spalte wurde nicht gefüllt !</key>
+      <value>An obligational column is not filled !</value>
+    </entry>
+    <entry>
+      <key>Kontaktpersonen</key>
+      <value>Contact persons</value>
+    </entry>
+    <entry>
+      <key>mit Inhalt der Tabellen</key>
+      <value>with content of the tables</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;360°</key>
+      <value></value>
+    </entry>
+    <entry>
+      <key>Status: </key>
+    </entry>
+    <entry>
+      <key>%0 nachfassen (Nr.%1)</key>
+      <value>%0 follow up (Nr. %1)</value>
+    </entry>
+    <entry>
+      <key>Rech.-Betrag</key>
+      <value>Bill.-amount</value>
+    </entry>
+    <entry>
+      <key>Volumen: </key>
+      <value>Volume:</value>
+    </entry>
+    <entry>
+      <key>Bitte wählen Sie eine Kampagne !</key>
+      <value>Please select a campaign !</value>
+    </entry>
+    <entry>
+      <key>Aufwand</key>
+      <value>Cost</value>
+    </entry>
+    <entry>
+      <key>Feedbackbogen</key>
+      <value>Questionnaire</value>
+    </entry>
+    <entry>
+      <key>Zielgruppe</key>
+      <value>Target group</value>
+    </entry>
+    <entry>
+      <key>Berichtsdatum</key>
+      <value>Report date</value>
+    </entry>
+    <entry>
+      <key>Organisation und Person schon vorhanden\nFunktion neu angelegt</key>
+      <value>Organistaion and person already exist
+Function created newly</value>
+    </entry>
+    <entry>
+      <key>Abgabetermin</key>
+      <value>deadline</value>
+    </entry>
+    <entry>
+      <key>Wollen Sie alle Daten der ausgewählten Firma zu der aktuellen Firma übertragen\n</key>
+      <value>Do You want to transfer all data of the selected company to the current company
+</value>
+    </entry>
+    <entry>
+      <key>Monatliche Serie nicht genauer spezifiziert. Ignoriere Serie.</key>
+      <value>Monthly series not further specified. Ignore series.</value>
+    </entry>
+    <entry>
+      <key>gelöschte ORGID =&amp;apos;%0&amp;apos;,\ngelöschte RELATIONID = &amp;apos;%1&amp;apos;</key>
+      <value>deleted ORGID =&amp;apos;%0&amp;apos;,\ndeleted RELATIONID = &amp;apos;%1&amp;apos;</value>
+    </entry>
+    <entry>
+      <key>Kein Teilnehmer zum Hinzufügen</key>
+      <value>No participant to add</value>
+    </entry>
+    <entry>
+      <key>Erinnerungsdatum liegt in der Vergangenheit.</key>
+      <value>Reminding date is in the past.</value>
+    </entry>
+    <entry>
+      <key>Roll-Out</key>
+    </entry>
+    <entry>
+      <key>alles</key>
+      <value>all</value>
+    </entry>
+    <entry>
+      <key>ist bereits als Teilnehmer eingetragen !</key>
+      <value>is already entered as participant !</value>
+    </entry>
+    <entry>
+      <key>Wollen Sie alle Daten der markierten Person auf die aktuelle Person übernehmen\nund danach löschen ?</key>
+      <value>Do You want to assume all data of the marked person to the current person
+and afterwards delete them?</value>
+    </entry>
+    <entry>
+      <key>Person neu angelegt\nOrganisation mögliche Dublette</key>
+    </entry>
+    <entry>
+      <key>SEX</key>
+    </entry>
+    <entry>
+      <key>Empfänger hinzufügen</key>
+      <value>Add recipient</value>
+    </entry>
+    <entry>
+      <key>fällig</key>
+      <value>due</value>
+    </entry>
+    <entry>
+      <key>Die aktuelle Selektion einem Serien E-Mail hinzufügen</key>
+      <value>Adding the current selection to a serial mail</value>
+    </entry>
+    <entry>
+      <key>Verschieben um Anzahl Positionen\n  ( + nach unten / - nach oben ) ?</key>
+      <value>Shifted to number of positions \n (+ up/ - down)?</value>
+    </entry>
+    <entry>
+      <key>E-Mail löschen</key>
+      <value>deleting E-Mail</value>
+    </entry>
+    <entry>
+      <key>Tägliche Serie nicht genauer spezifiziert. Ignoriere Serie.</key>
+      <value>Daily series not further specified. Ignore series.</value>
+    </entry>
+    <entry>
+      <key>erstellt %0 von %1</key>
+      <value>created %0 of %1!</value>
+    </entry>
+    <entry>
+      <key>Mitbewerber</key>
+      <value>Rival</value>
+    </entry>
+    <entry>
+      <key>Organisation, Person und Funktion schon vorhanden</key>
+      <value>Organisation, person and function already exist</value>
+    </entry>
+    <entry>
+      <key>Firmendaten zusammengeführt und Dubletten-Firma gelöscht</key>
+      <value>Companies merged and duplicated company deleted</value>
+    </entry>
+    <entry>
+      <key>Etiketten</key>
+      <value>Labels</value>
+    </entry>
+    <entry>
+      <key>Telefonnummer nicht gefunden!</key>
+      <value>Phone number not found.</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Feedback</key>
+      <value></value>
+    </entry>
+    <entry>
+      <key>Eingehend, angenommen</key>
+      <value>Incoming, acctepted</value>
+    </entry>
+    <entry>
+      <key>Ausgehend, nicht angenommen</key>
+      <value>Outgoing, not accepted</value>
+    </entry>
+    <entry>
+      <key>Bitte Daten eingeben</key>
+      <value>Please enter data</value>
+    </entry>
+    <entry>
+      <key>Der Datei &amp;apos;%0&amp;apos; ist keine Anwendung zugeordnet.</key>
+      <value>There is no application assigned to the file &amp;apos;%0&amp;apos;.</value>
+    </entry>
+    <entry>
+      <key>90%</key>
+    </entry>
+    <entry>
+      <key>Links (</key>
+      <value></value>
+    </entry>
+    <entry>
+      <key>Übernahme zurückgenommen</key>
+      <value>Assumption taken back</value>
+    </entry>
+    <entry>
+      <key>Tägliches Serienmuster konnte nicht bestimmt werden</key>
+      <value>Daily series pattern couldn&amp;apos;t be determined.</value>
+    </entry>
+    <entry>
+      <key>Planung</key>
+      <value>Planning</value>
+    </entry>
+    <entry>
+      <key>Das Attribut &amp;apos;%0&amp;apos; muss mindestens %1 mal angegeben werden!</key>
+      <value>The attribute &amp;apos;%0&amp;apos; has to be specified at least %1 times!</value>
+    </entry>
+    <entry>
+      <key>Es wurde kein Ende Kennzeichen angegeben!</key>
+      <value>There is no end mark specified!</value>
+    </entry>
+    <entry>
+      <key>Zahlungsziel</key>
+    </entry>
+    <entry>
+      <key>Kein Kampagne vorhanden!</key>
+      <value>No campaign existing!</value>
+    </entry>
+    <entry>
+      <key>MS-Word nicht installiert !</key>
+      <value>MS-Word is not installed !</value>
+    </entry>
+    <entry>
+      <key>Startdatum liegt in der Vergangenheit. </key>
+      <value>Start date is in the past.</value>
+    </entry>
+    <entry>
+      <key>Dialog für den ProjTicket Zeiterfassung</key>
+      <value>Dialogue for ProjTicket time tracking</value>
+    </entry>
+    <entry>
+      <key>Hintergrundfarbe: 
+  weiß: Risiko unbewertet
+  grün: Risiko gering
+  gelb: Risiko mittel
+  rot: Risiko groß</key>
+      <value>Background colour:
+   white: risk unrated
+   green: low risk
+   yellow: medium risk
+   red: big risk</value>
+    </entry>
+    <entry>
+      <key>Ein Thema mit gleichen Namen existiert bereits!</key>
+      <value>A topic with the same name already exists!</value>
+    </entry>
+    <entry>
+      <key>Derzeit wird der Import aus einem Datenbankalias\nfür diesen Datenbanktyp nicht unterstützt.</key>
+      <value>At the time the import for this kind of data base out of a data base alias is not supported.</value>
+    </entry>
+    <entry>
+      <key>Folgende Pflichtfelder wurde noch nicht gefüllt:</key>
+      <value>The following mandatory fields have not been filled yet:</value>
+    </entry>
+    <entry>
+      <key>Es wurde eine leere Tabelle übergeben</key>
+      <value>An empty table was passed</value>
+    </entry>
+    <entry>
+      <key>Aufwand: </key>
+      <value>Cost: </value>
+    </entry>
+    <entry>
+      <key>Bitte XML-Datei auswählen</key>
+      <value>Please select a XML-file</value>
+    </entry>
+    <entry>
+      <key>Dialog für das Stoppen der ProjTicketZeit</key>
+      <value>Dialogue für Stopping of ProjTicket time</value>
+    </entry>
+    <entry>
+      <key>Keine VCard-Datei !!</key>
+      <value>No VCard-file !!</value>
+    </entry>
+    <entry>
+      <key>Rolle ADITO</key>
+      <value>Role ADITO</value>
+    </entry>
+    <entry>
+      <key>Importdatei wählen !</key>
+      <value>Choose the import file !</value>
+    </entry>
+    <entry>
+      <key>Tabellen angelegt</key>
+      <value>Tables created</value>
+    </entry>
+    <entry>
+      <key>Personen-Dubletten neu berechnen</key>
+    </entry>
+    <entry>
+      <key>Rekl.-Kategorie</key>
+      <value>Recl.-Category</value>
+    </entry>
+    <entry>
+      <key>Ein Fehler ist aufgetreten beim Import dieses Datensatzes:\n</key>
+      <value>An error occurred importing this data set:
+</value>
+    </entry>
+    <entry>
+      <key>mit Ihrem Login ist kein Kontaktperson verknüpft !</key>
+      <value>with Your login no contact person is linked !</value>
+    </entry>
+    <entry>
+      <key>Ticketeingang</key>
+      <value>Ticket entrance</value>
+    </entry>
+    <entry>
+      <key> / Auftragswahrsch.: </key>
+      <value>/ chance of order:</value>
+    </entry>
+    <entry>
+      <key>Bitte die zurückzuholenden Einstellungen markieren</key>
+      <value>Please mark the settings to get back</value>
+    </entry>
+    <entry>
+      <key>Ticketcode</key>
+    </entry>
+    <entry>
+      <key>Thema kann nicht gelöscht werden, da dies oder ein untergeordnetes Thema in einem Kundenkontakt verwendet wird.</key>
+      <value>Topic cannot be deleted, because this or a subordinated topic is used in a client contact.</value>
+    </entry>
+    <entry>
+      <key>Bitte geben Sie eine gültige Telefonummer an.</key>
+      <value>Please specify a valid telephone number.</value>
+    </entry>
+    <entry>
+      <key>Wollen Sie wirklich alle markierten löschen ?</key>
+    </entry>
+    <entry>
+      <key>Dauer: %0 min\nDauer darf nicht kleiner %1 und nicht größer %2 sein.</key>
+      <value>Duration: %0 min
+Duration must not be smaller than %1 and not bigger than %2.</value>
+    </entry>
+    <entry>
+      <key>Warengruppe: </key>
+      <value>Commodity Group:</value>
+    </entry>
+    <entry>
+      <key>Monate</key>
+      <value>Months</value>
+    </entry>
+    <entry>
+      <key>Bitte geben Sie zweimal das neue Passwort ein!</key>
+      <value>Please enter two times the new password!</value>
+    </entry>
+    <entry>
+      <key>Organisation und Person mögliche Dublette</key>
+      <value>Organisation and person possible doublet</value>
+    </entry>
+    <entry>
+      <key>Die %0 Nr %1 wird hiermit storniert</key>
+      <value>The %0 no %1 will be cancelled hereby</value>
+    </entry>
+    <entry>
+      <key>Rekl.-Status</key>
+      <value>Recl.-status</value>
+    </entry>
+    <entry>
+      <key>Als Benutzer anlegen</key>
+      <value>Registrate as user</value>
+    </entry>
+    <entry>
+      <key>Lieferbedingung</key>
+      <value>Delivery conditions</value>
+    </entry>
+    <entry>
+      <key>Markieren Sie bitte die Teilnehmer!</key>
+      <value>Please mark the participants!</value>
+    </entry>
+    <entry>
+      <key>Organisation neu angelegt\nPerson mögliche Dublette</key>
+      <value>Organisation created newly
+Person possible doublet</value>
+    </entry>
+    <entry>
+      <key>Möchten Sie alle Teilnehmer verwenden ?</key>
+      <value>Do You want to use all participants ?</value>
+    </entry>
+    <entry>
+      <key> Tage</key>
+      <value> days</value>
+    </entry>
+    <entry>
+      <key>In Ihrer Kontakperson ist keine Standard Telefonnummer eingetragen</key>
+      <value>In Your contact person there is no standard telephone number entered</value>
+    </entry>
+    <entry>
+      <key>Mindestbestand unterschritten</key>
+      <value>Minimum stock exceeded</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Aufg / Term (%0/%1)</key>
+      <value>&amp;amp;Tasks / Appointments (%0/%1)</value>
+    </entry>
+    <entry>
+      <key>Name der neuen Kampagne:</key>
+      <value>Name of the new campaign:</value>
+    </entry>
+    <entry>
+      <key>Fehler beim Setzen der Kalenderrechte!</key>
+      <value>Error setting the calendar rights!</value>
+    </entry>
+    <entry>
+      <key>Verschieben auf Datum?</key>
+      <value>Shifted to date?</value>
+    </entry>
+    <entry>
+      <key>Soll das Thema und alle untergeordneten Themen wirklich gelöscht werden?</key>
+      <value>Should the topic and all subordinated topics really be deleted?</value>
+    </entry>
+    <entry>
+      <key>60%</key>
+    </entry>
+    <entry>
+      <key>Laufzeit</key>
+      <value>Runtime</value>
+    </entry>
+    <entry>
+      <key>Kommunikationsdaten</key>
+      <value>Communication data</value>
+    </entry>
+    <entry>
+      <key>geändert %0 von %1</key>
+      <value>%0 changed of %1</value>
+    </entry>
+    <entry>
+      <key>Wert T€</key>
+      <value>Value T€</value>
+    </entry>
+    <entry>
+      <key>Abgesagt</key>
+      <value>Cancelled</value>
+    </entry>
+    <entry>
+      <key>Welchem Mitarbeiter möchten Sie die Teilnehmer zuordnen?</key>
+      <value>Which employee do you want to assign the participant?</value>
+    </entry>
+    <entry>
+      <key>Jährliches Serienmuster konnte nicht bestimmt werden</key>
+      <value>Annual series pattern could not be determined</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Unverknüpfte E-Mails</key>
+      <value>&amp;amp;Unlinked Emails</value>
+    </entry>
+    <entry>
+      <key>Datensatz konnte nicht geladen werden.\n\nSie haben keine Berechtigung für diesen Datensatz oder die Bedingung ist ungültig.</key>
+      <value>Data set could not be loaded.
+
+You don&amp;apos;t have permission for this data set or the condition is invalid.</value>
+    </entry>
+    <entry>
+      <key>E-Mail</key>
+      <value>Email</value>
+    </entry>
+    <entry>
+      <key>Keine Stufe vorhanden!</key>
+      <value>No level existing!</value>
+    </entry>
+    <entry>
+      <key>Anhänge</key>
+      <value>Attachments</value>
+    </entry>
+    <entry>
+      <key>Bitte wählen Sie eine Serienmail !</key>
+      <value>Please select a serial mail !</value>
+    </entry>
+    <entry>
+      <key>Phase: </key>
+      <value>Level:</value>
+    </entry>
+    <entry>
+      <key>E-Mail-Adresse eintragen ?\n Keine Eintag mit Abbruch !</key>
+      <value>Enter E-Mail address ?
+No entry in case of cancelling !</value>
+    </entry>
+    <entry>
+      <key>E-Mail an Kunden senden?</key>
+      <value>Send E-Mail to client?</value>
+    </entry>
+    <entry>
+      <key>Zeilen verarbeitet</key>
+    </entry>
+    <entry>
+      <key>Begründung Gewonnen-Verloren</key>
+      <value>Reason Won-Lost</value>
+    </entry>
+    <entry>
+      <key>überschrieben.\n</key>
+      <value>overwritten.
+</value>
+    </entry>
+    <entry>
+      <key>Rechg.-Nr.</key>
+      <value>Billg.No.</value>
+    </entry>
+    <entry>
+      <key> % / gew.: </key>
+      <value>% / avg.:</value>
+    </entry>
+    <entry>
+      <key>hoch</key>
+      <value>high</value>
+    </entry>
+    <entry>
+      <key>Note</key>
+      <value>Grade</value>
+    </entry>
+    <entry>
+      <key>Reklam.</key>
+      <value>Canc.</value>
+    </entry>
+    <entry>
+      <key>keine Firma/Person aus diesem Land verfügbar</key>
+      <value>no company/person from this country is available</value>
+    </entry>
+    <entry>
+      <key>Anrufe löschen ?</key>
+      <value>Should the calls be deleted?</value>
+    </entry>
+    <entry>
+      <key>Der Schlüsselbegriff ist bereits vergeben! Bitte verwenden sie einen anderen Schlüsselbegriff.</key>
+      <value>The key term is already assigned! Please use a different key term.</value>
+    </entry>
+    <entry>
+      <key>Keine Veranstaltung vorhanden!</key>
+      <value>No event existing!</value>
+    </entry>
+    <entry>
+      <key>Auf welche Stufe möchten Sie die Teilnehmer setzen?</key>
+      <value>On which level do You want to set the participant?</value>
+    </entry>
+    <entry>
+      <key>keine E-Mail-Adresse gefunden !</key>
+      <value>no E-Mail address found !</value>
+    </entry>
+    <entry>
+      <key>In Ihrer Kontakperson ist keine Standard E-Mail-Adresse eingetragen</key>
+      <value>In Your contact person there is no standard mail address entered</value>
+    </entry>
+    <entry>
+      <key>Eingabe in Minuten
+Dauer veringern mit -</key>
+      <value>Entry in minutes
+Minimizing the duration with - </value>
+    </entry>
+    <entry>
+      <key>gelöschte PERSID =&amp;apos;%0&amp;apos;,\ngelöschte RELATIONID = &amp;apos;%1&amp;apos;</key>
+      <value>deleted PERSID =&amp;apos;%0&amp;apos;,\ndeleted RELATIONID = &amp;apos;%1&amp;apos;</value>
+    </entry>
+    <entry>
+      <key>Kein Attribut ausgewählt !</key>
+      <value>No attribute selected !</value>
+    </entry>
+    <entry>
+      <key> E-Mail-Adressen nicht gefunden</key>
+      <value>E-Mail addresses not found</value>
+    </entry>
+    <entry>
+      <key> existiert im Repository. Tabellendefinition ersetzen?</key>
+      <value>exists in the repository. Replace table definition?</value>
+    </entry>
+    <entry>
+      <key>Bitte Ziel-Alias zum Kopieren der Daten auswählen</key>
+      <value>Please select teh target-alias for copying the data</value>
+    </entry>
+    <entry>
+      <key>Die Datenbankverbindung für den Alias</key>
+      <value>The data base connection for the alias</value>
+    </entry>
+    <entry>
+      <key>Zurückgestellt</key>
+      <value>Deferred</value>
+    </entry>
+    <entry>
+      <key>Für folgende Spalten sollte ein Index definiert sein:\n</key>
+      <value>For the following rows an index should be defined:
+</value>
+    </entry>
+    <entry>
+      <key>Pos.</key>
+      <value>Pos.</value>
+    </entry>
+    <entry>
+      <key>Firmen-Dubletten aktualisieren</key>
+      <value>Actualize company-doublets</value>
+    </entry>
+    <entry>
+      <key>Ein Gruppentermin</key>
+      <value>A group appointment</value>
+    </entry>
+    <entry>
+      <key>Mögliche Dubletten Organisation</key>
+      <value>Possible Doublet organisation</value>
+    </entry>
+    <entry>
+      <key>Sollen für %0 Personen die Dublette neu berechnet werden?</key>
+      <value>Should the doublets for %0 persons be calculated newly?</value>
+    </entry>
+    <entry>
+      <key>&amp;amp;Dubletten</key>
+      <value>&amp;amp;Duplicates</value>
+    </entry>
+    <entry>
+      <key>Mögliche Dubletten Person</key>
+      <value>Possible Doublet person</value>
+    </entry>
+    <entry>
+      <key>Mehrere Einzeltermine</key>
+      <value>More single appointments</value>
+    </entry>
+    <entry>
+      <key>Count</key>
+    </entry>
+    <entry>
+      <key>Es wurden mögliche Dubletten gefunden !</key>
+      <value>Possible doublets were found !</value>
+    </entry>
+    <entry>
+      <key>Einzelaufgabe</key>
+      <value>Individual task</value>
+    </entry>
+    <entry>
+      <key>Sollen für %0 Firmen die Dublette neu berechnet werden?</key>
+      <value>Should the doublets for %0 companys be calculated newly?</value>
+    </entry>
+    <entry>
+      <key>Personen-Dubletten aktalisieren</key>
+    </entry>
+    <entry>
+      <key>ein einmal gesetzter Status für den Werbemittelversand kann nicht mehr geändert werden</key>
+      <value>a status for the promotion delivery that is set one time cannot be changed anymore</value>
+    </entry>
+    <entry>
+      <key>Folge-Historie</key>
+      <value>Succession-History</value>
+    </entry>
+    <entry>
+      <key>Öffne Folgehistorien</key>
+      <value>Open succession histories</value>
+    </entry>
+    <entry>
+      <key>Folge-Datum</key>
+      <value>Succession-Date</value>
+    </entry>
+    <entry>
+      <key>Es besteht keine Schreibberechtigung für folgende Teilnehmer:\n\n</key>
+      <value>There is no write permission for the following participants:
+
+</value>
+    </entry>
+    <entry>
+      <key>UNIT</key>
+    </entry>
+    <entry>
+      <key>Posten einfügen</key>
+      <value>Insert Position</value>
+    </entry>
+    <entry>
+      <key>Änderungen speichern?</key>
+      <value>Save changes?</value>
+    </entry>
+    <entry>
+      <key>Seriennr.</key>
+      <value>Serial no.</value>
+    </entry>
+    <entry>
+      <key>Markierte verwenden</key>
+      <value>use marked ones</value>
+    </entry>
+    <entry>
+      <key>Warengr.</key>
+      <value>Commodity Group:</value>
+    </entry>
+    <entry>
+      <key>normal</key>
+    </entry>
+    <entry>
+      <key>Speichern</key>
+      <value>Save</value>
+    </entry>
+    <entry>
+      <key>[no text: 00000000]</key>
+    </entry>
+    <entry>
+      <key>Datei kann nicht geladen werden !</key>
+      <value>File cannot be loaded !</value>
+    </entry>
+    <entry>
+      <key>setzt internationales Nummernformat</key>
+      <value>sets international number format</value>
+    </entry>
+    <entry>
+      <key>mit Office</key>
+      <value>with Office</value>
+    </entry>
+    <entry>
+      <key>Gruppenaufgabe</key>
+      <value>Group task</value>
+    </entry>
+    <entry>
+      <key>Org. / Pers. verwenden</key>
+      <value>Use Org./Pers.</value>
+    </entry>
+    <entry>
+      <key>Ein Thema mit gleichen Namen existiert bereits.</key>
+      <value>A topic with the same name already exists.</value>
+    </entry>
+    <entry>
+      <key>%0 Telefonnummern formatiert!</key>
+      <value>%0 phone numbers formatted!</value>
+    </entry>
+    <entry>
+      <key>niedrig</key>
+      <value>low</value>
+    </entry>
+    <entry>
+      <key>ohne Dialog</key>
+      <value>without dialogue</value>
+    </entry>
+    <entry>
+      <key>Suchindex neu aufbauen</key>
+    </entry>
+    <entry>
+      <key>&amp;lt;--Separator&amp;gt;</key>
+    </entry>
+    <entry>
+      <key>Ums (T\€)</key>
+      <value>Turn. (T/€)</value>
+    </entry>
+    <entry>
+      <key>zzgl. Summe UmSt</key>
+    </entry>
+    <entry>
+      <key>beendet</key>
+      <value>terminated</value>
+    </entry>
+    <entry>
+      <key>vor Start</key>
+      <value>before beginning</value>
+    </entry>
+    <entry>
+      <key>4.</key>
+      <value>4th</value>
+    </entry>
+    <entry>
+      <key>3.</key>
+      <value>3rd</value>
+    </entry>
+    <entry>
+      <key>2.</key>
+      <value>2nd</value>
+    </entry>
+    <entry>
+      <key>1.</key>
+      <value>1st</value>
+    </entry>
+    <entry>
+      <key>8.</key>
+      <value>8th</value>
+    </entry>
+    <entry>
+      <key>7.</key>
+      <value>7th</value>
+    </entry>
+    <entry>
+      <key>6.</key>
+      <value>6th</value>
+    </entry>
+    <entry>
+      <key>5.</key>
+      <value>5th</value>
+    </entry>
+    <entry>
+      <key>9.</key>
+      <value>9th</value>
+    </entry>
+    <entry>
+      <key>31.</key>
+      <value>31st</value>
+    </entry>
+    <entry>
+      <key>30.</key>
+      <value>30th</value>
+    </entry>
+    <entry>
+      <key>Am</key>
+      <value>At</value>
+    </entry>
+    <entry>
+      <key>Farbe: grün = Ressource als User angelegt, rot = Ressource noch nicht als User angelegt, grau = inaktive Ressource, blau = User ohne Ressource (gelöscht)</key>
+      <value>Colour: green = ressource created as user, red = ressource not yet created as user, gray = inactive ressource, blue = user wihout ressource (deleted)</value>
+    </entry>
+    <entry>
+      <key>Projekt öffnen</key>
+      <value>Open project</value>
+    </entry>
+    <entry>
+      <key>20.</key>
+      <value>20th</value>
+    </entry>
+    <entry>
+      <key>21.</key>
+      <value>21st</value>
+    </entry>
+    <entry>
+      <key>22.</key>
+      <value>22nd</value>
+    </entry>
+    <entry>
+      <key>Jeden/Alle</key>
+      <value>Each/All</value>
+    </entry>
+    <entry>
+      <key>PLZ vorhanden</key>
+    </entry>
+    <entry>
+      <key>28.</key>
+      <value>28th</value>
+    </entry>
+    <entry>
+      <key>27.</key>
+      <value>27th</value>
+    </entry>
+    <entry>
+      <key>vorletzten</key>
+      <value>second last</value>
+    </entry>
+    <entry>
+      <key>29.</key>
+      <value>29th</value>
+    </entry>
+    <entry>
+      <key>24.</key>
+      <value>24th</value>
+    </entry>
+    <entry>
+      <key>23.</key>
+      <value>23rd</value>
+    </entry>
+    <entry>
+      <key>26.</key>
+      <value>26th</value>
+    </entry>
+    <entry>
+      <key>25.</key>
+      <value>25th</value>
+    </entry>
+    <entry>
+      <key>UmSt</key>
+      <value>VAT</value>
+    </entry>
+    <entry>
+      <key>Am </key>
+      <value>At</value>
+    </entry>
+    <entry>
+      <key>15.</key>
+      <value>15th</value>
+    </entry>
+    <entry>
+      <key>16.</key>
+      <value>16th</value>
+    </entry>
+    <entry>
+      <key>17.</key>
+      <value>17th</value>
+    </entry>
+    <entry>
+      <key>Firma öffnen</key>
+      <value>Open a company</value>
+    </entry>
+    <entry>
+      <key>18.</key>
+      <value>18th</value>
+    </entry>
+    <entry>
+      <key>11.</key>
+      <value>11th</value>
+    </entry>
+    <entry>
+      <key>12.</key>
+      <value>12th</value>
+    </entry>
+    <entry>
+      <key>13.</key>
+      <value>13th</value>
+    </entry>
+    <entry>
+      <key>14.</key>
+      <value>14th</value>
+    </entry>
+    <entry>
+      <key>Rechnung erstellen</key>
+      <value>Create billing</value>
+    </entry>
+    <entry>
+      <key>19.</key>
+      <value>19th</value>
+    </entry>
+    <entry>
+      <key>10.</key>
+      <value>10th</value>
+    </entry>
+    <entry>
+      <key>Bitte Datumseingabe prüfen!</key>
+      <value>Please check the date input!</value>
+    </entry>
+    <entry>
+      <key>Gruppe</key>
+      <value>Group</value>
+    </entry>
+    <entry>
+      <key>Volumen(T\€)</key>
+      <value>Volume (T\€)</value>
+    </entry>
+    <entry>
+      <key>letzten</key>
+      <value>last</value>
+    </entry>
+    <entry>
+      <key>Jeden</key>
+      <value>Each</value>
+    </entry>
+    <entry>
+      <key>Kurs-Nr</key>
+      <value>Course-No</value>
+    </entry>
+    <entry>
+      <key>gewonnen</key>
+      <value>won</value>
+    </entry>
+    <entry>
+      <key>netto</key>
+      <value>net</value>
+    </entry>
+    <entry>
+      <key>bis Jahr</key>
+      <value>until year</value>
+    </entry>
+    <entry>
+      <key>gelb hinterlegt bedeutet Standard</key>
+      <value>highlighted in yellow means standard</value>
+    </entry>
+    <entry>
+      <key>Summe Tagesgeld</key>
+      <value>Sum daily allowance</value>
+    </entry>
+    <entry>
+      <key>Tagesgeld</key>
+      <value>Daily allowance</value>
+    </entry>
+    <entry>
+      <key>Modul öffnen</key>
+      <value>open module</value>
+    </entry>
+    <entry>
+      <key>Semikolon</key>
+    </entry>
+    <entry>
+      <key>Gesamtsumme</key>
+      <value>Total amount</value>
+    </entry>
+    <entry>
+      <key>Ausdruck</key>
+      <value>Expression</value>
+    </entry>
+    <entry>
+      <key>Umsatzübersicht</key>
+      <value>Turnover overview</value>
+    </entry>
+    <entry>
+      <key>ADM-Besuche</key>
+      <value>FSR</value>
+    </entry>
+    <entry>
+      <key>Umsatz Jahre</key>
+      <value>Turnover years</value>
+    </entry>
+    <entry>
+      <key>verloren</key>
+      <value>lost</value>
+    </entry>
+    <entry>
+      <key>von Jahr</key>
+      <value>of the year</value>
+    </entry>
+    <entry>
+      <key>Firmen</key>
+      <value>Companies</value>
+    </entry>
+    <entry>
+      <key>Kilometergeld</key>
+      <value>
+Kilometer allowance</value>
+    </entry>
+    <entry>
+      <key>Homepage</key>
+    </entry>
+    <entry>
+      <key>Summe Belege</key>
+      <value>Sum receipts</value>
+    </entry>
+    <entry>
+      <key>Aussendienstbesuche</key>
+      <value>Field Service visits</value>
+    </entry>
+    <entry>
+      <key> bis </key>
+      <value> until</value>
+    </entry>
+    <entry>
+      <key>Event</key>
+    </entry>
+    <entry>
+      <key>Betreff: </key>
+      <value>Subject:</value>
+    </entry>
+    <entry>
+      <key>Mailadresse nicht vorhanden.\nSiehe unverknüpfte Mials!</key>
+      <value>Mail address doesn&amp;apos;t exist.
+See unlinked mails!</value>
+    </entry>
+    <entry>
+      <key>Mail Import</key>
+    </entry>
+    <entry>
+      <key>Umsatz nach Warengruppen über Jahre</key>
+      <value>Turnover by commodity group over years</value>
+    </entry>
+    <entry>
+      <key>Umsatzübersicht Jahre</key>
+      <value>Turnover overview years</value>
+    </entry>
+    <entry>
+      <key>nur aktiv bei Status versendet</key>
+    </entry>
+    <entry>
+      <key>angemeldete Teilnehmer übernehmen</key>
+    </entry>
+    <entry>
+      <key>Bitte Auswahl treffen</key>
+    </entry>
+    <entry>
+      <key>Anrufer nicht identifizierbar</key>
+    </entry>
+    <entry>
+      <key>Mobil</key>
+    </entry>
+    <entry>
+      <key>Alle Teilnehmer mit Status angemeldet werden für ausgewählten Fragebogen übernommen</key>
+    </entry>
+    <entry>
+      <key>Maximal %0 Zeichen erlaubt</key>
+    </entry>
+    <entry>
+      <key>Öffnen</key>
+    </entry>
+    <entry>
+      <key>Reisekosten- und Spesenvorschlag</key>
+    </entry>
+    <entry>
+      <key>Reisekosten</key>
+    </entry>
+    <entry>
+      <key> teilgenommen hat</key>
+    </entry>
+    <entry>
+      <key>Schulnoten</key>
+    </entry>
+    <entry>
+      <key>und nach Monaten</key>
+    </entry>
+    <entry>
+      <key>für den Monat</key>
+    </entry>
+    <entry>
+      <key>Fragebogenauswertung</key>
+    </entry>
+    <entry>
+      <key>Anrufe</key>
+    </entry>
+    <entry>
+      <key>Folgende Leistungen wurden erbracht</key>
+    </entry>
+    <entry>
+      <key>Umsatzübersicht monatlich</key>
+    </entry>
+    <entry>
+      <key>Öffnet den Kalender in Planungsansicht</key>
+    </entry>
+    <entry>
+      <key>Terminkollisionen</key>
+    </entry>
+    <entry>
+      <key>Absatz über 3 Jahre</key>
+    </entry>
+    <entry>
+      <key>Durchschnittliche Kosten</key>
+    </entry>
+    <entry>
+      <key> vom </key>
+    </entry>
+    <entry>
+      <key>Seminar</key>
+    </entry>
+    <entry>
+      <key>Ihre Meinung ist uns wichtig!</key>
+    </entry>
+    <entry>
+      <key> am Kurs </key>
+    </entry>
+    <entry>
+      <key>Durchschnittliche Gebühr</key>
+    </entry>
+    <entry>
+      <key>Aussendienstbewertung</key>
+    </entry>
+    <entry>
+      <key>Bewertung über alle selektierten Firmen</key>
+    </entry>
+    <entry>
+      <key>Gesamtgebühr</key>
+    </entry>
+    <entry>
+      <key>Werte in €</key>
+    </entry>
+    <entry>
+      <key>Stückzahl</key>
+    </entry>
+    <entry>
+      <key>Umsatz über 3 Jahre</key>
+    </entry>
+    <entry>
+      <key>Ihr zuständiger Betreuer:</key>
+    </entry>
+    <entry>
+      <key>Betrag</key>
+    </entry>
+    <entry>
+      <key>Daher werden folgende Positionen verrechnet</key>
+    </entry>
+    <entry>
+      <key>Projekte</key>
+    </entry>
+    <entry>
+      <key>Jahresübersicht Kampagnen und Seminare</key>
+    </entry>
+    <entry>
+      <key>Hiermit bestätigen wir, dass </key>
+    </entry>
+    <entry>
+      <key> der Firma </key>
+    </entry>
+    <entry>
+      <key>Info meinCRM</key>
+    </entry>
+    <entry>
+      <key>Beim Start Seite öffnen</key>
+    </entry>
+    <entry>
+      <key>meinCRM</key>
+    </entry>
+    <entry>
+      <key>Welche Themen haben Sie vermisst?</key>
+    </entry>
+    <entry>
+      <key>Wir sind ständig dabei, unser Angebot zu verbessern. Bitte helfen Sie uns dabei, indem Sie diesen Feedbackbogen ausgefüllt am Ende der Veranstaltung abgeben. Vielen Dank!</key>
+    </entry>
+    <entry>
+      <key>Beim Start Seite nicht mehr öffnen</key>
+    </entry>
+  </keyValueMap>
+  <font name="Dialog" style="0" size="11" />
+</language>
