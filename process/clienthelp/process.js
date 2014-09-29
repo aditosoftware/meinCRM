@@ -2,7 +2,7 @@
 
 var currentimagename = a.valueof("$local.imagename");
 var helpaddr = a.valueof("$global.HelpAddr");
-if ( helpaddr == "" ) 	helpaddr = "file:///" + a.doClientIntermediate(a.CLIENTCMD_GETPROPERTY, ["user.dir"]) + "/help"
+if ( helpaddr == "" ) 	helpaddr = "file:///" + a.doClientIntermediate(a.CLIENTCMD_GETPROPERTY, ["user.dir"]) + "/webroot/help"
 
 helpaddr += "/clienthelp_" + a.valueof("$sys.clientcountry").toLowerCase() + ".html";
 if ( currentimagename != "" &&  currentimagename != null )
