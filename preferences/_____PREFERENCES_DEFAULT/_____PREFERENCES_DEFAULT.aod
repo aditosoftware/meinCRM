@@ -88,6 +88,7 @@
   <databaseDBSyncConnectionType v="1" />
   <databaseDBSyncTruncateOnCompleteSync v="false" />
   <indexsearchEnabled v="true" />
+  <indexsearchPath>$ADITODATA/luIndex</indexsearchPath>
   <indexsearchFullIndexerEnabled v="true" />
   <indexsearchFullIndexerInterval v="0" />
   <indexsearchIncrementingIndexerEnabled v="true" />
