@@ -171,7 +171,6 @@
             <name>Reports</name>
             <title>Reports</title>
             <imageData>%aditoprj%/frame/PERS/ribbon/ribbontasks/task_search/customcomponents/reports/imageData.png</imageData>
-            <onClick>%aditoprj%/frame/PERS/ribbon/ribbontasks/task_search/customcomponents/reports/onClick.js</onClick>
             <enabledProcess>%aditoprj%/frame/PERS/ribbon/ribbontasks/task_search/customcomponents/reports/enabledProcess.js</enabledProcess>
             <layoutPosition>POSITION_NATIVE</layoutPosition>
             <commandButtonKind>ACTION_AND_POPUP_MAIN_ACTION</commandButtonKind>
