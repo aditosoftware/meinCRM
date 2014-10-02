@@ -4,7 +4,7 @@
   <name>default</name>
   <serverConfigPath>$ADITOHOME/config/serverconfig_meinCRM.xml</serverConfigPath>
   <aditoHomePath>$ADITOHOME/</aditoHomePath>
-  <aditoDataPath></aditoDataPath>
+  <aditoDataPath>$ADITODATA/</aditoDataPath>
   <javaHomePath>$ADITOHOME/jre/</javaHomePath>
   <loginUser>Admin</loginUser>
   <loginPassword>a</loginPassword>
