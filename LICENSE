@@ -1,33 +1,4 @@
-LIZENZ- UND NUTZUNGSBEDINGUNGEN
-FÜR ADITO4 Community
 
-§ 1 Geltungsbereich, Allgemeines
-
-(1) Diese Lizenz- und Nutzungsbedingungen gelten für alle Verträge zwischen der ADITO Software GmbH („ADITO“) und den jeweiligen Anwendern („Anwender“) für die kostenlos überlassene Software ADITO4 Community (nachfolgend „ADITO4“ genannt).
-
-(2) Die Nutzungsbedingungen gelten entsprechend für die Überlassung neuer Programmversionen von ADITO4 (z.B. Patches, Bugfixes, Updates, Upgrades, etc.,) sowie für die von ADITO zur Verfügung gestellte Benutzerdokumentation.
-
-(3) Die Nutzungsbedingungen gelten ausschließlich, wenn nicht im Einzelfall individuelle Vereinbarungen mit dem Anwender geschlossen wurden. Diese haben in jedem Fall Vorrang vor diesen Nutzungsbedingungen. Für den Inhalt derartiger Vereinbarungen ist ein schriftlicher Vertrag bzw. die schriftliche Bestätigung ADITOs maßgebend.
-
-
-§ 2 Überlassung ADITO4, Nutzungsrechte
-
-(1) Alle Rechte an ADITO4 stehen ausschließlich ADITO zu. Die Software wird durch das Urheberrecht sowie internationale Abkommen zum Schutz des geistigen Eigentums geschützt.
-
-(2) Der Anwender erhält von ADITO das einfache, zeitlich unbegrenzte Recht, ADITO4 auf einem Arbeitsplatz auch für gewerbliche Zwecke zu nutzen. Diese Lizenz kann auf Wunsch des Anwenders und solange dieses Lizenzmodell von ADITO angeboten wird, kostenlos auf drei Arbeitsplätze erweitert werden. Dies beinhaltet das Recht, ADITO4 auf einem Server und drei Clients parallel (3 concurrent user) zu nutzen und für diesen Zweck zu vervielfältigen. Die dem Anwender gewährte Lizenz wird nach Anforderung der Erweiterung (http://www.adito.de) entsprechend geändert und der Anwender erhält einen neuen Lizenzschlüssel.
- 
-(3) Soll ADITO4 auf mehr als drei Clients genutzt werden, muss eine gesonderte Softwarelizenz erworben werden. Bitte nehmen Sie dazu Kontakt zu ADITO auf. Die Mitarbeiter helfen Ihnen gerne die passende Softwarelösung zu finden.
-
-(4) Der Anwender darf ADITO4 nicht zurückentwickeln oder übersetzen und keine Programmteile herauslösen. Er wird ADITO4 weder dekompilieren noch disassemblieren, ein Reverse Engineering vornehmen oder anderweitig versuchen, den Quellcode abzuleiten. Der Anwender darf ADITO4 unentgeltlich weitergeben, er wird ADITO4 jedoch nicht verkaufen, verändern (mit Ausnahme der unter § 3 beschriebenen Modelle) oder auf andere Art in den Programmcode eingreifen.
-
-(5) Urhebervermerke, Markenzeichen oder sonstige Identifikationsmerkmale in ADITO4 dürfen nicht geändert oder entfernt werden. 
-
-
-§ 3 Nutzungsrechte an den Anpassungen („ADITO-Modell“)
-
-ADITO4 enthält ein Designtool, mit dessen Hilfe der Nutzer ADITO-Modelle erstellen und anpassen kann. Ein ADITO-Modell ist ein Paket, bestehend u.a. aus Frames, Prozessen und Reports, das die Ausführung von ADITO4 beschreibt. Das vorhandene mitgelieferte ADITO-Modell steht unter folgender MIT-Lizenz (X11-Lizenz):
-
-------------------------------------------------------
 Copyright (c) 2014 ADITO Software GmbH
 
 Hiermit wird unentgeltlich jeder Person, die eine Kopie des ADITO-Modells und des dazugehörigen Programmcodes (das "ADITO Modell") erhält, die Erlaubnis erteilt, diese uneingeschränkt zu benutzen. Dies beinhaltet das Recht, sie zu verwenden, zu vervielfältigen, abzuändern, mit anderen Programmen zusammenführen, zu übertragen, zu verbreiten, unterzulizenzieren und/oder zu verkaufen, und Personen, die dieses ADITO Modell erhalten, diese Rechte zu übertragen, unter den folgenden Bedingungen:
@@ -37,22 +8,3 @@ Der obige Urheberrechtsvermerk und dieser Erlaubnisvermerk sind allen Kopien ode
 DAS ADITO MODELL WIRD OHNE JEDE AUSDRÜCKLICHE ODER IMPLIZIERTE GARANTIE BEREITGESTELLT, EINSCHLIESSLICH DER GARANTIE ZUR BENUTZUNG FÜR DEN VORGESEHENEN ODER EINEN BESTIMMTEN ZWECK SOWIE JEGLICHER RECHTSVERLETZUNG, JEDOCH NICHT DARAUF BESCHRÄNKT. IN KEINEM FALL IST DER HERSTELLER ODER COPYRIGHTINHABER FÜR SCHÄDEN ODER SONSTIGE ANSPRÜCHE HAFTBAR ZU MACHEN, EGAL OB DIESE INFOLGE DER ERFÜLLUNG EINES VERTRAGES, AUFGRUND EINES DELIKTES ODER IN ANDERER ART IM ZUSAMMENHANG MIT DEM ADITO MODELL ODER SONSTIGER VERWENDUNG DES ADITO MODELLS ENTSTEHEN.
 
 Der Name ADITO Software GmbH darf nur nach schriftlicher Erlaubnis zur Bewerbung des Vertriebs, Gebrauchs oder sonstiger Weitergabe des ADITO Modells verwendet werden. 
-------------------------------------------------------
-
-
-§ 4 Haftung und Gewährleistung
-
-(1) Die Software wird kostenlos überlassen. ADITO haftet nur für Vorsatz und grobe Fahrlässigkeit. Weitergehende Schadens- und Aufwendungsersatzansprüche des Anwenders, gleich aus welchem Rechtsgrund, insbesondere wegen Verletzung von Pflichten aus dem Schuldverhältnis und aus unerlaubter Handlung, sind ausgeschlossen. 
-
-(2) Für Sach- und Rechtsmängel von ADITO4 haftet ADITO nur, wenn sie dem Anwender einen Sach- und/oder Rechtsmangel arglistig verschwiegen hat. Eine darüber hinausgehende Haftung oder Gewährleistung ist ausgeschlossen.
-
-
-§ 5 Anwendbares Recht, Gerichtsstand
-
-(1) Für die Überlassung von ADITO4 sowie alle hiermit im Zusammenhang stehenden Rechtsbeziehungen zwischen ADITO und dem Anwender gilt das Recht der Bundesrepublik Deutschland. Die Anwendung des UN-Abkommens über den internationalen Warenkauf (CISG) ist ausgeschlossen.
-
-(2) Soweit der Anwender Kaufmann ist oder keinen allgemeinen Gerichtsstand in der Bundesrepublik Deutschland hat, wird Landshut, Deutschland als Gerichtsstand vereinbart. 
-
-
-Copyright (c) 2014 ADITO Software GmbH
-
