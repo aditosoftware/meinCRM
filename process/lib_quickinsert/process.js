@@ -91,7 +91,7 @@ function quickinsertORG( pFramedata )
     a.sqlInsert(statements);
     if ( a.hasvar("$image.nodupOrg"))
     {
-        var nodupOrg = a.valueofObj("$$image.nodupOrg");
+        var nodupOrg = a.valueofObj("$image.nodupOrg");
         for ( var i = 0; i < nodupOrg.length; i++)   noduplicate(pFramedata["RELATIONID"], nodupOrg[i]);
     }
     return pFramedata;
@@ -200,7 +200,7 @@ function quickinsertPERS( pFramedata )
         }
     }
     a.sqlInsert(statements);
-    if( a.hasvar("$$image.nodupPers") )
+    if( a.hasvar("$image.nodupPers") )
     { 
         var nodupPers = a.valueofObj("$image.nodupPers");
         for ( var i = 0; i < nodupOrg.length; i++)   noduplicate(pFramedata["PERSID"], nodupPers[i]);
