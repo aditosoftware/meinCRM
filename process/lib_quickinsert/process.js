@@ -203,7 +203,7 @@ function quickinsertPERS( pFramedata )
     if( a.hasvar("$image.nodupPers") )
     { 
         var nodupPers = a.valueofObj("$image.nodupPers");
-        for ( var i = 0; i < nodupOrg.length; i++)   noduplicate(pFramedata["PERSID"], nodupPers[i]);
+        for ( var i = 0; i < nodupPers.length; i++)   noduplicate(pFramedata["PERSID"], nodupPers[i]);
     }
     return pFramedata;
 }   

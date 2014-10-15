@@ -53,6 +53,14 @@
         <icon>EDIT_16</icon>
         <enabled v="true" />
         <layoutPosition>POSITION_TOP</layoutPosition>
+        <customComponents>
+          <rcCommandButton>
+            <name>checkDublette</name>
+            <title>Dublette prüfen</title>
+            <imageData>%aditoprj%/frame/QUICKINSERT/ribbon/ribbontasks/task_edit/customcomponents/checkdublette/imageData.png</imageData>
+            <onClick>%aditoprj%/frame/QUICKINSERT/ribbon/ribbontasks/task_edit/customcomponents/checkdublette/onClick.js</onClick>
+          </rcCommandButton>
+        </customComponents>
         <toolTip>Bearbeiten</toolTip>
       </ribbonTask>
     </ribbonTasks>

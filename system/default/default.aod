@@ -10,5 +10,5 @@
   <loginPassword>a</loginPassword>
   <javaVMParametersServer>-Xmx1024m</javaVMParametersServer>
   <enableJDitoDebug v="false" />
-  <clientConfig>$ADITOHOME/config/clientconfig.xml</clientConfig>
+  <clientConfig>$USERHOME/.adito4/config/client.xml</clientConfig>
 </system>
