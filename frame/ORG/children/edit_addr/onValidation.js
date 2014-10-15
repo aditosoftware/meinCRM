@@ -1,21 +1,24 @@
 import("lib_keyword")
 import("lib_validation")
 
-var country = "";
 var medium = a.valueof("$comp.Edit_medium");
 var adresse = a.valueof("$comp.Edit_addr");
-
-var  addrdata = a.getTableData("$comp.tbl_ADDRESS", a.valueof("$comp.ADDRESS_ID") );
-if ( addrdata == null )  addrdata = a.getTableData("$comp.tbl_ADDRESS", a.ALL )[0];
-if( addrdata != undefined )  country = addrdata[12]; 
 
 var mediumtype = "OrgMedium";
 if ( a.valueof("$comp.Label_relpers_dec") != "" )	 mediumtype = "PersMedium";
 
 if ( medium != "" && adresse != "" )
 {
-    // Validierung durchgeführt
     mediumtype = a.sql("select keyname2 from keyword where " + getKeyTypeSQL(mediumtype) + " and keyvalue = " + medium);
-    adresse = doCommValidation( mediumtype, adresse, country);
-    if ( adresse != "")		a.setValue("$comp.Edit_addr", adresse);	
+    var addresses = a.getTableData("$comp.tbl_ADDRESS", a.ALL);
+    var conutry = "";
+    if (addresses.length > 0 )      conutry = addresses[0][12];
+    var standardaddressid = a.valueof("$comp.ADDRESS_ID");
+    for ( var i = 1; i < addresses.length; i++)
+    {
+        if ( addresses[i][0] == standardaddressid ) conutry = addresses[i][12];
+    }
+    adresse = doCommValidation( mediumtype, adresse, conutry);
+    if ( adresse != "")		
+        a.setValue("$comp.Edit_addr", adresse);	
 }
