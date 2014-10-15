@@ -20,7 +20,7 @@ if (persduplicates != undefined)
     for ( i = 0; i < persduplicates.length; i++ )
     {
         persid = a.sql("select PERS_ID from RELATION where RELATIONID = '" + persduplicates[i][0] + "'");
-        nodupPers.push(persid[i][0]);
+        nodupPers.push(persid);
     }                
     a.imagevar("$image.nodupPers", nodupPers);
 }
