@@ -31,6 +31,7 @@
   <serverFarmTableClients></serverFarmTableClients>
   <serverFarmTimeout v="5000" />
   <serverFarmSelfCheckInterval v="300000" />
+  <securitySSLDisableCertificateCheck v="true" />
   <calendarEnable v="true" />
   <calendarType v="2" />
   <calendarLinkerAlias>AO_DATEN</calendarLinkerAlias>
