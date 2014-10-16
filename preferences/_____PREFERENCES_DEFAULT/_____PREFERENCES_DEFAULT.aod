@@ -25,7 +25,7 @@
   <timerPreferencesTable>ASYS_TIMER</timerPreferencesTable>
   <timerPreferencesTimeout v="5000" />
   <reportInetConfigFile></reportInetConfigFile>
-  <licenseType v="1" />
+  <licenseType v="3" />
   <telephonyEnable v="false" />
   <serverFarmTable></serverFarmTable>
   <serverFarmTableClients></serverFarmTableClients>
