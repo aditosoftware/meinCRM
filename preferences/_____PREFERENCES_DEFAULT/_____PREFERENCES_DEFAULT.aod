@@ -26,6 +26,7 @@
   <timerPreferencesTimeout v="5000" />
   <reportInetConfigFile></reportInetConfigFile>
   <licenseType v="3" />
+  <licenseFile>$ADITOHOME/license/serverlicense.lic</licenseFile>
   <telephonyEnable v="false" />
   <serverFarmTable></serverFarmTable>
   <serverFarmTableClients></serverFarmTableClients>
