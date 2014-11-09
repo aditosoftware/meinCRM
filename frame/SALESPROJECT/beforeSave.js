@@ -17,10 +17,12 @@ if ( ret )
 
 if ( ret )
 {
-    //Prüfen, da sonst Objekt-Nummer mehrfach vergeben wird.
-    var maxval = eMath.addInt(a.sql("select max(PROJECTNUMBER) from SALESPROJECT"),"1");
-    if(maxval > a.valueof("$comp.PROJECTNUMBER"))  a.setValue("$comp.PROJECTNUMBER", maxval);
-
+    //Prüfen, da sonst Objekt-Nummer mehrfach vergeben wird. Nur im Neuanlage-Modus!
+    if(a.valueof("$sys.workingmode") == a.FRAMEMODE_NEW)
+    {
+        var maxval = eMath.addInt(a.sql("select max(PROJECTNUMBER) from SALESPROJECT"),"1");
+        if(maxval > a.valueof("$comp.PROJECTNUMBER"))  a.setValue("$comp.PROJECTNUMBER", maxval);        
+    }
     // SPCYCLE setzen
     var id = a.valueof("$comp.idcolumn");
     var status = a.valueof("$comp.STATUS");
