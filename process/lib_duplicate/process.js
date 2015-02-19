@@ -361,7 +361,7 @@ function mergeOrg( pOldRelID, pNewRelID )
     statements.push(setStatements( "OFFER", "RELATION_ID", pOldRelID, pNewRelID ));
     statements.push(setStatements( "SALESORDER", "RELATION_ID", pOldRelID, pNewRelID ));
     statements.push(setStatements( "SALESPROJECT", "RELATION_ID", pOldRelID, pNewRelID ));
-    statements.push(setStatements( "PROPINV", "RELATION_ID", pOldRelID, pNewRelID ));
+    //statements.push(setStatements( "PROPINV", "RELATION_ID", pOldRelID, pNewRelID ));
     statements.push(setStatements( "QUESTIONNAIRELOG", "RELATION_ID", pOldRelID, pNewRelID ));
     statements.push(setStatements( "ADVERTISINGSHIPMENT", "RELATION_ID", pOldRelID, pNewRelID ));
     statements.push(setStatements( "BANKACCOUNT", "RELATION_ID", pOldRelID, pNewRelID ));
@@ -416,7 +416,7 @@ function mergePers( pOldRelID, pNewRelID )
     statements.push(setStatements( "OFFER", "RELATION_ID", pOldRelID, pNewRelID ));
     statements.push(setStatements( "SALESORDER", "RELATION_ID", pOldRelID, pNewRelID ));
     statements.push(setStatements( "SALESPROJECT", "RELATION_ID", pOldRelID, pNewRelID ));
-    statements.push(setStatements( "PROPINV", "RELATION_ID", pOldRelID, pNewRelID ));
+    //statements.push(setStatements( "PROPINV", "RELATION_ID", pOldRelID, pNewRelID ));
     statements.push(setStatements( "QUESTIONNAIRELOG", "RELATION_ID", pOldRelID, pNewRelID ));
     statements.push(setStatements( "ADVERTISINGSHIPMENT", "RELATION_ID", pOldRelID, pNewRelID ));
     statements.push(setStatements( "BANKACCOUNT", "RELATION_ID", pOldRelID, pNewRelID ));
